@@ -1,0 +1,20 @@
+PARI stack size set to 4000000000 bytes, maximum size set to 4000002048
+n=7 k=-31 p=5 class=(5, 2, (1, 1), -1, 1) q=101 D=505 a_p=2 fail_mod8=True v2=99 strict VIOLATES t=2
+n=7 k=-31 p=5 class=(5, 2, (1, 1), -1, 1) q=157 D=785 a_p=2 fail_mod8=True v2=4 EQUAL consistent t=5
+n=7 k=-31 p=5 class=(5, 2, (1, 1), -1, 1) q=173 D=865 a_p=2 fail_mod8=True v2=4 EQUAL consistent t=8
+n=7 k=-31 p=19 class=(3, 0, (1, 1), -1, 1) q=59 D=1121 a_p=0 fail_mod8=True v2=4 EQUAL consistent t=13
+n=7 k=-31 p=19 class=(3, 0, (1, 1), -1, 1) q=131 D=2489 a_p=0 fail_mod8=True v2=4 EQUAL consistent t=25
+n=7 k=-31 p=19 class=(3, 0, (1, 1), -1, 1) q=227 D=4313 a_p=0 fail_mod8=True v2=4 EQUAL consistent t=43
+n=7 k=-31 p=41 class=(1, 6, (1, 1), -1, 1) q=97 D=3977 a_p=-10 fail_mod8=True v2=4 EQUAL consistent t=57
+n=7 k=-31 p=41 class=(1, 6, (1, 1), -1, 1) q=257 D=10537 a_p=-10 fail_mod8=True v2=99 strict VIOLATES t=105
+  *** _lfuninit_theta2_worker: Warning: increasing stack size to 4000002048.
+Traceback (most recent call last):
+  File "/tmp/claude-0/-home-user-openai-math-slop/24550152-40a3-5e1c-8bf9-84dd609cdc7f/scratchpad/m3.py", line 21, in <module>
+    r=float(pari(f"sqrt({D})*lfun(lfuncreate(ellinit(elltwist(E,{k*D}))),1)/L0"))
+            ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "cypari2/pari_instance.pyx", line 800, in cypari2.pari_instance.Pari.__call__
+  File "cypari2/gen.pyx", line 4784, in cypari2.gen.objtogen
+  File "cypari2/convert.pyx", line 545, in cypari2.convert.PyObject_AsGEN
+  File "cypari2/handle_error.pyx", line 211, in cypari2.handle_error._pari_err_handle
+cypari2.handle_error.PariError: lfun: the PARI stack overflows (current size: 4000002048; maximum size: 4000002048)
+You can use pari.allocatemem() to change the stack size and try again

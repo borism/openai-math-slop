@@ -57,13 +57,27 @@ Outputs in `output/matched-prime-test/`.
 - Caveat: the proof's "same finite data, including every support-unit test" is probably a stronger (Frobenius) condition than
   the one tested. Tiny sample; not evidence of a proof error until the exact matching condition is pinned down.
 
+### Stricter matching (`scripts/m3.py`, outputs `m3_*.out`)
+Matching p' to p on p mod 8, a_p mod 8, the 2-primary structure of E(F_p) truncated at 8, and Legendre symbols at the odd
+primes of S0 (closer to "same Frobenius in Q(E[8])"): for failing p in (5,-31) and (7,-31), 8 of 11 (p,p') pairs are equality
+cases (ratio 16, v2 = 4), and 3 are exact vanishing cases L(E^(kD),1)=0 (n=5: p=19,p'=59; n=7: p=5,p'=101 and p=41,p'=257).
+Observed values of sqrt(D)L(E^(kD),1)/L(E^(k),1) at D=pp' are only 16 or 0 in these tests. The three vanishing cases
+persist under the stricter matching, so they are not removed by it. Data the proof calls "same finite data, including every
+support-unit test" is still not fully pinned down.
+
 ## Close reading of the lemma proof (08-rational-converse.tex, lines 470-700)
 - The arithmetic from (a-1)(a-p-1)/4 even and a even to a = p+1 (mod 8) is correct.
 - Since the congruence fails generically, the "equality never occurs" branch is empty whenever the derivation is valid,
   so everything after "we therefore assume" (the 1/4-divided form, the deeper bit) is vacuous. The authors' structure
   treats that branch as real.
 - The 1/4-divided integrality (case J = U) also uses the mod-8 congruence, so it lives inside the same branch.
-- Not yet read: the cited dependencies (tc:trace-algebra, tc:inertia-identity, prop:even-coefficients, pw:recurrence).
+- Read tc:trace-algebra and tc:inertia-identity (06-traces.tex): the algebra t(u)t(v)=t(uv)+t(uv^-1) is the standard 2x2
+  trace identity; the fresh-prime test (T_q f)[n] = f[qn] for q not dividing n is correct, and the Chebotarev replacement of
+  the Frobenius lift by a fresh prime p' needs p' to share the Frobenius of phi_p in the finite quotient through which all
+  forms in the orbit act mod m (so the matching condition is the Galois-image condition, not just p mod 8 and a_p mod 8).
+  The inertia identity computation (both sides equal -2 z lambda mu with rho(tau)=diag(1,-1), rho(phi)=diag(lambda,mu)) checks out.
+  The step that depends on the matching is "(t(phi_p) f)[p^2] = f[p^3] + (d(phi_p) f)[p]" with t(phi_p) replaced by T_p', which
+  gives f[p'p^2], an expression in a(pp') times a Hecke factor in a_p. Cited but not read: prop:even-coefficients, pw:recurrence.
 
 ## Caveats
 - "Admissible" was implemented as: squarefree, every prime split in Q(sqrt k) and outside S0, D = 1 mod 8 and a

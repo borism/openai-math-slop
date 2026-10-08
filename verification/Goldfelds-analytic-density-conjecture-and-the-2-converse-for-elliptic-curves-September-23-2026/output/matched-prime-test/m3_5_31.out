@@ -1,0 +1,5 @@
+PARI stack size set to 4000000000 bytes, maximum size set to 4000002048
+n=5 k=-31 p=19 class=(3, 0, (1, 1), 1, 1) q=59 D=1121 a_p=0 fail_mod8=True v2=99 strict VIOLATES t=4
+n=5 k=-31 p=19 class=(3, 0, (1, 1), 1, 1) q=131 D=2489 a_p=0 fail_mod8=True v2=4 EQUAL consistent t=12
+n=5 k=-31 p=19 class=(3, 0, (1, 1), 1, 1) q=211 D=4009 a_p=0 fail_mod8=True v2=4 EQUAL consistent t=24
+done
