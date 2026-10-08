@@ -65,6 +65,12 @@ Observed values of sqrt(D)L(E^(kD),1)/L(E^(k),1) at D=pp' are only 16 or 0 in th
 persist under the stricter matching, so they are not removed by it. Data the proof calls "same finite data, including every
 support-unit test" is still not fully pinned down.
 
+### Non-failing p under strict matching (`m3ok_*.out`)
+For p satisfying the congruence, the proof's relation predicts v(a(pp')) >= 3. With strict matching: (5,-31) p=7 with p'=103 and
+503 are both strict (a(pp')=0), consistent. The two apparent violations seen with loose matching (p=7,p'=47 and p=47,p'=103)
+disappear when the 2-primary structure of E(F_p) is matched (47 and 103 have different class from 7 and 47). The other
+tried primes (41, 47, 71) had no matched p' with pp' <= 9000, so this direction rests on very little data.
+
 ## Close reading of the lemma proof (08-rational-converse.tex, lines 470-700)
 - The arithmetic from (a-1)(a-p-1)/4 even and a even to a = p+1 (mod 8) is correct.
 - Since the congruence fails generically, the "equality never occurs" branch is empty whenever the derivation is valid,
@@ -77,7 +83,16 @@ support-unit test" is still not fully pinned down.
   forms in the orbit act mod m (so the matching condition is the Galois-image condition, not just p mod 8 and a_p mod 8).
   The inertia identity computation (both sides equal -2 z lambda mu with rho(tau)=diag(1,-1), rho(phi)=diag(lambda,mu)) checks out.
   The step that depends on the matching is "(t(phi_p) f)[p^2] = f[p^3] + (d(phi_p) f)[p]" with t(phi_p) replaced by T_p', which
-  gives f[p'p^2], an expression in a(pp') times a Hecke factor in a_p. Cited but not read: prop:even-coefficients, pw:recurrence.
+  gives f[p'p^2], an expression in a(pp') times a Hecke factor in a_p. 
+- Read prop:even-coefficients (05-coefficients.tex) and pw:recurrence (08-rational-converse.tex). g is a weight-3/2 form
+  (Waldspurger/Shimura), with a(p^2 n) = (eta(p) a_p(E) - psi(p)(-n/p)) a(n) - p eta(p)^2 a(n/p^2) for good p. For p | n the
+  Legendre symbol vanishes, so g[p^3 p'] = eta(p) a_p a(pp') and B_{p}[p'p^2] = eta(p)(a_p - 1) a(pp')/2, i.e.
+  H_{p}[p'p^2] = eta(p)(a_p-1) a(pp')/4 (this is where the (a-1) factor in the proof comes from). Combined with
+  H_{p}[p^3] = (a-1)(a-p-1)/4 the step amounts to: a(pp') * eta(p) = a_p - p - 1 (mod 4m), for matched p' and integral H.
+  So the congruence a_p = p+1 (mod 8) is equivalent, within the proof, to v(a(pp')) >= 3, and failure to v(a(pp')) = 2.
+  pw:recurrence (b_s recurrence, parity and mod 2^m statements) checks out by direct induction.
+- Integrality of H_{p} needs B_{p}[1] = a(p)/2 even; in the tested instances p is off the filter (a(p)=0), so this is satisfied.
+  I did not verify integrality of H at all indices.
 
 ## Caveats
 - "Admissible" was implemented as: squarefree, every prime split in Q(sqrt k) and outside S0, D = 1 mod 8 and a

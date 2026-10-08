@@ -1,0 +1,6 @@
+PARI stack size set to 4000000000 bytes, maximum size set to 4000002048
+n=5 k=-31 p=7 class=(7, 0, (1, 2), -1, 1) q=103 D=721 a_p=0 fail_mod8=False v2=99 strict consistent t=2
+n=5 k=-31 p=7 class=(7, 0, (1, 2), -1, 1) q=503 D=3521 a_p=0 fail_mod8=False v2=99 strict consistent t=13
+p=41 class=(1, 2, (2, 3), 1, 1): no matched p' with p*p'<=9000
+p=47 class=(7, 0, (1, 3), -1, 1): no matched p' with p*p'<=9000
+done
