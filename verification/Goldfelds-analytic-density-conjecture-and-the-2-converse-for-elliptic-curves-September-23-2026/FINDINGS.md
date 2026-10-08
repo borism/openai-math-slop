@@ -29,10 +29,11 @@ there. That is a presentation/logic weakness of one proof step, not a counterexa
 | (7, -31)  | 785, 865, 1121   |
 | (13, -79) | 913              |
 | (31, -79) | 913              |
-| (6, -47)  | none up to 1200  |
+| (6, -47)  | 2257, 3073 (none up to 1200; found in the extended search D <= 3500, omega(D) <= 3) |
 
-So 3 of the 4 pairs the issue reports as "no witness (D <= 600)" have one once the search is extended.
-Only (6,-47) remains without a witness; the search is finite and does not exclude a larger D.
+All 4 pairs the issue reports as "no witness (D <= 600)" have one once the search is extended: three by D <= 1200 and
+(6,-47) at D = 2257 = 37*61 and D = 3073 = 7*439 (ratio 16, v2 = 4 = 2*omega) in the extended search to D <= 3500
+(`scripts/f2.py`, `output/witness-search-n6-k-47-D3500-omega3.out`). So every pair named in the issue has an equality witness.
 
 ## Stand-in pairs (the issue's own 23 pairs are not listed, so they could not be checked individually)
 10 curves y^2 = x(x-a)(x-b) (odd root number, conductor <= 3000, a,b in [-30,30]), up to 2 admissible negative k each
@@ -71,6 +72,17 @@ For p satisfying the congruence, the proof's relation predicts v(a(pp')) >= 3. W
 disappear when the 2-primary structure of E(F_p) is matched (47 and 103 have different class from 7 and 47). The other
 tried primes (41, 47, 71) had no matched p' with pp' <= 9000, so this direction rests on very little data.
 
+## Status of the 3 exceptions (Frobenius matching is not testable here)
+The Chebotarev replacement of the Frobenius lift at p by a fresh prime p' (06-traces.tex, "Weight-two traces") works on the
+integral lattice of the weight-two form H*theta, i.e. the finite sum of characteristic-zero Hecke systems containing the vector
+and its diamond transforms. Since theta*(weight-3/2 form) is a generic weight-two form, its Hecke decomposition involves
+eigensystems unrelated to E, and p' must match phi_p modulo m in the joint finite quotient of all of them. The tests above match
+only E-visible data (p mod 8, a_p mod 8, 2-primary structure of E(F_p), S0 Legendre symbols), which is necessary at best and
+not sufficient. Reproducing the full lattice is infeasible here (level ~ 4*N*(prod of S0 primes)^2). So the 3 exceptions
+(D = 1121, 505, 10537, where a(pp')=0 but the congruence fails) do NOT show the identity is false for correctly matched p';
+they are inconclusive and the "lead" is downgraded to "unresolved, probably an artefact of incomplete matching".
+Integrality of H_{p} at index 1 holds in the tested instances (a(p)=0, p off the filter); integrality at all indices was not checked.
+
 ## Close reading of the lemma proof (08-rational-converse.tex, lines 470-700)
 - The arithmetic from (a-1)(a-p-1)/4 even and a even to a = p+1 (mod 8) is correct.
 - Since the congruence fails generically, the "equality never occurs" branch is empty whenever the derivation is valid,
@@ -106,6 +118,7 @@ tried primes (41, 47, 71) had no matched p' with pp' <= 9000, so this direction 
 `pip install cypari2`, then:
 - `python3 scripts/chk.py`  (pure Python, reproduces 207/113)
 - `python3 scripts/c.py`  (D=329 check)
+- `python3 scripts/f2.py 3500 w 8 2 6 -47 3`  (extended search: Dmax, w, stackGB, Dmin, n, k, max omega)
 - `python3 scripts/f.py 1200 w 10`  (n=31, k=-79 witness search; third arg = PARI stack in GB)
 - `python3 scripts/e.py 1200 w 3`  (witness search for the other pairs; `e.py 0 sweep 3` runs the sweep)
 - `python3 scripts/g.py select` then `python3 scripts/g.py work <0-3> <stackGB> <Dmax>`  (stand-in pairs; writes pairs.json)
