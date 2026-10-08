@@ -1,0 +1,15 @@
+PARI stack size set to 3000000000 bytes, maximum size set to 3000000512
+witness 6 -47 [] 19 s
+witness 7 -31 [[785, 16], [865, 16], [1121, 16]] 22 s
+witness 13 -79 [[913, 16]] 154 s
+  *** _lfuninit_theta2_worker: Warning: increasing stack size to 3000000512.
+Traceback (most recent call last):
+  File "/tmp/claude-0/-home-user-openai-math-slop/24550152-40a3-5e1c-8bf9-84dd609cdc7f/scratchpad/e.py", line 20, in <module>
+    t=time.time(); print('witness',n,k,pari(f'wit({n},{k},{int(sys.argv[1])})'),round(time.time()-t),'s',flush=True)
+                                       ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "cypari2/pari_instance.pyx", line 800, in cypari2.pari_instance.Pari.__call__
+  File "cypari2/gen.pyx", line 4784, in cypari2.gen.objtogen
+  File "cypari2/convert.pyx", line 545, in cypari2.convert.PyObject_AsGEN
+  File "cypari2/handle_error.pyx", line 211, in cypari2.handle_error._pari_err_handle
+cypari2.handle_error.PariError: lfun: the PARI stack overflows (current size: 3000000512; maximum size: 3000000512)
+You can use pari.allocatemem() to change the stack size and try again
