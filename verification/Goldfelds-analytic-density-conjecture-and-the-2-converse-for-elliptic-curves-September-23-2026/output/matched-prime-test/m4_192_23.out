@@ -1,0 +1,11 @@
+PARI stack size set to 3000000000 bytes, maximum size set to 3000000512
+curve=(-24,-8) k=-23 N=192 p=13 q=277 D=3601 fail=True v2=4 t=42
+curve=(-24,-8) k=-23 N=192 p=13 q=349 D=4537 fail=True v2=99 t=93
+curve=(-24,-8) k=-23 N=192 p=13 q=397 D=5161 fail=True v2=99 t=152
+curve=(-24,-8) k=-23 N=192 p=29 q=101 D=2929 fail=False v2=99 t=183
+curve=(-24,-8) k=-23 N=192 p=29 q=197 D=5713 fail=False v2=4 t=248
+curve=(-24,-8) k=-23 N=192 p=31 q=127 D=3937 fail=True v2=99 t=290
+curve=(-24,-8) k=-23 N=192 p=31 q=151 D=4681 fail=True v2=4 t=341
+curve=(-24,-8) k=-23 N=192 p=31 q=223 D=6913 fail=True v2=4 t=419
+curve=(-24,-8) k=-23 N=192 p=47 q=71 D=3337 fail=False v2=99 t=456
+done

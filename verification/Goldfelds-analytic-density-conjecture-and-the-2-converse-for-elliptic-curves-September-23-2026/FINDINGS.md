@@ -98,6 +98,21 @@ not sufficient. Reproducing the full lattice is infeasible here (level ~ 4*N*(pr
 they are inconclusive and the "lead" is downgraded to "unresolved, probably an artefact of incomplete matching".
 Integrality of H_{p} at index 1 holds in the tested instances (a(p)=0, p off the filter); integrality at all indices was not checked.
 
+## Are equality witnesses at omega = 2 guaranteed? (assessment)
+Not provably, from anything I could establish. What can be said:
+- **Conditional on the proof's own relation** (eta(p) a(pp') = a_p - p - 1 mod 4m for matched p' with H_{p} integral): any allowed
+  K-split p with a_p != p+1 (mod 8) (these exist with positive density by Chebotarev, unless E has rational 4-torsion as in the
+  issue) forces v(a(pp')) = 2 for every correctly matched p', so omega = 2 witnesses would exist with positive density. Also, if
+  the mod-8 derivation is valid then the "equality never occurs" branch is impossible, so some equality D exists; the proof does not
+  say it has omega = 2. If the relation fails, nothing here is guaranteed.
+- **Empirical test of the relation** (strict E-visible matching, `scripts/m3.py`, `m4.py`; curves (5,-31), (7,-31), N=192 k=-23,
+  N=360 k=-71; 24 (p,p') cases): failing p: 11 equality (v2 = 4, ratio 16) and 7 exact zeros, never a nonzero ratio with v2 >= 6;
+  non-failing p: 5 zeros and 1 equality. So the relation predicts 16 of 24 correctly; the 8 exceptions (7 failing-with-zero, 1
+  non-failing-with-equality) are as expected if the E-visible matching is incomplete, and also what a false relation would give.
+  Unresolved.
+- **Search data:** single primes never give equality; every pair named in the issue and 7 of 20 stand-in pairs have an omega = 2
+  witness (often only past D = 2000). Absence in a short window is not evidence of absence.
+
 ## Close reading of the lemma proof (08-rational-converse.tex, lines 470-700)
 - The arithmetic from (a-1)(a-p-1)/4 even and a even to a = p+1 (mod 8) is correct.
 - Since the congruence fails generically, the "equality never occurs" branch is empty whenever the derivation is valid,
