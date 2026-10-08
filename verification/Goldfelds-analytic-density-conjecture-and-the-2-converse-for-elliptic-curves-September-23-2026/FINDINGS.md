@@ -40,8 +40,8 @@ Only (6,-47) remains without a witness; the search is finite and does not exclud
 - Failure of the mod-8 congruence (p <= 3000): 1305 of 4157 K-split primes (23-54% per pair); every pair has failures.
 - Witness search D <= 600 (`output/standin-pairs/results-D600-all20pairs.jsonl`): witnesses for 5 of 20 pairs
   (N=192,k=-71: D=505; N=480,k=-71/-191: D=409; N=576,k=-47: D=553; N=680,k=-191: D=321, 489).
-- Rerun of the 15 witness-less pairs to D <= 2000 (`output/standin-pairs/results-D2000-nowitness-pairs.jsonl`, 14 of 15 done
-  when committed): one further witness, N=2016, k=-47: D=1513. Many pairs have very few admissible D in the window
+- Rerun of the 15 witness-less pairs to D <= 2000 (`output/standin-pairs/results-D2000-nowitness-pairs.jsonl`, all 15 done; the last pair, N=2320 k=-111, was rerun separately with a 10 GB stack: 4 admissible D, no witness
+  ): one further witness, N=2016, k=-47: D=1513. Many pairs have very few admissible D in the window
   (0-11), so "no witness" there reflects a thin search, not evidence of an empty equality branch.
 
 ## Matched-prime test of the proof's internal identity

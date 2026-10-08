@@ -12,3 +12,4 @@
 {"a": -24, "b": -6, "N": 576, "k": -23, "tested": 210, "fails": 55, "admD": 11, "errs": 0, "witnesses": []}
 {"a": -27, "b": -26, "N": 1248, "k": -23, "tested": 209, "fails": 57, "admD": 5, "errs": 0, "witnesses": []}
 {"a": -21, "b": -18, "N": 2016, "k": -47, "tested": 209, "fails": 79, "admD": 5, "errs": 0, "witnesses": [[1513, "16"]]}
+{"a": -29, "b": -25, "N": 2320, "k": -111, "tested": 206, "fails": 57, "admD": 4, "errs": 0, "witnesses": []}
