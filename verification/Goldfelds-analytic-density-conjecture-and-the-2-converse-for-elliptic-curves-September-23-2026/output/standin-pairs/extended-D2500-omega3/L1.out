@@ -1,0 +1,30 @@
+PARI stack size set to 5000000000 bytes, maximum size set to 5000003584
+PAIR N=680 k=-111 a=-25 b=-8 admissible_D=2
+  N=680 k=-111 D=1249 omega=1 ratio=64 v2=6  t=122
+  N=680 k=-111 D=1801 omega=1 ratio=4.29111e-40 v2=99  t=299
+DONE N=680 k=-111 witnesses=[] t=299
+PAIR N=360 k=-71 a=-15 b=-3 admissible_D=6
+  N=360 k=-71 D=409 omega=1 ratio=1.7864e-41 v2=99  t=15
+  N=360 k=-71 D=1009 omega=1 ratio=6.30718e-41 v2=99  t=56
+  N=360 k=-71 D=1129 omega=1 ratio=-9.24865e-41 v2=99  t=102
+  N=360 k=-71 D=1321 omega=1 ratio=-2.80493e-41 v2=99  t=157
+  N=360 k=-71 D=2089 omega=1 ratio=-3.12753e-41 v2=99  t=250
+  N=360 k=-71 D=2281 omega=1 ratio=16 v2=4  t=351
+DONE N=360 k=-71 witnesses=[] t=351
+PAIR N=2320 k=-71 a=-29 b=-25 admissible_D=9
+  N=2320 k=-71 D=129 omega=2 ratio=-7.72574e-42 v2=99  t=12
+  N=2320 k=-71 D=521 omega=1 ratio=-6.32475e-41 v2=99  t=68
+  N=2320 k=-71 D=929 omega=1 ratio=-1.4291e-41 v2=99  t=177
+  N=2320 k=-71 D=1009 omega=1 ratio=16 v2=4  t=290
+  N=2320 k=-71 D=1321 omega=1 ratio=16 v2=4  t=439
+  N=2320 k=-71 D=1889 omega=1 ratio=16 v2=4  t=667
+  N=2320 k=-71 D=2089 omega=1 ratio=16 v2=4  t=926
+  N=2320 k=-71 D=2441 omega=1 ratio=-4.54842e-41 v2=99  t=1239
+  N=2320 k=-71 D=2489 omega=2 ratio=-7.72319e-41 v2=99  t=1558
+DONE N=2320 k=-71 witnesses=[] t=1558
+PAIR N=2320 k=-111 a=-29 b=-25 admissible_D=4
+  N=2320 k=-111 D=1009 omega=1 ratio=16 v2=4  t=190
+  N=2320 k=-111 D=1321 omega=1 ratio=16 v2=4  t=437
+  N=2320 k=-111 D=1561 omega=2 ratio=-1.64616e-40 v2=99  t=733
+  N=2320 k=-111 D=1921 omega=2 ratio=64 v2=6  t=1095
+DONE N=2320 k=-111 witnesses=[] t=1095

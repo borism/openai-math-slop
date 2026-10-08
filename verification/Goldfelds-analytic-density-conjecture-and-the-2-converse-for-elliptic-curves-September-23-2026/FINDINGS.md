@@ -45,6 +45,17 @@ All 4 pairs the issue reports as "no witness (D <= 600)" have one once the searc
   ): one further witness, N=2016, k=-47: D=1513. Many pairs have very few admissible D in the window
   (0-11), so "no witness" there reflects a thin search, not evidence of an empty equality branch.
 
+### Extended search for the 14 witness-less stand-in pairs (D <= 2500, omega(D) <= 3, per-D logging)
+`scripts/g4.py` / `g5.py` (g5 = rerun of the two pairs whose worker was OOM-killed by the container's memory limit; the earlier
+missing 15th pair of the D <= 2000 run was probably the same cause). Logs in `output/standin-pairs/extended-D2500-omega3/`.
+- One new witness: N=1520, k=-71: D = 2361 = 3*787 (omega = 2, ratio 16, v2 = 4). The other 13 pairs: none, but most have only
+  0-15 admissible D in the window and most of those are single primes.
+- Tally over all logged D (some duplicated by the OOM rerun): for omega(D) = 1 the ratio's 2-adic valuation was 4 (32 times), 6 (3 times)
+  or the ratio was exactly 0 (48 times); never 2, i.e. no single-prime D was ever an equality case. For omega(D) = 2: one equality
+  (v2 = 4), two with v2 = 6, one with v2 = 8, five zeros.
+- So with 7 of 20 stand-in pairs now having a witness, "no witness" still mostly reflects the thin window (witnesses first
+  appear at omega = 2 and sometimes only past D = 2000-3000).
+
 ## Matched-prime test of the proof's internal identity
 The mod-8 step compares the congruence at p with the coefficient at D = p p' for a "matched" fresh K-split prime p'. Read
 literally, it implies: if a_p != p+1 (mod 8) then v(a(pp')) = omega(pp') = 2 (equality at pp'), for every matched p'.

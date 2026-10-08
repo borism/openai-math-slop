@@ -1,0 +1,19 @@
+PARI stack size set to 4000000000 bytes, maximum size set to 4000002048
+PAIR N=1520 k=-31 a=-20 b=-19 admissible_D=7
+  N=1520 k=-31 D=329 omega=2 ratio=4.68689e-42 v2=99  t=12
+  N=1520 k=-31 D=769 omega=1 ratio=16 v2=4  t=40
+  N=1520 k=-31 D=1289 omega=1 ratio=16 v2=4  t=89
+  N=1520 k=-31 D=1489 omega=1 ratio=1.41466e-40 v2=99  t=150
+  N=1520 k=-31 D=1601 omega=1 ratio=16 v2=4  t=214
+  N=1520 k=-31 D=1721 omega=1 ratio=16 v2=4  t=284
+  N=1520 k=-31 D=2281 omega=1 ratio=2.98805e-40 v2=99  t=382
+DONE N=1520 k=-31 witnesses=[] t=382
+PAIR N=1520 k=-71 a=-20 b=-19 admissible_D=7
+  N=1520 k=-71 D=321 omega=2 ratio=64 v2=6  t=27
+  N=1520 k=-71 D=881 omega=1 ratio=5.62822e-41 v2=99  t=111
+  N=1520 k=-71 D=929 omega=1 ratio=-7.97252e-41 v2=99  t=200
+  N=1520 k=-71 D=1641 omega=2 ratio=256 v2=8  t=369
+  N=1520 k=-71 D=2281 omega=1 ratio=16 v2=4  t=618
+  N=1520 k=-71 D=2361 omega=2 ratio=16 v2=4 WITNESS t=866
+  N=1520 k=-71 D=2441 omega=1 ratio=16 v2=4  t=1126
+DONE N=1520 k=-71 witnesses=[2361] t=1126
