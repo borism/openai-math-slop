@@ -16,7 +16,7 @@ there. That is a presentation/logic weakness of one proof step, not a counterexa
   independent brute-force point count, `scripts/chk.py`, and PARI `ellap`, `scripts/d.py`).
 - Other pairs named in the issue (congruent-number curves, `S0` = primes of 2N and of k, p <= 3000):
   (6,-47) 109/210, (7,-31) 108/207, (13,-79) 109/211, (31,-79) 107/211 fail. All have root number -1.
-- Own sweep, congruent-number curves n < 60 with odd root number, 8 negative k, p <= 2000:
+- Own sweep (`scripts/sweep.py`, per-pair rows in `output/congruent-number-sweep/sweep.csv`, rerun to confirm the totals), congruent-number curves n < 60 with odd root number, 8 negative k, p <= 2000:
   188 pairs, 14241/27687 K-split primes fail (51%); no pair had zero failures. (Not the issue's 23 pairs;
   those are not listed in the issue, so the remaining 22 were not checked individually.)
 - Equality witness D = 329 for (5,-31): sqrt(D) L(E^(kD),1)/L(E^(k),1) = 16.000... (37 digits);
@@ -37,7 +37,8 @@ All 4 pairs the issue reports as "no witness (D <= 600)" have one once the searc
 
 ## Stand-in pairs (the issue's own 23 pairs are not listed, so they could not be checked individually)
 10 curves y^2 = x(x-a)(x-b) (odd root number, conductor <= 3000, a,b in [-30,30]), up to 2 admissible negative k each
-(k = 1 mod 8, |k| <= 200, even twist, L != 0): 20 pairs, selected by `scripts/g.py select`. These are NOT the reporter's pairs.
+(k = 1 mod 8, |k| <= 200, even twist, L != 0): 20 pairs, selected by `scripts/g.py select` (the selected list, with a, b, N, k per pair, is the first four fields of each row in
+`output/standin-pairs/results-D600-all20pairs.jsonl`; `pairs14_full.json` is the 14 pairs without a witness at D <= 600/2000). These are NOT the reporter's pairs.
 - Failure of the mod-8 congruence (p <= 3000): 1305 of 4157 K-split primes (23-54% per pair); every pair has failures.
 - Witness search D <= 600 (`output/standin-pairs/results-D600-all20pairs.jsonl`): witnesses for 5 of 20 pairs
   (N=192,k=-71: D=505; N=480,k=-71/-191: D=409; N=576,k=-47: D=553; N=680,k=-191: D=321, 489).
@@ -112,6 +113,13 @@ Not provably, from anything I could establish. What can be said:
   Unresolved.
 - **Search data:** single primes never give equality; every pair named in the issue and 7 of 20 stand-in pairs have an omega = 2
   witness (often only past D = 2000). Absence in a short window is not evidence of absence.
+
+## Compute limits (Sage benchmark)
+To judge whether the lattice check could be run here I installed Sage (`passagemath-standard`, in a scratch virtual environment, not
+committed) and timed the construction of the plus-sign cuspidal modular-symbols space for weight 2 on Gamma0(N):
+N=2000: dim 271, 1.3 s; N=6000: dim 1141, 13 s; N=12000: dim 2321, 94 s, 1.7 GB; N=24000: dim 4681, 397 s, 6 GB.
+Cost roughly quadruples per doubling of N. The levels in play (order 4*r^2*J*P_S^2, rough estimate, millions or more) are far out of
+reach on this 4-CPU sandbox with a memory limit of about 4-6 GB per process; they would need a large-memory machine or cluster.
 
 ## Close reading of the lemma proof (08-rational-converse.tex, lines 470-700)
 - The arithmetic from (a-1)(a-p-1)/4 even and a even to a = p+1 (mod 8) is correct.
