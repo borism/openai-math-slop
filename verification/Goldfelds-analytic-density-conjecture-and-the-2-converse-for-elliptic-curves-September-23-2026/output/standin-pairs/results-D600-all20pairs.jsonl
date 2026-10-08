@@ -1,0 +1,20 @@
+{"a": -24, "b": -8, "N": 192, "k": -23, "tested": 210, "fails": 54, "admD": 4, "errs": 0, "witnesses": []}
+{"a": -10, "b": -1, "N": 480, "k": -71, "tested": 209, "fails": 62, "admD": 1, "errs": 0, "witnesses": [[409, "4"]]}
+{"a": -25, "b": -8, "N": 680, "k": -111, "tested": 206, "fails": 53, "admD": 0, "errs": 0, "witnesses": []}
+{"a": -27, "b": -26, "N": 1248, "k": -23, "tested": 209, "fails": 57, "admD": 0, "errs": 0, "witnesses": []}
+{"a": -21, "b": -18, "N": 2016, "k": -47, "tested": 209, "fails": 79, "admD": 2, "errs": 0, "witnesses": []}
+{"a": -24, "b": -8, "N": 192, "k": -71, "tested": 210, "fails": 51, "admD": 6, "errs": 0, "witnesses": [[505, "16"]]}
+{"a": -10, "b": -1, "N": 480, "k": -191, "tested": 207, "fails": 57, "admD": 2, "errs": 0, "witnesses": [[409, "4"]]}
+{"a": -25, "b": -8, "N": 680, "k": -191, "tested": 207, "fails": 51, "admD": 4, "errs": 0, "witnesses": [[321, "16"], [489, "16"]]}
+{"a": -27, "b": -26, "N": 1248, "k": -95, "tested": 203, "fails": 58, "admD": 0, "errs": 0, "witnesses": []}
+{"a": -21, "b": -18, "N": 2016, "k": -143, "tested": 205, "fails": 83, "admD": 0, "errs": 0, "witnesses": []}
+{"a": -15, "b": -3, "N": 360, "k": -71, "tested": 209, "fails": 111, "admD": 1, "errs": 0, "witnesses": []}
+{"a": -24, "b": -6, "N": 576, "k": -23, "tested": 210, "fails": 55, "admD": 4, "errs": 0, "witnesses": []}
+{"a": -12, "b": -2, "N": 960, "k": -119, "tested": 209, "fails": 88, "admD": 0, "errs": 0, "witnesses": []}
+{"a": -20, "b": -19, "N": 1520, "k": -31, "tested": 206, "fails": 53, "admD": 1, "errs": 0, "witnesses": []}
+{"a": -29, "b": -25, "N": 2320, "k": -71, "tested": 209, "fails": 48, "admD": 2, "errs": 0, "witnesses": []}
+{"a": -15, "b": -3, "N": 360, "k": -191, "tested": 207, "fails": 103, "admD": 2, "errs": 0, "witnesses": []}
+{"a": -24, "b": -6, "N": 576, "k": -47, "tested": 210, "fails": 53, "admD": 5, "errs": 0, "witnesses": [[553, "16"]]}
+{"a": -12, "b": -2, "N": 960, "k": -191, "tested": 207, "fails": 78, "admD": 2, "errs": 0, "witnesses": []}
+{"a": -20, "b": -19, "N": 1520, "k": -71, "tested": 209, "fails": 54, "admD": 1, "errs": 0, "witnesses": []}
+{"a": -29, "b": -25, "N": 2320, "k": -111, "tested": 206, "fails": 57, "admD": 0, "errs": 0, "witnesses": []}

@@ -1,0 +1,10 @@
+PARI stack size set to 3000000000 bytes, maximum size set to 3000000512
+p=5 q=101 D=505 a_p=2 fail_mod8=True ratio=-9.08642e-42 v2=99 strict VIOLATES-PREDICTION t=2
+p=5 q=157 D=785 a_p=2 fail_mod8=True ratio=16 v2=4 EQUAL CONSISTENT t=4
+p=5 q=173 D=865 a_p=2 fail_mod8=True ratio=16 v2=4 EQUAL CONSISTENT t=7
+p=19 q=59 D=1121 a_p=0 fail_mod8=True ratio=16 v2=4 EQUAL CONSISTENT t=11
+p=19 q=131 D=2489 a_p=0 fail_mod8=True ratio=16 v2=4 EQUAL CONSISTENT t=23
+p=19 q=227 D=4313 a_p=0 fail_mod8=True ratio=16 v2=4 EQUAL CONSISTENT t=41
+p=41 q=97 D=3977 a_p=-10 fail_mod8=True ratio=16 v2=4 EQUAL CONSISTENT t=56
+p=47 q=103 D=4841 a_p=0 fail_mod8=False ratio=8.02495e-41 v2=99 strict CONSISTENT t=73
+done

@@ -34,6 +34,37 @@ there. That is a presentation/logic weakness of one proof step, not a counterexa
 So 3 of the 4 pairs the issue reports as "no witness (D <= 600)" have one once the search is extended.
 Only (6,-47) remains without a witness; the search is finite and does not exclude a larger D.
 
+## Stand-in pairs (the issue's own 23 pairs are not listed, so they could not be checked individually)
+10 curves y^2 = x(x-a)(x-b) (odd root number, conductor <= 3000, a,b in [-30,30]), up to 2 admissible negative k each
+(k = 1 mod 8, |k| <= 200, even twist, L != 0): 20 pairs, selected by `scripts/g.py select`. These are NOT the reporter's pairs.
+- Failure of the mod-8 congruence (p <= 3000): 1305 of 4157 K-split primes (23-54% per pair); every pair has failures.
+- Witness search D <= 600 (`output/standin-pairs/results-D600-all20pairs.jsonl`): witnesses for 5 of 20 pairs
+  (N=192,k=-71: D=505; N=480,k=-71/-191: D=409; N=576,k=-47: D=553; N=680,k=-191: D=321, 489).
+- Rerun of the 15 witness-less pairs to D <= 2000 (`output/standin-pairs/results-D2000-nowitness-pairs.jsonl`, 14 of 15 done
+  when committed): one further witness, N=2016, k=-47: D=1513. Many pairs have very few admissible D in the window
+  (0-11), so "no witness" there reflects a thin search, not evidence of an empty equality branch.
+
+## Matched-prime test of the proof's internal identity
+The mod-8 step compares the congruence at p with the coefficient at D = p p' for a "matched" fresh K-split prime p'. Read
+literally, it implies: if a_p != p+1 (mod 8) then v(a(pp')) = omega(pp') = 2 (equality at pp'), for every matched p'.
+`scripts/m2.py` tests this (p' matched to p by p mod 8, a_p mod 8 and Legendre symbols at the odd primes of S0).
+Outputs in `output/matched-prime-test/`.
+- (5,-31) and (7,-31), p, p' <= 250, pp' <= 6500: 8 of 10 failing-p cases are equality cases, as the identity requires.
+- The 2 exceptions (n=5,k=-31: p=19,p'=59, D=1121; n=7,k=-31: p=5,p'=101, D=505) have L(E^(kD),1)=0 exactly,
+  so a(D)=0, strict, yet the congruence fails.
+- Weaker matching (`weak-matching-5_-31.out`, p mod 8 and S0 classes only) gave more apparent violations; that
+  matching is probably too loose and is kept for transparency.
+- Caveat: the proof's "same finite data, including every support-unit test" is probably a stronger (Frobenius) condition than
+  the one tested. Tiny sample; not evidence of a proof error until the exact matching condition is pinned down.
+
+## Close reading of the lemma proof (08-rational-converse.tex, lines 470-700)
+- The arithmetic from (a-1)(a-p-1)/4 even and a even to a = p+1 (mod 8) is correct.
+- Since the congruence fails generically, the "equality never occurs" branch is empty whenever the derivation is valid,
+  so everything after "we therefore assume" (the 1/4-divided form, the deeper bit) is vacuous. The authors' structure
+  treats that branch as real.
+- The 1/4-divided integrality (case J = U) also uses the mod-8 congruence, so it lives inside the same branch.
+- Not yet read: the cited dependencies (tc:trace-algebra, tc:inertia-identity, prop:even-coefficients, pw:recurrence).
+
 ## Caveats
 - "Admissible" was implemented as: squarefree, every prime split in Q(sqrt k) and outside S0, D = 1 mod 8 and a
   quadratic residue mod each odd prime of S0. The manuscript's exact filter was not re-derived.
@@ -48,3 +79,5 @@ Only (6,-47) remains without a witness; the search is finite and does not exclud
 - `python3 scripts/c.py`  (D=329 check)
 - `python3 scripts/f.py 1200 w 10`  (n=31, k=-79 witness search; third arg = PARI stack in GB)
 - `python3 scripts/e.py 1200 w 3`  (witness search for the other pairs; `e.py 0 sweep 3` runs the sweep)
+- `python3 scripts/g.py select` then `python3 scripts/g.py work <0-3> <stackGB> <Dmax>`  (stand-in pairs; writes pairs.json)
+- `python3 scripts/m2.py <n> <k> <Pmax> <Dmax> <stackGB>`  (matched-prime test)
