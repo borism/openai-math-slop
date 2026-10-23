@@ -1,0 +1,6 @@
+PARI stack size set to 3000000000 bytes, maximum size set to 3000000512
+{"a": -49, "b": -1, "k": -47, "D": 1513, "omega": 2, "ratio": 8.896797524287162e-41, "rational": true, "v2": null, "secs": 38}
+{"a": -49, "b": -1, "k": -47, "D": 4897, "omega": 2, "ratio": -2.339849829856578e-40, "rational": true, "v2": null, "secs": 122}
+{"a": -49, "b": -1, "k": -47, "D": 6001, "omega": 2, "ratio": 8.518248043337493e-41, "rational": true, "v2": null, "secs": 157}
+{"a": -49, "b": -1, "k": -47, "D": 7729, "omega": 2, "ratio": 16.0, "rational": true, "v2": 4, "secs": 206}
+{"a": -49, "b": -1, "k": -47, "D": 7897, "omega": 2, "ratio": -7.382187951954083e-41, "rational": true, "v2": null, "secs": 214}

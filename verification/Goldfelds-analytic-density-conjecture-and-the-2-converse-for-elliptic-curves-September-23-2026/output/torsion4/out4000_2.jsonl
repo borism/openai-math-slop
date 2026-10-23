@@ -1,0 +1,7 @@
+PARI stack size set to 2000000000 bytes, maximum size set to 2000003072
+D -57 64 -167 577
+  ratio 577 16.0
+D -57 64 -167 1873
+D -57 64 -167 2137
+D -57 64 -167 3217
+{"a": -57, "b": 64, "N": 1254, "tors": [4, 2], "k": -167, "tested": 207, "fails": 0, "admD": 4, "errs": 3, "witnesses": [], "secs": 1005}

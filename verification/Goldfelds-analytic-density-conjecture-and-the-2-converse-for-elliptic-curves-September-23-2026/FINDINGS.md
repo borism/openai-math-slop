@@ -144,6 +144,28 @@ reach on this 4-CPU sandbox with a memory limit of about 4-6 GB per process; the
 - Integrality of H_{p} needs B_{p}[1] = a(p)/2 even; in the tested instances p is off the filter (a(p)=0), so this is satisfied.
   I did not verify integrality of H at all indices.
 
+## Rational 4-torsion check (curves where the mod-8 congruence cannot fail)
+Why: the proof's case split ("equality at some nonempty K-split D" / "equality never occurs") is sound as a split, and the
+failing congruence only shows the second case is empty for the curves tested so far. A genuine gap in the second case
+(mod-4 integrality of the divided form, deeper bit) can only be exercised by (E,k) with no equality witness, and the
+congruence `a_p = p+1 (mod 8)` can only hold at every K-split p if 8 | #E(F_p). So: curves with Z/2 x Z/4 torsion.
+- For K-split p, a_p(E^(k)) = a_p(E), and Z/2 x Z/4 embeds in E(F_p) (p odd, good), so the congruence holds automatically.
+- Selection (`scripts/t4_select.py`): y^2 = x(x-a)(x-b), a,b in [-80,80], conductor <= 6000, odd root number,
+  torsion Z/2 x Z/4: 8 curves (N = 336, 840, 1254, 1680, 1680, 1848, 2184, 3696; `output/torsion4/curves.json`). Twists k
+  chosen as in `g.py` (negative, k = 1 mod 8, |k| < 400, even twist, L != 0), up to 2 per curve. One curve (-49,-25, N=1680) has no admissible k in range, so 7 curves / 8 (curve,k) pairs were run.
+- Congruence: 0 failures in all 8 (curve,k) pairs, 205-209 K-split primes each (p <= 3000), as predicted.
+- Equality witnesses (`scripts/t4_run.py`, D <= 4000, omega <= 3; `scripts/t4_run_composite.py`, omega >= 2, D <= 10000;
+  `output/torsion4/`). Admissible composite D are sparse and large here (first ones around 1500-5000), each L-value
+  costs minutes, and several runs hit PARI stack overflow (PariError 17) on the larger conductors.
+  - (a,b,N,k) = (-49,-1,336,-47): **witness D = 7729 = 59*131** (omega 2, ratio 16, v2 = 4 = 2*omega). Other D:
+    1513, 4897, 6001, 7897 have L = 0; the single primes 2377, 2713, 3529 give ratio 16 but v2 = 4 with omega = 1, i.e. strict inequality.
+  - (-49,-1,336,-143): D = 4393 gives ratio 64 (v2 = 6, not equality); D = 5833 overflowed the stack. Undecided.
+  - (-57,64,1254,-167): D = 577 prime, ratio 16 (not equality); every composite D (5017 .. 8977) overflowed the stack. Undecided.
+  - Other 4 pairs: (840,-311), (1680,-311) and (1848,-167), (3696,-167) hit stack overflow on every admissible D tried (the D <= 600 runs found no admissible D for 840 and 1680); (2184,-335) has no admissible D <= 4000. Untested.
+- Verdict: one of the 8 curves/twists decided, and it has an equality witness, so the "equality never occurs" case is empty there too even though
+  the congruence holds. No case in which the second branch is non-vacuous was found. This does not settle the
+  other curves; it is a thin window (equality needs omega >= 2).
+
 ## Caveats
 - "Admissible" was implemented as: squarefree, every prime split in Q(sqrt k) and outside S0, D = 1 mod 8 and a
   quadratic residue mod each odd prime of S0. The manuscript's exact filter was not re-derived.
@@ -161,3 +183,5 @@ reach on this 4-CPU sandbox with a memory limit of about 4-6 GB per process; the
 - `python3 scripts/e.py 1200 w 3`  (witness search for the other pairs; `e.py 0 sweep 3` runs the sweep)
 - `python3 scripts/g.py select` then `python3 scripts/g.py work <0-3> <stackGB> <Dmax>`  (stand-in pairs; writes pairs.json)
 - `python3 scripts/m2.py <n> <k> <Pmax> <Dmax> <stackGB>`  (matched-prime test)
+- `python3 scripts/t4_select.py` (writes curves.json), then `python3 scripts/t4_run.py <idx> <Dmax>` and
+  `python3 scripts/t4_run_composite.py <a> <b> <k> <Dmax>`  (4-torsion check; run from a directory holding curves.json; needs `cypari2` or the `cypari` wheel, which exposes the same `pari` object)

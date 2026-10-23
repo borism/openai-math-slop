@@ -1,0 +1,2 @@
+PARI stack size set to 3000000000 bytes, maximum size set to 3000000512
+{"a": -57, "b": 64, "N": 1254, "tors": [4, 2], "k": -167, "tested": 207, "fails": 0, "admD": 1, "errs": 0, "witnesses": [], "secs": 105}
