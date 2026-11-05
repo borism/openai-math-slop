@@ -1,0 +1,4 @@
+arithmetic/ABI checks passed
+arithmetic/ABI checks passed
+Built numerical programs in /tmp/claude-0/-home-user-openai-math-slop/24550152-40a3-5e1c-8bf9-84dd609cdc7f/scratchpad/agent-issue4/mub/build
+Inspect both cover-square instruction sequences before relying on a fresh run.

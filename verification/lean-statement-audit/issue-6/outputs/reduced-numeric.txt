@@ -1,0 +1,6 @@
+phi=C(Q⊗Tᵀ)Cᵀ                max rel. error 3.55e-15
+phi=C(Q⊗T)Cᵀ (nonsym T)      max rel. error 2.14e+01
+schur                        max rel. error 1.98e-14
+p=detX*q                     max rel. error 3.56e-14
+q(e)-1                       max rel. error 0.00e+00
+deg16                        max rel. error 2.85e-14

@@ -150,3 +150,14 @@ pattern counts (code only; comments/strings stripped):
       4 set_option backward.dsimp.proofs
       2 set_option backward.dsimp.instances
       2 set_option Elab.async
+
+Manual follow-up on the 13 environment-manipulation hits (read, not compiled):
+  OAI/Internal/RootAlias.lean:23  `modifyEnv ... addAlias` — parser aliases OAI.X -> X only;
+      adds no declarations, no axioms.
+  Commutator/{TracialDCorner,TracialDoubleCompression,TracialGNSCorners,UnitarySequence}.lean,
+  NearAllOrders.lean:69, PolycyclicRecognition/Geometry/Cartan*.lean
+      `run_cmd modifyEnv ... LibrarySuggestions.nameDenyListExt.addEntry` — hides names
+      from library-suggestion tactics; no declarations, no axioms.
+  BrownMeasure/Model.lean:91, IrrationalRotation/Model/Product.lean:116
+      `auxLemmasExt.setState env {}` — clears the auxiliary-lemma cache; no declarations.
+  Verdict: none can add an unchecked declaration; `#print axioms` remains authoritative.

@@ -1,0 +1,6 @@
+random: 600000 samples, float64 min slack/x^2 = -1.802689e-05 (float64 is unreliable for small lam)
+hill climb (lam>=0.01, x>=1e-4): float64 min slack/x^2 = -1.790358e-04
+mpmath (50 digits) recheck of 80 worst points (20 hill-climb + 60 random): violations=0
+  least exact slack/x^2 = 4.400209e-08 at m=[1.622035, 0.573802, 0.804163] lam=1.000000 x=1.012e-01
+hill climb: float64 min ratio = 0.999627738
+mpmath recheck of 20 lowest: min ratio = 1.000064706 (must be >= 1) at m=[1.009705, 0.979925, 1.01037] lam=0.010002 x=1.008e-04; below 1: 0

@@ -1,0 +1,53 @@
+# covrun built by verification/saved-run/compiled-build/build.sh (GCC 13.3.0); coverSeeds::run excerpt (pow(R*n,2) and pow(sqrt(RN2)+1.5,2) of covout.cpp:100-101)
+0000000000006010 <coverSeeds::run(seeds&, double, int)>:
+    6010:	f3 0f 1e fa          	endbr64
+    6014:	4c 8d 54 24 08       	lea    0x8(%rsp),%r10
+    6019:	c5 e8 57 d2          	vxorps %xmm2,%xmm2,%xmm2
+    601d:	c5 fb 10 d8          	vmovsd %xmm0,%xmm0,%xmm3
+    6021:	48 83 e4 e0          	and    $0xffffffffffffffe0,%rsp
+    6025:	41 ff 72 f8          	push   -0x8(%r10)
+    6029:	55                   	push   %rbp
+    602a:	48 89 e5             	mov    %rsp,%rbp
+    602d:	41 57                	push   %r15
+    602f:	41 56                	push   %r14
+    6031:	41 55                	push   %r13
+    6033:	41 54                	push   %r12
+    6035:	49 89 fc             	mov    %rdi,%r12
+    6038:	41 52                	push   %r10
+    603a:	53                   	push   %rbx
+    603b:	48 81 ec a0 01 00 00 	sub    $0x1a0,%rsp
+    6042:	48 89 b5 d0 fe ff ff 	mov    %rsi,-0x130(%rbp)
+    6049:	8b 1d 01 40 00 00    	mov    0x4001(%rip),%ebx        # a050 <n>
+    604f:	64 48 8b 04 25 28 00 	mov    %fs:0x28,%rax
+    6056:	00 00 
+    6058:	48 89 45 c8          	mov    %rax,-0x38(%rbp)
+    605c:	31 c0                	xor    %eax,%eax
+    605e:	c5 eb 2a cb          	vcvtsi2sd %ebx,%xmm2,%xmm1
+    6062:	89 57 08             	mov    %edx,0x8(%rdi)
+    6065:	c5 f3 59 c8          	vmulsd %xmm0,%xmm1,%xmm1
+    6069:	c5 f3 59 c1          	vmulsd %xmm1,%xmm1,%xmm0
+    606d:	c5 fb 5c 05 93 21 00 	vsubsd 0x2193(%rip),%xmm0,%xmm0        # 8208 <_IO_stdin_used+0x208>
+    6074:	00 
+    6075:	c5 e1 14 d8          	vunpcklpd %xmm0,%xmm3,%xmm3
+    6079:	c5 f9 11 5f 10       	vmovupd %xmm3,0x10(%rdi)
+    607e:	c5 e1 57 db          	vxorpd %xmm3,%xmm3,%xmm3
+    6082:	c5 f9 2e d8          	vucomisd %xmm0,%xmm3
+    6086:	0f 87 1e 17 00 00    	ja     77aa <coverSeeds::run(seeds&, double, int)+0x179a>
+    608c:	c5 fb 51 c0          	vsqrtsd %xmm0,%xmm0,%xmm0
+    6090:	c5 f3 58 0d 80 21 00 	vaddsd 0x2180(%rip),%xmm1,%xmm1        # 8218 <_IO_stdin_used+0x218>
+    6097:	00 
+    6098:	b8 01 00 00 00       	mov    $0x1,%eax
+    609d:	c5 fb 58 05 6b 21 00 	vaddsd 0x216b(%rip),%xmm0,%xmm0        # 8210 <_IO_stdin_used+0x210>
+    60a4:	00 
+    60a5:	48 be ab aa aa aa aa 	movabs $0xaaaaaaaaaaaaaaab,%rsi
+    60ac:	aa aa aa 
+    60af:	4d 8b b4 24 90 00 00 	mov    0x90(%r12),%r14
+    60b6:	00 
+    60b7:	c5 fb 2c c9          	vcvttsd2si %xmm1,%ecx
+    60bb:	c5 fb 59 c0          	vmulsd %xmm0,%xmm0,%xmm0
+    60bf:	85 c9                	test   %ecx,%ecx
+    60c1:	0f 4e c8             	cmovle %eax,%ecx
+    60c4:	c4 c1 7b 11 44 24 20 	vmovsd %xmm0,0x20(%r12)
+    60cb:	8d 44 0b ff          	lea    -0x1(%rbx,%rcx,1),%eax
+# dynamic symbols containing pow:
+0
