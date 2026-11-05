@@ -1,0 +1,24 @@
+--- a/lean/docs/107.md
++++ b/lean/docs/107.md
+@@ -2,12 +2,13 @@
+ 
+ The following describes the scope of the Lean formalization related to the following accompanying paper(s):
+ 
++- [An Upper Bound of 9/4 for the Matrix Multiplication Exponent](../../preprints/Matrix-Multiplication-Nine-Fourths-October-2-2026/paper.pdf)
+ - [Complex Matrix Multiplication Below 2.258 and Rectangular Bounds](../../preprints/Complex-Matrix-Multiplication-Below-2.258-and-Rectangular-Bounds-September-24-2026/Complex-Matrix-Multiplication-Below-2.258-and-Rectangular-Bounds-September-24-2026.pdf)
+ - [Staggered extraction for exact matrix multiplication over every field](../../preprints/Staggered-extraction-for-exact-matrix-multiplication-over-every-field-September-24-2026/Staggered-extraction-for-exact-matrix-multiplication-over-every-field-September-24-2026.pdf)
+ 
+ ## Scope
+ 
+-The formalized results bound the complex matrix-multiplication exponent by $\omega(\mathbb C)\le9/4$, the dual exponent by $\alpha>0.465$, and the rectangular exponent at aspect ratio $0.709$ by $\omega(\mathbb C;1,0.709,1)<2.092$. The dual exponent is the supremum of rectangular aspect ratios attainable with exponent $2$. The arithmetic model counts additions, subtractions, and multiplications in finite division-free programs, with arbitrary positive exponent slack. The square bound implies the paper's weaker $2.258$ headline bound.
++The formalized square bound $\omega(\mathbb C)\le9/4$ is Theorem 1.1 of *An Upper Bound of 9/4 for the Matrix Multiplication Exponent*; its Lean proof (`OAI.MatrixMultiplication.AuxiliarySeparation`) follows that paper's character, separation, and polynomial-multiplication argument. It implies the weaker square bound $\omega<2.258$ stated in *Complex Matrix Multiplication Below 2.258 and Rectangular Bounds*, whose own certificate argument for the square bound is not a Comparator target (the solution tree also proves a separate certificate bound $\omega(\mathbb C)<2.267$, `MatrixMultiplication.SquareBound.complex_omega_lt_2267_div_1000`, outside any Comparator configuration). From that second paper, the formalization proves the dual exponent bound $\alpha>0.465$ and the rectangular bound $\omega(\mathbb C;1,0.709,1)<2.092$ at aspect ratio $0.709$. The dual exponent is the supremum of rectangular aspect ratios attainable with exponent $2$. The arithmetic model counts additions, subtractions, and multiplications in finite division-free programs, with arbitrary positive exponent slack.
+ 
+ The formalized result gives the unconditional bound $\omega(F)<2.371054886006746$ for every field $F$, including finite fields and fields of positive characteristic. The exponent counts additions, subtractions, and multiplications in finite division-free arithmetic programs, with arbitrary positive exponent slack. No numerical inequalities remain as hypotheses. The result concerns arithmetic complexity, rather than bit complexity or practical crossover sizes.
+ 
+@@ -15,5 +16,5 @@
+ 
+ | Result | Comparator statement |
+ | --- | --- |
+-| Complex square, dual, and rectangular exponent bounds | [MatrixMultiplication.lean](../ComparatorChallenges/MatrixMultiplication.lean) |
++| Complex square exponent bound $\omega(\mathbb C)\le9/4$ (Nine-Fourths paper); dual and rectangular bounds (2.258 paper) | [MatrixMultiplication.lean](../ComparatorChallenges/MatrixMultiplication.lean) |
+ | Matrix-multiplication exponent over every field | [MatrixFields.lean](../ComparatorChallenges/MatrixFields.lean) |

@@ -15,6 +15,7 @@ is in PATTERNS. Output: per-pattern counts and every hit with file:line.
 
 Usage: python3 -I trust_scan.py closure lean OAI.LinearAlgebra.MatrixMultiplication.Main
        python3 -I trust_scan.py tree lean OAI
+       python3 -I trust_scan.py files lean candidate-files.txt   (paths relative to cwd)
 """
 import os, re, sys
 from collections import defaultdict, OrderedDict
@@ -49,31 +50,48 @@ HARD = ['axiom decl', 'sorry', 'admit', 'native_decide', 'Lean.ofReduceBool / of
         'addDecl / Environment manipulation']
 
 
+TOKEN_RE = re.compile(r'/-|-/|--|"|\\.|\n')
+
+
 def strip(text):
-    # remove block comments (nested) and line comments and string literals
+    """Blank out comments (nested /- -/ and --) and string literals, keeping
+    newlines so that line numbers are preserved. Token-driven for speed."""
     out = []
-    i, n, depth = 0, len(text), 0
+    pos = 0
+    depth = 0          # block-comment nesting depth
     in_str = False
-    while i < n:
-        if depth == 0 and not in_str and text.startswith('"', i):
-            in_str = True; out.append(' '); i += 1; continue
-        if in_str:
-            if text[i] == '\\':
-                out.append('  '); i += 2; continue
-            if text[i] == '"':
-                in_str = False
-            out.append('\n' if text[i] == '\n' else ' '); i += 1; continue
-        if text.startswith('/-', i):
-            depth += 1; out.append('  '); i += 2; continue
-        if depth > 0 and text.startswith('-/', i):
-            depth -= 1; out.append('  '); i += 2; continue
+    in_line = False
+    last = 0
+    for m in TOKEN_RE.finditer(text):
+        tok = m.group(0)
+        i = m.start()
+        if in_line:
+            if tok == '\n':
+                in_line = False
+                out.append(re.sub(r'[^\n]', ' ', text[last:i])); last = i
+            continue
         if depth > 0:
-            out.append('\n' if text[i] == '\n' else ' '); i += 1; continue
-        if text.startswith('--', i):
-            j = text.find('\n', i)
-            j = n if j < 0 else j
-            out.append(' ' * (j - i)); i = j; continue
-        out.append(text[i]); i += 1
+            if tok == '/-':
+                depth += 1
+            elif tok == '-/':
+                depth -= 1
+                if depth == 0:
+                    out.append(re.sub(r'[^\n]', ' ', text[last:m.end()])); last = m.end()
+            continue
+        if in_str:
+            if tok == '"':
+                in_str = False
+                out.append(re.sub(r'[^\n]', ' ', text[last:m.end()])); last = m.end()
+            continue
+        # code state
+        if tok == '/-':
+            out.append(text[last:i]); last = i; depth = 1
+        elif tok == '--':
+            out.append(text[last:i]); last = i; in_line = True
+        elif tok == '"':
+            out.append(text[last:i]); last = i; in_str = True
+    tail = text[last:]
+    out.append(re.sub(r'[^\n]', ' ', tail) if (depth or in_str or in_line) else tail)
     return ''.join(out)
 
 
@@ -100,19 +118,25 @@ def closure(root, mods):
     return seen, external
 
 
+COMPILED = [(k, re.compile(p)) for k, p in PATTERNS.items()]
+PREFILTER = re.compile('|'.join(f'(?:{p})' for p in PATTERNS.values()))
+
+
 def scan(files, root):
     counts = defaultdict(int); hits = defaultdict(list); total_lines = 0
     for p in files:
         raw = open(p, encoding='utf-8', errors='replace').read()
-        s = strip(raw)
-        lines = s.split('\n'); total_lines += len(lines)
+        raw_lines = raw.split('\n')
+        lines = strip(raw).split('\n'); total_lines += len(lines)
         rel = os.path.relpath(p, os.path.dirname(os.path.abspath(root)))
-        for k, pat in PATTERNS.items():
-            rx = re.compile(pat)
-            for ln, line in enumerate(lines, 1):
+        for ln, line in enumerate(lines, 1):
+            if not PREFILTER.search(line):
+                continue
+            for k, rx in COMPILED:
                 if rx.search(line):
                     counts[k] += 1
-                    hits[k].append(f'{rel}:{ln}: {raw.splitlines()[ln-1].strip()[:160] if ln-1 < len(raw.splitlines()) else ""}')
+                    src = raw_lines[ln - 1].strip()[:160] if ln - 1 < len(raw_lines) else ''
+                    hits[k].append(f'{rel}:{ln}: {src}')
     return counts, hits, total_lines
 
 
@@ -125,6 +149,10 @@ def main():
               f'{len(ext)} external imports')
         tops = sorted(set(e.split('.')[0] for e in ext))
         print('external import roots:', tops)
+    elif mode == 'files':
+        # explicit file list (e.g. a grep prefilter), one path per line, relative to cwd
+        files = [l.strip() for l in open(sys.argv[3]) if l.strip()]
+        print(f'file list {sys.argv[3]}: {len(files)} files')
     else:
         sub = os.path.join(root, sys.argv[3])
         files = [os.path.join(d, f) for d, _, fs in os.walk(sub) for f in fs if f.endswith('.lean')]
@@ -141,7 +169,7 @@ def main():
     soft = [k for k in PATTERNS if k not in HARD]
     print('\nfirst 40 hits for other patterns:')
     for k in soft:
-        for h in hits.get(k, [])[:40]:
+        for h in hits.get(k, [])[:int(os.environ.get('SOFT_LIMIT', '40'))]:
             print(f'  [{k}] {h}')
     if mode == 'closure':
         print('\nclosure modules:')
