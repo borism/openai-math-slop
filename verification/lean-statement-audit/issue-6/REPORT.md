@@ -128,8 +128,28 @@ Output: `outputs/trust-scan-oai-tree-summary.txt`. Scope: 162,417 files, 29.86M 
 
 **`readme-coverage.patch`:** 176/721 (24%) listed; 5 support-only, so at most 171 have a checked main theorem; 245/373 families; 345 manuscripts linked from lean/docs.
 
+## Lean check of ω ≤ 9/4 (added after the review)
+Lean 4.34.1, Mathlib `d13f23b`, openai/math `4eaee8754`. The import closure of `OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Main` was built with `lake build`, together with fixed-point-theorems @ 770940dd plus `lean/patches/fixed-point-theorems-lean4341.patch`. The kernel checked every proof in it.
+
+**Axioms** (`outputs/omega-axioms.txt`, from `AxiomsOmega.lean`)
+- `#print axioms` gives `[propext, Classical.choice, Quot.sound]` for both `omega_le_nine_quarters` and `matrix_multiplication_cost_le`.
+- `#print Arithmetic.omega` shows `sInf {τ | AdmissibleExponent F τ}`.
+- The Comparator target `OAI.MatrixMultiplication.complex_omega_le_nine_quarters` (`OAI/LinearAlgebra/MatrixMultiplication/Main.lean`) is defined as `AuxiliarySeparation.omega_le_nine_quarters`, so the same axioms apply. The full 504-file `Main` was not built.
+
+**Statement and definitions** (`outputs/omega-fingerprint-compare.txt`; tools in `../lean-checks/`)
+- Every constant declared in `ComparatorChallenges.MatrixMultiplication` was fingerprinted: kind, universe parameters, hash of type, and hash of value for definitions.
+- These were compared with the same names in the solution environment.
+- Results:
+  - all 71 definitions, 3 inductives, 8 constructors and 3 recursors are identical;
+  - the 24 helper theorems have identical types;
+  - the challenge's `complex_omega_le_nine_quarters` has the same type hash as the solution's `AuxiliarySeparation.omega_le_nine_quarters`;
+  - the other two targets (`complex_alpha_gt_93_div_200`, `complex_rectangular_omega_lt_523_div_250`) live only in the unbuilt `Main` and were not compared.
+- This is an independent approximation of Comparator's statement check (32-bit structural hashes), not Comparator or nanoda.
+
+**Conclusion.** ω(ℂ) ≤ 9/4, as stated in the challenge, is machine-checked using only the standard axioms. What remains is mathematical review of the argument (concavity and tripling lemmas), not a question of formal trust.
+
 ## Confidence and limits
 - **High:** tasks 1, 3 and 5.
 - **Task 2:** high that the statement matches and the static scan is clean.
 - **Task 4:** high that the mathematics is right; no proof in the sketch is checked.
-- Static analysis and elaboration only; no proofs in the OAI tree were kernel-checked during this review. See the "Lean check" section, if present, for the later axiom check.
+- The subagent review was static analysis and elaboration only. The later Lean check above built and kernel-checked the ω ≤ 9/4 closure; nothing else in lean/OAI was built.
