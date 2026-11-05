@@ -1,0 +1,1154 @@
+OAI.CoarseAssembly.DiscreteRoe.instNonUnitalCStarAlgebraSubtypeOperatorMemNonUnitalStarSubalgebraComplexAlgebra._proof_5	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	2065827500	-
+OAI.CoarseAssembly.Analytic.OddCycle.bounded._proof_8	ComparatorChallenges.CoarseAssembly	thm	[]	2819368881	-
+OAI.CoarseAssembly.Analytic.HilbertSpace	ComparatorChallenges.CoarseAssembly	induct	[u]	1576806903	-
+OAI.CoarseAssembly.instNonUnitalCStarAlgebraTotalRoe._proof_68	ComparatorChallenges.CoarseAssembly	thm	[]	2598013889	-
+OAI.CoarseAssembly.Analytic.OddHomotopy.continuous_operator	ComparatorChallenges.CoarseAssembly	thm	[u]	1438533320	-
+OAI.CoarseAssembly.constructedTotalIndex._proof_5	ComparatorChallenges.CoarseAssembly	thm	[]	961148908	-
+OAI.CoarseAssembly.DiscreteRoe.Operator._proof_1	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	2680508960	-
+OAI.CoarseAssembly.DiscreteRoe.RoeMultiplier	ComparatorChallenges.CoarseAssembly	def	[u_1, u_2]	2760330672	2727548671
+OAI.CoarseAssembly.instNonUnitalCStarAlgebraTotalRoe._proof_76	ComparatorChallenges.CoarseAssembly	thm	[]	28669570	-
+OAI.CoarseAssembly.boundaryLoopMetric7	ComparatorChallenges.CoarseAssembly	def	[]	833069309	964202697
+OAI.CoarseAssembly.Rips.analyticFamilyIndexFree._proof_7	ComparatorChallenges.CoarseAssembly	thm	[]	1916774335	-
+OAI.CoarseAssembly.instNonUnitalCStarAlgebraTotalRoe._proof_2	ComparatorChallenges.CoarseAssembly	thm	[]	3481734463	-
+OAI.CoarseAssembly.Analytic.Coarsening._sizeOf_inst	ComparatorChallenges.CoarseAssembly	def	[u]	2334204711	3797770078
+OAI.CoarseAssembly.OperatorKTheory.relativeUnitary._proof_4	ComparatorChallenges.CoarseAssembly	thm	[u_1]	1395708968	-
+OAI.CoarseAssembly.Analytic.OddCycle.IsDirectSum.mk._flat_ctor	ComparatorChallenges.CoarseAssembly	def	[u]	2697121964	3837064452
+OAI.CoarseAssembly.Rips.Point.mk.noConfusion	ComparatorChallenges.CoarseAssembly	def	[u, u_1]	3720608577	4266799705
+OAI.CoarseAssembly.DiscreteRoe.separatedFamilyBoundary._proof_8	ComparatorChallenges.CoarseAssembly	thm	[u_1]	2698692993	-
+OAI.CoarseAssembly.Analytic.OddCycle.noConfusionType	ComparatorChallenges.CoarseAssembly	def	[u_1, u]	3269795553	2111223341
+OAI.CoarseAssembly.Rips.mapPoint._proof_3	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	596714160	-
+OAI.CoarseAssembly.Analytic.OddCycle.IsDirectSum.representation_eq	ComparatorChallenges.CoarseAssembly	thm	[u]	2694125263	-
+OAI.CoarseAssembly.DiscreteRoe.separatedFamilyBoundary._proof_9	ComparatorChallenges.CoarseAssembly	thm	[u_1]	1079452885	-
+OAI.CoarseAssembly.instNonUnitalCStarAlgebraTotalRoe._proof_51	ComparatorChallenges.CoarseAssembly	thm	[]	487231700	-
+OAI.CoarseAssembly.instNonUnitalCStarAlgebraTotalRoe._proof_3	ComparatorChallenges.CoarseAssembly	thm	[]	714942969	-
+OAI.CoarseAssembly.Analytic.Coarsening.ctorIdx	ComparatorChallenges.CoarseAssembly	def	[u]	1372741120	2070671208
+OAI.CoarseAssembly.DiscreteRoe.inclusionHom._proof_13	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2, u_3]	1480909846	-
+OAI.CoarseAssembly.Analytic.OddHomotopy.precomp._proof_7	ComparatorChallenges.CoarseAssembly	thm	[u_1]	2599110525	-
+OAI.CoarseAssembly.fiberedGraph._simp_16	ComparatorChallenges.CoarseAssembly	thm	[u_3]	1065759742	-
+OAI.CoarseAssembly.DiscreteRoe.inclusionHom._proof_10	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	2928171576	-
+OAI.CoarseAssembly.DiscreteRoe.separatedFamilyMultiplier._proof_28	ComparatorChallenges.CoarseAssembly	thm	[u_1]	2816768088	-
+OAI.CoarseAssembly.Analytic.OddCycle.regularize._proof_7	ComparatorChallenges.CoarseAssembly	thm	[]	3567572533	-
+OAI.CoarseAssembly.instFintypeDisc._proof_1	ComparatorChallenges.CoarseAssembly	thm	[]	2231269370	-
+OAI.CoarseAssembly.separatedMetric	ComparatorChallenges.CoarseAssembly	def	[u_1]	4180011308	449757621
+OAI.CoarseAssembly.DiscreteRoe.roeIdealizer	ComparatorChallenges.CoarseAssembly	def	[u_1, u_2]	1232601154	851033779
+OAI.CoarseAssembly.connectedGraphMetric._proof_8	ComparatorChallenges.CoarseAssembly	thm	[u_1]	3148479835	-
+OAI.CoarseAssembly.Rips.mapPoint._proof_2	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	2777486452	-
+OAI.CoarseAssembly.TopologicalK1.Relation.recOn	ComparatorChallenges.CoarseAssembly	def	[u]	2066143726	3548761493
+OAI.CoarseAssembly.Analytic.OddCycle.mk.injEq	ComparatorChallenges.CoarseAssembly	thm	[u]	1832808654	-
+OAI.CoarseAssembly.Analytic.OddCycle.bounded._proof_9	ComparatorChallenges.CoarseAssembly	thm	[]	3759935574	-
+OAI.CoarseAssembly.Analytic.OddCycle.adjoint_compact	ComparatorChallenges.CoarseAssembly	thm	[u]	303870263	-
+OAI.CoarseAssembly.Rips.Point.ext_iff	ComparatorChallenges.CoarseAssembly	thm	[u_1]	4271077260	-
+OAI.CoarseAssembly.separatedRipsMap._proof_2	ComparatorChallenges.CoarseAssembly	thm	[]	616743266	-
+OAI.CoarseAssembly.Analytic.OddCycle.IsDirectSum.precomp._proof_1	ComparatorChallenges.CoarseAssembly	thm	[u_1]	2913223386	-
+OAI.CoarseAssembly.OperatorKTheory.K1	ComparatorChallenges.CoarseAssembly	def	[u]	2361968086	3009786491
+OAI.CoarseAssembly.boundaryAssemblyMetric1	ComparatorChallenges.CoarseAssembly	def	[]	2877623003	1898399662
+OAI.CoarseAssembly.OperatorKTheory.relativeUnitary._proof_1	ComparatorChallenges.CoarseAssembly	thm	[u_1]	662636096	-
+OAI.CoarseAssembly.Analytic.CompatibleIndexFamily.mk.inj	ComparatorChallenges.CoarseAssembly	thm	[u, v]	1038413230	-
+OAI.CoarseAssembly.Analytic.cayleyDenominator.congr_simp	ComparatorChallenges.CoarseAssembly	thm	[u_1]	4064879311	-
+OAI.CoarseAssembly.DiscreteRoe.algebraicRoe._proof_11	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	1992649405	-
+OAI.CoarseAssembly.rowVector._proof_1	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2, u_3]	4133331590	-
+OAI.CoarseAssembly.instNonUnitalCStarAlgebraTotalRoe._proof_64	ComparatorChallenges.CoarseAssembly	thm	[]	1518871376	-
+OAI.CoarseAssembly.instNonUnitalCStarAlgebraTotalRoe._proof_1	ComparatorChallenges.CoarseAssembly	thm	[]	1548041486	-
+OAI.CoarseAssembly.DiscreteRoe.Operator._proof_2	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	2931882994	-
+OAI.CoarseAssembly.latticeCharge.eq_1	ComparatorChallenges.CoarseAssembly	thm	[]	458910183	-
+OAI.CoarseAssembly.Rips.mapPoint._proof_1	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	2613800428	-
+OAI.CoarseAssembly.OperatorKTheory.relativeUnitary._proof_2	ComparatorChallenges.CoarseAssembly	thm	[u_1]	960468711	-
+OAI.CoarseAssembly.Analytic.HilbertSpace.casesOn	ComparatorChallenges.CoarseAssembly	def	[u_1, u]	1092074191	3698127307
+OAI.CoarseAssembly.Analytic.OddCycle.rec	ComparatorChallenges.CoarseAssembly	rec	[u_1, u]	709154983	-
+OAI.CoarseAssembly.separatedRipsMap._proof_1	ComparatorChallenges.CoarseAssembly	thm	[]	1991124826	-
+OAI.CoarseAssembly.instNonUnitalCStarAlgebraTotalRoe._aux_66	ComparatorChallenges.CoarseAssembly	def	[]	2466730778	3691491173
+OAI.CoarseAssembly.Analytic.OddCycle.unitalSelfAdjoint._abel_3	ComparatorChallenges.CoarseAssembly	thm	[]	2534763979	-
+OAI.CoarseAssembly.DiscreteRoe.separatedFamilyBoundary._proof_24	ComparatorChallenges.CoarseAssembly	thm	[u_1]	2348324589	-
+OAI.CoarseAssembly.instNonUnitalCStarAlgebraTotalRoe._proof_44	ComparatorChallenges.CoarseAssembly	thm	[]	1585552086	-
+OAI.CoarseAssembly.DiscreteRoe.partitionIsometry._proof_6	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	1776016699	-
+OAI.CoarseAssembly.instNonUnitalCStarAlgebraTotalRoe._aux_59	ComparatorChallenges.CoarseAssembly	def	[]	570546347	1933484625
+OAI.CoarseAssembly.Analytic.rationalBoundaryUnitary	ComparatorChallenges.CoarseAssembly	def	[u_1]	1582035493	4279576434
+OAI.CoarseAssembly.DiscreteRoe.algebraicRoe._proof_14	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	3271047853	-
+OAI.CoarseAssembly.Analytic.OddCycle.localCompactPerturb	ComparatorChallenges.CoarseAssembly	def	[]	464603600	4280039559
+OAI.CoarseAssembly.OperatorKTheory.relativeUnitary._proof_3	ComparatorChallenges.CoarseAssembly	thm	[u_1]	3995328574	-
+OAI.CoarseAssembly.Congruence.residueMap	ComparatorChallenges.CoarseAssembly	def	[]	3175467070	2222396458
+OAI.CoarseAssembly.OperatorKTheory.map._proof_5	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	1463978464	-
+OAI.CoarseAssembly.DiscreteRoe.inclusionHom._proof_6	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2, u_3]	1370055381	-
+OAI.CoarseAssembly.instNonUnitalCStarAlgebraTotalRoe._proof_4	ComparatorChallenges.CoarseAssembly	thm	[]	143820154	-
+OAI.CoarseAssembly.separatedRipsEmbedding	ComparatorChallenges.CoarseAssembly	def	[]	242707813	2538481136
+OAI.CoarseAssembly.connectedGraphMetric._proof_7	ComparatorChallenges.CoarseAssembly	thm	[u_1]	818615465	-
+OAI.CoarseAssembly.Analytic.OddHomotopy.precomp._proof_9	ComparatorChallenges.CoarseAssembly	thm	[u_1]	3195910945	-
+OAI.CoarseAssembly.Analytic.OddCycle.compactPerturb	ComparatorChallenges.CoarseAssembly	def	[]	2214225380	782521679
+OAI.CoarseAssembly.instNonUnitalCStarAlgebraTotalRoe._proof_31	ComparatorChallenges.CoarseAssembly	thm	[]	3844176246	-
+OAI.CoarseAssembly.DiscreteRoe.multiplierBoundaryClass._proof_2	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	1244964378	-
+OAI.CoarseAssembly.Rips.regularizedFamily._proof_15	ComparatorChallenges.CoarseAssembly	thm	[]	678625127	-
+OAI.CoarseAssembly.DiscreteRoe.separatedFamilyBoundary._proof_7	ComparatorChallenges.CoarseAssembly	thm	[u_1]	1363075095	-
+OAI.CoarseAssembly.Analytic.HilbertSpace.noConfusion	ComparatorChallenges.CoarseAssembly	def	[u_1, u]	3228185306	1372774973
+OAI.CoarseAssembly.Analytic.OddCycle.regularize._proof_8	ComparatorChallenges.CoarseAssembly	thm	[]	1282523505	-
+OAI.CoarseAssembly.DiscreteRoe.instContinuousStarOperator	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	577790343	-
+OAI.CoarseAssembly.DiscreteRoe.separatedFamilyBoundary._proof_22	ComparatorChallenges.CoarseAssembly	thm	[u_1]	2283512968	-
+OAI.CoarseAssembly.DiscreteRoe.algebra._proof_2	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	3337733584	-
+OAI.CoarseAssembly.DiscreteRoe.multiplierBoundaryClass._proof_3	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	1101755253	-
+OAI.CoarseAssembly.Rips.analyticFamilyIndexFree._proof_9	ComparatorChallenges.CoarseAssembly	thm	[]	755045194	-
+OAI.CoarseAssembly.Rips.separatedRipsIndex	ComparatorChallenges.CoarseAssembly	def	[]	2597402940	882490491
+OAI.CoarseAssembly.Analytic.OddCycle.UnitaryEquivalent.unitary	ComparatorChallenges.CoarseAssembly	def	[u]	366343498	1803739860
+OAI.CoarseAssembly.instNonUnitalCStarAlgebraTotalRoe._proof_54	ComparatorChallenges.CoarseAssembly	thm	[]	2257481125	-
+OAI.CoarseAssembly.Analytic.pullback._proof_1	ComparatorChallenges.CoarseAssembly	thm	[]	2404898787	-
+OAI.CoarseAssembly.unconditionalConclusionMetric	ComparatorChallenges.CoarseAssembly	def	[]	2877623003	1898399662
+OAI.CoarseAssembly.operatorConjugation._proof_6	ComparatorChallenges.CoarseAssembly	thm	[u_1]	899023225	-
+OAI.CoarseAssembly.Rips.ControlledCycleFamily.selfAdjoint	ComparatorChallenges.CoarseAssembly	thm	[]	4055412949	-
+OAI.CoarseAssembly.Rips.analyticFamilyIndexFree._proof_8	ComparatorChallenges.CoarseAssembly	thm	[]	691014141	-
+OAI.CoarseAssembly.Analytic.symmetricCutDown.eq_1	ComparatorChallenges.CoarseAssembly	thm	[u_1]	1066401549	-
+OAI.CoarseAssembly.Analytic.OddCycle.IsDirectSum.mk.sizeOf_spec	ComparatorChallenges.CoarseAssembly	thm	[u]	196858856	-
+OAI.CoarseAssembly.Analytic.LocallyFiniteK1	ComparatorChallenges.CoarseAssembly	def	[u]	3565490904	100353150
+OAI.CoarseAssembly.Rips.ControlledCycleFamily.recOn	ComparatorChallenges.CoarseAssembly	def	[u]	3214312415	46738210
+OAI.CoarseAssembly.Analytic.localizedOperator	ComparatorChallenges.CoarseAssembly	def	[u_1]	1262275132	226650093
+OAI.CoarseAssembly.DiscreteRoe.algebra._proof_3	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	1421826419	-
+OAI.CoarseAssembly.Rips.embeddingMap._proof_1	ComparatorChallenges.CoarseAssembly	thm	[u_1]	2352159016	-
+OAI.CoarseAssembly.Analytic.OddCycle.bounded._proof_7	ComparatorChallenges.CoarseAssembly	thm	[]	1491404244	-
+OAI.CoarseAssembly.Analytic.precomp._proof_6	ComparatorChallenges.CoarseAssembly	thm	[u_1]	2964248444	-
+OAI.CoarseAssembly.Rips.Point.diameter	ComparatorChallenges.CoarseAssembly	thm	[u_1]	3049895007	-
+OAI.CoarseAssembly.Rips.embeddingMap._proof_4	ComparatorChallenges.CoarseAssembly	thm	[u_1]	1810862905	-
+OAI.CoarseAssembly.Analytic.pullback._proof_4	ComparatorChallenges.CoarseAssembly	thm	[u_1]	777320296	-
+OAI.CoarseAssembly.Analytic.OddHomotopy.precomp._proof_8	ComparatorChallenges.CoarseAssembly	thm	[u_1]	91373931	-
+NonUnitalStarSubalgebra.mk.congr_simp	ComparatorChallenges.CoarseAssembly	thm	[u, v]	1515189189	-
+OAI.CoarseAssembly.Rips.instTopologicalSpacePoint	ComparatorChallenges.CoarseAssembly	def	[u_1]	1669756029	3373724252
+OAI.CoarseAssembly.DiscreteRoe.multiplierRoeIdeal._proof_5	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	3591067533	-
+OAI.CoarseAssembly.Rips.Point.nonneg	ComparatorChallenges.CoarseAssembly	thm	[u_1]	154014091	-
+OAI.CoarseAssembly.Analytic.OddCycle.regularize._proof_9	ComparatorChallenges.CoarseAssembly	thm	[]	300699415	-
+OAI.CoarseAssembly.Rips.ampleRipsFamilyBoundary._proof_21	ComparatorChallenges.CoarseAssembly	thm	[]	2616542585	-
+OAI.CoarseAssembly.instFintypeFiberVertex	ComparatorChallenges.CoarseAssembly	def	[]	1705280862	708395180
+OAI.CoarseAssembly.Analytic.OddHomotopy.precomp.eq_1	ComparatorChallenges.CoarseAssembly	thm	[u]	1452050639	-
+OAI.CoarseAssembly.flattenEquiv	ComparatorChallenges.CoarseAssembly	def	[u_1, u_2, u_3]	1706287207	2131621781
+OAI.CoarseAssembly.TotalRoe._proof_2	ComparatorChallenges.CoarseAssembly	thm	[]	2959507193	-
+OAI.CoarseAssembly.DiscreteRoe.separatedFamilyMultiplier._proof_7	ComparatorChallenges.CoarseAssembly	thm	[u_1]	3070039160	-
+OAI.CoarseAssembly.Analytic.OddCycle.cutDown	ComparatorChallenges.CoarseAssembly	def	[]	2943507954	12863108
+OAI.CoarseAssembly.Rips.separatedIndexFamily._proof_2	ComparatorChallenges.CoarseAssembly	thm	[]	4105893863	-
+OAI.CoarseAssembly.Analytic.OddCycle.cutDown._proof_1	ComparatorChallenges.CoarseAssembly	thm	[]	105030905	-
+OAI.CoarseAssembly.Rips.regularizedFamily._proof_12	ComparatorChallenges.CoarseAssembly	thm	[]	2352990685	-
+OAI.CoarseAssembly.latticeRadius	ComparatorChallenges.CoarseAssembly	def	[]	2415704468	3015871516
+OAI.CoarseAssembly.DiscreteRoe.diagonalFamily.congr_simp	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	2690373435	-
+OAI.CoarseAssembly.instNonUnitalCStarAlgebraTotalRoe._aux_18	ComparatorChallenges.CoarseAssembly	def	[]	4088777223	2785499733
+OAI.CoarseAssembly.Rips.ControlledCycleFamily.rec	ComparatorChallenges.CoarseAssembly	rec	[u]	132745644	-
+OAI.CoarseAssembly.separatedMetric._proof_5	ComparatorChallenges.CoarseAssembly	thm	[u_1]	1434218609	-
+OAI.CoarseAssembly.DiscreteRoe.roeIdealizer._proof_5	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	1072003371	-
+OAI.CoarseAssembly.Analytic.OddCycle.mk._flat_ctor	ComparatorChallenges.CoarseAssembly	def	[u]	3549052388	3476711214
+OAI.CoarseAssembly.flattenEquiv._proof_1	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2, u_3]	130542844	-
+OAI.CoarseAssembly.Analytic.OddCycle.unitalSelfAdjoint._abel_2	ComparatorChallenges.CoarseAssembly	thm	[]	1308699814	-
+OAI.CoarseAssembly.flattenEquiv._proof_4	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2, u_3]	1097298669	-
+OAI.CoarseAssembly.Rips.Point.casesOn	ComparatorChallenges.CoarseAssembly	def	[u, u_1]	901236026	492334339
+OAI.CoarseAssembly.Analytic.CoarseningMorphism	ComparatorChallenges.CoarseAssembly	induct	[u]	1458165834	-
+OAI.CoarseAssembly.DiscreteRoe.conjugationHom._proof_7	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	3911537386	-
+OAI.CoarseAssembly.Analytic.OddHomotopy.representation	ComparatorChallenges.CoarseAssembly	def	[u]	1597589765	275596321
+OAI.CoarseAssembly.TopologicalK1.mapFree.eq_1	ComparatorChallenges.CoarseAssembly	thm	[u, v]	1186319441	-
+OAI.CoarseAssembly.TotalRoe._proof_3	ComparatorChallenges.CoarseAssembly	thm	[]	1754197006	-
+OAI.CoarseAssembly.Analytic.OddCycle.precomp._proof_1	ComparatorChallenges.CoarseAssembly	thm	[u_1]	1094468365	-
+OAI.CoarseAssembly.Analytic.OddHomotopy.commutator_compact	ComparatorChallenges.CoarseAssembly	thm	[u]	603564221	-
+OAI.CoarseAssembly.Rips.separatedIndexFamily._proof_3	ComparatorChallenges.CoarseAssembly	thm	[]	4243133781	-
+OAI.CoarseAssembly.instFintypeFiberVertex._proof_1	ComparatorChallenges.CoarseAssembly	thm	[]	4194098770	-
+OAI.CoarseAssembly.Analytic.OddCycle.bounded._abel_4	ComparatorChallenges.CoarseAssembly	thm	[u_1]	1610951210	-
+OAI.CoarseAssembly.DiscreteRoe.operatorScalarComm	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_3]	2854199754	-
+OAI.CoarseAssembly.Analytic.OddCycle.cutDown._proof_4	ComparatorChallenges.CoarseAssembly	thm	[]	1859033508	-
+OAI.CoarseAssembly.TopologicalK1.InvertibleMatrix	ComparatorChallenges.CoarseAssembly	def	[u]	3895923325	4060457611
+OAI.CoarseAssembly.Analytic.OddCycle.IsDirectSum.mk.injEq	ComparatorChallenges.CoarseAssembly	thm	[u]	3339842244	-
+OAI.CoarseAssembly.Analytic.OddCycle.precomp	ComparatorChallenges.CoarseAssembly	def	[u]	173870654	498061120
+OAI.CoarseAssembly.DiscreteRoe.separatedFamilyMultiplier._proof_22	ComparatorChallenges.CoarseAssembly	thm	[]	357722501	-
+OAI.CoarseAssembly.operatorConjugation._proof_3	ComparatorChallenges.CoarseAssembly	thm	[]	1160016164	-
+OAI.CoarseAssembly.Analytic.cayleyUnitary	ComparatorChallenges.CoarseAssembly	def	[u_1]	1582035493	3890756826
+OAI.CoarseAssembly.DiscreteRoe.separatedFamilyBoundary._proof_26	ComparatorChallenges.CoarseAssembly	thm	[u_1]	2189778690	-
+OAI.CoarseAssembly.flattenOperator._proof_2	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2, u_3]	361178827	-
+OAI.CoarseAssembly.DiscreteRoe.separatedFamilyBoundary._proof_25	ComparatorChallenges.CoarseAssembly	thm	[u_1]	1327369627	-
+OAI.CoarseAssembly.operatorConjugationHom._proof_7	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	1445651474	-
+OAI.CoarseAssembly.DiscreteRoe.multiplierBoundaryClass._proof_6	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	2915181067	-
+OAI.CoarseAssembly.blockOperator.congr_simp	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2, u_3]	2285113553	-
+OAI.CoarseAssembly.Congruence.Quotient	ComparatorChallenges.CoarseAssembly	def	[]	3972626760	1160466378
+OAI.CoarseAssembly.OperatorKTheory.scalarMap	ComparatorChallenges.CoarseAssembly	def	[u]	1493264577	3834150413
+OAI.CoarseAssembly.OperatorKTheory.relativePart	ComparatorChallenges.CoarseAssembly	def	[u_1]	1774993700	978148842
+OAI.CoarseAssembly.Rips.coordinates	ComparatorChallenges.CoarseAssembly	def	[u_1]	1913113556	3334628777
+OAI.CoarseAssembly.Rips.vertex._proof_2	ComparatorChallenges.CoarseAssembly	thm	[u_1]	3049158417	-
+OAI.CoarseAssembly.flattenEquiv._proof_5	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2, u_3]	2628049900	-
+OAI.CoarseAssembly.DiscreteRoe.algebraicRoe._proof_9	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	3264347033	-
+OAI.CoarseAssembly.Analytic.precomp._proof_2	ComparatorChallenges.CoarseAssembly	thm	[u_1]	3126622510	-
+OAI.CoarseAssembly.Rips.embeddingCoarsening	ComparatorChallenges.CoarseAssembly	def	[u]	2407799514	1173539074
+OAI.CoarseAssembly.DiscreteRoe.algebra._proof_6	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	1248927257	-
+OAI.CoarseAssembly.DiscreteRoe.algebraicRoe._proof_8	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	3204878973	-
+OAI.CoarseAssembly.Analytic.OddCycle.cutDown._proof_5	ComparatorChallenges.CoarseAssembly	thm	[]	60025658	-
+OAI.CoarseAssembly.Rips.vertex._proof_3	ComparatorChallenges.CoarseAssembly	thm	[u_1]	1781794779	-
+OAI.CoarseAssembly.DiscreteRoe.separatedFamilyBoundary._proof_20	ComparatorChallenges.CoarseAssembly	thm	[]	1043645883	-
+OAI.CoarseAssembly.operatorConjugation._proof_2	ComparatorChallenges.CoarseAssembly	thm	[]	2299488975	-
+OAI.CoarseAssembly.DiscreteRoe.multiplierAlgebra._proof_8	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	334432905	-
+OAI.CoarseAssembly.flattenOperator._proof_3	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2, u_3]	937395573	-
+OAI.CoarseAssembly.Analytic.precomp._proof_3	ComparatorChallenges.CoarseAssembly	thm	[u_1]	4078454991	-
+OAI.CoarseAssembly.extendedFunction	ComparatorChallenges.CoarseAssembly	def	[u_1, u_2, u_3]	4096962510	629427501
+OAI.CoarseAssembly.separatedMetric._proof_1	ComparatorChallenges.CoarseAssembly	thm	[u_1]	1970028007	-
+OAI.CoarseAssembly.Analytic.Coarsening.inclusion_self	ComparatorChallenges.CoarseAssembly	thm	[u]	84582194	-
+OAI.CoarseAssembly.DiscreteRoe.roeIdealizer._proof_1	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	3271862819	-
+OAI.CoarseAssembly.Analytic.Coarsening.casesOn	ComparatorChallenges.CoarseAssembly	def	[u_1, u]	2576700993	2464300031
+OAI.CoarseAssembly.separatedMetric._proof_4	ComparatorChallenges.CoarseAssembly	thm	[u_1]	4178698634	-
+OAI.CoarseAssembly.DiscreteRoe.roeIdealizer._proof_4	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	1747355949	-
+OAI.CoarseAssembly.OperatorKTheory.K1._proof_1	ComparatorChallenges.CoarseAssembly	thm	[u_1]	3488366414	-
+OAI.CoarseAssembly.Rips.Point.total	ComparatorChallenges.CoarseAssembly	thm	[u_1]	363282397	-
+OAI.CoarseAssembly.Rips.ampleRipsFamilyBoundary._proof_28	ComparatorChallenges.CoarseAssembly	thm	[]	228281861	-
+OAI.CoarseAssembly.bounded_geometry_graph_counterexample_unconditional	ComparatorChallenges.CoarseAssembly	thm	[]	2411831209	-
+OAI.CoarseAssembly.Analytic.OddCycle.unitalSelfAdjoint	ComparatorChallenges.CoarseAssembly	def	[]	2078570260	1470244830
+OAI.CoarseAssembly.Analytic.OddCycle.mk	ComparatorChallenges.CoarseAssembly	ctor	[u]	3549052388	-
+OAI.CoarseAssembly.discreteGraphMetric._proof_4	ComparatorChallenges.CoarseAssembly	thm	[u_1]	2193202313	-
+OAI.CoarseAssembly.Analytic.OddCycle.UnitaryEquivalent.operator_eq	ComparatorChallenges.CoarseAssembly	thm	[u]	1748043964	-
+OAI.CoarseAssembly.Analytic.HilbertSpace.mk.sizeOf_spec	ComparatorChallenges.CoarseAssembly	thm	[u]	2436140894	-
+OAI.CoarseAssembly.DiscreteRoe.separatedFamilyMultiplier._proof_37	ComparatorChallenges.CoarseAssembly	thm	[u_1]	837014213	-
+OAI.CoarseAssembly.discreteGraphMetric._proof_1	ComparatorChallenges.CoarseAssembly	thm	[u_1]	2434571976	-
+OAI.CoarseAssembly.OperatorKTheory.unitizationMap._proof_1	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	3343887897	-
+OAI.CoarseAssembly.Analytic.OddCycle.compactPerturb._abel_2	ComparatorChallenges.CoarseAssembly	thm	[]	300691582	-
+OAI.CoarseAssembly.constructedTotalIndex._proof_7	ComparatorChallenges.CoarseAssembly	thm	[]	1816165040	-
+OAI.CoarseAssembly.Rips.analyticFamilyIndexFree._proof_5	ComparatorChallenges.CoarseAssembly	thm	[]	3901818121	-
+OAI.CoarseAssembly.fiberedGraph._proof_2	ComparatorChallenges.CoarseAssembly	thm	[]	2711208900	-
+OAI.CoarseAssembly.TopologicalK1.relations	ComparatorChallenges.CoarseAssembly	def	[u]	2239706462	1612988521
+OAI.CoarseAssembly.fiberedGraph._simp_4	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	2883912216	-
+OAI.CoarseAssembly.Rips.ampleRipsFamilyBoundary._proof_4	ComparatorChallenges.CoarseAssembly	thm	[]	3079387699	-
+OAI.CoarseAssembly.Rips.ampleRipsFamilyBoundary._proof_1	ComparatorChallenges.CoarseAssembly	thm	[]	2147797448	-
+OAI.CoarseAssembly.Rips.regularizedFamily._proof_3	ComparatorChallenges.CoarseAssembly	thm	[]	2761859082	-
+OAI.CoarseAssembly.Congruence.chosenHolonomyUnit	ComparatorChallenges.CoarseAssembly	def	[]	2836635137	3571498091
+OAI.CoarseAssembly.Analytic.OddCycle.mk.inj	ComparatorChallenges.CoarseAssembly	thm	[u]	3913926024	-
+OAI.CoarseAssembly.Analytic.Coarsening.mk	ComparatorChallenges.CoarseAssembly	ctor	[u]	728011334	-
+OAI.CoarseAssembly.DiscreteRoe.RoeMultiplier.eq_1	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	1094638837	-
+OAI.CoarseAssembly.Rips.ampleRipsFamilyBoundary	ComparatorChallenges.CoarseAssembly	def	[]	10408583	3783524859
+OAI.CoarseAssembly.DiscreteRoe.roeIdealizer.eq_1	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	1843137384	-
+OAI.CoarseAssembly.DiscreteRoe.spatialLocalizationCompleteSpace	ComparatorChallenges.CoarseAssembly	thm	[u_3, u_4]	2738166645	-
+OAI.CoarseAssembly.Rips.ampleRipsFamilyBoundary._proof_19	ComparatorChallenges.CoarseAssembly	thm	[]	1943680252	-
+OAI.CoarseAssembly.Analytic.OddCycle.casesOn	ComparatorChallenges.CoarseAssembly	def	[u_1, u]	3739570680	1585025921
+OAI.CoarseAssembly.Analytic.HilbertSpace.rec	ComparatorChallenges.CoarseAssembly	rec	[u_1, u]	2056470529	-
+OAI.CoarseAssembly.fiberedGraph._proof_3	ComparatorChallenges.CoarseAssembly	thm	[]	2926376081	-
+OAI.CoarseAssembly.discreteGraphMetric	ComparatorChallenges.CoarseAssembly	def	[u_1]	2580683092	800827117
+OAI.CoarseAssembly.OperatorKTheory.unitizationMap	ComparatorChallenges.CoarseAssembly	def	[u, v]	3551255098	2943206466
+OAI.CoarseAssembly.Analytic.OddCycle.IsDirectSum._sizeOf_1	ComparatorChallenges.CoarseAssembly	def	[u]	4192184092	1211011156
+OAI.CoarseAssembly.Analytic.OddCycle.regularize._proof_5	ComparatorChallenges.CoarseAssembly	thm	[]	2319922773	-
+OAI.CoarseAssembly.Analytic.OddHomotopy.precomp._proof_5	ComparatorChallenges.CoarseAssembly	thm	[u_1]	2117335378	-
+OAI.CoarseAssembly.instNonUnitalCStarAlgebraTotalRoe._proof_35	ComparatorChallenges.CoarseAssembly	thm	[]	3973928623	-
+OAI.CoarseAssembly.Congruence.chosenHolonomyUnit._proof_1	ComparatorChallenges.CoarseAssembly	thm	[]	3304987349	-
+OAI.CoarseAssembly.Rips.regularizedFamily._proof_2	ComparatorChallenges.CoarseAssembly	thm	[]	4017641119	-
+OAI.CoarseAssembly.Analytic.OddCycle.UnitaryEquivalent.precomp	ComparatorChallenges.CoarseAssembly	def	[u]	3804057950	3983460004
+OAI.CoarseAssembly.DiscreteRoe.partitionIsometry._proof_1	ComparatorChallenges.CoarseAssembly	thm	[]	2003050971	-
+OAI.CoarseAssembly.TopologicalK1.mapFree	ComparatorChallenges.CoarseAssembly	def	[u, v]	1437581296	18878948
+OAI.CoarseAssembly.Rips.analyticFamilyIndexFree	ComparatorChallenges.CoarseAssembly	def	[]	4236341712	181740426
+OAI.CoarseAssembly.DiscreteRoe.localizedSpatialOperator	ComparatorChallenges.CoarseAssembly	def	[u_1, u_2]	1716324895	4192095427
+OAI.CoarseAssembly.Rips.ripsSpatialOperator._proof_7	ComparatorChallenges.CoarseAssembly	thm	[]	46771868	-
+OAI.CoarseAssembly.OperatorKTheory.relativeClass._proof_5	ComparatorChallenges.CoarseAssembly	thm	[u_1]	2638743952	-
+OAI.CoarseAssembly.Analytic.OddCycle.representation	ComparatorChallenges.CoarseAssembly	def	[u]	1702869842	3821344263
+OAI.CoarseAssembly.Rips.ripsSpatialOperator._simp_1	ComparatorChallenges.CoarseAssembly	thm	[]	3022466892	-
+OAI.CoarseAssembly.instNonUnitalCStarAlgebraTotalRoe._proof_50	ComparatorChallenges.CoarseAssembly	thm	[]	3170615515	-
+OAI.CoarseAssembly.Analytic.OddCycle.IsDirectSum.rec	ComparatorChallenges.CoarseAssembly	rec	[u_1, u]	4286019464	-
+OAI.CoarseAssembly.Analytic.OddCycle.regularize	ComparatorChallenges.CoarseAssembly	def	[]	2078570260	1834493991
+OAI.CoarseAssembly.vertexUnionDecidableEq	ComparatorChallenges.CoarseAssembly	def	[]	1295710802	2775310246
+OAI.CoarseAssembly.Analytic.OddCycle.IsDirectSum.orthogonal	ComparatorChallenges.CoarseAssembly	thm	[u]	2162503857	-
+OAI.CoarseAssembly.Analytic.OddHomotopy.precomp	ComparatorChallenges.CoarseAssembly	def	[u]	3118961499	3742561255
+OAI.CoarseAssembly.DiscreteRoe.algebraicRoe._proof_7	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	356215802	-
+OAI.CoarseAssembly.Rips.ControlledCycleFamily	ComparatorChallenges.CoarseAssembly	induct	[]	1813732911	-
+OAI.CoarseAssembly.operatorConjugationHom._proof_8	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	1334038958	-
+OAI.CoarseAssembly.Analytic.Coarsening.map	ComparatorChallenges.CoarseAssembly	def	[u_1]	1588989271	1011763211
+OAI.CoarseAssembly.Rips.unmapPoint._simp_1	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_4]	2888382796	-
+OAI.CoarseAssembly.DiscreteRoe.separatedFamilyMultiplier._proof_34	ComparatorChallenges.CoarseAssembly	thm	[u_1]	1303885719	-
+OAI.CoarseAssembly.Rips.ampleRipsOperator	ComparatorChallenges.CoarseAssembly	def	[]	506788848	464275929
+OAI.CoarseAssembly.DiscreteRoe.inclusionHom._proof_1	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	3925886086	-
+OAI.CoarseAssembly.operatorConjugationHom._proof_9	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	1618204531	-
+OAI.CoarseAssembly.componentMetric	ComparatorChallenges.CoarseAssembly	def	[]	3125794428	1567301307
+OAI.CoarseAssembly.fiberedGraph._simp_17	ComparatorChallenges.CoarseAssembly	thm	[u_3]	1048057633	-
+OAI.CoarseAssembly.Analytic.HilbertSpace._sizeOf_1	ComparatorChallenges.CoarseAssembly	def	[u]	2818904528	2342389576
+OAI.CoarseAssembly.DiscreteRoe.separatedFamilyMultiplier._proof_30	ComparatorChallenges.CoarseAssembly	thm	[u_1]	3930950174	-
+OAI.CoarseAssembly.DiscreteRoe.inclusionExponentFact	ComparatorChallenges.CoarseAssembly	thm	[]	16685668	-
+OAI.CoarseAssembly.DiscreteRoe.inclusionHom._proof_19	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2, u_3]	1529894201	-
+OAI.CoarseAssembly.DiscreteRoe.partitionIsometry._proof_4	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	2623272904	-
+OAI.CoarseAssembly.Rips.lateRipsFunctionHom._proof_5	ComparatorChallenges.CoarseAssembly	thm	[]	3221866446	-
+OAI.CoarseAssembly.DiscreteRoe.diagonalFamily.eq_1	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	2873335513	-
+OAI.CoarseAssembly.DiscreteRoe.Generator	ComparatorChallenges.CoarseAssembly	def	[u_1, u_3]	2253242152	144489168
+OAI.CoarseAssembly.Rips.sqrtCoordinate._proof_2	ComparatorChallenges.CoarseAssembly	thm	[]	193996543	-
+OAI.CoarseAssembly.triangularGraph	ComparatorChallenges.CoarseAssembly	def	[]	2063991020	2309302891
+OAI.CoarseAssembly.Analytic.ampleIsometry._proof_1	ComparatorChallenges.CoarseAssembly	thm	[]	2939666644	-
+OAI.CoarseAssembly.Analytic.OddCycle.commutator_compact	ComparatorChallenges.CoarseAssembly	thm	[u]	2545775386	-
+OAI.CoarseAssembly.DiscreteRoe.separatedFamilyMultiplier._proof_21	ComparatorChallenges.CoarseAssembly	thm	[]	1124014049	-
+OAI.CoarseAssembly.DiscreteRoe.multiplierAlgebra._proof_7	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	2497679457	-
+OAI.CoarseAssembly.DiscreteRoe.inclusionHom._proof_4	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	2021048725	-
+OAI.CoarseAssembly.Analytic.zeroExtension._proof_1	ComparatorChallenges.CoarseAssembly	thm	[]	3598033292	-
+OAI.CoarseAssembly.Analytic.OddCycle.compactPerturb._proof_3	ComparatorChallenges.CoarseAssembly	thm	[]	3542656514	-
+OAI.CoarseAssembly.Rips.inclusion._proof_4	ComparatorChallenges.CoarseAssembly	thm	[u_1]	2465989175	-
+OAI.CoarseAssembly.DiscreteRoe.separatedFamilyMultiplier._proof_23	ComparatorChallenges.CoarseAssembly	thm	[]	2925994238	-
+OAI.CoarseAssembly.Analytic.zeroExtensionHom._proof_4	ComparatorChallenges.CoarseAssembly	thm	[]	1027883598	-
+OAI.CoarseAssembly.DiscreteRoe.separatedFamilyMultiplier._proof_36	ComparatorChallenges.CoarseAssembly	thm	[u_1]	3058875280	-
+OAI.CoarseAssembly.OperatorKTheory.relativeMatrix.eq_1	ComparatorChallenges.CoarseAssembly	thm	[u_1]	3614745183	-
+OAI.CoarseAssembly.Rips.sqrtCoordinate	ComparatorChallenges.CoarseAssembly	def	[]	596661027	1327009760
+OAI.CoarseAssembly.Analytic.OddCycle.bounded._proof_5	ComparatorChallenges.CoarseAssembly	thm	[]	978234359	-
+OAI.CoarseAssembly.fiberCoordinate	ComparatorChallenges.CoarseAssembly	def	[]	4173346186	2519956324
+OAI.CoarseAssembly.Analytic.OddCycle.UnitaryEquivalent.mk.noConfusion	ComparatorChallenges.CoarseAssembly	def	[u_1, u]	2518676845	1255447012
+OAI.CoarseAssembly.Analytic.OddCycle.compactPerturb._proof_2	ComparatorChallenges.CoarseAssembly	thm	[]	2938316242	-
+OAI.CoarseAssembly.TopologicalK1.Relation.mul	ComparatorChallenges.CoarseAssembly	ctor	[u]	1594999086	-
+OAI.CoarseAssembly.Rips.inclusion._proof_1	ComparatorChallenges.CoarseAssembly	thm	[u_1]	1063588527	-
+OAI.CoarseAssembly.Analytic.compactFunctionLift._proof_5	ComparatorChallenges.CoarseAssembly	thm	[]	2309181465	-
+OAI.CoarseAssembly.Analytic.OddHomotopy.mk.noConfusion	ComparatorChallenges.CoarseAssembly	def	[u_1, u]	741917650	1983578971
+OAI.CoarseAssembly.Analytic.zeroExtensionHom._proof_1	ComparatorChallenges.CoarseAssembly	thm	[]	216892698	-
+OAI.CoarseAssembly.Analytic.OddHomotopy.eval.eq_1	ComparatorChallenges.CoarseAssembly	thm	[u]	2358670664	-
+OAI.CoarseAssembly.connectedGraphMetric._proof_5	ComparatorChallenges.CoarseAssembly	thm	[u_1]	2478510939	-
+OAI.CoarseAssembly.DiscreteRoe.separatedFamilyMultiplier._proof_10	ComparatorChallenges.CoarseAssembly	thm	[u_1]	2863867294	-
+OAI.CoarseAssembly.DiscreteRoe.separatedFamilyMultiplier._proof_13	ComparatorChallenges.CoarseAssembly	thm	[u_1]	4054949084	-
+OAI.CoarseAssembly.DiscreteRoe.partitionMap.eq_1	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	1850247467	-
+OAI.CoarseAssembly.Rips.ControlledCycleFamily.bound_nonneg	ComparatorChallenges.CoarseAssembly	thm	[]	1093148693	-
+OAI.CoarseAssembly.Rips.ampleRipsFamilyBoundary._proof_29	ComparatorChallenges.CoarseAssembly	thm	[]	1545042198	-
+OAI.CoarseAssembly.Analytic.relations	ComparatorChallenges.CoarseAssembly	def	[u]	2417569583	3713637685
+OAI.CoarseAssembly.DiscreteRoe.instCStarAlgebraSubtypeOperatorMemStarSubalgebraComplexMultiplierAlgebra._proof_4	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	1342844983	-
+OAI.CoarseAssembly.DiscreteRoe.instCStarAlgebraSubtypeOperatorMemStarSubalgebraComplexMultiplierAlgebra._proof_1	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	3184398724	-
+OAI.CoarseAssembly.Analytic.HilbertSpace.mk._flat_ctor	ComparatorChallenges.CoarseAssembly	def	[u]	3474528045	550306577
+OAI.CoarseAssembly.DiscreteRoe.separatedFamilyBoundary._proof_5	ComparatorChallenges.CoarseAssembly	thm	[u_1]	714706625	-
+OAI.CoarseAssembly.constructedTotalMetric	ComparatorChallenges.CoarseAssembly	def	[]	2877623003	1898399662
+OAI.CoarseAssembly.DiscreteRoe.algebraicRoe	ComparatorChallenges.CoarseAssembly	def	[u_1, u_2]	3397739403	1654344532
+OAI.CoarseAssembly.Rips.unmapPoint	ComparatorChallenges.CoarseAssembly	def	[u_1, u_2]	634190531	323763318
+OAI.CoarseAssembly.Rips.ripsSpatialOperator	ComparatorChallenges.CoarseAssembly	def	[]	1476725671	4188848106
+OAI.CoarseAssembly.Analytic.OddCycle.bounded._abel_7	ComparatorChallenges.CoarseAssembly	thm	[]	251624558	-
+OAI.CoarseAssembly.Analytic.OddCycle.bounded._proof_4	ComparatorChallenges.CoarseAssembly	thm	[]	4228816952	-
+OAI.CoarseAssembly.Rips.ControlledCycleFamily._sizeOf_1	ComparatorChallenges.CoarseAssembly	def	[]	329756889	476449227
+OAI.CoarseAssembly.Analytic.OddCycle.localCompactPerturb._proof_3	ComparatorChallenges.CoarseAssembly	thm	[]	2564640178	-
+OAI.CoarseAssembly.Analytic.completedRepresentation._proof_6	ComparatorChallenges.CoarseAssembly	thm	[]	3811462768	-
+OAI.CoarseAssembly.Analytic.HilbertSpace.inner	ComparatorChallenges.CoarseAssembly	def	[u]	2059129224	1359749959
+OAI.CoarseAssembly.Analytic.zeroExtensionHom._proof_5	ComparatorChallenges.CoarseAssembly	thm	[]	4250330052	-
+OAI.CoarseAssembly.connectedGraphMetric._proof_4	ComparatorChallenges.CoarseAssembly	thm	[u_1]	1160209757	-
+OAI.CoarseAssembly.Analytic.start._proof_1	ComparatorChallenges.CoarseAssembly	thm	[]	3185877879	-
+OAI.CoarseAssembly.Rips.KX1	ComparatorChallenges.CoarseAssembly	def	[u_2]	1814939546	3587776522
+OAI.CoarseAssembly.fiberedGraph._simp_13	ComparatorChallenges.CoarseAssembly	thm	[u_1]	565496056	-
+OAI.CoarseAssembly.Analytic.OddCycle.bounded._proof_1	ComparatorChallenges.CoarseAssembly	thm	[]	2619379910	-
+OAI.CoarseAssembly.instNonUnitalCStarAlgebraTotalRoe._proof_24	ComparatorChallenges.CoarseAssembly	thm	[]	2495241937	-
+OAI.CoarseAssembly.Analytic.OddCycle.UnitaryEquivalent.casesOn	ComparatorChallenges.CoarseAssembly	def	[u_1, u]	1615751688	502411365
+OAI.CoarseAssembly.DiscreteRoe.separatedFamilyBoundary._proof_4	ComparatorChallenges.CoarseAssembly	thm	[u_1]	765640565	-
+OAI.CoarseAssembly.separatedRipsEmbedding._proof_2	ComparatorChallenges.CoarseAssembly	thm	[]	4121583092	-
+OAI.CoarseAssembly.Analytic.compactFunctionLift._proof_4	ComparatorChallenges.CoarseAssembly	thm	[]	1984160109	-
+OAI.CoarseAssembly.Congruence.residueMap._proof_2	ComparatorChallenges.CoarseAssembly	thm	[]	3804575874	-
+OAI.CoarseAssembly.Analytic.compactFunctionLift._proof_1	ComparatorChallenges.CoarseAssembly	thm	[]	2016559313	-
+OAI.CoarseAssembly.DiscreteRoe.multiplierAlgebra	ComparatorChallenges.CoarseAssembly	def	[u_1, u_2]	2974776892	3587218432
+OAI.CoarseAssembly.fiberReindexRoeHom	ComparatorChallenges.CoarseAssembly	def	[]	676239457	4159906053
+OAI.CoarseAssembly.DiscreteRoe.separatedFamilyBoundary._proof_19	ComparatorChallenges.CoarseAssembly	thm	[u_1]	397618256	-
+OAI.CoarseAssembly.connectedGraphMetric._proof_1	ComparatorChallenges.CoarseAssembly	thm	[u_1]	3863510101	-
+OAI.CoarseAssembly.Congruence.reduce	ComparatorChallenges.CoarseAssembly	def	[]	228266946	87569422
+OAI.CoarseAssembly.OperatorKTheory.relativeUnitary._proof_9	ComparatorChallenges.CoarseAssembly	thm	[u_1]	2889971368	-
+OAI.CoarseAssembly.Analytic.CompatibleIndexFamily.mk	ComparatorChallenges.CoarseAssembly	ctor	[u, v]	2500940082	-
+OAI.CoarseAssembly.DiscreteRoe.separatedFamilyBoundary._proof_1	ComparatorChallenges.CoarseAssembly	thm	[u_1]	2366290438	-
+OAI.CoarseAssembly.blockOperator._proof_1	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2, u_3]	2495777183	-
+OAI.CoarseAssembly.Analytic.OddHomotopy.casesOn	ComparatorChallenges.CoarseAssembly	def	[u_1, u]	1340038413	4193017534
+OAI.CoarseAssembly.Analytic.OddCycle.localCompactPerturb._proof_2	ComparatorChallenges.CoarseAssembly	thm	[]	674918669	-
+OAI.CoarseAssembly.OperatorKTheory.relativeUnitary._proof_8	ComparatorChallenges.CoarseAssembly	thm	[u_1]	1604517122	-
+OAI.CoarseAssembly.operatorConjugationHom._proof_5	ComparatorChallenges.CoarseAssembly	thm	[u_1]	2159798104	-
+OAI.CoarseAssembly.Analytic.OddCycle.compactPerturb._proof_6	ComparatorChallenges.CoarseAssembly	thm	[]	977841735	-
+OAI.CoarseAssembly.DiscreteRoe.conjugationHom._proof_4	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	2918430024	-
+OAI.CoarseAssembly.Analytic.representedCorrection._proof_2	ComparatorChallenges.CoarseAssembly	thm	[]	2295316190	-
+OAI.CoarseAssembly.Rips.ripsSpatialOperator._simp_3	ComparatorChallenges.CoarseAssembly	thm	[u_4, u_5, u_9]	3854566779	-
+OAI.CoarseAssembly.Analytic.OddCycle.bounded._abel_3	ComparatorChallenges.CoarseAssembly	thm	[u_1]	3357532847	-
+OAI.CoarseAssembly.OperatorKTheory.relativeClass._proof_8	ComparatorChallenges.CoarseAssembly	thm	[u_1]	1734488279	-
+OAI.CoarseAssembly.rowVector	ComparatorChallenges.CoarseAssembly	def	[u_1, u_2, u_3]	380794468	805086468
+OAI.CoarseAssembly.Analytic.OddCycle.cutDown._proof_7	ComparatorChallenges.CoarseAssembly	thm	[]	2827489000	-
+OAI.CoarseAssembly.Analytic.Coarsening.noConfusionType	ComparatorChallenges.CoarseAssembly	def	[u_1, u]	3813825234	2825221630
+OAI.CoarseAssembly.separatedRipsMap	ComparatorChallenges.CoarseAssembly	def	[]	3563241593	1468400067
+OAI.CoarseAssembly.Rips.analyticFamilyIndex._proof_2	ComparatorChallenges.CoarseAssembly	thm	[]	1076529460	-
+OAI.CoarseAssembly.Analytic.CompatibleIndexFamily.transport._proof_4	ComparatorChallenges.CoarseAssembly	thm	[u_1]	1961234244	-
+OAI.CoarseAssembly.flattenVector._proof_1	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2, u_3]	3175602640	-
+OAI.CoarseAssembly.DiscreteRoe.conjugationHom._proof_1	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	2136924921	-
+OAI.CoarseAssembly.instNonUnitalCStarAlgebraTotalRoe	ComparatorChallenges.CoarseAssembly	def	[]	1101395364	1875548902
+OAI.CoarseAssembly.Analytic.OddCycle.ctorIdx	ComparatorChallenges.CoarseAssembly	def	[u]	2454922464	1322510303
+OAI.CoarseAssembly.Analytic.CompatibleIndexFamily.transport._proof_1	ComparatorChallenges.CoarseAssembly	thm	[u_1]	3171539536	-
+OAI.CoarseAssembly.DiscreteRoe.separatedFamilyMultiplier._proof_4	ComparatorChallenges.CoarseAssembly	thm	[u_1]	4278450766	-
+OAI.CoarseAssembly.DiscreteRoe.entry.eq_1	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_3]	4243579084	-
+OAI.CoarseAssembly.Analytic.OddCycle.regularize._abel_1	ComparatorChallenges.CoarseAssembly	thm	[]	137911476	-
+OAI.CoarseAssembly.TopologicalK1.mapGL.eq_1	ComparatorChallenges.CoarseAssembly	thm	[u, v]	2911942969	-
+OAI.CoarseAssembly.Rips.lateRipsFunctionHom._proof_8	ComparatorChallenges.CoarseAssembly	thm	[]	2215716249	-
+OAI.CoarseAssembly.DiscreteRoe.inclusionHom._proof_21	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2, u_3]	2913590556	-
+OAI.CoarseAssembly.Analytic.OddCycle.IsDirectSum.noConfusion	ComparatorChallenges.CoarseAssembly	def	[u_1, u]	1519224465	452935863
+OAI.CoarseAssembly.Rips.mapPoint	ComparatorChallenges.CoarseAssembly	def	[u_1, u_2]	2995992429	3230352905
+OAI.CoarseAssembly.LatticeVertex	ComparatorChallenges.CoarseAssembly	def	[]	3931117990	2541883736
+OAI.CoarseAssembly.DiscreteRoe.separatedFamilyMultiplier._proof_19	ComparatorChallenges.CoarseAssembly	thm	[u_1]	1682325023	-
+OAI.CoarseAssembly.Rips.analyticFamilyIndex._proof_3	ComparatorChallenges.CoarseAssembly	thm	[]	3299572658	-
+OAI.CoarseAssembly.Analytic.OddCycle._sizeOf_inst	ComparatorChallenges.CoarseAssembly	def	[u]	511910112	2837157656
+OAI.CoarseAssembly.Analytic.representedCorrection._proof_3	ComparatorChallenges.CoarseAssembly	thm	[]	1459298462	-
+OAI.CoarseAssembly.Rips.coarsen._proof_1	ComparatorChallenges.CoarseAssembly	thm	[u_1]	1065581594	-
+OAI.CoarseAssembly.OperatorKTheory.relativeUnitary.eq_1	ComparatorChallenges.CoarseAssembly	thm	[u_1]	3250345627	-
+OAI.CoarseAssembly.DiscreteRoe.separatedFamilyMultiplier._proof_1	ComparatorChallenges.CoarseAssembly	thm	[u_1]	2746582251	-
+OAI.CoarseAssembly.Rips.ControlledCycleFamily.mk._flat_ctor	ComparatorChallenges.CoarseAssembly	def	[]	3307215696	1448493717
+OAI.CoarseAssembly.Analytic.Coarsening	ComparatorChallenges.CoarseAssembly	induct	[u]	1576806903	-
+OAI.CoarseAssembly.flattenEquiv._proof_7	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2, u_3]	1238614694	-
+OAI.CoarseAssembly.FiberedUnion	ComparatorChallenges.CoarseAssembly	def	[]	3931117990	1037051548
+OAI.CoarseAssembly.fiberedGraph._simp_15	ComparatorChallenges.CoarseAssembly	thm	[u_3]	135153036	-
+OAI.CoarseAssembly.componentUnionMetric	ComparatorChallenges.CoarseAssembly	def	[]	2246050960	1732000223
+OAI.CoarseAssembly.Analytic.OddCycle.scalarRestriction	ComparatorChallenges.CoarseAssembly	def	[]	1101309830	232688092
+OAI.CoarseAssembly.OperatorKTheory.relativeClass._proof_9	ComparatorChallenges.CoarseAssembly	thm	[u_1]	3289506991	-
+OAI.CoarseAssembly.Rips.regularizedFamily._proof_13	ComparatorChallenges.CoarseAssembly	thm	[]	409016827	-
+OAI.CoarseAssembly.Analytic.OddCycle.localCompactPerturb._abel_1	ComparatorChallenges.CoarseAssembly	thm	[]	1510078625	-
+OAI.CoarseAssembly.Analytic.OddCycle.IsDirectSum.casesOn	ComparatorChallenges.CoarseAssembly	def	[u_1, u]	3463543252	2516761919
+OAI.CoarseAssembly.OperatorKTheory.map	ComparatorChallenges.CoarseAssembly	def	[u, v]	930886488	1847776451
+OAI.CoarseAssembly.Analytic.HilbertSpace.mk.noConfusion	ComparatorChallenges.CoarseAssembly	def	[u_1, u]	3292913052	131060732
+OAI.CoarseAssembly.DiscreteRoe.separatedFamilyMultiplier._proof_27	ComparatorChallenges.CoarseAssembly	thm	[u_1]	2146202588	-
+OAI.CoarseAssembly.LiftStep	ComparatorChallenges.CoarseAssembly	def	[]	906609800	279801008
+OAI.CoarseAssembly.Analytic.OddCycle._sizeOf_1	ComparatorChallenges.CoarseAssembly	def	[u]	154467093	735333574
+OAI.CoarseAssembly.Analytic.OddCycle.unitalSelfAdjoint._proof_7	ComparatorChallenges.CoarseAssembly	thm	[]	507819758	-
+OAI.CoarseAssembly.Rips.representedSqrt._proof_2	ComparatorChallenges.CoarseAssembly	thm	[]	1152957158	-
+OAI.CoarseAssembly.Rips.regularizedFamily._proof_10	ComparatorChallenges.CoarseAssembly	thm	[]	2437427324	-
+OAI.CoarseAssembly.Rips.Point	ComparatorChallenges.CoarseAssembly	induct	[u_1]	1580103480	-
+OAI.CoarseAssembly.Rips.ampleRipsFamilyBoundary._proof_6	ComparatorChallenges.CoarseAssembly	thm	[]	3604870337	-
+OAI.CoarseAssembly.discreteGraphMetric._proof_6	ComparatorChallenges.CoarseAssembly	thm	[u_1]	3433011734	-
+OAI.CoarseAssembly.Analytic.symmetricCutDown._proof_2	ComparatorChallenges.CoarseAssembly	thm	[u_1]	301718962	-
+OAI.CoarseAssembly.Rips.instCompactSpacePoint	ComparatorChallenges.CoarseAssembly	thm	[u_1]	2363092268	-
+OAI.CoarseAssembly.blockLinear._proof_5	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2, u_3]	485398931	-
+OAI.CoarseAssembly.Analytic.CycleRelation.homotopy	ComparatorChallenges.CoarseAssembly	ctor	[u]	3319944474	-
+OAI.CoarseAssembly.Analytic.localizedCycle	ComparatorChallenges.CoarseAssembly	def	[u_1]	2005233288	3660594150
+OAI.CoarseAssembly.fiberedGraph._proof_10	ComparatorChallenges.CoarseAssembly	thm	[]	2762775788	-
+OAI.CoarseAssembly.Analytic.cayleyUnitary._simp_1	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	1529830419	-
+OAI.CoarseAssembly.DiscreteRoe.separatedFamilyMultiplier._proof_31	ComparatorChallenges.CoarseAssembly	thm	[u_1]	871182184	-
+OAI.CoarseAssembly.Analytic.OddCycle.UnitaryEquivalent.mk._flat_ctor	ComparatorChallenges.CoarseAssembly	def	[u]	311677115	3473077763
+OAI.CoarseAssembly.DiscreteRoe.separatedFamilyMultiplier._proof_18	ComparatorChallenges.CoarseAssembly	thm	[u_1]	1692294130	-
+OAI.CoarseAssembly.Analytic.OddCycle.space	ComparatorChallenges.CoarseAssembly	def	[u]	2010593803	135352958
+OAI.CoarseAssembly.Analytic.symmetricCutDown._proof_3	ComparatorChallenges.CoarseAssembly	thm	[u_1]	2529280999	-
+OAI.CoarseAssembly.TopologicalK1.matrixClass	ComparatorChallenges.CoarseAssembly	def	[u]	3212226008	3110761962
+OAI.CoarseAssembly.Analytic.OddHomotopy.mk._flat_ctor	ComparatorChallenges.CoarseAssembly	def	[u]	90895901	2258496916
+OAI.CoarseAssembly.inclusionIsometry	ComparatorChallenges.CoarseAssembly	def	[u_1, u_2, u_3]	1195128157	3607114459
+OAI.CoarseAssembly.DiscreteRoe.partitionConjugate	ComparatorChallenges.CoarseAssembly	def	[u_1, u_2]	218497036	2856203365
+OAI.CoarseAssembly.Analytic.CoarseningMorphism.mk.inj	ComparatorChallenges.CoarseAssembly	thm	[u]	1039344434	-
+OAI.CoarseAssembly.isometricExtension	ComparatorChallenges.CoarseAssembly	def	[u_1, u_2]	3921057949	2138369322
+OAI.CoarseAssembly.Rips.representedSqrt._proof_3	ComparatorChallenges.CoarseAssembly	thm	[]	1801296470	-
+OAI.CoarseAssembly.DiscreteRoe.separatedFamilyBoundary._proof_17	ComparatorChallenges.CoarseAssembly	thm	[u_1]	2059995256	-
+OAI.CoarseAssembly.discDepth	ComparatorChallenges.CoarseAssembly	def	[]	986858239	2278694295
+OAI.CoarseAssembly.symmetricMoves.eq_1	ComparatorChallenges.CoarseAssembly	thm	[]	1118151284	-
+OAI.CoarseAssembly.Rips.ControlledCycleFamily.mk.sizeOf_spec	ComparatorChallenges.CoarseAssembly	thm	[]	4072895131	-
+OAI.CoarseAssembly.Rips.regularizedFamily._proof_6	ComparatorChallenges.CoarseAssembly	thm	[]	2410266326	-
+OAI.CoarseAssembly.Rips.ampleRipsFamilyBoundary._proof_10	ComparatorChallenges.CoarseAssembly	thm	[]	2761780954	-
+OAI.CoarseAssembly.DiscreteRoe.multiplierAlgebra._proof_5	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	340201656	-
+OAI.CoarseAssembly.Rips.ampleRipsFamilyBoundary._proof_23	ComparatorChallenges.CoarseAssembly	thm	[]	2772818262	-
+OAI.CoarseAssembly.Analytic.symmetricCutDown	ComparatorChallenges.CoarseAssembly	def	[u_1]	1930082624	1087186430
+OAI.CoarseAssembly.DiscreteRoe.separatedFamilyMultiplier._proof_29	ComparatorChallenges.CoarseAssembly	thm	[u_1]	3924430920	-
+OAI.CoarseAssembly.Analytic.CoarseningMorphism.recOn	ComparatorChallenges.CoarseAssembly	def	[u_1, u]	1618817868	2679533044
+OAI.CoarseAssembly.Analytic.OddCycle.cutDown._proof_9	ComparatorChallenges.CoarseAssembly	thm	[]	2165353056	-
+OAI.CoarseAssembly.Rips.ampleRipsFamilyBoundary._proof_13	ComparatorChallenges.CoarseAssembly	thm	[]	3948712254	-
+OAI.CoarseAssembly.Rips.representedSqrt._proof_4	ComparatorChallenges.CoarseAssembly	thm	[]	256663137	-
+OAI.CoarseAssembly.totalToFiberCoarsening	ComparatorChallenges.CoarseAssembly	def	[]	3550787394	369384789
+OAI.CoarseAssembly.Rips.representedSqrt._proof_1	ComparatorChallenges.CoarseAssembly	thm	[]	2260838501	-
+OAI.CoarseAssembly.Analytic.OddCycle.cutDown._proof_8	ComparatorChallenges.CoarseAssembly	thm	[]	2510767035	-
+OAI.CoarseAssembly.Congruence.holonomy	ComparatorChallenges.CoarseAssembly	def	[]	2987097739	1124795034
+OAI.CoarseAssembly.Analytic.OddCycle.bounded._abel_1	ComparatorChallenges.CoarseAssembly	thm	[u_1]	4253783875	-
+OAI.CoarseAssembly.Analytic.symmetricCutDown._proof_4	ComparatorChallenges.CoarseAssembly	thm	[u_1]	3698175440	-
+OAI.CoarseAssembly.Rips.ripsSpatialOperator._proof_5	ComparatorChallenges.CoarseAssembly	thm	[]	3516970125	-
+OAI.CoarseAssembly.OperatorKTheory.relativeClass._proof_7	ComparatorChallenges.CoarseAssembly	thm	[u_1]	1647024115	-
+OAI.CoarseAssembly.DiscreteRoe.algebraicRoe._proof_5	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	949397737	-
+OAI.CoarseAssembly.Analytic.symmetricCutDown._proof_1	ComparatorChallenges.CoarseAssembly	thm	[u_1]	103873170	-
+OAI.CoarseAssembly.flattenEquiv._proof_9	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2, u_3]	2765517624	-
+OAI.CoarseAssembly.Rips.representedSqrt	ComparatorChallenges.CoarseAssembly	def	[]	1009855023	2864020440
+OAI.CoarseAssembly.Analytic.boundedTransform.congr_simp	ComparatorChallenges.CoarseAssembly	thm	[u_1]	2577806477	-
+OAI.CoarseAssembly.elementaryMoves	ComparatorChallenges.CoarseAssembly	def	[]	331776467	2858893609
+OAI.CoarseAssembly.totalToFiberCoarsening._proof_1	ComparatorChallenges.CoarseAssembly	thm	[]	1167001485	-
+OAI.CoarseAssembly.Analytic.CycleRelation.rec	ComparatorChallenges.CoarseAssembly	rec	[u]	4280295798	-
+OAI.CoarseAssembly.instNonUnitalCStarAlgebraTotalRoe._aux_3	ComparatorChallenges.CoarseAssembly	def	[]	1721366871	554014973
+OAI.CoarseAssembly.instNonUnitalCStarAlgebraTotalRoe._proof_69	ComparatorChallenges.CoarseAssembly	thm	[]	2780831603	-
+OAI.CoarseAssembly.flattenEquiv._proof_8	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2, u_3]	3708838393	-
+OAI.CoarseAssembly.DiscreteRoe.operatorScalarTower	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_3]	3563353146	-
+OAI.CoarseAssembly.positiveElementaryMove	ComparatorChallenges.CoarseAssembly	def	[]	3712678150	58820311
+OAI.CoarseAssembly.Rips.lateRipsFunctionHom._proof_7	ComparatorChallenges.CoarseAssembly	thm	[]	1856712972	-
+OAI.CoarseAssembly.Analytic.Coarsening.mk.noConfusion	ComparatorChallenges.CoarseAssembly	def	[u_1, u]	1243170907	236351422
+OAI.CoarseAssembly.DiscreteRoe.PropagationLE.congr_simp	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_3]	2849595589	-
+OAI.CoarseAssembly.Analytic.OddCycle.UnitaryEquivalent.ctorIdx	ComparatorChallenges.CoarseAssembly	def	[u]	3194855943	2977806528
+OAI.CoarseAssembly.Rips.analyticFamilyIndexFree._proof_10	ComparatorChallenges.CoarseAssembly	thm	[]	2047597151	-
+NonUnitalSubalgebra.mk.congr_simp	ComparatorChallenges.CoarseAssembly	thm	[u, v]	2384510920	-
+OAI.CoarseAssembly.DiscreteRoe.inclusionHom._proof_22	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2, u_3]	1006937586	-
+OAI.CoarseAssembly.Rips.ControlledCycleFamily.noConfusion	ComparatorChallenges.CoarseAssembly	def	[u]	2517033101	2478880596
+OAI.CoarseAssembly.Analytic.HilbertSpace.mk.injEq	ComparatorChallenges.CoarseAssembly	thm	[u]	1062941146	-
+OAI.CoarseAssembly.DiscreteRoe.instContinuousStarOperator_1	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	577790343	-
+OAI.CoarseAssembly.Rips.ampleRipsFamilyBoundary._abel_3	ComparatorChallenges.CoarseAssembly	thm	[]	3967749389	-
+OAI.CoarseAssembly.Analytic.OddHomotopy.ctorIdx	ComparatorChallenges.CoarseAssembly	def	[u]	1639365338	851796869
+OAI.CoarseAssembly.Rips.ripsSpatialOperator._proof_4	ComparatorChallenges.CoarseAssembly	thm	[]	1332915797	-
+OAI.CoarseAssembly.Analytic.OddCycle	ComparatorChallenges.CoarseAssembly	induct	[u]	767828450	-
+OAI.CoarseAssembly.TopologicalK1.map._proof_6	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	3785926880	-
+OAI.CoarseAssembly.blockIsometry._proof_2	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2, u_3]	1628862169	-
+OAI.CoarseAssembly.Rips.representedSqrt._proof_5	ComparatorChallenges.CoarseAssembly	thm	[]	990268569	-
+OAI.CoarseAssembly.latticeCharge	ComparatorChallenges.CoarseAssembly	def	[]	419015241	2603039448
+OAI.CoarseAssembly.DiscreteRoe.algebra._proof_12	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	3867988758	-
+OAI.CoarseAssembly.DiscreteRoe.entry.congr_simp	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_3]	663321704	-
+OAI.CoarseAssembly.DiscreteRoe.algebraicRoe._proof_1	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	622378138	-
+OAI.CoarseAssembly.Rips.unmapPoint._proof_1	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	1055390910	-
+OAI.CoarseAssembly.Rips.ripsSpatialOperator._proof_1	ComparatorChallenges.CoarseAssembly	thm	[]	2316516707	-
+OAI.CoarseAssembly.blockLinear._proof_2	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	758685080	-
+OAI.CoarseAssembly.constructedFiberComponentEq	ComparatorChallenges.CoarseAssembly	def	[]	925124015	317094333
+OAI.CoarseAssembly.DiscreteRoe.algebraicRoe._proof_4	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	618339100	-
+OAI.CoarseAssembly.Rips.unmapPoint._proof_4	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	1475967435	-
+OAI.CoarseAssembly.instNonUnitalCStarAlgebraTotalRoe._proof_61	ComparatorChallenges.CoarseAssembly	thm	[]	3694739896	-
+OAI.CoarseAssembly.Analytic.HilbertSpace.recOn	ComparatorChallenges.CoarseAssembly	def	[u_1, u]	1092074191	1037503697
+OAI.CoarseAssembly.TopologicalK1.IsStabilization.eq_1	ComparatorChallenges.CoarseAssembly	thm	[u]	265486923	-
+OAI.CoarseAssembly.Analytic.OddCycle.regularize._proof_13	ComparatorChallenges.CoarseAssembly	thm	[]	2106399831	-
+OAI.CoarseAssembly.DiscreteRoe.multiplierAlgebra._proof_1	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	1283761849	-
+OAI.CoarseAssembly.fiberReindexRoeHom._proof_1	ComparatorChallenges.CoarseAssembly	thm	[]	35041315	-
+OAI.CoarseAssembly.Analytic.ampleIsometry._simp_1	ComparatorChallenges.CoarseAssembly	thm	[u]	2885592547	-
+OAI.CoarseAssembly.Analytic.OddCycle.UnitaryEquivalent._sizeOf_inst	ComparatorChallenges.CoarseAssembly	def	[u]	2982862583	1141685168
+OAI.CoarseAssembly.Analytic.CompatibleIndexFamily.noConfusionType	ComparatorChallenges.CoarseAssembly	def	[u_1, u, v]	2143533566	125032988
+OAI.CoarseAssembly.separatedMetric._proof_8	ComparatorChallenges.CoarseAssembly	thm	[u_1]	27420913	-
+OAI.CoarseAssembly.DiscreteRoe.partitionIsometry._proof_7	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	2323777164	-
+OAI.CoarseAssembly.blockLinear._proof_3	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	1793749845	-
+OAI.CoarseAssembly.Analytic.OddHomotopy._sizeOf_inst	ComparatorChallenges.CoarseAssembly	def	[u]	1953220576	469023385
+OAI.CoarseAssembly.Analytic.representedCorrection	ComparatorChallenges.CoarseAssembly	def	[]	2556769998	3794906821
+OAI.CoarseAssembly.Analytic.OddCycle.regularize._proof_10	ComparatorChallenges.CoarseAssembly	thm	[]	8200722	-
+OAI.CoarseAssembly.DiscreteRoe.multiplierAlgebra._proof_4	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	2441870655	-
+OAI.CoarseAssembly.DiscreteRoe.inclusionHom._proof_7	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2, u_3]	1139873266	-
+OAI.CoarseAssembly.Rips.Point.ext	ComparatorChallenges.CoarseAssembly	thm	[u_1]	2674802246	-
+OAI.CoarseAssembly.Rips.analyticFamilyIndex	ComparatorChallenges.CoarseAssembly	def	[]	2457205622	4245757274
+OAI.CoarseAssembly.Rips.ampleRipsFamilyBoundary._proof_8	ComparatorChallenges.CoarseAssembly	thm	[]	1726142300	-
+OAI.CoarseAssembly.Analytic.OddCycle.characterExtension._proof_3	ComparatorChallenges.CoarseAssembly	thm	[]	676535919	-
+OAI.CoarseAssembly.Analytic.CompatibleIndexFamily.ctorIdx	ComparatorChallenges.CoarseAssembly	def	[u, v]	1079298942	3121564394
+OAI.CoarseAssembly.DiscreteRoe.constantBlock._proof_3	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	702814813	-
+OAI.CoarseAssembly.TopologicalK1.Relation.stabilize	ComparatorChallenges.CoarseAssembly	ctor	[u]	1326500087	-
+OAI.CoarseAssembly.DiscreteRoe.multiplierRoeIdeal._proof_1	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	750558273	-
+OAI.CoarseAssembly.Analytic.CoarseningMorphism.noConfusion	ComparatorChallenges.CoarseAssembly	def	[u_1, u]	1454118596	2009072797
+OAI.CoarseAssembly.discreteGraphMetric._proof_8	ComparatorChallenges.CoarseAssembly	thm	[u_1]	4106038591	-
+OAI.CoarseAssembly.Analytic.OddCycle.Degenerate._proof_2	ComparatorChallenges.CoarseAssembly	thm	[u_1]	3738781296	-
+OAI.CoarseAssembly.TopologicalK1.IsStabilization	ComparatorChallenges.CoarseAssembly	def	[u]	4075553838	2051216966
+OAI.CoarseAssembly.DiscreteRoe.multiplierBoundaryUnitary._proof_2	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	4161670327	-
+OAI.CoarseAssembly.DiscreteRoe.partitionCompression	ComparatorChallenges.CoarseAssembly	def	[u_1, u_2]	3118557251	3039295289
+OAI.CoarseAssembly.Analytic.OddHomotopy.adjoint_compact	ComparatorChallenges.CoarseAssembly	thm	[u]	149117057	-
+OAI.CoarseAssembly.DiscreteRoe.constantBlock._proof_2	ComparatorChallenges.CoarseAssembly	thm	[u_1]	3694020417	-
+OAI.CoarseAssembly.VertexUnion	ComparatorChallenges.CoarseAssembly	def	[]	3931117990	161494028
+OAI.CoarseAssembly.DiscreteRoe.multiplierRoeIdeal._proof_4	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	1524327335	-
+OAI.CoarseAssembly.instNonUnitalCStarAlgebraTotalRoe._aux_16	ComparatorChallenges.CoarseAssembly	def	[]	2092656606	1966694031
+OAI.CoarseAssembly.TotalRoe._proof_6	ComparatorChallenges.CoarseAssembly	thm	[]	2101663886	-
+OAI.CoarseAssembly.instFintypeDisc._simp_3	ComparatorChallenges.CoarseAssembly	thm	[u_1]	3374837122	-
+OAI.CoarseAssembly.Analytic.OddHomotopy.noConfusionType	ComparatorChallenges.CoarseAssembly	def	[u_1, u]	3119077152	2688891917
+OAI.CoarseAssembly.Rips.embeddingMap._proof_5	ComparatorChallenges.CoarseAssembly	thm	[u_1]	1855908055	-
+OAI.CoarseAssembly.DiscreteRoe.multiplierBoundaryUnitary._proof_3	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	3692820842	-
+OAI.CoarseAssembly.Analytic.OddCycle.characterExtension._proof_2	ComparatorChallenges.CoarseAssembly	thm	[]	1990473	-
+OAI.CoarseAssembly.DiscreteRoe.separatedFamilyMultiplier._proof_20	ComparatorChallenges.CoarseAssembly	thm	[u_1]	3994186406	-
+OAI.CoarseAssembly.Analytic.CompatibleIndexFamily._sizeOf_inst	ComparatorChallenges.CoarseAssembly	def	[u, v]	285806584	1296403609
+OAI.CoarseAssembly.Analytic.OddCycle.UnitaryEquivalent.noConfusionType	ComparatorChallenges.CoarseAssembly	def	[u_1, u]	3463929252	290880516
+OAI.CoarseAssembly.Analytic.OddCycle.cutDown._proof_10	ComparatorChallenges.CoarseAssembly	thm	[]	2469550848	-
+OAI.CoarseAssembly.baseUnionDecidableEq	ComparatorChallenges.CoarseAssembly	def	[]	1720751546	199575751
+OAI.CoarseAssembly.Analytic.End	ComparatorChallenges.CoarseAssembly	def	[u_1]	3560436389	395361236
+OAI.CoarseAssembly.DiscreteRoe.multiplierRoeIdeal	ComparatorChallenges.CoarseAssembly	def	[u_1, u_2]	2718103282	2533066783
+OAI.CoarseAssembly.DiscreteRoe.separatedFamilyMultiplier._proof_26	ComparatorChallenges.CoarseAssembly	thm	[u_1]	2424235010	-
+OAI.CoarseAssembly.Rips.ampleRipsFamilyBoundary._proof_9	ComparatorChallenges.CoarseAssembly	thm	[]	58538997	-
+OAI.CoarseAssembly.Analytic.OddCycle.Degenerate._proof_3	ComparatorChallenges.CoarseAssembly	thm	[u_1]	2327376560	-
+OAI.CoarseAssembly.DiscreteRoe.separatedFamilyMultiplier._proof_25	ComparatorChallenges.CoarseAssembly	thm	[u_1]	763336807	-
+OAI.CoarseAssembly.Rips.inclusion._proof_3	ComparatorChallenges.CoarseAssembly	thm	[u_1]	4250992113	-
+OAI.CoarseAssembly.instNonUnitalCStarAlgebraTotalRoe._proof_21	ComparatorChallenges.CoarseAssembly	thm	[]	1618439885	-
+OAI.CoarseAssembly.instNonUnitalCStarAlgebraTotalRoe._proof_45	ComparatorChallenges.CoarseAssembly	thm	[]	2378366697	-
+OAI.CoarseAssembly.DiscreteRoe.conjugationHom._proof_6	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	1488423653	-
+OAI.CoarseAssembly.Rips.ControlledCycleFamily.cycle	ComparatorChallenges.CoarseAssembly	def	[]	44729511	600909165
+OAI.CoarseAssembly.Analytic.OddCycle.IsDirectSum._sizeOf_inst	ComparatorChallenges.CoarseAssembly	def	[u]	4161418933	1055830792
+OAI.CoarseAssembly.Rips.Point.recOn	ComparatorChallenges.CoarseAssembly	def	[u, u_1]	901236026	712336568
+OAI.CoarseAssembly.DiscreteRoe.separatedFamilyMultiplier._proof_6	ComparatorChallenges.CoarseAssembly	thm	[u_1]	3416293511	-
+OAI.CoarseAssembly.Rips.ampleRipsFamilyBoundary._abel_2	ComparatorChallenges.CoarseAssembly	thm	[]	1888392331	-
+OAI.CoarseAssembly.instNonUnitalCStarAlgebraTotalRoe._aux_52	ComparatorChallenges.CoarseAssembly	def	[]	1992749270	2167318506
+OAI.CoarseAssembly.Analytic.OddCycle.IsDirectSum.exhaustive	ComparatorChallenges.CoarseAssembly	thm	[u]	3531711339	-
+OAI.CoarseAssembly.Rips.ampleRipsFamilyBoundary._proof_18	ComparatorChallenges.CoarseAssembly	thm	[]	2576262708	-
+OAI.CoarseAssembly.FiberVertex	ComparatorChallenges.CoarseAssembly	def	[]	3972626760	1009414688
+OAI.CoarseAssembly.Rips.sqrtCoordinate.eq_1	ComparatorChallenges.CoarseAssembly	thm	[]	574952868	-
+OAI.CoarseAssembly.Rips.embeddingMap	ComparatorChallenges.CoarseAssembly	def	[u]	1545680813	670651452
+OAI.CoarseAssembly.Analytic.zeroExtensionHom._proof_2	ComparatorChallenges.CoarseAssembly	thm	[]	3269301233	-
+OAI.CoarseAssembly.Rips.ControlledCycleFamily.norm_le	ComparatorChallenges.CoarseAssembly	thm	[]	3454205607	-
+OAI.CoarseAssembly.Analytic.Coarsening.mk._flat_ctor	ComparatorChallenges.CoarseAssembly	def	[u]	728011334	1348401317
+OAI.CoarseAssembly.Congruence.ArithmeticGroup	ComparatorChallenges.CoarseAssembly	def	[]	3931117990	3119867352
+OAI.CoarseAssembly.Rips.instT2SpacePoint	ComparatorChallenges.CoarseAssembly	thm	[u_1]	154647638	-
+OAI.CoarseAssembly.Analytic.OddCycle.compactPerturb._proof_1	ComparatorChallenges.CoarseAssembly	thm	[]	788246959	-
+OAI.CoarseAssembly.Analytic.OddCycle.IsDirectSum.ctorIdx	ComparatorChallenges.CoarseAssembly	def	[u]	851290114	3640674171
+OAI.CoarseAssembly.Analytic.OddCycle.compactPerturb._proof_4	ComparatorChallenges.CoarseAssembly	thm	[]	2129822753	-
+NonUnitalSubsemiring.mk.congr_simp	ComparatorChallenges.CoarseAssembly	thm	[u]	1294195246	-
+OAI.CoarseAssembly.instNonUnitalCStarAlgebraTotalRoe._proof_43	ComparatorChallenges.CoarseAssembly	thm	[]	815131791	-
+OAI.CoarseAssembly.fiberBoundaryBase	ComparatorChallenges.CoarseAssembly	def	[]	2743664766	1522469901
+OAI.CoarseAssembly.DiscreteRoe.instCStarAlgebraSubtypeOperatorMemStarSubalgebraComplexMultiplierAlgebra._proof_3	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	3005553793	-
+OAI.CoarseAssembly.Analytic.CycleRelation	ComparatorChallenges.CoarseAssembly	induct	[u]	3091971708	-
+OAI.CoarseAssembly.Analytic.pullback	ComparatorChallenges.CoarseAssembly	def	[u]	3997666011	545463561
+OAI.CoarseAssembly.Rips.inclusion._proof_2	ComparatorChallenges.CoarseAssembly	thm	[u_1]	1186722878	-
+OAI.CoarseAssembly.Rips.ampleRipsFamilyBoundary._proof_27	ComparatorChallenges.CoarseAssembly	thm	[]	941495545	-
+OAI.CoarseAssembly.instNonUnitalCStarAlgebraTotalRoe._proof_55	ComparatorChallenges.CoarseAssembly	thm	[]	1365152559	-
+OAI.CoarseAssembly.instNonUnitalCStarAlgebraTotalRoe._proof_30	ComparatorChallenges.CoarseAssembly	thm	[]	2219034336	-
+OAI.CoarseAssembly.DiscreteRoe.instCStarAlgebraSubtypeOperatorMemStarSubalgebraComplexMultiplierAlgebra._proof_2	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	388145049	-
+OAI.CoarseAssembly.symmetricMoves	ComparatorChallenges.CoarseAssembly	def	[]	695514033	584174268
+OAI.CoarseAssembly.Analytic.zeroExtensionHom._proof_3	ComparatorChallenges.CoarseAssembly	thm	[]	2857344162	-
+OAI.CoarseAssembly.Analytic.OddCycle.noConfusion	ComparatorChallenges.CoarseAssembly	def	[u_1, u]	3317518647	661665828
+OAI.CoarseAssembly.Analytic.OddCycle.regularize._proof_14	ComparatorChallenges.CoarseAssembly	thm	[]	1694437041	-
+OAI.CoarseAssembly.Analytic.CycleRelation.casesOn	ComparatorChallenges.CoarseAssembly	def	[u]	879836212	3670065798
+OAI.CoarseAssembly.Analytic.zeroExtension._proof_2	ComparatorChallenges.CoarseAssembly	thm	[]	4055364932	-
+OAI.CoarseAssembly.DiscreteRoe.inclusionHom._proof_2	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	2083585550	-
+OAI.CoarseAssembly.Analytic.completedRepresentation	ComparatorChallenges.CoarseAssembly	def	[]	3628289089	4118293340
+OAI.CoarseAssembly.Analytic.ampleIsometry._proof_2	ComparatorChallenges.CoarseAssembly	thm	[u_1]	4103672906	-
+OAI.CoarseAssembly.Analytic.OddHomotopy.operator	ComparatorChallenges.CoarseAssembly	def	[u]	1534094511	1163666443
+OAI.CoarseAssembly.instNonUnitalCStarAlgebraTotalRoe._proof_23	ComparatorChallenges.CoarseAssembly	thm	[]	2081025621	-
+OAI.CoarseAssembly.Congruence.quotientMap	ComparatorChallenges.CoarseAssembly	def	[]	2290334773	2906274893
+OAI.CoarseAssembly.DiscreteRoe.partitionIsometry._proof_3	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	3626921210	-
+OAI.CoarseAssembly.instNonUnitalCStarAlgebraTotalRoe._proof_36	ComparatorChallenges.CoarseAssembly	thm	[]	35844590	-
+OAI.CoarseAssembly.DiscreteRoe.separatedFamilyBoundary._proof_12	ComparatorChallenges.CoarseAssembly	thm	[u_1]	3947841592	-
+OAI.CoarseAssembly.Congruence.diagonal	ComparatorChallenges.CoarseAssembly	def	[u_1]	3400859181	775310426
+OAI.CoarseAssembly.Analytic.OddCycle.unitalSelfAdjoint._proof_5	ComparatorChallenges.CoarseAssembly	thm	[]	174293846	-
+OAI.CoarseAssembly.OperatorKTheory.relativeUnitary._proof_6	ComparatorChallenges.CoarseAssembly	thm	[u_1]	4291493456	-
+OAI.CoarseAssembly.Rips.Point.weight	ComparatorChallenges.CoarseAssembly	def	[u_1]	856724721	596984879
+OAI.CoarseAssembly.Analytic.OddCycle.regularize._proof_16	ComparatorChallenges.CoarseAssembly	thm	[]	2639830886	-
+OAI.CoarseAssembly.Analytic.OddCycle.IsDirectSum.noConfusionType	ComparatorChallenges.CoarseAssembly	def	[u_1, u]	764901958	2110321440
+OAI.CoarseAssembly.blockLinear._proof_7	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2, u_3]	3731765049	-
+OAI.CoarseAssembly.Rips.Point.mk.sizeOf_spec	ComparatorChallenges.CoarseAssembly	thm	[u_1]	3040112326	-
+OAI.CoarseAssembly.Analytic.OddCycle.bounded._proof_12	ComparatorChallenges.CoarseAssembly	thm	[]	3161478763	-
+OAI.CoarseAssembly.instNonUnitalCStarAlgebraTotalRoe._proof_13	ComparatorChallenges.CoarseAssembly	thm	[]	3317726003	-
+OAI.CoarseAssembly.DiscreteRoe.inclusionHom._proof_3	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	219498504	-
+OAI.CoarseAssembly.Analytic.cayleyUnitary._proof_5	ComparatorChallenges.CoarseAssembly	thm	[u_1]	611656732	-
+OAI.CoarseAssembly.Rips.coarsening	ComparatorChallenges.CoarseAssembly	def	[u_2]	3585915415	863606278
+OAI.CoarseAssembly.Analytic.pushforward	ComparatorChallenges.CoarseAssembly	def	[u]	4094588352	1175714285
+OAI.CoarseAssembly.DiscreteRoe.separatedFamilyMultiplier._proof_15	ComparatorChallenges.CoarseAssembly	thm	[u_1]	274772477	-
+OAI.CoarseAssembly.Analytic.CoarseningMorphism.mk.injEq	ComparatorChallenges.CoarseAssembly	thm	[u]	1752682746	-
+OAI.CoarseAssembly.Rips.Point.ext.match_1	ComparatorChallenges.CoarseAssembly	def	[u_1]	3705132783	747157793
+OAI.CoarseAssembly.constructedFiberComponentMetric	ComparatorChallenges.CoarseAssembly	def	[]	1477901066	3763994429
+OAI.CoarseAssembly.Analytic.Coarsening.noConfusion	ComparatorChallenges.CoarseAssembly	def	[u_1, u]	3031768091	448964387
+OAI.CoarseAssembly.Rips.sqrtCoordinate._proof_1	ComparatorChallenges.CoarseAssembly	thm	[]	1099594187	-
+OAI.CoarseAssembly.Analytic.OddCycle.regularize._proof_11	ComparatorChallenges.CoarseAssembly	thm	[]	327740756	-
+OAI.CoarseAssembly.DiscreteRoe.partitionIsometry._proof_2	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	1804645244	-
+OAI.CoarseAssembly.Analytic.localizedOperator.eq_1	ComparatorChallenges.CoarseAssembly	thm	[u_1]	3855956115	-
+OAI.CoarseAssembly.discGraph._proof_2	ComparatorChallenges.CoarseAssembly	thm	[]	3482459868	-
+OAI.CoarseAssembly.Rips.ampleRipsFamilyBoundary._proof_16	ComparatorChallenges.CoarseAssembly	thm	[]	2163718328	-
+OAI.CoarseAssembly.Rips.Point.noConfusion	ComparatorChallenges.CoarseAssembly	def	[u, u_1]	1303514200	1861295564
+OAI.CoarseAssembly.Analytic.OddCycle.unitalSelfAdjoint._proof_4	ComparatorChallenges.CoarseAssembly	thm	[]	1779112903	-
+OAI.CoarseAssembly.Analytic.OddCycle.unitalSelfAdjoint._proof_1	ComparatorChallenges.CoarseAssembly	thm	[]	4159103465	-
+OAI.CoarseAssembly.DiscreteRoe.constantBlock	ComparatorChallenges.CoarseAssembly	def	[u_1, u_2]	4070391328	2642653062
+OAI.CoarseAssembly.Analytic.cayleyUnitary._proof_4	ComparatorChallenges.CoarseAssembly	thm	[u_1]	2077109004	-
+OAI.CoarseAssembly.Analytic.OddCycle.recOn	ComparatorChallenges.CoarseAssembly	def	[u_1, u]	3739570680	3244804730
+OAI.CoarseAssembly.OperatorKTheory.relativeClass._proof_2	ComparatorChallenges.CoarseAssembly	thm	[]	3023449972	-
+OAI.CoarseAssembly.Rips.lateRipsFunctionHom._proof_3	ComparatorChallenges.CoarseAssembly	thm	[]	3697872439	-
+OAI.CoarseAssembly.constructedTotalIndex._proof_6	ComparatorChallenges.CoarseAssembly	thm	[]	1805972578	-
+OAI.CoarseAssembly.Analytic.OddCycle.characterExtension	ComparatorChallenges.CoarseAssembly	def	[]	1330443084	4180379381
+OAI.CoarseAssembly.Analytic.Coarsening.mk.inj	ComparatorChallenges.CoarseAssembly	thm	[u]	1430184610	-
+OAI.CoarseAssembly.Analytic.CompatibleIndexFamily	ComparatorChallenges.CoarseAssembly	induct	[u, v]	3181882494	-
+OAI.CoarseAssembly.DiscreteRoe.multiplierBoundaryUnitary	ComparatorChallenges.CoarseAssembly	def	[u_1, u_2]	376302537	3865933951
+OAI.CoarseAssembly.DiscreteRoe.separatedFamilyMultiplier._proof_24	ComparatorChallenges.CoarseAssembly	thm	[u_1]	1922878655	-
+OAI.CoarseAssembly.Analytic.OddCycle.cutDown._abel_2	ComparatorChallenges.CoarseAssembly	thm	[]	1171424634	-
+OAI.CoarseAssembly.Analytic.cayleyUnitary._proof_1	ComparatorChallenges.CoarseAssembly	thm	[u_1]	1296878434	-
+OAI.CoarseAssembly.OperatorKTheory.scalarMap._proof_1	ComparatorChallenges.CoarseAssembly	thm	[u_1]	3778445959	-
+OAI.CoarseAssembly.TopologicalK1.Relation.homotopy	ComparatorChallenges.CoarseAssembly	ctor	[u]	924914045	-
+OAI.CoarseAssembly.OperatorKTheory.relativeClass._proof_3	ComparatorChallenges.CoarseAssembly	thm	[]	2736040026	-
+OAI.CoarseAssembly.Rips.lateRipsFunctionHom._proof_2	ComparatorChallenges.CoarseAssembly	thm	[]	1309375905	-
+OAI.CoarseAssembly.separatedDist	ComparatorChallenges.CoarseAssembly	def	[u_1]	1706888908	2412235620
+OAI.CoarseAssembly.Analytic.rationalBoundaryUnitary.eq_1	ComparatorChallenges.CoarseAssembly	thm	[u_1]	1474907029	-
+OAI.CoarseAssembly.Rips.ampleRipsFamilyBoundary._proof_14	ComparatorChallenges.CoarseAssembly	thm	[]	2479892253	-
+OAI.CoarseAssembly.Rips.embeddingCoarsening._proof_1	ComparatorChallenges.CoarseAssembly	thm	[u_1]	4180672157	-
+OAI.CoarseAssembly.Rips.ampleRipsFamilyBoundary._proof_11	ComparatorChallenges.CoarseAssembly	thm	[]	47199848	-
+OAI.CoarseAssembly.Analytic.OddCycle.Degenerate	ComparatorChallenges.CoarseAssembly	def	[u]	1777533255	4000809299
+OAI.CoarseAssembly.Analytic.HilbertSpace.mk.inj	ComparatorChallenges.CoarseAssembly	thm	[u]	3532721248	-
+OAI.CoarseAssembly.Rips.regularizedFamily._proof_14	ComparatorChallenges.CoarseAssembly	thm	[]	3761155416	-
+OAI.CoarseAssembly.OperatorKTheory.relativeClass._proof_1	ComparatorChallenges.CoarseAssembly	thm	[]	1064711680	-
+OAI.CoarseAssembly.flattenVector	ComparatorChallenges.CoarseAssembly	def	[u_1, u_2, u_3]	315528149	4247312437
+OAI.CoarseAssembly.DiscreteRoe.conjugationHom	ComparatorChallenges.CoarseAssembly	def	[u_2, u_3, u_4]	4264366564	3374798040
+OAI.CoarseAssembly.Rips.ampleRipsFamilyBoundary._proof_25	ComparatorChallenges.CoarseAssembly	thm	[]	204263041	-
+OAI.CoarseAssembly.Analytic.cayleyUnitary._proof_3	ComparatorChallenges.CoarseAssembly	thm	[u_1]	2428826576	-
+OAI.CoarseAssembly.instNonUnitalCStarAlgebraTotalRoe._proof_57	ComparatorChallenges.CoarseAssembly	thm	[]	1483409633	-
+OAI.CoarseAssembly.Rips.coarsen	ComparatorChallenges.CoarseAssembly	def	[u_1]	1341113265	3770415074
+OAI.CoarseAssembly.OperatorKTheory.relativeUnitary._abel_3	ComparatorChallenges.CoarseAssembly	thm	[u_1]	2132736873	-
+OAI.CoarseAssembly.Analytic.CompatibleIndexFamily.transport	ComparatorChallenges.CoarseAssembly	def	[u, v]	2444320094	4090944637
+OAI.CoarseAssembly.Analytic.CompatibleIndexFamily.compatible	ComparatorChallenges.CoarseAssembly	thm	[u, v]	2494834150	-
+OAI.CoarseAssembly.discGraph._proof_1	ComparatorChallenges.CoarseAssembly	thm	[]	3286662809	-
+OAI.CoarseAssembly.instNonUnitalCStarAlgebraTotalRoe._aux_33	ComparatorChallenges.CoarseAssembly	def	[]	3958290536	615162350
+OAI.CoarseAssembly.DiscreteRoe.partitionIsometry._proof_5	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	1761584697	-
+OAI.CoarseAssembly.Rips.lateRipsFunctionHom._proof_4	ComparatorChallenges.CoarseAssembly	thm	[]	3819091992	-
+OAI.CoarseAssembly.DiscreteRoe.separatedFamilyMultiplier	ComparatorChallenges.CoarseAssembly	def	[u_1]	1617526187	2364561276
+OAI.CoarseAssembly.Rips.lateRipsFunctionHom._proof_1	ComparatorChallenges.CoarseAssembly	thm	[]	101310056	-
+OAI.CoarseAssembly.instNonUnitalCStarAlgebraTotalRoe._proof_70	ComparatorChallenges.CoarseAssembly	thm	[]	444352258	-
+OAI.CoarseAssembly.Analytic.OddCycle.mk.sizeOf_spec	ComparatorChallenges.CoarseAssembly	thm	[u]	2167440086	-
+OAI.CoarseAssembly.Analytic.OddCycle.UnitaryEquivalent.mk	ComparatorChallenges.CoarseAssembly	ctor	[u]	311677115	-
+OAI.CoarseAssembly.Analytic.cayleyUnitary._proof_2	ComparatorChallenges.CoarseAssembly	thm	[u_1]	149745094	-
+OAI.CoarseAssembly.Analytic.Coarsening.inclusion_comp	ComparatorChallenges.CoarseAssembly	thm	[u]	4194727388	-
+OAI.CoarseAssembly.Analytic.OddCycle.unitalSelfAdjoint._proof_3	ComparatorChallenges.CoarseAssembly	thm	[]	882056931	-
+OAI.CoarseAssembly.TopologicalK1.Relation.rec	ComparatorChallenges.CoarseAssembly	rec	[u]	3404053840	-
+OAI.CoarseAssembly.DiscreteRoe.separatedFamilyMultiplier._proof_9	ComparatorChallenges.CoarseAssembly	thm	[u_1]	1520153989	-
+OAI.CoarseAssembly.Rips.ampleRipsFamilyBoundary._proof_26	ComparatorChallenges.CoarseAssembly	thm	[]	4284962421	-
+OAI.CoarseAssembly.OperatorKTheory.map._proof_6	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	4188905490	-
+OAI.CoarseAssembly.DiscreteRoe.inclusionHom._proof_5	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	3888991867	-
+OAI.CoarseAssembly.Analytic.Coarsening.inclusion	ComparatorChallenges.CoarseAssembly	def	[u]	2768774737	2163561364
+OAI.CoarseAssembly.Rips.ampleRipsFamilyBoundary._proof_20	ComparatorChallenges.CoarseAssembly	thm	[]	2890056575	-
+OAI.CoarseAssembly.DiscreteRoe.separatedFamilyBoundary._proof_28	ComparatorChallenges.CoarseAssembly	thm	[u_1]	1097479381	-
+OAI.CoarseAssembly.DiscreteRoe.separatedFamilyMultiplier._proof_8	ComparatorChallenges.CoarseAssembly	thm	[u_1]	3247274370	-
+OAI.CoarseAssembly.Analytic.CoarseningMorphism.mk.noConfusion	ComparatorChallenges.CoarseAssembly	def	[u_1, u]	3099836246	4185553648
+OAI.CoarseAssembly.Analytic.CompatibleIndexFamily.casesOn	ComparatorChallenges.CoarseAssembly	def	[u_1, u, v]	3602822493	2424599079
+OAI.CoarseAssembly.instNonUnitalCStarAlgebraTotalRoe._proof_49	ComparatorChallenges.CoarseAssembly	thm	[]	2131581265	-
+OAI.CoarseAssembly.OperatorKTheory.scalarMap._proof_2	ComparatorChallenges.CoarseAssembly	thm	[u_1]	2157600511	-
+OAI.CoarseAssembly.DiscreteRoe.conjugationHom._proof_8	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	3562246108	-
+OAI.CoarseAssembly.Analytic.CoarseningMorphism._sizeOf_1	ComparatorChallenges.CoarseAssembly	def	[u]	2214278262	3080901979
+OAI.CoarseAssembly.Analytic.OddHomotopy.mk	ComparatorChallenges.CoarseAssembly	ctor	[u]	90895901	-
+OAI.CoarseAssembly.Analytic.OddCycle.unitalSelfAdjoint._proof_2	ComparatorChallenges.CoarseAssembly	thm	[]	3059782916	-
+OAI.CoarseAssembly.DiscreteRoe.conjugationHom._proof_9	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2, u_3]	793902505	-
+OAI.CoarseAssembly.Rips.regularizedFamily._proof_11	ComparatorChallenges.CoarseAssembly	thm	[]	222832922	-
+OAI.CoarseAssembly.OperatorKTheory.relativeClass._proof_4	ComparatorChallenges.CoarseAssembly	thm	[u_1]	2788645888	-
+OAI.CoarseAssembly.operatorConjugationHom	ComparatorChallenges.CoarseAssembly	def	[u_1, u_2]	2826169421	3290678060
+OAI.CoarseAssembly.instNonUnitalCStarAlgebraTotalRoe._aux_41	ComparatorChallenges.CoarseAssembly	def	[]	1740378673	2651575645
+OAI.CoarseAssembly.Analytic.CoarseningMorphism.ctorIdx	ComparatorChallenges.CoarseAssembly	def	[u]	2214278262	1287451284
+OAI.CoarseAssembly.operatorConjugation._proof_5	ComparatorChallenges.CoarseAssembly	thm	[u_1]	332260594	-
+OAI.CoarseAssembly.Analytic.OddCycle.cutDown._proof_3	ComparatorChallenges.CoarseAssembly	thm	[]	782391989	-
+OAI.CoarseAssembly.Rips.ampleRipsFamilyBoundary._proof_12	ComparatorChallenges.CoarseAssembly	thm	[]	369022869	-
+OAI.CoarseAssembly.Analytic.OddCycle.precomp._proof_2	ComparatorChallenges.CoarseAssembly	thm	[u_1]	3399320543	-
+OAI.CoarseAssembly.Analytic.CompatibleIndexFamily.noConfusion	ComparatorChallenges.CoarseAssembly	def	[u_1, u, v]	3930339456	61170083
+OAI.CoarseAssembly.TopologicalK1.StableGL	ComparatorChallenges.CoarseAssembly	def	[u]	1187917517	2510025141
+OAI.CoarseAssembly.DiscreteRoe.separatedFamilyMultiplier._proof_33	ComparatorChallenges.CoarseAssembly	thm	[u_1]	366051669	-
+OAI.CoarseAssembly.Analytic.precompFree.eq_1	ComparatorChallenges.CoarseAssembly	thm	[u]	2333376924	-
+OAI.CoarseAssembly.instNonUnitalCStarAlgebraTotalRoe._proof_65	ComparatorChallenges.CoarseAssembly	thm	[]	149750839	-
+OAI.CoarseAssembly.Analytic.OddCycle.UnitaryEquivalent.representation_eq	ComparatorChallenges.CoarseAssembly	thm	[u]	23814081	-
+OAI.CoarseAssembly.Analytic.precomp._proof_5	ComparatorChallenges.CoarseAssembly	thm	[u_1]	39274451	-
+OAI.CoarseAssembly.Analytic.OddHomotopy.continuous_representation	ComparatorChallenges.CoarseAssembly	thm	[u]	4116803175	-
+OAI.CoarseAssembly.Analytic.cycleClass	ComparatorChallenges.CoarseAssembly	def	[u]	1765769469	3405482574
+OAI.CoarseAssembly.flattenEquiv._proof_2	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2, u_3]	968609546	-
+OAI.CoarseAssembly.Analytic.OddCycle.precomp._proof_3	ComparatorChallenges.CoarseAssembly	thm	[u_1]	2579973344	-
+OAI.CoarseAssembly.Rips.separatedIndexFamily._proof_1	ComparatorChallenges.CoarseAssembly	thm	[]	21462186	-
+OAI.CoarseAssembly.TotalRoe._proof_4	ComparatorChallenges.CoarseAssembly	thm	[]	4179447728	-
+OAI.CoarseAssembly.Analytic.OddCycle.operator	ComparatorChallenges.CoarseAssembly	def	[u]	153252849	1468602874
+OAI.CoarseAssembly.TotalRoe._proof_1	ComparatorChallenges.CoarseAssembly	thm	[]	1882820088	-
+OAI.CoarseAssembly.fiberedGraph._simp_2	ComparatorChallenges.CoarseAssembly	thm	[u_1]	1002084111	-
+OAI.CoarseAssembly.Analytic.CoarseningMorphism._sizeOf_inst	ComparatorChallenges.CoarseAssembly	def	[u]	1790181061	4170303367
+OAI.CoarseAssembly.fiberedGraph._simp_11	ComparatorChallenges.CoarseAssembly	thm	[u_1]	1475480520	-
+OAI.CoarseAssembly.instNonUnitalCStarAlgebraTotalRoe._proof_56	ComparatorChallenges.CoarseAssembly	thm	[]	3940684805	-
+OAI.CoarseAssembly.Analytic.OddCycle.cutDown._proof_2	ComparatorChallenges.CoarseAssembly	thm	[]	335149679	-
+OAI.CoarseAssembly.flattenEquiv._proof_3	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2, u_3]	2986073460	-
+OAI.CoarseAssembly.Rips.ControlledCycleFamily.bound	ComparatorChallenges.CoarseAssembly	def	[]	3146536218	102147839
+OAI.CoarseAssembly.Rips.ControlledCycleFamily.noConfusionType	ComparatorChallenges.CoarseAssembly	def	[u]	2196545085	3549629519
+OAI.CoarseAssembly.Analytic.Coarsening._sizeOf_1	ComparatorChallenges.CoarseAssembly	def	[u]	1372741120	2809068184
+OAI.CoarseAssembly.Rips.embeddingMap._proof_2	ComparatorChallenges.CoarseAssembly	thm	[u_1]	754668757	-
+OAI.CoarseAssembly.separatedMetric._proof_6	ComparatorChallenges.CoarseAssembly	thm	[u_1]	1769732981	-
+OAI.CoarseAssembly.DiscreteRoe.CompactEntries	ComparatorChallenges.CoarseAssembly	def	[u_1, u_3]	896390630	3982070747
+OAI.CoarseAssembly.Analytic.OddCycle.IsDirectSum.mk	ComparatorChallenges.CoarseAssembly	ctor	[u]	2697121964	-
+OAI.CoarseAssembly.DiscreteRoe.algebraicRoe._simp_5	ComparatorChallenges.CoarseAssembly	thm	[u]	956199473	-
+OAI.CoarseAssembly.OperatorKTheory.relativeUnitary._abel_2	ComparatorChallenges.CoarseAssembly	thm	[u_1]	3051440123	-
+OAI.CoarseAssembly.Disc	ComparatorChallenges.CoarseAssembly	def	[]	3972626760	3626805538
+OAI.CoarseAssembly.DiscreteRoe.multiplierBoundaryClass._proof_4	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	676855964	-
+OAI.CoarseAssembly.Rips.ampleRipsFamilyBoundary._proof_15	ComparatorChallenges.CoarseAssembly	thm	[]	2205062316	-
+OAI.CoarseAssembly.Analytic.OddCycle.unitalSelfAdjoint._abel_1	ComparatorChallenges.CoarseAssembly	thm	[]	876692176	-
+OAI.CoarseAssembly.Analytic.OddCycle.Degenerate._proof_5	ComparatorChallenges.CoarseAssembly	thm	[u_1]	2608035265	-
+OAI.CoarseAssembly.Analytic.OddHomotopy.square_compact	ComparatorChallenges.CoarseAssembly	thm	[u]	1603817449	-
+OAI.CoarseAssembly.Analytic.Coarsening.space	ComparatorChallenges.CoarseAssembly	def	[u]	1739723221	1329666662
+OAI.CoarseAssembly.Analytic.pullback._proof_2	ComparatorChallenges.CoarseAssembly	thm	[]	90513755	-
+OAI.CoarseAssembly.instNonUnitalCStarAlgebraTotalRoe._aux_10	ComparatorChallenges.CoarseAssembly	def	[]	2274737422	2560375395
+OAI.CoarseAssembly.DiscreteRoe.algebra._proof_4	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	1029403817	-
+OAI.CoarseAssembly.DiscreteRoe.algebra._proof_1	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	2632819501	-
+OAI.CoarseAssembly.DiscreteRoe.multiplierBoundaryClass	ComparatorChallenges.CoarseAssembly	def	[u_1, u_2]	706340252	4169632969
+OAI.CoarseAssembly.Rips.embeddingMap._proof_3	ComparatorChallenges.CoarseAssembly	thm	[u_1]	3397666887	-
+OAI.CoarseAssembly.DiscreteRoe.algebra	ComparatorChallenges.CoarseAssembly	def	[u_1, u_3]	2492743553	110946246
+OAI.CoarseAssembly.instNonUnitalCStarAlgebraTotalRoe._proof_29	ComparatorChallenges.CoarseAssembly	thm	[]	2279225394	-
+OAI.CoarseAssembly.Analytic.pullback._proof_3	ComparatorChallenges.CoarseAssembly	thm	[]	4246274070	-
+OAI.CoarseAssembly.DiscreteRoe.algebraicRoe._proof_12	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	2188279449	-
+OAI.CoarseAssembly.Rips.ripsPointCharacter	ComparatorChallenges.CoarseAssembly	def	[]	2100114491	2343482433
+OAI.CoarseAssembly.Analytic.CycleRelation.degenerate	ComparatorChallenges.CoarseAssembly	ctor	[u]	3206720860	-
+OAI.CoarseAssembly.DiscreteRoe.multiplierBoundaryClass._proof_1	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	2770823960	-
+OAI.CoarseAssembly.instFintypeDisc	ComparatorChallenges.CoarseAssembly	def	[]	1136498212	3376250435
+OAI.CoarseAssembly.Analytic.OddCycle.UnitaryEquivalent.mk.inj	ComparatorChallenges.CoarseAssembly	thm	[u]	1767797669	-
+OAI.CoarseAssembly.instNonUnitalCStarAlgebraTotalRoe._proof_71	ComparatorChallenges.CoarseAssembly	thm	[]	733862671	-
+OAI.CoarseAssembly.DiscreteRoe.multiplierBoundaryUnitary._proof_1	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	1231628867	-
+OAI.CoarseAssembly.DiscreteRoe.algebra._proof_5	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	621702838	-
+OAI.CoarseAssembly.DiscreteRoe.inclusionHom._proof_17	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2, u_3]	3873690899	-
+OAI.CoarseAssembly.Analytic.OddHomotopy.mk.inj	ComparatorChallenges.CoarseAssembly	thm	[u]	2870844412	-
+OAI.CoarseAssembly.Analytic.OddCycle.Degenerate._proof_4	ComparatorChallenges.CoarseAssembly	thm	[u_1]	31650305	-
+OAI.CoarseAssembly.Analytic.OddCycle.cutDown._proof_6	ComparatorChallenges.CoarseAssembly	thm	[]	842311626	-
+OAI.CoarseAssembly.Analytic.CoarseningMorphism.mk._flat_ctor	ComparatorChallenges.CoarseAssembly	def	[u]	1967657493	1982177288
+OAI.CoarseAssembly.Rips.Point._sizeOf_1	ComparatorChallenges.CoarseAssembly	def	[u_1]	3136443261	3694273732
+OAI.CoarseAssembly.DiscreteRoe.separatedFamilyMultiplier._proof_16	ComparatorChallenges.CoarseAssembly	thm	[u_1]	2263778827	-
+OAI.CoarseAssembly.DiscreteRoe.separatedFamilyMultiplier._proof_14	ComparatorChallenges.CoarseAssembly	thm	[u_1]	2910859549	-
+OAI.CoarseAssembly.fiberedGraph._proof_9	ComparatorChallenges.CoarseAssembly	thm	[]	3249491290	-
+OAI.CoarseAssembly.DiscreteRoe.Operator	ComparatorChallenges.CoarseAssembly	def	[u_4, u_5]	3272818269	1650248205
+OAI.CoarseAssembly.totalToFiber	ComparatorChallenges.CoarseAssembly	def	[]	3263371414	856239019
+OAI.CoarseAssembly.fiberedGraph._proof_8	ComparatorChallenges.CoarseAssembly	thm	[]	2793637404	-
+OAI.CoarseAssembly.DiscreteRoe.multiplierRoeIdeal._proof_3	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	3253268357	-
+OAI.CoarseAssembly.DiscreteRoe.entry	ComparatorChallenges.CoarseAssembly	def	[u_1, u_3]	3937022006	2346609442
+OAI.CoarseAssembly.TopologicalK1.mapGL	ComparatorChallenges.CoarseAssembly	def	[u, v]	2461970793	1466914606
+OAI.CoarseAssembly.Analytic.OddCycle.regularize._proof_15	ComparatorChallenges.CoarseAssembly	thm	[]	1735615879	-
+OAI.CoarseAssembly.DiscreteRoe.constantBlock._proof_1	ComparatorChallenges.CoarseAssembly	thm	[]	3342586073	-
+OAI.CoarseAssembly.Analytic.OddCycle.characterExtension._proof_1	ComparatorChallenges.CoarseAssembly	thm	[]	2313603037	-
+OAI.CoarseAssembly.DiscreteRoe.separatedFamilyMultiplier._proof_11	ComparatorChallenges.CoarseAssembly	thm	[u_1]	37770502	-
+OAI.CoarseAssembly.Analytic.OddCycle.IsDirectSum.precomp	ComparatorChallenges.CoarseAssembly	def	[u]	836456955	167455543
+OAI.CoarseAssembly.Rips.regularizedFamily._proof_8	ComparatorChallenges.CoarseAssembly	thm	[]	4283164403	-
+OAI.CoarseAssembly.DiscreteRoe.multiplierBoundaryUnitary._proof_4	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	971631299	-
+OAI.CoarseAssembly.Analytic.OddCycle.compactPerturb._proof_7	ComparatorChallenges.CoarseAssembly	thm	[]	514139355	-
+OAI.CoarseAssembly.DiscreteRoe.multiplierBoundaryClass._proof_5	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	3316473919	-
+OAI.CoarseAssembly.Analytic.OddCycle.UnitaryEquivalent.rec	ComparatorChallenges.CoarseAssembly	rec	[u_1, u]	3162513045	-
+OAI.CoarseAssembly.Analytic.OddCycle.Degenerate._proof_1	ComparatorChallenges.CoarseAssembly	thm	[u_1]	860593113	-
+OAI.CoarseAssembly.OperatorKTheory.relativeUnitary	ComparatorChallenges.CoarseAssembly	def	[u_1]	3881964678	2262733548
+OAI.CoarseAssembly.Rips.regularizedFamily._proof_9	ComparatorChallenges.CoarseAssembly	thm	[]	2559897907	-
+OAI.CoarseAssembly.flattenEquiv._proof_6	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2, u_3]	3952471483	-
+OAI.CoarseAssembly.Analytic.OddCycle.IsDirectSum.right	ComparatorChallenges.CoarseAssembly	def	[u]	1752674251	1860813547
+OAI.CoarseAssembly.DiscreteRoe.multiplierRoeIdeal._proof_2	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	3307360452	-
+OAI.CoarseAssembly.Analytic.OddHomotopy.rec	ComparatorChallenges.CoarseAssembly	rec	[u_1, u]	3641285060	-
+OAI.CoarseAssembly.Rips.ampleRipsFamilyBoundary._proof_24	ComparatorChallenges.CoarseAssembly	thm	[]	4237350570	-
+OAI.CoarseAssembly.blockLinear._proof_4	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2, u_3]	262018533	-
+OAI.CoarseAssembly.DiscreteRoe.algebraicRoe._proof_2	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	2693016928	-
+OAI.CoarseAssembly.Rips.unmapPoint._proof_2	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	121842895	-
+OAI.CoarseAssembly.Rips.analyticFamilyIndexFree._proof_6	ComparatorChallenges.CoarseAssembly	thm	[]	3287798929	-
+OAI.CoarseAssembly.TopologicalK1.Relation.casesOn	ComparatorChallenges.CoarseAssembly	def	[u]	2066143726	2058241219
+OAI.CoarseAssembly.DiscreteRoe.multiplierAlgebra._proof_3	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	1971979521	-
+OAI.CoarseAssembly.Analytic.OddHomotopy	ComparatorChallenges.CoarseAssembly	induct	[u]	767828450	-
+OAI.CoarseAssembly.blockIsometry._proof_1	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2, u_3]	1598180440	-
+OAI.CoarseAssembly.DiscreteRoe.algebraicRoe._simp_4	ComparatorChallenges.CoarseAssembly	thm	[u]	2761467687	-
+OAI.CoarseAssembly.instNonUnitalCStarAlgebraTotalRoe._proof_20	ComparatorChallenges.CoarseAssembly	thm	[]	4190913808	-
+OAI.CoarseAssembly.Rips.ripsSpatialOperator._simp_4	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_3, u_4, u_7]	3153793544	-
+OAI.CoarseAssembly.Analytic.cayleyDenominator	ComparatorChallenges.CoarseAssembly	def	[u_1]	3520706414	185051179
+OAI.CoarseAssembly.Analytic.CycleRelation.unitary	ComparatorChallenges.CoarseAssembly	ctor	[u]	3501772834	-
+OAI.CoarseAssembly.Rips.ripsSpatialOperator._proof_3	ComparatorChallenges.CoarseAssembly	thm	[]	3436574870	-
+OAI.CoarseAssembly.DiscreteRoe.algebraicRoe._proof_3	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	1188634096	-
+OAI.CoarseAssembly.Rips.unmapPoint._proof_3	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	3957697014	-
+OAI.CoarseAssembly.instNonUnitalCStarAlgebraTotalRoe._proof_25	ComparatorChallenges.CoarseAssembly	thm	[]	3266740573	-
+OAI.CoarseAssembly.Analytic.Interval	ComparatorChallenges.CoarseAssembly	def	[]	1707065593	3517529939
+OAI.CoarseAssembly.Analytic.cayleyDenominator._proof_1	ComparatorChallenges.CoarseAssembly	thm	[u_1]	1014053898	-
+OAI.CoarseAssembly.Analytic.CompatibleIndexFamily.assembly	ComparatorChallenges.CoarseAssembly	def	[u, v]	3636164726	4164754462
+OAI.CoarseAssembly.Analytic.OddCycle.regularize._proof_6	ComparatorChallenges.CoarseAssembly	thm	[]	1592755189	-
+OAI.CoarseAssembly.DiscreteRoe.multiplierAlgebra._proof_2	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	1069481406	-
+OAI.CoarseAssembly.blockIsometry	ComparatorChallenges.CoarseAssembly	def	[u_1, u_2, u_3]	18743446	664767262
+OAI.CoarseAssembly.Analytic.OddHomotopy.precomp._proof_6	ComparatorChallenges.CoarseAssembly	thm	[u_1]	2871197300	-
+OAI.CoarseAssembly.Analytic.CompatibleIndexFamily.assembly._proof_1	ComparatorChallenges.CoarseAssembly	thm	[u_1]	2396801714	-
+OAI.CoarseAssembly.Analytic.CompatibleIndexFamily.mk.sizeOf_spec	ComparatorChallenges.CoarseAssembly	thm	[u, v]	3669737636	-
+OAI.CoarseAssembly.instNonUnitalCStarAlgebraTotalRoe._aux_26	ComparatorChallenges.CoarseAssembly	def	[]	2092656606	1081194137
+OAI.CoarseAssembly.Rips.mapPoint.congr_simp	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	4182991353	-
+OAI.CoarseAssembly.Rips.ripsSpatialOperator._proof_2	ComparatorChallenges.CoarseAssembly	thm	[]	1224903698	-
+OAI.CoarseAssembly.DiscreteRoe.coordinate	ComparatorChallenges.CoarseAssembly	def	[u_1, u_3]	393944428	3626309595
+OAI.CoarseAssembly.separatedDist.eq_1	ComparatorChallenges.CoarseAssembly	thm	[u_1]	183950514	-
+OAI.CoarseAssembly.fiberedGraph._simp_12	ComparatorChallenges.CoarseAssembly	thm	[u_1]	20858462	-
+OAI.CoarseAssembly.blockLinear	ComparatorChallenges.CoarseAssembly	def	[u_1, u_2, u_3]	690774071	3916352890
+OAI.CoarseAssembly.Analytic.OddCycle.compactPerturb._abel_1	ComparatorChallenges.CoarseAssembly	thm	[]	458669844	-
+OAI.CoarseAssembly.Analytic.OddCycle.UnitaryEquivalent	ComparatorChallenges.CoarseAssembly	induct	[u]	2466109050	-
+OAI.CoarseAssembly.Analytic.CompatibleIndexFamily.rec	ComparatorChallenges.CoarseAssembly	rec	[u_1, u, v]	1652392301	-
+OAI.CoarseAssembly.blockLinear._proof_1	ComparatorChallenges.CoarseAssembly	thm	[]	2547959801	-
+OAI.CoarseAssembly.Analytic.Coarsening.mk.injEq	ComparatorChallenges.CoarseAssembly	thm	[u]	333546547	-
+OAI.CoarseAssembly.Rips.lateRipsFunctionHom._proof_6	ComparatorChallenges.CoarseAssembly	thm	[]	1769454391	-
+OAI.CoarseAssembly.constructedTotalIndex._proof_3	ComparatorChallenges.CoarseAssembly	thm	[]	4195242989	-
+OAI.CoarseAssembly.UniformFiniteBalls	ComparatorChallenges.CoarseAssembly	def	[u_2]	860170851	393363163
+OAI.CoarseAssembly.OperatorKTheory.map._proof_4	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	2970179161	-
+OAI.CoarseAssembly.Rips.ControlledCycleFamily.mk	ComparatorChallenges.CoarseAssembly	ctor	[]	3307215696	-
+OAI.CoarseAssembly.instNonUnitalCStarAlgebraTotalRoe._proof_5	ComparatorChallenges.CoarseAssembly	thm	[]	1132781027	-
+OAI.CoarseAssembly.fiberedGraph._proof_7	ComparatorChallenges.CoarseAssembly	thm	[]	209246007	-
+OAI.CoarseAssembly.Analytic.OddCycle.mk.noConfusion	ComparatorChallenges.CoarseAssembly	def	[u_1, u]	1093140020	469910070
+OAI.CoarseAssembly.Analytic.localizedCycle._proof_1	ComparatorChallenges.CoarseAssembly	thm	[u_1]	2465581260	-
+OAI.CoarseAssembly.OperatorKTheory.relativeClass._proof_6	ComparatorChallenges.CoarseAssembly	thm	[u_1]	485353951	-
+OAI.CoarseAssembly.Analytic.CoarseningMorphism.casesOn	ComparatorChallenges.CoarseAssembly	def	[u_1, u]	1618817868	772065277
+OAI.CoarseAssembly.DiscreteRoe.separatedFamilyBoundary._proof_15	ComparatorChallenges.CoarseAssembly	thm	[u_1]	2814422017	-
+OAI.CoarseAssembly.DiscreteRoe.instNonUnitalCStarAlgebraSubtypeOperatorMemNonUnitalStarSubalgebraComplexAlgebra._proof_3	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	558138086	-
+OAI.CoarseAssembly.DiscreteRoe.separatedFamilyMultiplier._proof_32	ComparatorChallenges.CoarseAssembly	thm	[u_1]	2473140778	-
+OAI.CoarseAssembly.Analytic.CompatibleIndexFamily._sizeOf_1	ComparatorChallenges.CoarseAssembly	def	[u, v]	1257447544	3660266288
+OAI.CoarseAssembly.DiscreteRoe.separatedFamilyMultiplier._proof_12	ComparatorChallenges.CoarseAssembly	thm	[u_1]	275205928	-
+OAI.CoarseAssembly.Analytic.OddCycle.unitalSelfAdjoint._proof_10	ComparatorChallenges.CoarseAssembly	thm	[]	4265548018	-
+OAI.CoarseAssembly.Analytic.CoarseningMorphism.mk.sizeOf_spec	ComparatorChallenges.CoarseAssembly	thm	[u]	519658787	-
+OAI.CoarseAssembly.Analytic.OddCycle.square_compact	ComparatorChallenges.CoarseAssembly	thm	[u]	3110366370	-
+OAI.CoarseAssembly.Analytic.pushforward.eq_1	ComparatorChallenges.CoarseAssembly	thm	[u]	496978837	-
+OAI.CoarseAssembly.constructedTotalIndex._proof_2	ComparatorChallenges.CoarseAssembly	thm	[]	3811865564	-
+OAI.CoarseAssembly.Analytic.OddCycle.compactPerturb._proof_8	ComparatorChallenges.CoarseAssembly	thm	[]	1592525267	-
+OAI.CoarseAssembly.Analytic.OddCycle.bounded._proof_15	ComparatorChallenges.CoarseAssembly	thm	[]	941685887	-
+OAI.CoarseAssembly.inclusionIsometry._proof_1	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	1028728680	-
+OAI.CoarseAssembly.Rips.Point.mk.injEq	ComparatorChallenges.CoarseAssembly	thm	[u_1]	1361224953	-
+OAI.CoarseAssembly.inclusionVector._proof_2	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2, u_3]	1169977539	-
+OAI.CoarseAssembly.DiscreteRoe.instNonUnitalCStarAlgebraSubtypeOperatorMemNonUnitalStarSubalgebraComplexAlgebra._proof_2	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	3368240823	-
+OAI.CoarseAssembly.inclusionIsometry._proof_4	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2, u_3]	781254450	-
+OAI.CoarseAssembly.Rips.regularizedFamily._proof_7	ComparatorChallenges.CoarseAssembly	thm	[]	2021218464	-
+OAI.CoarseAssembly.OperatorKTheory.map._proof_1	ComparatorChallenges.CoarseAssembly	thm	[u_1]	105845312	-
+OAI.CoarseAssembly.Analytic.CoarseningMorphism.compatible	ComparatorChallenges.CoarseAssembly	thm	[u]	987438458	-
+OAI.CoarseAssembly.boundaryLoopMetric8	ComparatorChallenges.CoarseAssembly	def	[]	2877623003	1898399662
+OAI.CoarseAssembly.DiscreteRoe.instNonUnitalCStarAlgebraSubtypeOperatorMemNonUnitalStarSubalgebraComplexAlgebra	ComparatorChallenges.CoarseAssembly	def	[u_1, u_3]	3983593546	768192277
+OAI.CoarseAssembly.Analytic.completedRepresentation._proof_4	ComparatorChallenges.CoarseAssembly	thm	[]	3483203184	-
+OAI.CoarseAssembly.Analytic.finish	ComparatorChallenges.CoarseAssembly	def	[]	3076041882	929036624
+OAI.CoarseAssembly.Analytic.boundedTransform	ComparatorChallenges.CoarseAssembly	def	[u_1]	11690749	4181514702
+OAI.CoarseAssembly.Analytic.completedRepresentation._proof_1	ComparatorChallenges.CoarseAssembly	thm	[]	701227079	-
+OAI.CoarseAssembly.Rips.ampleRipsFamilyBoundary._proof_17	ComparatorChallenges.CoarseAssembly	thm	[]	2574198383	-
+OAI.CoarseAssembly.instNonUnitalCStarAlgebraTotalRoe._proof_48	ComparatorChallenges.CoarseAssembly	thm	[]	1473450928	-
+OAI.CoarseAssembly.DiscreteRoe.CompactEntries.congr_simp	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_3]	1962638368	-
+OAI.CoarseAssembly.inclusionVector	ComparatorChallenges.CoarseAssembly	def	[u_1, u_2, u_3]	360724655	891913576
+OAI.CoarseAssembly.Rips.ControlledCycleFamily.casesOn	ComparatorChallenges.CoarseAssembly	def	[u]	3214312415	4045838714
+OAI.CoarseAssembly.Congruence.diagonal._proof_1	ComparatorChallenges.CoarseAssembly	thm	[u_1]	307661363	-
+OAI.CoarseAssembly.Analytic.OddCycle.compactPerturb._abel_3	ComparatorChallenges.CoarseAssembly	thm	[]	3463848343	-
+OAI.CoarseAssembly.Analytic.CoarseningMorphism.mk	ComparatorChallenges.CoarseAssembly	ctor	[u]	1967657493	-
+OAI.CoarseAssembly.Analytic.representedCorrection._proof_5	ComparatorChallenges.CoarseAssembly	thm	[]	2849020696	-
+OAI.CoarseAssembly.DiscreteRoe.separatedFamilyBoundary._proof_6	ComparatorChallenges.CoarseAssembly	thm	[u_1]	3377570116	-
+OAI.CoarseAssembly.Rips.coarsening._proof_4	ComparatorChallenges.CoarseAssembly	thm	[]	2874852901	-
+OAI.CoarseAssembly.constructedTotalIndex	ComparatorChallenges.CoarseAssembly	def	[]	3936703030	2891091783
+OAI.CoarseAssembly.operatorConjugationHom._proof_3	ComparatorChallenges.CoarseAssembly	thm	[u_1]	4146084668	-
+OAI.CoarseAssembly.DiscreteRoe.PropagationLE	ComparatorChallenges.CoarseAssembly	def	[u_1, u_3]	1447271224	726737972
+OAI.CoarseAssembly.Analytic.OddHomotopy._sizeOf_1	ComparatorChallenges.CoarseAssembly	def	[u]	258919190	4064202887
+OAI.CoarseAssembly.TopologicalK1.matrixClass.eq_1	ComparatorChallenges.CoarseAssembly	thm	[u]	1709985268	-
+OAI.CoarseAssembly.vertexUnionMetric	ComparatorChallenges.CoarseAssembly	def	[]	1811055039	485345984
+OAI.CoarseAssembly.Analytic.OddCycle.UnitaryEquivalent._sizeOf_1	ComparatorChallenges.CoarseAssembly	def	[u]	3929294922	370479047
+OAI.CoarseAssembly.Analytic.OddCycle.bounded._proof_6	ComparatorChallenges.CoarseAssembly	thm	[]	2548501733	-
+OAI.CoarseAssembly.graphMetricOrDiscrete	ComparatorChallenges.CoarseAssembly	def	[u_1]	4205769826	970182021
+OAI.CoarseAssembly.operatorConjugationHom._proof_2	ComparatorChallenges.CoarseAssembly	thm	[u_1]	458547056	-
+OAI.CoarseAssembly.Rips.Point.rec	ComparatorChallenges.CoarseAssembly	rec	[u, u_1]	2578384290	-
+OAI.CoarseAssembly.connectedGraphMetric._proof_6	ComparatorChallenges.CoarseAssembly	thm	[u_1]	2238606723	-
+OAI.CoarseAssembly.Analytic.OddCycle.IsDirectSum.operator_eq	ComparatorChallenges.CoarseAssembly	thm	[u]	1350570660	-
+OAI.CoarseAssembly.Analytic.CompatibleIndexFamily.mk._flat_ctor	ComparatorChallenges.CoarseAssembly	def	[u, v]	2500940082	883941968
+OAI.CoarseAssembly.instNonUnitalCStarAlgebraTotalRoe._proof_72	ComparatorChallenges.CoarseAssembly	thm	[]	3076837699	-
+OAI.CoarseAssembly.Analytic.OddHomotopy.space	ComparatorChallenges.CoarseAssembly	def	[u]	402632255	1426836084
+OAI.CoarseAssembly.Analytic.precomp._proof_7	ComparatorChallenges.CoarseAssembly	thm	[u_1]	3655776923	-
+OAI.CoarseAssembly.Rips.coarsening._proof_1	ComparatorChallenges.CoarseAssembly	thm	[]	1229993749	-
+OAI.CoarseAssembly.DiscreteRoe.separatedFamilyMultiplier._proof_3	ComparatorChallenges.CoarseAssembly	thm	[]	1001754443	-
+OAI.CoarseAssembly.Analytic.OddCycle.regularize._proof_17	ComparatorChallenges.CoarseAssembly	thm	[]	4250309787	-
+OAI.CoarseAssembly.Analytic.CompatibleIndexFamily.transport._proof_2	ComparatorChallenges.CoarseAssembly	thm	[u_1]	2463986621	-
+OAI.CoarseAssembly.Analytic.representedCorrection._proof_1	ComparatorChallenges.CoarseAssembly	thm	[]	3076437768	-
+OAI.CoarseAssembly.Analytic.Coarsening.rec	ComparatorChallenges.CoarseAssembly	rec	[u_1, u]	994050499	-
+OAI.CoarseAssembly.Rips.coarsening._proof_5	ComparatorChallenges.CoarseAssembly	thm	[u_1]	1702371638	-
+OAI.CoarseAssembly.instNonUnitalCStarAlgebraTotalRoe._proof_63	ComparatorChallenges.CoarseAssembly	thm	[]	3530887674	-
+OAI.CoarseAssembly.instNonUnitalCStarAlgebraTotalRoe._proof_28	ComparatorChallenges.CoarseAssembly	thm	[]	987724915	-
+OAI.CoarseAssembly.Rips.analyticFamilyIndex._proof_1	ComparatorChallenges.CoarseAssembly	thm	[]	783152316	-
+OAI.CoarseAssembly.Analytic.OddCycle.unitalSelfAdjoint._proof_8	ComparatorChallenges.CoarseAssembly	thm	[]	2699811486	-
+OAI.CoarseAssembly.Rips.ControlledCycleFamily.boundary	ComparatorChallenges.CoarseAssembly	def	[]	3962704908	4094404520
+OAI.CoarseAssembly.Rips.regularizedFamily	ComparatorChallenges.CoarseAssembly	def	[]	2604795258	3943874449
+OAI.CoarseAssembly.Analytic.OddCycle.UnitaryEquivalent.mk.sizeOf_spec	ComparatorChallenges.CoarseAssembly	thm	[u]	3230519527	-
+OAI.CoarseAssembly.Analytic.OddCycle.unitalSelfAdjoint._proof_9	ComparatorChallenges.CoarseAssembly	thm	[]	3812135020	-
+OAI.CoarseAssembly.Analytic.OddHomotopy.mk.sizeOf_spec	ComparatorChallenges.CoarseAssembly	thm	[u]	2310371717	-
+OAI.CoarseAssembly.Analytic.CompatibleIndexFamily.transport._proof_3	ComparatorChallenges.CoarseAssembly	thm	[u_1]	3059074396	-
+OAI.CoarseAssembly.DiscreteRoe.conjugationHom._proof_3	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	3017152896	-
+OAI.CoarseAssembly.instNonUnitalCStarAlgebraTotalRoe._proof_40	ComparatorChallenges.CoarseAssembly	thm	[]	3157212487	-
+OAI.CoarseAssembly.Analytic.HilbertSpace.mk	ComparatorChallenges.CoarseAssembly	ctor	[u]	3474528045	-
+OAI.CoarseAssembly.Analytic.completedRepresentation._proof_5	ComparatorChallenges.CoarseAssembly	thm	[]	2645065928	-
+OAI.CoarseAssembly.Analytic.zeroExtensionHom._proof_6	ComparatorChallenges.CoarseAssembly	thm	[]	367836826	-
+OAI.CoarseAssembly.DiscreteRoe.spatialLocalizationContinuousAdd	ComparatorChallenges.CoarseAssembly	thm	[u_3]	2683818371	-
+OAI.CoarseAssembly.Rips.mapPoint.eq_1	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	493923812	-
+OAI.CoarseAssembly.TotalRoe._proof_7	ComparatorChallenges.CoarseAssembly	thm	[]	2218012223	-
+OAI.CoarseAssembly.Analytic.CycleRelation.directSum	ComparatorChallenges.CoarseAssembly	ctor	[u]	4164643855	-
+OAI.CoarseAssembly.DiscreteRoe.separatedFamilyMultiplier._proof_2	ComparatorChallenges.CoarseAssembly	thm	[]	1964556734	-
+OAI.CoarseAssembly.DiscreteRoe.conjugationHom._proof_2	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	3565028866	-
+OAI.CoarseAssembly.Analytic.representedCorrection._proof_4	ComparatorChallenges.CoarseAssembly	thm	[]	1057877136	-
+OAI.CoarseAssembly.fiberedGraph	ComparatorChallenges.CoarseAssembly	def	[]	274292243	669812081
+OAI.CoarseAssembly.DiscreteRoe.inclusionHom._proof_15	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2, u_3]	2647441912	-
+OAI.CoarseAssembly.Analytic.OddCycle.bounded._proof_2	ComparatorChallenges.CoarseAssembly	thm	[]	1075756627	-
+OAI.CoarseAssembly.DiscreteRoe.separatedFamilyBoundary._proof_3	ComparatorChallenges.CoarseAssembly	thm	[u_1]	913234201	-
+OAI.CoarseAssembly.connectedGraphMetric._proof_3	ComparatorChallenges.CoarseAssembly	thm	[u_1]	949785666	-
+OAI.CoarseAssembly.Analytic.Coarsening.recOn	ComparatorChallenges.CoarseAssembly	def	[u_1, u]	2576700993	2428766485
+OAI.CoarseAssembly.Analytic.compactFunctionLift._proof_3	ComparatorChallenges.CoarseAssembly	thm	[]	2839271000	-
+OAI.CoarseAssembly.fiberedGraph._simp_3	ComparatorChallenges.CoarseAssembly	thm	[u_1]	960308239	-
+OAI.CoarseAssembly.discGraph	ComparatorChallenges.CoarseAssembly	def	[]	1887628744	3129680550
+OAI.CoarseAssembly.operatorConjugationHom._proof_6	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	4087020265	-
+OAI.CoarseAssembly.Analytic.OddCycle.compactPerturb._proof_5	ComparatorChallenges.CoarseAssembly	thm	[]	2744818733	-
+OAI.CoarseAssembly.DiscreteRoe.multiplierBoundaryClass._proof_7	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	872861978	-
+OAI.CoarseAssembly.Analytic.OddCycle.bounded._proof_3	ComparatorChallenges.CoarseAssembly	thm	[]	1367655944	-
+OAI.CoarseAssembly.DiscreteRoe.separatedFamilyBoundary._proof_2	ComparatorChallenges.CoarseAssembly	thm	[u_1]	2913535972	-
+OAI.CoarseAssembly.fiberedGraph._simp_14	ComparatorChallenges.CoarseAssembly	thm	[u_1]	3188916250	-
+OAI.CoarseAssembly.DiscreteRoe.insert	ComparatorChallenges.CoarseAssembly	def	[u_1, u_3]	984546376	3940274134
+OAI.CoarseAssembly.DiscreteRoe.inclusionHom._proof_12	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2, u_3]	2516755192	-
+OAI.CoarseAssembly.instNonUnitalCStarAlgebraTotalRoe._aux_14	ComparatorChallenges.CoarseAssembly	def	[]	570546347	645938002
+OAI.CoarseAssembly.Analytic.OddHomotopy.mk.injEq	ComparatorChallenges.CoarseAssembly	thm	[u]	1829929905	-
+OAI.CoarseAssembly.Analytic.OddCycle.localCompactPerturb._proof_1	ComparatorChallenges.CoarseAssembly	thm	[]	355305724	-
+OAI.CoarseAssembly.Congruence.residueMap._proof_1	ComparatorChallenges.CoarseAssembly	thm	[]	4099448058	-
+OAI.CoarseAssembly.DiscreteRoe.algebra._proof_7	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	1444802473	-
+OAI.CoarseAssembly.Analytic.OddCycle.UnitaryEquivalent.mk.injEq	ComparatorChallenges.CoarseAssembly	thm	[u]	4243233932	-
+OAI.CoarseAssembly.extendedFunction.eq_1	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2, u_3]	2056124303	-
+OAI.CoarseAssembly.Analytic.CoarseningMorphism.atScale	ComparatorChallenges.CoarseAssembly	def	[u]	473894987	2985648335
+OAI.CoarseAssembly.instNonUnitalCStarAlgebraTotalRoe._proof_9	ComparatorChallenges.CoarseAssembly	thm	[]	652550403	-
+OAI.CoarseAssembly.Rips.lateRipsFunctionHom	ComparatorChallenges.CoarseAssembly	def	[]	1341499908	631303266
+OAI.CoarseAssembly.OperatorKTheory.relativeClass	ComparatorChallenges.CoarseAssembly	def	[u_1]	3531768361	761131900
+OAI.CoarseAssembly.instNonUnitalCStarAlgebraTotalRoe._aux_46	ComparatorChallenges.CoarseAssembly	def	[]	1565445578	2539857022
+OAI.CoarseAssembly.connectedGraphMetric._proof_2	ComparatorChallenges.CoarseAssembly	thm	[u_1]	3956679166	-
+OAI.CoarseAssembly.Rips.coordinates.eq_1	ComparatorChallenges.CoarseAssembly	thm	[u_1]	439532146	-
+OAI.CoarseAssembly.instNonUnitalCStarAlgebraTotalRoe._proof_8	ComparatorChallenges.CoarseAssembly	thm	[]	2789913233	-
+OAI.CoarseAssembly.Analytic.Coarsening.topology	ComparatorChallenges.CoarseAssembly	def	[u]	3168694768	220806988
+OAI.CoarseAssembly.Analytic.compactFunctionLift._proof_2	ComparatorChallenges.CoarseAssembly	thm	[]	3219636782	-
+OAI.CoarseAssembly.separatedRipsEmbedding._proof_1	ComparatorChallenges.CoarseAssembly	thm	[]	3333881633	-
+OAI.CoarseAssembly.BaseFiber	ComparatorChallenges.CoarseAssembly	def	[]	4203913610	1102822382
+OAI.CoarseAssembly.DiscreteRoe.partitionMap	ComparatorChallenges.CoarseAssembly	def	[u_1, u_2]	1878182579	1502147387
+OAI.CoarseAssembly.DiscreteRoe.coefficientExtension	ComparatorChallenges.CoarseAssembly	def	[u_1, u_2, u_3]	3010135736	3328507416
+OAI.CoarseAssembly.Analytic.OddCycle.IsDirectSum.left	ComparatorChallenges.CoarseAssembly	def	[u]	1347793306	1364983856
+OAI.CoarseAssembly.DiscreteRoe.inclusionHom._proof_20	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2, u_3]	57386155	-
+OAI.CoarseAssembly.Analytic.CycleRelation.recOn	ComparatorChallenges.CoarseAssembly	def	[u]	879836212	1206412356
+OAI.CoarseAssembly.latticeRadius.eq_1	ComparatorChallenges.CoarseAssembly	thm	[]	2492421587	-
+OAI.CoarseAssembly.DiscreteRoe.inclusionHom	ComparatorChallenges.CoarseAssembly	def	[sourceUniverse, targetUniverse, coefficientUniverse]	1178767274	4162402149
+OAI.CoarseAssembly.Rips.analyticFamilyIndexFree._proof_1	ComparatorChallenges.CoarseAssembly	thm	[]	570716170	-
+OAI.CoarseAssembly.Analytic.OddCycle.precomp.eq_1	ComparatorChallenges.CoarseAssembly	thm	[u]	288800473	-
+OAI.CoarseAssembly.Analytic.OddCycle.localCompactPerturb._abel_2	ComparatorChallenges.CoarseAssembly	thm	[]	1352942055	-
+OAI.CoarseAssembly.Analytic.CompatibleIndexFamily.mk.noConfusion	ComparatorChallenges.CoarseAssembly	def	[u_1, u, v]	2054269683	1381452483
+OAI.CoarseAssembly.Analytic.OddCycle.regularize._proof_1	ComparatorChallenges.CoarseAssembly	thm	[]	461942958	-
+OAI.CoarseAssembly.Analytic.OddHomotopy.precomp._proof_4	ComparatorChallenges.CoarseAssembly	thm	[u_1]	2481947604	-
+OAI.CoarseAssembly.Analytic.zeroExtension	ComparatorChallenges.CoarseAssembly	def	[]	1022650621	4037533343
+OAI.CoarseAssembly.Analytic.OddCycle.regularize._proof_4	ComparatorChallenges.CoarseAssembly	thm	[]	4223194688	-
+OAI.CoarseAssembly.AmpleSpace	ComparatorChallenges.CoarseAssembly	def	[]	2063212440	4189122008
+OAI.CoarseAssembly.TopologicalK1.map._proof_3	ComparatorChallenges.CoarseAssembly	thm	[u_1]	1738690727	-
+OAI.CoarseAssembly.OperatorKTheory.relativeMatrix	ComparatorChallenges.CoarseAssembly	def	[u_1]	4275634078	3659529864
+OAI.CoarseAssembly.Rips.Point.mk.congr_simp	ComparatorChallenges.CoarseAssembly	thm	[u_1]	3533823948	-
+OAI.CoarseAssembly.DiscreteRoe.algebraicRoe._proof_13	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	1642164429	-
+OAI.CoarseAssembly.Rips.Point.mk	ComparatorChallenges.CoarseAssembly	ctor	[u_1]	2476260407	-
+OAI.CoarseAssembly.Analytic.zeroExtension.congr_simp	ComparatorChallenges.CoarseAssembly	thm	[]	1863125315	-
+OAI.CoarseAssembly.DiscreteRoe.partitionIsometry	ComparatorChallenges.CoarseAssembly	def	[u_1, u_2]	481211138	343058904
+OAI.CoarseAssembly.Analytic.OddHomotopy.eval	ComparatorChallenges.CoarseAssembly	def	[u]	1374371392	3409788359
+OAI.CoarseAssembly.Analytic.CoarseningMorphism.rec	ComparatorChallenges.CoarseAssembly	rec	[u_1, u]	630029097	-
+OAI.CoarseAssembly.TopologicalK1.map._proof_2	ComparatorChallenges.CoarseAssembly	thm	[u_1]	1847452243	-
+OAI.CoarseAssembly.Rips.ampleRipsFamilyBoundary._proof_5	ComparatorChallenges.CoarseAssembly	thm	[]	2104176015	-
+OAI.CoarseAssembly.discreteGraphMetric._proof_5	ComparatorChallenges.CoarseAssembly	thm	[u_1]	2637741168	-
+OAI.CoarseAssembly.DiscreteRoe.Generator._proof_1	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	1191341971	-
+OAI.CoarseAssembly.triangularGraph._proof_1	ComparatorChallenges.CoarseAssembly	thm	[]	2025108241	-
+OAI.CoarseAssembly.blockLinear._proof_6	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2, u_3]	1330293911	-
+OAI.CoarseAssembly.DiscreteRoe.algebraicRoe._proof_10	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	2175165623	-
+OAI.CoarseAssembly.Analytic.OddCycle.UnitaryEquivalent.precomp._proof_1	ComparatorChallenges.CoarseAssembly	thm	[u_1]	3552052409	-
+OAI.CoarseAssembly.Rips.analyticFamilyIndexFree._proof_4	ComparatorChallenges.CoarseAssembly	thm	[]	576058500	-
+OAI.CoarseAssembly.Analytic.ampleIsometry	ComparatorChallenges.CoarseAssembly	def	[u_1]	1976402553	2319998521
+OAI.CoarseAssembly.Rips.ControlledCycleFamily.mk.injEq	ComparatorChallenges.CoarseAssembly	thm	[]	2693156254	-
+OAI.CoarseAssembly.Analytic.Coarsening.Homology	ComparatorChallenges.CoarseAssembly	def	[u_1]	1357217000	945322002
+OAI.CoarseAssembly.OperatorKTheory.relativeUnitary._proof_7	ComparatorChallenges.CoarseAssembly	thm	[u_1]	3153531127	-
+OAI.CoarseAssembly.Analytic.OddHomotopy.precomp._proof_1	ComparatorChallenges.CoarseAssembly	thm	[u_1]	4212695819	-
+OAI.CoarseAssembly.DiscreteRoe.separatedFamilyBoundary._proof_29	ComparatorChallenges.CoarseAssembly	thm	[u_1]	1334963433	-
+OAI.CoarseAssembly.separatedMetric._simp_2	ComparatorChallenges.CoarseAssembly	thm	[w]	1560534896	-
+OAI.CoarseAssembly.Rips.ampleRipsOperator._proof_1	ComparatorChallenges.CoarseAssembly	thm	[]	66908340	-
+OAI.CoarseAssembly.Analytic.OddCycle.UnitaryEquivalent.noConfusion	ComparatorChallenges.CoarseAssembly	def	[u_1, u]	2156124650	38525619
+OAI.CoarseAssembly.TopologicalK1.map._proof_1	ComparatorChallenges.CoarseAssembly	thm	[u_1]	3571781844	-
+OAI.CoarseAssembly.Rips.ControlledCycleFamily.unital	ComparatorChallenges.CoarseAssembly	thm	[]	1905677912	-
+OAI.CoarseAssembly.DiscreteRoe.algebra._proof_8	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	4065874652	-
+OAI.CoarseAssembly.unflattenVector	ComparatorChallenges.CoarseAssembly	def	[u_1, u_2, u_3]	1644998903	1200982357
+OAI.CoarseAssembly.Analytic.OddHomotopy.noConfusion	ComparatorChallenges.CoarseAssembly	def	[u_1, u]	2002115285	426268721
+OAI.CoarseAssembly.DiscreteRoe.spatialLocalizationRingHomCompTriple	ComparatorChallenges.CoarseAssembly	thm	[]	2765734148	-
+OAI.CoarseAssembly.Analytic.OddCycle.regularize._proof_3	ComparatorChallenges.CoarseAssembly	thm	[]	1481747704	-
+OAI.CoarseAssembly.DiscreteRoe.separatedFamilyMultiplier._proof_17	ComparatorChallenges.CoarseAssembly	thm	[u_1]	1483512262	-
+OAI.CoarseAssembly.Rips.analyticFamilyIndexFree._proof_3	ComparatorChallenges.CoarseAssembly	thm	[]	1404952167	-
+OAI.CoarseAssembly.Rips.ripsSpatialOperator._proof_6	ComparatorChallenges.CoarseAssembly	thm	[]	765920476	-
+OAI.CoarseAssembly.DiscreteRoe.algebraicRoe._proof_6	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	3959884340	-
+OAI.CoarseAssembly.DiscreteRoe.MapsToRoe	ComparatorChallenges.CoarseAssembly	def	[u_2, u_3, u_4]	451783715	580631989
+OAI.CoarseAssembly.triangularGraph._proof_2	ComparatorChallenges.CoarseAssembly	thm	[]	3262978183	-
+OAI.CoarseAssembly.TopologicalK1.map	ComparatorChallenges.CoarseAssembly	def	[u, v]	3161263104	1324458755
+OAI.CoarseAssembly.Analytic.HilbertSpace.complete	ComparatorChallenges.CoarseAssembly	thm	[u]	3396358326	-
+OAI.CoarseAssembly.DiscreteRoe.multiplierBoundaryClass._proof_8	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	3127953027	-
+OAI.CoarseAssembly.Rips.ControlledCycleFamily._sizeOf_inst	ComparatorChallenges.CoarseAssembly	def	[]	2236097010	3310763740
+OAI.CoarseAssembly.Analytic.OddHomotopy.precomp._proof_3	ComparatorChallenges.CoarseAssembly	thm	[u_1]	3062540405	-
+OAI.CoarseAssembly.DiscreteRoe.separatedFamilyBoundary._proof_27	ComparatorChallenges.CoarseAssembly	thm	[u_1]	1150170237	-
+OAI.CoarseAssembly.DiscreteRoe.algebraicRoe._simp_6	ComparatorChallenges.CoarseAssembly	thm	[u_1]	2185636451	-
+OAI.CoarseAssembly.DiscreteRoe.instSMulCommClassComplexOperator	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	3408723745	-
+OAI.CoarseAssembly.Analytic.CoarseningMorphism.noConfusionType	ComparatorChallenges.CoarseAssembly	def	[u_1, u]	167191569	2611904031
+OAI.CoarseAssembly.DiscreteRoe.separatedFamilyBoundary._proof_18	ComparatorChallenges.CoarseAssembly	thm	[u_1]	4031267855	-
+OAI.CoarseAssembly.DiscreteRoe.inclusionHom._proof_11	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	735091686	-
+OAI.CoarseAssembly.Analytic.OddCycle.unitalSelfAdjoint._abel_4	ComparatorChallenges.CoarseAssembly	thm	[]	575539	-
+OAI.CoarseAssembly.Analytic.precompFree	ComparatorChallenges.CoarseAssembly	def	[u]	706447705	2598926064
+OAI.CoarseAssembly.Rips.regularizedFamily._proof_5	ComparatorChallenges.CoarseAssembly	thm	[]	2281527633	-
+OAI.CoarseAssembly.TopologicalK1.map._proof_4	ComparatorChallenges.CoarseAssembly	thm	[u_1]	2743039427	-
+OAI.CoarseAssembly.Rips.ControlledCycleFamily.ctorIdx	ComparatorChallenges.CoarseAssembly	def	[]	1945255529	3728044356
+OAI.CoarseAssembly.Rips.Point.mk.inj	ComparatorChallenges.CoarseAssembly	thm	[u_1]	2561494788	-
+OAI.CoarseAssembly.Analytic.OddHomotopy.precomp._proof_2	ComparatorChallenges.CoarseAssembly	thm	[u_1]	1328579887	-
+OAI.CoarseAssembly.instNonUnitalCStarAlgebraTotalRoe._proof_22	ComparatorChallenges.CoarseAssembly	thm	[]	29508703	-
+OAI.CoarseAssembly.Analytic.OddCycle.regularize._proof_2	ComparatorChallenges.CoarseAssembly	thm	[]	2013543744	-
+OAI.CoarseAssembly.DiscreteRoe.multiplierAlgebra._proof_6	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	473060526	-
+OAI.CoarseAssembly.Rips.analyticFamilyIndexFree._proof_2	ComparatorChallenges.CoarseAssembly	thm	[]	21798762	-
+OAI.CoarseAssembly.instNonUnitalCStarAlgebraTotalRoe._proof_7	ComparatorChallenges.CoarseAssembly	thm	[]	4148869822	-
+OAI.CoarseAssembly.DiscreteRoe.algebra._proof_9	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	4100837032	-
+OAI.CoarseAssembly.DiscreteRoe.inclusionHom._proof_14	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2, u_3]	229993573	-
+OAI.CoarseAssembly.fiberCoordinate.congr_simp	ComparatorChallenges.CoarseAssembly	thm	[]	3232591229	-
+OAI.CoarseAssembly.unflattenVector._proof_1	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2, u_3]	3661701011	-
+OAI.CoarseAssembly.DiscreteRoe.inclusionHom._proof_16	ComparatorChallenges.CoarseAssembly	thm	[u_1]	1468143335	-
+OAI.CoarseAssembly.fiberedGraph._proof_1	ComparatorChallenges.CoarseAssembly	thm	[]	1326965711	-
+OAI.CoarseAssembly.TopologicalK1.Relation	ComparatorChallenges.CoarseAssembly	induct	[u]	2159872173	-
+OAI.CoarseAssembly.constructedCoarseAssembly	ComparatorChallenges.CoarseAssembly	def	[]	1144477795	4100380164
+OAI.CoarseAssembly.Congruence.chosenHolonomyUnit._proof_2	ComparatorChallenges.CoarseAssembly	thm	[]	3256190244	-
+OAI.CoarseAssembly.Rips.ampleRipsFamilyBoundary._proof_3	ComparatorChallenges.CoarseAssembly	thm	[]	3476770892	-
+OAI.CoarseAssembly.Rips.regularizedFamily._proof_1	ComparatorChallenges.CoarseAssembly	thm	[]	2235335168	-
+OAI.CoarseAssembly.Rips.regularizedFamily._proof_4	ComparatorChallenges.CoarseAssembly	thm	[]	1467610416	-
+OAI.CoarseAssembly.Analytic.compactFunctionLift	ComparatorChallenges.CoarseAssembly	def	[]	1471247881	3204730947
+OAI.CoarseAssembly.OperatorKTheory.relativePart.congr_simp	ComparatorChallenges.CoarseAssembly	thm	[u_1]	3024915413	-
+OAI.CoarseAssembly.operatorConjugation.eq_1	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	3146352192	-
+OAI.CoarseAssembly.Analytic.Coarsening.mk.sizeOf_spec	ComparatorChallenges.CoarseAssembly	thm	[u]	1666332552	-
+OAI.CoarseAssembly.Analytic.HilbertSpace.secondCountable	ComparatorChallenges.CoarseAssembly	thm	[u]	3795921665	-
+OAI.CoarseAssembly.Rips.ControlledCycleFamily.mk.noConfusion	ComparatorChallenges.CoarseAssembly	def	[u]	2072404715	2900426022
+OAI.CoarseAssembly.fiberCharge	ComparatorChallenges.CoarseAssembly	def	[]	2280306907	4120151162
+OAI.CoarseAssembly.Analytic.completedRepresentation._abel_1	ComparatorChallenges.CoarseAssembly	thm	[]	3897237924	-
+OAI.CoarseAssembly.discreteGraphMetric._proof_3	ComparatorChallenges.CoarseAssembly	thm	[u_1]	2475376841	-
+OAI.CoarseAssembly.Analytic.cayleyUnitary.congr_simp	ComparatorChallenges.CoarseAssembly	thm	[u_1]	3902876488	-
+OAI.CoarseAssembly.connectedGraphMetric	ComparatorChallenges.CoarseAssembly	def	[u_1]	2902734404	3307904596
+OAI.CoarseAssembly.Analytic.OddCycle.mk.congr_simp	ComparatorChallenges.CoarseAssembly	thm	[u]	478921162	-
+OAI.CoarseAssembly.Analytic.start	ComparatorChallenges.CoarseAssembly	def	[]	3076041882	1283333791
+OAI.CoarseAssembly.Analytic.CompatibleIndexFamily.mk.injEq	ComparatorChallenges.CoarseAssembly	thm	[u, v]	3964427190	-
+OAI.CoarseAssembly.instNonUnitalCStarAlgebraTotalRoe._aux_1	ComparatorChallenges.CoarseAssembly	def	[]	2995150096	2122664419
+OAI.CoarseAssembly.Analytic.CompatibleIndexFamily.recOn	ComparatorChallenges.CoarseAssembly	def	[u_1, u, v]	3602822493	485498976
+OAI.CoarseAssembly.discreteGraphMetric._proof_2	ComparatorChallenges.CoarseAssembly	thm	[u_1]	872422438	-
+OAI.CoarseAssembly.TopologicalK1.map._proof_5	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	901256187	-
+OAI.CoarseAssembly.DiscreteRoe.separatedFamilyBoundary	ComparatorChallenges.CoarseAssembly	def	[u_1]	3388695031	2477826280
+OAI.CoarseAssembly.Rips.ampleRipsFamilyBoundary._proof_2	ComparatorChallenges.CoarseAssembly	thm	[]	343741437	-
+OAI.CoarseAssembly.Analytic.OddCycle.bounded	ComparatorChallenges.CoarseAssembly	def	[]	1044824842	2779126152
+OAI.CoarseAssembly.Analytic.HilbertSpace.noConfusionType	ComparatorChallenges.CoarseAssembly	def	[u_1, u]	175650372	1381903022
+OAI.CoarseAssembly.Analytic.HilbertSpace.Carrier	ComparatorChallenges.CoarseAssembly	def	[u]	3746632985	272071853
+OAI.CoarseAssembly.blockOperator	ComparatorChallenges.CoarseAssembly	def	[u_1, u_2, u_3]	3196078358	1873686325
+OAI.CoarseAssembly.Analytic.precomp._proof_1	ComparatorChallenges.CoarseAssembly	thm	[u_1]	3930476322	-
+OAI.CoarseAssembly.flattenOperator._proof_1	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2, u_3]	2105134583	-
+OAI.CoarseAssembly.Analytic.instCoeSortHilbertSpaceType	ComparatorChallenges.CoarseAssembly	def	[u]	979611033	3136149901
+OAI.CoarseAssembly.operatorConjugation._proof_4	ComparatorChallenges.CoarseAssembly	thm	[u_1]	4146070060	-
+OAI.CoarseAssembly.instNonUnitalCStarAlgebraTotalRoe._proof_37	ComparatorChallenges.CoarseAssembly	thm	[]	2437026772	-
+OAI.CoarseAssembly.DiscreteRoe.separatedFamilyBoundary._proof_16	ComparatorChallenges.CoarseAssembly	thm	[u_1]	717453856	-
+OAI.CoarseAssembly.Rips.vertex._proof_1	ComparatorChallenges.CoarseAssembly	thm	[u_1]	3344350319	-
+OAI.CoarseAssembly.Analytic.OddCycle.bounded._proof_11	ComparatorChallenges.CoarseAssembly	thm	[]	2238630720	-
+OAI.CoarseAssembly.Analytic.rationalBoundaryUnitary.congr_simp	ComparatorChallenges.CoarseAssembly	thm	[u_1]	257236750	-
+OAI.CoarseAssembly.Analytic.HilbertSpace.ctorIdx	ComparatorChallenges.CoarseAssembly	def	[u]	2818904528	1863815621
+OAI.CoarseAssembly.OperatorKTheory.K1._proof_2	ComparatorChallenges.CoarseAssembly	thm	[]	106229721	-
+OAI.CoarseAssembly.DiscreteRoe.separatedFamilyBoundary._proof_14	ComparatorChallenges.CoarseAssembly	thm	[u_1]	1342148902	-
+OAI.CoarseAssembly.discBoundaryBase	ComparatorChallenges.CoarseAssembly	def	[]	1124330192	2044612965
+OAI.CoarseAssembly.TotalRoe._proof_5	ComparatorChallenges.CoarseAssembly	thm	[]	1249847389	-
+OAI.CoarseAssembly.separatedMetric._proof_2	ComparatorChallenges.CoarseAssembly	thm	[u_1]	2758031913	-
+OAI.CoarseAssembly.DiscreteRoe.roeIdealizer._proof_2	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	3582096535	-
+OAI.CoarseAssembly.Analytic.precomp._proof_4	ComparatorChallenges.CoarseAssembly	thm	[u_1]	1396582871	-
+OAI.CoarseAssembly.Rips.embeddingMap._proof_6	ComparatorChallenges.CoarseAssembly	thm	[u_1]	1146046703	-
+OAI.CoarseAssembly.instNonUnitalCStarAlgebraTotalRoe._proof_62	ComparatorChallenges.CoarseAssembly	thm	[]	3120644400	-
+OAI.CoarseAssembly.DiscreteRoe.algebra._proof_10	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	1642829896	-
+OAI.CoarseAssembly.Analytic.completedRepresentation._proof_7	ComparatorChallenges.CoarseAssembly	thm	[]	37072100	-
+OAI.CoarseAssembly.Analytic.precomp	ComparatorChallenges.CoarseAssembly	def	[u]	1900599778	3766778942
+OAI.CoarseAssembly.flattenOperator	ComparatorChallenges.CoarseAssembly	def	[u_1, u_2, u_3]	2391993493	2507207722
+OAI.CoarseAssembly.instNonUnitalCStarAlgebraTotalRoe._aux_38	ComparatorChallenges.CoarseAssembly	def	[]	398549595	2896786520
+OAI.CoarseAssembly.DiscreteRoe.coefficientIsometry	ComparatorChallenges.CoarseAssembly	def	[u_1, u_2, u_3]	258420738	3735764846
+OAI.CoarseAssembly.DiscreteRoe.separatedFamilyBoundary._proof_11	ComparatorChallenges.CoarseAssembly	thm	[u_1]	14778639	-
+OAI.CoarseAssembly.BaseUnion	ComparatorChallenges.CoarseAssembly	def	[]	3931117990	3922934433
+OAI.CoarseAssembly.DiscreteRoe.inclusionHom._proof_18	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2, u_3]	884297717	-
+OAI.CoarseAssembly.operatorConjugation	ComparatorChallenges.CoarseAssembly	def	[u_1, u_2]	3921057949	3863131595
+OAI.CoarseAssembly.Analytic.OddHomotopy.recOn	ComparatorChallenges.CoarseAssembly	def	[u_1, u]	1340038413	330442226
+OAI.CoarseAssembly.separatedComponent	ComparatorChallenges.CoarseAssembly	def	[]	4066824758	2856731638
+OAI.CoarseAssembly.Analytic.OddCycle.IsDirectSum.mk.noConfusion	ComparatorChallenges.CoarseAssembly	def	[u_1, u]	2503908230	3439415181
+OAI.CoarseAssembly.Rips.Point.mk._flat_ctor	ComparatorChallenges.CoarseAssembly	def	[u_1]	2476260407	496852049
+OAI.CoarseAssembly.DiscreteRoe.separatedFamilyMultiplier._proof_35	ComparatorChallenges.CoarseAssembly	thm	[u_1]	2711249787	-
+OAI.CoarseAssembly.operatorConjugation._proof_1	ComparatorChallenges.CoarseAssembly	thm	[]	2765734148	-
+OAI.CoarseAssembly.Analytic.OddCycle.UnitaryEquivalent.recOn	ComparatorChallenges.CoarseAssembly	def	[u_1, u]	1615751688	185040642
+OAI.CoarseAssembly.blockLinear._proof_8	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2, u_3]	159605460	-
+OAI.CoarseAssembly.Analytic.OddCycle.bounded._proof_14	ComparatorChallenges.CoarseAssembly	thm	[]	734300648	-
+OAI.CoarseAssembly.Analytic.HilbertSpace._sizeOf_inst	ComparatorChallenges.CoarseAssembly	def	[u]	2176894255	3714016411
+OAI.CoarseAssembly.Analytic.OddCycle.regularize._proof_12	ComparatorChallenges.CoarseAssembly	thm	[]	1038643153	-
+OAI.CoarseAssembly.separatedMetric._proof_3	ComparatorChallenges.CoarseAssembly	thm	[u_1]	1139675913	-
+OAI.CoarseAssembly.DiscreteRoe.roeIdealizer._proof_3	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	2053009890	-
+OAI.CoarseAssembly.discBoundaryBase._proof_1	ComparatorChallenges.CoarseAssembly	thm	[]	3899080896	-
+OAI.CoarseAssembly.Rips.vertex	ComparatorChallenges.CoarseAssembly	def	[u_1]	2877993303	4293501068
+OAI.CoarseAssembly.Rips.separatedIndexFamily	ComparatorChallenges.CoarseAssembly	def	[]	3635070731	3075132453
+OAI.CoarseAssembly.instNonUnitalCStarAlgebraTotalRoe._proof_32	ComparatorChallenges.CoarseAssembly	thm	[]	2541347550	-
+OAI.CoarseAssembly.operatorConjugationHom._proof_1	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	3211994978	-
+OAI.CoarseAssembly.Analytic.OddCycle.bounded._proof_10	ComparatorChallenges.CoarseAssembly	thm	[]	3707057245	-
+OAI.CoarseAssembly.instNonUnitalCStarAlgebraTotalRoe._proof_12	ComparatorChallenges.CoarseAssembly	thm	[]	2781511926	-
+OAI.CoarseAssembly.Analytic.OddCycle.IsDirectSum.mk.inj	ComparatorChallenges.CoarseAssembly	thm	[u]	495819218	-
+OAI.CoarseAssembly.Rips.Point.noConfusionType	ComparatorChallenges.CoarseAssembly	def	[u, u_1]	4292581213	105881205
+OAI.CoarseAssembly.Analytic.HilbertSpace.normed	ComparatorChallenges.CoarseAssembly	def	[u]	1645119324	689130395
+OAI.CoarseAssembly.Analytic.OddCycle.bounded._proof_13	ComparatorChallenges.CoarseAssembly	thm	[]	2532513410	-
+OAI.CoarseAssembly.operatorConjugationHom._proof_4	ComparatorChallenges.CoarseAssembly	thm	[u_1]	3582299468	-
+OAI.CoarseAssembly.DiscreteRoe.partitionIsometry._proof_8	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	2058596649	-
+OAI.CoarseAssembly.TotalRoe	ComparatorChallenges.CoarseAssembly	def	[]	3931117990	4005433521
+OAI.CoarseAssembly.constructedConclusionMetric	ComparatorChallenges.CoarseAssembly	def	[]	2877623003	1898399662
+OAI.CoarseAssembly.DiscreteRoe.instIsScalarTowerComplexOperator	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	1670945487	-
+OAI.CoarseAssembly.Analytic.completedRepresentation._proof_3	ComparatorChallenges.CoarseAssembly	thm	[]	3272186991	-
+OAI.CoarseAssembly.Rips.coarsening._proof_3	ComparatorChallenges.CoarseAssembly	thm	[u_1]	1723866696	-
+OAI.CoarseAssembly.Analytic.CompatibleIndexFamily.transport._proof_5	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	3177694020	-
+OAI.CoarseAssembly.instNonUnitalCStarAlgebraTotalRoe._proof_77	ComparatorChallenges.CoarseAssembly	thm	[]	2658922175	-
+OAI.CoarseAssembly.instFintypeDisc._simp_2	ComparatorChallenges.CoarseAssembly	thm	[u_1]	1188824449	-
+OAI.CoarseAssembly.instNonUnitalCStarAlgebraTotalRoe._aux_5	ComparatorChallenges.CoarseAssembly	def	[]	2092656606	2372508689
+OAI.CoarseAssembly.Rips.ampleRipsFamilyBoundary._abel_1	ComparatorChallenges.CoarseAssembly	thm	[]	819165153	-
+OAI.CoarseAssembly.Analytic.OddK	ComparatorChallenges.CoarseAssembly	def	[u]	767828450	744523857
+OAI.CoarseAssembly.TopologicalK1.Group	ComparatorChallenges.CoarseAssembly	def	[u]	3024736023	2372069778
+OAI.CoarseAssembly.DiscreteRoe.inclusionHom._proof_8	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2, u_3]	4058093380	-
+OAI.CoarseAssembly.DiscreteRoe.conjugationHom._proof_5	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	888420981	-
+OAI.CoarseAssembly.DiscreteRoe.separatedFamilyBoundary._proof_10	ComparatorChallenges.CoarseAssembly	thm	[u_1]	2785387481	-
+OAI.CoarseAssembly.Rips.coarsening._proof_2	ComparatorChallenges.CoarseAssembly	thm	[]	1525994322	-
+OAI.CoarseAssembly.Analytic.CompatibleIndexFamily.atScale	ComparatorChallenges.CoarseAssembly	def	[u, v]	2055624937	2389032625
+OAI.CoarseAssembly.DiscreteRoe.separatedFamilyBoundary._proof_13	ComparatorChallenges.CoarseAssembly	thm	[u_1]	946703359	-
+OAI.CoarseAssembly.DiscreteRoe.separatedFamilyMultiplier._proof_5	ComparatorChallenges.CoarseAssembly	thm	[u_1]	3933800479	-
+OAI.CoarseAssembly.instNonUnitalCStarAlgebraTotalRoe._proof_73	ComparatorChallenges.CoarseAssembly	thm	[]	3388141957	-
+OAI.CoarseAssembly.DiscreteRoe.inclusionHom._proof_9	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	1397304644	-
+OAI.CoarseAssembly.separatedMetric._proof_7	ComparatorChallenges.CoarseAssembly	thm	[u_1]	2153959742	-
+OAI.CoarseAssembly.DiscreteRoe.algebra._proof_11	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	3054761478	-
+OAI.CoarseAssembly.Analytic.completedRepresentation._proof_2	ComparatorChallenges.CoarseAssembly	thm	[]	3909267975	-
+OAI.CoarseAssembly.Analytic.boundedTransform.eq_1	ComparatorChallenges.CoarseAssembly	thm	[u_1]	605367306	-
+OAI.CoarseAssembly.DiscreteRoe.separatedFamilyBoundary._proof_23	ComparatorChallenges.CoarseAssembly	thm	[u_1]	4227709495	-
+OAI.CoarseAssembly.discreteGraphMetric._simp_1	ComparatorChallenges.CoarseAssembly	thm	[u_1]	3472596325	-
+OAI.CoarseAssembly.Rips.inclusion	ComparatorChallenges.CoarseAssembly	def	[u_1]	1796468856	3824320008
+OAI.CoarseAssembly.Analytic.OddCycle.unitalSelfAdjoint._proof_6	ComparatorChallenges.CoarseAssembly	thm	[]	1352934133	-
+OAI.CoarseAssembly.OperatorKTheory.relativeUnitary._proof_5	ComparatorChallenges.CoarseAssembly	thm	[u_1]	144059185	-
+OAI.CoarseAssembly.inclusionVector._proof_1	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2, u_3]	1555668112	-
+OAI.CoarseAssembly.Analytic.OddCycle.IsDirectSum	ComparatorChallenges.CoarseAssembly	induct	[u]	493184798	-
+OAI.CoarseAssembly.Rips.Point.ctorIdx	ComparatorChallenges.CoarseAssembly	def	[u_1]	787275810	2664601291
+OAI.CoarseAssembly.constructedTotalIndex._proof_1	ComparatorChallenges.CoarseAssembly	thm	[]	4033888290	-
+OAI.CoarseAssembly.Rips.ControlledCycleFamily.mk.inj	ComparatorChallenges.CoarseAssembly	thm	[]	1409872955	-
+OAI.CoarseAssembly.instNonUnitalCStarAlgebraTotalRoe._proof_58	ComparatorChallenges.CoarseAssembly	thm	[]	4117478871	-
+OAI.CoarseAssembly.Analytic.zeroExtensionHom	ComparatorChallenges.CoarseAssembly	def	[]	3408337531	900152208
+OAI.CoarseAssembly.constructedTotalIndex._proof_4	ComparatorChallenges.CoarseAssembly	thm	[]	3401310335	-
+OAI.CoarseAssembly.Analytic.localizedCycle._proof_2	ComparatorChallenges.CoarseAssembly	thm	[u_1]	2748699780	-
+OAI.CoarseAssembly.Analytic.OddCycle.unitalSelfAdjoint._abel_5	ComparatorChallenges.CoarseAssembly	thm	[]	3178206500	-
+OAI.CoarseAssembly.DiscreteRoe.diagonalFamily	ComparatorChallenges.CoarseAssembly	def	[u_1, u_2]	4084488063	686431611
+OAI.CoarseAssembly.OperatorKTheory.map._proof_3	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	36208839	-
+OAI.CoarseAssembly.DiscreteRoe.instCStarAlgebraSubtypeOperatorMemStarSubalgebraComplexMultiplierAlgebra	ComparatorChallenges.CoarseAssembly	def	[u_1, u_2]	1210015049	3878661057
+OAI.CoarseAssembly.Analytic.finish._proof_1	ComparatorChallenges.CoarseAssembly	thm	[]	25336270	-
+OAI.CoarseAssembly.Rips.ampleRipsFamilyBoundary._proof_7	ComparatorChallenges.CoarseAssembly	thm	[]	2868725645	-
+OAI.CoarseAssembly.instNonUnitalCStarAlgebraTotalRoe._proof_74	ComparatorChallenges.CoarseAssembly	thm	[]	1786577533	-
+OAI.CoarseAssembly.inclusionIsometry._proof_3	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2, u_3]	3709814767	-
+OAI.CoarseAssembly.DiscreteRoe.separatedFamilyBoundary._proof_21	ComparatorChallenges.CoarseAssembly	thm	[u_1]	3155604776	-
+OAI.CoarseAssembly.instNonUnitalCStarAlgebraTotalRoe._proof_75	ComparatorChallenges.CoarseAssembly	thm	[]	1094212749	-
+OAI.CoarseAssembly.Rips.ampleRipsFamilyBoundary._proof_22	ComparatorChallenges.CoarseAssembly	thm	[]	2464902928	-
+OAI.CoarseAssembly.Analytic.cycleClass.eq_1	ComparatorChallenges.CoarseAssembly	thm	[u]	3583118280	-
+OAI.CoarseAssembly.OperatorKTheory.map._proof_2	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	505541488	-
+OAI.CoarseAssembly.DiscreteRoe.Module	ComparatorChallenges.CoarseAssembly	def	[u_4, u_5]	1105085173	2348749315
+OAI.CoarseAssembly.DiscreteRoe.instNonUnitalCStarAlgebraSubtypeOperatorMemNonUnitalStarSubalgebraComplexAlgebra._proof_1	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	3468652590	-
+OAI.CoarseAssembly.DiscreteRoe.instNonUnitalCStarAlgebraSubtypeOperatorMemNonUnitalStarSubalgebraComplexAlgebra._proof_4	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2]	1695522432	-
+OAI.CoarseAssembly.inclusionIsometry._proof_2	ComparatorChallenges.CoarseAssembly	thm	[u_1, u_2, u_3]	2239856163	-
+OAI.CoarseAssembly.Analytic.OddCycle.IsDirectSum.recOn	ComparatorChallenges.CoarseAssembly	def	[u_1, u]	3463543252	2801482278
+OAI.CoarseAssembly.Rips.Point._sizeOf_inst	ComparatorChallenges.CoarseAssembly	def	[u_1]	3176657991	3643486173
+OAI.CoarseAssembly.discreteGraphMetric._proof_7	ComparatorChallenges.CoarseAssembly	thm	[u_1]	1919639934	-

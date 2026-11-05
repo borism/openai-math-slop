@@ -1,0 +1,15 @@
+# lake env lean AxiomsCoarse.lean (Lean 4.34.1, Mathlib d13f23b, openai/math 4eaee8754; 212-module closure built with lake build)
+@OAI.CoarseAssembly.Rips.analyticFamilyIndex_eq_lift : ∀ {Q : ℕ → Type} [inst : (i : ℕ) → MetricSpace (Q i)]
+  [inst_1 : (i : ℕ) → Fintype (Q i)] [inst_2 : (i : ℕ) → DecidableEq (Q i)] {r : ℝ} {A : Type}
+  [inst_3 : NonUnitalCStarAlgebra A] (o : (i : ℕ) → Q i) (hr : 0 ≤ r)
+  (χ : (i : ℕ) → C(OAI.CoarseAssembly.Rips.Point (Q i) r, ℂ) →⋆ₐ[ℂ] ℂ)
+  (η : (i : ℕ) → C(OAI.CoarseAssembly.Rips.Point (Q i) r, ℂ) →⋆ₙₐ[ℂ] A),
+  OAI.CoarseAssembly.Rips.analyticFamilyIndex o hr χ η =
+    QuotientAddGroup.lift (OAI.CoarseAssembly.Analytic.relations A)
+      (OAI.CoarseAssembly.Rips.analyticFamilyIndexFree o hr χ η) ⋯
+'OAI.CoarseAssembly.Rips.analyticFamilyIndexFree_relation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OAI.CoarseAssembly.Rips.analyticFamilyIndex_eq_lift' depends on axioms: [propext, Classical.choice, Quot.sound]
+@OAI.CoarseAssembly.Rips.separatedIndexFamily_atScale : ∀ {Q : ℕ → Type} [inst : (i : ℕ) → MetricSpace (Q i)]
+  [inst_1 : (i : ℕ) → Fintype (Q i)] [inst_2 : (i : ℕ) → DecidableEq (Q i)] (o : (i : ℕ) → Q i) (n : ℕ),
+  (OAI.CoarseAssembly.Rips.separatedIndexFamily o).atScale n = OAI.CoarseAssembly.Rips.separatedRipsIndex o ↑n ⋯
+'OAI.CoarseAssembly.Rips.separatedIndexFamily_atScale' depends on axioms: [propext, Classical.choice, Quot.sound]

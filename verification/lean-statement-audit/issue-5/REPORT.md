@@ -3,7 +3,7 @@
 Follow-up to borism/openai-math-slop#5.
 - **Revisions:** openai/math `4eaee8754`. The challenge tree before alignment is `42907c9e9`, which equals `204e5f8f8^`.
 - **Upstream compared against:** Paul-Lez/HodgeConjecture, all 1027 commits scanned.
-- **Method:** static reading and scripted diffs. A Lean toolchain only became available after this review; see "Lean check" below for what was compiled afterwards.
+- **Method:** static reading and scripted diffs, followed by a Lean check once a toolchain was available (see "Lean check" below).
 
 ## 1. Upstream anchor (CM Hodge), high confidence
 - No upstream commit contains the challenge tree exactly.
@@ -63,6 +63,39 @@ The target claims a coarse Novikov counterexample in bounded geometry, so both p
 
 Across all 419 challenges: 12,084 declarations and 117,516 lines.
 
+## Lean check (added after the review)
+Lean 4.34.1, Mathlib `d13f23b`, openai/math `4eaee8754`. Tools: `../lean-checks/`.
+
+**1. Challenges compile.**
+- `ComparatorChallenges.CoarseAssembly` and the CM Hodge tree (`HodgeConjecture.*` plus `ComparatorChallenges.HodgeConjectureCMAbelianVarieties.CM`) build cleanly.
+- The only warnings are the expected `sorry`s on the target theorems.
+
+**2. Sanity lemmas elaborate.**
+- All 16 statements in `SanityLemmas.lean` (A1–A12, B1–B4) type-check against the real challenge definitions (`outputs/sanity-lemmas-elaboration.txt`); their proofs are still `sorry`.
+- B1–B3 needed small fixes: a local `Ring` instance, natural-number scales, the current `NormedSpace.exp` signature, and an explicit `IsClosed` argument.
+
+**3. The zero-map fallbacks are never taken.**
+- The 212-module closure of `OAI.Topology.CoarseAssembly.AnalyticFamilyIndex` and `…SeparatedCoarseAssembly` was built, so the kernel checked every proof in it (`outputs/coarse-then-branch-axioms.txt`).
+- `analyticFamilyIndex_eq_lift` holds for all `o, hr, χ, η`: `analyticFamilyIndex` *is* the `QuotientAddGroup.lift` of the `then` branch.
+- `separatedIndexFamily_atScale` holds for all `o, n`: the family *is* `separatedRipsIndex` at every scale.
+- Both, and `analyticFamilyIndexFree_relation`, depend only on `[propext, Classical.choice, Quot.sound]`.
+- So neither `else 0` branch is ever used, and `constructedCoarseAssembly` is not the zero map by fallback.
+
+**4. Same definitions in challenge and solution** (`outputs/coarse-fingerprint-compare.txt`)
+- Every constant declared in `ComparatorChallenges.CoarseAssembly` was fingerprinted (kind, universe parameters, type hash, value hash for definitions) and compared with the solution's `OAI.Topology.CoarseAssembly.Definitions` closure.
+- Identical: 322 definitions, 12 inductives, 17 constructors, 12 recursors, and the types of 790 helper theorems. These include `constructedCoarseAssembly`, `analyticFamilyIndex` and `separatedIndexFamily`.
+- So item 3 applies to the challenge's definitions, not just to the solution's copies.
+
+**5. Not done: the target theorem itself.**
+- `bounded_geometry_graph_counterexample_unconditional` lives downstream of `OAI.Analysis.NuclearUltrapower.SOSSemantics`. That module checks a large sum-of-squares certificate: its input `SOSResidual` compiles to a 101 MB `.olean`.
+- It was killed twice at about 13 GB RSS, the container's memory cap, the second time with `LEAN_NUM_THREADS=2` (`outputs/sos-semantics-oom.txt`).
+- So the target's axioms were not printed. Rebuilding it needs a machine with more memory.
+
+**Effect on §4 above.**
+- The zero-map concern is resolved as a matter of fact.
+- What remains is presentational: the challenge statement still certifies nothing about the fallbacks by itself, so the recommendation to remove the `else 0` stands.
+- Non-collapse beyond the fallbacks (B4) and the Cayley-vs-exponential formula (B3) remain open.
+
 ## Recommendations
 1. Pin `9447d71c` in the challenge README, and publish the upstream diff and the port list.
 2. For each declaration touched by `204e5f8f8`, prove `old = new` by `rfl` in a side file that imports both trees.
@@ -77,9 +110,11 @@ Across all 419 challenges: 12,084 declarations and 117,516 lines.
 5. Set `enable_nanoda` on both configs.
 
 ## Files
-- `SanityLemmas.lean`: statements A1–A12 (Hodge) and B1–B4 (coarse assembly), all ending in `sorry`.
+- `SanityLemmas.lean`: statements A1–A12 (Hodge) and B1–B4 (coarse assembly), all ending in `sorry`; all elaborate.
+- `AxiomsCoarse.lean`: the axiom check for the two `then`-branch lemmas.
 - `scripts/`: `match_upstream.py`, `diff_vs_upstream.py`, `residual_hunks.py`, `trust_surface.py`.
 - `outputs/`:
   - `pre-vs-upstream-9447d71c/`, `post-vs-upstream-9447d71c/`
   - `alignment-204e5f8f8-definitions-residual-hunks.txt`, `alignment-classification.tsv`
   - `trust-surface.tsv`
+  - `sanity-lemmas-elaboration.txt`, `coarse-then-branch-axioms.txt`, `coarse-fingerprint-compare.txt`, `coarse-challenge-fingerprints.tsv`, `sos-semantics-oom.txt`

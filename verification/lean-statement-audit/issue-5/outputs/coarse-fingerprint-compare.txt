@@ -1,0 +1,14 @@
+# python3 -I compare_fingerprints.py challenge.tsv ca-solution.tsv
+# challenge: ComparatorChallenges.CoarseAssembly (1154 constants)
+# solution env: import OAI.Topology.CoarseAssembly.AnalyticFamilyIndex, OAI.Topology.CoarseAssembly.SeparatedCoarseAssembly
+# the target theorem lives in a module that needs OAI.Analysis.NuclearUltrapower.SOSSemantics, which could not be built here (killed at ~13 GB RSS, the container's memory cap)
+    17  ctor: identical
+   322  def: identical
+    12  induct: identical
+    12  rec: identical
+   790  thm: identical
+     1  thm: missing in solution
+   OAI.CoarseAssembly.bounded_geometry_graph_counterexample_unconditional thm MISSING
+focus OAI.CoarseAssembly.constructedCoarseAssembly challenge ['ComparatorChallenges.CoarseAssembly', 'def', '[]', '1144477795', '4100380164'] solution ['OAI.Topology.CoarseAssembly.Definitions', 'def', '[]', '1144477795', '4100380164']
+focus OAI.CoarseAssembly.Rips.analyticFamilyIndex challenge ['ComparatorChallenges.CoarseAssembly', 'def', '[]', '2457205622', '4245757274'] solution ['OAI.Topology.CoarseAssembly.Definitions', 'def', '[]', '2457205622', '4245757274']
+focus OAI.CoarseAssembly.Rips.separatedIndexFamily challenge ['ComparatorChallenges.CoarseAssembly', 'def', '[]', '3635070731', '3075132453'] solution ['OAI.Topology.CoarseAssembly.Definitions', 'def', '[]', '3635070731', '3075132453']
