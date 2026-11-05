@@ -1,0 +1,166 @@
+--- a/lean/formalization.yaml
++++ b/lean/formalization.yaml
+@@ -1,5 +1,8 @@
+ # yaml-language-server: $schema=https://raw.githubusercontent.com/mathlib-initiative/formalization.yaml/main/schema/formalization.schema.json
+-# Catalog of papers with a formalized main result. Paths are relative to lean/.
++# Catalog of papers with Lean formalizations. Paths are relative to lean/.
++# A source without `relationship` has its main result formalized. `relationship: other`
++# marks a paper for which only a supporting or weaker result is formalized; `location`
++# says what is formalized and `note` what is not.
+ version: "v0.4"
+ 
+ project:
+@@ -28,6 +31,9 @@
+     authors: ["OpenAI"]
+     id: ../preprints/A-Complete-Local-Domain-Without-a-Small-Cohen-Macaulay-Module-September-23-2026/paper.pdf
+     type: article
++    relationship: other
++    location: "Supporting result: existence of a 3-dimensional complete Noetherian normal local domain over C with residue field C (candidate_ring_properties)"
++    note: "Supporting result only (SurfaceConeCandidateSupport). The main theorem, that the constructed ring has no nonzero finitely generated module of depth 3, is not formalized. The formalized existential statement is also witnessed by C[[x,y,z]], which is Cohen-Macaulay (docs/195.md)."
+ 
+   - title: "A continuum temperature singularity for a radial pair potential"
+     authors: ["OpenAI"]
+@@ -323,6 +329,9 @@
+     authors: ["OpenAI"]
+     id: ../preprints/Bounded-recovery-for-modular-spectral-averages-September-23-2026/Bounded-recovery-for-modular-spectral-averages-September-23-2026.pdf
+     type: article
++    relationship: other
++    location: "Section 4, bounded recovery theorem (bounded_recovery)"
++    note: "Partial. The paper's thm:main (trivial bicentralizer for type III_1 factors with separable predual) and thm:rigidity are not formalized. thm:main is deduced from bounded recovery via Section 5 and external results (Houdayer-Isono 2017, AHHM 2020 Thm A, Marrakchi 2020 Thm D) (docs/290.md)."
+ 
+   - title: "Bounded-Step Walks on Gaussian Primes"
+     authors: ["OpenAI"]
+@@ -373,6 +382,9 @@
+     authors: ["OpenAI"]
+     id: ../preprints/Critical-honeycomb-chords-with-prescribed-boundary-endpoints-September-26-2026/main.pdf
+     type: article
++    relationship: other
++    location: "Imported input, Proposition c:finite(1), first clause: c(1+h)^(-1/4) <= B_h <= C(1+h)^(-1/4) for the strict-bridge mass (finiteBridgeMassEstimate)"
++    note: "Supporting result only (HoneycombBridgeMassSupport). The formalized bound is an input the paper takes from its companion 'Uniform marked-polygon estimates and sharp finite bridge moments' (Theorem 1.1). The paper's main theorem c:main, the R^(4/3+o(1)) prescribed-endpoint chord-length law, and the remaining c:finite and c:renewal inputs are not formalized (docs/237.md)."
+ 
+   - title: "Critical slowing down in the Sherrington–Kirkpatrick model"
+     authors: ["OpenAI"]
+@@ -458,6 +470,9 @@
+     authors: ["OpenAI"]
+     id: ../preprints/Integral-points-on-character-varieties-of-curves-September-25-2026/paper.pdf
+     type: article
++    relationship: other
++    location: "Supporting result: the produced marked values satisfy all seam equations (producedMarkedValues_allSeams)"
++    note: "Supporting result only (CharacterVarietiesAllSeamsSupport). The main theorem, potential integral density for SL_r curve character varieties, is not formalized: existence of integral points and Zariski density are not established (docs/027.md)."
+ 
+   - title: "Lipschitz Equivalent Separable Banach Spaces Need Not Be Linearly Isomorphic"
+     authors: ["OpenAI"]
+@@ -653,6 +668,9 @@
+     authors: ["OpenAI"]
+     id: ../preprints/Strict-convexity-and-differentiability-of-the-planar-exponential-first-passage-limit-shape-September-24-2026/main.pdf
+     type: article
++    relationship: other
++    location: "thm:exponential-shape, differentiability part only, for rate 1: differentiability away from 0, unique supporting lines, C^1 boundary (manuscriptMain)"
++    note: "Partial. Strict convexity of the unit ball, stated in the title and in thm:exponential-shape, is not formalized; neither is thm:gamma-differentiability (docs/212.md)."
+ 
+   - title: "Subpolynomial dimension reduction in $L_p$"
+     authors: ["OpenAI"]
+@@ -763,6 +781,9 @@
+     authors: ["OpenAI"]
+     id: ../preprints/The-Grothendieck-homotopy-hypothesis-via-elementary-expansions-September-24-2026/paper.pdf
+     type: article
++    relationship: formalizes
++    location: "thm:main (elementary expansion: attaching an (n+1)-disk along its source n-face is a weak equivalence)"
++    note: "The homotopy hypothesis of the title (cor:homotopy-hypothesis) and the semi-model structure (cor:semimodel) are deduced from Henry 2016 and are not formalized (docs/312.md)."
+ 
+   - title: "The Kirchberg–Rørdam character criterion"
+     authors: ["OpenAI"]
+@@ -823,6 +844,9 @@
+     authors: ["OpenAI"]
+     id: ../preprints/The-trace-cone-classifies-Razak-Jacelon-stabilizations-September-25-2026/The-trace-cone-classifies-Razak-Jacelon-stabilizations-September-25-2026.pdf
+     type: article
++    relationship: other
++    location: "Supporting result: Section 2 ideal transport (idealOrderIso_finIdeal, idealOrderIso_zeroIdeal, closed_ideal_weight_exists)"
++    note: "Supporting result only (TraceIdealTransportSupport). The classification isomorphism A (x) W (x) K = B (x) W (x) K, existence of the stabilization models, norm uniqueness and the final intertwining are not formalized (docs/301.md)."
+ 
+   - title: "The Unique Games Theorem"
+     authors: ["OpenAI"]
+@@ -848,6 +872,9 @@
+     authors: ["OpenAI"]
+     id: ../preprints/Threshold-parallel-repetition-for-finite-dimensional-entangled-games-September-25-2026/paper.pdf
+     type: article
++    relationship: other
++    location: "thm:main with exponent delta^13 in place of the stated delta^5 (the weaker rate noted at the end of the introduction)"
++    note: "Weaker than the headline. The paper's delta^5 rate rests on Song's external conditioning estimate (prop:song-conditioning, ECCC TR26-199), which the Lean neither states nor uses; the Lean proves delta^13 by its own conditioning argument. The distribution-dependent cubic bound (cor:support-threshold) is not formalized (docs/277.md)."
+ 
+   - title: "Tracial projection methods and uniform property Γ"
+     authors: ["OpenAI"]
+@@ -868,6 +895,9 @@
+     authors: ["OpenAI"]
+     id: ../preprints/Uniform-Cartier-sections-for-Fano-type-contractions-September-25-2026/Uniform-Cartier-sections-for-Fano-type-contractions-September-25-2026.pdf
+     type: article
++    relationship: other
++    location: "Supporting result: compactness of closed chart-field retractions (isCompact_closedChartFieldRetraction_cone)"
++    note: "Supporting result only (CartierChartCompactnessSupport). The uniform Cartier-section theorem, bounded klt complements and the companion conclusions are not formalized (docs/066.md)."
+ 
+   - title: "Uniform exclusion of Landau–Siegel zeros"
+     authors: ["OpenAI"]
+@@ -1044,6 +1074,7 @@
+       declaration: OAI.BorsukNine.main_theorem
+       file: OAI/Geometry/Borsuk/Counterexample.lean
+ 
++    # bounded recovery only; the paper's thm:main (bicentralizer triviality) not formalized
+     - comparator_config: ComparatorChallenges/BoundedRecovery.json
+       declaration: OAI.BoundedRecovery.bounded_recovery
+       file: OAI/Analysis/ModularRecovery/Recovery.lean
+@@ -1072,6 +1103,7 @@
+       declaration: OAI.CHObstruction.main
+       file: OAI/ModelTheory/Categoricity/Main.lean
+ 
++    # supporting result for 'Uniform Cartier sections for Fano type contractions'; main theorem not formalized
+     - comparator_config: ComparatorChallenges/CartierChartCompactnessSupport.json
+       declaration: OAI.CartierSections.isCompact_closedChartFieldRetraction_cone
+       file: OAI/AlgebraicGeometry/CartierSections/ChartCompactness.lean
+@@ -1080,6 +1112,7 @@
+       declaration: OAI.KirchbergRordam.character_criterion
+       file: OAI/Analysis/CharacterCriterion/Main.lean
+ 
++    # supporting result for 'Integral points on character varieties of curves'; main theorem not formalized
+     - comparator_config: ComparatorChallenges/CharacterVarietiesAllSeamsSupport.json
+       declaration: OAI.IntegralCharacterVarieties.SurfacePresentation.Diagram.producedMarkedValues_allSeams
+       file: OAI/AlgebraicGeometry/CharacterVarieties/Seams/ProducedSolution.lean
+@@ -1220,6 +1253,7 @@
+       declaration: OAI.Problem337.prescribed_denominator_corollary
+       file: OAI/NumberTheory/EgyptianFractions/Main.lean
+ 
++    # delta^13 rate; the paper's Theorem 1.1 states delta^5 (via Song's external estimate)
+     - comparator_config: ComparatorChallenges/EntangledGames.json
+       declaration: OAI.ThresholdParallelRepetition.threshold_parallel_repetition
+       file: OAI/Probability/EntangledGames/Main.lean
+@@ -1316,6 +1350,7 @@
+       declaration: HodgeCM.hodge_conjecture_for_cm_abelian_varieties
+       file: ComparatorChallenges/HodgeConjectureCMAbelianVarieties/Solution.lean
+ 
++    # supporting result for 'Critical honeycomb chords with prescribed boundary endpoints'; main theorem not formalized
+     - comparator_config: ComparatorChallenges/HoneycombBridgeMassSupport.json
+       declaration: OAI.CriticalHoneycomb.finiteBridgeMassEstimate
+       file: OAI/Combinatorics/HoneycombChords/BridgeMass.lean
+@@ -1520,6 +1555,7 @@
+       declaration: OAI.PlanarFalconer.mainTarget_proved
+       file: OAI/MeasureTheory/Falconer/Main.lean
+ 
++    # differentiability only; strict convexity (paper title, thm:exponential-shape) not formalized
+     - comparator_config: ComparatorChallenges/PlanarFirstPassage.json
+       declaration: OAI.PlanarFPP.manuscriptMain
+       file: OAI/Probability/FirstPassage/BoundaryCurve.lean
+@@ -1696,6 +1732,7 @@
+       declaration: OAI.Superstring.main
+       file: OAI/Computability/Superstring/Main.lean
+ 
++    # supporting result for 'A Complete Local Domain without a Small Cohen-Macaulay Module'; main theorem not formalized
+     - comparator_config: ComparatorChallenges/SurfaceConeCandidateSupport.json
+       declaration: OAI.SmallCM.candidate_ring_properties
+       file: OAI/AlgebraicGeometry/SurfaceCones/CandidateRing.lean
+@@ -1752,6 +1789,7 @@
+       declaration: OAI.TorsionFreeZeroDivisors.main
+       file: OAI/Algebra/GroupRing/Main.lean
+ 
++    # supporting results (3 entries) for 'The trace cone classifies Razak-Jacelon stabilizations'; main theorem not formalized
+     - comparator_config: ComparatorChallenges/TraceIdealTransportSupport.json
+       declaration: OAI.TraceConeClassification.TraceConeEquiv.idealOrderIso_finIdeal
+       file: OAI/Analysis/TraceCone/IdealTransport.lean

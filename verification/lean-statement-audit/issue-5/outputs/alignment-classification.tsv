@@ -1,0 +1,14 @@
+file	hunks	token_edits	classes	semantic_change	note
+Definitions/Algebra/Homology/LinearDual.lean	44	101	explicit-argument	no	(linearDual S).foo / foo S style rewrites of the same constants; no def body changes
+Definitions/AlgebraicGeometry/ClosedImmersion/HolomorphicCharts.lean	7	13	explicit-argument	no	biAnalyticLocus e / biAnalyticRestrict e: dot notation -> explicit argument
+Definitions/AlgebraicGeometry/ClosedImmersion/NormalCoordinates.lean	8	16	explicit-argument	no	(h.hasStrictFDerivAt).normalChart -> normalChart (h.hasStrictFDerivAt) etc.
+Definitions/AlgebraicGeometry/ComplexPoint/Basic.lean	1	1	section-removal	no	a 'section' keyword removed (plus ComplexPoint->ComplexSchemePoint rename, normalised away)
+Definitions/AlgebraicGeometry/Hodge/Filtration.lean	18	511	proof-only;new-bridging-definition;coercion;reducibility-attribute	no	new identity def siteSheafHom f := f (only used inside proofs via change/rw); local implicit_reducible attribute retargeted from _aux_1/_aux_3/_aux_5 to instCategorySheaf; coercion form of algebraMap in a lemma statement; set_option auxLemma removed; two helper lemmas added; no change to the bodies of hodgeFiltration/hodgePiece/hodgeClasses/fieldToDeRhamCohomologyLinear
+Definitions/AlgebraicGeometry/ProjectiveSpace.lean	1	1	section-removal	no	'section' keyword removed
+Definitions/AlgebraicTopology/Singular/Cohomology.lean	4	8	explicit-argument	no	X.linearDualCochainComplex -> linearDualCochainComplex X
+Definitions/AlgebraicTopology/Singular/RelativeCochainCone.lean	4	8	explicit-argument	no	same pattern
+Definitions/AlgebraicTopology/Singular/RelativeCochainConeNaturality.lean	2	5	abbrev-fold	no	((relativeChainFunctor R).obj X).linearDualCochainComplex -> RelativeCochainComplex R X, which is an abbrev for exactly that term (Singular/Cohomology.lean:125 at 204e5f8f8)
+Definitions/AlgebraicTopology/Singular/Sheaf/CochainOpenCone.lean	6	11	explicit-argument	no	same pattern
+Definitions/AlgebraicTopology/Support/CohomologyInjectiveModel.lean	1	1	instance-name	no	an anonymous local instance (HasDerivedCategory on sheaves) is given an explicit name
+Definitions/AlgebraicTopology/Support/RelativeCohomologyOpenTransport.lean	2	3	explicit-argument	no	functor_isCocontinuous -> functor_isCocontinuous hf
+Definitions/Topology/Dimension/Basic.lean	1	2	expose-attribute-removal	no	@[expose] removed from a noncomputable section (module-system visibility only)
