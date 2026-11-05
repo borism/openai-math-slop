@@ -1,0 +1,84 @@
+--- upstream/Lemmas/AlgebraicGeometry/ComplexPoint/Localization.lean
++++ challenge/Lemmas/AlgebraicGeometry/ComplexPoint/Localization.lean
+@@ -13,9 +13,11 @@
+ See the License for the specific language governing permissions and
+ limitations under the License.
++
+ -/
+-module
+ 
+-public import HodgeConjecture.Lemmas.AlgebraicGeometry.ComplexPoint.AffineScheme
+-public import Mathlib.Topology.IsLocalHomeomorph
++import HodgeConjecture.Lemmas.AlgebraicGeometry.ComplexPoint.AffineScheme
++import Mathlib.Topology.IsLocalHomeomorph
++
++namespace OAI.AlgebraicGeometry.ComplexPoint.Localization
+ 
+ /-!
+@@ -32,13 +34,14 @@
+ -/
+ 
+-@[expose] public section
++section
+ 
+-open scoped Topology
++open scoped _root_.Topology
+ 
+-open Topology
++open _root_.Topology
+ 
+-namespace AlgebraicGeometry.ComplexAlgHom
++section
++namespace ComplexAlgHom
+ 
+-open ComplexPoint Point
++open ComplexPoint _root_.OAI.AlgebraicGeometry.ComplexPoint.Basic.Point
+ 
+ noncomputable section
+@@ -54,10 +57,10 @@
+     Continuous (precompAlgEquiv e) := by
+   rw [continuous_induced_rng]
+-  exact continuous_pi fun a ↦ continuous_affineAlgebraHom_apply B (e a)
++  exact continuous_pi fun a ↦ _root_.OAI.AlgebraicGeometry.ComplexPoint.Basic.ComplexSchemePoint.continuous_affineAlgebraHom_apply B (e a)
+ 
+ lemma continuous_precompAlgEquiv_symm (e : A ≃ₐ[ℂ] B) :
+     Continuous (precompAlgEquiv e).symm := by
+   rw [continuous_induced_rng]
+-  exact continuous_pi fun b ↦ continuous_affineAlgebraHom_apply A (e.symm b)
++  exact continuous_pi fun b ↦ _root_.OAI.AlgebraicGeometry.ComplexPoint.Basic.ComplexSchemePoint.continuous_affineAlgebraHom_apply A (e.symm b)
+ 
+ /-- Precomposition by a complex algebra equivalence is a homeomorphism for pointwise
+@@ -121,5 +124,5 @@
+   rw [continuous_induced_rng]
+   exact continuous_pi fun s ↦
+-    continuous_affineAlgebraHom_apply (Localization.Away f) (algebraMap S _ s)
++    _root_.OAI.AlgebraicGeometry.ComplexPoint.Basic.ComplexSchemePoint.continuous_affineAlgebraHom_apply (Localization.Away f) (algebraMap S _ s)
+ 
+ lemma localizationAwayAlgHomEquiv_symm_apply_eq_div (f : S)
+@@ -140,7 +143,7 @@
+   obtain ⟨n, a, h⟩ := localizationAwayAlgHomEquiv_symm_apply_eq_div S f x
+   have ha : Continuous (fun u : nonvanishingAlgHom S f ↦ u.1 a) :=
+-    (continuous_affineAlgebraHom_apply S a).comp continuous_subtype_val
++    (_root_.OAI.AlgebraicGeometry.ComplexPoint.Basic.ComplexSchemePoint.continuous_affineAlgebraHom_apply S a).comp continuous_subtype_val
+   have hf : Continuous (fun u : nonvanishingAlgHom S f ↦ u.1 f) :=
+-    (continuous_affineAlgebraHom_apply S f).comp continuous_subtype_val
++    (_root_.OAI.AlgebraicGeometry.ComplexPoint.Basic.ComplexSchemePoint.continuous_affineAlgebraHom_apply S f).comp continuous_subtype_val
+   exact (ha.div (hf.pow n) fun u ↦ pow_ne_zero n u.2).congr fun u ↦ (h u).symm
+ 
+@@ -161,5 +164,5 @@
+ lemma isOpen_nonvanishingAlgHom (f : S) :
+     IsOpen {u : S →ₐ[ℂ] ℂ | u f ≠ 0} :=
+-  isOpen_ne_fun (continuous_affineAlgebraHom_apply S f) continuous_const
++  isOpen_ne_fun (_root_.OAI.AlgebraicGeometry.ComplexPoint.Basic.ComplexSchemePoint.continuous_affineAlgebraHom_apply S f) continuous_const
+ 
+ /-- Restriction from `S[1/f]` identifies its complex points with an open subspace of the complex
+@@ -173,3 +176,8 @@
+ 
+ 
+-end AlgebraicGeometry.ComplexAlgHom
++end ComplexAlgHom
++end
++
++end
++
++end OAI.AlgebraicGeometry.ComplexPoint.Localization

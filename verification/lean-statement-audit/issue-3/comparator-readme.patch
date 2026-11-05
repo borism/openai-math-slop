@@ -1,0 +1,38 @@
+--- a/lean/ComparatorChallenges/README.md
++++ b/lean/ComparatorChallenges/README.md
+@@ -8,3 +8,35 @@
+ lake exe cache get
+ lake env comparator ComparatorChallenges/QuasiRiemannHypothesis.json
+ ```
++
++## Supporting-result comparisons
++
++These setups verify supporting results, not the corresponding papers’ main
++theorems:
++
++- `CharacterVarietiesAllSeamsSupport.json`: compatibility of the produced marked
++  solution with every seam equation.
++- `CartierChartCompactnessSupport.json`: compactness of normalized chart-field
++  retractions.
++- `SurfaceConeCandidateSupport.json`: ring-theoretic properties of the completed
++  surface cone.
++- `TraceIdealTransportSupport.json`: transport of finite and zero ideals, with
++  the construction-provider statements required by the original comparison.
++- `HoneycombBridgeMassSupport.json`: finiteness and quarter-power bounds for the
++  strict honeycomb bridge mass.
++
++## Comparisons weaker than the paper's headline
++
++These setups verify a result that is weaker than, or only part of, the paper's
++headline theorem:
++
++- `EntangledGames.json`: threshold parallel repetition at rate `δ^13`; the
++  paper's Theorem 1.1 states `δ^5`, through an external conditioning estimate.
++- `PlanarFirstPassage.json`: differentiability and `C^1` boundary of the
++  exponential limit shape; strict convexity is not included.
++- `BoundedRecovery.json`: the bounded recovery theorem; the paper's
++  bicentralizer theorem is not included.
++- `GrothendieckElementaryExpansion.json`: the elementary-expansion theorem; the
++  homotopy hypothesis itself is deduced from Henry (2016) and is not included.
++
++See the [scope notes](../docs/) for per-paper coverage and limitations.

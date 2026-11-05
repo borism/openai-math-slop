@@ -1,0 +1,51 @@
+--- upstream/Mathlib/Topology/Sheaves/StalkExact.lean
++++ challenge/Mathlib/Topology/Sheaves/StalkExact.lean
+@@ -13,10 +13,15 @@
+ See the License for the specific language governing permissions and
+ limitations under the License.
++
+ -/
+-module
+ 
+-public import Mathlib.Algebra.Homology.ShortComplex.Ab
+-public import Mathlib.Topology.Sheaves.Abelian
+-public import Mathlib.Topology.Sheaves.Stalks
++import Mathlib.Algebra.Homology.ShortComplex.Ab
++import Mathlib.Topology.Sheaves.Abelian
++import Mathlib.Topology.Sheaves.Stalks
++
++namespace OAI.Topology.Sheaves.StalkExact
++
++open _root_.TopCat
++open _root_.TopCat.Presheaf
+ 
+ /-!
+@@ -32,11 +37,15 @@
+ -/
+ 
+-@[expose] public section
++section
+ 
+-open CategoryTheory TopologicalSpace
++open _root_.CategoryTheory _root_.TopologicalSpace
+ 
+ universe u
+ 
+-namespace TopCat.Presheaf
++namespace TopCat
++open _root_.TopCat
++namespace Presheaf
++open _root_.TopCat
++open _root_.TopCat.Presheaf
+ 
+ /-- A neighborhood-wise lifting of every local kernel section gives exactness after passing to
+@@ -73,3 +82,8 @@
+     S.X₂.germ_res_apply iVW x hxV, S.X₂.germ_res_apply iWU x hxW]
+ 
+-end TopCat.Presheaf
++end Presheaf
++end TopCat
++
++end
++
++end OAI.Topology.Sheaves.StalkExact

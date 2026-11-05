@@ -1,0 +1,6 @@
+# python3 -I bernoulli_cert_test.py <paper>/build/appendices/tables.tex 400 300 7   (OMP_NUM_THREADS=1; paused with SIGSTOP 02:36-02:45 UTC to respect the 2-heavy-process limit)
+Table I row counts {'f': 34, 'U': 57, 'K': 34, 'M': 74, 'P': 32}
+f invariance check 650.6765856505258 650.6765856505258
+interior: random base points 400, least eigenvalue of I-eps(z^2+|l|^2): 8.00347; min f-eps: 487.439
+interior: after 300 hill-climb steps, least eigenvalue: 2.35038  at |p|^2+g^2=0.767023
+boundary: min S over random samples: 1.24468 (claimed >= delta* = 0.223492)

@@ -1,0 +1,8 @@
+--- upstream/Definitions/AlgebraicGeometry/Cycle/Component/SmoothClosedLift.lean
++++ challenge/Definitions/AlgebraicGeometry/Cycle/Component/SmoothClosedLift.lean
+@@ -65,4 +65,5 @@
+   infer_instance
+ 
++omit [IsIntegral X.left] [Smooth X.hom] in
+ @[reassoc (attr := simp)]
+ theorem cycleComponentSmoothLocusClosedLift_ι :

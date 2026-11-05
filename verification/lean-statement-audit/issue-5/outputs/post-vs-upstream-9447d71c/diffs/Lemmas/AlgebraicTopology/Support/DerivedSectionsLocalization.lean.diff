@@ -1,0 +1,82 @@
+--- upstream/Lemmas/AlgebraicTopology/Support/DerivedSectionsLocalization.lean
++++ challenge/Lemmas/AlgebraicTopology/Support/DerivedSectionsLocalization.lean
+@@ -2,8 +2,13 @@
+ Copyright 2026 The Formal Conjectures Authors.
+ Released under Apache 2.0 license as described in the file LICENSE.
++
+ -/
+-module
+ 
+-public import HodgeConjecture.Definitions.AlgebraicTopology.Support.DerivedSectionsLocalization
++import HodgeConjecture.Definitions.AlgebraicTopology.Support.DerivedSectionsLocalization
++
++namespace OAI.AlgebraicTopology.Support.DerivedSectionsExact
++
++open _root_.TopCat
++open _root_.TopCat.Sheaf
+ 
+ /-!
+@@ -16,11 +21,15 @@
+ /-! ### Constructions used only in proofs -/
+ 
+-@[expose] public noncomputable section
++noncomputable section
+ 
+-open CategoryTheory CategoryTheory.Limits TopologicalSpace Opposite
++open _root_.CategoryTheory _root_.CategoryTheory.Limits _root_.TopologicalSpace Opposite
+ 
+ universe u
+ 
+-namespace TopCat.Sheaf
++namespace TopCat
++open _root_.TopCat
++namespace Sheaf
++open _root_.TopCat
++open _root_.TopCat.Sheaf
+ 
+ variable (X : TopCat.{u}) (U : Opens X)
+@@ -31,7 +40,7 @@
+ def supportRestrictionShortComplex (F : Sheaf AddCommGrpCat.{u} X) :
+     ShortComplex (Sheaf AddCommGrpCat.{u} X) :=
+-  ShortComplex.mk ((sheafSectionsSupportedOutsideInclusion X U).app F)
+-    ((toOpenRestrictionPushforward X U).app F)
+-    (sheafSectionsSupportedOutsideInclusion_restriction X U F)
++  ShortComplex.mk ((_root_.OAI.AlgebraicTopology.Support.DerivedSections.TopCat.Sheaf.sheafSectionsSupportedOutsideInclusion X U).app F)
++    ((_root_.OAI.AlgebraicTopology.Support.DerivedSections.TopCat.Sheaf.toOpenRestrictionPushforward X U).app F)
++    (_root_.OAI.AlgebraicTopology.Support.DerivedSectionsOn.TopCat.Sheaf.sheafSectionsSupportedOutsideInclusion_restriction X U F)
+ 
+ /-- Let `U,V` be open in a topological space `X` and `F` a sheaf of abelian groups. This sequence
+@@ -40,5 +49,5 @@
+ def supportRestrictionSectionsShortComplex (V : Opens X)
+     (F : Sheaf AddCommGrpCat.{u} X) : ShortComplex AddCommGrpCat.{u} :=
+-  (supportRestrictionShortComplex X U F).map (supportEvaluation X V)
++  (supportRestrictionShortComplex X U F).map (_root_.OAI.AlgebraicTopology.Support.DerivedSectionsLocalization.TopCat.Sheaf.supportEvaluation X V)
+ 
+ set_option backward.defeqAttrib.useBackward true in
+@@ -50,8 +59,8 @@
+     (supportRestrictionSectionsShortComplex X U V F).ShortExact where
+   exact := ShortComplex.exact_of_f_is_kernel _
+-    (KernelFork.mapIsLimit _ (kernelIsKernel _) (supportEvaluation X V))
++    (KernelFork.mapIsLimit _ (kernelIsKernel _) (_root_.OAI.AlgebraicTopology.Support.DerivedSectionsLocalization.TopCat.Sheaf.supportEvaluation X V))
+   mono_f := mono_of_isLimit_fork
+-    (KernelFork.mapIsLimit _ (kernelIsKernel _) (supportEvaluation X V))
+-  epi_g := toOpenRestrictionPushforward_app_epi X U F V
++    (KernelFork.mapIsLimit _ (kernelIsKernel _) (_root_.OAI.AlgebraicTopology.Support.DerivedSectionsLocalization.TopCat.Sheaf.supportEvaluation X V))
++  epi_g := _root_.OAI.AlgebraicTopology.Support.DerivedSectionsLocalization.TopCat.Sheaf.toOpenRestrictionPushforward_app_epi X U F V
+ 
+ /-- The support/restriction sequence is short exact even after taking sections
+@@ -59,9 +68,12 @@
+ lemma supportRestrictionSectionsComplexShortComplex_shortExact (V : Opens X)
+     (K : CochainComplex (Sheaf AddCommGrpCat.{u} X) ℤ) [∀ n, Injective (K.X n)] :
+-    (supportRestrictionSectionsComplexShortComplex X U V K).ShortExact :=
++    (_root_.OAI.AlgebraicTopology.Support.DerivedSectionsLocalization.TopCat.Sheaf.supportRestrictionSectionsComplexShortComplex X U V K).ShortExact :=
+   HomologicalComplex.shortExact_of_degreewise_shortExact _ fun n =>
+     supportRestrictionSectionsShortComplex_shortExact X U V (K.X n)
+ 
+-end TopCat.Sheaf
++end Sheaf
++end TopCat
+ 
+ end
++
++end OAI.AlgebraicTopology.Support.DerivedSectionsExact

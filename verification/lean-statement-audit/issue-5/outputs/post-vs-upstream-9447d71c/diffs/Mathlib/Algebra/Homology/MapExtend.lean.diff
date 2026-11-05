@@ -1,0 +1,39 @@
+--- upstream/Mathlib/Algebra/Homology/MapExtend.lean
++++ challenge/Mathlib/Algebra/Homology/MapExtend.lean
+@@ -2,9 +2,13 @@
+ Copyright 2026 The Formal Conjectures Authors.
+ Released under Apache 2.0 license as described in the file LICENSE.
++
+ -/
+-module
+ 
+-public import Mathlib.Algebra.Homology.Embedding.Extend
+-public import Mathlib.Algebra.Homology.Additive
++import Mathlib.Algebra.Homology.Embedding.Extend
++import Mathlib.Algebra.Homology.Additive
++
++namespace OAI.Algebra.Homology.MapExtend
++
++open _root_.HomologicalComplex
+ 
+ /-!
+@@ -16,9 +20,10 @@
+ -/
+ 
+-@[expose] public noncomputable section
++noncomputable section
+ 
+-open CategoryTheory Limits
++open _root_.CategoryTheory Limits
+ 
+ namespace HomologicalComplex
++open _root_.HomologicalComplex
+ 
+ section Single
+@@ -133,2 +138,6 @@
+ 
+ end HomologicalComplex
++
++end
++
++end OAI.Algebra.Homology.MapExtend

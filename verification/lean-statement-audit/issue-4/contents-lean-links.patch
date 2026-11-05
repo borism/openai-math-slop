@@ -1,0 +1,191 @@
+--- a/CONTENTS.md
++++ b/CONTENTS.md
+@@ -195,7 +195,7 @@
+ <tbody><tr>
+ <td>
+ 
+-**009. Function-field reconstruction from Milnor K-theory and Galois data.** Reconstructs function fields of transcendence degree at least two over algebraically closed constants from $`K^{\mathrm M}_1/\ell`$, $`K^{\mathrm M}_2/\ell`$, and their product. These data recover the perfect closure and constants when <i>ℓ</i> differs from the characteristic, and the original field and its named base in equal characteristic. Also proves Bogomolov–Pop reconstruction from abelian-by-central pro-<i>ℓ</i> Galois data away from the characteristic. ([Lean](lean/docs/009.md))
++**009. Function-field reconstruction from Milnor K-theory and Galois data.** Reconstructs function fields of transcendence degree at least two over algebraically closed constants from $`K^{\mathrm M}_1/\ell`$, $`K^{\mathrm M}_2/\ell`$, and their product. These data recover the perfect closure and constants when <i>ℓ</i> differs from the characteristic, and the original field and its named base in equal characteristic. Also proves Bogomolov–Pop reconstruction from abelian-by-central pro-<i>ℓ</i> Galois data away from the characteristic. ([Lean: partial](lean/docs/009.md))
+ 
+ </td>
+ </tr></tbody>
+@@ -804,7 +804,7 @@
+ <tbody><tr>
+ <td>
+ 
+-**033. Iitaka subadditivity, variation, and logarithmic additivity.** Proves Campana's orbifold Iitaka subadditivity conjecture for smooth Fujiki-class-$`\mathcal C`$ manifolds with rational simple-normal-crossing boundaries. For projective fibrations $`f:U\to V`$ of smooth complex quasi-projective varieties with connected fibers, general fiber <i>F</i>, and $`\bar\kappa(V)\ge0`$, proves Popa's inequality $`\bar\kappa(U)\ge\kappa(F)+\max\{\bar\kappa(V),\mathop{\mathrm{Var}}\nolimits (f)\}`$, where variation measures the whole geometric generic fiber. ([Lean](lean/docs/033.md))
++**033. Iitaka subadditivity, variation, and logarithmic additivity.** Proves Campana's orbifold Iitaka subadditivity conjecture for smooth Fujiki-class-$`\mathcal C`$ manifolds with rational simple-normal-crossing boundaries. For projective fibrations $`f:U\to V`$ of smooth complex quasi-projective varieties with connected fibers, general fiber <i>F</i>, and $`\bar\kappa(V)\ge0`$, proves Popa's inequality $`\bar\kappa(U)\ge\kappa(F)+\max\{\bar\kappa(V),\mathop{\mathrm{Var}}\nolimits (f)\}`$, where variation measures the whole geometric generic fiber. ([Lean: partial](lean/docs/033.md))
+ 
+ </td>
+ </tr></tbody>
+@@ -3060,7 +3060,7 @@
+ <tbody><tr>
+ <td>
+ 
+-**126. Exponential semidefinite complexity of perfect matching.** Proves that every exact semidefinite lift of the perfect matching polytope has exponential size, answering Rothvoss's polynomial-size lift question negatively. The bound holds even for the positive semidefinite rank of its odd-cut slack matrix after any fixed shift $`0\lt \rho\lt 1`$, allowing arbitrary real positive semidefinite factors. ([Lean](lean/docs/126.md))
++**126. Exponential semidefinite complexity of perfect matching.** Proves that every exact semidefinite lift of the perfect matching polytope has exponential size, answering Rothvoss's polynomial-size lift question negatively. The bound holds even for the positive semidefinite rank of its odd-cut slack matrix after any fixed shift $`0\lt \rho\lt 1`$, allowing arbitrary real positive semidefinite factors. ([Lean: partial](lean/docs/126.md))
+ 
+ </td>
+ </tr></tbody>
+@@ -3629,7 +3629,7 @@
+ <tbody><tr>
+ <td>
+ 
+-**152. Zero entropy does not guarantee a smooth positive-volume model.** Constructs a zero-entropy ergodic invertible transformation of a standard nonatomic probability space that is not measurably conjugate to any <i>C</i><sup>∞</sup> diffeomorphism preserving a strictly positive smooth probability density on a compact finite-dimensional manifold. One example rules out every finite dimension. ([Lean](lean/docs/152.md))
++**152. Zero entropy does not guarantee a smooth positive-volume model.** Constructs a zero-entropy ergodic invertible transformation of a standard nonatomic probability space that is not measurably conjugate to any <i>C</i><sup>∞</sup> diffeomorphism preserving a strictly positive smooth probability density on a compact finite-dimensional manifold. One example rules out every finite dimension. ([Lean: partial](lean/docs/152.md))
+ 
+ </td>
+ </tr></tbody>
+@@ -3790,7 +3790,7 @@
+ <tbody><tr>
+ <td>
+ 
+-**159. Erdős’s reciprocal-sum conjecture and quasipolynomial Szemerédi bounds.** Proves Erdős's conjecture that every set of positive integers with divergent reciprocal sum contains arithmetic progressions of every finite length. Quantitatively, for each fixed <i>k</i> ≥ 3, every subset of $`\{1,\ldots,N\}`$ with no nonconstant <i>k</i>-term progression has size at most $`C_kN\exp[-c_k(\log N)^{\varepsilon_k}]`$, with positive constants depending only on <i>k</i>. ([Lean](lean/docs/159.md))
++**159. Erdős’s reciprocal-sum conjecture and quasipolynomial Szemerédi bounds.** Proves Erdős's conjecture that every set of positive integers with divergent reciprocal sum contains arithmetic progressions of every finite length. Quantitatively, for each fixed <i>k</i> ≥ 3, every subset of $`\{1,\ldots,N\}`$ with no nonconstant <i>k</i>-term progression has size at most $`C_kN\exp[-c_k(\log N)^{\varepsilon_k}]`$, with positive constants depending only on <i>k</i>. ([Lean: partial](lean/docs/159.md))
+ 
+ </td>
+ </tr></tbody>
+@@ -4397,7 +4397,7 @@
+ <tbody><tr>
+ <td>
+ 
+-**191. A power improvement in the Heilbronn triangle lower bound.** For every sufficiently large <i>n</i>, constructs <i>n</i> points in the unit square such that every triangle has area at least $`n^{-2+c}`$ for one absolute <i>c</i> &gt; 0. This disproves the conjectured almost-<i>n</i><sup>−2</sup> upper bound in Heilbronn's triangle problem, which asks how large the smallest determined triangle can be. ([Lean](lean/docs/191.md))
++**191. A power improvement in the Heilbronn triangle lower bound.** For every sufficiently large <i>n</i>, constructs <i>n</i> points in the unit square such that every triangle has area at least $`n^{-2+c}`$ for one absolute <i>c</i> &gt; 0. This disproves the conjectured almost-<i>n</i><sup>−2</sup> upper bound in Heilbronn's triangle problem, which asks how large the smallest determined triangle can be. ([Lean: partial](lean/docs/191.md))
+ 
+ </td>
+ </tr></tbody>
+@@ -4449,7 +4449,7 @@
+ <tbody><tr>
+ <td>
+ 
+-**194. Lech’s multiplicity conjecture.** Proves $`e(R)\le e(S)`$ for every flat local homomorphism of nonzero Noetherian local rings, where <i>e</i> is Hilbert–Samuel multiplicity. This resolves Lech's conjecture in every dimension and characteristic. ([Lean](lean/docs/194.md))
++**194. Lech’s multiplicity conjecture.** Proves $`e(R)\le e(S)`$ for every flat local homomorphism of nonzero Noetherian local rings, where <i>e</i> is Hilbert–Samuel multiplicity. This resolves Lech's conjecture in every dimension and characteristic. ([Lean: partial](lean/docs/194.md))
+ 
+ </td>
+ </tr></tbody>
+@@ -4704,7 +4704,7 @@
+ <tbody><tr>
+ <td>
+ 
+-**206. Finite lattice representation and undecidability.** Some finite lattices are not congruence lattices of any finite algebra, answering the finite lattice representation problem negatively. Moreover, no algorithm decides whether a finite lattice has such a representation, or whether it is a full subgroup interval of a finite group. ([Lean](lean/docs/206.md))
++**206. Finite lattice representation and undecidability.** Some finite lattices are not congruence lattices of any finite algebra, answering the finite lattice representation problem negatively. Moreover, no algorithm decides whether a finite lattice has such a representation, or whether it is a full subgroup interval of a finite group. ([Lean: partial](lean/docs/206.md))
+ 
+ </td>
+ </tr></tbody>
+@@ -5242,7 +5242,7 @@
+ <tbody><tr>
+ <td>
+ 
+-**222. Perceptron free energies and microscopic jamming exponents.** Determines finite-temperature variational free energies for Gaussian Ising perceptrons with bounded Borel log-potentials and Gaussian spherical perceptrons with bounded continuous potentials, at every positive pattern density. A spherical extension treats bi-orthogonally invariant disorder with compact limiting singular-value distributions and no outliers. At margin −1, the quadratic-penalty spherical model has a sharp feasibility threshold and limiting gap and force laws, with system size, zero temperature, and critical density taken in that order. ([Lean](lean/docs/222.md))
++**222. Perceptron free energies and microscopic jamming exponents.** Determines finite-temperature variational free energies for Gaussian Ising perceptrons with bounded Borel log-potentials and Gaussian spherical perceptrons with bounded continuous potentials, at every positive pattern density. A spherical extension treats bi-orthogonally invariant disorder with compact limiting singular-value distributions and no outliers. At margin −1, the quadratic-penalty spherical model has a sharp feasibility threshold and limiting gap and force laws, with system size, zero temperature, and critical density taken in that order. ([Lean: partial](lean/docs/222.md))
+ 
+ </td>
+ </tr></tbody>
+@@ -5520,7 +5520,7 @@
+ <tbody><tr>
+ <td>
+ 
+-**229. Exact three- and four-state reconstruction thresholds and four-state tree capacity.** Proves the exact reconstruction threshold $`d\lambda^2\gt 1`$, with nonreconstruction at equality, for three-state symmetric and four-state ferromagnetic broadcasting on regular trees (<i>d</i> ≥ 2) and observed Poisson trees (mean <i>d</i> &gt; 1 and <i>d</i> &gt; 0, respectively), with Poisson advantage averaged without conditioning on survival. The three-state theorem allows both signs of <i>λ</i> and gives the exact weak-recovery threshold for the symmetric three-community stochastic block model. ([Lean](lean/docs/229.md))
++**229. Exact three- and four-state reconstruction thresholds and four-state tree capacity.** Proves the exact reconstruction threshold $`d\lambda^2\gt 1`$, with nonreconstruction at equality, for three-state symmetric and four-state ferromagnetic broadcasting on regular trees (<i>d</i> ≥ 2) and observed Poisson trees (mean <i>d</i> &gt; 1 and <i>d</i> &gt; 0, respectively), with Poisson advantage averaged without conditioning on survival. The three-state theorem allows both signs of <i>λ</i> and gives the exact weak-recovery threshold for the symmetric three-community stochastic block model. ([Lean: partial](lean/docs/229.md))
+ 
+ </td>
+ </tr></tbody>
+@@ -5554,7 +5554,7 @@
+ <tbody><tr>
+ <td>
+ 
+-**230. Exact Hausdorff gauges for SLE.** Resolves Schramm’s Hausdorff-measure question for chordal SLE<sub><i>κ</i></sub>, $`0\lt \kappa\lt 8`$. The explicit gauge $`r^d(\log\log(1/r))^{(2-d)/2}`$, $`d=1+\kappa/8`$, gives almost surely positive finite measure to every trace segment $`\gamma([s,t])`$ with $`0\lt s\lt t\lt \infty`$, and finite expected measure to the trace in every bounded disk. ([Lean](lean/docs/230.md))
++**230. Exact Hausdorff gauges for SLE.** Resolves Schramm’s Hausdorff-measure question for chordal SLE<sub><i>κ</i></sub>, $`0\lt \kappa\lt 8`$. The explicit gauge $`r^d(\log\log(1/r))^{(2-d)/2}`$, $`d=1+\kappa/8`$, gives almost surely positive finite measure to every trace segment $`\gamma([s,t])`$ with $`0\lt s\lt t\lt \infty`$, and finite expected measure to the trace in every bounded disk. ([Lean: partial](lean/docs/230.md))
+ 
+ </td>
+ </tr></tbody>
+@@ -6396,7 +6396,7 @@
+ <tbody><tr>
+ <td>
+ 
+-**260. Spacetime Penrose inequalities: enclosing area, charge, rotation, and anti-de Sitter extensions.** Proves the sharp enclosing-area spacetime Penrose inequality for smooth one-ended asymptotically flat initial data in every spatial dimension <i>n</i> ≥ 3, under dominant energy, weak future trapping, positive enclosing area, and the stated decay assumptions. It bounds invariant ADM mass below using minimum enclosing area, with equality rigidity under additional horizon hypotheses. Charged upper-area bounds treat dyonic three-dimensional data; the higher-dimensional purely electric extension uses the matched neutral theorem. ([Lean](lean/docs/260.md))
++**260. Spacetime Penrose inequalities: enclosing area, charge, rotation, and anti-de Sitter extensions.** Proves the sharp enclosing-area spacetime Penrose inequality for smooth one-ended asymptotically flat initial data in every spatial dimension <i>n</i> ≥ 3, under dominant energy, weak future trapping, positive enclosing area, and the stated decay assumptions. It bounds invariant ADM mass below using minimum enclosing area, with equality rigidity under additional horizon hypotheses. Charged upper-area bounds treat dyonic three-dimensional data; the higher-dimensional purely electric extension uses the matched neutral theorem. ([Lean: partial](lean/docs/260.md))
+ 
+ </td>
+ </tr></tbody>
+@@ -6524,7 +6524,7 @@
+ <tbody><tr>
+ <td>
+ 
+-**261. Localization and delocalization in the Anderson model.** Resolves the predicted spectral contrast for the lattice Anderson model with independent uniform site potentials. In dimension two, every positive disorder strength gives almost surely pure-point spectrum. In every fixed dimension <i>d</i> ≥ 3, sufficiently weak positive disorder gives purely absolutely continuous spectrum on a fixed open interval with nonzero spectral weight. ([Lean](lean/docs/261.md))
++**261. Localization and delocalization in the Anderson model.** Resolves the predicted spectral contrast for the lattice Anderson model with independent uniform site potentials. In dimension two, every positive disorder strength gives almost surely pure-point spectrum. In every fixed dimension <i>d</i> ≥ 3, sufficiently weak positive disorder gives purely absolutely continuous spectrum on a fixed open interval with nonzero spectral weight. ([Lean: partial](lean/docs/261.md))
+ 
+ </td>
+ </tr></tbody>
+@@ -6676,7 +6676,7 @@
+ <tbody><tr>
+ <td>
+ 
+-**266. Exactly three mutually unbiased bases in dimension six.** Proves $`N(6)=3`$, resolving Zauner's dimension-six mutually unbiased bases conjecture: three such bases exist in ℂ<sup>6</sup>, but four cannot. The exclusion is a complete certified computation under the stated binary64 arithmetic and compiler conditions. An independent companion proves the Matolcsi–Ruzsa–Weiner Fourier-vanishing conjecture for order-six complex Hadamard matrices outside Tao's cubic equivalence class. ([Lean](lean/docs/266.md))
++**266. Exactly three mutually unbiased bases in dimension six.** Proves $`N(6)=3`$, resolving Zauner's dimension-six mutually unbiased bases conjecture: three such bases exist in ℂ<sup>6</sup>, but four cannot. The exclusion is a complete certified computation under the stated binary64 arithmetic and compiler conditions. An independent companion proves the Matolcsi–Ruzsa–Weiner Fourier-vanishing conjecture for order-six complex Hadamard matrices outside Tao's cubic equivalence class. ([Lean: partial](lean/docs/266.md))
+ 
+ </td>
+ </tr></tbody>
+@@ -6778,7 +6778,7 @@
+ <tbody><tr>
+ <td>
+ 
+-**269. Uniform Laughlin gap and stability under bounded scalar disorder.** Proves the fermionic Laughlin spectral-gap conjecture for the full <i>V</i><sub>1</sub> interaction at filling 1/3 on the round sphere. The unique ground state remains uniformly gapped under sufficiently weak bounded real scalar one-body potentials projected to the lowest Landau level. Both the gap and disorder threshold are uniform over all sufficiently large particle numbers and all normalized potential profiles. ([Lean](lean/docs/269.md))
++**269. Uniform Laughlin gap and stability under bounded scalar disorder.** Proves the fermionic Laughlin spectral-gap conjecture for the full <i>V</i><sub>1</sub> interaction at filling 1/3 on the round sphere. The unique ground state remains uniformly gapped under sufficiently weak bounded real scalar one-body potentials projected to the lowest Landau level. Both the gap and disorder threshold are uniform over all sufficiently large particle numbers and all normalized potential profiles. ([Lean: partial](lean/docs/269.md))
+ 
+ </td>
+ </tr></tbody>
+@@ -6871,7 +6871,7 @@
+ <tbody><tr>
+ <td>
+ 
+-**272. Entanglement without distillable secret key.** Constructs an entangled state on $`\mathbb C^{10}\otimes\mathbb C^{10}`$ with zero distillable secret key for the specified local-instrument protocols that complete almost surely. These allow joint local processing and authenticated two-way public communication, with no other shared private resource and an eavesdropper holding the input purification and public record. A trace-preserving PPT channel on $`M_{21}(\mathbb C)`$ whose square is not entanglement breaking disproves Christandl's PPT-square conjecture. ([Lean](lean/docs/272.md))
++**272. Entanglement without distillable secret key.** Constructs an entangled state on $`\mathbb C^{10}\otimes\mathbb C^{10}`$ with zero distillable secret key for the specified local-instrument protocols that complete almost surely. These allow joint local processing and authenticated two-way public communication, with no other shared private resource and an eavesdropper holding the input purification and public record. A trace-preserving PPT channel on $`M_{21}(\mathbb C)`$ whose square is not entanglement breaking disproves Christandl's PPT-square conjecture. ([Lean: partial](lean/docs/272.md))
+ 
+ </td>
+ </tr></tbody>
+@@ -7017,7 +7017,7 @@
+ <tbody><tr>
+ <td>
+ 
+-**280. Unitary vertex operator algebras and conformal nets.** Proves the strongly rational case of the strong-locality conjecture: every simple unitary strongly rational complex vertex operator algebra generates a completely rational conformal net. Its simple modules are unitarizable, and its representation category agrees with the net’s finite-index sectors as a braided unitary tensor category. ([Lean](lean/docs/280.md))
++**280. Unitary vertex operator algebras and conformal nets.** Proves the strongly rational case of the strong-locality conjecture: every simple unitary strongly rational complex vertex operator algebra generates a completely rational conformal net. Its simple modules are unitarizable, and its representation category agrees with the net’s finite-index sectors as a braided unitary tensor category. ([Lean: partial](lean/docs/280.md))
+ 
+ </td>
+ </tr></tbody>
+@@ -7033,7 +7033,7 @@
+ <tbody><tr>
+ <td>
+ 
+-**281. QAOA attains the SK optimum in the thermodynamic-first limit.** Proves that QAOA approaches the ground-state energy of the Gaussian zero-field Sherrington–Kirkpatrick model when system size tends to infinity before circuit depth. For every accuracy, finite depth and deterministic angles independent of size and disorder achieve the required limiting expected energy per spin. This also yields leading-order optimal expected MaxCut values on large-degree random regular graphs, with size tending to infinity before degree. ([Lean](lean/docs/281.md))
++**281. QAOA attains the SK optimum in the thermodynamic-first limit.** Proves that QAOA approaches the ground-state energy of the Gaussian zero-field Sherrington–Kirkpatrick model when system size tends to infinity before circuit depth. For every accuracy, finite depth and deterministic angles independent of size and disorder achieve the required limiting expected energy per spin. This also yields leading-order optimal expected MaxCut values on large-degree random regular graphs, with size tending to infinity before degree. ([Lean: partial](lean/docs/281.md))
+ 
+ </td>
+ </tr></tbody>
+@@ -7894,7 +7894,7 @@
+ <tbody><tr>
+ <td>
+ 
+-**323. Independence of the separable quotient problem.** Establishes, relative to the consistency of a measurable cardinal, that the separable quotient problem is independent of ZFC. The assertion that every infinite-dimensional Banach space has a separable infinite-dimensional quotient can hold for all real and complex Banach spaces, whereas the continuum hypothesis yields counterexamples over both fields. ([Lean](lean/docs/323.md))
++**323. Independence of the separable quotient problem.** Establishes, relative to the consistency of a measurable cardinal, that the separable quotient problem is independent of ZFC. The assertion that every infinite-dimensional Banach space has a separable infinite-dimensional quotient can hold for all real and complex Banach spaces, whereas the continuum hypothesis yields counterexamples over both fields. ([Lean: partial](lean/docs/323.md))
+ 
+ </td>
+ </tr></tbody>
+@@ -8894,7 +8894,7 @@
+ <tbody><tr>
+ <td>
+ 
+-**367. The critical dimension for the one-phase Bernoulli problem.** Establishes seven as the first dimension admitting a nonflat, one-homogeneous global minimizer of the one-phase Bernoulli energy. Consequently, minimizing free boundaries are smooth through dimension six, and their singular sets have dimension at most $`n-7`$ in higher dimensions. ([Lean](lean/docs/367.md))
++**367. The critical dimension for the one-phase Bernoulli problem.** Establishes seven as the first dimension admitting a nonflat, one-homogeneous global minimizer of the one-phase Bernoulli energy. Consequently, minimizing free boundaries are smooth through dimension six, and their singular sets have dimension at most $`n-7`$ in higher dimensions. ([Lean: partial](lean/docs/367.md))
+ 
+ </td>
+ </tr></tbody>
+@@ -8967,7 +8967,7 @@
+ <tbody><tr>
+ <td>
+ 
+-**371. Stable blowup for the defocusing Schrödinger equation.** For a sufficiently large odd nonlinearity power, constructs a nonempty open set of initial data in $`H^k(\mathbb T^{12})`$, with <i>k</i> &gt; 8, whose solutions of the scalar defocusing nonlinear Schrödinger equation blow up in finite time. Thus finite-time blowup is stable under Sobolev perturbations in this supercritical regime. ([Lean](lean/docs/371.md))
++**371. Stable blowup for the defocusing Schrödinger equation.** For a sufficiently large odd nonlinearity power, constructs a nonempty open set of initial data in $`H^k(\mathbb T^{12})`$, with <i>k</i> &gt; 8, whose solutions of the scalar defocusing nonlinear Schrödinger equation blow up in finite time. Thus finite-time blowup is stable under Sobolev perturbations in this supercritical regime. ([Lean: partial](lean/docs/371.md))
+ 
+ </td>
+ </tr></tbody>

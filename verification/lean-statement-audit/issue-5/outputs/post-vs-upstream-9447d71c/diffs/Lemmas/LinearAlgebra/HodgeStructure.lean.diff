@@ -1,0 +1,55 @@
+--- upstream/Lemmas/LinearAlgebra/HodgeStructure.lean
++++ challenge/Lemmas/LinearAlgebra/HodgeStructure.lean
+@@ -13,9 +13,11 @@
+ See the License for the specific language governing permissions and
+ limitations under the License.
++
+ -/
+-module
+ 
+-public import Mathlib.Algebra.Algebra.Rat
+-public import Mathlib.LinearAlgebra.Complex.Module
++import Mathlib.Algebra.Algebra.Rat
++import Mathlib.LinearAlgebra.Complex.Module
++
++namespace OAI.LinearAlgebra.Foundations.HodgeStructureOf
+ 
+ /-!
+@@ -27,5 +29,5 @@
+ -/
+ 
+-@[expose] public noncomputable section
++noncomputable section
+ 
+ open scoped DirectSum TensorProduct
+@@ -68,6 +70,6 @@
+ /-- Rational Hodge classes of codimension `p`: rational vectors whose complexifications lie in
+ the middle Hodge piece `V^{p,p}`. -/
+-def hodgeClasses (p : ℕ) (H : Pure V (2 * p)) : Submodule ℚ V :=
+-  Submodule.comap (ofBase ℚ V) ((H.piece p p).restrictScalars ℚ)
++def hodgeClasses (p : ℕ) (H : _root_.OAI.LinearAlgebra.Foundations.HodgeStructureOf.HodgeStructure.Pure V (2 * p)) : Submodule ℚ V :=
++  Submodule.comap (_root_.OAI.LinearAlgebra.Foundations.HodgeStructureOf.HodgeStructure.ofBase ℚ V) ((H.piece p p).restrictScalars ℚ)
+ 
+ end Pure
+@@ -77,5 +79,5 @@
+ end
+ 
+-@[expose] public noncomputable section
++noncomputable section
+ 
+ open scoped DirectSum TensorProduct
+@@ -101,6 +103,5 @@
+ @[simp]
+ lemma conjugate_conjugate (x : ℂ ⊗[ℚ] V) : conjugate V (conjugate V x) = x := by
+-  refine TensorProduct.induction_on x ?_ ?_ ?_
+-  · simp
++  refine TensorProduct.inductionOn x ?_ ?_
+   · intro z v
+     simp
+@@ -109,2 +110,6 @@
+ 
+ end HodgeStructure
++
++end
++
++end OAI.LinearAlgebra.Foundations.HodgeStructureOf

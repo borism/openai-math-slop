@@ -1,0 +1,9 @@
+-- issue-6 probes (appended; not part of the challenge)
+namespace OAI.MatrixMultiplication.Arithmetic
+-- Why non-vacuity matters: sInf in ℝ returns 0 on ∅ and on sets unbounded below.
+example : sInf (∅ : Set ℝ) = 0 := Real.sInf_empty
+example (S : Set ℝ) (h : ¬ BddBelow S) : sInf S = 0 := Real.sInf_of_not_bddBelow h
+#check @omega
+#print omega
+#print AdmissibleExponent
+end OAI.MatrixMultiplication.Arithmetic

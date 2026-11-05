@@ -1,0 +1,25 @@
+--- upstream/Mathlib/Topology/KrullDimension.lean
++++ challenge/Mathlib/Topology/KrullDimension.lean
+@@ -13,10 +13,12 @@
+ See the License for the specific language governing permissions and
+ limitations under the License.
++
+ -/
+-module
+ 
+-public import Mathlib.Topology.KrullDimension
++import Mathlib.Topology.KrullDimension
+ 
+-public section
++namespace OAI.Topology.Foundations.KrullDimension
++
++section
+ 
+ attribute [local instance] specializationOrder in
+@@ -25,2 +27,6 @@
+     [QuasiSober X] : topologicalKrullDim X = Order.krullDim X :=
+   Order.krullDim_eq_of_orderIso irreducibleSetEquivPoints
++
++end
++
++end OAI.Topology.Foundations.KrullDimension

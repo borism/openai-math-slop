@@ -1,0 +1,58 @@
+--- upstream/Definitions/AlgebraicTopology/Sheaf/FlasqueBoundedBelow.lean
++++ challenge/Definitions/AlgebraicTopology/Sheaf/FlasqueBoundedBelow.lean
+@@ -13,11 +13,16 @@
+ See the License for the specific language governing permissions and
+ limitations under the License.
++
+ -/
+-module
+ 
+ import HodgeConjecture.Mathlib.Algebra.Homology.Notation
+ 
+-public import Mathlib.Algebra.Homology.Embedding.CochainComplex
+-public import Mathlib.Topology.Sheaves.Flasque
++import Mathlib.Algebra.Homology.Embedding.CochainComplex
++import Mathlib.Topology.Sheaves.Flasque
++
++namespace OAI.AlgebraicTopology.Sheaf.FlasqueBoundedBelow
++
++open _root_.TopCat
++open _root_.TopCat.Sheaf
+ 
+ /-!
+@@ -33,9 +38,14 @@
+ -/
+ 
+-@[expose] public noncomputable section
++noncomputable section
+ 
+-open CategoryTheory Limits Opposite TopologicalSpace
++open _root_.CategoryTheory Limits Opposite _root_.TopologicalSpace
+ 
+-namespace TopCat.Sheaf.IsFlasque
++section
++namespace TopCat
++open _root_.TopCat
++namespace IsFlasque
++open _root_.TopCat
++open _root_.TopCat.Sheaf.IsFlasque
+ 
+ universe u
+@@ -44,4 +54,6 @@
+ 
+ namespace BoundedBelowComplex
++open _root_.TopCat
++open _root_.TopCat.Sheaf.IsFlasque
+ 
+ variable (K : CochainComplex (TopCat.Sheaf AddCommGrpCat.{u} X) ℤ)
+@@ -80,3 +92,9 @@
+ end BoundedBelowComplex
+ 
+-end TopCat.Sheaf.IsFlasque
++end IsFlasque
++end TopCat
++end
++
++end
++
++end OAI.AlgebraicTopology.Sheaf.FlasqueBoundedBelow

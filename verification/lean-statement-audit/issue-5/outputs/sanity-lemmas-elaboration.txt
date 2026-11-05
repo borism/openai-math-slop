@@ -1,0 +1,19 @@
+# lake env lean SanityLemmas.lean (Lean 4.34.1, Mathlib d13f23b, challenge tree openai/math 4eaee8754)
+SanityLemmas.lean:44:8: warning: declaration uses `sorry`
+SanityLemmas.lean:50:8: warning: declaration uses `sorry`
+SanityLemmas.lean:54:8: warning: declaration uses `sorry`
+SanityLemmas.lean:59:8: warning: declaration uses `sorry`
+SanityLemmas.lean:62:8: warning: declaration uses `sorry`
+SanityLemmas.lean:64:8: warning: declaration uses `sorry`
+SanityLemmas.lean:71:8: warning: declaration uses `sorry`
+SanityLemmas.lean:77:8: warning: declaration uses `sorry`
+SanityLemmas.lean:82:8: warning: declaration uses `sorry`
+SanityLemmas.lean:87:8: warning: declaration uses `sorry`
+SanityLemmas.lean:93:8: warning: declaration uses `sorry`
+SanityLemmas.lean:100:8: warning: declaration uses `sorry`
+SanityLemmas.lean:108:8: warning: declaration uses `sorry`
+SanityLemmas.lean:126:8: warning: declaration uses `sorry`
+SanityLemmas.lean:138:8: warning: declaration uses `sorry`
+SanityLemmas.lean:149:8: warning: declaration uses `sorry`
+SanityLemmas.lean:164:8: warning: declaration uses `sorry`
+exit code: 0

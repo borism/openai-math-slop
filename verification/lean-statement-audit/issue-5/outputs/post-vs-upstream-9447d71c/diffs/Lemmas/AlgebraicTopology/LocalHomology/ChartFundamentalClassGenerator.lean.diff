@@ -1,0 +1,95 @@
+--- upstream/Lemmas/AlgebraicTopology/LocalHomology/ChartFundamentalClassGenerator.lean
++++ challenge/Lemmas/AlgebraicTopology/LocalHomology/ChartFundamentalClassGenerator.lean
+@@ -13,11 +13,13 @@
+ See the License for the specific language governing permissions and
+ limitations under the License.
++
+ -/
+-module
+ 
+-public import HodgeConjecture.Lemmas.AlgebraicTopology.Singular.RelativePairExcision
++import HodgeConjecture.Lemmas.AlgebraicTopology.Singular.RelativePairExcision
+ 
+ import HodgeConjecture.Lemmas.AlgebraicTopology.LocalHomology.FundamentalClassGenerator
+ import HodgeConjecture.Lemmas.AlgebraicTopology.LocalHomology.PuncturedEuclidean
++
++namespace OAI.AlgebraicTopology.LocalHomology.ChartFundamentalClassGenerator
+ 
+ /-!
+@@ -30,9 +32,10 @@
+ -/
+ 
+-@[expose] public noncomputable section
++noncomputable section
+ 
+-open CategoryTheory Topology
++open _root_.CategoryTheory _root_.Topology
+ 
+-namespace AlgebraicTopology.Singular
++section
++namespace Singular
+ 
+ variable {M : Type} [TopologicalSpace M]
+@@ -41,18 +44,18 @@
+ 
+ lemma chartModelEmbedding_range_eq_target :
+-    Set.range (chartModelEmbedding d e x hx) = (chartModelEmbedding d e x hx).target := by
+-  rw [← Set.image_univ, ← chartModelEmbedding_source d e x hx]
+-  exact (chartModelEmbedding d e x hx).image_source_eq_target
++    Set.range (_root_.OAI.AlgebraicTopology.LocalHomology.ChartFundamentalClass.Singular.chartModelEmbedding d e x hx) = (_root_.OAI.AlgebraicTopology.LocalHomology.ChartFundamentalClass.Singular.chartModelEmbedding d e x hx).target := by
++  rw [← Set.image_univ, ← _root_.OAI.AlgebraicTopology.LocalHomology.ChartFundamentalClass.Singular.chartModelEmbedding_source d e x hx]
++  exact (_root_.OAI.AlgebraicTopology.LocalHomology.ChartFundamentalClass.Singular.chartModelEmbedding d e x hx).image_source_eq_target
+ 
+ /-- The compressed inverse chart as a homeomorphism onto its open target. -/
+ def chartModelTargetHomeomorph :
+-    (Fin d → ℂ) ≃ₜ (chartModelEmbedding d e x hx).target :=
+-  ((chartModelEmbedding d e x hx).isOpenEmbedding
+-      (chartModelEmbedding_source d e x hx)).isEmbedding.toHomeomorph |>.trans
++    (Fin d → ℂ) ≃ₜ (_root_.OAI.AlgebraicTopology.LocalHomology.ChartFundamentalClass.Singular.chartModelEmbedding d e x hx).target :=
++  ((_root_.OAI.AlgebraicTopology.LocalHomology.ChartFundamentalClass.Singular.chartModelEmbedding d e x hx).isOpenEmbedding
++      (_root_.OAI.AlgebraicTopology.LocalHomology.ChartFundamentalClass.Singular.chartModelEmbedding_source d e x hx)).isEmbedding.toHomeomorph |>.trans
+     (Homeomorph.setCongr (chartModelEmbedding_range_eq_target d e x hx))
+ 
+ @[simp]
+ lemma chartModelTargetHomeomorph_apply_val (y : Fin d → ℂ) :
+-    (chartModelTargetHomeomorph d e x hx y).1 = chartModelEmbedding d e x hx y :=
++    (chartModelTargetHomeomorph d e x hx y).1 = _root_.OAI.AlgebraicTopology.LocalHomology.ChartFundamentalClass.Singular.chartModelEmbedding d e x hx y :=
+   rfl
+ 
+@@ -63,22 +66,27 @@
+ dimension. -/
+ lemma span_standardComplexLocalClass_eq_top_for_chart :
+-    Submodule.span ℚ {standardComplexLocalClass ℚ d} = ⊤ := by
++    Submodule.span ℚ {_root_.OAI.AlgebraicTopology.LocalHomology.ComplexClass.Singular.standardComplexLocalClass ℚ d} = ⊤ := by
+   cases d with
+-  | zero => exact span_standardComplexLocalClass_zero_eq_top
++  | zero => exact _root_.OAI.AlgebraicTopology.LocalHomology.FundamentalClassGenerator.Singular.span_standardComplexLocalClass_zero_eq_top
+   | succ n =>
+-      rw [span_standardComplexLocalClass_eq_top_iff]
++      rw [_root_.OAI.AlgebraicTopology.LocalHomology.FundamentalClassGenerator.Singular.span_standardComplexLocalClass_eq_top_iff]
+       have hdeg : (n + 1) * 2 = n * 2 + 2 := by lia
+       rw [hdeg]
+-      exact span_standardLocalClass_add_two_eq_top (n * 2)
++      exact _root_.OAI.AlgebraicTopology.LocalHomology.PuncturedEuclidean.Singular.span_standardLocalClass_add_two_eq_top (n * 2)
+ 
+ /-- The oriented standard complex local class is nonzero in every complex dimension. -/
+ lemma standardComplexLocalClass_ne_zero_for_chart :
+-    standardComplexLocalClass ℚ d ≠ 0 := by
+-  rw [standardComplexLocalClass_ne_zero_iff]
++    _root_.OAI.AlgebraicTopology.LocalHomology.ComplexClass.Singular.standardComplexLocalClass ℚ d ≠ 0 := by
++  rw [_root_.OAI.AlgebraicTopology.LocalHomology.FundamentalClassGenerator.Singular.standardComplexLocalClass_ne_zero_iff]
+   by_cases hd : d = 0
+   · subst d
+-    exact standardLocalClass_zero_ne_zero
+-  · exact standardLocalClass_ne_zero_of_pos (d * 2)
++    exact _root_.OAI.AlgebraicTopology.LocalHomology.FundamentalClassGenerator.Singular.standardLocalClass_zero_ne_zero
++  · exact _root_.OAI.AlgebraicTopology.LocalHomology.PuncturedEuclidean.Singular.standardLocalClass_ne_zero_of_pos (d * 2)
+       (Nat.mul_pos (Nat.pos_of_ne_zero hd) (by norm_num))
+ 
+-end AlgebraicTopology.Singular
++end Singular
++end
++
++end
++
++end OAI.AlgebraicTopology.LocalHomology.ChartFundamentalClassGenerator

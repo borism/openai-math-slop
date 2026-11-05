@@ -1,0 +1,24 @@
+# yaml sources added adc7f1241 -> fd4aeeb2e
+> id: ../preprints/A-Complete-Local-Domain-Without-a-Small-Cohen-Macaulay-Module-September-23-2026
+> id: ../preprints/A-counterexample-to-Hadwigers-conjecture-September-23-2026
+> id: ../preprints/A-stable-coordinate-that-is-not-a-coordinate-in-four-variables-October-5-2026
+> id: ../preprints/Almost-everywhere-Fourier-convergence-in-L-log-L-September-23-2026
+> id: ../preprints/An-explicit-power-saving-for-the-exact-discrete-Fourier-transform-September-25-2026
+> id: ../preprints/Critical-honeycomb-chords-with-prescribed-boundary-endpoints-September-26-2026
+> id: ../preprints/Exact-Derandomization-of-Logarithmic-Space-L-equals-RL-equals-BPL-September-23-2026
+> id: ../preprints/Integral-points-on-character-varieties-of-curves-September-25-2026
+> id: ../preprints/Simulating-One-Tape-Time-in-Two-Fifths-Power-Space-September-25-2026
+> id: ../preprints/The-trace-cone-classifies-Razak-Jacelon-stabilizations-September-25-2026
+> id: ../preprints/Uniform-Cartier-sections-for-Fano-type-contractions-September-25-2026
+# comparator configs added adc7f1241 -> fd4aeeb2e
+> lean/ComparatorChallenges/CartierChartCompactnessSupport.json
+> lean/ComparatorChallenges/CharacterVarietiesAllSeamsSupport.json
+> lean/ComparatorChallenges/FourierLLogL.json
+> lean/ComparatorChallenges/HadwigerCounterexample.json
+> lean/ComparatorChallenges/HoneycombBridgeMassSupport.json
+> lean/ComparatorChallenges/LogspaceEquality.json
+> lean/ComparatorChallenges/OneTapeSpace.json
+> lean/ComparatorChallenges/StableCoordinateFour.json
+> lean/ComparatorChallenges/SurfaceConeCandidateSupport.json
+> lean/ComparatorChallenges/TraceIdealTransportSupport.json
+> lean/ComparatorChallenges/UniformFourier.json

@@ -1,0 +1,41 @@
+--- upstream/Lemmas/AlgebraicTopology/Sheaf/HomologySection.lean
++++ challenge/Lemmas/AlgebraicTopology/Sheaf/HomologySection.lean
+@@ -10,8 +10,10 @@
+ See the License for the specific language governing permissions and
+ limitations under the License.
++
+ -/
+-module
+ 
+-public import HodgeConjecture.Lemmas.AlgebraicTopology.Singular.Sheaf.ChainStalk
++import HodgeConjecture.Lemmas.AlgebraicTopology.Singular.Sheaf.ChainStalk
++
++namespace OAI.AlgebraicTopology.Sheaf.HomologySection
+ 
+ /-!
+@@ -24,11 +26,12 @@
+ -/
+ 
+-@[expose] public noncomputable section
++noncomputable section
+ 
+-open CategoryTheory Limits TopologicalSpace HomologicalComplex Opposite
++open _root_.CategoryTheory Limits _root_.TopologicalSpace _root_.HomologicalComplex Opposite
+ 
+ universe u
+ 
+-namespace AlgebraicTopology.Singular
++section
++namespace Singular
+ 
+ variable (R : Type u) [CommRing R] (X : TopCat.{u})
+@@ -95,3 +98,8 @@
+   inferInstanceAs (PreservesFiniteColimits (TopCat.Presheaf.stalkFunctor AddCommGrpCat.{u} x))
+ 
+-end AlgebraicTopology.Singular
++end Singular
++end
++
++end
++
++end OAI.AlgebraicTopology.Sheaf.HomologySection

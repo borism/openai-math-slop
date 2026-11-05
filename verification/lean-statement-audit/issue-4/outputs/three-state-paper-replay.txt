@@ -1,0 +1,46 @@
+# python3 -I -B verification/reproduce.py --output-dir <new> --jobs 1   (paper's own replay, run on a copy; SymPy 1.14.0, g++ 13.3.0)
+python-environment: PASS (3.70s)
+compiler-version: PASS (0.41s)
+compiler-macros: PASS (1.33s)
+compile-interval: PASS (3.90s)
+compile-grid: PASS (1.12s)
+pair: PASS (7.15s)
+interval-0: PASS (25.53s)
+interval-1: PASS (48.07s)
+interval-2: PASS (61.39s)
+grid--1: PASS (0.97s)
+grid-0: PASS (14.69s)
+grid-1: PASS (15.90s)
+grid-2: PASS (15.80s)
+grid-3: PASS (15.39s)
+grid-4: PASS (15.40s)
+grid-5: PASS (14.69s)
+grid-6: PASS (16.72s)
+grid-7: PASS (16.37s)
+grid-8: PASS (20.47s)
+grid-9: PASS (16.17s)
+grid-10: PASS (16.26s)
+grid-11: PASS (16.10s)
+grid-12: PASS (16.06s)
+grid-13: PASS (14.78s)
+grid-14: PASS (14.84s)
+grid-15: PASS (14.27s)
+grid-16: PASS (15.63s)
+grid-17: PASS (14.49s)
+grid-18: PASS (13.85s)
+grid-19: PASS (16.58s)
+grid-20: PASS (15.17s)
+grid-21: PASS (16.02s)
+grid-22: PASS (15.39s)
+grid-23: PASS (15.54s)
+grid-24: PASS (15.65s)
+grid-25: PASS (15.30s)
+grid-26: PASS (15.36s)
+PASS: /tmp/claude-0/-home-user-openai-math-slop/24550152-40a3-5e1c-8bf9-84dd609cdc7f/scratchpad/agent-issue4/three-state/replay/summary.json
+summary.json: passed=True status=completed processes=37 all_pass=True
+source sha256 checks: {'grid.cpp': True, 'interval.cpp': True, 'pair.py': True}
+# UBSan: g++ -std=c++17 -O2 -UNDEBUG -fsanitize=undefined -fno-sanitize-recover=undefined interval.cpp
+case 0: last=0,23: 414080 runtime-error-lines=0
+case 1: last=1,23: 756096 runtime-error-lines=0
+case 2: last=2,23: 1004426 runtime-error-lines=0
+expected visited-box totals 414080 756096 1004426

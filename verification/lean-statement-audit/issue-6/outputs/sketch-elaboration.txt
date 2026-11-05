@@ -1,0 +1,14 @@
+ReducedInlined.lean:67:8: warning: declaration uses `sorry`
+ReducedInlined.lean:116:8: warning: declaration uses `sorry`
+ReducedInlined.lean:125:8: warning: declaration uses `sorry`
+ReducedInlined.lean:135:8: warning: declaration uses `sorry`
+ReducedInlined.lean:141:8: warning: declaration uses `sorry`
+ReducedInlined.lean:146:8: warning: declaration uses `sorry`
+ReducedInlined.lean:157:8: warning: declaration uses `sorry`
+ReducedInlined.lean:165:8: warning: declaration uses `sorry`
+ReducedInlined.lean:174:8: warning: declaration uses `sorry`
+ReducedInlined.lean:178:8: warning: declaration uses `sorry`
+
+real	0m10.904s
+user	0m4.972s
+sys	0m3.460s

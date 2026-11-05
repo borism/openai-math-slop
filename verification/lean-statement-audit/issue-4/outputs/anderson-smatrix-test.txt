@@ -1,0 +1,1 @@
+trials=300 max|S-S^T|=2.50e-15 max|S*S-1|=4.00e-15 max(||Y^T G Y||-1)=-5.85e-09 max Ward residual=1.07e-13

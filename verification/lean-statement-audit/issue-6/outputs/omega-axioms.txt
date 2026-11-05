@@ -1,0 +1,11 @@
+# lake env lean AxiomsOmega.lean  (Lean 4.34.1, Mathlib d13f23b, openai/math 4eaee8754; solution closure built with lake build)
+OAI.MatrixMultiplication.AuxiliarySeparation.omega_le_nine_quarters : OAI.MatrixMultiplication.Arithmetic.omega ℂ ≤
+  9 / 4
+'OAI.MatrixMultiplication.AuxiliarySeparation.omega_le_nine_quarters' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'OAI.MatrixMultiplication.AuxiliarySeparation.matrix_multiplication_cost_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+def OAI.MatrixMultiplication.Arithmetic.omega.{u_1} : (F : Type u_1) → [Field F] → ℝ :=
+fun F [Field F] => sInf {τ | OAI.MatrixMultiplication.Arithmetic.AdmissibleExponent F τ}

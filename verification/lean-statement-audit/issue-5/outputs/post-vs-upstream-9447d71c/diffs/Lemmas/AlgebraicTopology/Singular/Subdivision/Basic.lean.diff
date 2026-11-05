@@ -1,0 +1,136 @@
+--- upstream/Lemmas/AlgebraicTopology/Singular/Subdivision/Basic.lean
++++ challenge/Lemmas/AlgebraicTopology/Singular/Subdivision/Basic.lean
+@@ -13,9 +13,11 @@
+ See the License for the specific language governing permissions and
+ limitations under the License.
++
+ -/
+-module
+ 
+-public import HodgeConjecture.Lemmas.AlgebraicTopology.Singular.Excision.CoverSmall
+-public import Mathlib.AlgebraicTopology.SimplicialSet.Subdivision
++import HodgeConjecture.Lemmas.AlgebraicTopology.Singular.Excision.CoverSmall
++import Mathlib.AlgebraicTopology.SimplicialSet.Subdivision
++
++namespace OAI.AlgebraicTopology.Singular.SubdivisionBasic
+ 
+ /-!
+@@ -32,16 +34,17 @@
+ -/
+ 
+-@[expose] public section
++section
+ 
+ noncomputable section
+ 
+-open CategoryTheory PartialOrder
++open _root_.CategoryTheory PartialOrder
+ 
+-namespace AlgebraicTopology.Singular
++section
++section
+ 
+ universe u
+ 
+ /-- A nonempty finite chain in a linear order is sent monotonically to its greatest element. -/
+-public noncomputable def nonemptyFiniteChainMaximum (X : Type*) [LinearOrder X] :
++noncomputable def nonemptyFiniteChainMaximum (X : Type*) [LinearOrder X] :
+     NonemptyFiniteChains X →o X where
+   toFun A := A.finset.max' A.nonempty
+@@ -49,5 +52,5 @@
+ 
+ @[simp]
+-public theorem nonemptyFiniteChainMaximum_apply
++theorem nonemptyFiniteChainMaximum_apply
+     {X : Type*} [LinearOrder X] (A : NonemptyFiniteChains X) :
+     nonemptyFiniteChainMaximum X A = A.finset.max' A.nonempty :=
+@@ -55,5 +58,5 @@
+ 
+ /-- Taking the maximum commutes with a monotone map between finite linear orders. -/
+-public theorem nonemptyFiniteChainMaximum_map
++theorem nonemptyFiniteChainMaximum_map
+     {X Y : Type*} [LinearOrder X] [LinearOrder Y]
+     (f : X →o Y) (A : NonemptyFiniteChains X) :
+@@ -70,5 +73,5 @@
+ 
+ /-- The maximum-vertex morphism from chains in the vertex poset of a standard simplex. -/
+-public noncomputable def simplexSubdivisionMaximum (n : SimplexCategory) :
++noncomputable def simplexSubdivisionMaximum (n : SimplexCategory) :
+     (SimplexCategory.toPartOrd.{u} ⋙ PartOrd.nonemptyFiniteChainsFunctor).obj n ⟶
+       SimplexCategory.toPartOrd.{u}.obj n :=
+@@ -77,5 +80,5 @@
+ 
+ /-- Maximum vertex is natural in morphisms of the simplex category. -/
+-public noncomputable def simplexSubdivisionMaximumNatTrans :
++noncomputable def simplexSubdivisionMaximumNatTrans :
+     SimplexCategory.toPartOrd.{u} ⋙ PartOrd.nonemptyFiniteChainsFunctor ⟶
+       SimplexCategory.toPartOrd.{u} where
+@@ -95,5 +98,5 @@
+ /-- The objectwise identification of the standard simplex with the nerve of its vertex order is
+ natural in the simplex category. -/
+-public noncomputable def standardSimplexNerveIso :
++noncomputable def standardSimplexNerveIso :
+     SSet.stdSimplex.{u} ≅
+       SimplexCategory.toPartOrd.{u} ⋙ PartOrd.nerveFunctor :=
+@@ -101,5 +104,5 @@
+ 
+ /-- The last-vertex map from the subdivision model of standard simplices to standard simplices. -/
+-public noncomputable def simplexSubdivisionLastVertex :
++noncomputable def simplexSubdivisionLastVertex :
+     SimplexCategory.sd.{u} ⟶ SSet.stdSimplex.{u} :=
+   Functor.whiskerRight simplexSubdivisionMaximumNatTrans PartOrd.nerveFunctor ≫
+@@ -108,29 +111,29 @@
+ /-- The last-vertex map, viewed with the codomain required by the left Kan extension universal
+ property. -/
+-public noncomputable def simplexSubdivisionLastVertexExtension :
++noncomputable def simplexSubdivisionLastVertexExtension :
+     SimplexCategory.sd.{u} ⟶
+       SSet.stdSimplex.{u} ⋙ Functor.id SSet.{u} :=
+-  simplexSubdivisionLastVertex.{u} ≫
++  simplexSubdivisionLastVertex ≫
+     (Functor.rightUnitor SSet.stdSimplex.{u}).inv
+ 
+ /-- The global last-vertex natural transformation `sd X ⟶ X`, obtained from the defining left
+ Kan extension universal property of simplicial subdivision. -/
+-public noncomputable def subdivisionLastVertex :
++noncomputable def subdivisionLastVertex :
+     SSet.sd.{u} ⟶ Functor.id SSet.{u} :=
+   SSet.sd.descOfIsLeftKanExtension SSet.stdSimplex.sdIso.inv
+     (Functor.id SSet.{u})
+-    simplexSubdivisionLastVertexExtension.{u}
++    simplexSubdivisionLastVertexExtension
+ 
+ /-- On subdivided standard simplices, the global last-vertex map restricts to the maximum-vertex
+ construction above. -/
+-public theorem subdivisionLastVertex_standardSimplex (n : SimplexCategory) :
++theorem subdivisionLastVertex_standardSimplex (n : SimplexCategory) :
+     SSet.stdSimplex.sdIso.inv.app n ≫
+         (subdivisionLastVertex.{u}.app (SSet.stdSimplex.obj n)) =
+       simplexSubdivisionLastVertex.{u}.app n :=
+   SSet.sd.descOfIsLeftKanExtension_fac_app SSet.stdSimplex.sdIso.inv
+-    (Functor.id SSet.{u}) simplexSubdivisionLastVertexExtension.{u} n
++    (Functor.id SSet.{u}) simplexSubdivisionLastVertexExtension n
+ 
+ /-- The chain map induced by the last-vertex map of a simplicial set. -/
+-public noncomputable def subdivisionLastVertexChainMap (X : SSet.{0}) :
++noncomputable def subdivisionLastVertexChainMap (X : SSet.{0}) :
+     (SSet.sd.obj X).chainComplex (AddCommGrpCat.of ℤ) ⟶
+       X.chainComplex (AddCommGrpCat.of ℤ) :=
+@@ -139,5 +142,5 @@
+ /-- The last-vertex chain maps are natural in the simplicial set. -/
+ @[reassoc]
+-public theorem subdivisionLastVertexChainMap_naturality
++theorem subdivisionLastVertexChainMap_naturality
+     {X Y : SSet.{0}} (f : X ⟶ Y) :
+     SSet.chainComplexMap (SSet.sd.map f) (AddCommGrpCat.of ℤ) ≫
+@@ -156,3 +159,9 @@
+   rfl
+ 
+-end AlgebraicTopology.Singular
++end
++end
++
++end
++end
++
++end OAI.AlgebraicTopology.Singular.SubdivisionBasic

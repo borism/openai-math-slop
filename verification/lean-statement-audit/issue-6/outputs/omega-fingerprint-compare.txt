@@ -1,0 +1,16 @@
+# python3 -I compare_fingerprints.py mm-challenge.tsv mm-solution.tsv
+# challenge: ComparatorChallenges.MatrixMultiplication; solution env: import OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Main
+     8  ctor: identical
+    71  def: identical
+     3  induct: identical
+     3  rec: identical
+    24  thm: identical
+     3  thm: missing in solution
+   OAI.MatrixMultiplication.complex_alpha_gt_93_div_200 thm MISSING
+   OAI.MatrixMultiplication.complex_omega_le_nine_quarters thm MISSING
+   OAI.MatrixMultiplication.complex_rectangular_omega_lt_523_div_250 thm MISSING
+
+# target type vs solution theorem type (kind, univ params, type hash):
+OAI.MatrixMultiplication.complex_omega_le_nine_quarters	<local>	thm	[]	4234434550	-
+OAI.MatrixMultiplication.AuxiliarySeparation.omega_le_nine_quarters	OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Main	thm	[]	4234434550	-
+# OAI.MatrixMultiplication.complex_omega_le_nine_quarters in OAI/LinearAlgebra/MatrixMultiplication/Main.lean is defined as AuxiliarySeparation.omega_le_nine_quarters

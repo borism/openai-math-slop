@@ -1,0 +1,16 @@
+--- upstream/Lemmas/AlgebraicTopology/Singular/SubsetChains.lean
++++ challenge/Lemmas/AlgebraicTopology/Singular/SubsetChains.lean
+@@ -15,4 +15,6 @@
+ -/
+ module
++
++public import HodgeConjecture.Mathlib.Geometry.Convex.StdSimplexMetric
+ 
+ public import HodgeConjecture.Lemmas.AlgebraicTopology.Singular.Excision.CoverSmall
+@@ -50,5 +52,5 @@
+     exact (TopCat.of s).toSSetObjEquiv n y t |>.2
+   · intro h
+-    let f : C(stdSimplex ℝ (Fin (n.unop.len + 1)), TopCat.of s) :=
++    let f : C(Convexity.StdSimplex ℝ (Fin (n.unop.len + 1)), TopCat.of s) :=
+       ⟨fun t ↦ ⟨X.toSSetObjEquiv n x t, h ⟨t, rfl⟩⟩,
+         Continuous.subtype_mk (X.toSSetObjEquiv n x).continuous _⟩

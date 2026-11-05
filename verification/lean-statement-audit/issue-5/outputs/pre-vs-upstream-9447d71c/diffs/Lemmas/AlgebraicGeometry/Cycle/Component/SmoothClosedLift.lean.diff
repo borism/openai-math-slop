@@ -1,0 +1,14 @@
+--- upstream/Lemmas/AlgebraicGeometry/Cycle/Component/SmoothClosedLift.lean
++++ challenge/Lemmas/AlgebraicGeometry/Cycle/Component/SmoothClosedLift.lean
+@@ -23,4 +23,5 @@
+   [IsIntegral X.left] [Smooth X.hom] [IsProjective X.hom] (x : X.left)
+ 
++omit [IsIntegral X.left] [Smooth X.hom] in
+ /-- `X ∖ Z_sing` is the complement of the image of the component's singular locus: the
+ filtration index `0` in the definition contributes nothing. -/
+@@ -30,4 +31,5 @@
+         (singularLocusClosed (cycleComponentι X.left x ≫ X.hom) : Set _))ᶜ := rfl
+ 
++omit [IsIntegral X.left] [Smooth X.hom] in
+ /-- The image of the lift is the restriction of the full component support. -/
+ theorem range_cycleComponentSmoothLocusClosedLift :

@@ -1,0 +1,8 @@
+samples=256000
+dn<=13/2Xz       min slack/(Xz)= 3.217112e-08  min abs slack= 2.464e-20  OK
+de>=-79/250Xz    min slack/(Xz)= 5.925087e-02  min abs slack= 6.224e-20  OK
+de<=11Xz         min slack/(Xz)= 5.989946e-08  min abs slack= 4.934e-20  OK
+xpair            min slack/(Xz)= 1.627863e-06  min abs slack=-2.705e-18  OK
+ypair_lo         min slack/(Xz)= 1.201461e-05  min abs slack=-6.850e-21  OK
+ypair_hi         min slack/(Xz)= 2.408613e-05  min abs slack=-1.536e-22  OK
+kpair            min slack/(Xz)= 2.084430e-04  min abs slack=-4.370e-21  OK

@@ -1,0 +1,90 @@
+--- upstream/Lemmas/AlgebraicGeometry/Cycle/Component/Dimension.lean
++++ challenge/Lemmas/AlgebraicGeometry/Cycle/Component/Dimension.lean
+@@ -13,8 +13,13 @@
+ See the License for the specific language governing permissions and
+ limitations under the License.
++
+ -/
+-module
+ 
+-public import HodgeConjecture.Lemmas.AlgebraicGeometry.Cycle.Support
++import HodgeConjecture.Lemmas.AlgebraicGeometry.Cycle.Support
++
++namespace OAI.AlgebraicGeometry.Cycle.ComponentDimension
++
++open _root_.AlgebraicGeometry
++
+ /-!
+ # Dimension of a reduced cycle component
+@@ -32,9 +37,9 @@
+ -/
+ 
+-@[expose] public noncomputable section
++noncomputable section
+ 
+-open CategoryTheory Topology TopologicalSpace
++open _root_.CategoryTheory _root_.Topology _root_.TopologicalSpace
+ 
+-namespace AlgebraicGeometry
++section
+ 
+ /-- Membership in a reduced cycle component is membership in the closure that defines it. -/
+@@ -49,9 +54,9 @@
+ the dimension calculation for a cycle component. -/
+ def cycleComponentOrderIsoIic (X : Scheme) (x : X) :
+-    cycleComponent X x ≃o Set.Iic x :=
+-  let e : cycleComponent X x ≃ Set.Iic x :=
+-    { toFun := fun y ↦ ⟨cycleComponentι X x y, show cycleComponentι X x y ≤ x by
++    _root_.OAI.AlgebraicGeometry.Cycle.Support.cycleComponent X x ≃o Set.Iic x :=
++  let e : _root_.OAI.AlgebraicGeometry.Cycle.Support.cycleComponent X x ≃ Set.Iic x :=
++    { toFun := fun y ↦ ⟨_root_.OAI.AlgebraicGeometry.Cycle.Support.cycleComponentι X x y, show _root_.OAI.AlgebraicGeometry.Cycle.Support.cycleComponentι X x y ≤ x by
+         rw [Scheme.le_iff_specializes, specializes_iff_mem_closure]
+-        exact (mem_cycleComponent_support_iff X x (cycleComponentι X x y)).mp y.2⟩
++        exact (mem_cycleComponent_support_iff X x (_root_.OAI.AlgebraicGeometry.Cycle.Support.cycleComponentι X x y)).mp y.2⟩
+       invFun := fun y ↦ ⟨y.1, by
+         apply (mem_cycleComponent_support_iff X x y.1).mpr
+@@ -62,11 +67,11 @@
+   ⟨e, by
+     intro a b
+-    change (cycleComponentι X x a ≤ cycleComponentι X x b) ↔ a ≤ b
++    change (_root_.OAI.AlgebraicGeometry.Cycle.Support.cycleComponentι X x a ≤ _root_.OAI.AlgebraicGeometry.Cycle.Support.cycleComponentι X x b) ↔ a ≤ b
+     rw [Scheme.le_iff_specializes, Scheme.le_iff_specializes]
+-    exact (cycleComponentι X x).isClosedEmbedding.isInducing.specializes_iff⟩
++    exact (_root_.OAI.AlgebraicGeometry.Cycle.Support.cycleComponentι X x).isClosedEmbedding.isInducing.specializes_iff⟩
+ 
+ @[simp]
+-lemma cycleComponentOrderIsoIic_apply (X : Scheme) (x : X) (y : cycleComponent X x) :
+-    (cycleComponentOrderIsoIic X x y : X) = cycleComponentι X x y :=
++lemma cycleComponentOrderIsoIic_apply (X : Scheme) (x : X) (y : _root_.OAI.AlgebraicGeometry.Cycle.Support.cycleComponent X x) :
++    (cycleComponentOrderIsoIic X x y : X) = _root_.OAI.AlgebraicGeometry.Cycle.Support.cycleComponentι X x y :=
+   rfl
+ 
+@@ -74,5 +79,5 @@
+ lemma cycleComponentOrderIsoIic_symm_apply_coe
+     (X : Scheme) (x : X) (y : Set.Iic x) :
+-    cycleComponentι X x ((cycleComponentOrderIsoIic X x).symm y) = y :=
++    _root_.OAI.AlgebraicGeometry.Cycle.Support.cycleComponentι X x ((cycleComponentOrderIsoIic X x).symm y) = y :=
+   rfl
+ 
+@@ -87,5 +92,5 @@
+ `x` in the ambient scheme. -/
+ lemma orderKrullDim_cycleComponent (X : Scheme) (x : X) :
+-    Order.krullDim (cycleComponent X x) = Order.height x := by
++    Order.krullDim (_root_.OAI.AlgebraicGeometry.Cycle.Support.cycleComponent X x) = Order.height x := by
+   rw [Order.krullDim_eq_of_orderIso (cycleComponentOrderIsoIic X x)]
+   exact (Order.height_eq_krullDim_Iic x).symm
+@@ -94,7 +99,11 @@
+ height of `x` in the ambient scheme. -/
+ lemma topologicalKrullDim_cycleComponent (X : Scheme) (x : X) :
+-    topologicalKrullDim (cycleComponent X x) = Order.height x := by
+-  rw [Scheme.topologicalKrullDim_eq_orderKrullDim]
++    topologicalKrullDim (_root_.OAI.AlgebraicGeometry.Cycle.Support.cycleComponent X x) = Order.height x := by
++  rw [_root_.OAI.AlgebraicGeometry.Cycle.ComponentDimension.Scheme.topologicalKrullDim_eq_orderKrullDim]
+   exact orderKrullDim_cycleComponent X x
+ 
+-end AlgebraicGeometry
++end
++
++end
++
++end OAI.AlgebraicGeometry.Cycle.ComponentDimension

@@ -1,0 +1,782 @@
+tree ./ComparatorChallenges: 678 files
+lines scanned: 143915
+
+pattern counts (code only; comments/strings stripped):
+  axiom decl                                           0
+  sorry                                                548
+  admit                                                0
+  native_decide                                        0
+  Lean.ofReduceBool / ofReduceNat (compiler-trusting axiom) 0
+  decide +kernel (kernel reduction, no extra axiom)    0
+  trustCompiler                                        0
+  implemented_by                                       0
+  extern                                               0
+  unsafe                                               0
+  opaque decl                                          0
+  partial def                                          0
+  run_tac                                              0
+  elab/macro/syntax definition                         102
+  set_option (any)                                     294
+  set_option debug.skipKernelTC                        0
+  set_option allowUnsafeReducibility                   0
+  set_option maxHeartbeats 0                           0
+  set_option autoImplicit true                         0
+  Decidable instance override (instance : Decidable)   0
+  csimp attribute                                      0
+  addDecl / Environment manipulation                   84
+
+hits for hard trust patterns:
+  [sorry] lean/ComparatorChallenges/AbhyankarSathaye.lean:17: sorry
+  [sorry] lean/ComparatorChallenges/AffineBernstein.lean:88: sorry
+  [sorry] lean/ComparatorChallenges/AlgorithmicThinTrees.lean:192: sorry
+  [sorry] lean/ComparatorChallenges/AmplitudeDamping.lean:122: sorry
+  [sorry] lean/ComparatorChallenges/ArnoldCounterexample.lean:114: sorry
+  [sorry] lean/ComparatorChallenges/ArtinCAT0.lean:73: sorry
+  [sorry] lean/ComparatorChallenges/ArtinParabolicIntersections.lean:103: sorry
+  [sorry] lean/ComparatorChallenges/ArtinParabolicIntersections.lean:111: sorry
+  [sorry] lean/ComparatorChallenges/ArtinParabolicIntersections.lean:117: sorry
+  [sorry] lean/ComparatorChallenges/ArtinParabolicIntersections.lean:125: sorry
+  [sorry] lean/ComparatorChallenges/AsymptoticallyMinimalLittlewood.lean:19: sorry
+  [sorry] lean/ComparatorChallenges/AtomicGaussian.lean:246: sorry
+  [sorry] lean/ComparatorChallenges/AuslanderReiten.lean:71: sorry
+  [sorry] lean/ComparatorChallenges/BackwardIntertwiners.lean:39: sorry
+  [sorry] lean/ComparatorChallenges/BalancedBoxRouting.lean:92: sorry
+  [sorry] lean/ComparatorChallenges/BalancedRyser.lean:40: sorry
+  [sorry] lean/ComparatorChallenges/BalancedThreeStack.lean:235: sorry
+  [sorry] lean/ComparatorChallenges/BallPacking.lean:39: sorry
+  [sorry] lean/ComparatorChallenges/BallPackingNecessity.lean:41: sorry
+  [sorry] lean/ComparatorChallenges/BarnetteHamiltonian.lean:49: sorry
+  [sorry] lean/ComparatorChallenges/BassTorsionFree.lean:307: sorry
+  [sorry] lean/ComparatorChallenges/BassTrace.lean:475: by sorry
+  [sorry] lean/ComparatorChallenges/BenjaminiSchramm.lean:220: sorry
+  [sorry] lean/ComparatorChallenges/BenjaminiSchramm.lean:226: sorry
+  [sorry] lean/ComparatorChallenges/BenjaminiSchramm.lean:236: sorry
+  [sorry] lean/ComparatorChallenges/BernoulliNonflatInSeven.lean:80: sorry
+  [sorry] lean/ComparatorChallenges/BiholderTransport.lean:121: sorry
+  [sorry] lean/ComparatorChallenges/BinPackingGap.lean:372: sorry
+  [sorry] lean/ComparatorChallenges/BinaryEditLower.lean:56: sorry
+  [sorry] lean/ComparatorChallenges/BinaryMatching.lean:72: sorry
+  [sorry] lean/ComparatorChallenges/BinarySweep.lean:100: sorry
+  [sorry] lean/ComparatorChallenges/BipartiteCrossing.lean:61: sorry
+  [sorry] lean/ComparatorChallenges/BogomolovPopInjectivity.lean:125: sorry
+  [sorry] lean/ComparatorChallenges/BoltzmannNonuniqueness.lean:209: sorry
+  [sorry] lean/ComparatorChallenges/BooneHigman.lean:28: sorry
+  [sorry] lean/ComparatorChallenges/BorsukNine.lean:30: sorry
+  [sorry] lean/ComparatorChallenges/BoundedRecovery.lean:96: sorry
+  [sorry] lean/ComparatorChallenges/BoundedTreePotentials.lean:348: sorry
+  [sorry] lean/ComparatorChallenges/BoundedTreewidthL1.lean:44: sorry
+  [sorry] lean/ComparatorChallenges/Brenier.lean:86: sorry
+  [sorry] lean/ComparatorChallenges/Brenier.lean:102: sorry
+  [sorry] lean/ComparatorChallenges/Brennan.lean:48: sorry
+  [sorry] lean/ComparatorChallenges/BrennanSharp.lean:37: sorry
+  [sorry] lean/ComparatorChallenges/BufferedIsing.lean:109: sorry
+  [sorry] lean/ComparatorChallenges/C0Absorption.lean:29: theorem main_result : MainConclusion := by sorry
+  [sorry] lean/ComparatorChallenges/C1EntropyCounterexample.lean:67: sorry
+  [sorry] lean/ComparatorChallenges/CHObstruction.lean:101: sorry
+  [sorry] lean/ComparatorChallenges/CKSBondiPenrose.lean:3353: sorry
+  [sorry] lean/ComparatorChallenges/CKSBondiPenrose.lean:3593: sorry
+  [sorry] lean/ComparatorChallenges/CannonGeometricAction.lean:94: sorry
+  [sorry] lean/ComparatorChallenges/CartierChartCompactnessSupport.lean:30: sorry
+  [sorry] lean/ComparatorChallenges/Catalan.lean:9: sorry
+  [sorry] lean/ComparatorChallenges/CayleyPercolation.lean:80: sorry
+  [sorry] lean/ComparatorChallenges/CharacterCriterion.lean:2132: Nonempty (A ≃⋆ₐ[ℂ] MinTensor.Algebra A JiangSu.Algebra) := by sorry
+  [sorry] lean/ComparatorChallenges/CharacterVarietiesAllSeamsSupport.lean:19: sorry
+  [sorry] lean/ComparatorChallenges/ChoicelessPolynomialTime.lean:554: sorry
+  [sorry] lean/ComparatorChallenges/CirculantHadamard.lean:26: sorry
+  [sorry] lean/ComparatorChallenges/ClassicalON.lean:54: sorry
+  [sorry] lean/ComparatorChallenges/CliqueFreeLog.lean:17: sorry
+  [sorry] lean/ComparatorChallenges/CoarseAssembly.lean:6641: sorry
+  [sorry] lean/ComparatorChallenges/CoboundaryExpanders.lean:92: sorry
+  [sorry] lean/ComparatorChallenges/CommonBasesFPRAS.lean:129: sorry
+  [sorry] lean/ComparatorChallenges/CommutingDerivations.lean:67: sorry
+  [sorry] lean/ComparatorChallenges/CompactBanach.lean:30: sorry
+  [sorry] lean/ComparatorChallenges/CompleteCrossing.lean:83: sorry
+  [sorry] lean/ComparatorChallenges/CompleteCrouzeix.lean:34: sorry
+  [sorry] lean/ComparatorChallenges/ComplexCancellation.lean:26: sorry
+  [sorry] lean/ComparatorChallenges/Conductivity.lean:78: sorry
+  [sorry] lean/ComparatorChallenges/ConjugatePoints.lean:110: sorry
+  [sorry] lean/ComparatorChallenges/ContingencyTables.lean:211: theorem boundedSampling : Algorithms.BoundedSamplingStatement := by sorry
+  [sorry] lean/ComparatorChallenges/ContingencyTables.lean:214: theorem exactSampling : Algorithms.ExactSamplingStatement := by sorry
+  [sorry] lean/ComparatorChallenges/ContingencyTables.lean:217: theorem counting : Algorithms.CountingStatement := by sorry
+  [sorry] lean/ComparatorChallenges/ContinuousCircleWeight.lean:51: sorry
+  [sorry] lean/ComparatorChallenges/ContinuumCoulombHardness.lean:547: sorry
+  [sorry] lean/ComparatorChallenges/ContinuumCoulombHardness.lean:550: sorry
+  [sorry] lean/ComparatorChallenges/ContinuumTransition.lean:60: sorry
+  [sorry] lean/ComparatorChallenges/CoordinateSweeps.lean:304: sorry
+  [sorry] lean/ComparatorChallenges/CoordinateSweeps.lean:308: sorry
+  [sorry] lean/ComparatorChallenges/CoordinateTrace.lean:367: sorry
+  [sorry] lean/ComparatorChallenges/Cotype.lean:54: sorry
+  [sorry] lean/ComparatorChallenges/CoulombCounterexample.lean:96: sorry
+  [sorry] lean/ComparatorChallenges/CoulombIonization.lean:93: sorry
+  [sorry] lean/ComparatorChallenges/CoulombRadii.lean:84: sorry
+  [sorry] lean/ComparatorChallenges/CourtadeKumar.lean:70: sorry
+  [sorry] lean/ComparatorChallenges/CoveringDensity.lean:114: sorry
+  [sorry] lean/ComparatorChallenges/CriticalPercolation.lean:58: sorry
+  [sorry] lean/ComparatorChallenges/CriticalSK.lean:123: sorry
+  [sorry] lean/ComparatorChallenges/CriticalSK.lean:134: sorry
+  [sorry] lean/ComparatorChallenges/CriticalSK.lean:143: sorry
+  [sorry] lean/ComparatorChallenges/CriticalSKMixing.lean:74: sorry
+  [sorry] lean/ComparatorChallenges/CriticalStripMass.lean:77: sorry
+  [sorry] lean/ComparatorChallenges/CriticalZ3.lean:59: sorry
+  [sorry] lean/ComparatorChallenges/CrouzeixHilbert.lean:152: sorry
+  [sorry] lean/ComparatorChallenges/CubicTorus.lean:93: sorry
+  [sorry] lean/ComparatorChallenges/CycleCliqueRamsey.lean:27: sorry
+  [sorry] lean/ComparatorChallenges/CycleDecomposition.lean:32: sorry
+  [sorry] lean/ComparatorChallenges/CylinderCovering.lean:569: sorry
+  [sorry] lean/ComparatorChallenges/DaugavetModuli.lean:83: sorry
+  [sorry] lean/ComparatorChallenges/DaugavetModuli.lean:89: sorry
+  [sorry] lean/ComparatorChallenges/DaugavetModuli.lean:102: sorry
+  [sorry] lean/ComparatorChallenges/DefocusingNLS.lean:275: sorry
+  [sorry] lean/ComparatorChallenges/DefocusingNLS.lean:291: sorry
+  [sorry] lean/ComparatorChallenges/DefocusingNLS.lean:299: sorry
+  [sorry] lean/ComparatorChallenges/DegreeRigidity.lean:39: sorry
+  [sorry] lean/ComparatorChallenges/DeligneDrinfeld.lean:190: sorry
+  [sorry] lean/ComparatorChallenges/DepthFive.lean:130: sorry
+  [sorry] lean/ComparatorChallenges/DepthThree.lean:140: sorry
+  [sorry] lean/ComparatorChallenges/DiamondDistortion.lean:310: sorry
+  [sorry] lean/ComparatorChallenges/DilutedSpin.lean:150: sorry
+  [sorry] lean/ComparatorChallenges/DimensionTenChannel.lean:49: sorry
+  [sorry] lean/ComparatorChallenges/DimensionTenPair.lean:120: sorry
+  [sorry] lean/ComparatorChallenges/DirectCrouzeix.lean:35: sorry
+  [sorry] lean/ComparatorChallenges/DirectCrouzeix.lean:38: sorry
+  [sorry] lean/ComparatorChallenges/DirectedFeedback.lean:99: sorry
+  [sorry] lean/ComparatorChallenges/DirectionalBallisticity.lean:96: sorry
+  [sorry] lean/ComparatorChallenges/DirectionalWalk.lean:88: annealed μ 0 (escape ℓ) = 0 ∨ annealed μ 0 (escape ℓ) = 1 := by sorry
+  [sorry] lean/ComparatorChallenges/DirichletSevenEighths.lean:12: sorry
+  [sorry] lean/ComparatorChallenges/DiscreteLipschitzFree.lean:157: sorry
+  [sorry] lean/ComparatorChallenges/DiskMaximal.lean:57: sorry
+  [sorry] lean/ComparatorChallenges/Dixmier.lean:45: sorry
+  [sorry] lean/ComparatorChallenges/DixmierAllDiscrete.lean:44: sorry
+  [sorry] lean/ComparatorChallenges/DoublingHilbert.lean:26: sorry
+  [sorry] lean/ComparatorChallenges/DukePrimeDegree.lean:211: sorry
+  [sorry] lean/ComparatorChallenges/DukePrimeDegree.lean:227: sorry
+  [sorry] lean/ComparatorChallenges/DuttaDomain.lean:75: sorry
+  [sorry] lean/ComparatorChallenges/DyadicAvoidance.lean:18: sorry
+  [sorry] lean/ComparatorChallenges/EditApproximation.lean:19166: sorry
+  [sorry] lean/ComparatorChallenges/EditDistance.lean:68: sorry
+  [sorry] lean/ComparatorChallenges/EgyptianFractions.lean:55: sorry
+  [sorry] lean/ComparatorChallenges/EgyptianFractions.lean:62: sorry
+  [sorry] lean/ComparatorChallenges/EgyptianFractions.lean:69: sorry
+  [sorry] lean/ComparatorChallenges/EgyptianFractions.lean:76: sorry
+  [sorry] lean/ComparatorChallenges/EgyptianFractions.lean:83: sorry
+  [sorry] lean/ComparatorChallenges/EgyptianFractions.lean:87: sorry
+  [sorry] lean/ComparatorChallenges/EgyptianFractions.lean:96: sorry
+  [sorry] lean/ComparatorChallenges/EgyptianFractions.lean:105: sorry
+  [sorry] lean/ComparatorChallenges/EgyptianFractions.lean:118: sorry
+  [sorry] lean/ComparatorChallenges/EilenbergGanea.lean:118: sorry
+  [sorry] lean/ComparatorChallenges/EinsteinFour.lean:194: sorry
+  [sorry] lean/ComparatorChallenges/EinsteinFour.lean:203: sorry
+  [sorry] lean/ComparatorChallenges/EinsteinFour.lean:216: sorry
+  [sorry] lean/ComparatorChallenges/ElasticityUniqueness.lean:104: sorry
+  [sorry] lean/ComparatorChallenges/ElementaryPositivity.lean:61: sorry
+  [sorry] lean/ComparatorChallenges/ElementaryPositivity.lean:70: sorry
+  [sorry] lean/ComparatorChallenges/EntangledGames.lean:74: sorry
+  [sorry] lean/ComparatorChallenges/EntropyPhotonNumber.lean:106: sorry
+  [sorry] lean/ComparatorChallenges/ErdosReciprocal.lean:32: sorry
+  [sorry] lean/ComparatorChallenges/EuclideanFiveColor.lean:11: sorry
+  [sorry] lean/ComparatorChallenges/EuclideanRamsey.lean:46: sorry
+  [sorry] lean/ComparatorChallenges/EuclideanRamseyCircle.lean:24: sorry
+  [sorry] lean/ComparatorChallenges/EuclideanRamseyNine.lean:31: sorry
+  [sorry] lean/ComparatorChallenges/EuclideanRamseyQuadratic.lean:38: sorry
+  [sorry] lean/ComparatorChallenges/EuclideanRamseySpherical.lean:22: sorry
+  [sorry] lean/ComparatorChallenges/EuclideanRamseyTransitive.lean:25: sorry
+  [sorry] lean/ComparatorChallenges/EvenBarker.lean:23: sorry
+  [sorry] lean/ComparatorChallenges/ExactFourier.lean:58: sorry
+  [sorry] lean/ComparatorChallenges/ExactInfiniteness.lean:168: sorry
+  [sorry] lean/ComparatorChallenges/ExactInfiniteness.lean:173: sorry
+  [sorry] lean/ComparatorChallenges/ExactQuantumFactoring.lean:150: sorry
+  [sorry] lean/ComparatorChallenges/FKCRT.lean:209: sorry
+  [sorry] lean/ComparatorChallenges/FactorGeneration.lean:44: sorry
+  [sorry] lean/ComparatorChallenges/FalconerAllDimensions.lean:15: sorry
+  [sorry] lean/ComparatorChallenges/FillingCoefficient.lean:126: sorry
+  [sorry] lean/ComparatorChallenges/FiniteCircle.lean:226: sorry
+  [sorry] lean/ComparatorChallenges/FiniteCongruenceGraph.lean:59: sorry
+  [sorry] lean/ComparatorChallenges/FiniteEntropySeparation.lean:119: sorry
+  [sorry] lean/ComparatorChallenges/FiniteFactor.lean:42: sorry
+  [sorry] lean/ComparatorChallenges/FinitisticAsymmetry.lean:35: sorry
+  [sorry] lean/ComparatorChallenges/FixedClauseThreshold.lean:52: sorry
+  [sorry] lean/ComparatorChallenges/ForcedNavierStokesComputation.lean:230: sorry
+  [sorry] lean/ComparatorChallenges/ForestSpace.lean:462: sorry
+  [sorry] lean/ComparatorChallenges/FormulaHitting.lean:62: sorry
+  [sorry] lean/ComparatorChallenges/FoulkesHowe.lean:44: sorry
+  [sorry] lean/ComparatorChallenges/FourRowPermanent.lean:43: sorry
+  [sorry] lean/ComparatorChallenges/FourierLLogL.lean:22: sorry
+  [sorry] lean/ComparatorChallenges/FreeIsing.lean:89: sorry
+  [sorry] lean/ComparatorChallenges/FreeUniformSpanningForest.lean:143: sorry
+  [sorry] lean/ComparatorChallenges/GammaPassage.lean:108: sorry
+  [sorry] lean/ComparatorChallenges/GaussianFiniteEntropy.lean:199: sorry
+  [sorry] lean/ComparatorChallenges/GaussianInformation.lean:105: sorry
+  [sorry] lean/ComparatorChallenges/GaussianInformation.lean:139: sorry
+  [sorry] lean/ComparatorChallenges/GaussianInformation.lean:200: theorem kernel_coercivity : CoercivityStatement := by sorry
+  [sorry] lean/ComparatorChallenges/GaussianInformation.lean:201: theorem actual_row_drift : DriftStatement := by sorry
+  [sorry] lean/ComparatorChallenges/GaussianMoat.lean:37: sorry
+  [sorry] lean/ComparatorChallenges/GaussianPropeller.lean:39: sorry
+  [sorry] lean/ComparatorChallenges/GaussianReplacement.lean:434: sorry
+  [sorry] lean/ComparatorChallenges/GaussianReplacement.lean:455: sorry
+  [sorry] lean/ComparatorChallenges/GaussianReplacement.lean:466: sorry
+  [sorry] lean/ComparatorChallenges/GaussianReplacement.lean:487: sorry
+  [sorry] lean/ComparatorChallenges/GaussianReplacement.lean:500: sorry
+  [sorry] lean/ComparatorChallenges/GaussianReplacement.lean:503: sorry
+  [sorry] lean/ComparatorChallenges/GaussianReplacement.lean:506: sorry
+  [sorry] lean/ComparatorChallenges/GaussianReplacement.lean:509: sorry
+  [sorry] lean/ComparatorChallenges/GaussianReplacement.lean:512: sorry
+  [sorry] lean/ComparatorChallenges/GaussianReplacement.lean:515: sorry
+  [sorry] lean/ComparatorChallenges/GaussianReplacement.lean:518: sorry
+  [sorry] lean/ComparatorChallenges/GeneralMahler.lean:32: sorry
+  [sorry] lean/ComparatorChallenges/GeneralizedStarHeight.lean:44: sorry
+  [sorry] lean/ComparatorChallenges/GotsmanLinial.lean:50: sorry
+  [sorry] lean/ComparatorChallenges/GrahamSpherical.lean:59: sorry
+  [sorry] lean/ComparatorChallenges/GrothendieckElementaryExpansion.lean:472: sorry
+  [sorry] lean/ComparatorChallenges/GroupRingDeterminant.lean:53: sorry
+  [sorry] lean/ComparatorChallenges/HadamardCubeFiber.lean:33: sorry
+  [sorry] lean/ComparatorChallenges/HadwigerCounterexample.lean:47: sorry
+  [sorry] lean/ComparatorChallenges/HadwigerCounterexample.lean:52: sorry
+  [sorry] lean/ComparatorChallenges/HalvingLines.lean:52: sorry
+  [sorry] lean/ComparatorChallenges/HardSphere.lean:384: sorry
+  [sorry] lean/ComparatorChallenges/HarmonicArtin.lean:61: sorry
+  [sorry] lean/ComparatorChallenges/HarmonicGrowth.lean:98: theorem main : MainClaim := by sorry
+  [sorry] lean/ComparatorChallenges/HeckeSevenEighths.lean:239: (hpole : ¬ (χ.residue = 1 ∧ s = 1)) : LFunction χ s ≠ 0 := by sorry
+  [sorry] lean/ComparatorChallenges/HeilbronnTriangle.lean:57: sorry
+  [sorry] lean/ComparatorChallenges/HeilbronnTriangle.lean:62: sorry
+  [sorry] lean/ComparatorChallenges/Heisenberg.lean:212: sorry
+  [sorry] lean/ComparatorChallenges/HenonEmden.lean:27: sorry
+  [sorry] lean/ComparatorChallenges/HilbertCrouzeix.lean:118: sorry
+  [sorry] lean/ComparatorChallenges/HilbertCrouzeix.lean:129: sorry
+  [sorry] lean/ComparatorChallenges/HilbertCrouzeix.lean:134: sorry
+  [sorry] lean/ComparatorChallenges/HilbertCrouzeix.lean:137: sorry
+  [sorry] lean/ComparatorChallenges/HodgeConjectureCMAbelianVarieties/Challenge.lean:43: sorry
+  [sorry] lean/ComparatorChallenges/HoneycombBridgeFiniteness.lean:61: sorry
+  [sorry] lean/ComparatorChallenges/HoneycombBridgeMassSupport.lean:73: sorry
+  [sorry] lean/ComparatorChallenges/HoneycombFreeEnergy.lean:66: sorry
+  [sorry] lean/ComparatorChallenges/HotSpots.lean:52: sorry
+  [sorry] lean/ComparatorChallenges/HyperbolicCones.lean:75: sorry
+  [sorry] lean/ComparatorChallenges/HyperbolicObstruction.lean:154: theorem main : MainStatement.{u} := by sorry
+  [sorry] lean/ComparatorChallenges/HyperinvariantSubspaces.lean:39: sorry
+  [sorry] lean/ComparatorChallenges/IndependentProducts.lean:93: sorry
+  [sorry] lean/ComparatorChallenges/IndependentProducts.lean:100: sorry
+  [sorry] lean/ComparatorChallenges/IndependentProducts.lean:107: sorry
+  [sorry] lean/ComparatorChallenges/IndependentProducts.lean:114: sorry
+  [sorry] lean/ComparatorChallenges/IndependentSets.lean:79: sorry
+  [sorry] lean/ComparatorChallenges/IndividualStrongInfiniteness.lean:326: sorry
+  [sorry] lean/ComparatorChallenges/InfiniteMatroid.lean:30: sorry
+  [sorry] lean/ComparatorChallenges/InfiniteMatroidCorollaries.lean:117: sorry
+  [sorry] lean/ComparatorChallenges/InfiniteMatroidCorollaries.lean:124: sorry
+  [sorry] lean/ComparatorChallenges/InterpolatedFactors.lean:219: sorry
+  [sorry] lean/ComparatorChallenges/InvariantIsing.lean:298: sorry
+  [sorry] lean/ComparatorChallenges/InvariantIsing.lean:320: sorry
+  [sorry] lean/ComparatorChallenges/InvariantIsing.lean:337: sorry
+  [sorry] lean/ComparatorChallenges/InvariantIsing.lean:355: sorry
+  [sorry] lean/ComparatorChallenges/InvariantIsing.lean:375: sorry
+  [sorry] lean/ComparatorChallenges/InvariantIsing.lean:400: sorry
+  [sorry] lean/ComparatorChallenges/InvariantIsing.lean:419: sorry
+  [sorry] lean/ComparatorChallenges/InvariantIsing.lean:441: sorry
+  [sorry] lean/ComparatorChallenges/InvariantIsing.lean:455: sorry
+  [sorry] lean/ComparatorChallenges/InvariantIsing.lean:469: sorry
+  [sorry] lean/ComparatorChallenges/InvariantIsing.lean:489: sorry
+  [sorry] lean/ComparatorChallenges/IrrationalRotation.lean:841: sorry
+  [sorry] lean/ComparatorChallenges/IrrationalRotation.lean:845: sorry
+  [sorry] lean/ComparatorChallenges/IrrationalTriangleBilliard.lean:121: sorry
+  [sorry] lean/ComparatorChallenges/IsingFiniteness.lean:89: sorry
+  [sorry] lean/ComparatorChallenges/IsometricImmersion.lean:56: sorry
+  [sorry] lean/ComparatorChallenges/Jacobsthal.lean:25: sorry
+  [sorry] lean/ComparatorChallenges/JacobsthalImproved.lean:23: sorry
+  [sorry] lean/ComparatorChallenges/JointDickman.lean:49: sorry
+  [sorry] lean/ComparatorChallenges/JointDickman.lean:55: sorry
+  [sorry] lean/ComparatorChallenges/JointDickman.lean:61: sorry
+  [sorry] lean/ComparatorChallenges/KLInvariance.lean:95: sorry
+  [sorry] lean/ComparatorChallenges/KMedianRecovery.lean:103: sorry
+  [sorry] lean/ComparatorChallenges/KMedianRefinedRecovery.lean:163: sorry
+  [sorry] lean/ComparatorChallenges/KMedianThreshold.lean:104: sorry
+  [sorry] lean/ComparatorChallenges/KServer.lean:63: sorry
+  [sorry] lean/ComparatorChallenges/KadisonRingrose.lean:36: sorry
+  [sorry] lean/ComparatorChallenges/KadisonSimilarity.lean:108: sorry
+  [sorry] lean/ComparatorChallenges/KadisonSimilarity.lean:112: sorry
+  [sorry] lean/ComparatorChallenges/KadisonSimilarity.lean:116: sorry
+  [sorry] lean/ComparatorChallenges/KahlerSplitting.lean:133: sorry
+  [sorry] lean/ComparatorChallenges/KaplanskyDirectFiniteness.lean:13: sorry
+  [sorry] lean/ComparatorChallenges/KaplanskyFinitelyPresented.lean:12: sorry
+  [sorry] lean/ComparatorChallenges/KaplanskyQuasitrace.lean:49: sorry
+  [sorry] lean/ComparatorChallenges/KaplanskyStableFiniteness.lean:241: sorry
+  [sorry] lean/ComparatorChallenges/Kervaire.lean:33: sorry
+  [sorry] lean/ComparatorChallenges/KoebeCircleDomains.lean:66: sorry
+  [sorry] lean/ComparatorChallenges/KoebeCircleDomains.lean:73: sorry
+  [sorry] lean/ComparatorChallenges/Laughlin.lean:62: sorry
+  [sorry] lean/ComparatorChallenges/LaughlinFock.lean:60: sorry
+  [sorry] lean/ComparatorChallenges/LaughlinGap.lean:79: sorry
+  [sorry] lean/ComparatorChallenges/LaughlinPlanar.lean:78: sorry
+  [sorry] lean/ComparatorChallenges/LiebThirring.lean:95: sorry
+  [sorry] lean/ComparatorChallenges/LipschitzEquivalence.lean:39: sorry
+  [sorry] lean/ComparatorChallenges/LipschitzHilbert.lean:65: sorry
+  [sorry] lean/ComparatorChallenges/LipschitzHilbert.lean:74: sorry
+  [sorry] lean/ComparatorChallenges/ListHadwiger.lean:31: sorry
+  [sorry] lean/ComparatorChallenges/LittleFinitistic.lean:29: sorry
+  [sorry] lean/ComparatorChallenges/LittlewoodFiniteFlatness.lean:35: sorry
+  [sorry] lean/ComparatorChallenges/LocalSmoothing.lean:96: sorry
+  [sorry] lean/ComparatorChallenges/LocalSmoothing.lean:106: sorry
+  [sorry] lean/ComparatorChallenges/LocalSmoothing.lean:117: sorry
+  [sorry] lean/ComparatorChallenges/LocalSmoothing.lean:126: sorry
+  [sorry] lean/ComparatorChallenges/LocalSmoothing.lean:131: sorry
+  [sorry] lean/ComparatorChallenges/LocalSmoothing.lean:141: sorry
+  [sorry] lean/ComparatorChallenges/LogBrunnMinkowski.lean:35: sorry
+  [sorry] lean/ComparatorChallenges/LogConcaveQuery.lean:87: sorry
+  [sorry] lean/ComparatorChallenges/LogKodairaFiberNegative.lean:239: ∀ (m : ℕ), 0 < m → ∀ s : X.RationalPluriform m, s ∈ E.sections m → s = 0 := by sorry
+  [sorry] lean/ComparatorChallenges/LogspaceEquality.lean:138: sorry
+  [sorry] lean/ComparatorChallenges/MUBSix.lean:60: sorry
+  [sorry] lean/ComparatorChallenges/MahlerConjecture.lean:20: sorry
+  [sorry] lean/ComparatorChallenges/MarkovType.lean:73: sorry
+  [sorry] lean/ComparatorChallenges/MassAction.lean:54: sorry
+  [sorry] lean/ComparatorChallenges/MatchingAffineLift.lean:31: sorry
+  [sorry] lean/ComparatorChallenges/MatchingEntropy.lean:63: sorry
+  [sorry] lean/ComparatorChallenges/MatchingEntropyBounds.lean:78: sorry
+  [sorry] lean/ComparatorChallenges/MatchingFPRAS.lean:106: sorry
+  [sorry] lean/ComparatorChallenges/MatchingPSD.lean:51: sorry
+  [sorry] lean/ComparatorChallenges/MatrixFields.lean:112: sorry
+  [sorry] lean/ComparatorChallenges/MatrixMultiplication.lean:120: sorry
+  [sorry] lean/ComparatorChallenges/MatrixMultiplication.lean:124: sorry
+  [sorry] lean/ComparatorChallenges/MatrixMultiplication.lean:128: sorry
+  [sorry] lean/ComparatorChallenges/MatrixRemoval.lean:71: sorry
+  [sorry] lean/ComparatorChallenges/MatroidProphet.lean:90: sorry
+  [sorry] lean/ComparatorChallenges/MatroidSecretary.lean:236: sorry
+  [sorry] lean/ComparatorChallenges/MatroidSecretary.lean:239: sorry
+  [sorry] lean/ComparatorChallenges/MatroidSecretary.lean:242: sorry
+  [sorry] lean/ComparatorChallenges/MaximalSeshadriConstants.lean:410: sorry
+  [sorry] lean/ComparatorChallenges/MemoryPrecision.lean:806: sorry
+  [sorry] lean/ComparatorChallenges/MetricEntropyDuality.lean:53: sorry
+  [sorry] lean/ComparatorChallenges/MetricKMedian.lean:62: sorry
+  [sorry] lean/ComparatorChallenges/MidpointLenses.lean:337: sorry
+  [sorry] lean/ComparatorChallenges/MinUncut.lean:126: sorry
+  [sorry] lean/ComparatorChallenges/Nagata.lean:182: sorry
+  [sorry] lean/ComparatorChallenges/Nagata.lean:363: sorry
+  [sorry] lean/ComparatorChallenges/Nagata.lean:366: sorry
+  [sorry] lean/ComparatorChallenges/Naimark.lean:51: sorry
+  [sorry] lean/ComparatorChallenges/NavierStokesAlternating.lean:241: sorry
+  [sorry] lean/ComparatorChallenges/NavierStokesVelocity.lean:454: w.liftOn word (by sorry)
+  [sorry] lean/ComparatorChallenges/NavierStokesVelocity.lean:1270: ∀ t ≥ 0, (∀ X, v t X = u t X) ∧ (∀ X, p t X = 0)) := by sorry
+  [sorry] lean/ComparatorChallenges/NodalLength.lean:56: sorry
+  [sorry] lean/ComparatorChallenges/NoiselessRegression.lean:119: sorry
+  [sorry] lean/ComparatorChallenges/NuclearUltrapower.lean:209: sorry
+  [sorry] lean/ComparatorChallenges/OccupiedOverlap.lean:261: sorry
+  [sorry] lean/ComparatorChallenges/OccupiedOverlap.lean:264: sorry
+  [sorry] lean/ComparatorChallenges/OddKaplansky.lean:27: sorry
+  [sorry] lean/ComparatorChallenges/OneTapeSpace.lean:263: sorry
+  [sorry] lean/ComparatorChallenges/OneTapeSpace.lean:271: sorry
+  [sorry] lean/ComparatorChallenges/OneWayLiveness.lean:101: sorry
+  [sorry] lean/ComparatorChallenges/OptimalMaxCut.lean:154: sorry
+  [sorry] lean/ComparatorChallenges/OrdinaryElliott.lean:39: sorry
+  [sorry] lean/ComparatorChallenges/OrdinaryTwoPointCorrelations.lean:49: sorry
+  [sorry] lean/ComparatorChallenges/OrdinaryTwoPointCorrelations.lean:57: sorry
+  [sorry] lean/ComparatorChallenges/OrdinaryTwoPointCorrelations.lean:65: sorry
+  [sorry] lean/ComparatorChallenges/OstmannComplete.lean:31: sorry
+  [sorry] lean/ComparatorChallenges/OstmannComplete.lean:34: sorry
+  [sorry] lean/ComparatorChallenges/OstmannPrimes.lean:11: sorry
+  [sorry] lean/ComparatorChallenges/ParityLifts.lean:205: sorry
+  [sorry] lean/ComparatorChallenges/PartialPermutation.lean:111: sorry
+  [sorry] lean/ComparatorChallenges/PartitionConsistency.lean:320: sorry
+  [sorry] lean/ComparatorChallenges/PartitionPrinciple.lean:273: sorry
+  [sorry] lean/ComparatorChallenges/PattersonFirstMoment.lean:85: sorry
+  [sorry] lean/ComparatorChallenges/PattersonFirstMoment.lean:89: sorry
+  [sorry] lean/ComparatorChallenges/PattersonFirstMoment.lean:93: sorry
+  [sorry] lean/ComparatorChallenges/PerceptronFreeEnergy.lean:105: sorry
+  [sorry] lean/ComparatorChallenges/PerfectCompleteness.lean:181: sorry
+  [sorry] lean/ComparatorChallenges/PeriodicGroup.lean:52: sorry
+  [sorry] lean/ComparatorChallenges/PeriodicTilingThree.lean:60: sorry
+  [sorry] lean/ComparatorChallenges/PermanentCubic.lean:38: sorry
+  [sorry] lean/ComparatorChallenges/PettyProjectionVolume.lean:49: sorry
+  [sorry] lean/ComparatorChallenges/PiExponent.lean:15: sorry
+  [sorry] lean/ComparatorChallenges/PinchedKahler.lean:147: sorry
+  [sorry] lean/ComparatorChallenges/PinchedKahler.lean:150: sorry
+  [sorry] lean/ComparatorChallenges/PinchedKahler.lean:153: sorry
+  [sorry] lean/ComparatorChallenges/PinnedDistances.lean:30: sorry
+  [sorry] lean/ComparatorChallenges/PlanarAndersonSpectrum.lean:29: sorry
+  [sorry] lean/ComparatorChallenges/PlanarFalconer.lean:21: sorry
+  [sorry] lean/ComparatorChallenges/PlanarFirstPassage.lean:98: sorry
+  [sorry] lean/ComparatorChallenges/PlanarL1.lean:47: sorry
+  [sorry] lean/ComparatorChallenges/PlanarPacking.lean:38: sorry
+  [sorry] lean/ComparatorChallenges/PlanarUnitDistances.lean:21: sorry
+  [sorry] lean/ComparatorChallenges/PlaneColoring.lean:15: theorem properColoring_seven : ProperColoring 7 := by sorry
+  [sorry] lean/ComparatorChallenges/PolycyclicRecognition.lean:216: sorry
+  [sorry] lean/ComparatorChallenges/PolycyclicRecognition.lean:233: sorry
+  [sorry] lean/ComparatorChallenges/PolycyclicRecognition.lean:243: sorry
+  [sorry] lean/ComparatorChallenges/PosteriorReplicas.lean:451: sorry
+  [sorry] lean/ComparatorChallenges/PowerFreeValues.lean:42: sorry
+  [sorry] lean/ComparatorChallenges/PrimeGaps.lean:41: sorry
+  [sorry] lean/ComparatorChallenges/ProductBrown.lean:753: sorry
+  [sorry] lean/ComparatorChallenges/ProjectionCounterexample.lean:39: sorry
+  [sorry] lean/ComparatorChallenges/ProjectionMoments.lean:708: sorry
+  [sorry] lean/ComparatorChallenges/ProjectionVolume.lean:55: sorry
+  [sorry] lean/ComparatorChallenges/QACParity.lean:72: sorry
+  [sorry] lean/ComparatorChallenges/QuadricBundles.lean:175: sorry
+  [sorry] lean/ComparatorChallenges/QuantitativeVanDerWaerden.lean:29: sorry
+  [sorry] lean/ComparatorChallenges/QuasiRiemannHypothesis.lean:7: sorry
+  [sorry] lean/ComparatorChallenges/QuinticLienard.lean:42: sorry
+  [sorry] lean/ComparatorChallenges/RadialDensityInterval.lean:67: sorry
+  [sorry] lean/ComparatorChallenges/RadialTransition.lean:64: sorry
+  [sorry] lean/ComparatorChallenges/RamseyFive.lean:26: sorry
+  [sorry] lean/ComparatorChallenges/RandomizedMeanPayoff.lean:124: sorry
+  [sorry] lean/ComparatorChallenges/RationalHitting.lean:109: sorry
+  [sorry] lean/ComparatorChallenges/RealL1Renorming.lean:49: sorry
+  [sorry] lean/ComparatorChallenges/RecursivePotentials.lean:956: sorry
+  [sorry] lean/ComparatorChallenges/ReflexiveFixedPoints.lean:29: sorry
+  [sorry] lean/ComparatorChallenges/RegularParity.lean:69: sorry
+  [sorry] lean/ComparatorChallenges/RelativeGeneration.lean:104: sorry
+  [sorry] lean/ComparatorChallenges/RieszQuantitative.lean:58: sorry
+  [sorry] lean/ComparatorChallenges/Rokhlin.lean:33: sorry
+  [sorry] lean/ComparatorChallenges/RuledCovering.lean:216: sorry
+  [sorry] lean/ComparatorChallenges/RyserCovering.lean:53: sorry
+  [sorry] lean/ComparatorChallenges/RyserOddExtensions.lean:68: sorry
+  [sorry] lean/ComparatorChallenges/SATComputability.lean:46: sorry
+  [sorry] lean/ComparatorChallenges/SATSharpness.lean:72: sorry
+  [sorry] lean/ComparatorChallenges/SATVariance.lean:64: sorry
+  [sorry] lean/ComparatorChallenges/SKBarriers.lean:87: sorry
+  [sorry] lean/ComparatorChallenges/SKFullSupport.lean:92: sorry
+  [sorry] lean/ComparatorChallenges/SKHighTemperature.lean:71: sorry
+  [sorry] lean/ComparatorChallenges/SKRatio.lean:68: sorry
+  [sorry] lean/ComparatorChallenges/SKValue.lean:171: sorry
+  [sorry] lean/ComparatorChallenges/SLELowerPositivity.lean:79: sorry
+  [sorry] lean/ComparatorChallenges/Saxl.lean:113: sorry
+  [sorry] lean/ComparatorChallenges/SecondKahnKalai.lean:68: sorry
+  [sorry] lean/ComparatorChallenges/SelfSimilar.lean:69: sorry
+  [sorry] lean/ComparatorChallenges/SelfSimilarCorollaries.lean:55: sorry
+  [sorry] lean/ComparatorChallenges/SelfSimilarCorollaries.lean:86: sorry
+  [sorry] lean/ComparatorChallenges/SensitivitySeparation.lean:36: sorry
+  [sorry] lean/ComparatorChallenges/SeparableQuotientNegative.lean:27: sorry
+  [sorry] lean/ComparatorChallenges/SeymourSecondNeighborhood.lean:36: sorry
+  [sorry] lean/ComparatorChallenges/SharpCAT0Filling.lean:142: sorry
+  [sorry] lean/ComparatorChallenges/SharpLogRamsey.lean:33: sorry
+  [sorry] lean/ComparatorChallenges/SharpThreshold.lean:57: sorry
+  [sorry] lean/ComparatorChallenges/ShortEgyptianFractions.lean:23: sorry
+  [sorry] lean/ComparatorChallenges/SidorenkoCounterexample.lean:43: sorry
+  [sorry] lean/ComparatorChallenges/SiegelZeros.lean:15: sorry
+  [sorry] lean/ComparatorChallenges/SiegelZeros.lean:26: sorry
+  [sorry] lean/ComparatorChallenges/SignedFiniteBand.lean:46: sorry
+  [sorry] lean/ComparatorChallenges/SignedSweepMoment.lean:183: sorry
+  [sorry] lean/ComparatorChallenges/SimpleAmenable.lean:17: sorry
+  [sorry] lean/ComparatorChallenges/SimpleOvergroups.lean:32: sorry
+  [sorry] lean/ComparatorChallenges/SingleFold.lean:25: sorry
+  [sorry] lean/ComparatorChallenges/SingleLatticeCovering.lean:25: (volume K).toReal / ZLattice.covolume L ≤ C * (n : ℝ) * Real.log (n : ℝ) := by sorry
+  [sorry] lean/ComparatorChallenges/SingletonLoopMatching.lean:128: sorry
+  [sorry] lean/ComparatorChallenges/SmoothInitialForm.lean:52: sorry
+  [sorry] lean/ComparatorChallenges/SmoothObstruction.lean:95: sorry
+  [sorry] lean/ComparatorChallenges/SmoothYau.lean:137: sorry
+  [sorry] lean/ComparatorChallenges/SmoothYau.lean:142: sorry
+  [sorry] lean/ComparatorChallenges/SnakyCertificate.lean:1394: sorry
+  [sorry] lean/ComparatorChallenges/SnakyConditional.lean:54: sorry
+  [sorry] lean/ComparatorChallenges/SnakyTwentyOne.lean:55: sorry
+  [sorry] lean/ComparatorChallenges/SoftChannel204.lean:115: sorry
+  [sorry] lean/ComparatorChallenges/SolenoidalSheetPrograms.lean:191: sorry
+  [sorry] lean/ComparatorChallenges/SphericalField.lean:554: sorry
+  [sorry] lean/ComparatorChallenges/SpinAngle.lean:536: sorry
+  [sorry] lean/ComparatorChallenges/SplitTangentIntegrability.lean:136: sorry
+  [sorry] lean/ComparatorChallenges/SquareDifference.lean:14: sorry
+  [sorry] lean/ComparatorChallenges/SquareRootDegree.lean:58: sorry
+  [sorry] lean/ComparatorChallenges/StableCoordinateFour.lean:50: sorry
+  [sorry] lean/ComparatorChallenges/StandardMapComponents.lean:106: sorry
+  [sorry] lean/ComparatorChallenges/StandardMapEntropy.lean:49: sorry
+  [sorry] lean/ComparatorChallenges/StandardMapLyapunov.lean:106: sorry
+  [sorry] lean/ComparatorChallenges/SteinitzBergstrom.lean:25: sorry
+  [sorry] lean/ComparatorChallenges/StrictMeans.lean:41: sorry
+  [sorry] lean/ComparatorChallenges/StrongKadisonKastler.lean:38: sorry
+  [sorry] lean/ComparatorChallenges/StrongThinTree.lean:39: sorry
+  [sorry] lean/ComparatorChallenges/StronglyRayleighDPP.lean:145: sorry
+  [sorry] lean/ComparatorChallenges/StronglyRayleighDPP.lean:151: sorry
+  [sorry] lean/ComparatorChallenges/StronglyRayleighDPP.lean:159: sorry
+  [sorry] lean/ComparatorChallenges/StronglyRayleighDPP.lean:165: sorry
+  [sorry] lean/ComparatorChallenges/StronglyRayleighDPP.lean:172: sorry
+  [sorry] lean/ComparatorChallenges/StronglyRayleighDPP.lean:179: sorry
+  [sorry] lean/ComparatorChallenges/StructuralCrouzeix.lean:212: sorry
+  [sorry] lean/ComparatorChallenges/SubexponentialSAT.lean:218: sorry
+  [sorry] lean/ComparatorChallenges/SubpolynomialLp.lean:44: sorry
+  [sorry] lean/ComparatorChallenges/SubsphereCurrent.lean:443: sorry
+  [sorry] lean/ComparatorChallenges/Superstring.lean:39: sorry
+  [sorry] lean/ComparatorChallenges/SurfaceConeCandidateSupport.lean:14: sorry
+  [sorry] lean/ComparatorChallenges/SurfaceImmersion.lean:42: sorry
+  [sorry] lean/ComparatorChallenges/SwitchChain.lean:157: sorry
+  [sorry] lean/ComparatorChallenges/SwitchChain.lean:161: sorry
+  [sorry] lean/ComparatorChallenges/SwitchChain.lean:165: sorry
+  [sorry] lean/ComparatorChallenges/SymmetricDomains.lean:58: sorry
+  [sorry] lean/ComparatorChallenges/SymmetricMahlerEquality.lean:48: sorry
+  [sorry] lean/ComparatorChallenges/SymmetricPolar.lean:45: sorry
+  [sorry] lean/ComparatorChallenges/Tachikawa.lean:33: sorry
+  [sorry] lean/ComparatorChallenges/TalagrandDiscreteConvexity.lean:51: sorry
+  [sorry] lean/ComparatorChallenges/TalagrandExpectationThreshold.lean:56: sorry
+  [sorry] lean/ComparatorChallenges/TamingCompatibility.lean:63: sorry
+  [sorry] lean/ComparatorChallenges/ThomasonModelStructures.lean:2461: sorry
+  [sorry] lean/ComparatorChallenges/ThomasonModelStructures.lean:2468: sorry
+  [sorry] lean/ComparatorChallenges/ThompsonNonamenability.lean:83: sorry
+  [sorry] lean/ComparatorChallenges/ThorpFirstReciprocal.lean:225: sorry
+  [sorry] lean/ComparatorChallenges/ThorpRemaining.lean:546: sorry
+  [sorry] lean/ComparatorChallenges/ThorpRouting.lean:2577: sorry
+  [sorry] lean/ComparatorChallenges/ThorpWeightedCompatibility.lean:48: sorry
+  [sorry] lean/ComparatorChallenges/ThreeMachine.lean:96: sorry
+  [sorry] lean/ComparatorChallenges/ThreeStateSupercritical.lean:100: sorry
+  [sorry] lean/ComparatorChallenges/ThreeStateSupercritical.lean:104: sorry
+  [sorry] lean/ComparatorChallenges/ThreeStateTreeClauses.lean:94: sorry
+  [sorry] lean/ComparatorChallenges/ThreeStateTreeClauses.lean:98: sorry
+  [sorry] lean/ComparatorChallenges/ThreeTorus.lean:83: sorry
+  [sorry] lean/ComparatorChallenges/TingleySphereIsometry.lean:35: sorry
+  [sorry] lean/ComparatorChallenges/TorsionFreeHyperbolic.lean:39: sorry
+  [sorry] lean/ComparatorChallenges/TorsionFreeZeroDivisors.lean:36: sorry
+  [sorry] lean/ComparatorChallenges/TotientAsymptotic.lean:126: sorry
+  [sorry] lean/ComparatorChallenges/TotientAsymptotic.lean:139: sorry
+  [sorry] lean/ComparatorChallenges/TotientAsymptotic.lean:145: sorry
+  [sorry] lean/ComparatorChallenges/TotientAsymptotic.lean:149: sorry
+  [sorry] lean/ComparatorChallenges/TotientCompanionZero.lean:99: sorry
+  [sorry] lean/ComparatorChallenges/TraceIdealTransportSupport.lean:66: sorry
+  [sorry] lean/ComparatorChallenges/TraceIdealTransportSupport.lean:71: lemma zero_mem_finiteSquareSet : (0 : A) ∈ τ.finiteSquareSet := by sorry
+  [sorry] lean/ComparatorChallenges/TraceIdealTransportSupport.lean:73: star x ∈ τ.finiteSquareSet := by sorry
+  [sorry] lean/ComparatorChallenges/TraceIdealTransportSupport.lean:75: c • x ∈ τ.finiteSquareSet := by sorry
+  [sorry] lean/ComparatorChallenges/TraceIdealTransportSupport.lean:78: x + y ∈ τ.finiteSquareSet := by sorry
+  [sorry] lean/ComparatorChallenges/TraceIdealTransportSupport.lean:80: x * y ∈ τ.finiteSquareSet := by sorry
+  [sorry] lean/ComparatorChallenges/TraceIdealTransportSupport.lean:91: lemma isClosed_finiteIdeal : IsClosed (τ.finiteIdeal : Set A) := by sorry
+  [sorry] lean/ComparatorChallenges/TraceIdealTransportSupport.lean:93: x * y ∈ τ.finiteIdeal := by sorry
+  [sorry] lean/ComparatorChallenges/TraceIdealTransportSupport.lean:95: x * y ∈ τ.finiteIdeal := by sorry
+  [sorry] lean/ComparatorChallenges/TraceIdealTransportSupport.lean:135: LowerSemicontinuous (fun a : Positive A => if τ a = 0 then (0 : ℝ≥0∞) else ∞) := by sorry
+  [sorry] lean/ComparatorChallenges/TraceIdealTransportSupport.lean:157: theorem weight_idempotent (I : ClosedIdeal A) : I.weight.add I.weight = I.weight := by sorry
+  [sorry] lean/ComparatorChallenges/TraceIdealTransportSupport.lean:158: theorem finiteIdeal_weight (I : ClosedIdeal A) : I.weight.finiteIdeal = I.1 := by sorry
+  [sorry] lean/ComparatorChallenges/TraceIdealTransportSupport.lean:160: I ≤ J ↔ I.weight.add J.weight = I.weight := by sorry
+  [sorry] lean/ComparatorChallenges/TraceIdealTransportSupport.lean:165: τ.finIdeal.weight = τ := by sorry
+  [sorry] lean/ComparatorChallenges/TraceIdealTransportSupport.lean:195: (closedIdealEquivOfAdditive e he I).weight = e I.weight := by sorry
+  [sorry] lean/ComparatorChallenges/TraceIdealTransportSupport.lean:227: sorry
+  [sorry] lean/ComparatorChallenges/TraceIdealTransportSupport.lean:231: sorry
+  [sorry] lean/ComparatorChallenges/TraceReconstruction.lean:72: sorry
+  [sorry] lean/ComparatorChallenges/TraceReconstruction.lean:77: sorry
+  [sorry] lean/ComparatorChallenges/TraceReconstruction.lean:85: sorry
+  [sorry] lean/ComparatorChallenges/TreeEdit.lean:47: sorry
+  [sorry] lean/ComparatorChallenges/TriangleFace.lean:185: sorry
+  [sorry] lean/ComparatorChallenges/TriangleRemoval.lean:63: sorry
+  [sorry] lean/ComparatorChallenges/TriangularCovering.lean:66: sorry
+  [sorry] lean/ComparatorChallenges/TriangularEnergy.lean:69: sorry
+  [sorry] lean/ComparatorChallenges/TriangularGaussian.lean:270: sorry
+  [sorry] lean/ComparatorChallenges/TriangularHilbert.lean:51: sorry
+  [sorry] lean/ComparatorChallenges/TruffetCounterexample.lean:129: sorry
+  [sorry] lean/ComparatorChallenges/TwoWayComplementation.lean:41: sorry
+  [sorry] lean/ComparatorChallenges/TwoWayDeterminization.lean:69: sorry
+  [sorry] lean/ComparatorChallenges/TypeSystemNormalization.lean:118: sorry
+  [sorry] lean/ComparatorChallenges/UniformCommutator.lean:34: sorry
+  [sorry] lean/ComparatorChallenges/UniformFourier.lean:327: sorry
+  [sorry] lean/ComparatorChallenges/UniformFourier.lean:331: sorry
+  [sorry] lean/ComparatorChallenges/UniformGamma.lean:601: sorry
+  [sorry] lean/ComparatorChallenges/UniformKServer.lean:201: sorry
+  [sorry] lean/ComparatorChallenges/UniformSparsestCut.lean:49: sorry
+  [sorry] lean/ComparatorChallenges/UniqueGamesTheorem.lean:235: sorry
+  [sorry] lean/ComparatorChallenges/UniversalFInfinity.lean:21: sorry
+  [sorry] lean/ComparatorChallenges/UniversalTensorSquares.lean:104: sorry
+  [sorry] lean/ComparatorChallenges/VariableWL.lean:126: sorry
+  [sorry] lean/ComparatorChallenges/VelocityHemisphere.lean:98: sorry
+  [sorry] lean/ComparatorChallenges/VertexAlgebraNet.lean:826: sorry
+  [sorry] lean/ComparatorChallenges/VertexCover.lean:146: sorry
+  [sorry] lean/ComparatorChallenges/VertexCover.lean:150: sorry
+  [sorry] lean/ComparatorChallenges/VlasovMaxwell.lean:106: sorry
+  [sorry] lean/ComparatorChallenges/WLIdentification.lean:142: sorry
+  [sorry] lean/ComparatorChallenges/WeakHessian.lean:227: sorry
+  [sorry] lean/ComparatorChallenges/WeakMTWGlobalSupport.lean:75: sorry
+  [sorry] lean/ComparatorChallenges/WeightedSweepMoments.lean:298: sorry
+  [sorry] lean/ComparatorChallenges/WeisfeilerLeman.lean:268: sorry
+  [sorry] lean/ComparatorChallenges/WitnessedChoice.lean:470: sorry
+  [sorry] lean/ComparatorChallenges/YauCounterexample.lean:66: sorry
+  [addDecl / Environment manipulation] lean/ComparatorChallenges/BenjaminiSchramm.lean:92: run_elab Lean.modifyEnv fun environment => Lean.Meta.auxLemmasExt.setState environment {}
+  [addDecl / Environment manipulation] lean/ComparatorChallenges/BenjaminiSchramm.lean:108: run_elab Lean.modifyEnv fun environment => Lean.Meta.auxLemmasExt.setState environment {}
+  [addDecl / Environment manipulation] lean/ComparatorChallenges/BenjaminiSchramm.lean:120: run_elab Lean.modifyEnv fun environment => Lean.Meta.auxLemmasExt.setState environment {}
+  [addDecl / Environment manipulation] lean/ComparatorChallenges/BenjaminiSchramm.lean:180: run_elab Lean.modifyEnv fun environment => Lean.Meta.auxLemmasExt.setState environment {}
+  [addDecl / Environment manipulation] lean/ComparatorChallenges/BenjaminiSchramm.lean:195: run_elab Lean.modifyEnv fun environment => Lean.Meta.auxLemmasExt.setState environment {}
+  [addDecl / Environment manipulation] lean/ComparatorChallenges/BoltzmannNonuniqueness.lean:50: run_cmd Lean.modifyEnv fun env => Lean.Meta.auxLemmasExt.setState env {}
+  [addDecl / Environment manipulation] lean/ComparatorChallenges/CoordinateTrace.lean:333: run_cmd Lean.modifyEnv fun env => Lean.Meta.auxLemmasExt.setState env {}
+  [addDecl / Environment manipulation] lean/ComparatorChallenges/CylinderCovering.lean:58: run_cmd Lean.modifyEnv fun env => Lean.Meta.auxLemmasExt.setState env {}
+  [addDecl / Environment manipulation] lean/ComparatorChallenges/CylinderCovering.lean:92: run_cmd Lean.modifyEnv fun env => Lean.Meta.auxLemmasExt.setState env {}
+  [addDecl / Environment manipulation] lean/ComparatorChallenges/CylinderCovering.lean:107: run_cmd Lean.modifyEnv fun env => Lean.Meta.auxLemmasExt.setState env {}
+  [addDecl / Environment manipulation] lean/ComparatorChallenges/CylinderCovering.lean:130: run_cmd Lean.modifyEnv fun env => Lean.Meta.auxLemmasExt.setState env {}
+  [addDecl / Environment manipulation] lean/ComparatorChallenges/CylinderCovering.lean:159: run_cmd Lean.modifyEnv fun env => Lean.Meta.auxLemmasExt.setState env {}
+  [addDecl / Environment manipulation] lean/ComparatorChallenges/CylinderCovering.lean:223: run_cmd Lean.modifyEnv fun env => Lean.Meta.auxLemmasExt.setState env {}
+  [addDecl / Environment manipulation] lean/ComparatorChallenges/CylinderCovering.lean:309: run_cmd Lean.modifyEnv fun env => Lean.Meta.auxLemmasExt.setState env {}
+  [addDecl / Environment manipulation] lean/ComparatorChallenges/CylinderCovering.lean:374: run_cmd Lean.modifyEnv fun env => Lean.Meta.auxLemmasExt.setState env {}
+  [addDecl / Environment manipulation] lean/ComparatorChallenges/CylinderCovering.lean:402: run_cmd Lean.modifyEnv fun env => Lean.Meta.auxLemmasExt.setState env {}
+  [addDecl / Environment manipulation] lean/ComparatorChallenges/CylinderCovering.lean:425: run_cmd Lean.modifyEnv fun env => Lean.Meta.auxLemmasExt.setState env {}
+  [addDecl / Environment manipulation] lean/ComparatorChallenges/DefocusingNLS.lean:33: run_cmd Lean.modifyEnv fun env => Lean.Meta.auxLemmasExt.setState env {}
+  [addDecl / Environment manipulation] lean/ComparatorChallenges/DefocusingNLS.lean:44: run_cmd Lean.modifyEnv fun env => Lean.Meta.auxLemmasExt.setState env {}
+  [addDecl / Environment manipulation] lean/ComparatorChallenges/DefocusingNLS.lean:56: run_cmd Lean.modifyEnv fun env => Lean.Meta.auxLemmasExt.setState env {}
+  [addDecl / Environment manipulation] lean/ComparatorChallenges/DefocusingNLS.lean:74: run_cmd Lean.modifyEnv fun env => Lean.Meta.auxLemmasExt.setState env {}
+  [addDecl / Environment manipulation] lean/ComparatorChallenges/DefocusingNLS.lean:94: run_cmd Lean.modifyEnv fun env => Lean.Meta.auxLemmasExt.setState env {}
+  [addDecl / Environment manipulation] lean/ComparatorChallenges/DefocusingNLS.lean:99: run_cmd Lean.modifyEnv fun env => Lean.Meta.auxLemmasExt.setState env {}
+  [addDecl / Environment manipulation] lean/ComparatorChallenges/DefocusingNLS.lean:112: run_cmd Lean.modifyEnv fun env => Lean.Meta.auxLemmasExt.setState env {}
+  [addDecl / Environment manipulation] lean/ComparatorChallenges/DefocusingNLS.lean:121: run_cmd Lean.modifyEnv fun env => Lean.Meta.auxLemmasExt.setState env {}
+  [addDecl / Environment manipulation] lean/ComparatorChallenges/DefocusingNLS.lean:129: run_cmd Lean.modifyEnv fun env => Lean.Meta.auxLemmasExt.setState env {}
+  [addDecl / Environment manipulation] lean/ComparatorChallenges/DefocusingNLS.lean:165: run_cmd Lean.modifyEnv fun env => Lean.Meta.auxLemmasExt.setState env {}
+  [addDecl / Environment manipulation] lean/ComparatorChallenges/DefocusingNLS.lean:206: run_cmd Lean.modifyEnv fun env => Lean.Meta.auxLemmasExt.setState env {}
+  [addDecl / Environment manipulation] lean/ComparatorChallenges/DefocusingNLS.lean:212: run_cmd Lean.modifyEnv fun env => Lean.Meta.auxLemmasExt.setState env {}
+  [addDecl / Environment manipulation] lean/ComparatorChallenges/DefocusingNLS.lean:234: run_cmd Lean.modifyEnv fun env => Lean.Meta.auxLemmasExt.setState env {}
+  [addDecl / Environment manipulation] lean/ComparatorChallenges/DefocusingNLS.lean:240: run_cmd Lean.modifyEnv fun env => Lean.Meta.auxLemmasExt.setState env {}
+  [addDecl / Environment manipulation] lean/ComparatorChallenges/DefocusingNLS.lean:251: run_cmd Lean.modifyEnv fun env => Lean.Meta.auxLemmasExt.setState env {}
+  [addDecl / Environment manipulation] lean/ComparatorChallenges/EinsteinFour.lean:98: run_cmd Lean.modifyEnv fun env => Lean.Meta.auxLemmasExt.modifyState env fun _ => {}
+  [addDecl / Environment manipulation] lean/ComparatorChallenges/EinsteinFour.lean:133: run_cmd Lean.modifyEnv fun env => Lean.Meta.auxLemmasExt.modifyState env fun _ => {}
+  [addDecl / Environment manipulation] lean/ComparatorChallenges/InvariantIsing.lean:39: run_cmd Lean.modifyEnv fun env => Lean.Meta.auxLemmasExt.setState env {}
+  [addDecl / Environment manipulation] lean/ComparatorChallenges/InvariantIsing.lean:74: run_cmd Lean.modifyEnv fun env => Lean.Meta.auxLemmasExt.setState env {}
+  [addDecl / Environment manipulation] lean/ComparatorChallenges/InvariantIsing.lean:132: run_cmd Lean.modifyEnv fun env => Lean.Meta.auxLemmasExt.setState env {}
+  [addDecl / Environment manipulation] lean/ComparatorChallenges/InvariantIsing.lean:157: run_cmd Lean.modifyEnv fun env => Lean.Meta.auxLemmasExt.setState env {}
+  [addDecl / Environment manipulation] lean/ComparatorChallenges/InvariantIsing.lean:232: run_cmd Lean.modifyEnv fun env => Lean.Meta.auxLemmasExt.setState env {}
+  [addDecl / Environment manipulation] lean/ComparatorChallenges/InvariantIsing.lean:252: run_cmd Lean.modifyEnv fun env => Lean.Meta.auxLemmasExt.setState env {}
+  [addDecl / Environment manipulation] lean/ComparatorChallenges/InvariantIsing.lean:265: run_cmd Lean.modifyEnv fun env => Lean.Meta.auxLemmasExt.setState env {}
+  [addDecl / Environment manipulation] lean/ComparatorChallenges/InvariantIsing.lean:272: run_cmd Lean.modifyEnv fun env => Lean.Meta.auxLemmasExt.setState env {}
+  [addDecl / Environment manipulation] lean/ComparatorChallenges/IrrationalRotation.lean:158: run_cmd Lean.modifyEnv fun env => Lean.Meta.auxLemmasExt.setState env {}
+  [addDecl / Environment manipulation] lean/ComparatorChallenges/IrrationalRotation.lean:255: run_cmd Lean.modifyEnv fun env => Lean.Meta.auxLemmasExt.setState env {}
+  [addDecl / Environment manipulation] lean/ComparatorChallenges/IrrationalRotation.lean:315: run_cmd Lean.modifyEnv fun env => Lean.Meta.auxLemmasExt.setState env {}
+  [addDecl / Environment manipulation] lean/ComparatorChallenges/IrrationalRotation.lean:381: run_cmd Lean.modifyEnv fun env => Lean.Meta.auxLemmasExt.setState env {}
+  [addDecl / Environment manipulation] lean/ComparatorChallenges/IrrationalRotation.lean:426: run_cmd Lean.modifyEnv fun env => Lean.Meta.auxLemmasExt.setState env {}
+  [addDecl / Environment manipulation] lean/ComparatorChallenges/IrrationalRotation.lean:473: run_cmd Lean.modifyEnv fun env => Lean.Meta.auxLemmasExt.setState env {}
+  [addDecl / Environment manipulation] lean/ComparatorChallenges/IrrationalRotation.lean:533: run_cmd Lean.modifyEnv fun env => Lean.Meta.auxLemmasExt.setState env {}
+  [addDecl / Environment manipulation] lean/ComparatorChallenges/IrrationalRotation.lean:637: run_cmd Lean.modifyEnv fun env => Lean.Meta.auxLemmasExt.setState env {}
+  [addDecl / Environment manipulation] lean/ComparatorChallenges/IrrationalRotation.lean:665: run_cmd Lean.modifyEnv fun env => Lean.Meta.auxLemmasExt.setState env {}
+  [addDecl / Environment manipulation] lean/ComparatorChallenges/IrrationalRotation.lean:752: run_cmd Lean.modifyEnv fun env => Lean.Meta.auxLemmasExt.setState env {}
+  [addDecl / Environment manipulation] lean/ComparatorChallenges/IrrationalRotation.lean:764: run_cmd Lean.modifyEnv fun env => Lean.Meta.auxLemmasExt.setState env {}
+  [addDecl / Environment manipulation] lean/ComparatorChallenges/KMedianRefinedRecovery.lean:61: run_elab Lean.modifyEnv fun environment => Lean.Meta.auxLemmasExt.setState environment {}
+  [addDecl / Environment manipulation] lean/ComparatorChallenges/KadisonSimilarity.lean:40: run_cmd Lean.modifyEnv fun env => Lean.Meta.auxLemmasExt.setState env {}
+  [addDecl / Environment manipulation] lean/ComparatorChallenges/KadisonSimilarity.lean:98: run_cmd Lean.modifyEnv fun env => Lean.Meta.auxLemmasExt.setState env {}
+  [addDecl / Environment manipulation] lean/ComparatorChallenges/LaughlinFock.lean:22: run_cmd Lean.modifyEnv fun environment => Lean.Meta.auxLemmasExt.setState environment {}
+  [addDecl / Environment manipulation] lean/ComparatorChallenges/ProductBrown.lean:697: run_cmd Lean.modifyEnv fun env => Lean.Meta.auxLemmasExt.setState env {}
+  [addDecl / Environment manipulation] lean/ComparatorChallenges/StandardMapComponents.lean:27: run_cmd Lean.modifyEnv fun env => Lean.Meta.auxLemmasExt.setState env {}
+  [addDecl / Environment manipulation] lean/ComparatorChallenges/StandardMapLyapunov.lean:45: run_cmd Lean.modifyEnv fun env => Lean.Meta.auxLemmasExt.setState env {}
+  [addDecl / Environment manipulation] lean/ComparatorChallenges/ThorpRemaining.lean:113: Lean.modifyEnv fun env => Lean.Meta.auxLemmasExt.setState env {}
+  [addDecl / Environment manipulation] lean/ComparatorChallenges/ThorpRemaining.lean:117: run_cmd Lean.modifyEnv fun env => Lean.EnvExtension.setState $matcherCache env {}))
+  [addDecl / Environment manipulation] lean/ComparatorChallenges/ThorpRemaining.lean:410: run_cmd Lean.modifyEnv fun env => Lean.Meta.auxLemmasExt.setState env {}
+  [addDecl / Environment manipulation] lean/ComparatorChallenges/ThorpRemaining.lean:440: run_cmd Lean.modifyEnv fun env => Lean.Meta.auxLemmasExt.setState env {}
+  [addDecl / Environment manipulation] lean/ComparatorChallenges/ThorpRemaining.lean:450: run_cmd Lean.modifyEnv fun env => Lean.Meta.auxLemmasExt.setState env {}
+  [addDecl / Environment manipulation] lean/ComparatorChallenges/ThorpRemaining.lean:467: run_cmd Lean.modifyEnv fun env => Lean.Meta.auxLemmasExt.setState env {}
+  [addDecl / Environment manipulation] lean/ComparatorChallenges/ThorpRemaining.lean:479: run_cmd Lean.modifyEnv fun env => Lean.Meta.auxLemmasExt.setState env {}
+  [addDecl / Environment manipulation] lean/ComparatorChallenges/ThorpRouting.lean:293: Lean.modifyEnv fun env => Lean.Meta.auxLemmasExt.setState env {}
+  [addDecl / Environment manipulation] lean/ComparatorChallenges/ThorpRouting.lean:297: run_cmd Lean.modifyEnv fun env => Lean.EnvExtension.setState $matcherCache env {}))
+  [addDecl / Environment manipulation] lean/ComparatorChallenges/ThorpRouting.lean:630: Lean.modifyEnv fun env => Lean.Meta.auxLemmasExt.setState env {}
+  [addDecl / Environment manipulation] lean/ComparatorChallenges/ThorpRouting.lean:634: run_cmd Lean.modifyEnv fun env => Lean.EnvExtension.setState $matcherCache env {}))
+  [addDecl / Environment manipulation] lean/ComparatorChallenges/ThorpRouting.lean:899: Lean.modifyEnv fun env => Lean.Meta.auxLemmasExt.setState env {}
+  [addDecl / Environment manipulation] lean/ComparatorChallenges/ThorpRouting.lean:903: run_cmd Lean.modifyEnv fun env => Lean.EnvExtension.setState $matcherCache env {}))
+  [addDecl / Environment manipulation] lean/ComparatorChallenges/ThorpRouting.lean:1168: Lean.modifyEnv fun env => Lean.Meta.auxLemmasExt.setState env {}
+  [addDecl / Environment manipulation] lean/ComparatorChallenges/ThorpRouting.lean:1172: run_cmd Lean.modifyEnv fun env => Lean.EnvExtension.setState $matcherCache env {}))
+  [addDecl / Environment manipulation] lean/ComparatorChallenges/ThorpRouting.lean:1534: Lean.modifyEnv fun env => Lean.Meta.auxLemmasExt.setState env {}
+  [addDecl / Environment manipulation] lean/ComparatorChallenges/ThorpRouting.lean:1538: run_cmd Lean.modifyEnv fun env => Lean.EnvExtension.setState $matcherCache env {}))
+  [addDecl / Environment manipulation] lean/ComparatorChallenges/ThorpRouting.lean:1657: Lean.modifyEnv fun env => Lean.Meta.auxLemmasExt.setState env {}
+  [addDecl / Environment manipulation] lean/ComparatorChallenges/ThorpRouting.lean:1661: run_cmd Lean.modifyEnv fun env => Lean.EnvExtension.setState $matcherCache env {}))
+  [addDecl / Environment manipulation] lean/ComparatorChallenges/ThorpRouting.lean:1995: Lean.modifyEnv fun env => Lean.Meta.auxLemmasExt.setState env {}
+  [addDecl / Environment manipulation] lean/ComparatorChallenges/ThorpRouting.lean:1999: run_cmd Lean.modifyEnv fun env => Lean.EnvExtension.setState $matcherCache env {}))
+  [addDecl / Environment manipulation] lean/ComparatorChallenges/ThorpRouting.lean:2295: Lean.modifyEnv fun env => Lean.Meta.auxLemmasExt.setState env {}
+  [addDecl / Environment manipulation] lean/ComparatorChallenges/ThorpRouting.lean:2299: run_cmd Lean.modifyEnv fun env => Lean.EnvExtension.setState $matcherCache env {}))
+  [addDecl / Environment manipulation] lean/ComparatorChallenges/WeightedSweepMoments.lean:246: run_cmd Lean.modifyEnv fun env => Lean.Meta.auxLemmasExt.setState env {}
+
+first 40 hits for other patterns:
+  [elab/macro/syntax definition] lean/ComparatorChallenges/EditApproximation.lean:13106: local notation (name := source_Combinatorics_EditApproximation_Geometry_LocalGroupCones_8) "theta" => (2 : ℚ) ^ (-(exponent : ℤ))
+  [elab/macro/syntax definition] lean/ComparatorChallenges/EditApproximation.lean:13612: local notation (name := source_Combinatorics_EditApproximation_Refinement_PhysicalFamilyEncoding_3) "Key" => PhysicalFamilyScalarKey (M := M) (J := J) (R := R)
+  [elab/macro/syntax definition] lean/ComparatorChallenges/EditApproximation.lean:14771: local notation (name := source_Combinatorics_EditApproximation_Geometry_LocalTraceMemoOutput_5) "passes" => computedSeedPassCount N
+  [elab/macro/syntax definition] lean/ComparatorChallenges/EditApproximation.lean:14853: local notation (name := source_Combinatorics_EditApproximation_Refinement_PhysicalFamilyMemo_4) "Seed" => ClampedPhysicalSeed M J target.length N
+  [elab/macro/syntax definition] lean/ComparatorChallenges/EditApproximation.lean:14854: local notation (name := source_Combinatorics_EditApproximation_Refinement_PhysicalFamilyMemo_5) "ell" => inputSmallLog N
+  [elab/macro/syntax definition] lean/ComparatorChallenges/EditApproximation.lean:14855: local notation (name := source_Combinatorics_EditApproximation_Refinement_PhysicalFamilyMemo_6) "exponent" => (40 * smallLogExponent N : ℕ)
+  [elab/macro/syntax definition] lean/ComparatorChallenges/EditApproximation.lean:14856: local notation (name := source_Combinatorics_EditApproximation_Refinement_PhysicalFamilyMemo_7) "passes" => computedSeedPassCount N
+  [elab/macro/syntax definition] lean/ComparatorChallenges/EditApproximation.lean:14857: local notation (name := source_Combinatorics_EditApproximation_Refinement_PhysicalFamilyMemo_8) "tau" => RationalParameters.tau (rationalParameters ell)
+  [elab/macro/syntax definition] lean/ComparatorChallenges/EditApproximation.lean:14858: local notation (name := source_Combinatorics_EditApproximation_Refinement_PhysicalFamilyMemo_9) "eta" => RationalParameters.eta (rationalParameters ell)
+  [elab/macro/syntax definition] lean/ComparatorChallenges/EditApproximation.lean:14859: local notation (name := source_Combinatorics_EditApproximation_Refinement_PhysicalFamilyMemo_10) "kappa" => RationalParameters.kappa (rationalParameters ell)
+  [elab/macro/syntax definition] lean/ComparatorChallenges/EditApproximation.lean:14860: local notation (name := source_Combinatorics_EditApproximation_Refinement_PhysicalFamilyMemo_11) "delta" => RationalParameters.delta (rationalParameters ell)
+  [elab/macro/syntax definition] lean/ComparatorChallenges/EditApproximation.lean:14861: local notation (name := source_Combinatorics_EditApproximation_Refinement_PhysicalFamilyMemo_12) "Key" => PhysicalFamilyScalarKey (M := M) (J := J) (R := R)
+  [elab/macro/syntax definition] lean/ComparatorChallenges/EditApproximation.lean:14863: local notation (name := source_Combinatorics_EditApproximation_Refinement_PhysicalFamilyMemo_13) "Family" => PhysicalFamilyScalarDraw (M := M) (J := J) (R := R)
+  [elab/macro/syntax definition] lean/ComparatorChallenges/EditApproximation.lean:14865: local notation (name := source_Combinatorics_EditApproximation_Refinement_PhysicalFamilyMemo_14) "Table" => ChargedPhysicalRequest M J target.length (passes + 1
+  [elab/macro/syntax definition] lean/ComparatorChallenges/EditApproximation.lean:15033: local notation (name := source_Combinatorics_EditApproximation_Refinement_PhysicalFamilyRuntime_4) "SeedState" => ClampedPhysicalSeed M J target.length N
+  [elab/macro/syntax definition] lean/ComparatorChallenges/EditApproximation.lean:15034: local notation (name := source_Combinatorics_EditApproximation_Refinement_PhysicalFamilyRuntime_5) "ell" => inputSmallLog N
+  [elab/macro/syntax definition] lean/ComparatorChallenges/EditApproximation.lean:15035: local notation (name := source_Combinatorics_EditApproximation_Refinement_PhysicalFamilyRuntime_6) "exponent" => (40 * smallLogExponent N : ℕ)
+  [elab/macro/syntax definition] lean/ComparatorChallenges/EditApproximation.lean:15036: local notation (name := source_Combinatorics_EditApproximation_Refinement_PhysicalFamilyRuntime_7) "passes" => computedSeedPassCount N
+  [elab/macro/syntax definition] lean/ComparatorChallenges/EditApproximation.lean:15037: local notation (name := source_Combinatorics_EditApproximation_Refinement_PhysicalFamilyRuntime_8) "FamilyRange" => physicalFamilyRange (M := M) (J := J) (R := 
+  [elab/macro/syntax definition] lean/ComparatorChallenges/EditApproximation.lean:15039: local notation (name := source_Combinatorics_EditApproximation_Refinement_PhysicalFamilyRuntime_9) "Family" => PhysicalFamilyScalarDraw (M := M) (J := J) (R := 
+  [elab/macro/syntax definition] lean/ComparatorChallenges/EditApproximation.lean:15075: local notation (name := source_Combinatorics_EditApproximation_Refinement_PhysicalFamilyRejectionWork_4) "SeedState" => ClampedPhysicalSeed M J target.length N
+  [elab/macro/syntax definition] lean/ComparatorChallenges/EditApproximation.lean:15076: local notation (name := source_Combinatorics_EditApproximation_Refinement_PhysicalFamilyRejectionWork_5) "ell" => inputSmallLog N
+  [elab/macro/syntax definition] lean/ComparatorChallenges/EditApproximation.lean:15077: local notation (name := source_Combinatorics_EditApproximation_Refinement_PhysicalFamilyRejectionWork_6) "exponent" => (40 * smallLogExponent N : ℕ)
+  [elab/macro/syntax definition] lean/ComparatorChallenges/EditApproximation.lean:15078: local notation (name := source_Combinatorics_EditApproximation_Refinement_PhysicalFamilyRejectionWork_7) "passes" => computedSeedPassCount N
+  [elab/macro/syntax definition] lean/ComparatorChallenges/EditApproximation.lean:15079: local notation (name := source_Combinatorics_EditApproximation_Refinement_PhysicalFamilyRejectionWork_8) "Key" => PhysicalFamilyScalarKey (M := M) (J := J) (R :
+  [elab/macro/syntax definition] lean/ComparatorChallenges/EditApproximation.lean:15081: local notation (name := source_Combinatorics_EditApproximation_Refinement_PhysicalFamilyRejectionWork_9) "Table" => ChargedPhysicalRequest M J target.length (pa
+  [elab/macro/syntax definition] lean/ComparatorChallenges/EditApproximation.lean:15082: local notation (name := source_Combinatorics_EditApproximation_Refinement_PhysicalFamilyRejectionWork_10) "FamilyRange" => physicalFamilyRange (M := M) (J := J)
+  [elab/macro/syntax definition] lean/ComparatorChallenges/EditApproximation.lean:15127: local notation (name := source_Combinatorics_EditApproximation_Refinement_PhysicalFamilyMemoCoarse_5) "ell" => inputSmallLog N
+  [elab/macro/syntax definition] lean/ComparatorChallenges/EditApproximation.lean:15128: local notation (name := source_Combinatorics_EditApproximation_Refinement_PhysicalFamilyMemoCoarse_6) "exponent" => (40 * smallLogExponent N : ℕ)
+  [elab/macro/syntax definition] lean/ComparatorChallenges/EditApproximation.lean:15129: local notation (name := source_Combinatorics_EditApproximation_Refinement_PhysicalFamilyMemoCoarse_7) "Key" => PhysicalFamilyScalarKey (M := M) (J := J) (R := R
+  [elab/macro/syntax definition] lean/ComparatorChallenges/EditApproximation.lean:15131: local notation (name := source_Combinatorics_EditApproximation_Refinement_PhysicalFamilyMemoCoarse_8) "Table" => ChargedPhysicalRequest M J target.length (passe
+  [elab/macro/syntax definition] lean/ComparatorChallenges/EditApproximation.lean:15132: local notation (name := source_Combinatorics_EditApproximation_Refinement_PhysicalFamilyMemoCoarse_9) "readGroup" => physicalFamilyGroupRead (M := M) (J := J) (
+  [elab/macro/syntax definition] lean/ComparatorChallenges/EditApproximation.lean:15134: local notation (name := source_Combinatorics_EditApproximation_Refinement_PhysicalFamilyMemoCoarse_10) "readInteger" => physicalFamilyOnlineRead (M := M) (J := 
+  [elab/macro/syntax definition] lean/ComparatorChallenges/EditApproximation.lean:15136: local notation (name := source_Combinatorics_EditApproximation_Refinement_PhysicalFamilyMemoCoarse_11) "answer" => physicalFamilyAnswer target N P ell exponent 
+  [elab/macro/syntax definition] lean/ComparatorChallenges/EditApproximation.lean:15304: local notation (name := source_Combinatorics_EditApproximation_Refinement_PhysicalIndexedCoarseWork_3) "ell" => inputSmallLog N
+  [elab/macro/syntax definition] lean/ComparatorChallenges/EditApproximation.lean:15305: local notation (name := source_Combinatorics_EditApproximation_Refinement_PhysicalIndexedCoarseWork_4) "exponent" => (40 * smallLogExponent N : ℕ)
+  [elab/macro/syntax definition] lean/ComparatorChallenges/EditApproximation.lean:15306: local notation (name := source_Combinatorics_EditApproximation_Refinement_PhysicalIndexedCoarseWork_5) "Key" => PhysicalFamilyScalarKey (M := M) (J := J) (R := 
+  [elab/macro/syntax definition] lean/ComparatorChallenges/EditApproximation.lean:15308: local notation (name := source_Combinatorics_EditApproximation_Refinement_PhysicalIndexedCoarseWork_6) "Table" => ChargedPhysicalRequest M J target.length (pass
+  [elab/macro/syntax definition] lean/ComparatorChallenges/EditApproximation.lean:15309: local notation (name := source_Combinatorics_EditApproximation_Refinement_PhysicalIndexedCoarseWork_7) "readGroup" => physicalFamilyGroupRead (M := M) (J := J) 
+  [elab/macro/syntax definition] lean/ComparatorChallenges/EditApproximation.lean:15311: local notation (name := source_Combinatorics_EditApproximation_Refinement_PhysicalIndexedCoarseWork_8) "readInteger" => physicalFamilyOnlineRead (M := M) (J := 
+  [elab/macro/syntax definition] lean/ComparatorChallenges/EditApproximation.lean:15313: local notation (name := source_Combinatorics_EditApproximation_Refinement_PhysicalIndexedCoarseWork_9) "answer" => physicalFamilyAnswer target N P ell exponent 
+  [elab/macro/syntax definition] lean/ComparatorChallenges/EditApproximation.lean:15374: local notation (name := source_Combinatorics_EditApproximation_Refinement_PhysicalCoarseSamplingWork_3) "ell" => inputSmallLog N
+  [elab/macro/syntax definition] lean/ComparatorChallenges/EditApproximation.lean:15375: local notation (name := source_Combinatorics_EditApproximation_Refinement_PhysicalCoarseSamplingWork_4) "exponent" => (40 * smallLogExponent N : ℕ)
+  [elab/macro/syntax definition] lean/ComparatorChallenges/EditApproximation.lean:15376: local notation (name := source_Combinatorics_EditApproximation_Refinement_PhysicalCoarseSamplingWork_5) "Key" => PhysicalFamilyScalarKey (M := M) (J := J) (R :=
+  [elab/macro/syntax definition] lean/ComparatorChallenges/EditApproximation.lean:15378: local notation (name := source_Combinatorics_EditApproximation_Refinement_PhysicalCoarseSamplingWork_6) "Table" => ChargedPhysicalRequest M J target.length (pas
+  [elab/macro/syntax definition] lean/ComparatorChallenges/EditApproximation.lean:15379: local notation (name := source_Combinatorics_EditApproximation_Refinement_PhysicalCoarseSamplingWork_7) "readGroup" => physicalFamilyGroupRead (M := M) (J := J)
+  [elab/macro/syntax definition] lean/ComparatorChallenges/EditApproximation.lean:15381: local notation (name := source_Combinatorics_EditApproximation_Refinement_PhysicalCoarseSamplingWork_8) "readInteger" => physicalFamilyOnlineRead (M := M) (J :=
+  [elab/macro/syntax definition] lean/ComparatorChallenges/EditApproximation.lean:15383: local notation (name := source_Combinatorics_EditApproximation_Refinement_PhysicalCoarseSamplingWork_9) "answer" => physicalFamilyAnswer target N P ell exponent
+  [elab/macro/syntax definition] lean/ComparatorChallenges/EditApproximation.lean:15445: local notation (name := source_Combinatorics_EditApproximation_Refinement_PhysicalCoarsePreparation_5) "ell" => inputSmallLog N
+  [elab/macro/syntax definition] lean/ComparatorChallenges/EditApproximation.lean:15446: local notation (name := source_Combinatorics_EditApproximation_Refinement_PhysicalCoarsePreparation_6) "exponent" => (40 * smallLogExponent N : ℕ)
+  [elab/macro/syntax definition] lean/ComparatorChallenges/EditApproximation.lean:15447: local notation (name := source_Combinatorics_EditApproximation_Refinement_PhysicalCoarsePreparation_7) "Key" => PhysicalFamilyScalarKey (M := M) (J := J) (R := 
+  [elab/macro/syntax definition] lean/ComparatorChallenges/EditApproximation.lean:15449: local notation (name := source_Combinatorics_EditApproximation_Refinement_PhysicalCoarsePreparation_8) "Table" => ChargedPhysicalRequest M J target.length (pass
+  [elab/macro/syntax definition] lean/ComparatorChallenges/EditApproximation.lean:15450: local notation (name := source_Combinatorics_EditApproximation_Refinement_PhysicalCoarsePreparation_9) "readGroup" => physicalFamilyGroupRead (M := M) (J := J) 
+  [elab/macro/syntax definition] lean/ComparatorChallenges/EditApproximation.lean:15452: local notation (name := source_Combinatorics_EditApproximation_Refinement_PhysicalCoarsePreparation_10) "readInteger" => physicalFamilyOnlineRead (M := M) (J :=
+  [elab/macro/syntax definition] lean/ComparatorChallenges/EditApproximation.lean:15454: local notation (name := source_Combinatorics_EditApproximation_Refinement_PhysicalCoarsePreparation_11) "answer" => physicalFamilyAnswer target N P ell exponent
+  [elab/macro/syntax definition] lean/ComparatorChallenges/HodgeConjectureCMAbelianVarieties/HodgeConjecture/Definitions/AlgebraicGeometry/Cohomology/WithSupport.lean:55: scoped notation:max "H_[" Z "]^" n:max "(" X "; " K ")" =>
+  [elab/macro/syntax definition] lean/ComparatorChallenges/HodgeConjectureCMAbelianVarieties/HodgeConjecture/Definitions/AlgebraicGeometry/Hodge/Filtration.lean:328: scoped notation:max "ℍ^" n:max "(" X "; " 𝒦 ")" => _root_.OAI.AlgebraicGeometry.ComplexPoint.Basic.ComplexSchemePoint.Hypercohomology X 𝒦 n
+  [elab/macro/syntax definition] lean/ComparatorChallenges/HodgeConjectureCMAbelianVarieties/HodgeConjecture/Definitions/AlgebraicGeometry/Hodge/Filtration.lean:343: scoped notation3:max "H^" n:max "(" X "; " K ")" =>
+  [elab/macro/syntax definition] lean/ComparatorChallenges/HodgeConjectureCMAbelianVarieties/HodgeConjecture/Definitions/AlgebraicGeometry/Hodge/Filtration.lean:384: scoped notation:max "H_dR^" n:max "(" X ")" => _root_.OAI.AlgebraicGeometry.ComplexPoint.Basic.ComplexSchemePoint.DeRhamHypercohomology X n
+  [elab/macro/syntax definition] lean/ComparatorChallenges/HodgeConjectureCMAbelianVarieties/HodgeConjecture/Definitions/AlgebraicGeometry/Hodge/Filtration.lean:770: scoped notation:max "F^" p:max " Ω•" "(" X ")" => _root_.OAI.AlgebraicGeometry.ComplexPoint.Basic.ComplexSchemePoint.hodgeFilteredDeRhamComplex X p
+  [set_option (any)] lean/ComparatorChallenges/HodgeConjectureCMAbelianVarieties/Challenge.lean:35: set_option warningAsError false in
+  [set_option (any)] lean/ComparatorChallenges/HodgeConjectureCMAbelianVarieties/HodgeConjecture/Definitions/Algebra/Homology/DerivedCategory/MappingCoconeShortExactNaturality.lean:31: set_option backward.isDefEq.respectTransparency false in
+  [set_option (any)] lean/ComparatorChallenges/HodgeConjectureCMAbelianVarieties/HodgeConjecture/Definitions/AlgebraicGeometry/Cohomology/GlobalSections.lean:108: set_option backward.isDefEq.respectTransparency.types false in
+  [set_option (any)] lean/ComparatorChallenges/HodgeConjectureCMAbelianVarieties/HodgeConjecture/Definitions/AlgebraicGeometry/Cohomology/GlobalSections.lean:109: set_option backward.isDefEq.respectTransparency false in
+  [set_option (any)] lean/ComparatorChallenges/HodgeConjectureCMAbelianVarieties/HodgeConjecture/Definitions/AlgebraicGeometry/Cohomology/GlobalSections.lean:126: set_option backward.isDefEq.respectTransparency.types false in
+  [set_option (any)] lean/ComparatorChallenges/HodgeConjectureCMAbelianVarieties/HodgeConjecture/Definitions/AlgebraicGeometry/Cohomology/GlobalSections.lean:127: set_option backward.isDefEq.respectTransparency false in
+  [set_option (any)] lean/ComparatorChallenges/HodgeConjectureCMAbelianVarieties/HodgeConjecture/Definitions/AlgebraicGeometry/Cohomology/WithSupport.lean:52: set_option quotPrecheck false in
+  [set_option (any)] lean/ComparatorChallenges/HodgeConjectureCMAbelianVarieties/HodgeConjecture/Definitions/AlgebraicGeometry/Cohomology/WithSupport.lean:76: set_option linter.auxLemma false in
+  [set_option (any)] lean/ComparatorChallenges/HodgeConjectureCMAbelianVarieties/HodgeConjecture/Definitions/AlgebraicGeometry/Cohomology/WithSupport.lean:123: set_option linter.auxLemma false in
+  [set_option (any)] lean/ComparatorChallenges/HodgeConjectureCMAbelianVarieties/HodgeConjecture/Definitions/AlgebraicGeometry/Cycle/Component/SmoothClosedLift.lean:66: set_option backward.isDefEq.respectTransparency false in
+  [set_option (any)] lean/ComparatorChallenges/HodgeConjectureCMAbelianVarieties/HodgeConjecture/Definitions/AlgebraicGeometry/Cycle/Component/SmoothClosedLift.lean:67: set_option backward.defeqAttrib.useBackward true in
+  [set_option (any)] lean/ComparatorChallenges/HodgeConjectureCMAbelianVarieties/HodgeConjecture/Definitions/AlgebraicGeometry/Cycle/Component/SmoothSupportPurity.lean:152: set_option backward.isDefEq.respectTransparency false in
+  [set_option (any)] lean/ComparatorChallenges/HodgeConjectureCMAbelianVarieties/HodgeConjecture/Definitions/AlgebraicGeometry/Cycle/Component/SmoothSupportPurity.lean:153: set_option backward.defeqAttrib.useBackward true in
+  [set_option (any)] lean/ComparatorChallenges/HodgeConjectureCMAbelianVarieties/HodgeConjecture/Definitions/AlgebraicGeometry/Cycle/Component/SupportExtension.lean:159: set_option backward.isDefEq.respectTransparency false in
+  [set_option (any)] lean/ComparatorChallenges/HodgeConjectureCMAbelianVarieties/HodgeConjecture/Definitions/AlgebraicGeometry/Cycle/Component/SupportExtension.lean:160: set_option backward.defeqAttrib.useBackward true in
+  [set_option (any)] lean/ComparatorChallenges/HodgeConjectureCMAbelianVarieties/HodgeConjecture/Definitions/AlgebraicGeometry/Cycle/SmoothPair/CoclassSection.lean:90: set_option backward.isDefEq.respectTransparency false in
+  [set_option (any)] lean/ComparatorChallenges/HodgeConjectureCMAbelianVarieties/HodgeConjecture/Definitions/AlgebraicGeometry/Hodge/HolomorphicDeRham.lean:177: set_option backward.isDefEq.respectTransparency false in
+  [set_option (any)] lean/ComparatorChallenges/HodgeConjectureCMAbelianVarieties/HodgeConjecture/Definitions/AlgebraicGeometry/Hodge/HolomorphicDeRham.lean:275: set_option backward.isDefEq.respectTransparency false in
+  [set_option (any)] lean/ComparatorChallenges/HodgeConjectureCMAbelianVarieties/HodgeConjecture/Definitions/AlgebraicGeometry/Hodge/HolomorphicDeRham.lean:298: set_option backward.isDefEq.respectTransparency false in
+  [set_option (any)] lean/ComparatorChallenges/HodgeConjectureCMAbelianVarieties/HodgeConjecture/Definitions/AlgebraicGeometry/Hodge/HolomorphicDeRham.lean:401: set_option backward.isDefEq.respectTransparency false in
+  [set_option (any)] lean/ComparatorChallenges/HodgeConjectureCMAbelianVarieties/HodgeConjecture/Definitions/AlgebraicGeometry/Hodge/HolomorphicDeRham.lean:428: set_option backward.isDefEq.respectTransparency false in
+  [set_option (any)] lean/ComparatorChallenges/HodgeConjectureCMAbelianVarieties/HodgeConjecture/Definitions/AlgebraicGeometry/Hodge/HolomorphicDeRham.lean:460: set_option backward.isDefEq.respectTransparency false in
+  [set_option (any)] lean/ComparatorChallenges/HodgeConjectureCMAbelianVarieties/HodgeConjecture/Definitions/AlgebraicGeometry/Hodge/HolomorphicDeRham.lean:504: set_option backward.isDefEq.respectTransparency false in
+  [set_option (any)] lean/ComparatorChallenges/HodgeConjectureCMAbelianVarieties/HodgeConjecture/Definitions/AlgebraicGeometry/Hodge/HolomorphicDeRham.lean:515: set_option backward.isDefEq.respectTransparency false in
+  [set_option (any)] lean/ComparatorChallenges/HodgeConjectureCMAbelianVarieties/HodgeConjecture/Definitions/AlgebraicTopology/Sheaf/CohomologySection.lean:76: set_option backward.isDefEq.respectTransparency false in
+  [set_option (any)] lean/ComparatorChallenges/HodgeConjectureCMAbelianVarieties/HodgeConjecture/Definitions/AlgebraicTopology/Sheaf/FlasqueLowestCohomology.lean:86: set_option backward.isDefEq.respectTransparency false in
+  [set_option (any)] lean/ComparatorChallenges/HodgeConjectureCMAbelianVarieties/HodgeConjecture/Definitions/AlgebraicTopology/Sheaf/OpenInjectiveResolution.lean:37: set_option backward.isDefEq.respectTransparency false in
+  [set_option (any)] lean/ComparatorChallenges/HodgeConjectureCMAbelianVarieties/HodgeConjecture/Definitions/AlgebraicTopology/Sheaf/OpenRestrictedLowestCohomology.lean:50: set_option backward.isDefEq.respectTransparency false in
+  [set_option (any)] lean/ComparatorChallenges/HodgeConjectureCMAbelianVarieties/HodgeConjecture/Definitions/AlgebraicTopology/Sheaf/OpenRestrictedLowestCohomology.lean:51: set_option backward.defeqAttrib.useBackward true in
+  [set_option (any)] lean/ComparatorChallenges/HodgeConjectureCMAbelianVarieties/HodgeConjecture/Definitions/AlgebraicTopology/Sheaf/OpenRestrictedLowestCohomology.lean:73: set_option backward.isDefEq.respectTransparency false in
+  [set_option (any)] lean/ComparatorChallenges/HodgeConjectureCMAbelianVarieties/HodgeConjecture/Definitions/AlgebraicTopology/Sheaf/OpenRestrictedLowestCohomology.lean:74: set_option backward.defeqAttrib.useBackward true in
+  [set_option (any)] lean/ComparatorChallenges/HodgeConjectureCMAbelianVarieties/HodgeConjecture/Definitions/AlgebraicTopology/Singular/RelativeCochainCone.lean:52: set_option backward.isDefEq.respectTransparency false in
+  [set_option (any)] lean/ComparatorChallenges/HodgeConjectureCMAbelianVarieties/HodgeConjecture/Definitions/AlgebraicTopology/Singular/Sheaf/Cochain.lean:200: set_option backward.isDefEq.respectTransparency false in
+  [set_option (any)] lean/ComparatorChallenges/HodgeConjectureCMAbelianVarieties/HodgeConjecture/Definitions/AlgebraicTopology/Singular/Sheaf/CochainOpenCone.lean:98: set_option backward.isDefEq.respectTransparency false in
+  [set_option (any)] lean/ComparatorChallenges/HodgeConjectureCMAbelianVarieties/HodgeConjecture/Definitions/AlgebraicTopology/Singular/Sheaf/CochainOpenCone.lean:141: set_option backward.defeqAttrib.useBackward true in
+  [set_option (any)] lean/ComparatorChallenges/HodgeConjectureCMAbelianVarieties/HodgeConjecture/Definitions/AlgebraicTopology/Singular/Sheaf/CochainOpenCone.lean:142: set_option backward.isDefEq.respectTransparency false in
+  [set_option (any)] lean/ComparatorChallenges/HodgeConjectureCMAbelianVarieties/HodgeConjecture/Definitions/AlgebraicTopology/Singular/Sheaf/CochainOpenCone.lean:143: set_option backward.isDefEq.respectTransparency.types false in
+  [set_option (any)] lean/ComparatorChallenges/HodgeConjectureCMAbelianVarieties/HodgeConjecture/Definitions/AlgebraicTopology/Singular/Sheaf/CochainOpenCone.lean:167: set_option backward.isDefEq.respectTransparency.types false in
+  [set_option (any)] lean/ComparatorChallenges/HodgeConjectureCMAbelianVarieties/HodgeConjecture/Definitions/AlgebraicTopology/Singular/Sheaf/CochainOpenCone.lean:168: set_option backward.isDefEq.respectTransparency false in
+  [set_option (any)] lean/ComparatorChallenges/HodgeConjectureCMAbelianVarieties/HodgeConjecture/Definitions/AlgebraicTopology/Support/CohomologyFlasqueModel.lean:54: set_option backward.isDefEq.respectTransparency false in
+  [set_option (any)] lean/ComparatorChallenges/HodgeConjectureCMAbelianVarieties/HodgeConjecture/Definitions/AlgebraicTopology/Support/CohomologyFlasqueModel.lean:60: set_option backward.isDefEq.respectTransparency false in
+  [set_option (any)] lean/ComparatorChallenges/HodgeConjectureCMAbelianVarieties/HodgeConjecture/Definitions/AlgebraicTopology/Support/CohomologyFlasqueModel.lean:68: set_option backward.isDefEq.respectTransparency false in
+  [set_option (any)] lean/ComparatorChallenges/HodgeConjectureCMAbelianVarieties/HodgeConjecture/Definitions/AlgebraicTopology/Support/CohomologyFlasqueModel.lean:79: set_option backward.isDefEq.respectTransparency false in
+  [set_option (any)] lean/ComparatorChallenges/HodgeConjectureCMAbelianVarieties/HodgeConjecture/Definitions/AlgebraicTopology/Support/CohomologyFlasqueModel.lean:122: set_option linter.auxLemma false
+  [set_option (any)] lean/ComparatorChallenges/HodgeConjectureCMAbelianVarieties/HodgeConjecture/Definitions/AlgebraicTopology/Support/CohomologyInjectiveModel.lean:86: set_option linter.auxLemma false
+  [set_option (any)] lean/ComparatorChallenges/HodgeConjectureCMAbelianVarieties/HodgeConjecture/Definitions/AlgebraicTopology/Support/DerivedSections.lean:97: set_option backward.isDefEq.respectTransparency false in
+  [set_option (any)] lean/ComparatorChallenges/HodgeConjectureCMAbelianVarieties/HodgeConjecture/Definitions/AlgebraicTopology/Support/DerivedSectionsLocalization.lean:74: set_option backward.isDefEq.respectTransparency false in
+  [set_option (any)] lean/ComparatorChallenges/HodgeConjectureCMAbelianVarieties/HodgeConjecture/Definitions/AlgebraicTopology/Support/RelativeCohomologyOpenTransport.lean:46: set_option backward.isDefEq.respectTransparency false in
+  [set_option (any)] lean/ComparatorChallenges/HodgeConjectureCMAbelianVarieties/HodgeConjecture/Definitions/AlgebraicTopology/Support/RelativeCohomologyOpenTransport.lean:47: set_option backward.defeqAttrib.useBackward true in
+  [set_option (any)] lean/ComparatorChallenges/HodgeConjectureCMAbelianVarieties/HodgeConjecture/Definitions/AlgebraicTopology/Support/SectionRestrictionCone.lean:115: set_option backward.isDefEq.respectTransparency false in
+  [set_option (any)] lean/ComparatorChallenges/HodgeConjectureCMAbelianVarieties/HodgeConjecture/Definitions/AlgebraicTopology/Support/SectionRestrictionCone.lean:116: set_option backward.defeqAttrib.useBackward true in
+  [set_option (any)] lean/ComparatorChallenges/HodgeConjectureCMAbelianVarieties/HodgeConjecture/Definitions/AlgebraicTopology/Support/SectionRestrictionCone.lean:130: set_option backward.isDefEq.respectTransparency false in
+  [set_option (any)] lean/ComparatorChallenges/HodgeConjectureCMAbelianVarieties/HodgeConjecture/Definitions/AlgebraicTopology/Support/SectionRestrictionCone.lean:131: set_option backward.defeqAttrib.useBackward true in
+  [set_option (any)] lean/ComparatorChallenges/HodgeConjectureCMAbelianVarieties/HodgeConjecture/Lemmas/Algebra/Homology/DerivedCategory/MappingCoconeShortExact.lean:35: set_option backward.defeqAttrib.useBackward true in
+  [set_option (any)] lean/ComparatorChallenges/HodgeConjectureCMAbelianVarieties/HodgeConjecture/Lemmas/Algebra/Homology/DerivedCategory/MappingCoconeShortExact.lean:36: set_option backward.isDefEq.respectTransparency false in
+  [set_option (any)] lean/ComparatorChallenges/HodgeConjectureCMAbelianVarieties/HodgeConjecture/Lemmas/Algebra/Homology/DerivedCategory/MappingCoconeShortExactNaturality.lean:36: set_option backward.defeqAttrib.useBackward true in
+  [set_option (any)] lean/ComparatorChallenges/HodgeConjectureCMAbelianVarieties/HodgeConjecture/Lemmas/Algebra/Homology/DerivedCategory/MappingCoconeShortExactNaturality.lean:37: set_option backward.isDefEq.respectTransparency false in
+  [set_option (any)] lean/ComparatorChallenges/HodgeConjectureCMAbelianVarieties/HodgeConjecture/Lemmas/Algebra/Homology/DerivedCategory/MappingCoconeShortExactNaturality.lean:53: set_option backward.defeqAttrib.useBackward true in
+  [set_option (any)] lean/ComparatorChallenges/HodgeConjectureCMAbelianVarieties/HodgeConjecture/Lemmas/Algebra/Homology/DerivedCategory/MappingCoconeShortExactNaturality.lean:54: set_option backward.isDefEq.respectTransparency false in
+  [set_option (any)] lean/ComparatorChallenges/HodgeConjectureCMAbelianVarieties/HodgeConjecture/Lemmas/Algebra/Homology/DerivedCategory/MappingConeMapNaturality.lean:32: set_option backward.defeqAttrib.useBackward true in

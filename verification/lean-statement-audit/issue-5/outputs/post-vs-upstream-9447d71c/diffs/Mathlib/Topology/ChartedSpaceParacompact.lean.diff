@@ -1,0 +1,38 @@
+--- upstream/Mathlib/Topology/ChartedSpaceParacompact.lean
++++ challenge/Mathlib/Topology/ChartedSpaceParacompact.lean
+@@ -13,9 +13,13 @@
+ See the License for the specific language governing permissions and
+ limitations under the License.
++
+ -/
+-module
+ 
+-public import Mathlib.Geometry.Manifold.ChartedSpace
+-public import Mathlib.Topology.Compactness.Paracompact
++import Mathlib.Geometry.Manifold.ChartedSpace
++import Mathlib.Topology.Compactness.Paracompact
++
++namespace OAI.Topology.Foundations.ChartedSpaceParacompact
++
++open _root_.TopologicalSpace
+ 
+ /-!
+@@ -28,9 +32,10 @@
+ -/
+ 
+-@[expose] public section
++section
+ 
+ universe u
+ 
+ namespace TopologicalSpace
++open _root_.TopologicalSpace
+ 
+ /-- Every open subset of a compact Hausdorff charted space with locally compact,
+@@ -51,2 +56,6 @@
+ 
+ end TopologicalSpace
++
++end
++
++end OAI.Topology.Foundations.ChartedSpaceParacompact

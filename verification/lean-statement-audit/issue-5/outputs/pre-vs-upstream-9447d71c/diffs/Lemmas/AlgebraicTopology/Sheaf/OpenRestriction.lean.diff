@@ -1,0 +1,16 @@
+--- upstream/Lemmas/AlgebraicTopology/Sheaf/OpenRestriction.lean
++++ challenge/Lemmas/AlgebraicTopology/Sheaf/OpenRestriction.lean
+@@ -108,5 +108,4 @@
+         rw [← F.obj.map_comp]
+         convert F.obj.map_id _ using 1
+-        congr 1
+       right_triangle := by
+         ext F : 2
+@@ -115,6 +114,5 @@
+         change F.obj.map _ ≫ F.obj.map _ = 𝟙 _
+         rw [← F.obj.map_comp]
+-        convert F.obj.map_id _ using 1
+-        congr 1 }
++        convert F.obj.map_id _ using 1 }
+ 
+ /-- Constant sections on an open subspace map to the restriction of the ambient

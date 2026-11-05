@@ -1,0 +1,9 @@
+--- upstream/Lemmas/AlgebraicTopology/Singular/Cohomology.lean
++++ challenge/Lemmas/AlgebraicTopology/Singular/Cohomology.lean
+@@ -278,5 +278,5 @@
+   let : Mono ((chainPairFunctor R).obj X).hom := relativeChainMap_mono R X
+   exact
+-    { exact := ShortComplex.exact_cokernel ((chainPairFunctor R).obj X).hom
++    { exact := ShortComplex.cokernelSequence_exact ((chainPairFunctor R).obj X).hom
+       mono_f := by
+         dsimp [relativeChainShortComplex]

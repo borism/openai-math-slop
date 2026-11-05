@@ -1,0 +1,577 @@
+closure of ['OAI.LinearAlgebra.MatrixMultiplication.Main']: 504 local modules; 132 external imports
+external import roots: ['FixedPointTheorems', 'Lean', 'Mathlib', 'Std']
+lines scanned: 83127
+
+pattern counts (code only; comments/strings stripped):
+  axiom decl                                           0
+  sorry                                                0
+  admit                                                0
+  native_decide                                        0
+  Lean.ofReduceBool / ofReduceNat (compiler-trusting axiom) 0
+  decide +kernel (kernel reduction, no extra axiom)    96
+  trustCompiler                                        0
+  implemented_by                                       0
+  extern                                               0
+  unsafe                                               0
+  opaque decl                                          0
+  partial def                                          0
+  run_tac                                              0
+  elab/macro/syntax definition                         0
+  set_option (any)                                     0
+  set_option debug.skipKernelTC                        0
+  set_option allowUnsafeReducibility                   0
+  set_option maxHeartbeats 0                           0
+  set_option autoImplicit true                         0
+  Decidable instance override (instance : Decidable)   0
+  csimp attribute                                      0
+  addDecl / Environment manipulation                   0
+
+hits for hard trust patterns:
+
+first 40 hits for other patterns:
+  [decide +kernel (kernel reduction, no extra axiom)] lean/OAI/LinearAlgebra/MatrixMultiplication/CoppersmithWinograd/CWCoarseIndices.lean:15: decide +kernel
+  [decide +kernel (kernel reduction, no extra axiom)] lean/OAI/LinearAlgebra/MatrixMultiplication/CoppersmithWinograd/CWCompatibilityTransfer.lean:26: decide +kernel
+  [decide +kernel (kernel reduction, no extra axiom)] lean/OAI/LinearAlgebra/MatrixMultiplication/CoppersmithWinograd/CWLeafStatistics.lean:23: decide +kernel
+  [decide +kernel (kernel reduction, no extra axiom)] lean/OAI/LinearAlgebra/MatrixMultiplication/CoppersmithWinograd/CWLeafStatistics.lean:28: decide +kernel
+  [decide +kernel (kernel reduction, no extra axiom)] lean/OAI/LinearAlgebra/MatrixMultiplication/CoppersmithWinograd/CWLeafStatistics.lean:32: decide +kernel
+  [decide +kernel (kernel reduction, no extra axiom)] lean/OAI/LinearAlgebra/MatrixMultiplication/CoppersmithWinograd/CWLeafStatistics.lean:38: decide +kernel
+  [decide +kernel (kernel reduction, no extra axiom)] lean/OAI/LinearAlgebra/MatrixMultiplication/CoppersmithWinograd/CWWordDimensionParameters.lean:14: decide +kernel
+  [decide +kernel (kernel reduction, no extra axiom)] lean/OAI/LinearAlgebra/MatrixMultiplication/CoppersmithWinograd/CWWordDimensionParameters.lean:28: decide +kernel
+  [decide +kernel (kernel reduction, no extra axiom)] lean/OAI/LinearAlgebra/MatrixMultiplication/FieldConstruction/InitialEntropy.lean:21: decide +kernel
+  [decide +kernel (kernel reduction, no extra axiom)] lean/OAI/LinearAlgebra/MatrixMultiplication/FieldConstruction/InitialGibbs.lean:38: exact list_sum_map_positive _ _ (by decide +kernel)
+  [decide +kernel (kernel reduction, no extra axiom)] lean/OAI/LinearAlgebra/MatrixMultiplication/FieldConstruction/InitialOrbit.lean:53: decide +kernel
+  [decide +kernel (kernel reduction, no extra axiom)] lean/OAI/LinearAlgebra/MatrixMultiplication/FieldConstruction/ShapeEncoding.lean:171: theorem root_shapes_nodup : sortedInitial.Nodup := by decide +kernel
+  [decide +kernel (kernel reduction, no extra axiom)] lean/OAI/LinearAlgebra/MatrixMultiplication/FieldConstruction/ShapeEncoding.lean:174: decide +kernel
+  [decide +kernel (kernel reduction, no extra axiom)] lean/OAI/LinearAlgebra/MatrixMultiplication/FieldConstruction/ShapeEncoding.lean:177: decide +kernel
+  [decide +kernel (kernel reduction, no extra axiom)] lean/OAI/LinearAlgebra/MatrixMultiplication/FieldConstruction/StageCLaw.lean:30: decide +kernel
+  [decide +kernel (kernel reduction, no extra axiom)] lean/OAI/LinearAlgebra/MatrixMultiplication/FieldConstruction/StageCLaw.lean:35: decide +kernel
+  [decide +kernel (kernel reduction, no extra axiom)] lean/OAI/LinearAlgebra/MatrixMultiplication/FieldConstruction/StageCLaw.lean:39: decide +kernel
+  [decide +kernel (kernel reduction, no extra axiom)] lean/OAI/LinearAlgebra/MatrixMultiplication/FieldConstruction/StageCLaw.lean:46: decide +kernel
+  [decide +kernel (kernel reduction, no extra axiom)] lean/OAI/LinearAlgebra/MatrixMultiplication/FieldConstruction/StageCLaw.lean:52: decide +kernel
+  [decide +kernel (kernel reduction, no extra axiom)] lean/OAI/LinearAlgebra/MatrixMultiplication/FieldConstruction/StageCLaw.lean:56: decide +kernel
+  [decide +kernel (kernel reduction, no extra axiom)] lean/OAI/LinearAlgebra/MatrixMultiplication/FieldConstruction/StageCLaw.lean:60: decide +kernel
+  [decide +kernel (kernel reduction, no extra axiom)] lean/OAI/LinearAlgebra/MatrixMultiplication/FieldConstruction/StageCLaw.lean:64: decide +kernel
+  [decide +kernel (kernel reduction, no extra axiom)] lean/OAI/LinearAlgebra/MatrixMultiplication/FieldConstruction/StageCLaw.lean:68: decide +kernel
+  [decide +kernel (kernel reduction, no extra axiom)] lean/OAI/LinearAlgebra/MatrixMultiplication/FieldConstruction/TerminalRateFormulas.lean:42: decide +kernel
+  [decide +kernel (kernel reduction, no extra axiom)] lean/OAI/LinearAlgebra/MatrixMultiplication/FieldConstruction/TerminalRateFormulas.lean:46: decide +kernel
+  [decide +kernel (kernel reduction, no extra axiom)] lean/OAI/LinearAlgebra/MatrixMultiplication/FieldConstruction/TerminalRateFormulas.lean:50: decide +kernel
+  [decide +kernel (kernel reduction, no extra axiom)] lean/OAI/LinearAlgebra/MatrixMultiplication/FieldHistory/Populations.lean:57: decide +kernel
+  [decide +kernel (kernel reduction, no extra axiom)] lean/OAI/LinearAlgebra/MatrixMultiplication/FieldHistory/Populations.lean:80: decide +kernel
+  [decide +kernel (kernel reduction, no extra axiom)] lean/OAI/LinearAlgebra/MatrixMultiplication/FieldHistory/Priority.lean:29: decide +kernel
+  [decide +kernel (kernel reduction, no extra axiom)] lean/OAI/LinearAlgebra/MatrixMultiplication/FieldHistory/Priority.lean:33: decide +kernel
+  [decide +kernel (kernel reduction, no extra axiom)] lean/OAI/LinearAlgebra/MatrixMultiplication/FieldHistory/Priority.lean:51: decide +kernel
+  [decide +kernel (kernel reduction, no extra axiom)] lean/OAI/LinearAlgebra/MatrixMultiplication/FieldHistory/Priority.lean:67: decide +kernel
+  [decide +kernel (kernel reduction, no extra axiom)] lean/OAI/LinearAlgebra/MatrixMultiplication/FieldHistory/Priority.lean:77: decide +kernel
+  [decide +kernel (kernel reduction, no extra axiom)] lean/OAI/LinearAlgebra/MatrixMultiplication/FieldHistory/Priority.lean:82: decide +kernel
+  [decide +kernel (kernel reduction, no extra axiom)] lean/OAI/LinearAlgebra/MatrixMultiplication/FieldHistory/Sums.lean:88: decide +kernel
+  [decide +kernel (kernel reduction, no extra axiom)] lean/OAI/LinearAlgebra/MatrixMultiplication/FieldParameters/Basic.lean:83: [17, 118, 54, 75, 36] := by decide +kernel
+  [decide +kernel (kernel reduction, no extra axiom)] lean/OAI/LinearAlgebra/MatrixMultiplication/FieldParameters/Basic.lean:87: zeroSecond.length] = [30, 21, 21, 24] := by decide +kernel
+  [decide +kernel (kernel reduction, no extra axiom)] lean/OAI/LinearAlgebra/MatrixMultiplication/FieldParameters/Basic.lean:97: decide +kernel
+  [decide +kernel (kernel reduction, no extra axiom)] lean/OAI/LinearAlgebra/MatrixMultiplication/FieldParameters/Basic.lean:101: decide +kernel
+  [decide +kernel (kernel reduction, no extra axiom)] lean/OAI/LinearAlgebra/MatrixMultiplication/FieldParameters/Basic.lean:106: decide +kernel
+
+closure modules:
+   OAI.LinearAlgebra.MatrixMultiplication.Main
+   OAI.LinearAlgebra.MatrixMultiplication.Numerical.AllFieldCertificatesReplayIntegration
+   OAI.LinearAlgebra.MatrixMultiplication.Numerical.AllFieldCertificatesReplayStatic
+   OAI.LinearAlgebra.MatrixMultiplication.Numerical.AllFieldCertificatesReplay
+   OAI.LinearAlgebra.MatrixMultiplication.Numerical.AllFieldCertificates
+   OAI.LinearAlgebra.MatrixMultiplication.Numerical.ComplexRationalLogCertificate
+   OAI.LinearAlgebra.MatrixMultiplication.Numerical.AllFieldCertificatesReplaySemantics
+   OAI.LinearAlgebra.MatrixMultiplication.FieldConstruction.Conditional
+   OAI.LinearAlgebra.MatrixMultiplication.FieldConstruction.OrderedLimits
+   OAI.LinearAlgebra.MatrixMultiplication.FieldConstruction.ConstructionFamily
+   OAI.LinearAlgebra.MatrixMultiplication.FieldConstruction.RateLimit
+   OAI.LinearAlgebra.MatrixMultiplication.Arithmetic.Exponent
+   OAI.LinearAlgebra.MatrixMultiplication.Arithmetic.Padding
+   OAI.LinearAlgebra.MatrixMultiplication.Arithmetic.ProgramComposition
+   OAI.LinearAlgebra.MatrixMultiplication.Arithmetic.Programs
+   OAI.LinearAlgebra.MatrixMultiplication.Arithmetic.Complexity
+   OAI.LinearAlgebra.MatrixMultiplication.ComplexArithmetic.Complexity
+   OAI.LinearAlgebra.MatrixMultiplication.Tensor.ComplexTensor
+   OAI.LinearAlgebra.MatrixMultiplication.Model
+   OAI.LinearAlgebra.MatrixMultiplication.Arithmetic.LowerBound
+   OAI.LinearAlgebra.MatrixMultiplication.Arithmetic.NaiveAlgorithm
+   OAI.LinearAlgebra.MatrixMultiplication.Polynomial.ExpressionFamily
+   OAI.LinearAlgebra.MatrixMultiplication.Recovery.FiniteSchedule
+   OAI.LinearAlgebra.MatrixMultiplication.Recovery.Staggering
+   OAI.LinearAlgebra.MatrixMultiplication.FieldConstruction.Witness
+   OAI.LinearAlgebra.MatrixMultiplication.Rectangular.ASI
+   OAI.LinearAlgebra.MatrixMultiplication.Rectangular.ComplexASI
+   OAI.LinearAlgebra.MatrixMultiplication.Polynomial.ComplexPolynomialWitnessProduct
+   OAI.LinearAlgebra.MatrixMultiplication.Tensor.ComplexTensorSymmetrization
+   OAI.LinearAlgebra.MatrixMultiplication.Tensor.ComplexMatrixTensor
+   OAI.LinearAlgebra.MatrixMultiplication.Tensor.ComplexTensorBatching
+   OAI.LinearAlgebra.MatrixMultiplication.Polynomial.ComplexPolynomialRestriction
+   OAI.LinearAlgebra.MatrixMultiplication.Polynomial.ComplexPolynomialApproximation
+   OAI.LinearAlgebra.MatrixMultiplication.Tensor.ComplexEqualSummandASI
+   OAI.LinearAlgebra.MatrixMultiplication.Tensor.ComplexTensorFlattening
+   OAI.LinearAlgebra.MatrixMultiplication.Polynomial.ComplexPolynomialPowerGrowth
+   OAI.LinearAlgebra.MatrixMultiplication.Tensor.ComplexBatchCeiling
+   OAI.LinearAlgebra.MatrixMultiplication.Entropy.ComplexAsymptoticRecurrence
+   OAI.LinearAlgebra.MatrixMultiplication.ComplexArithmetic.Exponent
+   OAI.LinearAlgebra.MatrixMultiplication.ComplexArithmetic.LowerBound
+   OAI.LinearAlgebra.MatrixMultiplication.ComplexArithmetic.NaiveAlgorithm
+   OAI.LinearAlgebra.MatrixMultiplication.Polynomial.ComplexExpressionFamily
+   OAI.LinearAlgebra.MatrixMultiplication.ComplexArithmetic.Programs
+   OAI.LinearAlgebra.MatrixMultiplication.ComplexArithmetic.Growth
+   OAI.LinearAlgebra.MatrixMultiplication.ComplexArithmetic.RecursiveBlockPrograms
+   OAI.LinearAlgebra.MatrixMultiplication.ComplexArithmetic.ProgramComposition
+   OAI.LinearAlgebra.MatrixMultiplication.ComplexArithmetic.MatrixPadding
+   OAI.LinearAlgebra.MatrixMultiplication.Tensor.FieldCoefficientExtraction
+   OAI.LinearAlgebra.MatrixMultiplication.Arithmetic.RecursiveBlockPrograms
+   OAI.LinearAlgebra.MatrixMultiplication.Rectangular.Growth
+   OAI.LinearAlgebra.MatrixMultiplication.Rectangular.Recursion
+   OAI.LinearAlgebra.MatrixMultiplication.FieldGroups.Selection
+   OAI.LinearAlgebra.MatrixMultiplication.FieldGroups.NativeDegreeBound
+   OAI.LinearAlgebra.MatrixMultiplication.FieldGroups.ProjectedEntropy
+   OAI.LinearAlgebra.MatrixMultiplication.FieldConstruction.NativeGroupedRates
+   OAI.LinearAlgebra.MatrixMultiplication.FieldConstruction.ComplementSums
+   OAI.LinearAlgebra.MatrixMultiplication.FieldParameters.Traversal
+   OAI.LinearAlgebra.MatrixMultiplication.FieldParameters.Distributions
+   OAI.LinearAlgebra.MatrixMultiplication.FieldParameters.Laws
+   OAI.LinearAlgebra.MatrixMultiplication.FieldParameters.Weights
+   OAI.LinearAlgebra.MatrixMultiplication.FieldParameters.Basic
+   OAI.LinearAlgebra.MatrixMultiplication.FieldConstruction.PairConditionalEntropy
+   OAI.LinearAlgebra.MatrixMultiplication.FieldConstruction.PairMarginals
+   OAI.LinearAlgebra.MatrixMultiplication.FieldConstruction.NativeLaws
+   OAI.LinearAlgebra.MatrixMultiplication.Separation.ComplexRationalTypes
+   OAI.LinearAlgebra.MatrixMultiplication.Entropy.ComplexFiniteEntropy
+   OAI.LinearAlgebra.MatrixMultiplication.Separation.ComplexFiniteControl
+   OAI.LinearAlgebra.MatrixMultiplication.FieldConstruction.ShapeEncoding
+   OAI.LinearAlgebra.MatrixMultiplication.JointExtraction.Population
+   OAI.LinearAlgebra.MatrixMultiplication.Separation.ComplexTypeCounting
+   OAI.LinearAlgebra.MatrixMultiplication.JointExtraction.CoarseHashing
+   OAI.LinearAlgebra.MatrixMultiplication.JointExtraction.LossCounts
+   OAI.LinearAlgebra.MatrixMultiplication.Separation.ComplexSeparationCounting
+   OAI.LinearAlgebra.MatrixMultiplication.JointExtraction.Hashing
+   OAI.LinearAlgebra.MatrixMultiplication.Separation.ComplexModularSeparation
+   OAI.LinearAlgebra.MatrixMultiplication.Separation.ComplexSeparation
+   OAI.LinearAlgebra.MatrixMultiplication.FieldConstruction.StageCLaw
+   OAI.LinearAlgebra.MatrixMultiplication.FieldConstruction.NativeCapacity
+   OAI.LinearAlgebra.MatrixMultiplication.JointExtraction.CapacityAlgebra
+   OAI.LinearAlgebra.MatrixMultiplication.JointExtraction.EntropyMax
+   OAI.LinearAlgebra.MatrixMultiplication.Entropy.ComplexEntropyContinuity
+   OAI.LinearAlgebra.MatrixMultiplication.FieldParameters.StageC
+   OAI.LinearAlgebra.MatrixMultiplication.FieldParameters.Entropy
+   OAI.LinearAlgebra.MatrixMultiplication.FieldHistory.Sums
+   OAI.LinearAlgebra.MatrixMultiplication.FieldHistory.Populations
+   OAI.LinearAlgebra.MatrixMultiplication.Recovery.PhysicalOrders
+   OAI.LinearAlgebra.MatrixMultiplication.FieldConstruction.PopulationCounts
+   OAI.LinearAlgebra.MatrixMultiplication.FieldHistory.Priority
+   OAI.LinearAlgebra.MatrixMultiplication.FieldHistory.Schedule
+   OAI.LinearAlgebra.MatrixMultiplication.FieldParameters.LeafRates
+   OAI.LinearAlgebra.MatrixMultiplication.FieldParameters.Compatibility
+   OAI.LinearAlgebra.MatrixMultiplication.FieldParameters.HalfLaws
+   OAI.LinearAlgebra.MatrixMultiplication.JointExtraction.GroupedEntropyPartition
+   OAI.LinearAlgebra.MatrixMultiplication.JointExtraction.NativeGroupedEntropy
+   OAI.LinearAlgebra.MatrixMultiplication.JointExtraction.CompatibilityIncidence
+   OAI.LinearAlgebra.MatrixMultiplication.JointExtraction.TypeCounts
+   OAI.LinearAlgebra.MatrixMultiplication.Separation.ComplexHierarchyTypeCounting
+   OAI.LinearAlgebra.MatrixMultiplication.Entropy.ComplexConditionalTypeCounting
+   OAI.LinearAlgebra.MatrixMultiplication.Entropy.ComplexHierarchyEntropy
+   OAI.LinearAlgebra.MatrixMultiplication.Entropy.ComplexTypeEntropy
+   OAI.LinearAlgebra.MatrixMultiplication.Tensor.ComplexFactorialLogBounds
+   OAI.LinearAlgebra.MatrixMultiplication.FieldGroups.BranchLaws
+   OAI.LinearAlgebra.MatrixMultiplication.FieldGroups.NativeLaws
+   OAI.LinearAlgebra.MatrixMultiplication.FieldParameters.HalfComplement
+   OAI.LinearAlgebra.MatrixMultiplication.FieldConstruction.ActiveLaws
+   OAI.LinearAlgebra.MatrixMultiplication.JointExtraction.PopulationRates
+   OAI.LinearAlgebra.MatrixMultiplication.Entropy.ComplexSeparationAsymptotics
+   OAI.LinearAlgebra.MatrixMultiplication.FieldHistory.Bounds
+   OAI.LinearAlgebra.MatrixMultiplication.Recovery.HistorySupport
+   OAI.LinearAlgebra.MatrixMultiplication.Recovery.RecoverySupport
+   OAI.LinearAlgebra.MatrixMultiplication.FieldHistory.Counts
+   OAI.LinearAlgebra.MatrixMultiplication.FieldGroups.OrbitData
+   OAI.LinearAlgebra.MatrixMultiplication.JointExtraction.PopulationMixedCompatibility
+   OAI.LinearAlgebra.MatrixMultiplication.CoppersmithWinograd.CWStrandCompatibility
+   OAI.LinearAlgebra.MatrixMultiplication.CoppersmithWinograd.CWStrands
+   OAI.LinearAlgebra.MatrixMultiplication.CoppersmithWinograd.CWCompatibilityTransfer
+   OAI.LinearAlgebra.MatrixMultiplication.Recovery.InheritedMasks
+   OAI.LinearAlgebra.MatrixMultiplication.CoppersmithWinograd.CWLeafStatistics
+   OAI.LinearAlgebra.MatrixMultiplication.CoppersmithWinograd.CWLeafRestrictions
+   OAI.LinearAlgebra.MatrixMultiplication.Tensor.LeafVolumes
+   OAI.LinearAlgebra.MatrixMultiplication.CoppersmithWinograd.FieldCW
+   OAI.LinearAlgebra.MatrixMultiplication.JointExtraction.PopulationMixedNonzero
+   OAI.LinearAlgebra.MatrixMultiplication.JointExtraction.CanonicalMixed
+   OAI.LinearAlgebra.MatrixMultiplication.JointExtraction.CanonicalCW
+   OAI.LinearAlgebra.MatrixMultiplication.CoppersmithWinograd.CWCoarseIndices
+   OAI.LinearAlgebra.MatrixMultiplication.JointExtraction.Canonicalization
+   OAI.LinearAlgebra.MatrixMultiplication.JointExtraction.IdealBranches
+   OAI.LinearAlgebra.MatrixMultiplication.Recovery.ExactRecovery
+   OAI.LinearAlgebra.MatrixMultiplication.Separation.FiniteCover
+   OAI.LinearAlgebra.MatrixMultiplication.Tensor.ComplexTensorRestrictionComposition
+   OAI.LinearAlgebra.MatrixMultiplication.JointExtraction.CoarseAssignment
+   OAI.LinearAlgebra.MatrixMultiplication.JointExtraction.Extraction
+   OAI.LinearAlgebra.MatrixMultiplication.Recovery.HistorySymmetry
+   OAI.LinearAlgebra.MatrixMultiplication.Tensor.CompleteWordPair
+   OAI.LinearAlgebra.MatrixMultiplication.JointExtraction.PopulationCompatibility
+   OAI.LinearAlgebra.MatrixMultiplication.JointExtraction.CoarseReorder
+   OAI.LinearAlgebra.MatrixMultiplication.JointExtraction.MaskedAssignment
+   OAI.LinearAlgebra.MatrixMultiplication.JointExtraction.MaskedSelection
+   OAI.LinearAlgebra.MatrixMultiplication.JointExtraction.ExtractionRates
+   OAI.LinearAlgebra.MatrixMultiplication.JointExtraction.APFree
+   OAI.LinearAlgebra.MatrixMultiplication.JointExtraction.AssignmentLoss
+   OAI.LinearAlgebra.MatrixMultiplication.FieldGroups.OrbitCount
+   OAI.LinearAlgebra.MatrixMultiplication.FieldHistory.OrbitCount
+   OAI.LinearAlgebra.MatrixMultiplication.Recovery.InheritedOrbitProfiles
+   OAI.LinearAlgebra.MatrixMultiplication.Recovery.InheritedMaskAction
+   OAI.LinearAlgebra.MatrixMultiplication.Recovery.InheritedMaskMargins
+   OAI.LinearAlgebra.MatrixMultiplication.Recovery.InheritedStatisticWindows
+   OAI.LinearAlgebra.MatrixMultiplication.Recovery.InheritedMaskConcentration
+   OAI.LinearAlgebra.MatrixMultiplication.Recovery.OrbitCounting
+   OAI.LinearAlgebra.MatrixMultiplication.Recovery.PermutationMatchingHalves
+   OAI.LinearAlgebra.MatrixMultiplication.Recovery.PermutationMatchingMoments
+   OAI.LinearAlgebra.MatrixMultiplication.Recovery.PermutationIndicatorMoments
+   OAI.LinearAlgebra.MatrixMultiplication.Entropy.FiniteAverage
+   OAI.LinearAlgebra.MatrixMultiplication.FieldHistory.Support
+   OAI.LinearAlgebra.MatrixMultiplication.FieldHistory.GroupCore
+   OAI.LinearAlgebra.MatrixMultiplication.FieldHistory.GroupMasks
+   OAI.LinearAlgebra.MatrixMultiplication.FieldHistory.GroupAssignment
+   OAI.LinearAlgebra.MatrixMultiplication.Arithmetic.CommonDimensions
+   OAI.LinearAlgebra.MatrixMultiplication.FieldHistory.RecoveryCore
+   OAI.LinearAlgebra.MatrixMultiplication.Recovery.EquivOrbitTransport
+   OAI.LinearAlgebra.MatrixMultiplication.FieldHistory.IncomingCore
+   OAI.LinearAlgebra.MatrixMultiplication.FieldHistory.Tensors
+   OAI.LinearAlgebra.MatrixMultiplication.FieldConstruction.FiniteFamily
+   OAI.LinearAlgebra.MatrixMultiplication.Tensor.TerminalProducts
+   OAI.LinearAlgebra.MatrixMultiplication.Tensor.Replication
+   OAI.LinearAlgebra.MatrixMultiplication.Recovery.InverseLinearRecovery
+   OAI.LinearAlgebra.MatrixMultiplication.Recovery.RecoveryGrowth
+   OAI.LinearAlgebra.MatrixMultiplication.Recovery.OrbitRecovery
+   OAI.LinearAlgebra.MatrixMultiplication.FieldConstruction.Source
+   OAI.LinearAlgebra.MatrixMultiplication.FieldHistory.ChildLaws
+   OAI.LinearAlgebra.MatrixMultiplication.CoppersmithWinograd.CWCompleteStatistics
+   OAI.LinearAlgebra.MatrixMultiplication.CoppersmithWinograd.CWWindowedLeaves
+   OAI.LinearAlgebra.MatrixMultiplication.Tensor.ExactStatisticWords
+   OAI.LinearAlgebra.MatrixMultiplication.CoppersmithWinograd.CWShapeLeaves
+   OAI.LinearAlgebra.MatrixMultiplication.FieldHistory.Geometry
+   OAI.LinearAlgebra.MatrixMultiplication.FieldHistory.Transitions
+   OAI.LinearAlgebra.MatrixMultiplication.FieldHistory.MaskCore
+   OAI.LinearAlgebra.MatrixMultiplication.FieldHistory.RawMasks
+   OAI.LinearAlgebra.MatrixMultiplication.FieldGroups.BranchDesignation
+   OAI.LinearAlgebra.MatrixMultiplication.JointExtraction.ProjectedGroupEntropy
+   OAI.LinearAlgebra.MatrixMultiplication.JointExtraction.CompatibilityControls
+   OAI.LinearAlgebra.MatrixMultiplication.JointExtraction.CompatibilityRateLimit
+   OAI.LinearAlgebra.MatrixMultiplication.JointExtraction.AmbientRateLimit
+   OAI.LinearAlgebra.MatrixMultiplication.JointExtraction.AmbientDegree
+   OAI.LinearAlgebra.MatrixMultiplication.JointExtraction.CompatibilityEntropyBound
+   OAI.LinearAlgebra.MatrixMultiplication.JointExtraction.CompatibilityScaling
+   OAI.LinearAlgebra.MatrixMultiplication.JointExtraction.GroupedEntropyEmbedding
+   OAI.LinearAlgebra.MatrixMultiplication.FieldGroups.DegreeLaws
+   OAI.LinearAlgebra.MatrixMultiplication.FieldGroups.AmbientDegree
+   OAI.LinearAlgebra.MatrixMultiplication.JointExtraction.AmbientEntropy
+   OAI.LinearAlgebra.MatrixMultiplication.JointExtraction.GibbsApproximation
+   OAI.LinearAlgebra.MatrixMultiplication.FieldConstruction.ActiveCapacity
+   OAI.LinearAlgebra.MatrixMultiplication.FieldConstruction.ScheduledYield
+   OAI.LinearAlgebra.MatrixMultiplication.Entropy.ConditionalContinuity
+   OAI.LinearAlgebra.MatrixMultiplication.Entropy.ConditionalLabels
+   OAI.LinearAlgebra.MatrixMultiplication.Separation.AuxiliarySeparation
+   OAI.LinearAlgebra.MatrixMultiplication.Separation.ComplexStageHierarchyResources
+   OAI.LinearAlgebra.MatrixMultiplication.Entropy.ComplexHierarchySeparationRates
+   OAI.LinearAlgebra.MatrixMultiplication.Separation.ComplexLabelHierarchySeparation
+   OAI.LinearAlgebra.MatrixMultiplication.Tensor.ComplexSharedAuxiliaryBank
+   OAI.LinearAlgebra.MatrixMultiplication.Tensor.ComplexLocalMaps
+   OAI.LinearAlgebra.MatrixMultiplication.Separation.ComplexAuxiliarySeparation
+   OAI.LinearAlgebra.MatrixMultiplication.Tensor.ComplexSeparatedTensorDecomposition
+   OAI.LinearAlgebra.MatrixMultiplication.Tensor.ComplexDotPairing
+   OAI.LinearAlgebra.MatrixMultiplication.Separation.ComplexFiniteSeparation
+   OAI.LinearAlgebra.MatrixMultiplication.Tensor.ComplexGroupTensor
+   OAI.LinearAlgebra.MatrixMultiplication.FieldConstruction.StageCCapacity
+   OAI.LinearAlgebra.MatrixMultiplication.FieldConstruction.InitialEntropy
+   OAI.LinearAlgebra.MatrixMultiplication.JointExtraction.OrdinaryPopulationSelection
+   OAI.LinearAlgebra.MatrixMultiplication.JointExtraction.OrdinarySelection
+   OAI.LinearAlgebra.MatrixMultiplication.FieldConstruction.InitialHistories
+   OAI.LinearAlgebra.MatrixMultiplication.FieldConstruction.ActiveSums
+   OAI.LinearAlgebra.MatrixMultiplication.FieldGroups.TargetRate
+   OAI.LinearAlgebra.MatrixMultiplication.FieldConstruction.StageCGibbs
+   OAI.LinearAlgebra.MatrixMultiplication.JointExtraction.MarginalSupport
+   OAI.LinearAlgebra.MatrixMultiplication.FieldConstruction.ActiveGibbs
+   OAI.LinearAlgebra.MatrixMultiplication.FieldGroups.Degrees
+   OAI.LinearAlgebra.MatrixMultiplication.FieldGroups.PairEntropy
+   OAI.LinearAlgebra.MatrixMultiplication.JointExtraction.ConditionalCountEntropy
+   OAI.LinearAlgebra.MatrixMultiplication.FieldGroups.PairWindows
+   OAI.LinearAlgebra.MatrixMultiplication.JointExtraction.PairMixtureControls
+   OAI.LinearAlgebra.MatrixMultiplication.JointExtraction.PairClassWindows
+   OAI.LinearAlgebra.MatrixMultiplication.FieldHistory.MaskLaws
+   OAI.LinearAlgebra.MatrixMultiplication.FieldHistory.BranchWeights
+   OAI.LinearAlgebra.MatrixMultiplication.FieldGroups.AdmissibilityCore
+   OAI.LinearAlgebra.MatrixMultiplication.JointExtraction.ScalarOrbitAdmissibility
+   OAI.LinearAlgebra.MatrixMultiplication.FieldGroups.CountRate
+   OAI.LinearAlgebra.MatrixMultiplication.JointExtraction.CompatibilityCountProducer
+   OAI.LinearAlgebra.MatrixMultiplication.FieldGroups.DegreeEnvelope
+   OAI.LinearAlgebra.MatrixMultiplication.JointExtraction.MaskedRates
+   OAI.LinearAlgebra.MatrixMultiplication.JointExtraction.MaskedGoodSelection
+   OAI.LinearAlgebra.MatrixMultiplication.FieldGroups.SelectionCore
+   OAI.LinearAlgebra.MatrixMultiplication.FieldGroups.SelectionParameters
+   OAI.LinearAlgebra.MatrixMultiplication.FieldConstruction.ConstructionData
+   OAI.LinearAlgebra.MatrixMultiplication.FieldConstruction.ConstructionRates
+   OAI.LinearAlgebra.MatrixMultiplication.FieldConstruction.SourceRates
+   OAI.LinearAlgebra.MatrixMultiplication.FieldHistory.RecoveryBudget
+   OAI.LinearAlgebra.MatrixMultiplication.FieldConstruction.ConstructionLabels
+   OAI.LinearAlgebra.MatrixMultiplication.Entropy.FloorExponentialRates
+   OAI.LinearAlgebra.MatrixMultiplication.FieldConstruction.TerminalRates
+   OAI.LinearAlgebra.MatrixMultiplication.FieldConstruction.InitialLeafRates
+   OAI.LinearAlgebra.MatrixMultiplication.CoppersmithWinograd.CWWordDimensionParameters
+   OAI.LinearAlgebra.MatrixMultiplication.FieldParameters.Contractions
+   OAI.LinearAlgebra.MatrixMultiplication.CoppersmithWinograd.CWWordDimensions
+   OAI.LinearAlgebra.MatrixMultiplication.FieldConstruction.TerminalRateFormulas
+   OAI.LinearAlgebra.MatrixMultiplication.FieldConstruction.ZeroLeafRateFormula
+   OAI.LinearAlgebra.MatrixMultiplication.FieldConstruction.ZeroHistorySums
+   OAI.LinearAlgebra.MatrixMultiplication.FieldConstruction.StageCTerminalRates
+   OAI.LinearAlgebra.MatrixMultiplication.CoppersmithWinograd.CWStageCProductRates
+   OAI.LinearAlgebra.MatrixMultiplication.CoppersmithWinograd.CWStageCProducts
+   OAI.LinearAlgebra.MatrixMultiplication.CoppersmithWinograd.CWStageC
+   OAI.LinearAlgebra.MatrixMultiplication.FieldConstruction.TerminalStatisticLaws
+   OAI.LinearAlgebra.MatrixMultiplication.FieldConstruction.ZeroLeafRates
+   OAI.LinearAlgebra.MatrixMultiplication.Entropy.LeafRates
+   OAI.LinearAlgebra.MatrixMultiplication.FieldConstruction.TerminalPopulations
+   OAI.LinearAlgebra.MatrixMultiplication.Entropy.ConditionalRateBridge
+   OAI.LinearAlgebra.MatrixMultiplication.FieldConstruction.ScheduledPositivity
+   OAI.LinearAlgebra.MatrixMultiplication.FieldConstruction.InitialGibbs
+   OAI.LinearAlgebra.MatrixMultiplication.FieldConstruction.InitialOrbit
+   OAI.LinearAlgebra.MatrixMultiplication.FieldConstruction.FinishedWitness
+   OAI.LinearAlgebra.MatrixMultiplication.FieldConstruction.Terminal
+   OAI.LinearAlgebra.MatrixMultiplication.Tensor.TerminalRelabel
+   OAI.LinearAlgebra.MatrixMultiplication.FieldConstruction.StageCFinish
+   OAI.LinearAlgebra.MatrixMultiplication.Arithmetic.MatrixMapDecidable
+   OAI.LinearAlgebra.MatrixMultiplication.CoppersmithWinograd.CWStageCShapeProducts
+   OAI.LinearAlgebra.MatrixMultiplication.CoppersmithWinograd.CWStageCChildProducts
+   OAI.LinearAlgebra.MatrixMultiplication.CoppersmithWinograd.CWStageCPlacements
+   OAI.LinearAlgebra.MatrixMultiplication.FieldConstruction.StageCRegroup
+   OAI.LinearAlgebra.MatrixMultiplication.FieldConstruction.ZeroFinish
+   OAI.LinearAlgebra.MatrixMultiplication.CoppersmithWinograd.CWZeroGeometry
+   OAI.LinearAlgebra.MatrixMultiplication.CoppersmithWinograd.CWOrientedZero
+   OAI.LinearAlgebra.MatrixMultiplication.FieldConstruction.ZeroWords
+   OAI.LinearAlgebra.MatrixMultiplication.FieldConstruction.InitialZeroFinish
+   OAI.LinearAlgebra.MatrixMultiplication.FieldConstruction.FinalState
+   OAI.LinearAlgebra.MatrixMultiplication.FieldHistory.Iteration
+   OAI.LinearAlgebra.MatrixMultiplication.FieldHistory.Tick
+   OAI.LinearAlgebra.MatrixMultiplication.FieldGroups.Assignments
+   OAI.LinearAlgebra.MatrixMultiplication.FieldGroups.CompatibilityTransfer
+   OAI.LinearAlgebra.MatrixMultiplication.FieldGroups.StatisticComplement
+   OAI.LinearAlgebra.MatrixMultiplication.CoppersmithWinograd.CWShapePhysicalPermutation
+   OAI.LinearAlgebra.MatrixMultiplication.Tensor.TensorSidePermutation
+   OAI.LinearAlgebra.MatrixMultiplication.JointExtraction.PopulationCWNonzero
+   OAI.LinearAlgebra.MatrixMultiplication.FieldGroups.SourceSupport
+   OAI.LinearAlgebra.MatrixMultiplication.FieldGroups.AssignmentCore
+   OAI.LinearAlgebra.MatrixMultiplication.FieldGroups.AssignmentRetention
+   OAI.LinearAlgebra.MatrixMultiplication.FieldGroups.AssignmentLoss
+   OAI.LinearAlgebra.MatrixMultiplication.FieldGroups.Compatibility
+   OAI.LinearAlgebra.MatrixMultiplication.FieldGroups.Admissible
+   OAI.LinearAlgebra.MatrixMultiplication.FieldHistory.GroupedRecovery
+   OAI.LinearAlgebra.MatrixMultiplication.Recovery.RecoveryOrbitDecisions
+   OAI.LinearAlgebra.MatrixMultiplication.Recovery.GroupOrbitProjection
+   OAI.LinearAlgebra.MatrixMultiplication.Recovery.InheritedMaskOrbitFilter
+   OAI.LinearAlgebra.MatrixMultiplication.FieldHistory.Recovery
+   OAI.LinearAlgebra.MatrixMultiplication.JointExtraction.OrbitRecovery
+   OAI.LinearAlgebra.MatrixMultiplication.Recovery.OrbitLoss
+   OAI.LinearAlgebra.MatrixMultiplication.JointExtraction.CanonicalSymmetry
+   OAI.LinearAlgebra.MatrixMultiplication.FieldHistory.IncomingMasks
+   OAI.LinearAlgebra.MatrixMultiplication.FieldHistory.StageCIncoming
+   OAI.LinearAlgebra.MatrixMultiplication.CoppersmithWinograd.CWStageCStatistics
+   OAI.LinearAlgebra.MatrixMultiplication.FieldHistory.Masks
+   OAI.LinearAlgebra.MatrixMultiplication.FieldGroups.OrbitTransport
+   OAI.LinearAlgebra.MatrixMultiplication.JointExtraction.OrbitFibers
+   OAI.LinearAlgebra.MatrixMultiplication.FieldHistory.Produced
+   OAI.LinearAlgebra.MatrixMultiplication.FieldHistory.Regrouping
+   OAI.LinearAlgebra.MatrixMultiplication.FieldHistory.ProducedMasks
+   OAI.LinearAlgebra.MatrixMultiplication.FieldHistory.ProducedMaskCore
+   OAI.LinearAlgebra.MatrixMultiplication.Tensor.Subdivision
+   OAI.LinearAlgebra.MatrixMultiplication.FieldHistory.ProducedBase
+   OAI.LinearAlgebra.MatrixMultiplication.FieldHistory.Positions
+   OAI.LinearAlgebra.MatrixMultiplication.FieldHistory.SourceAssignment
+   OAI.LinearAlgebra.MatrixMultiplication.FieldHistory.Source
+   OAI.LinearAlgebra.MatrixMultiplication.FieldHistory.TickCarry
+   OAI.LinearAlgebra.MatrixMultiplication.FieldConstruction.InitialChoice
+   OAI.LinearAlgebra.MatrixMultiplication.FieldConstruction.InitialFamily
+   OAI.LinearAlgebra.MatrixMultiplication.FieldConstruction.InitialState
+   OAI.LinearAlgebra.MatrixMultiplication.JointExtraction.CanonicalInitial
+   OAI.LinearAlgebra.MatrixMultiplication.FieldConstruction.InitialHash
+   OAI.LinearAlgebra.MatrixMultiplication.FieldConstruction.InitialExact
+   OAI.LinearAlgebra.MatrixMultiplication.FieldConstruction.InitialStep
+   OAI.LinearAlgebra.MatrixMultiplication.FieldConstruction.InitialSource
+   OAI.LinearAlgebra.MatrixMultiplication.Duality.ExponentBound
+   OAI.LinearAlgebra.MatrixMultiplication.Duality.WitnessRates
+   OAI.LinearAlgebra.MatrixMultiplication.Duality.InformationSchedule
+   OAI.LinearAlgebra.MatrixMultiplication.Duality.Information
+   OAI.LinearAlgebra.MatrixMultiplication.Duality.EntropyHelpers
+   OAI.LinearAlgebra.MatrixMultiplication.Completion.Laws
+   OAI.LinearAlgebra.MatrixMultiplication.Completion.Labels
+   OAI.LinearAlgebra.MatrixMultiplication.Completion.Scripts
+   OAI.LinearAlgebra.MatrixMultiplication.Completion.RecursiveCompletion
+   OAI.LinearAlgebra.MatrixMultiplication.Polynomial.ComplexPolynomialDegenerationComposition
+   OAI.LinearAlgebra.MatrixMultiplication.Duality.TerminationIndependence
+   OAI.LinearAlgebra.MatrixMultiplication.Duality.InformationTransport
+   OAI.LinearAlgebra.MatrixMultiplication.Completion.TerminationLaw
+   OAI.LinearAlgebra.MatrixMultiplication.Entropy.IndependentConditioning
+   OAI.LinearAlgebra.MatrixMultiplication.Tensor.UniformCoordinate
+   OAI.LinearAlgebra.MatrixMultiplication.Completion.Conditioning
+   OAI.LinearAlgebra.MatrixMultiplication.Completion.Entropy
+   OAI.LinearAlgebra.MatrixMultiplication.Completion.ColorEntropy
+   OAI.LinearAlgebra.MatrixMultiplication.Completion.ColorLaws
+   OAI.LinearAlgebra.MatrixMultiplication.Completion.ProductLaws
+   OAI.LinearAlgebra.MatrixMultiplication.Completion.ProgramPrefixes
+   OAI.LinearAlgebra.MatrixMultiplication.Duality.ProgramIndependence
+   OAI.LinearAlgebra.MatrixMultiplication.Duality.UniformProducts
+   OAI.LinearAlgebra.MatrixMultiplication.Duality.ScriptIndependence
+   OAI.LinearAlgebra.MatrixMultiplication.Entropy.BaseConditionalReaders
+   OAI.LinearAlgebra.MatrixMultiplication.Tensor.BaseTensorBudgets
+   OAI.LinearAlgebra.MatrixMultiplication.Tensor.BaseTensors
+   OAI.LinearAlgebra.MatrixMultiplication.CoppersmithWinograd.ComplexCWPrimitiveDegeneration
+   OAI.LinearAlgebra.MatrixMultiplication.CoppersmithWinograd.ComplexCWBoundary
+   OAI.LinearAlgebra.MatrixMultiplication.CoppersmithWinograd.ComplexCoppersmithWinograd
+   OAI.LinearAlgebra.MatrixMultiplication.Duality.UniformInstances
+   OAI.LinearAlgebra.MatrixMultiplication.Duality.Uniform
+   OAI.LinearAlgebra.MatrixMultiplication.Completion.Partitions
+   OAI.LinearAlgebra.MatrixMultiplication.Duality.UniformMixtures
+   OAI.LinearAlgebra.MatrixMultiplication.Duality.UniformUpdates
+   OAI.LinearAlgebra.MatrixMultiplication.Duality.UniformConditioning
+   OAI.LinearAlgebra.MatrixMultiplication.Duality.CompletionLaws
+   OAI.LinearAlgebra.MatrixMultiplication.Duality.WitnessArithmetic
+   OAI.LinearAlgebra.MatrixMultiplication.Duality.RootIndependence
+   OAI.LinearAlgebra.MatrixMultiplication.Duality.InformationLabelConditioning
+   OAI.LinearAlgebra.MatrixMultiplication.Duality.CompletionIndependence
+   OAI.LinearAlgebra.MatrixMultiplication.Duality.InformationConditioning
+   OAI.LinearAlgebra.MatrixMultiplication.Duality.WitnessEntropy
+   OAI.LinearAlgebra.MatrixMultiplication.Duality.HiddenInstances
+   OAI.LinearAlgebra.MatrixMultiplication.Duality.WitnessRecurrence
+   OAI.LinearAlgebra.MatrixMultiplication.Numerical.ComplexCertificatesDual
+   OAI.LinearAlgebra.MatrixMultiplication.Numerical.ComplexCertificatesLog
+   OAI.LinearAlgebra.MatrixMultiplication.Numerical.ComplexLogThreeCertificate
+   OAI.LinearAlgebra.MatrixMultiplication.Duality.HiddenRates
+   OAI.LinearAlgebra.MatrixMultiplication.Duality.HiddenCounts
+   OAI.LinearAlgebra.MatrixMultiplication.Completion.CenterLaw
+   OAI.LinearAlgebra.MatrixMultiplication.Duality.LawEntropy
+   OAI.LinearAlgebra.MatrixMultiplication.Completion.EntropyAlgebra
+   OAI.LinearAlgebra.MatrixMultiplication.Duality.Witness
+   OAI.LinearAlgebra.MatrixMultiplication.Duality.WitnessProgram
+   OAI.LinearAlgebra.MatrixMultiplication.Duality.WitnessRealization
+   OAI.LinearAlgebra.MatrixMultiplication.Completion.Termination
+   OAI.LinearAlgebra.MatrixMultiplication.Completion.HierarchyPrograms
+   OAI.LinearAlgebra.MatrixMultiplication.Completion.HierarchyWords
+   OAI.LinearAlgebra.MatrixMultiplication.Entropy.ComplexConditionalPrefixWords
+   OAI.LinearAlgebra.MatrixMultiplication.Duality.FiniteRates
+   OAI.LinearAlgebra.MatrixMultiplication.Duality.FiniteRealization
+   OAI.LinearAlgebra.MatrixMultiplication.Tensor.ComplexWitness
+   OAI.LinearAlgebra.MatrixMultiplication.Separation.ComplexFiniteMMRealization
+   OAI.LinearAlgebra.MatrixMultiplication.Entropy.ComplexAnalyticValue
+   OAI.LinearAlgebra.MatrixMultiplication.CoppersmithWinograd.ComplexCW75LabelHierarchy
+   OAI.LinearAlgebra.MatrixMultiplication.CoppersmithWinograd.ComplexCW75Primitive
+   OAI.LinearAlgebra.MatrixMultiplication.Tensor.ComplexElementary
+   OAI.LinearAlgebra.MatrixMultiplication.CoppersmithWinograd.ComplexCWOriginalWords
+   OAI.LinearAlgebra.MatrixMultiplication.Tensor.MatrixBalancing
+   OAI.LinearAlgebra.MatrixMultiplication.Polynomial.ComplexPolynomialExecutionSymmetry
+   OAI.LinearAlgebra.MatrixMultiplication.Polynomial.ComplexPolynomialKernelExecution
+   OAI.LinearAlgebra.MatrixMultiplication.Polynomial.ComplexPolynomialControlledKernel
+   OAI.LinearAlgebra.MatrixMultiplication.Polynomial.ComplexPolynomialLocalConstruction
+   OAI.LinearAlgebra.MatrixMultiplication.Entropy.ComplexOrientationRates
+   OAI.LinearAlgebra.MatrixMultiplication.Completion.FiniteRealization
+   OAI.LinearAlgebra.MatrixMultiplication.Tensor.ComplexExecutionPairingBudget
+   OAI.LinearAlgebra.MatrixMultiplication.CoppersmithWinograd.ComplexCWLocalConstruction
+   OAI.LinearAlgebra.MatrixMultiplication.Separation.ComplexBalancedSeparation
+   OAI.LinearAlgebra.MatrixMultiplication.Tensor.ComplexPairingMatrixTensor
+   OAI.LinearAlgebra.MatrixMultiplication.Separation.ComplexInitialTargetExecution
+   OAI.LinearAlgebra.MatrixMultiplication.Tensor.ComplexInitialTargetKernel
+   OAI.LinearAlgebra.MatrixMultiplication.Separation.ExecutionApproximation
+   OAI.LinearAlgebra.MatrixMultiplication.Completion.Execution
+   OAI.LinearAlgebra.MatrixMultiplication.Polynomial.ComplexPolynomialExecutionReindex
+   OAI.LinearAlgebra.MatrixMultiplication.Tensor.ComplexGeometricStageCoordinates
+   OAI.LinearAlgebra.MatrixMultiplication.Entropy.ComplexOrientedConditionalHierarchyStage
+   OAI.LinearAlgebra.MatrixMultiplication.Separation.ComplexPrefixSeparationOrientations
+   OAI.LinearAlgebra.MatrixMultiplication.Polynomial.ComplexPrefixSeparationPolynomialStage
+   OAI.LinearAlgebra.MatrixMultiplication.Polynomial.ComplexSeparationPolynomialKernel
+   OAI.LinearAlgebra.MatrixMultiplication.Polynomial.ComplexConstantPolynomialKernel
+   OAI.LinearAlgebra.MatrixMultiplication.Entropy.ComplexConditionalHierarchyStage
+   OAI.LinearAlgebra.MatrixMultiplication.Completion.GeometricValues
+   OAI.LinearAlgebra.MatrixMultiplication.Duality.FamilyConstruction
+   OAI.LinearAlgebra.MatrixMultiplication.Duality.ExponentConsumer
+   OAI.LinearAlgebra.MatrixMultiplication.Rectangular.RateLimit
+   OAI.LinearAlgebra.MatrixMultiplication.ComplexBounds.CW75ReorderedRectangular
+   OAI.LinearAlgebra.MatrixMultiplication.Entropy.CurveRationalLaw
+   OAI.LinearAlgebra.MatrixMultiplication.Numerical.CurveLawsCertificates
+   OAI.LinearAlgebra.MatrixMultiplication.Numerical.ComplexCertificates
+   OAI.LinearAlgebra.MatrixMultiplication.Entropy.CurveLaws
+   OAI.LinearAlgebra.MatrixMultiplication.ComplexBounds.CW75ReorderedBalancedRates
+   OAI.LinearAlgebra.MatrixMultiplication.Rectangular.Witness
+   OAI.LinearAlgebra.MatrixMultiplication.ComplexBounds.CW75ReorderedFiniteRates
+   OAI.LinearAlgebra.MatrixMultiplication.ComplexBounds.CW75ReorderedFinite
+   OAI.LinearAlgebra.MatrixMultiplication.ComplexBounds.CW75ReorderedExecution
+   OAI.LinearAlgebra.MatrixMultiplication.ComplexBounds.CW75ReorderedGeometricValues
+   OAI.LinearAlgebra.MatrixMultiplication.ComplexBounds.CW75ReorderedWords
+   OAI.LinearAlgebra.MatrixMultiplication.CoppersmithWinograd.ComplexCW75InitialExecution
+   OAI.LinearAlgebra.MatrixMultiplication.ComplexBounds.CW75ReorderedBalanced
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Main
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Growth.Floor
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Determinant.Bounds
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Convolution.RankLowerBound
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Arithmetic.RankExponent
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Convolution.Rank
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Convolution.Basic
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Arithmetic.RankBound
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Polynomial.Inequalities
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Growth.Profile
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Arithmetic.ExponentComparison
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Growth.Recurrence
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Growth.Product
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Growth.ProfileSlopes
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Growth.ConcaveSlopes
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Polynomial.ProductBounds
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Entropy.Optimization
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Sector.Character
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Separation.BranchTagging
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Tensor.SupportExtension
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Tensor.CharacterBounds
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Character.Basic
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Separation.Basic
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Separation.FiniteProjection
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Separation.SquareWeights
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Separation.NoWrap
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Separation.Fourier
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Sector.Branches
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Sector.Degeneration
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Polynomial.Interpolation
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Sector.Weights
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Tensor.TagInequality
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Tensor.SharedPadding
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Character.FiniteSeparation
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Character.Dot
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Growth.MultiplicativePower
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Character.Degeneration
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Growth.PolynomialOverhead
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Entropy.Tag
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Polynomial.Laws
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Determinant.Character
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Determinant.Filtration
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Determinant.Basis
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Determinant.Kernel
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Character.Permutation
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Character.Symmetrization
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Growth.PermutationProduct
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Convolution.Symmetry
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Growth.NormalizedProfile
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Tensor.SixfoldProductBounds
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Arithmetic.CharacterRounding
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Character.Existence
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Tensor.Characters
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Tensor.DirectSumClass
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Tensor.Semiring
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Tensor.DirectSum
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Tensor.BinaryCharacter
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Spectrum.Obstruction
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Tensor.Scalar
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Growth.SpectralLimit
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Spectrum.MultiplicativeStates
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Spectrum.NormalizedStates
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Convex.FixedPoint
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Spectrum.StateObstruction
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Spectrum.Coordinates
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Spectrum.Catalyst
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Convex.Farkas
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Convex.FiniteConeClosed
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Convex.ConeSupport
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Convex.RationalCone
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Convex.RationalDenominators
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Convex.RationalSpan
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Arithmetic.Exponent
+   OAI.LinearAlgebra.MatrixMultiplication.Arithmetic.Compatibility

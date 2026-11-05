@@ -1,0 +1,51 @@
+--- upstream/Lemmas/AlgebraicTopology/LocalHomology/SphereSimplicialHomology.lean
++++ challenge/Lemmas/AlgebraicTopology/LocalHomology/SphereSimplicialHomology.lean
+@@ -13,14 +13,16 @@
+ See the License for the specific language governing permissions and
+ limitations under the License.
++
+ -/
+-module
+-
+-public import Mathlib.Algebra.Category.ModuleCat.Abelian
+-public import Mathlib.Algebra.Category.ModuleCat.Colimits
+-public import Mathlib.AlgebraicTopology.SimplicialSet.Boundary
+-public import Mathlib.AlgebraicTopology.SimplicialSet.Homology.Nondegenerate
++
++import Mathlib.Algebra.Category.ModuleCat.Abelian
++import Mathlib.Algebra.Category.ModuleCat.Colimits
++import Mathlib.AlgebraicTopology.SimplicialSet.Boundary
++import Mathlib.AlgebraicTopology.SimplicialSet.Homology.Nondegenerate
+ 
+ import Mathlib.Algebra.Homology.SingleHomology
+ import Mathlib.AlgebraicTopology.ExtraDegeneracy
++
++namespace OAI.AlgebraicTopology.LocalHomology.SphereSimplicial
+ 
+ /-!
+@@ -32,10 +34,11 @@
+ -/
+ 
+-@[expose] public noncomputable section
+-
+-open CategoryTheory Limits Simplicial HomologicalComplex
++noncomputable section
++
++open _root_.CategoryTheory Limits Simplicial _root_.HomologicalComplex
+ open scoped Simplicial
+ 
+-namespace AlgebraicTopology.Singular
++section
++namespace Singular
+ 
+ /-- Normalized rational chains of the standard `(n + 2)`-simplex. -/
+@@ -241,3 +244,8 @@
+     standardSphereSuccNormalizedHomologyTopIsoRat n
+ 
+-end AlgebraicTopology.Singular
++end Singular
++end
++
++end
++
++end OAI.AlgebraicTopology.LocalHomology.SphereSimplicial

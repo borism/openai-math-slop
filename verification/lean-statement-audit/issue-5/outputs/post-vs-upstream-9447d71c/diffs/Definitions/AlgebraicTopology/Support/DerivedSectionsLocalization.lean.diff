@@ -1,0 +1,98 @@
+--- upstream/Definitions/AlgebraicTopology/Support/DerivedSectionsLocalization.lean
++++ challenge/Definitions/AlgebraicTopology/Support/DerivedSectionsLocalization.lean
+@@ -2,12 +2,18 @@
+ Copyright 2026 The Formal Conjectures Authors.
+ Released under Apache 2.0 license as described in the file LICENSE.
++
+ -/
+-module
+ 
+ import HodgeConjecture.Mathlib.Algebra.Homology.Notation
+ 
+-public import HodgeConjecture.Lemmas.AlgebraicTopology.Support.DerivedSections
+-public import HodgeConjecture.Lemmas.AlgebraicTopology.Sheaf.InjectiveFlasque
+-public import HodgeConjecture.Lemmas.Algebra.Homology.DerivedCategory.MappingCoconeShortExact
++import HodgeConjecture.Lemmas.AlgebraicTopology.Support.DerivedSections
++import HodgeConjecture.Lemmas.AlgebraicTopology.Sheaf.InjectiveFlasque
++import HodgeConjecture.Lemmas.Algebra.Homology.DerivedCategory.MappingCoconeShortExact
++
++namespace OAI.AlgebraicTopology.Support.DerivedSectionsLocalization
++
++open _root_.TopCat
++open _root_.TopCat.Sheaf
++
+ /-!
+ # The localization sequence on injective coefficient complexes
+@@ -27,11 +33,15 @@
+ -/
+ 
+-@[expose] public noncomputable section
++noncomputable section
+ 
+-open CategoryTheory CategoryTheory.Limits TopologicalSpace Opposite
++open _root_.CategoryTheory _root_.CategoryTheory.Limits _root_.TopologicalSpace Opposite
+ 
+ universe u
+ 
+-namespace TopCat.Sheaf
++namespace TopCat
++open _root_.TopCat
++namespace Sheaf
++open _root_.TopCat
++open _root_.TopCat.Sheaf
+ 
+ variable (X : TopCat.{u}) (U : Opens X)
+@@ -40,13 +50,13 @@
+ instance toOpenRestrictionPushforward_app_epi (F : Sheaf AddCommGrpCat.{u} X)
+     [F.IsFlasque] (V : Opens X) :
+-    Epi (((toOpenRestrictionPushforward X U).app F).hom.app (op V)) := by
++    Epi (((_root_.OAI.AlgebraicTopology.Support.DerivedSections.TopCat.Sheaf.toOpenRestrictionPushforward X U).app F).hom.app (op V)) := by
+   change Epi (F.obj.map _)
+   infer_instance
+ 
+ instance toOpenRestrictionPushforward_epi (F : Sheaf AddCommGrpCat.{u} X)
+-    [F.IsFlasque] : Epi ((toOpenRestrictionPushforward X U).app F) := by
+-  let : ∀ V, Epi (((toOpenRestrictionPushforward X U).app F).hom.app V) :=
++    [F.IsFlasque] : Epi ((_root_.OAI.AlgebraicTopology.Support.DerivedSections.TopCat.Sheaf.toOpenRestrictionPushforward X U).app F) := by
++  let : ∀ V, Epi (((_root_.OAI.AlgebraicTopology.Support.DerivedSections.TopCat.Sheaf.toOpenRestrictionPushforward X U).app F).hom.app V) :=
+     fun V => toOpenRestrictionPushforward_app_epi X U F V.unop
+-  have : Epi ((toOpenRestrictionPushforward X U).app F).hom :=
++  have : Epi ((_root_.OAI.AlgebraicTopology.Support.DerivedSections.TopCat.Sheaf.toOpenRestrictionPushforward X U).app F).hom :=
+     NatTrans.epi_of_epi_app _
+   exact (sheafToPresheaf (Opens.grothendieckTopology X) AddCommGrpCat).epi_of_epi_map this
+@@ -68,5 +78,5 @@
+     ((evaluation (Opens X)ᵒᵖ AddCommGrpCat.{u}).obj (op V))
+ 
+-instance : (openRestrictionPushforward X U).Additive where
++instance : (_root_.OAI.AlgebraicTopology.Support.DerivedSections.TopCat.Sheaf.openRestrictionPushforward X U).Additive where
+   map_add := by intros; rfl
+ 
+@@ -80,11 +90,11 @@
+     ShortComplex (CochainComplex (Sheaf AddCommGrpCat.{u} X) ℤ) :=
+   ShortComplex.mk
+-    (show ((sheafSectionsSupportedOutside X U).mapHomologicalComplex ℤᵘᵖ).obj K ⟶ K from
+-      { f n := (sheafSectionsSupportedOutsideInclusion X U).app (K.X n)
+-        comm' i j h := ((sheafSectionsSupportedOutsideInclusion X U).naturality (K.d i j)).symm })
+-    (show K ⟶ ((openRestrictionPushforward X U).mapHomologicalComplex ℤᵘᵖ).obj K from
+-      { f n := (toOpenRestrictionPushforward X U).app (K.X n)
+-        comm' i j h := ((toOpenRestrictionPushforward X U).naturality (K.d i j)).symm })
+-    (by ext n; exact sheafSectionsSupportedOutsideInclusion_restriction X U (K.X n))
++    (show ((_root_.OAI.AlgebraicTopology.Support.DerivedSections.TopCat.Sheaf.sheafSectionsSupportedOutside X U).mapHomologicalComplex ℤᵘᵖ).obj K ⟶ K from
++      { f n := (_root_.OAI.AlgebraicTopology.Support.DerivedSections.TopCat.Sheaf.sheafSectionsSupportedOutsideInclusion X U).app (K.X n)
++        comm' i j h := ((_root_.OAI.AlgebraicTopology.Support.DerivedSections.TopCat.Sheaf.sheafSectionsSupportedOutsideInclusion X U).naturality (K.d i j)).symm })
++    (show K ⟶ ((_root_.OAI.AlgebraicTopology.Support.DerivedSections.TopCat.Sheaf.openRestrictionPushforward X U).mapHomologicalComplex ℤᵘᵖ).obj K from
++      { f n := (_root_.OAI.AlgebraicTopology.Support.DerivedSections.TopCat.Sheaf.toOpenRestrictionPushforward X U).app (K.X n)
++        comm' i j h := ((_root_.OAI.AlgebraicTopology.Support.DerivedSections.TopCat.Sheaf.toOpenRestrictionPushforward X U).naturality (K.d i j)).symm })
++    (by ext n; exact _root_.OAI.AlgebraicTopology.Support.DerivedSectionsOn.TopCat.Sheaf.sheafSectionsSupportedOutsideInclusion_restriction X U (K.X n))
+ 
+ /-- Let `X` be a topological space, `U` and `V` open subsets, and `K` an integer-indexed complex of
+@@ -105,3 +115,8 @@
+   HasDerivedCategory.standard AddCommGrpCat.{u}
+ 
+-end TopCat.Sheaf
++end Sheaf
++end TopCat
++
++end
++
++end OAI.AlgebraicTopology.Support.DerivedSectionsLocalization

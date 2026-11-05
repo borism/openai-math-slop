@@ -1,0 +1,44 @@
+--- upstream/Lemmas/AlgebraicTopology/Singular/Sheaf/CochainDescent.lean
++++ challenge/Lemmas/AlgebraicTopology/Singular/Sheaf/CochainDescent.lean
+@@ -15,4 +15,6 @@
+ -/
+ module
++
++public import HodgeConjecture.Mathlib.Geometry.Convex.StdSimplexMetric
+ 
+ public import HodgeConjecture.Lemmas.AlgebraicTopology.Singular.Sheaf.Cochain
+@@ -82,5 +84,5 @@
+           (LinearMap.ringLmapEquivSelf R R R).symm (g s))).hom
+     exact congrArg ModuleCat.Hom.hom <| Sigma.hom_ext _ _ fun s ↦ by
+-      rw [Preadditive.comp_add, Sigma.ι_desc, Sigma.ι_desc, Sigma.ι_desc]
++      rw [Preadditive.comp_add, Sigma.ι_comp_desc, Sigma.ι_comp_desc, Sigma.ι_comp_desc]
+       apply ModuleCat.hom_ext
+       apply LinearMap.ext
+@@ -94,5 +96,5 @@
+         (LinearMap.ringLmapEquivSelf R R R).symm (f s))).hom
+     exact congrArg ModuleCat.Hom.hom <| Sigma.hom_ext _ _ fun s ↦ by
+-      rw [Linear.comp_smul, Sigma.ι_desc, Sigma.ι_desc]
++      rw [Linear.comp_smul, Sigma.ι_comp_desc, Sigma.ι_comp_desc]
+       apply ModuleCat.hom_ext
+       apply LinearMap.ext
+@@ -111,5 +113,5 @@
+       Sigma.desc (fun t : OpenSimplex X U n ↦ ModuleCat.ofHom <|
+         (LinearMap.ringLmapEquivSelf R R R).symm (f t)))) 1 = f s
+-  rw [Sigma.ι_desc]
++  rw [Sigma.ι_comp_desc]
+   exact (LinearMap.ringLmapEquivSelf R R R).apply_symm_apply (f s)
+ 
+@@ -126,5 +128,5 @@
+         (φ ((Sigma.ι (fun _ : OpenSimplex X U n ↦ ModuleCat.of R R) s).hom 1)))).hom = φ
+   exact congrArg ModuleCat.Hom.hom <| Sigma.hom_ext _ _ fun s ↦ by
+-    rw [Sigma.ι_desc]
++    rw [Sigma.ι_comp_desc]
+     apply ModuleCat.hom_ext
+     change (LinearMap.ringLmapEquivSelf R R R).symm
+@@ -194,5 +196,5 @@
+   have hst : ∀ z, (fs z).1 = (ft z).1 := fun z ↦
+     congrArg Subtype.val (congrArg (fun q ↦ (TopCat.of U).toSSetObjEquiv m q z) h)
+-  let f : C(stdSimplex ℝ (Fin (n + 1)), TopCat.of ↑(A ⊓ B)) :=
++  let f : C(Convexity.StdSimplex ℝ (Fin (n + 1)), TopCat.of ↑(A ⊓ B)) :=
+     ⟨fun z ↦ ⟨(fs z).1, (fs z).2, by rw [hst z]; exact (ft z).2⟩,
+       Continuous.subtype_mk

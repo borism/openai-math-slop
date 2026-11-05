@@ -1,0 +1,9 @@
+--- upstream/Lemmas/AlgebraicTopology/LocalHomology/FlattenedSupport.lean
++++ challenge/Lemmas/AlgebraicTopology/LocalHomology/FlattenedSupport.lean
+@@ -45,5 +45,5 @@
+     (v : E × (Fin c → ℂ)) :
+     (OpenPartialHomeomorph.univBall (a, (0 : Fin c → ℂ)) r v).2 = 0 ↔ v.2 = 0 := by
+-  rw [OpenPartialHomeomorph.univBall, dif_pos hr]
++  rw [OpenPartialHomeomorph.univBall, dite_eq_left hr]
+   change (r • ((Real.sqrt (1 + ‖v‖ ^ 2))⁻¹ • v) + (a, (0 : Fin c → ℂ))).2 = 0 ↔ _
+   have hs : (Real.sqrt (1 + ‖v‖ ^ 2))⁻¹ ≠ 0 := by positivity

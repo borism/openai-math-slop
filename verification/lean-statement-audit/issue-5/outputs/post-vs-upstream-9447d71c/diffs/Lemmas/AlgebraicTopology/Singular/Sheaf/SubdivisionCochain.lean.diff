@@ -1,0 +1,769 @@
+--- upstream/Lemmas/AlgebraicTopology/Singular/Sheaf/SubdivisionCochain.lean
++++ challenge/Lemmas/AlgebraicTopology/Singular/Sheaf/SubdivisionCochain.lean
+@@ -13,16 +13,20 @@
+ See the License for the specific language governing permissions and
+ limitations under the License.
++
+ -/
+-module
+ 
+ import Mathlib.LinearAlgebra.Dual.Lemmas
+ import Mathlib.Topology.ShrinkingLemma
+-public import HodgeConjecture.Mathlib.Algebra.Homology.KernelAcyclic
+-public import HodgeConjecture.Lemmas.AlgebraicTopology.Sheaf.FlasqueAcyclic
+-public import HodgeConjecture.Lemmas.Algebra.Homology.LinearDual
+-public import HodgeConjecture.Lemmas.AlgebraicTopology.Singular.Cohomology
+-public import HodgeConjecture.Lemmas.AlgebraicTopology.Singular.Sheaf.CochainDescent
+-public import HodgeConjecture.Lemmas.AlgebraicTopology.Singular.Excision.Field
+-public import HodgeConjecture.Mathlib.Topology.ChartedSpaceParacompact
++import HodgeConjecture.Mathlib.Algebra.Homology.KernelAcyclic
++import HodgeConjecture.Lemmas.AlgebraicTopology.Sheaf.FlasqueAcyclic
++import HodgeConjecture.Lemmas.Algebra.Homology.LinearDual
++import HodgeConjecture.Lemmas.AlgebraicTopology.Singular.Cohomology
++import HodgeConjecture.Lemmas.AlgebraicTopology.Singular.Sheaf.CochainDescent
++import HodgeConjecture.Lemmas.AlgebraicTopology.Singular.Excision.Field
++import HodgeConjecture.Mathlib.Topology.ChartedSpaceParacompact
++
++namespace OAI.AlgebraicTopology.Singular.SheafSubdivisionCochain
++
++open _root_.AlgebraicTopology
+ 
+ /-!
+@@ -34,12 +38,13 @@
+ -/
+ 
+-@[expose] public noncomputable section
+-
+-open CategoryTheory Limits TopologicalSpace
++noncomputable section
++
++open _root_.CategoryTheory Limits _root_.TopologicalSpace
+ open scoped Simplicial
+ 
+ universe u
+ 
+-namespace AlgebraicTopology.Singular
++section
++section
+ 
+ /-- The domains of a covering sieve, regarded as open subsets of the covered open set. -/
+@@ -48,5 +53,5 @@
+   fun I ↦ Subtype.val ⁻¹' (I.Y : Set X)
+ 
+-private lemma coveringSieveOpenFamilyOn_isOpen (X : TopCat.{u}) {U : Opens X}
++lemma coveringSieveOpenFamilyOn_isOpen (X : TopCat.{u}) {U : Opens X}
+     (S : (Opens.grothendieckTopology X).Cover U) (I : S.Arrow) :
+     IsOpen (coveringSieveOpenFamilyOn X S I) :=
+@@ -54,5 +59,5 @@
+ 
+ /-- The domains of a covering sieve cover the covered open set. -/
+-private lemma coveringSieveOpenFamilyOn_iUnion (X : TopCat.{u}) {U : Opens X}
++lemma coveringSieveOpenFamilyOn_iUnion (X : TopCat.{u}) {U : Opens X}
+     (S : (Opens.grothendieckTopology X).Cover U) :
+     ⋃ I, coveringSieveOpenFamilyOn X S I = Set.univ := by
+@@ -66,5 +71,5 @@
+ /-- On a paracompact Hausdorff open set, a covering sieve admits an open refinement whose
+ closures are locally finite and remain subordinate to the original sieve members. -/
+-private theorem exists_coveringSieve_locallyFinite_closedRefinement
++theorem exists_coveringSieve_locallyFinite_closedRefinement
+     (X : TopCat.{u}) {U : Opens X} [ParacompactSpace U] [T2Space U]
+     (S : (Opens.grothendieckTopology X).Cover U) :
+@@ -86,9 +91,9 @@
+ /-- The singular chain complex of the top open subset of `X`. -/
+ abbrev TopOpenSingularChainComplex : ChainComplex (ModuleCat.{u} R) ℕ :=
+-  (openSingularChainComplexFunctor R X).obj ⊤
++  (_root_.OAI.AlgebraicTopology.Singular.SheafCochain.openSingularChainComplexFunctor R X).obj ⊤
+ 
+ /-- The inclusion of the top open subset into `X` identifies their singular chain complexes. -/
+ noncomputable def topOpenSingularChainComplexIso :
+-    TopOpenSingularChainComplex R X ≅ SingularChainComplex R X :=
++    TopOpenSingularChainComplex R X ≅ _root_.OAI.AlgebraicTopology.Singular.Cohomology.SingularChainComplex R X :=
+   ((singularChainComplexFunctor (ModuleCat.{u} R)).obj (ModuleCat.of R R)).mapIso
+     (Opens.inclusionTopIso X)
+@@ -97,12 +102,12 @@
+ complexes. -/
+ noncomputable def singularCochainComplexIsoTopOpen :
+-    (SingularChainComplex R X).linearDualCochainComplex ≅
+-      (TopOpenSingularChainComplex R X).linearDualCochainComplex :=
+-  HomologicalComplex.linearDualIso (topOpenSingularChainComplexIso R X)
++    (_root_.OAI.Algebra.Homology.LinearDual.HomologicalComplex.linearDualCochainComplex (_root_.OAI.AlgebraicTopology.Singular.Cohomology.SingularChainComplex R X)) ≅
++      (_root_.OAI.Algebra.Homology.LinearDual.HomologicalComplex.linearDualCochainComplex (TopOpenSingularChainComplex R X)) :=
++  _root_.OAI.Algebra.Homology.LinearDual.HomologicalComplex.linearDualIso (topOpenSingularChainComplexIso R X)
+ 
+ /-- The singular-cochain presheaf complex evaluated on the top open subset. -/
+ def globalRawSingularCochainComplex : CochainComplex AddCommGrpCat ℕ :=
+   (((evaluation (Opens X)ᵒᵖ AddCommGrpCat).obj (.op ⊤)).mapHomologicalComplex
+-    (ComplexShape.up ℕ)).obj (singularCochainPresheafComplex R X)
++    (ComplexShape.up ℕ)).obj (_root_.OAI.AlgebraicTopology.Singular.SheafCochain.singularCochainPresheafComplex R X)
+ 
+ /-- Top-open singular cochains, with their scalar structure forgotten. -/
+@@ -110,5 +115,5 @@
+   ((forget₂ (ModuleCat.{u} R) AddCommGrpCat).mapHomologicalComplex
+     (ComplexShape.up ℕ)).obj
+-      (TopOpenSingularChainComplex R X).linearDualCochainComplex
++      (_root_.OAI.Algebra.Homology.LinearDual.HomologicalComplex.linearDualCochainComplex (TopOpenSingularChainComplex R X))
+ 
+ set_option backward.isDefEq.respectTransparency false in
+@@ -146,9 +151,9 @@
+       rw [Functor.mapHomologicalComplex_obj_d,
+         Functor.mapHomologicalComplex_obj_d,
+-        singularCochainPresheafComplex_d,
+-        HomologicalComplex.linearDualCochainComplex_d]
++        _root_.OAI.AlgebraicTopology.Singular.SheafCochain.singularCochainPresheafComplex_d,
++        _root_.OAI.Algebra.Homology.LinearDual.HomologicalComplex.linearDualCochainComplex_d_succ]
+       dsimp [globalRawSingularCochainXIso,
+         globalRawSingularCochainAddEquiv,
+-        TopOpenSingularChainComplex, singularCochainCoboundary]
++        TopOpenSingularChainComplex, _root_.OAI.AlgebraicTopology.Singular.SheafCochain.singularCochainCoboundary]
+       rfl)
+ 
+@@ -166,17 +171,17 @@
+     CochainComplex (TopCat.Presheaf AddCommGrpCat X) ℕ :=
+   ((Opens.grothendieckTopology X).plusFunctor AddCommGrpCat).mapHomologicalComplex
+-    (ComplexShape.up ℕ) |>.obj (singularCochainPresheafComplex R X)
++    (ComplexShape.up ℕ) |>.obj (_root_.OAI.AlgebraicTopology.Singular.SheafCochain.singularCochainPresheafComplex R X)
+ 
+ /-- The degreewise first-plus unit on the singular-cochain presheaf complex. -/
+ def singularCochainToPlusPresheafComplex :
+-    singularCochainPresheafComplex R X ⟶ singularCochainPlusPresheafComplex R X :=
++    _root_.OAI.AlgebraicTopology.Singular.SheafCochain.singularCochainPresheafComplex R X ⟶ singularCochainPlusPresheafComplex R X :=
+   (NatTrans.mapHomologicalComplex
+     ((Opens.grothendieckTopology X).toPlusNatTrans AddCommGrpCat)
+-    (ComplexShape.up ℕ)).app (singularCochainPresheafComplex R X)
++    (ComplexShape.up ℕ)).app (_root_.OAI.AlgebraicTopology.Singular.SheafCochain.singularCochainPresheafComplex R X)
+ 
+ @[simp]
+ lemma singularCochainToPlusPresheafComplex_f (n : ℕ) :
+     (singularCochainToPlusPresheafComplex R X).f n =
+-      (Opens.grothendieckTopology X).toPlus (singularCochainPresheaf R X n) :=
++      (Opens.grothendieckTopology X).toPlus (_root_.OAI.AlgebraicTopology.Singular.SheafCochain.singularCochainPresheaf R X n) :=
+   rfl
+ 
+@@ -187,5 +192,5 @@
+   (((Opens.grothendieckTopology X).sheafification
+     AddCommGrpCat).mapHomologicalComplex
+-      (ComplexShape.up ℕ)).obj (singularCochainPresheafComplex R X)
++      (ComplexShape.up ℕ)).obj (_root_.OAI.AlgebraicTopology.Singular.SheafCochain.singularCochainPresheafComplex R X)
+ 
+ /-- The degreewise second-plus unit on the singular-cochain complex. -/
+@@ -197,5 +202,5 @@
+       ((Opens.grothendieckTopology X).plusFunctor AddCommGrpCat)
+       ((Opens.grothendieckTopology X).toPlusNatTrans AddCommGrpCat))
+-    (ComplexShape.up ℕ)).app (singularCochainPresheafComplex R X)
++    (ComplexShape.up ℕ)).app (_root_.OAI.AlgebraicTopology.Singular.SheafCochain.singularCochainPresheafComplex R X)
+ 
+ @[simp]
+@@ -204,10 +209,10 @@
+       (Opens.grothendieckTopology X).toPlus
+         ((Opens.grothendieckTopology X).plusObj
+-          (singularCochainPresheaf R X n)) :=
++          (_root_.OAI.AlgebraicTopology.Singular.SheafCochain.singularCochainPresheaf R X n)) :=
+   rfl
+ 
+ /-- The degreewise double-plus comparison from raw singular cochains. -/
+ def singularCochainToPlusPlusPresheafComplex :
+-    singularCochainPresheafComplex R X ⟶
++    _root_.OAI.AlgebraicTopology.Singular.SheafCochain.singularCochainPresheafComplex R X ⟶
+       singularCochainPlusPlusPresheafComplex R X :=
+   singularCochainToPlusPresheafComplex R X ≫
+@@ -219,12 +224,12 @@
+     (singularCochainToPlusPlusPresheafComplex R X).f n =
+       (Opens.grothendieckTopology X).toSheafify
+-        (singularCochainPresheaf R X n) := by
++        (_root_.OAI.AlgebraicTopology.Singular.SheafCochain.singularCochainPresheaf R X n) := by
+   change (Opens.grothendieckTopology X).toPlus
+-      (singularCochainPresheaf R X n) ≫
++      (_root_.OAI.AlgebraicTopology.Singular.SheafCochain.singularCochainPresheaf R X n) ≫
+         (Opens.grothendieckTopology X).toPlus
+           ((Opens.grothendieckTopology X).plusObj
+-            (singularCochainPresheaf R X n)) = _
++            (_root_.OAI.AlgebraicTopology.Singular.SheafCochain.singularCochainPresheaf R X n)) = _
+   rw [← (Opens.grothendieckTopology X).plusMap_toPlus
+-    (singularCochainPresheaf R X n)]
++    (_root_.OAI.AlgebraicTopology.Singular.SheafCochain.singularCochainPresheaf R X n)]
+   rfl
+ 
+@@ -233,5 +238,5 @@
+     CochainComplex (TopCat.Presheaf AddCommGrpCat X) ℕ :=
+   ((TopCat.Sheaf.forget AddCommGrpCat X).mapHomologicalComplex
+-    (ComplexShape.up ℕ)).obj (singularCochainSheafComplex R X)
++    (ComplexShape.up ℕ)).obj (_root_.OAI.AlgebraicTopology.Singular.SheafCochain.singularCochainSheafComplex R X)
+ 
+ /-- Double-plus sheafification agrees with Mathlib's chosen sheafification, compatibly with the
+@@ -243,5 +248,5 @@
+     (plusPlusFunctorIsoSheafification
+       (Opens.grothendieckTopology X) AddCommGrpCat)
+-    (ComplexShape.up ℕ)).app (singularCochainPresheafComplex R X)
++    (ComplexShape.up ℕ)).app (_root_.OAI.AlgebraicTopology.Singular.SheafCochain.singularCochainPresheafComplex R X)
+ 
+ /-- Flasqueness descends along a pointwise epimorphism of additive presheaves. -/
+@@ -260,5 +265,5 @@
+   change TopCat.Presheaf.IsFlasque
+     ((Opens.grothendieckTopology X).plusObj
+-      (singularCochainPresheaf R X n))
++      (_root_.OAI.AlgebraicTopology.Singular.SheafCochain.singularCochainPresheaf R X n))
+   infer_instance
+ 
+@@ -320,5 +325,5 @@
+     Function.Surjective
+       ((topOpenToGlobalSingularCochainPlusComplex R X).f n) :=
+-  singularCochain_toPlus_exists_rep R X ⊤ n
++  _root_.OAI.AlgebraicTopology.Singular.SheafCochainDescent.singularCochain_toPlus_exists_rep R X ⊤ n
+ 
+ /-- The map from top-open cochains to global first-plus cochains is degreewise an epimorphism. -/
+@@ -332,12 +337,12 @@
+ after restriction along every arrow of some covering sieve. -/
+ lemma singularCochain_toPlus_eq_zero_iff (V : Opens X) (n : ℕ)
+-    (φ : OpenCochains R X (.op V) n) :
++    (φ : _root_.OAI.AlgebraicTopology.Singular.SheafCochain.OpenCochains R X (.op V) n) :
+     ((Opens.grothendieckTopology X).toPlus
+-        (singularCochainPresheaf R X n)).app (.op V) φ = 0 ↔
++        (_root_.OAI.AlgebraicTopology.Singular.SheafCochain.singularCochainPresheaf R X n)).app (.op V) φ = 0 ↔
+       ∃ S : (Opens.grothendieckTopology X).Cover V,
+         ∀ I : S.Arrow,
+-          (singularCochainPresheaf R X n).map I.f.op φ = 0 := by
++          (_root_.OAI.AlgebraicTopology.Singular.SheafCochain.singularCochainPresheaf R X n).map I.f.op φ = 0 := by
+   let J := Opens.grothendieckTopology X
+-  let P := singularCochainPresheaf R X n
++  let P := _root_.OAI.AlgebraicTopology.Singular.SheafCochain.singularCochainPresheaf R X n
+   rw [← map_zero (ConcreteCategory.hom ((J.toPlus P).app (.op V)))]
+   constructor
+@@ -359,16 +364,16 @@
+ /-- Raw representatives of a matching family of first-plus singular cochains agree on some
+ neighborhood of every point of a pairwise overlap. -/
+-private lemma exists_open_eq_of_plus_matchingFamily
++lemma exists_open_eq_of_plus_matchingFamily
+     {U : Opens X} (S : (Opens.grothendieckTopology X).Cover U) (n : ℕ)
+     (s : Meq ((Opens.grothendieckTopology X).plusObj
+-      (singularCochainPresheaf R X n)) S)
+-    (φ : ∀ I : S.Arrow, OpenCochains R X (.op I.Y) n)
++      (_root_.OAI.AlgebraicTopology.Singular.SheafCochain.singularCochainPresheaf R X n)) S)
++    (φ : ∀ I : S.Arrow, _root_.OAI.AlgebraicTopology.Singular.SheafCochain.OpenCochains R X (.op I.Y) n)
+     (hφ : ∀ I : S.Arrow,
+       ((Opens.grothendieckTopology X).toPlus
+-        (singularCochainPresheaf R X n)).app (.op I.Y) (φ I) = s I)
++        (_root_.OAI.AlgebraicTopology.Singular.SheafCochain.singularCochainPresheaf R X n)).app (.op I.Y) (φ I) = s I)
+     (I J : S.Arrow) (x : X) (hxI : x ∈ I.Y) (hxJ : x ∈ J.Y) :
+     ∃ (V : Opens X) (a : V ⟶ I.Y) (b : V ⟶ J.Y), x ∈ V ∧
+-      (singularCochainPresheaf R X n).map a.op (φ I) =
+-        (singularCochainPresheaf R X n).map b.op (φ J) := by
++      (_root_.OAI.AlgebraicTopology.Singular.SheafCochain.singularCochainPresheaf R X n).map a.op (φ I) =
++        (_root_.OAI.AlgebraicTopology.Singular.SheafCochain.singularCochainPresheaf R X n).map b.op (φ J) := by
+   let eI : I.Y ⊓ J.Y ⟶ I.Y := homOfLE inf_le_left
+   let eJ : I.Y ⊓ J.Y ⟶ J.Y := homOfLE inf_le_right
+@@ -379,33 +384,33 @@
+   have hplus := s.condition rel
+   let η := (Opens.grothendieckTopology X).toPlus
+-    (singularCochainPresheaf R X n)
++    (_root_.OAI.AlgebraicTopology.Singular.SheafCochain.singularCochainPresheaf R X n)
+   have hplus' :
+       η.app (.op (I.Y ⊓ J.Y))
+-          ((singularCochainPresheaf R X n).map eI.op (φ I)) =
++          ((_root_.OAI.AlgebraicTopology.Singular.SheafCochain.singularCochainPresheaf R X n).map eI.op (φ I)) =
+         η.app (.op (I.Y ⊓ J.Y))
+-          ((singularCochainPresheaf R X n).map eJ.op (φ J)) := by
++          ((_root_.OAI.AlgebraicTopology.Singular.SheafCochain.singularCochainPresheaf R X n).map eJ.op (φ J)) := by
+     calc
+       _ = ((Opens.grothendieckTopology X).plusObj
+-          (singularCochainPresheaf R X n)).map eI.op
++          (_root_.OAI.AlgebraicTopology.Singular.SheafCochain.singularCochainPresheaf R X n)).map eI.op
+             (η.app (.op I.Y) (φ I)) := by
+               simpa only [ConcreteCategory.comp_apply] using
+                 ConcreteCategory.congr_hom (η.naturality eI.op) (φ I)
+       _ = ((Opens.grothendieckTopology X).plusObj
+-          (singularCochainPresheaf R X n)).map eI.op (s I) := by rw [hφ I]
++          (_root_.OAI.AlgebraicTopology.Singular.SheafCochain.singularCochainPresheaf R X n)).map eI.op (s I) := by rw [hφ I]
+       _ = ((Opens.grothendieckTopology X).plusObj
+-          (singularCochainPresheaf R X n)).map eJ.op (s J) := hplus
++          (_root_.OAI.AlgebraicTopology.Singular.SheafCochain.singularCochainPresheaf R X n)).map eJ.op (s J) := hplus
+       _ = ((Opens.grothendieckTopology X).plusObj
+-          (singularCochainPresheaf R X n)).map eJ.op
++          (_root_.OAI.AlgebraicTopology.Singular.SheafCochain.singularCochainPresheaf R X n)).map eJ.op
+             (η.app (.op J.Y) (φ J)) := by rw [hφ J]
+       _ = η.app (.op (I.Y ⊓ J.Y))
+-          ((singularCochainPresheaf R X n).map eJ.op (φ J)) := by
++          ((_root_.OAI.AlgebraicTopology.Singular.SheafCochain.singularCochainPresheaf R X n).map eJ.op (φ J)) := by
+               simpa only [ConcreteCategory.comp_apply] using
+                 (ConcreteCategory.congr_hom (η.naturality eJ.op) (φ J)).symm
+-  let δ : OpenCochains R X (.op (I.Y ⊓ J.Y)) n :=
+-    (singularCochainPresheaf R X n).map eI.op (φ I) -
+-      (singularCochainPresheaf R X n).map eJ.op (φ J)
++  let δ : _root_.OAI.AlgebraicTopology.Singular.SheafCochain.OpenCochains R X (.op (I.Y ⊓ J.Y)) n :=
++    (_root_.OAI.AlgebraicTopology.Singular.SheafCochain.singularCochainPresheaf R X n).map eI.op (φ I) -
++      (_root_.OAI.AlgebraicTopology.Singular.SheafCochain.singularCochainPresheaf R X n).map eJ.op (φ J)
+   have hδplus :
+       ((Opens.grothendieckTopology X).toPlus
+-        (singularCochainPresheaf R X n)).app (.op (I.Y ⊓ J.Y)) δ = 0 := by
++        (_root_.OAI.AlgebraicTopology.Singular.SheafCochain.singularCochainPresheaf R X n)).app (.op (I.Y ⊓ J.Y)) δ = 0 := by
+     rw [map_sub, hplus', sub_self]
+   obtain ⟨T, hT⟩ :=
+@@ -432,14 +437,14 @@
+ /-- Restriction of rational singular cochains to chains subordinate to a family of subsets. -/
+ def rationalCochainRestrictionToCoverSmall :
+-    ((TopCat.toSSet.obj Y).chainComplex
+-        (ModuleCat.of ℚ ℚ)).linearDualCochainComplex ⟶
+-      (CoverSmallRationalSingularChainComplex Y U).linearDualCochainComplex :=
+-  HomologicalComplex.linearDualMap (coverSmallRationalSingularChainInclusion Y U)
++    (_root_.OAI.Algebra.Homology.LinearDual.HomologicalComplex.linearDualCochainComplex ((TopCat.toSSet.obj Y).chainComplex
++        (ModuleCat.of ℚ ℚ))) ⟶
++      (_root_.OAI.Algebra.Homology.LinearDual.HomologicalComplex.linearDualCochainComplex (_root_.OAI.AlgebraicTopology.Singular.ExcisionField.CoverSmallRationalSingularChainComplex Y U)) :=
++  _root_.OAI.Algebra.Homology.LinearDual.HomologicalComplex.linearDualMap (_root_.OAI.AlgebraicTopology.Singular.ExcisionField.coverSmallRationalSingularChainInclusion Y U)
+ 
+ /-- The chain map from one member of a family into the cover-small rational chains. -/
+ def coverMemberToSmallRationalSingularChains (j : κ) :
+     (TopCat.toSSet.obj (TopCat.of (U j))).chainComplex (ModuleCat.of ℚ ℚ) ⟶
+-      CoverSmallRationalSingularChainComplex Y U :=
+-  SSet.chainComplexMap (coverMemberToSmallSingularSet Y U j) (ModuleCat.of ℚ ℚ)
++      _root_.OAI.AlgebraicTopology.Singular.ExcisionField.CoverSmallRationalSingularChainComplex Y U :=
++  SSet.chainComplexMap (_root_.OAI.AlgebraicTopology.Singular.ExcisionCoverSmall.coverMemberToSmallSingularSet Y U j) (ModuleCat.of ℚ ℚ)
+ 
+ /-- Restriction to cover-small rational chains is surjective in every cochain degree. -/
+@@ -450,5 +455,5 @@
+   exact Functor.map_mono
+     (HomologicalComplex.eval (ModuleCat ℚ) (ComplexShape.down ℕ) n)
+-    (coverSmallRationalSingularChainInclusion Y U)
++    (_root_.OAI.AlgebraicTopology.Singular.ExcisionField.coverSmallRationalSingularChainInclusion Y U)
+ 
+ /-- Restriction to cover-small rational chains is an epimorphism of cochain complexes. -/
+@@ -464,9 +469,9 @@
+     (hUopen : ∀ i, IsOpen (U i)) (hUcover : ⋃ i, U i = Set.univ) :
+     HomotopyEquiv
+-      ((TopCat.toSSet.obj Y).chainComplex
+-        (ModuleCat.of ℚ ℚ)).linearDualCochainComplex
+-      (CoverSmallRationalSingularChainComplex Y U).linearDualCochainComplex :=
+-  HomologicalComplex.linearDualHomotopyEquiv
+-    (coverSmallRationalChainHomotopyEquiv_of_openCover Y U hUopen hUcover)
++      (_root_.OAI.Algebra.Homology.LinearDual.HomologicalComplex.linearDualCochainComplex ((TopCat.toSSet.obj Y).chainComplex
++        (ModuleCat.of ℚ ℚ)))
++      (_root_.OAI.Algebra.Homology.LinearDual.HomologicalComplex.linearDualCochainComplex (_root_.OAI.AlgebraicTopology.Singular.ExcisionField.CoverSmallRationalSingularChainComplex Y U)) :=
++  _root_.OAI.Algebra.Homology.LinearDualHomotopy.HomologicalComplex.linearDualHomotopyEquiv
++    (_root_.OAI.AlgebraicTopology.Singular.ExcisionField.coverSmallRationalChainHomotopyEquiv_of_openCover Y U hUopen hUcover)
+ 
+ /-- The map from top-open cochains to global first-plus cochains is an epimorphism of complexes.
+@@ -479,6 +484,6 @@
+ subsets. -/
+ def topOpenRationalCochainRestrictionToCoverSmall :
+-    (TopOpenSingularChainComplex ℚ Y).linearDualCochainComplex ⟶
+-      (CoverSmallRationalSingularChainComplex Y U).linearDualCochainComplex :=
++    (_root_.OAI.Algebra.Homology.LinearDual.HomologicalComplex.linearDualCochainComplex (TopOpenSingularChainComplex ℚ Y)) ⟶
++      (_root_.OAI.Algebra.Homology.LinearDual.HomologicalComplex.linearDualCochainComplex (_root_.OAI.AlgebraicTopology.Singular.ExcisionField.CoverSmallRationalSingularChainComplex Y U)) :=
+   (singularCochainComplexIsoTopOpen ℚ Y).inv ≫
+     rationalCochainRestrictionToCoverSmall Y U
+@@ -519,5 +524,5 @@
+   exact show x ∈ (V : Set U) from h ▸ hy
+ 
+-private lemma ambientOpen_le (U : Opens X) (V : Opens U) : ambientOpen U V ≤ U := by
++lemma ambientOpen_le (U : Opens X) (V : Opens U) : ambientOpen U V ≤ U := by
+   rintro x ⟨y, -, rfl⟩
+   exact y.2
+@@ -531,5 +536,5 @@
+ 
+ /-- A pointwise covering family defines a covering sieve. -/
+-private lemma openFamilySieve_mem {U : Opens X} {I : Type*} (V : I → Opens X)
++lemma openFamilySieve_mem {U : Opens X} {I : Type*} (V : I → Opens X)
+     (hV : ∀ i, V i ≤ U) (hcover : ∀ x ∈ U, ∃ i, x ∈ V i) :
+     openFamilySieve V ∈ Opens.grothendieckTopology X U := by
+@@ -547,12 +552,12 @@
+       (((Opens.grothendieckTopology X).toPlus
+         ((Opens.grothendieckTopology X).plusObj
+-          (singularCochainPresheaf R X n))).app (.op U)) := by
++          (_root_.OAI.AlgebraicTopology.Singular.SheafCochain.singularCochainPresheaf R X n))).app (.op U)) := by
+   classical
+   let J := Opens.grothendieckTopology X
+-  let P := singularCochainPresheaf R X n
++  let P := _root_.OAI.AlgebraicTopology.Singular.SheafCochain.singularCochainPresheaf R X n
+   intro y
+   obtain ⟨S, s, rfl⟩ := GrothendieckTopology.Plus.exists_rep y
+   choose φ hφ using fun I : S.Arrow ↦
+-    singularCochain_toPlus_exists_rep R X I.Y n (s I)
++    _root_.OAI.AlgebraicTopology.Singular.SheafCochainDescent.singularCochain_toPlus_exists_rep R X I.Y n (s I)
+   obtain ⟨W, hWopen, hWcover, hWfinite, hWsub⟩ :=
+     exists_coveringSieve_locallyFinite_closedRefinement X S
+@@ -627,10 +632,10 @@
+   let iNU (x : U) : N x ⟶ U := homOfLE (hN_le_U x)
+   let iNB (x : U) : N x ⟶ (b x).Y := homOfLE (hN_le_component x)
+-  let φN (x : U) : OpenCochains R X (.op (N x)) n :=
++  let φN (x : U) : _root_.OAI.AlgebraicTopology.Singular.SheafCochain.OpenCochains R X (.op (N x)) n :=
+     P.map (iNB x).op (φ (b x))
+   have hφN (x z : U) :
+       P.map (homOfLE (inf_le_left : N x ⊓ N z ≤ N x)).op (φN x) =
+         P.map (homOfLE (inf_le_right : N x ⊓ N z ≤ N z)).op (φN z) := by
+-    apply (singularCochainEquivSimplexFunction R X (.op (N x ⊓ N z)) n).injective
++    apply (_root_.OAI.AlgebraicTopology.Singular.SheafCochainDescent.singularCochainEquivSimplexFunction R X (.op (N x ⊓ N z)) n).injective
+     ext r
+     let q : ↑(N x ⊓ N z) :=
+@@ -671,29 +676,29 @@
+               rw [P.map_comp, ConcreteCategory.comp_apply]
+     exact congrArg
+-      (fun θ ↦ singularCochainToSimplexFunction R X (.op (N x ⊓ N z)) n θ r)
++      (fun θ ↦ _root_.OAI.AlgebraicTopology.Singular.SheafCochainDescent.singularCochainToSimplexFunction R X (.op (N x ⊓ N z)) n θ r)
+       hres
+-  obtain ⟨ψ, hψ⟩ := exists_openCochain_of_compatibleOnSimplexBasis R X
++  obtain ⟨ψ, hψ⟩ := _root_.OAI.AlgebraicTopology.Singular.SheafCochainDescent.exists_openCochain_of_compatibleOnSimplexBasis R X
+     (U := .op U) (fun x : U ↦ .op (N x)) (fun x ↦ (iNU x).op) n φN (by
+       intro x z sx sz hs
+-      obtain ⟨r, hrs, hrz⟩ := exists_openSimplex_inf_of_eq X (iNU x) (iNU z) n sx sz hs
++      obtain ⟨r, hrs, hrz⟩ := _root_.OAI.AlgebraicTopology.Singular.SheafCochainDescent.exists_openSimplex_inf_of_eq X (iNU x) (iNU z) n sx sz hs
+       have heval := congrArg
+-        (fun θ ↦ singularCochainToSimplexFunction R X (.op (N x ⊓ N z)) n θ r)
++        (fun θ ↦ _root_.OAI.AlgebraicTopology.Singular.SheafCochainDescent.singularCochainToSimplexFunction R X (.op (N x ⊓ N z)) n θ r)
+         (hφN x z)
+-      have hl := congrFun (singularCochainToSimplexFunction_naturality R X
++      have hl := congrFun (_root_.OAI.AlgebraicTopology.Singular.SheafCochainDescent.singularCochainToSimplexFunction_naturality R X
+         (homOfLE inf_le_left).op n (φN x)) r
+-      have hr := congrFun (singularCochainToSimplexFunction_naturality R X
++      have hr := congrFun (_root_.OAI.AlgebraicTopology.Singular.SheafCochainDescent.singularCochainToSimplexFunction_naturality R X
+         (homOfLE inf_le_right).op n (φN z)) r
+       calc
+-        singularCochainToSimplexFunction R X (.op (N x)) n (φN x) sx =
+-            singularCochainToSimplexFunction R X (.op (N x)) n (φN x)
+-              (openSimplexMap X (homOfLE inf_le_left).op n r) :=
++        _root_.OAI.AlgebraicTopology.Singular.SheafCochainDescent.singularCochainToSimplexFunction R X (.op (N x)) n (φN x) sx =
++            _root_.OAI.AlgebraicTopology.Singular.SheafCochainDescent.singularCochainToSimplexFunction R X (.op (N x)) n (φN x)
++              (_root_.OAI.AlgebraicTopology.Singular.SheafCochainDescent.openSimplexMap X (homOfLE inf_le_left).op n r) :=
+           congrArg _ hrs.symm
+-        _ = singularCochainToSimplexFunction R X (.op (N x ⊓ N z)) n
++        _ = _root_.OAI.AlgebraicTopology.Singular.SheafCochainDescent.singularCochainToSimplexFunction R X (.op (N x ⊓ N z)) n
+               (P.map (homOfLE inf_le_left).op (φN x)) r := hl.symm
+-        _ = singularCochainToSimplexFunction R X (.op (N x ⊓ N z)) n
++        _ = _root_.OAI.AlgebraicTopology.Singular.SheafCochainDescent.singularCochainToSimplexFunction R X (.op (N x ⊓ N z)) n
+               (P.map (homOfLE inf_le_right).op (φN z)) r := heval
+-        _ = singularCochainToSimplexFunction R X (.op (N z)) n (φN z)
+-              (openSimplexMap X (homOfLE inf_le_right).op n r) := hr
+-        _ = singularCochainToSimplexFunction R X (.op (N z)) n (φN z) sz :=
++        _ = _root_.OAI.AlgebraicTopology.Singular.SheafCochainDescent.singularCochainToSimplexFunction R X (.op (N z)) n (φN z)
++              (_root_.OAI.AlgebraicTopology.Singular.SheafCochainDescent.openSimplexMap X (homOfLE inf_le_right).op n r) := hr
++        _ = _root_.OAI.AlgebraicTopology.Singular.SheafCochainDescent.singularCochainToSimplexFunction R X (.op (N z)) n (φN z) sz :=
+           congrArg _ hrz)
+   let t : ToType ((J.plusObj P).obj (.op U)) := (J.toPlus P).app (.op U) ψ
+@@ -775,9 +780,9 @@
+       ((Opens.grothendieckTopology X).plusObj
+         ((Opens.grothendieckTopology X).plusObj
+-          (singularCochainPresheaf R X n))) := by
++          (_root_.OAI.AlgebraicTopology.Singular.SheafCochain.singularCochainPresheaf R X n))) := by
+   have hEpi : ∀ V : (Opens X)ᵒᵖ, Epi
+       (((Opens.grothendieckTopology X).toPlus
+         ((Opens.grothendieckTopology X).plusObj
+-          (singularCochainPresheaf R X n))).app V) := by
++          (_root_.OAI.AlgebraicTopology.Singular.SheafCochain.singularCochainPresheaf R X n))).app V) := by
+     intro V
+     rw [AddCommGrpCat.epi_iff_surjective]
+@@ -786,5 +791,5 @@
+     ((Opens.grothendieckTopology X).toPlus
+       ((Opens.grothendieckTopology X).plusObj
+-        (singularCochainPresheaf R X n))) inferInstance hEpi
++        (_root_.OAI.AlgebraicTopology.Singular.SheafCochain.singularCochainPresheaf R X n))) inferInstance hEpi
+ 
+ /-- On a hereditarily paracompact Hausdorff space, every term of the sheafified rational singular
+@@ -792,7 +797,7 @@
+ instance singularCochainSheaf_isFlasque_of_opens_paracompact
+     [T2Space X] [∀ V : Opens X, ParacompactSpace V] (n : ℕ) :
+-    TopCat.Sheaf.IsFlasque (singularCochainSheaf R X n) := by
++    TopCat.Sheaf.IsFlasque (_root_.OAI.AlgebraicTopology.Singular.SheafCochain.singularCochainSheaf R X n) := by
+   let J := Opens.grothendieckTopology X
+-  let P := singularCochainPresheaf R X n
++  let P := _root_.OAI.AlgebraicTopology.Singular.SheafCochain.singularCochainPresheaf R X n
+   let e : J.sheafify P ≅ CategoryTheory.sheafify J P :=
+     plusPlusIsoSheafify J AddCommGrpCat P
+@@ -815,13 +820,13 @@
+       (((Opens.grothendieckTopology X).toPlus
+         ((Opens.grothendieckTopology X).plusObj
+-          (singularCochainPresheaf R X n))).app (.op ⊤))
++          (_root_.OAI.AlgebraicTopology.Singular.SheafCochain.singularCochainPresheaf R X n))).app (.op ⊤))
+     rw [ConcreteCategory.isIso_iff_bijective]
+     constructor
+     · apply GrothendieckTopology.Plus.inj_of_sep
+         ((Opens.grothendieckTopology X).plusObj
+-          (singularCochainPresheaf R X n))
++          (_root_.OAI.AlgebraicTopology.Singular.SheafCochain.singularCochainPresheaf R X n))
+       intro V S x y h
+       exact GrothendieckTopology.Plus.sep
+-        (singularCochainPresheaf R X n) S x y h
++        (_root_.OAI.AlgebraicTopology.Singular.SheafCochain.singularCochainPresheaf R X n) S x y h
+     · exact singularCochain_plusToPlus_surjective_on (⊤ : Opens X) n
+   exact HomologicalComplex.Hom.isIso_of_components
+@@ -830,16 +835,18 @@
+ end HereditarilyParacompact
+ 
+-end AlgebraicTopology.Singular
+-
+ end
+-
+-@[expose] public noncomputable section
+-
+-open CategoryTheory Limits TopologicalSpace
++end
++
++end
++
++noncomputable section
++
++open _root_.CategoryTheory Limits _root_.TopologicalSpace
+ open scoped Simplicial
+ 
+ universe u
+ 
+-namespace AlgebraicTopology.Singular
++section
++section
+ 
+ variable (R : Type u) [CommRing R] (X : TopCat.{u})
+@@ -849,5 +856,5 @@
+ lemma openToTop_comp_inclusionTopIso {V : Opens X} (i : V ⟶ ⊤) :
+     (Opens.toTopCat X).map i ≫ (Opens.inclusionTopIso X).hom =
+-      topologicalSubsetInclusion X V :=
++      _root_.OAI.AlgebraicTopology.Singular.ExcisionCoverSmall.topologicalSubsetInclusion X V :=
+   rfl
+ 
+@@ -855,8 +862,8 @@
+ /-- The corresponding identity on singular chain complexes. -/
+ lemma openSingularChainToTop_comp_topOpenIso {V : Opens X} (i : V ⟶ ⊤) :
+-    (openSingularChainComplexFunctor R X).map i ≫
++    (_root_.OAI.AlgebraicTopology.Singular.SheafCochain.openSingularChainComplexFunctor R X).map i ≫
+         (topOpenSingularChainComplexIso R X).hom =
+       SSet.chainComplexMap
+-        (TopCat.toSSet.map (topologicalSubsetInclusion X V))
++        (TopCat.toSSet.map (_root_.OAI.AlgebraicTopology.Singular.ExcisionCoverSmall.topologicalSubsetInclusion X V))
+         (ModuleCat.of R R) := by
+   change ((singularChainComplexFunctor (ModuleCat.{u} R)).obj
+@@ -889,13 +896,13 @@
+ lemma coverMemberToSmallRationalSingularChains_comp_inclusion (j : κ) :
+     coverMemberToSmallRationalSingularChains Y U j ≫
+-        coverSmallRationalSingularChainInclusion Y U =
++        _root_.OAI.AlgebraicTopology.Singular.ExcisionField.coverSmallRationalSingularChainInclusion Y U =
+       SSet.chainComplexMap
+-        (TopCat.toSSet.map (topologicalSubsetInclusion Y (U j)))
++        (TopCat.toSSet.map (_root_.OAI.AlgebraicTopology.Singular.ExcisionCoverSmall.topologicalSubsetInclusion Y (U j)))
+         (ModuleCat.of ℚ ℚ) := by
+   change ((SSet.chainComplexFunctor (ModuleCat ℚ)).obj
+-      (ModuleCat.of ℚ ℚ)).map (coverMemberToSmallSingularSet Y U j) ≫
++      (ModuleCat.of ℚ ℚ)).map (_root_.OAI.AlgebraicTopology.Singular.ExcisionCoverSmall.coverMemberToSmallSingularSet Y U j) ≫
+     ((SSet.chainComplexFunctor (ModuleCat ℚ)).obj
+-      (ModuleCat.of ℚ ℚ)).map (coverSmallSingularSubcomplex Y U).ι = _
+-  rw [← Functor.map_comp, coverMemberToSmallSingularSet_comp_inclusion]
++      (ModuleCat.of ℚ ℚ)).map (_root_.OAI.AlgebraicTopology.Singular.ExcisionCoverSmall.coverSmallSingularSubcomplex Y U).ι = _
++  rw [← Functor.map_comp, _root_.OAI.AlgebraicTopology.Singular.ExcisionCoverSmall.coverMemberToSmallSingularSet_comp_inclusion]
+ 
+ set_option backward.isDefEq.respectTransparency false in
+@@ -904,8 +911,8 @@
+ lemma rationalCochainRestrictionToCoveringSieve_eq_zero
+     (S : (Opens.grothendieckTopology Y).Cover (⊤ : Opens Y)) (n : ℕ)
+-    (φ : ((TopCat.toSSet.obj Y).chainComplex
+-      (ModuleCat.of ℚ ℚ)).linearDualCochainComplex.X n)
++    (φ : (_root_.OAI.Algebra.Homology.LinearDual.HomologicalComplex.linearDualCochainComplex ((TopCat.toSSet.obj Y).chainComplex
++      (ModuleCat.of ℚ ℚ))).X n)
+     (hφ : ∀ I : S.Arrow,
+-      (singularCochainPresheaf ℚ Y n).map I.f.op
++      (_root_.OAI.AlgebraicTopology.Singular.SheafCochain.singularCochainPresheaf ℚ Y n).map I.f.op
+         ((singularCochainComplexIsoTopOpen ℚ Y).hom.f n φ) = 0) :
+     (rationalCochainRestrictionToCoverSmall Y
+@@ -917,5 +924,5 @@
+   intro x
+   obtain ⟨I, y, hy⟩ :=
+-    (mem_coverSmallSingularSubcomplex_iff_exists_preimage Y
++    (_root_.OAI.AlgebraicTopology.Singular.ExcisionCoverSmall.mem_coverSmallSingularSubcomplex_iff_exists_preimage Y
+       (coveringSieveOpenFamily Y S) x.1).mp x.2
+   apply ModuleCat.hom_ext
+@@ -923,10 +930,10 @@
+   intro a
+   have hI := congrArg
+-    (fun ψ : OpenCochains ℚ Y (.op I.Y) n ↦ ψ
++    (fun ψ : _root_.OAI.AlgebraicTopology.Singular.SheafCochain.OpenCochains ℚ Y (.op I.Y) n ↦ ψ
+       (((TopCat.toSSet.obj (TopCat.of (coveringSieveOpenFamily Y S I))).ιChainComplex
+         (R := ModuleCat.of ℚ ℚ) y).hom a))
+     (hφ I)
+   change φ (ModuleCat.Hom.hom
+-      (((openSingularChainComplexFunctor ℚ Y).map I.f).f n ≫
++      (((_root_.OAI.AlgebraicTopology.Singular.SheafCochain.openSingularChainComplexFunctor ℚ Y).map I.f).f n ≫
+         (topOpenSingularChainComplexIso ℚ Y).hom.f n)
+       (((TopCat.toSSet.obj (TopCat.of (coveringSieveOpenFamily Y S I))).ιChainComplex
+@@ -935,8 +942,8 @@
+     (openSingularChainToTop_comp_topOpenIso ℚ Y I.f) n
+   have hchain' :
+-      ((openSingularChainComplexFunctor ℚ Y).map I.f).f n ≫
++      ((_root_.OAI.AlgebraicTopology.Singular.SheafCochain.openSingularChainComplexFunctor ℚ Y).map I.f).f n ≫
+           (topOpenSingularChainComplexIso ℚ Y).hom.f n =
+         (SSet.chainComplexMap
+-          (TopCat.toSSet.map (topologicalSubsetInclusion Y I.Y))
++          (TopCat.toSSet.map (_root_.OAI.AlgebraicTopology.Singular.ExcisionCoverSmall.topologicalSubsetInclusion Y I.Y))
+           (ModuleCat.of ℚ ℚ)).f n := by
+     simpa only [HomologicalComplex.comp_f] using hchain
+@@ -946,5 +953,5 @@
+       (TopCat.toSSet.obj (TopCat.of (coveringSieveOpenFamily Y S I)))
+       (TopCat.toSSet.obj Y)
+-      (TopCat.toSSet.map (topologicalSubsetInclusion Y
++      (TopCat.toSSet.map (_root_.OAI.AlgebraicTopology.Singular.ExcisionCoverSmall.topologicalSubsetInclusion Y
+         (coveringSieveOpenFamily Y S I)))
+       (ModuleCat.of ℚ ℚ) y) a
+@@ -952,9 +959,9 @@
+       (((TopCat.toSSet.obj Y).ιChainComplex
+         (R := ModuleCat.of ℚ ℚ)
+-        ((TopCat.toSSet.map (topologicalSubsetInclusion Y
++        ((TopCat.toSSet.map (_root_.OAI.AlgebraicTopology.Singular.ExcisionCoverSmall.topologicalSubsetInclusion Y
+           (coveringSieveOpenFamily Y S I))).app _ y)).hom a) = 0 := by
+     calc
+       _ = φ ((SSet.chainComplexMap
+-          (TopCat.toSSet.map (topologicalSubsetInclusion Y
++          (TopCat.toSSet.map (_root_.OAI.AlgebraicTopology.Singular.ExcisionCoverSmall.topologicalSubsetInclusion Y
+             (coveringSieveOpenFamily Y S I)))
+           (ModuleCat.of ℚ ℚ)).f n
+@@ -964,10 +971,10 @@
+       _ = 0 := hI
+   change φ (ModuleCat.Hom.hom
+-    (((coverSmallSingularSubcomplex Y
++    (((_root_.OAI.AlgebraicTopology.Singular.ExcisionCoverSmall.coverSmallSingularSubcomplex Y
+       (coveringSieveOpenFamily Y S) : SSet).ιChainComplex
+         (R := ModuleCat.of ℚ ℚ) x) ≫
+-      (coverSmallRationalSingularChainInclusion Y
++      (_root_.OAI.AlgebraicTopology.Singular.ExcisionField.coverSmallRationalSingularChainInclusion Y
+         (coveringSieveOpenFamily Y S)).f n) a) = 0
+-  dsimp only [coverSmallRationalSingularChainInclusion] at ⊢
++  dsimp only [_root_.OAI.AlgebraicTopology.Singular.ExcisionField.coverSmallRationalSingularChainInclusion] at ⊢
+   simpa [hy] using hI'
+   · intro f g h
+@@ -979,10 +986,10 @@
+ lemma rationalCochainRestrictionToCoveringSieve_local_zero
+     (S : (Opens.grothendieckTopology Y).Cover (⊤ : Opens Y)) (n : ℕ)
+-    (φ : ((TopCat.toSSet.obj Y).chainComplex
+-      (ModuleCat.of ℚ ℚ)).linearDualCochainComplex.X n)
++    (φ : (_root_.OAI.Algebra.Homology.LinearDual.HomologicalComplex.linearDualCochainComplex ((TopCat.toSSet.obj Y).chainComplex
++      (ModuleCat.of ℚ ℚ))).X n)
+     (hφ : (rationalCochainRestrictionToCoverSmall Y
+       (coveringSieveOpenFamily Y S)).f n φ = 0) :
+     ∀ I : S.Arrow,
+-      (singularCochainPresheaf ℚ Y n).map I.f.op
++      (_root_.OAI.AlgebraicTopology.Singular.SheafCochain.singularCochainPresheaf ℚ Y n).map I.f.op
+         ((singularCochainComplexIsoTopOpen ℚ Y).hom.f n φ) = 0 := by
+   intro I
+@@ -1001,10 +1008,10 @@
+   calc
+     φ ((topOpenSingularChainComplexIso ℚ Y).hom.f n
+-        (((openSingularChainComplexFunctor ℚ Y).map I.f).f n c)) =
++        (((_root_.OAI.AlgebraicTopology.Singular.SheafCochain.openSingularChainComplexFunctor ℚ Y).map I.f).f n c)) =
+       φ ((SSet.chainComplexMap
+-        (TopCat.toSSet.map (topologicalSubsetInclusion Y I.Y))
++        (TopCat.toSSet.map (_root_.OAI.AlgebraicTopology.Singular.ExcisionCoverSmall.topologicalSubsetInclusion Y I.Y))
+         (ModuleCat.of ℚ ℚ)).f n c) :=
+           congrArg φ (ConcreteCategory.congr_hom htop c)
+-    _ = φ ((coverSmallRationalSingularChainInclusion Y
++    _ = φ ((_root_.OAI.AlgebraicTopology.Singular.ExcisionField.coverSmallRationalSingularChainInclusion Y
+           (coveringSieveOpenFamily Y S)).f n
+         ((coverMemberToSmallRationalSingularChains Y
+@@ -1019,8 +1026,8 @@
+   dsimp [rationalCochainHomotopyEquivCoverSmall,
+     rationalCochainRestrictionToCoverSmall]
+-  change HomologicalComplex.linearDualMap
+-      (coverSmallRationalChainHomotopyEquiv_of_openCover
++  change _root_.OAI.Algebra.Homology.LinearDual.HomologicalComplex.linearDualMap
++      (_root_.OAI.AlgebraicTopology.Singular.ExcisionField.coverSmallRationalChainHomotopyEquiv_of_openCover
+         Y U hUopen hUcover).hom = _
+-  rw [coverSmallRationalChainHomotopyEquiv_of_openCover_hom]
++  rw [_root_.OAI.AlgebraicTopology.Singular.ExcisionField.coverSmallRationalChainHomotopyEquiv_of_openCover_hom]
+ 
+ /-- Restriction from all rational cochains to cover-small cochains is a quasi-isomorphism for an
+@@ -1038,5 +1045,5 @@
+     (kernel (rationalCochainRestrictionToCoverSmall Y U)).Acyclic := by
+   let := rationalCochainRestrictionToCoverSmall_quasiIso Y U hUopen hUcover
+-  exact HomologicalComplex.kernel_acyclic_of_epi_of_quasiIso
++  exact _root_.OAI.Algebra.Homology.KernelAcyclic.HomologicalComplex.kernel_acyclic_of_epi_of_quasiIso
+     (rationalCochainRestrictionToCoverSmall Y U)
+ 
+@@ -1046,18 +1053,18 @@
+ theorem exists_coverSmallKernel_primitive
+     (hUopen : ∀ i, IsOpen (U i)) (hUcover : ⋃ i, U i = Set.univ) (n : ℕ)
+-    (φ : ((TopCat.toSSet.obj Y).chainComplex
+-      (ModuleCat.of ℚ ℚ)).linearDualCochainComplex.X n)
++    (φ : (_root_.OAI.Algebra.Homology.LinearDual.HomologicalComplex.linearDualCochainComplex ((TopCat.toSSet.obj Y).chainComplex
++      (ModuleCat.of ℚ ℚ))).X n)
+     (hφsmall : (rationalCochainRestrictionToCoverSmall Y U).f n φ = 0)
+-    (hφclosed : (((TopCat.toSSet.obj Y).chainComplex
+-      (ModuleCat.of ℚ ℚ)).linearDualCochainComplex.d n (n + 1)) φ = 0) :
+-    ∃ ψ : ((TopCat.toSSet.obj Y).chainComplex
+-        (ModuleCat.of ℚ ℚ)).linearDualCochainComplex.X
++    (hφclosed : ((_root_.OAI.Algebra.Homology.LinearDual.HomologicalComplex.linearDualCochainComplex ((TopCat.toSSet.obj Y).chainComplex
++      (ModuleCat.of ℚ ℚ))).d n (n + 1)) φ = 0) :
++    ∃ ψ : (_root_.OAI.Algebra.Homology.LinearDual.HomologicalComplex.linearDualCochainComplex ((TopCat.toSSet.obj Y).chainComplex
++        (ModuleCat.of ℚ ℚ))).X
+           ((ComplexShape.up ℕ).prev n),
+-      (((TopCat.toSSet.obj Y).chainComplex
+-          (ModuleCat.of ℚ ℚ)).linearDualCochainComplex.sc n).f ψ = φ ∧
++      ((_root_.OAI.Algebra.Homology.LinearDual.HomologicalComplex.linearDualCochainComplex ((TopCat.toSSet.obj Y).chainComplex
++          (ModuleCat.of ℚ ℚ))).sc n).f ψ = φ ∧
+         (rationalCochainRestrictionToCoverSmall Y U).f
+           ((ComplexShape.up ℕ).prev n) ψ = 0 := by
+-  let F := ((TopCat.toSSet.obj Y).chainComplex
+-    (ModuleCat.of ℚ ℚ)).linearDualCochainComplex
++  let F := (_root_.OAI.Algebra.Homology.LinearDual.HomologicalComplex.linearDualCochainComplex ((TopCat.toSSet.obj Y).chainComplex
++    (ModuleCat.of ℚ ℚ)))
+   let q := rationalCochainRestrictionToCoverSmall Y U
+   let K := kernel q
+@@ -1112,16 +1119,16 @@
+ theorem exists_topOpenLocallyZero_primitive
+     (S : (Opens.grothendieckTopology Y).Cover (⊤ : Opens Y)) (n : ℕ)
+-    (φ : (TopOpenSingularChainComplex ℚ Y).linearDualCochainComplex.X n)
++    (φ : (_root_.OAI.Algebra.Homology.LinearDual.HomologicalComplex.linearDualCochainComplex (TopOpenSingularChainComplex ℚ Y)).X n)
+     (hφlocal : ∀ I : S.Arrow,
+-      (singularCochainPresheaf ℚ Y n).map I.f.op φ = 0)
+-    (hφclosed : ((TopOpenSingularChainComplex ℚ Y).linearDualCochainComplex.d
++      (_root_.OAI.AlgebraicTopology.Singular.SheafCochain.singularCochainPresheaf ℚ Y n).map I.f.op φ = 0)
++    (hφclosed : ((_root_.OAI.Algebra.Homology.LinearDual.HomologicalComplex.linearDualCochainComplex (TopOpenSingularChainComplex ℚ Y)).d
+       n (n + 1)) φ = 0) :
+-    ∃ ψ : (TopOpenSingularChainComplex ℚ Y).linearDualCochainComplex.X
++    ∃ ψ : (_root_.OAI.Algebra.Homology.LinearDual.HomologicalComplex.linearDualCochainComplex (TopOpenSingularChainComplex ℚ Y)).X
+         ((ComplexShape.up ℕ).prev n),
+-      ((TopOpenSingularChainComplex ℚ Y).linearDualCochainComplex.sc n).f ψ = φ ∧
++      ((_root_.OAI.Algebra.Homology.LinearDual.HomologicalComplex.linearDualCochainComplex (TopOpenSingularChainComplex ℚ Y)).sc n).f ψ = φ ∧
+         ∀ I : S.Arrow,
+-          (singularCochainPresheaf ℚ Y ((ComplexShape.up ℕ).prev n)).map I.f.op ψ = 0 := by
+-  let A := (SingularChainComplex ℚ Y).linearDualCochainComplex
+-  let B := (TopOpenSingularChainComplex ℚ Y).linearDualCochainComplex
++          (_root_.OAI.AlgebraicTopology.Singular.SheafCochain.singularCochainPresheaf ℚ Y ((ComplexShape.up ℕ).prev n)).map I.f.op ψ = 0 := by
++  let A := (_root_.OAI.Algebra.Homology.LinearDual.HomologicalComplex.linearDualCochainComplex (_root_.OAI.AlgebraicTopology.Singular.Cohomology.SingularChainComplex ℚ Y))
++  let B := (_root_.OAI.Algebra.Homology.LinearDual.HomologicalComplex.linearDualCochainComplex (TopOpenSingularChainComplex ℚ Y))
+   let e := singularCochainComplexIsoTopOpen ℚ Y
+   let φ' : A.X n := e.inv.f n φ
+@@ -1132,5 +1139,5 @@
+       HomologicalComplex.id_f, ConcreteCategory.id_apply, φ'] using hc
+   have hlocal' : ∀ I : S.Arrow,
+-      (singularCochainPresheaf ℚ Y n).map I.f.op (e.hom.f n φ') = 0 := by
++      (_root_.OAI.AlgebraicTopology.Singular.SheafCochain.singularCochainPresheaf ℚ Y n).map I.f.op (e.hom.f n φ') = 0 := by
+     intro I
+     rw [heφ]
+@@ -1177,5 +1184,5 @@
+   rw [K.exactAt_iff, ShortComplex.ab_exact_iff]
+   intro z hzclosed
+-  let φ : OpenCochains ℚ Y (.op ⊤) n := (kernel.ι f).f n z
++  let φ : _root_.OAI.AlgebraicTopology.Singular.SheafCochain.OpenCochains ℚ Y (.op ⊤) n := (kernel.ι f).f n z
+   have hφplus : f.f n φ = 0 := by
+     have hcondition := HomologicalComplex.congr_hom (kernel.condition f) n
+@@ -1183,5 +1190,5 @@
+   obtain ⟨S, hφlocal⟩ :=
+     (singularCochain_toPlus_eq_zero_iff ℚ Y ⊤ n φ).mp hφplus
+-  have hφclosed : ((TopOpenSingularChainComplex ℚ Y).linearDualCochainComplex.d
++  have hφclosed : ((_root_.OAI.Algebra.Homology.LinearDual.HomologicalComplex.linearDualCochainComplex (TopOpenSingularChainComplex ℚ Y)).d
+       n (n + 1)) φ = 0 := by
+     change K.d n ((ComplexShape.up ℕ).next n) z = 0 at hzclosed
+@@ -1206,5 +1213,5 @@
+   have hψplus : f.f ((ComplexShape.up ℕ).prev n) ψ = 0 := by
+     change ((Opens.grothendieckTopology Y).toPlus
+-      (singularCochainPresheaf ℚ Y ((ComplexShape.up ℕ).prev n))).app
++      (_root_.OAI.AlgebraicTopology.Singular.SheafCochain.singularCochainPresheaf ℚ Y ((ComplexShape.up ℕ).prev n))).app
+         (.op ⊤) ψ = 0
+     exact (singularCochain_toPlus_eq_zero_iff ℚ Y ⊤
+@@ -1259,5 +1266,5 @@
+ theorem topOpenToGlobalSingularCochainPlusComplex_quasiIso :
+     QuasiIso (topOpenToGlobalSingularCochainPlusComplex ℚ Y) :=
+-  HomologicalComplex.quasiIso_of_epi_of_kernel_acyclic
++  _root_.OAI.Algebra.Homology.KernelAcyclic.HomologicalComplex.quasiIso_of_epi_of_kernel_acyclic
+     (topOpenToGlobalSingularCochainPlusComplex ℚ Y)
+     (topOpenToGlobalSingularCochainPlusComplex_kernel_acyclic Y)
+@@ -1293,3 +1300,8 @@
+ end HereditarilyParacompact
+ 
+-end AlgebraicTopology.Singular
++end
++end
++
++end
++
++end OAI.AlgebraicTopology.Singular.SheafSubdivisionCochain

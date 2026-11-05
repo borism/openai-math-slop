@@ -1,0 +1,50 @@
+--- upstream/Lemmas/AlgebraicTopology/Sheaf/FlasqueAcyclic.lean
++++ challenge/Lemmas/AlgebraicTopology/Sheaf/FlasqueAcyclic.lean
+@@ -13,12 +13,16 @@
+ See the License for the specific language governing permissions and
+ limitations under the License.
++
+ -/
+-module
+ 
+-public import Mathlib.CategoryTheory.Abelian.GrothendieckCategory.HasExt
+-public import Mathlib.CategoryTheory.Sites.SheafCohomology.Basic
+-public import Mathlib.Topology.Sheaves.Flasque
++import Mathlib.CategoryTheory.Abelian.GrothendieckCategory.HasExt
++import Mathlib.CategoryTheory.Sites.SheafCohomology.Basic
++import Mathlib.Topology.Sheaves.Flasque
+ 
+ import HodgeConjecture.Lemmas.AlgebraicTopology.Sheaf.InjectiveFlasque
++
++namespace OAI.AlgebraicTopology.Sheaf.FlasqueAcyclic
++
++open _root_.TopCat
+ 
+ /-!
+@@ -30,11 +34,13 @@
+ -/
+ 
+-@[expose] public noncomputable section
++noncomputable section
+ 
+-open CategoryTheory Limits Opposite TopologicalSpace
++open _root_.CategoryTheory Limits Opposite _root_.TopologicalSpace
+ 
+ universe u
+ 
+-namespace TopCat.Sheaf
++section
++namespace TopCat
++open _root_.TopCat
+ 
+ variable {X : TopCat.{u}}
+@@ -46,3 +52,8 @@
+   Abelian.Ext.instAddCommGroup
+ 
+-end TopCat.Sheaf
++end TopCat
++end
++
++end
++
++end OAI.AlgebraicTopology.Sheaf.FlasqueAcyclic

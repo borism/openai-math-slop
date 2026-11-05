@@ -1,0 +1,25 @@
+# lane 2 of scripts/mub/lanes.sh (Bmid, Bfine) and scripts/mub/lanes_resume.sh (covrun, A0) -- byte comparisons with shipped data
+# note: Bmid was paused with SIGSTOP 02:45:10-02:56:47 UTC (resource limit), so its wall time includes ~700 s stopped
+mid.bin IDENTICAL
+midbad.bin IDENTICAL
+Bmid stdout MATCH
+name=Bmid exit=0 wall=2470.0s peakRSS_kB=42224
+fine.bin IDENTICAL
+finebad.bin IDENTICAL
+batches/fdone.txt IDENTICAL
+batches differing: 0 of 88
+Bfine stdout MATCH
+name=Bfine exit=0 wall=693.0s peakRSS_kB=129348
+centers.txt IDENTICAL
+name=covrun exit=0 wall=669.5s peakRSS_kB=179196
+coarse0.bin IDENTICAL
+bad0.txt IDENTICAL
+name=A0 exit=0 wall=2433.0s peakRSS_kB=41492
+LANE2_DONE
+# stdout vs curated results (token subset, in order; scripts/mub/curated_subset.py):
+A0.txt: curated lines=63 kept rerun lines=63 -> SUBSET MATCH
+covrun.txt: N112 line SUBSET MATCH (checked151744086 centers249878); curated 'xs 22829' corresponds to rerun 'xs22829 build15.27' (reformatted by the curation); curated 'completed_write' is a supervisor marker the program never prints
+# rerun covrun stdout:
+xs22829 build15.27
+N112 r0.0320 dual2 checked151744086 centers249878 visit29769262282 near3341641851 cheap45648766 lp3134060273
+time 667.59

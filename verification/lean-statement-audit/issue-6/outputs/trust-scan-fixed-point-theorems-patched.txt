@@ -1,0 +1,30 @@
+tree ./FixedPointTheorems: 6 files
+lines scanned: 3176
+
+pattern counts (code only; comments/strings stripped):
+  axiom decl                                           0
+  sorry                                                0
+  admit                                                0
+  native_decide                                        0
+  Lean.ofReduceBool / ofReduceNat (compiler-trusting axiom) 0
+  decide +kernel (kernel reduction, no extra axiom)    0
+  trustCompiler                                        0
+  implemented_by                                       0
+  extern                                               0
+  unsafe                                               0
+  opaque decl                                          0
+  partial def                                          0
+  run_tac                                              0
+  elab/macro/syntax definition                         0
+  set_option (any)                                     0
+  set_option debug.skipKernelTC                        0
+  set_option allowUnsafeReducibility                   0
+  set_option maxHeartbeats 0                           0
+  set_option autoImplicit true                         0
+  Decidable instance override (instance : Decidable)   0
+  csimp attribute                                      0
+  addDecl / Environment manipulation                   0
+
+hits for hard trust patterns:
+
+first 40 hits for other patterns:

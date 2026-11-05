@@ -1,0 +1,33 @@
+--- upstream/Lemmas/AlgebraicTopology/Singular/Subdivision/AffineMesh.lean
++++ challenge/Lemmas/AlgebraicTopology/Singular/Subdivision/AffineMesh.lean
+@@ -64,17 +64,13 @@
+ /-- The intrinsic diameter of a nonempty standard simplex is one in the sup metric. -/
+ public theorem diam_univ_stdSimplex (n : ℕ) (hn : 1 ≤ n) :
+-    Metric.diam (Set.univ : Set (stdSimplex ℝ (Fin (n + 1)))) = 1 := by
++    Metric.diam (Set.univ : Set (Convexity.StdSimplex ℝ (Fin (n + 1)))) = 1 := by
+   let : Nontrivial (Fin (n + 1)) :=
+     Fin.nontrivial_iff_two_le.mpr (Nat.add_le_add_right hn 1)
+   calc
+-    Metric.diam (Set.univ : Set (stdSimplex ℝ (Fin (n + 1)))) =
+-        Metric.diam (Set.range
+-          (Subtype.val : stdSimplex ℝ (Fin (n + 1)) → Fin (n + 1) → ℝ)) :=
+-      isometry_subtype_coe.diam_range.symm
+-    _ = Metric.diam (stdSimplex ℝ (Fin (n + 1))) := by
+-      congr 1
+-      ext w
+-      simp
+-    _ = 1 := diam_stdSimplex
++    Metric.diam (Set.univ : Set (Convexity.StdSimplex ℝ (Fin (n + 1)))) =
++        Metric.diam (Set.range (fun x : Convexity.StdSimplex ℝ (Fin (n + 1)) =>
++          (x.weights : Fin (n + 1) → ℝ))) :=
++      (Convexity.StdSimplex.isometry_weights (Fin (n + 1))).diam_range.symm
++    _ = 1 := Convexity.StdSimplex.diam_range_toFun_comp_weights_subset_closedBall_eq_one _
+ 
+ /-- Powers of the barycentric mesh factor eventually fall below every positive tolerance. -/
+@@ -95,5 +91,5 @@
+ public noncomputable def iteratedAffineCellMap (n : ℕ)
+     (ancestry : List (TopAffineFlag n)) :
+-    C(stdSimplex ℝ (Fin (n + 1)), stdSimplex ℝ (Fin (n + 1))) :=
++    C(Convexity.StdSimplex ℝ (Fin (n + 1)), Convexity.StdSimplex ℝ (Fin (n + 1))) :=
+   match ancestry with
+   | [] => ContinuousMap.id _

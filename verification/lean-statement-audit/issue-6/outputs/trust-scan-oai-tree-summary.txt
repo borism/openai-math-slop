@@ -1,0 +1,163 @@
+tree ./OAI: 162417 files
+lines scanned: 29856611
+
+pattern counts (code only; comments/strings stripped):
+  axiom decl                                           0
+  sorry                                                0
+  admit                                                0
+  native_decide                                        0
+  Lean.ofReduceBool / ofReduceNat (compiler-trusting axiom) 0
+  decide +kernel (kernel reduction, no extra axiom)    1311448
+  trustCompiler                                        0
+  implemented_by                                       0
+  extern                                               0
+  unsafe                                               0
+  opaque decl                                          1542
+  partial def                                          6
+  run_tac                                              7
+  elab/macro/syntax definition                         34251
+  set_option (any)                                     16480
+  set_option debug.skipKernelTC                        0
+  set_option allowUnsafeReducibility                   0
+  set_option maxHeartbeats 0                           0
+  set_option autoImplicit true                         38
+  Decidable instance override (instance : Decidable)   2
+  csimp attribute                                      3
+  addDecl / Environment manipulation                   13
+
+
+== all hits: addDecl / Environment manipulation
+  [addDecl / Environment manipulation] lean/OAI/AlgebraicGeometry/DivisorClass/Chern/HolomorphicGreen/NearAllOrders.lean:69: run_cmd Lean.modifyEnv (fun env => Lean.LibrarySuggestions.nameDenyListExt.addEntry env "holomorphicMetricSmoothGreen_exists_local_all_orders")
+  [addDecl / Environment manipulation] lean/OAI/Analysis/BrownMeasure/Model.lean:91: run_cmd Lean.modifyEnv fun env => Lean.Meta.auxLemmasExt.setState env {}
+  [addDecl / Environment manipulation] lean/OAI/Analysis/Commutator/TracialDCorner.lean:8: run_cmd modifyEnv fun env =>
+  [addDecl / Environment manipulation] lean/OAI/Analysis/Commutator/TracialDoubleCompression.lean:8: run_cmd modifyEnv fun env =>
+  [addDecl / Environment manipulation] lean/OAI/Analysis/Commutator/TracialGNSCorners.lean:9: run_cmd modifyEnv fun env =>
+  [addDecl / Environment manipulation] lean/OAI/Analysis/Commutator/UnitarySequence.lean:8: run_cmd modifyEnv fun env =>
+  [addDecl / Environment manipulation] lean/OAI/Analysis/IrrationalRotation/Model/Product.lean:116: run_cmd Lean.modifyEnv fun env => Lean.Meta.auxLemmasExt.setState env {}
+  [addDecl / Environment manipulation] lean/OAI/GroupTheory/PolycyclicRecognition/Geometry/CartanNeighborRowOffset.lean:273: run_cmd Lean.modifyEnv fun env => Lean.LibrarySuggestions.nameDenyListExt.addEntry env "polar_offset_nonpos"
+  [addDecl / Environment manipulation] lean/OAI/GroupTheory/PolycyclicRecognition/Geometry/CartanOneConeThreshold.lean:267: run_cmd Lean.modifyEnv fun env => Lean.LibrarySuggestions.nameDenyListExt.addEntry env "exists_one_cone_offset_threshold"
+  [addDecl / Environment manipulation] lean/OAI/GroupTheory/PolycyclicRecognition/Geometry/CartanPolarBoxOffset.lean:278: run_cmd Lean.modifyEnv fun env => Lean.LibrarySuggestions.nameDenyListExt.addEntry env "original_box_law_offset_nonpos"
+  [addDecl / Environment manipulation] lean/OAI/GroupTheory/PolycyclicRecognition/Geometry/CartanPolarMeasuredOffset.lean:295: run_cmd Lean.modifyEnv fun env => Lean.LibrarySuggestions.nameDenyListExt.addEntry env "measured_target_offset_nonpos"
+  [addDecl / Environment manipulation] lean/OAI/GroupTheory/PolycyclicRecognition/Geometry/CartanPolarOriginalOffset.lean:304: run_cmd Lean.modifyEnv fun env => Lean.LibrarySuggestions.nameDenyListExt.addEntry env "original_law_offset_nonpos"
+  [addDecl / Environment manipulation] lean/OAI/Internal/RootAlias.lean:23: modifyEnv fun env => aliases.foldl (fun env (target, source) =>
+
+== all hits: run_tac
+  [run_tac] lean/OAI/AlgebraicGeometry/AbelianModuli/HilbertConstruction/Stable/BalancedOrbitEquality.lean:85: run_tac Lean.Elab.Tactic.withMainContext do
+  [run_tac] lean/OAI/AlgebraicGeometry/AbelianModuli/HilbertConstruction/Stable/BalancedOrbitEquality.lean:111: run_tac Lean.Elab.Tactic.withMainContext do
+  [run_tac] lean/OAI/AlgebraicGeometry/ComplexMultiplication/ExteriorGaloisBasis.lean:157: run_tac Lean.Elab.Tactic.withMainContext do
+  [run_tac] lean/OAI/Geometry/Relativity/CKS/BoundaryBridge.lean:40: run_tac do
+  [run_tac] lean/OAI/Geometry/Relativity/CKS/BoundaryBridge.lean:46: run_tac do
+  [run_tac] lean/OAI/Geometry/Relativity/CKS/BoundaryBridge.lean:55: run_tac do
+  [run_tac] lean/OAI/Geometry/Relativity/CKS/BoundaryBridge.lean:67: run_tac do
+
+== all hits: partial def
+  [partial def] lean/OAI/Computability/TypeSystem/Logic.lean:1961: partial def reify (e : Lean.Expr) : StateRefT (Array Lean.Expr) MetaM Node := do
+  [partial def] lean/OAI/Computability/TypeSystem/Logic.lean:1996: partial def Node.syntax : Node → MetaM (TSyntax `term)
+  [partial def] lean/OAI/Computability/TypeSystem/Logic.lean:2001: partial def atomFunction (atoms : Array Lean.Expr) (L : TSyntax `term) (n : Nat := 0) :
+  [partial def] lean/OAI/Computability/TypeSystem/Logic.lean:2009: partial def truthCases (v : TSyntax `term) (n : Nat) : TacticM (TSyntax `tactic) := do
+  [partial def] lean/OAI/Computability/TypeSystem/Logic.lean:2017: partial def memCases (r hr : Ident) (ps : Array (TSyntax `term)) (n : Nat := 0) :
+  [partial def] lean/OAI/Computability/TypeSystem/Logic.lean:2028: partial def formulaProof (l e : Lean.Expr) : MetaM Lean.Expr := do
+
+== all hits: Decidable instance override
+  [Decidable instance override (instance : Decidable)] lean/OAI/Computability/FourierTransform/LengthSelection.lean:258: instance (n) : Decidable (Ports n) := inferInstanceAs (Decidable (_ ≤ _))
+  [Decidable instance override (instance : Decidable)] lean/OAI/Computability/FourierTransform/PrimeSelection.lean:73: instance (i) : Decidable (Bar i) := inferInstanceAs (Decidable (_ ∧ _))
+
+== all hits: csimp attribute
+  [csimp attribute] lean/OAI/Combinatorics/LowSpaceSubsetSum/Search/BudgetedOuterLoop.lean:73: @[csimp] theorem execute_eq : @BudgetedOuterReplay.execute.{u, v, w} = @execute.{u, v, w} := by
+  [csimp attribute] lean/OAI/Combinatorics/LowSpaceSubsetSum/Search/BudgetedReplayLoops.lean:69: @[csimp] theorem execute_eq : @BudgetedReplay.execute.{u, v, w} = @execute.{u, v, w} := by
+  [csimp attribute] lean/OAI/Combinatorics/LowSpaceSubsetSum/Search/BudgetedReplayLoops.lean:129: @[csimp] theorem execute_eq : @BudgetedFill.execute.{u, v} = @execute.{u, v} := by
+
+== all hits: set_option autoImplicit true
+  [set_option autoImplicit true] lean/OAI/Computability/Logspace/AffineSampling.lean:11: set_option autoImplicit true
+  [set_option autoImplicit true] lean/OAI/Computability/Logspace/AllocationPrograms.lean:11: set_option autoImplicit true
+  [set_option autoImplicit true] lean/OAI/Computability/Logspace/Amplification.lean:11: set_option autoImplicit true
+  [set_option autoImplicit true] lean/OAI/Computability/Logspace/BoundedTours.lean:12: set_option autoImplicit true
+  [set_option autoImplicit true] lean/OAI/Computability/Logspace/CatalyticComparison.lean:11: set_option autoImplicit true
+  [set_option autoImplicit true] lean/OAI/Computability/Logspace/CompressionBounds.lean:11: set_option autoImplicit true
+  [set_option autoImplicit true] lean/OAI/Computability/Logspace/CompressionEvaluation.lean:12: set_option autoImplicit true
+  [set_option autoImplicit true] lean/OAI/Computability/Logspace/CompressionPrograms.lean:12: set_option autoImplicit true
+  [set_option autoImplicit true] lean/OAI/Computability/Logspace/ConfigurationEvaluation.lean:12: set_option autoImplicit true
+  [set_option autoImplicit true] lean/OAI/Computability/Logspace/ConfigurationGraph.lean:11: set_option autoImplicit true
+  [set_option autoImplicit true] lean/OAI/Computability/Logspace/ContourPrograms.lean:11: set_option autoImplicit true
+  [set_option autoImplicit true] lean/OAI/Computability/Logspace/ContourTraversal.lean:11: set_option autoImplicit true
+  [set_option autoImplicit true] lean/OAI/Computability/Logspace/CounterPrograms.lean:11: set_option autoImplicit true
+  [set_option autoImplicit true] lean/OAI/Computability/Logspace/DiagonalEvaluation.lean:12: set_option autoImplicit true
+  [set_option autoImplicit true] lean/OAI/Computability/Logspace/DyadicArithmetic.lean:12: set_option autoImplicit true
+  [set_option autoImplicit true] lean/OAI/Computability/Logspace/Equality.lean:12: set_option autoImplicit true
+  [set_option autoImplicit true] lean/OAI/Computability/Logspace/EstimatorBounds.lean:13: set_option autoImplicit true
+  [set_option autoImplicit true] lean/OAI/Computability/Logspace/EstimatorInstructions.lean:13: set_option autoImplicit true
+  [set_option autoImplicit true] lean/OAI/Computability/Logspace/EstimatorInterfaces.lean:13: set_option autoImplicit true
+  [set_option autoImplicit true] lean/OAI/Computability/Logspace/EstimatorMachine.lean:11: set_option autoImplicit true
+  [set_option autoImplicit true] lean/OAI/Computability/Logspace/EstimatorOperations.lean:11: set_option autoImplicit true
+  [set_option autoImplicit true] lean/OAI/Computability/Logspace/EstimatorParameters.lean:12: set_option autoImplicit true
+  [set_option autoImplicit true] lean/OAI/Computability/Logspace/FiniteFieldPrograms.lean:16: set_option autoImplicit true
+  [set_option autoImplicit true] lean/OAI/Computability/Logspace/HierarchicalEstimator.lean:12: set_option autoImplicit true
+  [set_option autoImplicit true] lean/OAI/Computability/Logspace/HierarchyEvaluation.lean:11: set_option autoImplicit true
+  [set_option autoImplicit true] lean/OAI/Computability/Logspace/IterationSchedule.lean:11: set_option autoImplicit true
+  [set_option autoImplicit true] lean/OAI/Computability/Logspace/ProbabilityAtoms.lean:12: set_option autoImplicit true
+  [set_option autoImplicit true] lean/OAI/Computability/Logspace/ProbabilityDecision.lean:12: set_option autoImplicit true
+  [set_option autoImplicit true] lean/OAI/Computability/Logspace/ProbabilityHierarchy.lean:11: set_option autoImplicit true
+  [set_option autoImplicit true] lean/OAI/Computability/Logspace/QueryCombinators.lean:11: set_option autoImplicit true
+  [set_option autoImplicit true] lean/OAI/Computability/Logspace/QueryPrograms.lean:11: set_option autoImplicit true
+  [set_option autoImplicit true] lean/OAI/Computability/Logspace/RecursivePrograms.lean:11: set_option autoImplicit true
+  [set_option autoImplicit true] lean/OAI/Computability/Logspace/RowEvaluation.lean:13: set_option autoImplicit true
+  [set_option autoImplicit true] lean/OAI/Computability/Logspace/SparseRows.lean:12: set_option autoImplicit true
+  [set_option autoImplicit true] lean/OAI/Computability/Logspace/TerminalEvaluation.lean:12: set_option autoImplicit true
+  [set_option autoImplicit true] lean/OAI/Computability/Logspace/TransitionEvaluation.lean:11: set_option autoImplicit true
+  [set_option autoImplicit true] lean/OAI/Computability/Logspace/TransitionTables.lean:11: set_option autoImplicit true
+  [set_option autoImplicit true] lean/OAI/Computability/Logspace/UniformEstimator.lean:14: set_option autoImplicit true
+
+== opaque decl: count by top-level OAI area
+   1506 MathematicalPhysics/ContinuumCoulomb
+      9 Algorithms/SubexponentialSAT
+      3 Computability/VertexCover
+      3 Computability/UniqueGames
+      3 Computability/MinUncut
+      3 Computability/MaxCut
+      3 Computability/DirectedFeedback
+      3 Computability/BinPacking
+      3 Combinatorics/IndependentSets
+      2 GroupTheory/PeriodicGroups
+      2 Algebra/OddKaplansky
+      1 Analysis/KadisonSimilarity
+      1 AlgebraicGeometry/CharacterVarieties
+
+== decide +kernel: count by OAI area (top 15)
+ 430030 Analysis/MutuallyUnbiased
+ 299047 Combinatorics/Ramsey
+ 255166 Analysis/PlanarPacking
+   6304 Analysis/Laughlin
+   3317 Analysis/Triangular
+   2297 Analysis/LaughlinGap
+   2219 Analysis/Quantum
+    963 Analysis/LaughlinFock
+    632 Analysis/NuclearUltrapower
+     24 Algebra/AuslanderReiten
+      1 Algebra/Finitistic
+
+== set_option (any): most common options
+   8307 set_option backward.isDefEq.respectTransparency
+   5246 set_option backward.isDefEq.respectTransparency.types
+   2532 set_option backward.defeqAttrib.useBackward
+    266 set_option maxHeartbeats
+     45 set_option autoImplicit
+     38 set_option synthInstance.maxSize
+     15 set_option cleanup.letToHave
+      8 set_option quotPrecheck
+      7 set_option linter.unusedSectionVars
+      4 set_option warningAsError
+      4 set_option maxRecDepth
+      4 set_option backward.dsimp.proofs
+      2 set_option backward.dsimp.instances
+      2 set_option Elab.async
+
+Manual follow-up on the 13 environment-manipulation hits (read, not compiled):
+  OAI/Internal/RootAlias.lean:23  `modifyEnv ... addAlias` — parser aliases OAI.X -> X only;
+      adds no declarations, no axioms.
+  Commutator/{TracialDCorner,TracialDoubleCompression,TracialGNSCorners,UnitarySequence}.lean,
+  NearAllOrders.lean:69, PolycyclicRecognition/Geometry/Cartan*.lean
+      `run_cmd modifyEnv ... LibrarySuggestions.nameDenyListExt.addEntry` — hides names
+      from library-suggestion tactics; no declarations, no axioms.
+  BrownMeasure/Model.lean:91, IrrationalRotation/Model/Product.lean:116
+      `auxLemmasExt.setState env {}` — clears the auxiliary-lemma cache; no declarations.
+  Verdict: none can add an unchecked declaration; `#print axioms` remains authoritative.

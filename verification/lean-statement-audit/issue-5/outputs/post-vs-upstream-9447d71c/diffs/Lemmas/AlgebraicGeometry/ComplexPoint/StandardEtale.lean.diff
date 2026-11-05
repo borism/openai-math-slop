@@ -1,0 +1,80 @@
+--- upstream/Lemmas/AlgebraicGeometry/ComplexPoint/StandardEtale.lean
++++ challenge/Lemmas/AlgebraicGeometry/ComplexPoint/StandardEtale.lean
+@@ -13,12 +13,14 @@
+ See the License for the specific language governing permissions and
+ limitations under the License.
++
+ -/
+-module
+-
+-public import HodgeConjecture.Lemmas.AlgebraicGeometry.ComplexPoint.AffineScheme
+-public import Mathlib.RingTheory.Etale.StandardEtale
++
++import HodgeConjecture.Lemmas.AlgebraicGeometry.ComplexPoint.AffineScheme
++import Mathlib.RingTheory.Etale.StandardEtale
+ 
+ import Mathlib.Logic.Equiv.PartialEquiv
+ import Mathlib.Topology.Algebra.MvPolynomial
++
++namespace OAI.AlgebraicGeometry.ComplexPoint.StandardEtale
+ 
+ /-!
+@@ -34,13 +36,14 @@
+ -/
+ 
+-@[expose] public section
+-
+-open scoped Polynomial
+-
+-open CategoryTheory Topology
+-
+-namespace AlgebraicGeometry.ComplexAlgHom
+-
+-open ComplexPoint Point
++section
++
++open scoped _root_.Polynomial
++
++open _root_.CategoryTheory _root_.Topology
++
++section
++namespace ComplexAlgHom
++
++open ComplexPoint _root_.OAI.AlgebraicGeometry.ComplexPoint.Basic.Point
+ 
+ noncomputable section
+@@ -61,5 +64,5 @@
+     Continuous (mvPolynomialAlgHomEquiv n) :=
+   continuous_pi fun i ↦
+-    continuous_affineAlgebraHom_apply (complexPolynomialRing n) (MvPolynomial.X i)
++    _root_.OAI.AlgebraicGeometry.ComplexPoint.Basic.ComplexSchemePoint.continuous_affineAlgebraHom_apply (complexPolynomialRing n) (MvPolynomial.X i)
+ 
+ lemma continuous_mvPolynomialAlgHomEquiv_symm (n : ℕ) :
+@@ -170,8 +173,8 @@
+     refine continuous_pi fun b ↦ ?_
+     simpa [algHomToStandardEtalePoint] using
+-      continuous_affineAlgebraHom_apply P.Ring
++      _root_.OAI.AlgebraicGeometry.ComplexPoint.Basic.ComplexSchemePoint.continuous_affineAlgebraHom_apply P.Ring
+         (algebraMap (complexPolynomialRing n) P.Ring b)
+   · simpa [algHomToStandardEtalePoint] using
+-      continuous_affineAlgebraHom_apply P.Ring P.X
++      _root_.OAI.AlgebraicGeometry.ComplexPoint.Basic.ComplexSchemePoint.continuous_affineAlgebraHom_apply P.Ring P.X
+ 
+ /-- Polynomial evaluation is continuous when both the coefficient homomorphism and the argument
+@@ -196,5 +199,5 @@
+         simp]
+       exact
+-        ((continuous_affineAlgebraHom_apply (complexPolynomialRing n) a).comp continuous_fst).mul
++        ((_root_.OAI.AlgebraicGeometry.ComplexPoint.Basic.ComplexSchemePoint.continuous_affineAlgebraHom_apply (complexPolynomialRing n) a).comp continuous_fst).mul
+           (continuous_snd.pow k)
+ 
+@@ -307,3 +310,8 @@
+ end
+ 
+-end AlgebraicGeometry.ComplexAlgHom
++end ComplexAlgHom
++end
++
++end
++
++end OAI.AlgebraicGeometry.ComplexPoint.StandardEtale

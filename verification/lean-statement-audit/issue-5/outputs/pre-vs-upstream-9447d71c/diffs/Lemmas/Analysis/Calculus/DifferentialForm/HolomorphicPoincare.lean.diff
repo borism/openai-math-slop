@@ -1,0 +1,9 @@
+--- upstream/Lemmas/Analysis/Calculus/DifferentialForm/HolomorphicPoincare.lean
++++ challenge/Lemmas/Analysis/Calculus/DifferentialForm/HolomorphicPoincare.lean
+@@ -421,5 +421,5 @@
+     hprim hy₀]
+   change η (c + (y - c)) = η y
+-  abel
++  abel_nf
+ 
+ /-- A closed analytic zero-form is constant on a ball with arbitrary center. -/

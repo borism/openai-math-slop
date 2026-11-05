@@ -1,0 +1,11 @@
+--- upstream/Mathlib/CategoryTheory/Sites/SheafCohomology/Pair.lean
++++ challenge/Mathlib/CategoryTheory/Sites/SheafCohomology/Pair.lean
+@@ -174,7 +174,5 @@
+       apply FreeAbelianGroup.lift_ext
+       intro h
+-      first
+-        | rfl
+-        | simp [FreeAbelianGroup.uniqueEquiv, AddCommGrpCat.free_map_coe, FreeAbelianGroup.map_of])
++      rfl)
+ 
+ /-- Precomposition with an isomorphism is an additive equivalence of `Ext` groups. -/

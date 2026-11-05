@@ -1,0 +1,9 @@
+--- upstream/Definitions/AlgebraicTopology/Singular/Sheaf/Cochain.lean
++++ challenge/Definitions/AlgebraicTopology/Singular/Sheaf/Cochain.lean
+@@ -220,5 +220,5 @@
+     (σ : S.obj (.op ⟨0⟩)) :
+     S.ιChainComplex σ ≫ simplicialZeroAugmentation R S = 𝟙 _ :=
+-  Limits.Sigma.ι_desc (fun _ ↦ 𝟙 (ModuleCat.of R R)) σ
++  Limits.Sigma.ι_comp_desc (fun _ ↦ 𝟙 (ModuleCat.of R R)) σ
+ 
+ /-- The zero-chain augmentation is natural in the simplicial set. -/

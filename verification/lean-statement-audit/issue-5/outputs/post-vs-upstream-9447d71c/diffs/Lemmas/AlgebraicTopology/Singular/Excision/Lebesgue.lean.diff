@@ -1,0 +1,54 @@
+--- upstream/Lemmas/AlgebraicTopology/Singular/Excision/Lebesgue.lean
++++ challenge/Lemmas/AlgebraicTopology/Singular/Excision/Lebesgue.lean
+@@ -13,8 +13,12 @@
+ See the License for the specific language governing permissions and
+ limitations under the License.
++
+ -/
+-module
+ 
+-public import Mathlib.AlgebraicTopology.SingularSet
++import HodgeConjecture.Mathlib.Geometry.Convex.StdSimplexMetric
++
++import Mathlib.AlgebraicTopology.SingularSet
++
++namespace OAI.AlgebraicTopology.Singular.ExcisionLebesgue
+ 
+ /-!
+@@ -29,5 +33,5 @@
+ -/
+ 
+-@[expose] public section
++section
+ 
+ noncomputable section
+@@ -35,8 +39,9 @@
+ open Set
+ 
+-namespace AlgebraicTopology.Singular
++section
++section
+ 
+ /-- The pullback of an open cover along one singular simplex has a positive Lebesgue number. -/
+-public theorem singularSimplex_openCover_lebesgueNumber
++theorem singularSimplex_openCover_lebesgueNumber
+     {ι : Type} (X : TopCat.{0}) (U : ι → Set X)
+     (hUopen : ∀ i, IsOpen (U i)) (hUcover : ⋃ i, U i = Set.univ)
+@@ -44,5 +49,5 @@
+     (x : (TopCat.toSSet.obj X).obj
+       (Opposite.op (SimplexCategory.mk n))) :
+-    ∃ δ > 0, ∀ w : stdSimplex ℝ (Fin (n + 1)),
++    ∃ δ > 0, ∀ w : Convexity.StdSimplex ℝ (Fin (n + 1)),
+       ∃ i, Metric.ball w δ ⊆ (X.toSSetObjEquiv _ x) ⁻¹' U i := by
+   let f := X.toSSetObjEquiv (Opposite.op (SimplexCategory.mk n)) x
+@@ -57,3 +62,9 @@
+   exact ⟨δ, hδ, fun w ↦ hLeb w (Set.mem_univ w)⟩
+ 
+-end AlgebraicTopology.Singular
++end
++end
++
++end
++end
++
++end OAI.AlgebraicTopology.Singular.ExcisionLebesgue

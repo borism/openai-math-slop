@@ -1,0 +1,43 @@
+--- upstream/Mathlib/Analysis/NormedSpace/WedgeCovectors.lean
++++ challenge/Mathlib/Analysis/NormedSpace/WedgeCovectors.lean
+@@ -13,13 +13,17 @@
+ See the License for the specific language governing permissions and
+ limitations under the License.
++
+ -/
+-module
+-
+-public import Mathlib.Analysis.Calculus.FDeriv.Analytic
+-public import Mathlib.Analysis.Complex.Basic
+-public import Mathlib.Analysis.Normed.Module.Alternating.Uncurry.Fin
+-public import Mathlib.LinearAlgebra.Matrix.Determinant.Basic
++
++import Mathlib.Analysis.Calculus.FDeriv.Analytic
++import Mathlib.Analysis.Complex.Basic
++import Mathlib.Analysis.Normed.Module.Alternating.Uncurry.Fin
++import Mathlib.LinearAlgebra.Matrix.Determinant.Basic
+ 
+ import Mathlib.Analysis.Calculus.FDeriv.Pi
++
++namespace OAI.Analysis.Foundations.NormedSpaceWedgeCovectors
++
++open _root_.ContinuousAlternatingMap
+ 
+ /-!
+@@ -37,7 +41,8 @@
+ -/
+ 
+-@[expose] public noncomputable section
++noncomputable section
+ 
+ namespace ContinuousAlternatingMap
++open _root_.ContinuousAlternatingMap
+ 
+ variable {𝕜 E : Type*} [NontriviallyNormedField 𝕜] [NormedAddCommGroup E] [NormedSpace 𝕜 E]
+@@ -274,2 +279,6 @@
+ 
+ end ContinuousAlternatingMap
++
++end
++
++end OAI.Analysis.Foundations.NormedSpaceWedgeCovectors

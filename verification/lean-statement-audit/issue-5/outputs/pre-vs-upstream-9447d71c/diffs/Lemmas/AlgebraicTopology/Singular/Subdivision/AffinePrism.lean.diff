@@ -1,0 +1,361 @@
+--- upstream/Lemmas/AlgebraicTopology/Singular/Subdivision/AffinePrism.lean
++++ challenge/Lemmas/AlgebraicTopology/Singular/Subdivision/AffinePrism.lean
+@@ -68,7 +68,6 @@
+ /-- A real topological standard simplex is contractible because it is nonempty and convex. -/
+ public theorem standardTopologicalSimplex_contractibleSpace (m : ℕ) :
+-    ContractibleSpace (stdSimplex ℝ (Fin (m + 1))) :=
+-  (convex_stdSimplex ℝ (Fin (m + 1))).contractibleSpace
+-    ⟨stdSimplex.vertex 0, stdSimplex.vertex 0 |>.2⟩
++    ContractibleSpace (Convexity.StdSimplex ℝ (Fin (m + 1))) :=
++  inferInstance
+ 
+ /-- Positive-degree integral singular homology of a topological standard simplex vanishes. -/
+@@ -76,13 +75,13 @@
+     (m k : ℕ) (hk : k ≠ 0) :
+     IsZero (((TopCat.toSSet.obj
+-      (TopCat.of (stdSimplex ℝ (Fin (m + 1))))).chainComplex
++      (TopCat.of (Convexity.StdSimplex ℝ (Fin (m + 1))))).chainComplex
+         (AddCommGrpCat.of ℤ)).homology k) := by
+   change IsZero (((singularHomologyFunctor AddCommGrpCat k).obj
+     (AddCommGrpCat.of ℤ)).obj
+-      (TopCat.of (stdSimplex ℝ (Fin (m + 1)))))
+-  let : ContractibleSpace (stdSimplex ℝ (Fin (m + 1))) :=
++      (TopCat.of (Convexity.StdSimplex ℝ (Fin (m + 1)))))
++  let : ContractibleSpace (Convexity.StdSimplex ℝ (Fin (m + 1))) :=
+     standardTopologicalSimplex_contractibleSpace m
+   obtain ⟨e⟩ := ContractibleSpace.hequiv_unit
+-    (stdSimplex ℝ (Fin (m + 1)))
++    (Convexity.StdSimplex ℝ (Fin (m + 1)))
+   have hunit :=
+     AlgebraicTopology.isZero_singularHomologyFunctor_of_totallyDisconnectedSpace
+@@ -92,5 +91,5 @@
+   let he := integralSingularHomologyEquivOfHomotopyEquiv k e
+   let : Subsingleton
+-      (IntegralSingularHomology k (stdSimplex ℝ (Fin (m + 1)))) :=
++      (IntegralSingularHomology k (Convexity.StdSimplex ℝ (Fin (m + 1)))) :=
+     ⟨fun x y ↦ he.injective (Subsingleton.elim _ _)⟩
+   exact AddCommGrpCat.isZero_of_subsingleton _
+@@ -100,8 +99,8 @@
+     (m k : ℕ) (hk : k ≠ 0) :
+     ((TopCat.toSSet.obj
+-      (TopCat.of (stdSimplex ℝ (Fin (m + 1))))).chainComplex
++      (TopCat.of (Convexity.StdSimplex ℝ (Fin (m + 1))))).chainComplex
+         (AddCommGrpCat.of ℤ)).ExactAt k := by
+   let K := (TopCat.toSSet.obj
+-    (TopCat.of (stdSimplex ℝ (Fin (m + 1))))).chainComplex
++    (TopCat.of (Convexity.StdSimplex ℝ (Fin (m + 1))))).chainComplex
+       (AddCommGrpCat.of ℤ)
+   rw [K.exactAt_iff_isZero_homology]
+@@ -114,20 +113,20 @@
+     (z : AddCommGrpCat.of ℤ ⟶
+       ((TopCat.toSSet.obj
+-        (TopCat.of (stdSimplex ℝ (Fin (m + 1))))).chainComplex
++        (TopCat.of (Convexity.StdSimplex ℝ (Fin (m + 1))))).chainComplex
+           (AddCommGrpCat.of ℤ)).X (n + 1))
+     (hz : z ≫
+       ((TopCat.toSSet.obj
+-        (TopCat.of (stdSimplex ℝ (Fin (m + 1))))).chainComplex
++        (TopCat.of (Convexity.StdSimplex ℝ (Fin (m + 1))))).chainComplex
+           (AddCommGrpCat.of ℤ)).d (n + 1) n = 0) :
+     ∃ p : AddCommGrpCat.of ℤ ⟶
+         ((TopCat.toSSet.obj
+-          (TopCat.of (stdSimplex ℝ (Fin (m + 1))))).chainComplex
++          (TopCat.of (Convexity.StdSimplex ℝ (Fin (m + 1))))).chainComplex
+             (AddCommGrpCat.of ℤ)).X (n + 2),
+       p ≫
+         ((TopCat.toSSet.obj
+-          (TopCat.of (stdSimplex ℝ (Fin (m + 1))))).chainComplex
++          (TopCat.of (Convexity.StdSimplex ℝ (Fin (m + 1))))).chainComplex
+             (AddCommGrpCat.of ℤ)).d (n + 2) (n + 1) = z := by
+   let K := (TopCat.toSSet.obj
+-    (TopCat.of (stdSimplex ℝ (Fin (m + 1))))).chainComplex
++    (TopCat.of (Convexity.StdSimplex ℝ (Fin (m + 1))))).chainComplex
+       (AddCommGrpCat.of ℤ)
+   have hexact : (K.sc' (n + 2) (n + 1) n).Exact :=
+@@ -152,13 +151,13 @@
+     (z : AddCommGrpCat.of ℤ ⟶
+       ((TopCat.toSSet.obj
+-        (TopCat.of (stdSimplex ℝ (Fin (m + 1))))).chainComplex
++        (TopCat.of (Convexity.StdSimplex ℝ (Fin (m + 1))))).chainComplex
+           (AddCommGrpCat.of ℤ)).X (n + 1))
+     (hz : z ≫
+       ((TopCat.toSSet.obj
+-        (TopCat.of (stdSimplex ℝ (Fin (m + 1))))).chainComplex
++        (TopCat.of (Convexity.StdSimplex ℝ (Fin (m + 1))))).chainComplex
+           (AddCommGrpCat.of ℤ)).d (n + 1) n = 0) :
+     AddCommGrpCat.of ℤ ⟶
+       ((TopCat.toSSet.obj
+-        (TopCat.of (stdSimplex ℝ (Fin (m + 1))))).chainComplex
++        (TopCat.of (Convexity.StdSimplex ℝ (Fin (m + 1))))).chainComplex
+           (AddCommGrpCat.of ℤ)).X (n + 2) :=
+   (exists_standardTopologicalSimplex_cycleFiller m n z hz).choose
+@@ -169,13 +168,13 @@
+     (z : AddCommGrpCat.of ℤ ⟶
+       ((TopCat.toSSet.obj
+-        (TopCat.of (stdSimplex ℝ (Fin (m + 1))))).chainComplex
++        (TopCat.of (Convexity.StdSimplex ℝ (Fin (m + 1))))).chainComplex
+           (AddCommGrpCat.of ℤ)).X (n + 1))
+     (hz : z ≫
+       ((TopCat.toSSet.obj
+-        (TopCat.of (stdSimplex ℝ (Fin (m + 1))))).chainComplex
++        (TopCat.of (Convexity.StdSimplex ℝ (Fin (m + 1))))).chainComplex
+           (AddCommGrpCat.of ℤ)).d (n + 1) n = 0) :
+     standardTopologicalSimplexCycleFiller m n z hz ≫
+         ((TopCat.toSSet.obj
+-          (TopCat.of (stdSimplex ℝ (Fin (m + 1))))).chainComplex
++          (TopCat.of (Convexity.StdSimplex ℝ (Fin (m + 1))))).chainComplex
+             (AddCommGrpCat.of ℤ)).d (n + 2) (n + 1) = z :=
+   (exists_standardTopologicalSimplex_cycleFiller m n z hz).choose_spec
+@@ -188,14 +187,14 @@
+     (z : AddCommGrpCat.of ℤ ⟶
+       ((TopCat.toSSet.obj
+-        (TopCat.of (stdSimplex ℝ (Fin (m + 1))))).chainComplex
++        (TopCat.of (Convexity.StdSimplex ℝ (Fin (m + 1))))).chainComplex
+           (AddCommGrpCat.of ℤ)).X (n + 1)) :
+     AddCommGrpCat.of ℤ ⟶
+       ((TopCat.toSSet.obj
+-        (TopCat.of (stdSimplex ℝ (Fin (m + 1))))).chainComplex
++        (TopCat.of (Convexity.StdSimplex ℝ (Fin (m + 1))))).chainComplex
+           (AddCommGrpCat.of ℤ)).X (n + 2) := by
+   classical
+   exact if hz : z ≫
+         ((TopCat.toSSet.obj
+-          (TopCat.of (stdSimplex ℝ (Fin (m + 1))))).chainComplex
++          (TopCat.of (Convexity.StdSimplex ℝ (Fin (m + 1))))).chainComplex
+             (AddCommGrpCat.of ℤ)).d (n + 1) n = 0 then
+       standardTopologicalSimplexCycleFiller m n z hz
+@@ -207,15 +206,15 @@
+     (z : AddCommGrpCat.of ℤ ⟶
+       ((TopCat.toSSet.obj
+-        (TopCat.of (stdSimplex ℝ (Fin (m + 1))))).chainComplex
++        (TopCat.of (Convexity.StdSimplex ℝ (Fin (m + 1))))).chainComplex
+           (AddCommGrpCat.of ℤ)).X (n + 1))
+     (hz : z ≫
+       ((TopCat.toSSet.obj
+-        (TopCat.of (stdSimplex ℝ (Fin (m + 1))))).chainComplex
++        (TopCat.of (Convexity.StdSimplex ℝ (Fin (m + 1))))).chainComplex
+           (AddCommGrpCat.of ℤ)).d (n + 1) n = 0) :
+     standardTopologicalSimplexTotalCycleFiller m n z ≫
+         ((TopCat.toSSet.obj
+-          (TopCat.of (stdSimplex ℝ (Fin (m + 1))))).chainComplex
++          (TopCat.of (Convexity.StdSimplex ℝ (Fin (m + 1))))).chainComplex
+             (AddCommGrpCat.of ℤ)).d (n + 2) (n + 1) = z := by
+-  rw [standardTopologicalSimplexTotalCycleFiller, dif_pos hz]
++  rw [standardTopologicalSimplexTotalCycleFiller, dite_eq_left hz]
+   exact standardTopologicalSimplexCycleFiller_boundary m n z hz
+ 
+@@ -224,5 +223,5 @@
+ public noncomputable def standardTopologicalSimplexIdentitySimplex (n : ℕ) :
+     (TopCat.toSSet.obj
+-      (TopCat.of (stdSimplex ℝ (Fin (n + 1))))).obj
++      (TopCat.of (Convexity.StdSimplex ℝ (Fin (n + 1))))).obj
+         (Opposite.op (SimplexCategory.mk n)) :=
+   (TopCat.toSSetObjEquiv _ _).symm (ContinuousMap.id _)
+@@ -253,11 +252,11 @@
+     AddCommGrpCat.of ℤ ⟶
+       ((TopCat.toSSet.obj
+-        (TopCat.of (stdSimplex ℝ (Fin (n + 1))))).chainComplex
++        (TopCat.of (Convexity.StdSimplex ℝ (Fin (n + 1))))).chainComplex
+           (AddCommGrpCat.of ℤ)).X n :=
+   (TopCat.toSSet.obj
+-      (TopCat.of (stdSimplex ℝ (Fin (n + 1))))).ιChainComplex
++      (TopCat.of (Convexity.StdSimplex ℝ (Fin (n + 1))))).ιChainComplex
+         (standardTopologicalSimplexIdentitySimplex n) ≫
+     (affineSingularSubdivisionDiscrepancyChainMap
+-      (TopCat.of (stdSimplex ℝ (Fin (n + 1))))).f n
++      (TopCat.of (Convexity.StdSimplex ℝ (Fin (n + 1))))).f n
+ 
+ /-- Evaluating the discrepancy on a singular simplex transports the universal discrepancy
+@@ -277,8 +276,8 @@
+         ((affineSingularSubdivisionChainMap X).f n - 𝟙 _) =
+       ((TopCat.toSSet.obj
+-          (TopCat.of (stdSimplex ℝ (Fin (n + 1))))).ιChainComplex
++          (TopCat.of (Convexity.StdSimplex ℝ (Fin (n + 1))))).ιChainComplex
+             (standardTopologicalSimplexIdentitySimplex n) ≫
+           ((affineSingularSubdivisionChainMap
+-            (TopCat.of (stdSimplex ℝ (Fin (n + 1))))).f n - 𝟙 _)) ≫
++            (TopCat.of (Convexity.StdSimplex ℝ (Fin (n + 1))))).f n - 𝟙 _)) ≫
+         (SSet.chainComplexMap
+           (TopCat.toSSet.map (singularSimplexTopCatMap X n x))
+@@ -290,5 +289,5 @@
+   have htop :
+       (TopCat.toSSet.obj
+-          (TopCat.of (stdSimplex ℝ (Fin (n + 1))))).ιChainComplex
++          (TopCat.of (Convexity.StdSimplex ℝ (Fin (n + 1))))).ιChainComplex
+             (standardTopologicalSimplexIdentitySimplex n) ≫ F.f n =
+         (TopCat.toSSet.obj X).ιChainComplex x := by
+@@ -301,13 +300,13 @@
+   change F.f n ≫ (affineSingularSubdivisionChainMap X).f n =
+     (affineSingularSubdivisionChainMap
+-      (TopCat.of (stdSimplex ℝ (Fin (n + 1))))).f n ≫ F.f n at hnat
++      (TopCat.of (Convexity.StdSimplex ℝ (Fin (n + 1))))).f n ≫ F.f n at hnat
+   have hA :
+       (TopCat.toSSet.obj X).ιChainComplex x ≫
+           (affineSingularSubdivisionChainMap X).f n =
+         ((TopCat.toSSet.obj
+-            (TopCat.of (stdSimplex ℝ (Fin (n + 1))))).ιChainComplex
++            (TopCat.of (Convexity.StdSimplex ℝ (Fin (n + 1))))).ιChainComplex
+               (standardTopologicalSimplexIdentitySimplex n) ≫
+             (affineSingularSubdivisionChainMap
+-              (TopCat.of (stdSimplex ℝ (Fin (n + 1))))).f n) ≫ F.f n := by
++              (TopCat.of (Convexity.StdSimplex ℝ (Fin (n + 1))))).f n) ≫ F.f n := by
+     rw [← htop, Category.assoc, hnat, ← Category.assoc]
+   change _ = _ - _
+@@ -360,7 +359,7 @@
+     (n : ℕ) (p : Fin (n + 2)) :
+     singularSimplexTopCatMap
+-        (TopCat.of (stdSimplex ℝ (Fin (n + 2)))) n
++        (TopCat.of (Convexity.StdSimplex ℝ (Fin (n + 2)))) n
+         ((TopCat.toSSet.obj
+-          (TopCat.of (stdSimplex ℝ (Fin (n + 2))))).δ p
++          (TopCat.of (Convexity.StdSimplex ℝ (Fin (n + 2))))).δ p
+             (standardTopologicalSimplexIdentitySimplex (n + 1))) =
+       standardSimplexFaceTopCatMap n p := by
+@@ -374,5 +373,5 @@
+     standardAffineSubdivisionDiscrepancy (n + 1) ≫
+         ((TopCat.toSSet.obj
+-          (TopCat.of (stdSimplex ℝ (Fin (n + 2))))).chainComplex
++          (TopCat.of (Convexity.StdSimplex ℝ (Fin (n + 2))))).chainComplex
+             (AddCommGrpCat.of ℤ)).d (n + 1) n =
+       ∑ p : Fin (n + 2), (-1 : ℤ) ^ p.val •
+@@ -383,5 +382,5 @@
+   rw [standardAffineSubdivisionDiscrepancy, Category.assoc]
+   rw [(affineSingularSubdivisionDiscrepancyChainMap
+-    (TopCat.of (stdSimplex ℝ (Fin (n + 2))))).comm]
++    (TopCat.of (Convexity.StdSimplex ℝ (Fin (n + 2))))).comm]
+   rw [← Category.assoc, SSet.ιChainComplex_d, Preadditive.sum_comp]
+   simp only [Preadditive.zsmul_comp]
+@@ -398,5 +397,5 @@
+     (p : AddCommGrpCat.of ℤ ⟶
+       ((TopCat.toSSet.obj
+-        (TopCat.of (stdSimplex ℝ (Fin (n + 1))))).chainComplex
++        (TopCat.of (Convexity.StdSimplex ℝ (Fin (n + 1))))).chainComplex
+           (AddCommGrpCat.of ℤ)).X (n + 1))
+     (X : TopCat.{0}) :
+@@ -413,5 +412,5 @@
+     (p : AddCommGrpCat.of ℤ ⟶
+       ((TopCat.toSSet.obj
+-        (TopCat.of (stdSimplex ℝ (Fin (n + 1))))).chainComplex
++        (TopCat.of (Convexity.StdSimplex ℝ (Fin (n + 1))))).chainComplex
+           (AddCommGrpCat.of ℤ)).X (n + 1))
+     (X : TopCat.{0})
+@@ -423,5 +422,5 @@
+         (TopCat.toSSet.map (singularSimplexTopCatMap X n x))
+         (AddCommGrpCat.of ℤ)).f (n + 1) := by
+-  apply Sigma.ι_desc
++  apply Sigma.ι_comp_desc
+ 
+ /-- The raw sum of the prisms over the faces of a standard simplex. -/
+@@ -429,9 +428,9 @@
+     (prism : ∀ n : ℕ, AddCommGrpCat.of ℤ ⟶
+       ((TopCat.toSSet.obj
+-        (TopCat.of (stdSimplex ℝ (Fin (n + 1))))).chainComplex
++        (TopCat.of (Convexity.StdSimplex ℝ (Fin (n + 1))))).chainComplex
+           (AddCommGrpCat.of ℤ)).X (n + 1)) :
+     ∀ n : ℕ, AddCommGrpCat.of ℤ ⟶
+       ((TopCat.toSSet.obj
+-        (TopCat.of (stdSimplex ℝ (Fin (n + 1))))).chainComplex
++        (TopCat.of (Convexity.StdSimplex ℝ (Fin (n + 1))))).chainComplex
+           (AddCommGrpCat.of ℤ)).X n
+   | 0 => 0
+@@ -447,5 +446,5 @@
+     (prism : ∀ n : ℕ, AddCommGrpCat.of ℤ ⟶
+       ((TopCat.toSSet.obj
+-        (TopCat.of (stdSimplex ℝ (Fin (n + 1))))).chainComplex
++        (TopCat.of (Convexity.StdSimplex ℝ (Fin (n + 1))))).chainComplex
+           (AddCommGrpCat.of ℤ)).X (n + 1)) :
+     standardAffinePrismFaceChain prism 0 = 0 :=
+@@ -457,16 +456,16 @@
+     (prism : ∀ n : ℕ, AddCommGrpCat.of ℤ ⟶
+       ((TopCat.toSSet.obj
+-        (TopCat.of (stdSimplex ℝ (Fin (n + 1))))).chainComplex
++        (TopCat.of (Convexity.StdSimplex ℝ (Fin (n + 1))))).chainComplex
+           (AddCommGrpCat.of ℤ)).X (n + 1))
+     (n : ℕ) :
+     standardAffinePrismFaceChain prism (n + 1) =
+       (TopCat.toSSet.obj
+-        (TopCat.of (stdSimplex ℝ (Fin (n + 2))))).ιChainComplex
++        (TopCat.of (Convexity.StdSimplex ℝ (Fin (n + 2))))).ιChainComplex
+           (standardTopologicalSimplexIdentitySimplex (n + 1)) ≫
+         ((TopCat.toSSet.obj
+-          (TopCat.of (stdSimplex ℝ (Fin (n + 2))))).chainComplex
++          (TopCat.of (Convexity.StdSimplex ℝ (Fin (n + 2))))).chainComplex
+             (AddCommGrpCat.of ℤ)).d (n + 1) n ≫
+         universalAffinePrismComponent n (prism n)
+-          (TopCat.of (stdSimplex ℝ (Fin (n + 2)))) := by
++          (TopCat.of (Convexity.StdSimplex ℝ (Fin (n + 2)))) := by
+   rw [standardAffinePrismFaceChain, ← Category.assoc,
+     SSet.ιChainComplex_d, Preadditive.sum_comp]
+@@ -483,5 +482,5 @@
+     (prism : ∀ n : ℕ, AddCommGrpCat.of ℤ ⟶
+       ((TopCat.toSSet.obj
+-        (TopCat.of (stdSimplex ℝ (Fin (n + 1))))).chainComplex
++        (TopCat.of (Convexity.StdSimplex ℝ (Fin (n + 1))))).chainComplex
+           (AddCommGrpCat.of ℤ)).X (n + 1))
+     (X : TopCat.{0}) (n : ℕ)
+@@ -532,5 +531,5 @@
+     (prism : ∀ n : ℕ, AddCommGrpCat.of ℤ ⟶
+       ((TopCat.toSSet.obj
+-        (TopCat.of (stdSimplex ℝ (Fin (n + 1))))).chainComplex
++        (TopCat.of (Convexity.StdSimplex ℝ (Fin (n + 1))))).chainComplex
+           (AddCommGrpCat.of ℤ)).X (n + 1))
+     (n : ℕ)
+@@ -538,5 +537,5 @@
+       prism (n + 1) ≫
+           ((TopCat.toSSet.obj
+-            (TopCat.of (stdSimplex ℝ (Fin (n + 2))))).chainComplex
++            (TopCat.of (Convexity.StdSimplex ℝ (Fin (n + 2))))).chainComplex
+               (AddCommGrpCat.of ℤ)).d (n + 2) (n + 1) +
+         standardAffinePrismFaceChain prism (n + 1))
+@@ -569,5 +568,5 @@
+     (prism : ∀ n : ℕ, AddCommGrpCat.of ℤ ⟶
+       ((TopCat.toSSet.obj
+-        (TopCat.of (stdSimplex ℝ (Fin (n + 1))))).chainComplex
++        (TopCat.of (Convexity.StdSimplex ℝ (Fin (n + 1))))).chainComplex
+           (AddCommGrpCat.of ℤ)).X (n + 1))
+     (n : ℕ)
+@@ -575,5 +574,5 @@
+       prism (n + 1) ≫
+           ((TopCat.toSSet.obj
+-            (TopCat.of (stdSimplex ℝ (Fin (n + 2))))).chainComplex
++            (TopCat.of (Convexity.StdSimplex ℝ (Fin (n + 2))))).chainComplex
+               (AddCommGrpCat.of ℤ)).d (n + 2) (n + 1) +
+         standardAffinePrismFaceChain prism (n + 1)) :
+@@ -581,7 +580,7 @@
+         standardAffinePrismFaceChain prism (n + 2)) ≫
+       ((TopCat.toSSet.obj
+-        (TopCat.of (stdSimplex ℝ (Fin (n + 3))))).chainComplex
++        (TopCat.of (Convexity.StdSimplex ℝ (Fin (n + 3))))).chainComplex
+           (AddCommGrpCat.of ℤ)).d (n + 2) (n + 1) = 0 := by
+-  let X : TopCat := TopCat.of (stdSimplex ℝ (Fin (n + 3)))
++  let X : TopCat := TopCat.of (Convexity.StdSimplex ℝ (Fin (n + 3)))
+   let K := affineSingularSubdivisionDiscrepancyChainMap X
+   let U := universalAffinePrismComponent (n + 1) (prism (n + 1)) X
+@@ -642,5 +641,5 @@
+     (n : ℕ) : AddCommGrpCat.of ℤ ⟶
+       ((TopCat.toSSet.obj
+-        (TopCat.of (stdSimplex ℝ (Fin (n + 1))))).chainComplex
++        (TopCat.of (Convexity.StdSimplex ℝ (Fin (n + 1))))).chainComplex
+           (AddCommGrpCat.of ℤ)).X (n + 1) :=
+   match n with
+@@ -675,5 +674,5 @@
+         standardAffinePrismFaceChain canonicalAffineSubdivisionPrism 1) ≫
+       ((TopCat.toSSet.obj
+-        (TopCat.of (stdSimplex ℝ (Fin 2)))).chainComplex
++        (TopCat.of (Convexity.StdSimplex ℝ (Fin 2)))).chainComplex
+           (AddCommGrpCat.of ℤ)).d 1 0 = 0 := by
+   rw [Preadditive.sub_comp,
+@@ -687,5 +686,5 @@
+       canonicalAffineSubdivisionPrism n ≫
+           ((TopCat.toSSet.obj
+-            (TopCat.of (stdSimplex ℝ (Fin (n + 1))))).chainComplex
++            (TopCat.of (Convexity.StdSimplex ℝ (Fin (n + 1))))).chainComplex
+               (AddCommGrpCat.of ℤ)).d (n + 1) n +
+         standardAffinePrismFaceChain canonicalAffineSubdivisionPrism n := by
+@@ -698,5 +697,5 @@
+               standardAffinePrismFaceChain canonicalAffineSubdivisionPrism (n + 1)) ≫
+             ((TopCat.toSSet.obj
+-              (TopCat.of (stdSimplex ℝ (Fin (n + 2))))).chainComplex
++              (TopCat.of (Convexity.StdSimplex ℝ (Fin (n + 2))))).chainComplex
+                 (AddCommGrpCat.of ℤ)).d (n + 1) n = 0 := by
+         cases n with

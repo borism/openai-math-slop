@@ -1,0 +1,86 @@
+--- upstream/Lemmas/AlgebraicTopology/Sheaf/FlasqueExtendNat.lean
++++ challenge/Lemmas/AlgebraicTopology/Sheaf/FlasqueExtendNat.lean
+@@ -13,11 +13,16 @@
+ See the License for the specific language governing permissions and
+ limitations under the License.
++
+ -/
+-module
+ 
+-public import HodgeConjecture.Lemmas.AlgebraicTopology.Sheaf.FlasqueQuasiIso
+-public import HodgeConjecture.Lemmas.Algebra.Homology.MapExtendNaturality
++import HodgeConjecture.Lemmas.AlgebraicTopology.Sheaf.FlasqueQuasiIso
++import HodgeConjecture.Lemmas.Algebra.Homology.MapExtendNaturality
+ 
+ import HodgeConjecture.Mathlib.Algebra.Homology.Notation
++
++namespace OAI.AlgebraicTopology.Sheaf.FlasqueExtendNat
++
++open _root_.TopCat
++open _root_.TopCat.Sheaf
+ 
+ /-!
+@@ -28,9 +33,11 @@
+ -/
+ 
+-@[expose] public noncomputable section
++noncomputable section
+ 
+-open CategoryTheory Limits TopologicalSpace
++open _root_.CategoryTheory Limits _root_.TopologicalSpace
+ 
+-namespace TopCat.Sheaf
++section
++namespace TopCat
++open _root_.TopCat
+ 
+ /-- Extension by zero of a natural-number-indexed termwise-flasque complex remains
+@@ -46,7 +53,7 @@
+     change TopCat.Presheaf.IsFlasque
+       ((K.extend ComplexShape.embeddingUpNat).X (m : ℤ)).obj
+-    exact @TopCat.Presheaf.IsFlasque.of_iso _ _ _
++    exact @_root_.OAI.AlgebraicTopology.Sheaf.FlasqueQuasiIso.TopCat.Presheaf.IsFlasque.of_iso _ _ _
+       ((TopCat.Sheaf.forget AddCommGrpCat Y).mapIso e) hP
+-  · apply TopCat.Sheaf.IsFlasque.of_isZero
++  · apply _root_.OAI.AlgebraicTopology.Sheaf.FlasqueBoundedIs.TopCat.IsFlasque.of_isZero
+     exact K.isZero_extend_X ComplexShape.embeddingUpNat q
+       (fun i hi ↦ hq ⟨i, hi⟩)
+@@ -60,7 +67,7 @@
+     (hK : ∀ m, (K.X m).IsFlasque) (hL : ∀ m, (L.X m).IsFlasque) :
+     QuasiIso
+-      (((TopCat.Sheaf.IsFlasque.BoundedBelowComplex.globalSectionsFunctor Y
++      (((_root_.OAI.AlgebraicTopology.Sheaf.FlasqueBoundedBelow.TopCat.IsFlasque.BoundedBelowComplex.globalSectionsFunctor Y
+         ).mapHomologicalComplex (ComplexShape.up ℕ)).map f) := by
+-  let Γ := TopCat.Sheaf.IsFlasque.BoundedBelowComplex.globalSectionsFunctor Y
++  let Γ := _root_.OAI.AlgebraicTopology.Sheaf.FlasqueBoundedBelow.TopCat.IsFlasque.BoundedBelowComplex.globalSectionsFunctor Y
+   let KInt : CochainComplex (TopCat.Sheaf AddCommGrpCat Y) ℤ :=
+     K.extend ComplexShape.embeddingUpNat
+@@ -69,8 +76,8 @@
+   let fInt : KInt ⟶ LInt :=
+     HomologicalComplex.extendMap f ComplexShape.embeddingUpNat
+-  let eK := HomologicalComplex.mapExtendCanonicalIso Γ K ComplexShape.embeddingUpNat
+-  let eL := HomologicalComplex.mapExtendCanonicalIso Γ L ComplexShape.embeddingUpNat
++  let eK := _root_.OAI.Algebra.Homology.MapExtend.HomologicalComplex.mapExtendCanonicalIso Γ K ComplexShape.embeddingUpNat
++  let eL := _root_.OAI.Algebra.Homology.MapExtend.HomologicalComplex.mapExtendCanonicalIso Γ L ComplexShape.embeddingUpNat
+   let : QuasiIso ((Γ.mapHomologicalComplex ℤᵘᵖ).map fInt) :=
+-    TopCat.Sheaf.IsFlasque.BoundedBelowComplex.globalSectionsComplex_map_quasiIso
++    _root_.OAI.AlgebraicTopology.Sheaf.FlasqueQuasiIso.TopCat.IsFlasque.BoundedBelowComplex.globalSectionsComplex_map_quasiIso
+       fInt 0 0 (extendNat_term_isFlasque K hK) (extendNat_term_isFlasque L hL)
+   have h : HomologicalComplex.extendMap
+@@ -78,5 +85,5 @@
+           ComplexShape.embeddingUpNat ≫ eL.inv =
+       eK.inv ≫ (Γ.mapHomologicalComplex ℤᵘᵖ).map fInt :=
+-    HomologicalComplex.mapExtendCanonicalIso_inv_naturality Γ f ComplexShape.embeddingUpNat
++    _root_.OAI.Algebra.Homology.MapExtendNaturality.HomologicalComplex.mapExtendCanonicalIso_inv_naturality Γ f ComplexShape.embeddingUpNat
+   have hcomp : QuasiIso
+       (HomologicalComplex.extendMap
+@@ -93,5 +100,8 @@
+       ComplexShape.embeddingUpNat).mp hext
+ 
+-end TopCat.Sheaf
++end TopCat
++end
+ 
+ end
++
++end OAI.AlgebraicTopology.Sheaf.FlasqueExtendNat

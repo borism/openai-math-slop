@@ -1,0 +1,64 @@
+--- upstream/Mathlib/AlgebraicTopology/SimplicialSet/ChainComplexSplit.lean
++++ challenge/Mathlib/AlgebraicTopology/SimplicialSet/ChainComplexSplit.lean
+@@ -13,9 +13,14 @@
+ See the License for the specific language governing permissions and
+ limitations under the License.
++
+ -/
+-module
+ 
+-public import Mathlib.AlgebraicTopology.SimplicialSet.Homology.Basic
+-public import Mathlib.AlgebraicTopology.SingularHomology.Basic
++import Mathlib.AlgebraicTopology.SimplicialSet.Homology.Basic
++import Mathlib.AlgebraicTopology.SingularHomology.Basic
++
++namespace OAI.AlgebraicTopology.SimplicialSet.ChainComplexSplit
++
++open _root_.AlgebraicTopology
++open _root_.SSet
+ 
+ /-!
+@@ -28,7 +33,7 @@
+ -/
+ 
+-@[expose] public noncomputable section
++noncomputable section
+ 
+-open CategoryTheory Limits Opposite
++open _root_.CategoryTheory Limits Opposite
+ 
+ open scoped Simplicial
+@@ -37,4 +42,5 @@
+ 
+ namespace SSet
++open _root_.SSet
+ 
+ variable {C : Type u} [Category.{v} C] [HasCoproducts.{w} C] [Preadditive C]
+@@ -58,5 +64,5 @@
+   refine (Cofan.IsColimit.fac (Y.isColimitChainComplexXCofan R n) _
+     (f.app (op ⦋n⦌) x)).trans ?_
+-  rw [dif_pos h, hf h.choose_spec]
++  rw [dite_eq_left h, hf h.choose_spec]
+ 
+ /-- A map of simplicial sets that is injective on `n`-simplices induces a split monomorphism on
+@@ -72,5 +78,5 @@
+ end SSet
+ 
+-namespace AlgebraicTopology
++section
+ 
+ variable {C : Type u} [Category.{v} C] [HasCoproducts.{w} C] [Preadditive C]
+@@ -80,7 +86,11 @@
+     {X Y : TopCat.{w}} (g : X ⟶ Y) [Mono g] (R : C) (n : ℕ) :
+     IsSplitMono ((((singularChainComplexFunctor C).obj R).map g).f n) :=
+-  SSet.isSplitMono_chainComplexMap_f (TopCat.toSSet.map g) R n <| by
++  _root_.OAI.AlgebraicTopology.SimplicialSet.ChainComplexSplit.SSet.isSplitMono_chainComplexMap_f (TopCat.toSSet.map g) R n <| by
+     have h : Mono ((TopCat.toSSet.map g).app (op ⦋n⦌)) := inferInstance
+     rwa [mono_iff_injective] at h
+ 
+-end AlgebraicTopology
++end
++
++end
++
++end OAI.AlgebraicTopology.SimplicialSet.ChainComplexSplit

@@ -1,0 +1,81 @@
+--- upstream/Lemmas/AlgebraicTopology/Singular/Sheaf/Chain.lean
++++ challenge/Lemmas/AlgebraicTopology/Singular/Sheaf/Chain.lean
+@@ -13,14 +13,16 @@
+ See the License for the specific language governing permissions and
+ limitations under the License.
++
+ -/
+-module
+ 
+-public import HodgeConjecture.Lemmas.AlgebraicTopology.Singular.Cohomology
+-public import Mathlib.Algebra.Category.Grp.Basic
+-public import Mathlib.Algebra.Category.ModuleCat.Basic
+-public import Mathlib.Algebra.Category.ModuleCat.Presheaf.Sheafification
+-public import Mathlib.Algebra.Homology.Embedding.CochainComplex
+-public import Mathlib.Topology.Sheaves.Abelian
+-public import Mathlib.Topology.Sheaves.Sheafify
++import HodgeConjecture.Lemmas.AlgebraicTopology.Singular.Cohomology
++import Mathlib.Algebra.Category.Grp.Basic
++import Mathlib.Algebra.Category.ModuleCat.Basic
++import Mathlib.Algebra.Category.ModuleCat.Presheaf.Sheafification
++import Mathlib.Algebra.Homology.Embedding.CochainComplex
++import Mathlib.Topology.Sheaves.Abelian
++import Mathlib.Topology.Sheaves.Sheafify
++
++namespace OAI.AlgebraicTopology.Singular.SheafChain
+ 
+ /-!
+@@ -44,11 +46,12 @@
+ -/
+ 
+-@[expose] public noncomputable section
++noncomputable section
+ 
+-open CategoryTheory Limits TopologicalSpace
++open _root_.CategoryTheory Limits _root_.TopologicalSpace
+ 
+ universe u
+ 
+-namespace AlgebraicTopology.Singular
++section
++section
+ 
+ variable (R : Type u) [CommRing R] (X : TopCat.{u})
+@@ -57,8 +60,8 @@
+ def openComplementPairFunctor : (Opens X)ᵒᵖ ⥤ TopPair.{u} where
+   obj U := TopPair.ofSubset (U.unop : Set X)ᶜ
+-  map i := supportInclusionPairMap X (leOfHom i.unop)
+-  map_id U := supportInclusionPairMap_rfl X (U.unop : Set X)
++  map i := _root_.OAI.AlgebraicTopology.Singular.CohomologyTo.supportInclusionPairMap X (leOfHom i.unop)
++  map_id U := _root_.OAI.AlgebraicTopology.Singular.CohomologyTo.supportInclusionPairMap_rfl X (U.unop : Set X)
+   map_comp i j :=
+-    supportInclusionPairMap_trans X (leOfHom j.unop) (leOfHom i.unop)
++    _root_.OAI.AlgebraicTopology.Singular.CohomologyTo.supportInclusionPairMap_trans X (leOfHom j.unop) (leOfHom i.unop)
+ 
+ /-- Let `X` be a topological space and `R` a commutative ring. This functor sends an open `U ⊆ X` to
+@@ -67,5 +70,5 @@
+ def openRelativeSingularChainComplexFunctor :
+     (Opens X)ᵒᵖ ⥤ ChainComplex (ModuleCat.{u} R) ℕ :=
+-  openComplementPairFunctor X ⋙ relativeChainFunctor R
++  openComplementPairFunctor X ⋙ _root_.OAI.AlgebraicTopology.Singular.Cohomology.relativeChainFunctor R
+ 
+ /-- Relative chains of `(X, X ∖ U)` in degree `n`, forgetting only the scalar structure. -/
+@@ -79,6 +82,6 @@
+     (singularChainPresheaf R X n).map i.op =
+       (forget₂ (ModuleCat.{u} R) AddCommGrpCat.{u}).map
+-        (((relativeChainFunctor R).map
+-          (supportInclusionPairMap X (leOfHom i))).f n) :=
++        (((_root_.OAI.AlgebraicTopology.Singular.Cohomology.relativeChainFunctor R).map
++          (_root_.OAI.AlgebraicTopology.Singular.CohomologyTo.supportInclusionPairMap X (leOfHom i))).f n) :=
+   rfl
+ 
+@@ -168,3 +171,8 @@
+   infer_instance
+ 
+-end AlgebraicTopology.Singular
++end
++end
++
++end
++
++end OAI.AlgebraicTopology.Singular.SheafChain

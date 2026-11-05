@@ -1,0 +1,9 @@
+--- upstream/Lemmas/AlgebraicTopology/Singular/Subdivision/AffineSmall.lean
++++ challenge/Lemmas/AlgebraicTopology/Singular/Subdivision/AffineSmall.lean
+@@ -96,5 +96,5 @@
+         coverSmallAffineSubdivisionComponent X U n =
+       coverSmallAffineSubdivisionSimplexChain X U n x := by
+-  apply Sigma.ι_desc
++  apply Sigma.ι_comp_desc
+ 
+ /-- Subdivision of a selected cover-small generator agrees with full subdivision after

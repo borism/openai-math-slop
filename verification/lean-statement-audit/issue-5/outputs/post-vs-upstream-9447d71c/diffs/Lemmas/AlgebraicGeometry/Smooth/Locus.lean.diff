@@ -1,0 +1,39 @@
+--- upstream/Lemmas/AlgebraicGeometry/Smooth/Locus.lean
++++ challenge/Lemmas/AlgebraicGeometry/Smooth/Locus.lean
+@@ -13,8 +13,12 @@
+ See the License for the specific language governing permissions and
+ limitations under the License.
++
+ -/
+-module
+ 
+-public import Mathlib.AlgebraicGeometry.Morphisms.Smooth
++import Mathlib.AlgebraicGeometry.Morphisms.Smooth
++
++namespace OAI.AlgebraicGeometry.Smooth.Locus
++
++open _root_.AlgebraicGeometry
+ 
+ /-!
+@@ -25,9 +29,9 @@
+ -/
+ 
+-@[expose] public noncomputable section
++noncomputable section
+ 
+-open CategoryTheory
++open _root_.CategoryTheory
+ 
+-namespace AlgebraicGeometry
++section
+ 
+ universe u
+@@ -43,3 +47,7 @@
+   simp
+ 
+-end AlgebraicGeometry
++end
++
++end
++
++end OAI.AlgebraicGeometry.Smooth.Locus

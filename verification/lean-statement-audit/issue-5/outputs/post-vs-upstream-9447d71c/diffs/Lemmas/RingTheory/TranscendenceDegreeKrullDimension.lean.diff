@@ -1,0 +1,72 @@
+--- upstream/Lemmas/RingTheory/TranscendenceDegreeKrullDimension.lean
++++ challenge/Lemmas/RingTheory/TranscendenceDegreeKrullDimension.lean
+@@ -13,10 +13,10 @@
+ See the License for the specific language governing permissions and
+ limitations under the License.
++
+ -/
+-module
+ 
+-public import HodgeConjecture.Mathlib.Algebra.PolynomialCatenary
+-public import Mathlib.RingTheory.AlgebraicIndependent.TranscendenceBasis
+-public import Mathlib.RingTheory.QuasiFinite.Basic
++import HodgeConjecture.Mathlib.Algebra.PolynomialCatenary
++import Mathlib.RingTheory.AlgebraicIndependent.TranscendenceBasis
++import Mathlib.RingTheory.QuasiFinite.Basic
+ 
+ import Mathlib.RingTheory.KrullDimension.Field
+@@ -24,4 +24,8 @@
+ import Mathlib.RingTheory.KrullDimension.Polynomial
+ import Mathlib.RingTheory.NoetherNormalization
++
++namespace OAI.Algebra.RingTheory.TranscendenceDegreeKrullDimension
++
++open _root_.Algebra
+ 
+ /-!
+@@ -37,9 +41,9 @@
+ -/
+ 
+-@[expose] public noncomputable section
++noncomputable section
+ 
+-open Ideal MvPolynomial
++open _root_.Ideal _root_.MvPolynomial
+ 
+-namespace Algebra
++section
+ 
+ variable {k A : Type} [Field k] [CommRing A] [IsDomain A] [Algebra k A]
+@@ -57,7 +61,7 @@
+     ⟨hfinite.to_isIntegral⟩
+   refine ⟨n, ?_, ?_⟩
+-  · rw [PolynomialCatenary.ringKrullDim_eq_of_isIntegral_of_injective hg,
++  · rw [_root_.OAI.Algebra.Foundations.PolynomialCatenaryT.PolynomialCatenary.ringKrullDim_eq_of_isIntegral_of_injective hg,
+       MvPolynomial.ringKrullDim_of_isNoetherianRing,
+-      ringKrullDim_eq_zero_of_field, Nat.card_fin]
++      ringKrullDim_eq_zero_of_field, ENat.card_eq_coe_fintype_card, Fintype.card_fin]
+     simp
+   · have h := trdeg_add_eq k (MvPolynomial (Fin n) k) (A := A)
+@@ -102,10 +106,10 @@
+   let q : Ideal R := P.under R
+   obtain ⟨n, hnDim, hnTrdeg⟩ :=
+-    FiniteType.exists_ringKrullDim_eq_and_trdeg_eq (k := k) (A := R ⧸ q)
++    _root_.OAI.Algebra.RingTheory.TranscendenceDegreeKrullDimension.FiniteType.exists_ringKrullDim_eq_and_trdeg_eq (k := k) (A := R ⧸ q)
+   obtain ⟨m, hmDim, hmTrdeg⟩ :=
+-    FiniteType.exists_ringKrullDim_eq_and_trdeg_eq (k := k) (A := S ⧸ P)
++    _root_.OAI.Algebra.RingTheory.TranscendenceDegreeKrullDimension.FiniteType.exists_ringKrullDim_eq_and_trdeg_eq (k := k) (A := S ⧸ P)
+   have htr : Algebra.trdeg k (S ⧸ P) = Algebra.trdeg k (R ⧸ q) :=
+     (trdeg_quotient_eq_residueField (k := k) P).trans
+-      ((QuasiFinite.trdeg_residueField_eq (k := k) (R := R) P).trans
++      ((_root_.OAI.Algebra.RingTheory.TranscendenceDegreeKrullDimension.QuasiFinite.trdeg_residueField_eq (k := k) (R := R) P).trans
+         (trdeg_quotient_eq_residueField (k := k) q).symm)
+   have hmnCard : (m : Cardinal) = (n : Cardinal) :=
+@@ -114,3 +118,7 @@
+   rw [hmDim, hnDim, hmn]
+ 
+-end Algebra
++end
++
++end
++
++end OAI.Algebra.RingTheory.TranscendenceDegreeKrullDimension

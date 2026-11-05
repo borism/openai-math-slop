@@ -1,0 +1,16 @@
+--- upstream/Mathlib/Algebra/Homology/KernelAcyclic.lean
++++ challenge/Mathlib/Algebra/Homology/KernelAcyclic.lean
+@@ -43,5 +43,5 @@
+     (kernel f).Acyclic := by
+   let S := ShortComplex.mk (kernel.ι f) f (kernel.condition f)
+-  have hS : S.ShortExact := { exact := ShortComplex.exact_kernel f }
++  have hS : S.ShortExact := { exact := ShortComplex.kernelSequence_exact f }
+   exact hS.acyclic_X₁ (by dsimp [S]; infer_instance)
+ 
+@@ -54,5 +54,5 @@
+   rw [quasiIsoAt_iff_isIso_homologyMap]
+   let S := ShortComplex.mk (kernel.ι f) f (kernel.condition f)
+-  have hS : S.ShortExact := { exact := ShortComplex.exact_kernel f }
++  have hS : S.ShortExact := { exact := ShortComplex.kernelSequence_exact f }
+   have hmono : Mono (homologyMap f n) :=
+     (hS.homology_exact₂ n).mono_g ((h n).isZero_homology.eq_of_src _ _)

@@ -1,0 +1,52 @@
+--- upstream/Definitions/AlgebraicGeometry/Cycle/Local/Purity.lean
++++ challenge/Definitions/AlgebraicGeometry/Cycle/Local/Purity.lean
+@@ -13,8 +13,8 @@
+ See the License for the specific language governing permissions and
+ limitations under the License.
++
+ -/
+-module
+ 
+-public import HodgeConjecture.Lemmas.AlgebraicGeometry.Cycle.Component.LocalGenerator
++import HodgeConjecture.Lemmas.AlgebraicGeometry.Cycle.Component.LocalGenerator
+ 
+ import HodgeConjecture.Lemmas.AlgebraicGeometry.Cycle.Component.ClosedPointDimension
+@@ -23,4 +23,6 @@
+ import HodgeConjecture.Lemmas.AlgebraicTopology.LocalHomology.FundamentalClassGenerator
+ import HodgeConjecture.Lemmas.AlgebraicTopology.LocalHomology.PuncturedEuclidean
++
++namespace OAI.AlgebraicGeometry.Cycle.LocalPurity
+ 
+ /-!
+@@ -38,9 +40,13 @@
+ -/
+ 
+-@[expose] public noncomputable section
++noncomputable section
+ 
+-open CategoryTheory Topology
++open _root_.CategoryTheory _root_.Topology
+ 
+-namespace AlgebraicTopology.Singular
++namespace AlgebraicTopology
++open _root_.AlgebraicTopology
++namespace Singular
++open _root_.AlgebraicTopology
++open _root_.OAI.AlgebraicTopology.Singular
+ 
+ variable {R M : Type*} [Field R] [AddCommGroup M] [Module R M]
+@@ -57,6 +63,11 @@
+ resulting coclass; the normalization alone is unique when the homology is one-dimensional. -/
+ def normalizedRelativeCoclass {R : Type*} [Field R] {X : TopPair} {n : ℕ}
+-    (z : RelativeHomology R X n) (hz : z ≠ 0) : RelativeCohomology R X n :=
+-  (relativeCohomologyEquivDualHomology R X n).symm (normalizedDual z hz)
++    (z : _root_.OAI.AlgebraicTopology.Singular.Cohomology.RelativeHomology R X n) (hz : z ≠ 0) : _root_.OAI.AlgebraicTopology.Singular.Cohomology.RelativeCohomology R X n :=
++  (_root_.OAI.AlgebraicTopology.Singular.Cohomology.relativeCohomologyEquivDualHomology R X n).symm (normalizedDual z hz)
+ 
+-end AlgebraicTopology.Singular
++end Singular
++end AlgebraicTopology
++
++end
++
++end OAI.AlgebraicGeometry.Cycle.LocalPurity

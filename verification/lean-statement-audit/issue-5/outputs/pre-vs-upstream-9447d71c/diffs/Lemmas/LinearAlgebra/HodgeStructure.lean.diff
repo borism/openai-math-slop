@@ -1,0 +1,10 @@
+--- upstream/Lemmas/LinearAlgebra/HodgeStructure.lean
++++ challenge/Lemmas/LinearAlgebra/HodgeStructure.lean
+@@ -101,6 +101,5 @@
+ @[simp]
+ lemma conjugate_conjugate (x : ℂ ⊗[ℚ] V) : conjugate V (conjugate V x) = x := by
+-  refine TensorProduct.induction_on x ?_ ?_ ?_
+-  · simp
++  refine TensorProduct.inductionOn x ?_ ?_
+   · intro z v
+     simp

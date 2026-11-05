@@ -1,0 +1,129 @@
+--- upstream/Mathlib/Algebra/PolynomialCatenary.lean
++++ challenge/Mathlib/Algebra/PolynomialCatenary.lean
+@@ -13,8 +13,8 @@
+ See the License for the specific language governing permissions and
+ limitations under the License.
++
+ -/
+-module
+-
+-public import Mathlib.RingTheory.Ideal.Height
++
++import Mathlib.RingTheory.Ideal.Height
+ 
+ import Mathlib.Algebra.MvPolynomial.Monad
+@@ -23,4 +23,6 @@
+ import Mathlib.RingTheory.KrullDimension.Field
+ import Mathlib.RingTheory.KrullDimension.Polynomial
++
++namespace OAI.Algebra.Foundations.PolynomialCatenaryT
+ 
+ /-!
+@@ -47,7 +49,7 @@
+ -/
+ 
+-@[expose] public section
+-
+-open Ideal Polynomial MvPolynomial Nat RingHom List
++section
++
++open _root_.Ideal _root_.Polynomial _root_.MvPolynomial Nat _root_.RingHom List
+ 
+ namespace PolynomialCatenary
+@@ -66,5 +68,5 @@
+   · refine WithBot.coe_le_coe.mpr (iSup_le fun l ↦ ?_)
+     let mono : StrictMono (PrimeSpectrum.comap (algebraMap R S)) := fun _ _ h ↦
+-      Ideal.IsIntegral.comap_lt_comap h
++      Ideal.IsIntegral.under_lt_under h
+     rw [← LTSeries.map_length l _ mono]
+     exact le_iSup (fun p ↦ (p.length : ℕ∞)) (l.map _ mono)
+@@ -86,5 +88,5 @@
+   have hf : f.IsIntegral := hg.quotient_isIntegral hgP
+   have hbot : (⊥ : Ideal (Polynomial R ⧸ P)).IsMaximal := by
+-    apply Ideal.isMaximal_of_isIntegral_of_isMaximal_comap' f hf ⊥
++    apply Ideal.isMaximal_of_isIntegral_of_isMaximal_comap f hf ⊥
+     convert hP using 1
+     ext x
+@@ -120,5 +122,5 @@
+     exact Ideal.mem_map_of_mem _ hgP
+   have hP'max : P'.IsMaximal :=
+-    Polynomial.isMaximal_of_monic_mem_of_comap_isMaximal P'
++    _root_.OAI.Algebra.Foundations.PolynomialCatenaryT.PolynomialCatenary.Polynomial.isMaximal_of_monic_mem_of_comap_isMaximal P'
+       (g.map (algebraMap R Rₚ)) (hg.map _) hgP' (by
+         have heq : P'.comap Polynomial.C = p' := by
+@@ -178,5 +180,5 @@
+   rw [← natDegree_finSuccEquiv, monomial_eq, Finsupp.prod_pow v fun a ↦ X a]
+   simp only [Fin.prod_univ_succ, Fin.sum_univ_succ, map_mul, map_prod, map_pow,
+-    AlgEquiv.ofAlgHom_apply, MvPolynomial.aeval_C, MvPolynomial.aeval_X, if_pos, Fin.succ_ne_zero,
++    AlgEquiv.ofAlgHom_apply, MvPolynomial.aeval_C, MvPolynomial.aeval_X, ite_eq_left, Fin.succ_ne_zero,
+     ite_false, one_smul, map_add, finSuccEquiv_X_zero, finSuccEquiv_X_succ, algebraMap_eq]
+   have h (i : Fin n) :
+@@ -192,6 +194,6 @@
+ /-- Distinct supported monomials acquire distinct degrees in the distinguished variable. -/
+ lemma degreeOf_t_ne_of_ne (hv : v ∈ f.support) (hw : w ∈ f.support) (ne : v ≠ w) :
+-    (T f <| monomial v <| coeff v f).degreeOf 0 ≠
+-    (T f <| monomial w <| coeff w f).degreeOf 0 := by
++    (T f <| monomial v <| f.coeff v).degreeOf 0 ≠
++    (T f <| monomial w <| f.coeff w).degreeOf 0 := by
+   rw [degreeOf_zero_t _ _ <| mem_support_iff.mp hv,
+     degreeOf_zero_t _ _ <| mem_support_iff.mp hw]
+@@ -201,6 +203,6 @@
+ 
+ lemma leadingCoeff_finSuccEquiv_t :
+-    (finSuccEquiv k n ((T f) ((monomial v) (coeff v f)))).leadingCoeff =
+-    algebraMap k _ (coeff v f) := by
++    (finSuccEquiv k n ((T f) ((monomial v) (f.coeff v)))).leadingCoeff =
++    algebraMap k _ (f.coeff v) := by
+   rw [monomial_eq, Finsupp.prod_fintype]
+   · simp only [map_mul, map_prod, leadingCoeff_mul, leadingCoeff_prod]
+@@ -212,5 +214,5 @@
+       by_cases h : j = 0
+       · simp [h, finSuccEquiv_apply]
+-      · simp only [aeval_eq_bind₁, bind₁_X_right, if_neg h, one_smul, map_add, map_pow]
++      · simp only [aeval_eq_bind₁, bind₁_X_right, ite_eq_right h, one_smul, map_add, map_pow]
+         obtain ⟨i, rfl⟩ := Fin.exists_succ_eq.mpr h
+         simp [finSuccEquiv_X_succ, finSuccEquiv_X_zero, add_comm]
+@@ -222,6 +224,6 @@
+     IsUnit (finSuccEquiv k n (T f f)).leadingCoeff := by
+   obtain ⟨v, vin, vs⟩ := Finset.exists_max_image f.support
+-    (fun v ↦ (T f ((monomial v) (coeff v f))).degreeOf 0) (support_nonempty.mpr fne)
+-  set h := fun w ↦ (MvPolynomial.monomial w) (coeff w f)
++    (fun v ↦ (T f ((monomial v) (f.coeff v))).degreeOf 0) (support_nonempty.mpr fne)
++  set h := fun w ↦ (MvPolynomial.monomial w) (f.coeff w)
+   simp only [← natDegree_finSuccEquiv] at vs
+   replace vs : ∀ x ∈ f.support \ {v}, (finSuccEquiv k n ((T f) (h x))).degree <
+@@ -276,5 +278,5 @@
+         simp
+       · obtain ⟨f, hfP, hfne⟩ := Submodule.exists_mem_ne_zero_of_ne_bot hP
+-        let e₁ := Triangular.T f
++        let e₁ := _root_.OAI.Algebra.Foundations.PolynomialCatenaryT.PolynomialCatenary.Triangular.T f
+         let P₁ : Ideal (MvPolynomial (Fin (n + 1)) k) := P.map e₁
+         have : P₁.IsPrime := Ideal.map_isPrime_of_equiv e₁
+@@ -282,5 +284,5 @@
+         let Q : Ideal (Polynomial (MvPolynomial (Fin n) k)) := P₁.map e₂
+         have : Q.IsPrime := Ideal.map_isPrime_of_equiv e₂
+-        obtain hunit := Triangular.T_leadingCoeff_isUnit f hfne
++        obtain hunit := _root_.OAI.Algebra.Foundations.PolynomialCatenaryT.PolynomialCatenary.Triangular.T_leadingCoeff_isUnit f hfne
+         let g : Polynomial (MvPolynomial (Fin n) k) := hunit.unit⁻¹ • e₂ (e₁ f)
+         have hgmonic : g.Monic :=
+@@ -292,5 +294,5 @@
+         have : q.IsPrime := Ideal.IsPrime.comap Polynomial.C
+         have hheightQ : Q.height = q.height + 1 :=
+-          Polynomial.height_eq_comap_height_add_one_of_monic_mem Q g hgmonic hgf
++          _root_.OAI.Algebra.Foundations.PolynomialCatenaryT.PolynomialCatenary.Polynomial.height_eq_comap_height_add_one_of_monic_mem Q g hgmonic hgf
+         have hind : q.height + ringKrullDim (MvPolynomial (Fin n) k ⧸ q) = n := ih q
+         let : Algebra.IsIntegral (MvPolynomial (Fin n) k)
+@@ -341,5 +343,5 @@
+     (P : Ideal (MvPolynomial (Fin n) k)) [P.IsPrime] (hp : P.height = p) :
+     ringKrullDim (MvPolynomial (Fin n) k ⧸ P) = n - p := by
+-  have h := MvPolynomial.height_add_ringKrullDim_quotient_eq_fin P
++  have h := _root_.OAI.Algebra.Foundations.PolynomialCatenaryT.PolynomialCatenary.MvPolynomial.height_add_ringKrullDim_quotient_eq_fin P
+   rw [hp] at h
+   obtain ⟨a, b, ha, hb, hab⟩ := WithBot.add_eq_coe.mp h
+@@ -357,2 +359,6 @@
+ 
+ end PolynomialCatenary
++
++end
++
++end OAI.Algebra.Foundations.PolynomialCatenaryT

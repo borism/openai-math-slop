@@ -1,0 +1,112 @@
+OAI.MatrixMultiplication.Arithmetic.rectangularOmega	<local>	def	[u_1]	2512319213	3691746726
+OAI.MatrixMultiplication.Arithmetic.Gate.ctorElim	<local>	def	[u, u_1, u_2, u_3]	2523450582	2084518146
+OAI.MatrixMultiplication.Arithmetic.matrixInputs.match_1	<local>	def	[u_1]	891975679	862171676
+OAI.MatrixMultiplication.Arithmetic.Program.casesOn	<local>	def	[u, u_1, u_2]	2251596002	3521649778
+OAI.MatrixMultiplication.Arithmetic.Gate.sub.inj	<local>	thm	[u_1, u_2, u_3]	3529069016	-
+OAI.MatrixMultiplication.Arithmetic.AdmissibleExponent	<local>	def	[u_1]	1165044719	740765325
+OAI.MatrixMultiplication.Arithmetic.RectangularAdmissibleExponent	<local>	def	[u_1]	2277018539	2202210558
+OAI.MatrixMultiplication.Arithmetic.Program.step	<local>	ctor	[u_1, u_2]	638987955	-
+OAI.MatrixMultiplication.Arithmetic.MatrixAlgorithm.cost	<local>	def	[u_1]	2369341241	537864765
+OAI.MatrixMultiplication.Arithmetic.Program	<local>	induct	[u_1, u_2]	1318803047	-
+OAI.MatrixMultiplication.Arithmetic.Program.brecOn.go	<local>	def	[u, u_1, u_2]	3265215663	1939419062
+OAI.MatrixMultiplication.Arithmetic.Program.nil.elim	<local>	def	[u, u_1, u_2]	2131822890	991665522
+OAI.MatrixMultiplication.Arithmetic.Gate._sizeOf_inst	<local>	def	[u_1, u_2, u_3]	3289964031	2962302622
+OAI.MatrixMultiplication.Arithmetic.Gate.ctorIdx	<local>	def	[u_1, u_2, u_3]	1494910485	939344771
+OAI.MatrixMultiplication.Arithmetic.Gate.noConfusionType	<local>	def	[u, u_1, u_2, u_3]	2262189909	3047986915
+OAI.MatrixMultiplication.Arithmetic.matrixInputs	<local>	def	[u_1]	21536085	3606168193
+OAI.MatrixMultiplication.Arithmetic.MatrixAlgorithm.noConfusion	<local>	def	[u, u_1]	3844211194	668594613
+OAI.MatrixMultiplication.Arithmetic.Gate.eval.match_1	<local>	def	[u_1, u_2, u_3, u_4]	3864545507	230247040
+OAI.MatrixMultiplication.Arithmetic.Gate.sub.noConfusion	<local>	def	[u, u_1, u_2, u_3]	1099003290	2868608901
+OAI.MatrixMultiplication.Arithmetic.Gate.add.sizeOf_spec	<local>	thm	[u_1, u_2, u_3]	24035823	-
+OAI.MatrixMultiplication.Arithmetic.Program.cost._sunfold	<local>	def	[u_1, u_2]	3359511430	1258232233
+OAI.MatrixMultiplication.Arithmetic.Program.rec	<local>	rec	[u, u_1, u_2]	1892568104	-
+OAI.MatrixMultiplication.Arithmetic.MatrixAlgorithm.mk.sizeOf_spec	<local>	thm	[u_1]	2284449028	-
+OAI.MatrixMultiplication.Arithmetic.Program.noConfusionType	<local>	def	[u, u_1, u_2]	3440348625	3480564201
+OAI.MatrixMultiplication.Arithmetic.Program.eval.match_1	<local>	def	[u_1, u_2, u_3]	3881070021	1016081988
+OAI.MatrixMultiplication.Arithmetic.Gate.sub.injEq	<local>	thm	[u_1, u_2, u_3]	237353262	-
+OAI.MatrixMultiplication.Arithmetic.Gate.sub.elim	<local>	def	[u, u_1, u_2, u_3]	1476301232	3368925731
+OAI.MatrixMultiplication.Arithmetic.MatrixInput	<local>	def	[]	1735472581	1722905672
+OAI.MatrixMultiplication.Arithmetic.MatrixAlgorithm.mk._flat_ctor	<local>	def	[u_1]	2054468723	3197195555
+OAI.MatrixMultiplication.Arithmetic.MatrixAlgorithm.output	<local>	def	[u_1]	2763952543	1444679281
+OAI.MatrixMultiplication.Arithmetic.Program.cost._unsafe_rec	<local>	def	[u_1, u_2]	3359511430	2725230096
+OAI.MatrixMultiplication.Arithmetic.complexAlpha._proof_1	<local>	thm	[]	2547959801	-
+OAI.MatrixMultiplication.Arithmetic.MatrixAlgorithm._sizeOf_1	<local>	def	[u_1]	2145530754	3590240919
+OAI.MatrixMultiplication.Arithmetic.Gate.ctorElimType	<local>	def	[u, u_1, u_2, u_3]	182214370	2163639673
+OAI.MatrixMultiplication.Arithmetic.innerSize	<local>	def	[]	1919499219	2871274461
+OAI.MatrixMultiplication.Arithmetic.Gate.input	<local>	ctor	[u_1, u_2, u_3]	1504807446	-
+OAI.MatrixMultiplication.Arithmetic.Gate.sub	<local>	ctor	[u_1, u_2, u_3]	1478729113	-
+OAI.MatrixMultiplication.Arithmetic.Program.eval._unsafe_rec	<local>	def	[u_1, u_2]	327556885	2733037878
+OAI.MatrixMultiplication.Arithmetic.Gate.input.sizeOf_spec	<local>	thm	[u_1, u_2, u_3]	1188729793	-
+OAI.MatrixMultiplication.Arithmetic.MatrixAlgorithm	<local>	induct	[u_1]	572440921	-
+OAI.MatrixMultiplication.Arithmetic.MatrixAlgorithm.Correct	<local>	def	[u_1]	2643759683	725254376
+OAI.MatrixMultiplication.Arithmetic.Gate.add.elim	<local>	def	[u, u_1, u_2, u_3]	67839716	2018779619
+OAI.MatrixMultiplication.Arithmetic.Gate.add.injEq	<local>	thm	[u_1, u_2, u_3]	560071185	-
+OAI.MatrixMultiplication.complex_alpha_gt_93_div_200	<local>	thm	[]	2728792401	-
+OAI.MatrixMultiplication.Arithmetic.Program.eval._sunfold	<local>	def	[u_1, u_2]	327556885	908415679
+OAI.MatrixMultiplication.Arithmetic.Program.step.noConfusion	<local>	def	[u, u_1, u_2]	805108755	1049353020
+OAI.MatrixMultiplication.Arithmetic.Program.nil.sizeOf_spec	<local>	thm	[u_1, u_2]	2032042840	-
+OAI.MatrixMultiplication.Arithmetic.Program.noConfusion	<local>	def	[u, u_1, u_2]	3234995798	2490857776
+OAI.MatrixMultiplication.Arithmetic.Gate.mul.elim	<local>	def	[u, u_1, u_2, u_3]	4195583280	3060295882
+OAI.MatrixMultiplication.Arithmetic.MatrixAlgorithm.rec	<local>	rec	[u, u_1]	4254331251	-
+OAI.MatrixMultiplication.Arithmetic.Gate.mul.injEq	<local>	thm	[u_1, u_2, u_3]	3898723296	-
+OAI.MatrixMultiplication.Arithmetic.Gate.eval	<local>	def	[u_1, u_2, u_3]	610483562	3983393887
+OAI.MatrixMultiplication.Arithmetic.MatrixAlgorithm.recOn	<local>	def	[u, u_1]	1466966977	820859765
+OAI.MatrixMultiplication.Arithmetic.Gate.mul.sizeOf_spec	<local>	thm	[u_1, u_2, u_3]	2054595447	-
+OAI.MatrixMultiplication.Arithmetic.Gate.input.noConfusion	<local>	def	[u, u_1, u_2, u_3]	1758238825	2388917810
+OAI.MatrixMultiplication.Arithmetic.Gate.cost	<local>	def	[u_1, u_2, u_3]	1494910485	1318164048
+OAI.MatrixMultiplication.Arithmetic.Gate.add.inj	<local>	thm	[u_1, u_2, u_3]	3343524829	-
+OAI.MatrixMultiplication.Arithmetic.Program._sizeOf_1	<local>	def	[u_1, u_2]	2931948240	2610780659
+OAI.MatrixMultiplication.Arithmetic.MatrixAlgorithm.mk.inj	<local>	thm	[u_1]	2678069456	-
+OAI.MatrixMultiplication.Arithmetic.Gate.input.elim	<local>	def	[u, u_1, u_2, u_3]	92926250	386048004
+OAI.MatrixMultiplication.Arithmetic.Gate.input.injEq	<local>	thm	[u_1, u_2, u_3]	1812098316	-
+OAI.MatrixMultiplication.complex_omega_le_nine_quarters	<local>	thm	[]	4234434550	-
+OAI.MatrixMultiplication.Arithmetic.Gate.constant.noConfusion	<local>	def	[u, u_1, u_2, u_3]	358526100	1758232758
+OAI.MatrixMultiplication.Arithmetic.Gate.mul.inj	<local>	thm	[u_1, u_2, u_3]	3229662817	-
+OAI.MatrixMultiplication.Arithmetic.Gate.mul.noConfusion	<local>	def	[u, u_1, u_2, u_3]	2779188979	889898946
+OAI.MatrixMultiplication.Arithmetic.Program.nil	<local>	ctor	[u_1, u_2]	2910384351	-
+OAI.MatrixMultiplication.Arithmetic.Program.eval	<local>	def	[u_1, u_2]	327556885	826646841
+OAI.MatrixMultiplication.Arithmetic.Program.cost.match_1	<local>	def	[u_1, u_2, u_3]	1532510992	3399760576
+OAI.MatrixMultiplication.Arithmetic.Gate.constant.inj	<local>	thm	[u_1, u_2, u_3]	3562419703	-
+OAI.MatrixMultiplication.Arithmetic.Gate.recOn	<local>	def	[u, u_1, u_2, u_3]	1884589245	2955672020
+OAI.MatrixMultiplication.Arithmetic.MatrixAlgorithm.mk.noConfusion	<local>	def	[u, u_1]	2665725658	1377468973
+OAI.MatrixMultiplication.Arithmetic.complexAlpha	<local>	def	[]	4024430794	3677080905
+OAI.MatrixMultiplication.Arithmetic.Gate.constant	<local>	ctor	[u_1, u_2, u_3]	861671558	-
+OAI.MatrixMultiplication.Arithmetic.Gate.add.noConfusion	<local>	def	[u, u_1, u_2, u_3]	3454348751	632591051
+OAI.MatrixMultiplication.Arithmetic.Program.brecOn	<local>	def	[u, u_1, u_2]	2011180553	1299304463
+OAI.MatrixMultiplication.Arithmetic.MatrixAlgorithm._sizeOf_inst	<local>	def	[u_1]	979636716	1341493401
+OAI.MatrixMultiplication.Arithmetic.Program.below	<local>	def	[u, u_1, u_2]	1333095011	1144219986
+OAI.MatrixMultiplication.Arithmetic.MatrixAlgorithm.ctorIdx	<local>	def	[u_1]	2369341241	50295539
+OAI.MatrixMultiplication.Arithmetic.Program.eval._f	<local>	def	[u_1, u_2]	723460077	4276896570
+OAI.MatrixMultiplication.Arithmetic.Gate.sub.sizeOf_spec	<local>	thm	[u_1, u_2, u_3]	1944934892	-
+OAI.MatrixMultiplication.Arithmetic.MatrixAlgorithm.mk.injEq	<local>	thm	[u_1]	1522446907	-
+OAI.MatrixMultiplication.Arithmetic.Program.recOn	<local>	def	[u, u_1, u_2]	659510083	488801321
+OAI.MatrixMultiplication.Arithmetic.Program.brecOn.eq	<local>	thm	[u, u_1, u_2]	1891621904	-
+OAI.MatrixMultiplication.Arithmetic.Gate.input.inj	<local>	thm	[u_1, u_2, u_3]	1640884630	-
+OAI.MatrixMultiplication.Arithmetic.Program.ctorElimType	<local>	def	[u, u_1, u_2]	1178235228	485931311
+OAI.MatrixMultiplication.Arithmetic.Gate.constant.sizeOf_spec	<local>	thm	[u_1, u_2, u_3]	4158247504	-
+OAI.MatrixMultiplication.Arithmetic.Gate.constant.injEq	<local>	thm	[u_1, u_2, u_3]	3484994616	-
+OAI.MatrixMultiplication.Arithmetic.Gate.constant.elim	<local>	def	[u, u_1, u_2, u_3]	2633173975	3670116225
+OAI.MatrixMultiplication.Arithmetic.MatrixAlgorithm.registers	<local>	def	[u_1]	2369341241	1365783818
+OAI.MatrixMultiplication.Arithmetic.MatrixAlgorithm.casesOn	<local>	def	[u, u_1]	1466966977	4068204407
+OAI.MatrixMultiplication.Arithmetic.Program.step.inj	<local>	thm	[u_1, u_2]	461365864	-
+OAI.MatrixMultiplication.Arithmetic.MatrixAlgorithm.mk	<local>	ctor	[u_1]	2054468723	-
+OAI.MatrixMultiplication.Arithmetic.Program.cost	<local>	def	[u_1, u_2]	3359511430	1935346731
+OAI.MatrixMultiplication.Arithmetic.Gate._sizeOf_1	<local>	def	[u_1, u_2, u_3]	1979519930	3580029661
+OAI.MatrixMultiplication.Arithmetic.MatrixAlgorithm.eval	<local>	def	[u_1]	2344961242	3832187382
+OAI.MatrixMultiplication.Arithmetic.omega	<local>	def	[u_1]	2032762430	1676807578
+OAI.MatrixMultiplication.Arithmetic.Gate.add	<local>	ctor	[u_1, u_2, u_3]	1478729113	-
+OAI.MatrixMultiplication.Arithmetic.MatrixAlgorithm.program	<local>	def	[u_1]	3999670451	1459852947
+OAI.MatrixMultiplication.Arithmetic.Gate.rec	<local>	rec	[u, u_1, u_2, u_3]	1071897868	-
+OAI.MatrixMultiplication.Arithmetic.Program.cost._f	<local>	def	[u_1, u_2]	1656278395	2703285362
+OAI.MatrixMultiplication.Arithmetic.Program._sizeOf_inst	<local>	def	[u_1, u_2]	2469654460	3175175505
+OAI.MatrixMultiplication.Arithmetic.Program.step.sizeOf_spec	<local>	thm	[u_1, u_2]	1441210801	-
+OAI.MatrixMultiplication.Arithmetic.Program.ctorIdx	<local>	def	[u_1, u_2]	3359511430	3038648193
+OAI.MatrixMultiplication.Arithmetic.Gate.mul	<local>	ctor	[u_1, u_2, u_3]	1478729113	-
+OAI.MatrixMultiplication.Arithmetic.MatrixAlgorithm.noConfusionType	<local>	def	[u, u_1]	1142735758	3304954767
+OAI.MatrixMultiplication.Arithmetic.Gate.noConfusion	<local>	def	[u, u_1, u_2, u_3]	1257023043	1843042310
+OAI.MatrixMultiplication.Arithmetic.Program.step.injEq	<local>	thm	[u_1, u_2]	2650888070	-
+OAI.MatrixMultiplication.Arithmetic.Program.step.elim	<local>	def	[u, u_1, u_2]	1799920533	352303798
+OAI.MatrixMultiplication.complex_rectangular_omega_lt_523_div_250	<local>	thm	[]	3967093449	-
+OAI.MatrixMultiplication.Arithmetic.Program.ctorElim	<local>	def	[u, u_1, u_2]	3974518083	3521366477
+OAI.MatrixMultiplication.Arithmetic.Gate.casesOn	<local>	def	[u, u_1, u_2, u_3]	1884589245	3594312374
+OAI.MatrixMultiplication.Arithmetic.Gate	<local>	induct	[u_1, u_2, u_3]	413702807	-

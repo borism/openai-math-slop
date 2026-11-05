@@ -1,0 +1,81 @@
+--- upstream/Definitions/AlgebraicTopology/Sheaf/Constant.lean
++++ challenge/Definitions/AlgebraicTopology/Sheaf/Constant.lean
+@@ -13,9 +13,15 @@
+ See the License for the specific language governing permissions and
+ limitations under the License.
++
+ -/
+-module
+ 
+-public import Mathlib.CategoryTheory.Sites.ConstantSheaf
+-public import Mathlib.Topology.Sheaves.Abelian
++import Mathlib.CategoryTheory.Sites.ConstantSheaf
++import Mathlib.Topology.Sheaves.Abelian
++
++namespace OAI.AlgebraicTopology.Sheaf.Constant
++
++open _root_.TopCat
++open _root_.TopCat.Presheaf
++open _root_.TopCat.Sheaf
+ 
+ /-!
+@@ -29,11 +35,15 @@
+ -/
+ 
+-@[expose] public noncomputable section
++noncomputable section
+ 
+-open CategoryTheory TopologicalSpace
++open _root_.CategoryTheory _root_.TopologicalSpace
+ 
+ universe u
+ 
+-namespace TopCat.Presheaf
++namespace TopCat
++open _root_.TopCat
++namespace Presheaf
++open _root_.TopCat
++open _root_.TopCat.Presheaf
+ 
+ variable (X : TopCat.{u})
+@@ -45,13 +55,16 @@
+   (Functor.const (Opens X)ᵒᵖ).obj A
+ 
+-@[inherit_doc const]
+-notation3 "𝓒ᵖ[" X "; " A "]" => TopCat.Presheaf.const X A
++@[inherit_doc _root_.OAI.AlgebraicTopology.Sheaf.Constant.TopCat.Presheaf.const]
++notation3 "𝓒ᵖ[" X "; " A "]" => _root_.OAI.AlgebraicTopology.Sheaf.Constant.TopCat.Presheaf.const X A
+ 
+ /-- The constant presheaf on `X` with value the additive group of `R`. -/
+-notation3 "𝓒ᵖ(" X "; " R ")" => TopCat.Presheaf.const X (AddCommGrpCat.of R)
++notation3 "𝓒ᵖ(" X "; " R ")" => _root_.OAI.AlgebraicTopology.Sheaf.Constant.TopCat.Presheaf.const X (AddCommGrpCat.of R)
+ 
+-end TopCat.Presheaf
++end Presheaf
++end TopCat
+ 
+-namespace TopCat.Sheaf
++section
++namespace TopCat
++open _root_.TopCat
+ 
+ variable (X : TopCat.{u})
+@@ -70,11 +83,14 @@
+   (constantFunctor X).obj A
+ 
+-@[inherit_doc const]
+-notation3 "𝓒[" X "; " A "]" => TopCat.Sheaf.const X A
++@[inherit_doc _root_.OAI.AlgebraicTopology.Sheaf.Constant.TopCat.const]
++notation3 "𝓒[" X "; " A "]" => _root_.OAI.AlgebraicTopology.Sheaf.Constant.TopCat.const X A
+ 
+ /-- The constant sheaf on `X` with value the additive group of `R`. -/
+-notation3 "𝓒(" X "; " R ")" => TopCat.Sheaf.const X (AddCommGrpCat.of R)
++notation3 "𝓒(" X "; " R ")" => _root_.OAI.AlgebraicTopology.Sheaf.Constant.TopCat.const X (AddCommGrpCat.of R)
+ 
+-end TopCat.Sheaf
++end TopCat
++end
+ 
+ end
++
++end OAI.AlgebraicTopology.Sheaf.Constant

@@ -1,0 +1,37 @@
+omega(C) <= 9/4: build / #print axioms target (upstream openai/math 4eaee8754, lean/)
+
+Comparator config  lean/ComparatorChallenges/MatrixMultiplication.json
+  solution_module  OAI.LinearAlgebra.MatrixMultiplication.Main
+  theorem          OAI.MatrixMultiplication.complex_omega_le_nine_quarters
+                   (Main.lean:14, proof term = AuxiliarySeparation.omega_le_nine_quarters)
+  permitted_axioms propext, Quot.sound, Classical.choice; enable_nanoda false
+
+Smallest module carrying the proof (same statement `Arithmetic.omega ℂ ≤ 9/4`):
+  OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Main
+    decl  OAI.MatrixMultiplication.AuxiliarySeparation.omega_le_nine_quarters (Main.lean:28)
+    import closure inside lean/OAI: 129 files, 20,694 lines (wc -l), 0.87 MB
+    non-Mathlib packages: fixed-point-theorems only (module FixedPointTheorems.brouwer;
+      harfe/fixed-point-theorems-lean4 @ 770940ddf9878cf61952ed53d910b92bca841838,
+      needs lean/patches/fixed-point-theorems-lean4341.patch, applied by the lakefile hook;
+      brouwer closure 6 files / 3,176 lines; depends on Mathlib only)
+    static scan: 0 hits for every trust pattern incl. set_option (trust-scan-nine-fourths-closure.txt)
+
+Full Comparator solution module (also proves alpha > 0.465 and omega(1,0.709,1) < 2.092):
+  OAI.LinearAlgebra.MatrixMultiplication.Main
+    import closure: 504 files, 82,623 lines (wc -l), 3.7 MB
+    non-Mathlib packages: same (FixedPointTheorems.brouwer); Std/Lean core only otherwise
+    static scan: 0 hard hits; 96 `decide +kernel` (trust-scan-mm-main-closure.txt)
+
+Suggested check (by the coordinator):
+  #print axioms OAI.MatrixMultiplication.AuxiliarySeparation.omega_le_nine_quarters
+  expected: [propext, Classical.choice, Quot.sound]
+
+Challenge statement elaboration (Lean 4.34.1 + Mathlib d13f23b, standalone file):
+  ComparatorChallenges/MatrixMultiplication.lean + probes (mm-challenge-probe.lean.txt):
+  0 errors, 3 expected `sorry` warnings (lines 118/122/126), 7 s.
+  #print omega  = fun F => sInf {τ | AdmissibleExponent F τ}
+  Non-vacuity: Real.sInf_empty / Real.sInf_of_not_bddBelow give sInf = 0 on an empty
+  or unbounded-below set, so "omega ≤ 9/4" is meaningful only if the admissible set
+  is nonempty and bounded below. The tree proves BddBelow (bound 2, via n^2 ≤ cost):
+  OAI/LinearAlgebra/MatrixMultiplication/Arithmetic/LowerBound.lean:204
+  (admissibleExponent_bddBelow; used by omega_le_of_admissibleExponent :208).

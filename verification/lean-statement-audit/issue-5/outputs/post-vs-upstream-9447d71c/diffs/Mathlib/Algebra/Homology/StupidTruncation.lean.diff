@@ -1,0 +1,40 @@
+--- upstream/Mathlib/Algebra/Homology/StupidTruncation.lean
++++ challenge/Mathlib/Algebra/Homology/StupidTruncation.lean
+@@ -13,8 +13,12 @@
+ See the License for the specific language governing permissions and
+ limitations under the License.
++
+ -/
+-module
+ 
+-public import Mathlib.Algebra.Homology.Embedding.StupidTrunc
++import Mathlib.Algebra.Homology.Embedding.StupidTrunc
++
++namespace OAI.Algebra.Homology.StupidTruncation
++
++open _root_.HomologicalComplex
+ 
+ /-!
+@@ -27,7 +31,7 @@
+ -/
+ 
+-@[expose] public noncomputable section
++noncomputable section
+ 
+-open CategoryTheory CategoryTheory.Limits
++open _root_.CategoryTheory _root_.CategoryTheory.Limits
+ 
+ universe u v
+@@ -36,4 +40,5 @@
+ 
+ namespace HomologicalComplex
++open _root_.HomologicalComplex
+ 
+ variable {C : Type u} [Category.{v} C] [HasZeroMorphisms C] [HasZeroObject C]
+@@ -106,2 +111,6 @@
+ 
+ end HomologicalComplex
++
++end
++
++end OAI.Algebra.Homology.StupidTruncation

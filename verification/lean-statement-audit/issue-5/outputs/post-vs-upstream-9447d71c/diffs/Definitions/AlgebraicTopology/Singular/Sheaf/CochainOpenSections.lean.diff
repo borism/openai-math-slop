@@ -1,0 +1,72 @@
+--- upstream/Definitions/AlgebraicTopology/Singular/Sheaf/CochainOpenSections.lean
++++ challenge/Definitions/AlgebraicTopology/Singular/Sheaf/CochainOpenSections.lean
+@@ -2,17 +2,20 @@
+ Copyright 2026 The Formal Conjectures Authors.
+ Released under Apache 2.0 license as described in the file LICENSE.
++
+ -/
+-module
+ 
+-public import HodgeConjecture.Lemmas.AlgebraicTopology.Singular.Sheaf.CochainOpenRestriction
+-public import HodgeConjecture.Lemmas.AlgebraicTopology.Singular.GlobalRestriction
++import HodgeConjecture.Lemmas.AlgebraicTopology.Singular.Sheaf.CochainOpenRestriction
++import HodgeConjecture.Lemmas.AlgebraicTopology.Singular.GlobalRestriction
++
++namespace OAI.AlgebraicTopology.Singular.SheafCochainOpenSections
+ 
+ /-! # Singular cochains compute sheafified cochains on an arbitrary open -/
+ 
+-@[expose] public noncomputable section
++noncomputable section
+ 
+-open CategoryTheory CategoryTheory.Limits TopologicalSpace Opposite
++open _root_.CategoryTheory _root_.CategoryTheory.Limits _root_.TopologicalSpace Opposite
+ 
+-namespace AlgebraicTopology.Singular
++section
++section
+ 
+ variable (R : Type) [CommRing R] (X : TopCat.{0})
+@@ -23,5 +26,5 @@
+ def openRawSingularCochainComplex (V : Opens X) : CochainComplex AddCommGrpCat ℕ :=
+   (((evaluation (Opens X)ᵒᵖ AddCommGrpCat).obj (.op V)).mapHomologicalComplex (.up ℕ)).obj
+-    (singularCochainPresheafComplex R X)
++    (_root_.OAI.AlgebraicTopology.Singular.SheafCochain.singularCochainPresheafComplex R X)
+ 
+ /-- Let `R` be a commutative ring, `X` a topological space, and `V ⊆ X` open. This is the complex of
+@@ -29,6 +32,6 @@
+ differential is induced by singular coboundaries. -/
+ def openSingularCochainSheafComplex (V : Opens X) : CochainComplex AddCommGrpCat ℕ :=
+-  ((TopCat.Sheaf.supportEvaluation X V).mapHomologicalComplex (.up ℕ)).obj
+-    (singularCochainSheafComplex R X)
++  ((_root_.OAI.AlgebraicTopology.Support.DerivedSectionsLocalization.TopCat.Sheaf.supportEvaluation X V).mapHomologicalComplex (.up ℕ)).obj
++    (_root_.OAI.AlgebraicTopology.Singular.SheafCochain.singularCochainSheafComplex R X)
+ 
+ /-- Let `R` be a commutative ring, `X` a topological space, and `V ⊆ X` open. This complex map sends
+@@ -38,5 +41,5 @@
+     openRawSingularCochainComplex R X V ⟶ openSingularCochainSheafComplex R X V :=
+   (((evaluation (Opens X)ᵒᵖ AddCommGrpCat).obj (.op V)).mapHomologicalComplex (.up ℕ)).map
+-    (singularCochainSheafificationUnit R X)
++    (_root_.OAI.AlgebraicTopology.Singular.SheafCochain.singularCochainSheafificationUnit R X)
+ 
+ /-- Let `R` be a commutative ring and `W ⊆ V` open subsets of a topological space `X`. This map
+@@ -46,5 +49,5 @@
+   (NatTrans.mapHomologicalComplex
+     ((evaluation (Opens X)ᵒᵖ AddCommGrpCat).map i.op) (.up ℕ)).app
+-      (singularCochainPresheafComplex R X)
++      (_root_.OAI.AlgebraicTopology.Singular.SheafCochain.singularCochainPresheafComplex R X)
+ 
+ /-- Let `R` be a commutative ring and `W ⊆ V` open subsets of a topological space `X`. This map
+@@ -56,5 +59,10 @@
+     ((evaluation (Opens X)ᵒᵖ AddCommGrpCat).map i.op) (.up ℕ)).app
+       (((TopCat.Sheaf.forget AddCommGrpCat X).mapHomologicalComplex (.up ℕ)).obj
+-        (singularCochainSheafComplex R X))
++        (_root_.OAI.AlgebraicTopology.Singular.SheafCochain.singularCochainSheafComplex R X))
+ 
+-end AlgebraicTopology.Singular
++end
++end
++
++end
++
++end OAI.AlgebraicTopology.Singular.SheafCochainOpenSections

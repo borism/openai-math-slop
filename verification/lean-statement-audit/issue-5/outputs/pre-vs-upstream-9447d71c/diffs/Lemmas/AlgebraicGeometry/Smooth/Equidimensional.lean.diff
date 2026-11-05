@@ -1,0 +1,9 @@
+--- upstream/Lemmas/AlgebraicGeometry/Smooth/Equidimensional.lean
++++ challenge/Lemmas/AlgebraicGeometry/Smooth/Equidimensional.lean
+@@ -18,5 +18,5 @@
+ public import HodgeConjecture.Lemmas.Topology.Dimension.Basic
+ public import Mathlib.AlgebraicGeometry.Morphisms.Smooth
+-public import Mathlib.Data.Complex.Basic
++public import Mathlib.Basic.Complex.Basic
+ 
+ import HodgeConjecture.Lemmas.AlgebraicGeometry.Cycle.Component.Dimension

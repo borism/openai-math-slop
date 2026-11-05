@@ -1,0 +1,41 @@
+--- upstream/Mathlib/AlgebraicGeometry/Over/Basic.lean
++++ challenge/Mathlib/AlgebraicGeometry/Over/Basic.lean
+@@ -13,10 +13,14 @@
+ See the License for the specific language governing permissions and
+ limitations under the License.
++
+ -/
+-module
+ 
+-public import Mathlib.AlgebraicGeometry.Scheme
++import Mathlib.AlgebraicGeometry.Scheme
+ 
+ import HodgeConjecture.Mathlib.CategoryTheory.ConcreteCategory.Notation
++
++namespace OAI.AlgebraicGeometry.Over.Basic
++
++open _root_.AlgebraicGeometry
+ 
+ /-!
+@@ -29,9 +33,9 @@
+ -/
+ 
+-@[expose] public section
++section
+ 
+-open CategoryTheory
++open _root_.CategoryTheory
+ 
+-namespace AlgebraicGeometry
++section
+ 
+ /-- The algebra structure on section rings of a scheme over an affine variety. -/
+@@ -41,3 +45,7 @@
+   (X.hom.appLE ⊤ U (by simp)).hom.comp (Scheme.ΓSpecIso ↧R).inv.hom |>.toAlgebra
+ 
+-end AlgebraicGeometry
++end
++
++end
++
++end OAI.AlgebraicGeometry.Over.Basic

@@ -1,0 +1,9 @@
+--- upstream/Lemmas/AlgebraicGeometry/Stratification/ClosedFiltration.lean
++++ challenge/Lemmas/AlgebraicGeometry/Stratification/ClosedFiltration.lean
+@@ -81,5 +81,5 @@
+     · have hlen : (reducedSmoothStratification f S).length =
+           (reducedSmoothStratification f (reducedClosedSingularRemainder f S)).length + 1 := by
+-        rw [reducedSmoothStratification, dif_neg hS, List.length_cons]
++        rw [reducedSmoothStratification, ite_eq_right hS, List.length_cons]
+       rw [hlen, reducedSmoothClosedFiltration_succ_start]
+       exact ih _ (reducedClosedSingularRemainder_lt f S hS)

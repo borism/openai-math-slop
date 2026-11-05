@@ -1,0 +1,139 @@
+--- upstream/Lemmas/Algebra/Homology/DerivedCategory/RightDerivedFunctorPlusNaturality.lean
++++ challenge/Lemmas/Algebra/Homology/DerivedCategory/RightDerivedFunctorPlusNaturality.lean
+@@ -2,10 +2,15 @@
+ Copyright 2026 The Formal Conjectures Authors.
+ Released under Apache 2.0 license as described in the file LICENSE.
++
+ -/
+-module
+ 
+ import HodgeConjecture.Mathlib.Algebra.Homology.Notation
+ 
+-public import Mathlib.Algebra.Homology.DerivedCategory.RightDerivedFunctorPlus
++import Mathlib.Algebra.Homology.DerivedCategory.RightDerivedFunctorPlus
++
++namespace OAI.Algebra.Homology.DerivedFunctorPlusNaturality
++
++open _root_.CategoryTheory
++open _root_.CategoryTheory.NatTrans
+ 
+ /-!
+@@ -18,9 +23,13 @@
+ -/
+ 
+-@[expose] public noncomputable section
++noncomputable section
+ 
+-open CategoryTheory
++open _root_.CategoryTheory
+ 
+-namespace CategoryTheory.NatTrans
++namespace CategoryTheory
++open _root_.CategoryTheory
++namespace NatTrans
++open _root_.CategoryTheory
++open _root_.CategoryTheory.NatTrans
+ 
+ variable {C D : Type*} [Category* C] [Category* D] [Abelian C] [Abelian D]
+@@ -40,10 +49,10 @@
+ @[simp]
+ theorem mapHomotopyCategoryPlus_id (F : C ⥤ D) [F.Additive] :
+-    mapHomotopyCategoryPlus (𝟙 F) = 𝟙 F.mapHomotopyCategoryPlus := rfl
++    _root_.OAI.Algebra.Homology.DerivedFunctorPlusNaturality.CategoryTheory.NatTrans.mapHomotopyCategoryPlus (𝟙 F) = 𝟙 F.mapHomotopyCategoryPlus := rfl
+ 
+ @[simp]
+ theorem mapHomotopyCategoryPlus_comp (α : F ⟶ G) (β : G ⟶ H) :
+-    mapHomotopyCategoryPlus (α ≫ β) =
+-      mapHomotopyCategoryPlus α ≫ mapHomotopyCategoryPlus β := rfl
++    _root_.OAI.Algebra.Homology.DerivedFunctorPlusNaturality.CategoryTheory.NatTrans.mapHomotopyCategoryPlus (α ≫ β) =
++      _root_.OAI.Algebra.Homology.DerivedFunctorPlusNaturality.CategoryTheory.NatTrans.mapHomotopyCategoryPlus α ≫ _root_.OAI.Algebra.Homology.DerivedFunctorPlusNaturality.CategoryTheory.NatTrans.mapHomotopyCategoryPlus β := rfl
+ 
+ variable [HasDerivedCategory C] [HasDerivedCategory D] [EnoughInjectives C]
+@@ -56,15 +65,15 @@
+     F.rightDerivedFunctorPlus ⟶ G.rightDerivedFunctorPlus :=
+   Functor.rightDerivedNatTrans F.rightDerivedFunctorPlus G.rightDerivedFunctorPlus
+-    F.rightDerivedFunctorPlusUnit G.rightDerivedFunctorPlusUnit
++    F.rightDerivedFunctorPlusUnith G.rightDerivedFunctorPlusUnith
+       (HomotopyCategory.Plus.quasiIso C)
+-        (Functor.whiskerRight α.mapHomotopyCategoryPlus DerivedCategory.Plus.Qh)
++        (Functor.whiskerRight (_root_.OAI.Algebra.Homology.DerivedFunctorPlusNaturality.CategoryTheory.NatTrans.mapHomotopyCategoryPlus α) DerivedCategory.Plus.Qh)
+ 
+ /-- Compatibility with the derived units on every bounded-below homotopy complex. -/
+ @[reassoc (attr := simp)]
+ theorem rightDerivedFunctorPlus_unit (α : F ⟶ G) :
+-    F.rightDerivedFunctorPlusUnit ≫
+-        Functor.whiskerLeft DerivedCategory.Plus.Qh α.rightDerivedFunctorPlus =
+-      Functor.whiskerRight α.mapHomotopyCategoryPlus DerivedCategory.Plus.Qh ≫
+-        G.rightDerivedFunctorPlusUnit :=
++    F.rightDerivedFunctorPlusUnith ≫
++        Functor.whiskerLeft DerivedCategory.Plus.Qh (_root_.OAI.Algebra.Homology.DerivedFunctorPlusNaturality.CategoryTheory.NatTrans.rightDerivedFunctorPlus α) =
++      Functor.whiskerRight (_root_.OAI.Algebra.Homology.DerivedFunctorPlusNaturality.CategoryTheory.NatTrans.mapHomotopyCategoryPlus α) DerivedCategory.Plus.Qh ≫
++        G.rightDerivedFunctorPlusUnith :=
+   Functor.rightDerivedNatTrans_fac _ _ _ _ _ _
+ 
+@@ -74,24 +83,29 @@
+ theorem rightDerivedFunctorPlus_unit_app (α : F ⟶ G)
+     (K : HomotopyCategory.Plus C) :
+-    F.rightDerivedFunctorPlusUnit.app K ≫
+-        α.rightDerivedFunctorPlus.app (DerivedCategory.Plus.Qh.obj K) =
+-      DerivedCategory.Plus.Qh.map (α.mapHomotopyCategoryPlus.app K) ≫
+-        G.rightDerivedFunctorPlusUnit.app K :=
++    F.rightDerivedFunctorPlusUnith.app K ≫
++        (_root_.OAI.Algebra.Homology.DerivedFunctorPlusNaturality.CategoryTheory.NatTrans.rightDerivedFunctorPlus α).app (DerivedCategory.Plus.Qh.obj K) =
++      DerivedCategory.Plus.Qh.map ((_root_.OAI.Algebra.Homology.DerivedFunctorPlusNaturality.CategoryTheory.NatTrans.mapHomotopyCategoryPlus α).app K) ≫
++        G.rightDerivedFunctorPlusUnith.app K :=
+   Functor.rightDerivedNatTrans_app _ _ _ _ _ _ _
+ 
+ @[simp]
+ theorem rightDerivedFunctorPlus_id (F : C ⥤ D) [F.Additive] :
+-    rightDerivedFunctorPlus (𝟙 F) = 𝟙 F.rightDerivedFunctorPlus := by
+-  simp [rightDerivedFunctorPlus]
++    _root_.OAI.Algebra.Homology.DerivedFunctorPlusNaturality.CategoryTheory.NatTrans.rightDerivedFunctorPlus (𝟙 F) = 𝟙 F.rightDerivedFunctorPlus := by
++  simp [_root_.OAI.Algebra.Homology.DerivedFunctorPlusNaturality.CategoryTheory.NatTrans.rightDerivedFunctorPlus]
+ 
+ @[simp]
+ theorem rightDerivedFunctorPlus_comp (α : F ⟶ G) (β : G ⟶ H) :
+-    rightDerivedFunctorPlus (α ≫ β) =
+-      rightDerivedFunctorPlus α ≫ rightDerivedFunctorPlus β := by
+-  simp [rightDerivedFunctorPlus]
++    _root_.OAI.Algebra.Homology.DerivedFunctorPlusNaturality.CategoryTheory.NatTrans.rightDerivedFunctorPlus (α ≫ β) =
++      _root_.OAI.Algebra.Homology.DerivedFunctorPlusNaturality.CategoryTheory.NatTrans.rightDerivedFunctorPlus α ≫ _root_.OAI.Algebra.Homology.DerivedFunctorPlusNaturality.CategoryTheory.NatTrans.rightDerivedFunctorPlus β := by
++  simp [_root_.OAI.Algebra.Homology.DerivedFunctorPlusNaturality.CategoryTheory.NatTrans.rightDerivedFunctorPlus]
+ 
+-end CategoryTheory.NatTrans
++end NatTrans
++end CategoryTheory
+ 
+-namespace CategoryTheory.NatIso
++namespace CategoryTheory
++open _root_.CategoryTheory
++namespace NatIso
++open _root_.CategoryTheory
++open _root_.CategoryTheory.NatIso
+ 
+ variable {C D : Type*} [Category* C] [Category* D] [Abelian C] [Abelian D]
+@@ -104,12 +118,17 @@
+ def rightDerivedFunctorPlus (e : F ≅ G) :
+     F.rightDerivedFunctorPlus ≅ G.rightDerivedFunctorPlus where
+-  hom := e.hom.rightDerivedFunctorPlus
+-  inv := e.inv.rightDerivedFunctorPlus
++  hom := (_root_.OAI.Algebra.Homology.DerivedFunctorPlusNaturality.CategoryTheory.NatTrans.rightDerivedFunctorPlus e.hom)
++  inv := (_root_.OAI.Algebra.Homology.DerivedFunctorPlusNaturality.CategoryTheory.NatTrans.rightDerivedFunctorPlus e.inv)
+   hom_inv_id := by
+-    rw [← NatTrans.rightDerivedFunctorPlus_comp, e.hom_inv_id,
+-      NatTrans.rightDerivedFunctorPlus_id]
++    rw [← _root_.OAI.Algebra.Homology.DerivedFunctorPlusNaturality.CategoryTheory.NatTrans.rightDerivedFunctorPlus_comp, e.hom_inv_id,
++      _root_.OAI.Algebra.Homology.DerivedFunctorPlusNaturality.CategoryTheory.NatTrans.rightDerivedFunctorPlus_id]
+   inv_hom_id := by
+-    rw [← NatTrans.rightDerivedFunctorPlus_comp, e.inv_hom_id,
+-      NatTrans.rightDerivedFunctorPlus_id]
++    rw [← _root_.OAI.Algebra.Homology.DerivedFunctorPlusNaturality.CategoryTheory.NatTrans.rightDerivedFunctorPlus_comp, e.inv_hom_id,
++      _root_.OAI.Algebra.Homology.DerivedFunctorPlusNaturality.CategoryTheory.NatTrans.rightDerivedFunctorPlus_id]
+ 
+-end CategoryTheory.NatIso
++end NatIso
++end CategoryTheory
++
++end
++
++end OAI.Algebra.Homology.DerivedFunctorPlusNaturality

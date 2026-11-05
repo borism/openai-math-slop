@@ -1,0 +1,174 @@
+--- upstream/Lemmas/AlgebraicTopology/LocalHomology/PuncturedEuclidean.lean
++++ challenge/Lemmas/AlgebraicTopology/LocalHomology/PuncturedEuclidean.lean
+@@ -15,4 +15,6 @@
+ -/
+ module
++
++public import HodgeConjecture.Mathlib.Geometry.Convex.StdSimplexMetric
+ 
+ public import HodgeConjecture.Lemmas.AlgebraicTopology.LocalHomology.Euclidean
+@@ -49,4 +51,6 @@
+ @[expose] public noncomputable section
+ 
++open scoped Convexity.StdSimplex
++
+ open CategoryTheory CategoryTheory.Limits PartialOrder
+ open scoped Simplicial
+@@ -73,5 +77,5 @@
+ 
+ lemma standardExtendedCoordinate_standardAffineSimplex
+-    (d : ℕ) (i : Fin (d + 1)) (t : stdSimplex ℝ (Fin (d + 1))) :
++    (d : ℕ) (i : Fin (d + 1)) (t : Convexity.StdSimplex ℝ (Fin (d + 1))) :
+     standardExtendedCoordinate d i (standardAffineSimplex d t) =
+       t i - t (Fin.last d) := by
+@@ -80,10 +84,10 @@
+   | cast i => simp [standardAffineSimplex]
+ 
+-lemma stdSimplex_exists_pos {m : ℕ} (t : stdSimplex ℝ (Fin (m + 1))) :
++lemma stdSimplex_exists_pos {m : ℕ} (t : Convexity.StdSimplex ℝ (Fin (m + 1))) :
+     ∃ i, 0 < t i := by
+   have hsum : (∑ i, (t : Fin (m + 1) → ℝ) i) ≠ 0 :=
+-    t.2.2.symm ▸ one_ne_zero
++    t.total_of_fintype.symm ▸ one_ne_zero
+   obtain ⟨i, -, hi⟩ := Finset.exists_ne_zero_of_sum_ne_zero hsum
+-  exact ⟨i, lt_of_le_of_ne (t.2.1 i) hi.symm⟩
++  exact ⟨i, lt_of_le_of_ne (t.weights_nonneg i) hi.symm⟩
+ 
+ lemma continuous_standardExtendedCoordinate (d : ℕ) (i : Fin (d + 1)) :
+@@ -417,5 +421,5 @@
+   classical
+   intro hall
+-  let t : stdSimplex ℝ (Fin (n.unop.len + 1)) := stdSimplex.barycenter
++  let t : Convexity.StdSimplex ℝ (Fin (n.unop.len + 1)) := Convexity.StdSimplex.barycenter
+   let p : (puncturedPair ℝ d).snd :=
+     ((puncturedPair ℝ d).snd.toSSetObjEquiv n x.1) t
+@@ -470,5 +474,5 @@
+     (puncturedPair ℝ d).snd (standardPuncturedFacetCover d i) x.1).mp hi.2
+   let f : q.unop ⟶ SimplexCategory.mk n := SSet.stdSimplex.objEquiv y
+-  refine ⟨stdSimplex.map f t, ?_⟩
++  refine ⟨Convexity.StdSimplex.map f t, ?_⟩
+   have hy : y = SSet.stdSimplex.objEquiv.symm f :=
+     (SSet.stdSimplex.objEquiv.symm_apply_apply y).symm
+@@ -580,5 +584,5 @@
+     ∀ a ∈ A.finset,
+       ((puncturedPair ℝ d).snd.toSSetObjEquiv _ x.1)
+-        (stdSimplex.vertex a.down) ∈
++        (Convexity.StdSimplex.single a.down) ∈
+         standardPuncturedFacetCover d i
+ 
+@@ -594,5 +598,5 @@
+   exact (singularSimplex_mem_range_subset
+     (puncturedPair ℝ d).snd (standardPuncturedFacetCover d i) x.1).mp hi.2
+-    ⟨stdSimplex.vertex a.down, rfl⟩
++    ⟨Convexity.StdSimplex.single a.down, rfl⟩
+ 
+ lemma standardFacetCarrier_subset_atFace (d : ℕ) {n : ℕ}
+@@ -608,5 +612,5 @@
+   exact (singularSimplex_mem_range_subset
+     (puncturedPair ℝ d).snd (standardPuncturedFacetCover d i) x.1).mp hi.2
+-    ⟨stdSimplex.vertex a.down, rfl⟩
++    ⟨Convexity.StdSimplex.single a.down, rfl⟩
+ 
+ lemma standardFacetCarrierAtFace_ne_univ (d : ℕ) {n : ℕ}
+@@ -620,5 +624,5 @@
+   let p : (puncturedPair ℝ d).snd :=
+     ((puncturedPair ℝ d).snd.toSSetObjEquiv _ x.1)
+-      (stdSimplex.vertex a.down)
++      (Convexity.StdSimplex.single a.down)
+   apply not_forall_mem_standardPuncturedFacetCover d p
+   intro i
+@@ -809,11 +813,11 @@
+       (((coverSmallSingularSubcomplex
+         (puncturedPair ℝ d).snd (standardPuncturedFacetCover d) : SSet).δ i x).1))
+-        (stdSimplex.vertex a) =
++        (Convexity.StdSimplex.single a) =
+       ((puncturedPair ℝ d).snd.toSSetObjEquiv _ x.1)
+-        (stdSimplex.vertex (i.succAbove a)) := by
++        (Convexity.StdSimplex.single (i.succAbove a)) := by
+   change ((puncturedPair ℝ d).snd.toSSetObjEquiv _
+       ((TopCat.toSSet.obj (puncturedPair ℝ d).snd).δ i x.1))
+-        (stdSimplex.vertex a) = _
+-  rw [TopCat.toSSetObjEquiv_δ_apply, stdSimplex.map_vertex]
++        (Convexity.StdSimplex.single a) = _
++  rw [TopCat.toSSetObjEquiv_δ_apply, Convexity.StdSimplex.map_single]
+ 
+ /-- Vertex carriers commute exactly with taking a codimension-one face. -/
+@@ -931,5 +935,5 @@
+         standardFacetCarrierComponent d n =
+       standardFacetCarrierSimplexChain d n x :=
+-  Sigma.ι_desc _ _
++  Sigma.ι_comp_desc _ _
+ 
+ lemma standardFacetCarrierComponent_comm_d (d n : ℕ) :
+@@ -995,5 +999,5 @@
+         standardPuncturedFacetCover d i := by
+   rintro _ ⟨t, rfl⟩
+-  let w := stdSimplex.map y.1 t
++  let w := Convexity.StdSimplex.map y.1 t
+   obtain ⟨j, hj⟩ := stdSimplex_exists_pos w
+   refine ⟨j, ?_⟩
+@@ -1271,5 +1275,5 @@
+       standardFacetCarrierDiscrepancyComponent d n =
+     standardFacetCarrierDiscrepancySimplexChain d n x :=
+-  Sigma.ι_desc _ _
++  Sigma.ι_comp_desc _ _
+ 
+ lemma standardFacetCarrierDiscrepancyFaces_comp_inclusion
+@@ -1414,5 +1418,5 @@
+       standardFacetCarrierPrismComponent d P n =
+     standardFacetCarrierPrismSimplexChain d P n x :=
+-  Sigma.ι_desc _ _
++  Sigma.ι_comp_desc _ _
+ 
+ lemma standardFacetCarrierPrismFaces_comp_inclusion
+@@ -1797,5 +1801,5 @@
+         (standardPuncturedFacetIntersectionSubspace d I))).chainComplex
+           (AddCommGrpCat.of ℤ)).d (n + 2) (n + 1) = z := by
+-  rw [standardPuncturedFacetIntersectionIntegralTotalCycleFiller, dif_pos hz]
++  rw [standardPuncturedFacetIntersectionIntegralTotalCycleFiller, dite_eq_left hz]
+   exact Classical.choose_spec
+     (exists_standardPuncturedFacetIntersection_integralCycleFiller
+@@ -2139,26 +2143,26 @@
+     ((puncturedPair ℝ d).snd.toSSetObjEquiv _
+       ((standardAffineBoundarySimplicialMap d).app _ y))
+-        (stdSimplex.vertex a) ∈ standardPuncturedFacetCover d i ↔
++        (Convexity.StdSimplex.single a) ∈ standardPuncturedFacetCover d i ↔
+       i ≠ y.1 a := by
+   change (∃ j : Fin (d + 1),
+     standardExtendedCoordinate d i
+-        (standardAffineSimplex d (stdSimplex.map y.1 (stdSimplex.vertex a))) <
++        (standardAffineSimplex d (Convexity.StdSimplex.map y.1 (Convexity.StdSimplex.single a))) <
+       standardExtendedCoordinate d j
+-        (standardAffineSimplex d (stdSimplex.map y.1 (stdSimplex.vertex a)))) ↔ _
+-  rw [stdSimplex.map_vertex]
++        (standardAffineSimplex d (Convexity.StdSimplex.map y.1 (Convexity.StdSimplex.single a)))) ↔ _
++  rw [Convexity.StdSimplex.map_single]
+   simp only [standardExtendedCoordinate_standardAffineSimplex,
+     sub_lt_sub_iff_right]
+   constructor
+   · rintro ⟨j, hj⟩ rfl
+-    have hle : (stdSimplex.vertex (y.1 a) :
+-        stdSimplex ℝ (Fin (d + 1))) j ≤ 1 :=
+-      stdSimplex.le_one _ j
+-    have hone : (stdSimplex.vertex (y.1 a) :
+-        stdSimplex ℝ (Fin (d + 1))) (y.1 a) = 1 := by simp
++    have hle : (Convexity.StdSimplex.single (y.1 a) :
++        Convexity.StdSimplex ℝ (Fin (d + 1))) j ≤ 1 :=
++      Convexity.StdSimplex.weights_apply_le_one _ j
++    have hone : (Convexity.StdSimplex.single (y.1 a) :
++        Convexity.StdSimplex ℝ (Fin (d + 1))) (y.1 a) = 1 := by simp
+     rw [hone] at hj
+     exact (not_lt_of_ge hle) hj
+   · intro h
+     refine ⟨y.1 a, ?_⟩
+-    simp [stdSimplex.vertex, h]
++    simp [Convexity.StdSimplex.single, h]
+ 
+ lemma standardAffineBoundarySmall_vertex_mem_facetCover_iff
+@@ -2167,5 +2171,5 @@
+     ((puncturedPair ℝ d).snd.toSSetObjEquiv _
+       ((standardAffineBoundaryToFacetSmall d).app _ y).1)
+-        (stdSimplex.vertex a) ∈ standardPuncturedFacetCover d i ↔
++        (Convexity.StdSimplex.single a) ∈ standardPuncturedFacetCover d i ↔
+       i ≠ y.1 a :=
+   standardAffineBoundary_vertex_mem_facetCover_iff d n y a i

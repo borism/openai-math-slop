@@ -1,0 +1,10 @@
+--- upstream/Lemmas/AlgebraicTopology/Singular/Excision/Field.lean
++++ challenge/Lemmas/AlgebraicTopology/Singular/Excision/Field.lean
+@@ -363,7 +363,4 @@
+     SSet.chainComplexFunctor]
+   apply +allowSynthFailures Functor.map_mono
+-  apply +allowSynthFailures Functor.map_mono
+-  dsimp [SSet, SimplicialObject.whiskering, SimplicialObject]
+-  infer_instance
+ 
+ /-- The integral subdivision-and-prism homotopy transported to rational coefficients: the

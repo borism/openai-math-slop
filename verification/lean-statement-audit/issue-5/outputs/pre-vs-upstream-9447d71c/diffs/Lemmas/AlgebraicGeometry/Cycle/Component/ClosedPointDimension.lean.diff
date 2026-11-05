@@ -1,0 +1,16 @@
+--- upstream/Lemmas/AlgebraicGeometry/Cycle/Component/ClosedPointDimension.lean
++++ challenge/Lemmas/AlgebraicGeometry/Cycle/Component/ClosedPointDimension.lean
+@@ -80,5 +80,5 @@
+         apply Order.height_eq_of_strictMono
+           (PrimeSpectrum.comap (algebraMap (MvPolynomial (Fin n) k) A))
+-          (fun _ _ hQQ' ↦ Ideal.IsIntegral.comap_lt_comap hQQ')
++          (fun _ _ hQQ' ↦ Ideal.IsIntegral.under_lt_under hQQ')
+         intro Q q hq
+         have hq' : q.asIdeal < Q.asIdeal.under (MvPolynomial (Fin n) k) := by
+@@ -100,5 +100,5 @@
+   rw [PolynomialCatenary.ringKrullDim_eq_of_isIntegral_of_injective hg,
+     MvPolynomial.ringKrullDim_of_isNoetherianRing,
+-    ringKrullDim_eq_zero_of_field, Nat.card_fin, hheight,
++    ringKrullDim_eq_zero_of_field, ENat.card_eq_coe_fintype_card, Fintype.card_fin, hheight,
+     MvPolynomial.height_eq_fin_of_isMaximal k n (P.under (MvPolynomial (Fin n) k))]
+   norm_num

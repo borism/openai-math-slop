@@ -1,0 +1,13 @@
+== a
+sources=176 annotated=0 errors=0
+== b
+sources=176 annotated=9 errors=0
+  other | A Complete Local Domain without a Small Cohen–Macaulay Module
+  other | Bounded recovery for modular spectral averages
+  other | Critical honeycomb chords with prescribed boundary endpoints
+  other | Integral points on character varieties of curves
+  other | Strict convexity and differentiability of the planar exponential first-passage limit shape
+  formalizes | The Grothendieck homotopy hypothesis via elementary expansions
+  other | The trace cone classifies Razak–Jacelon stabilizations
+  other | Threshold parallel repetition for finite-dimensional entangled games
+  other | Uniform Cartier sections for Fano type contractions

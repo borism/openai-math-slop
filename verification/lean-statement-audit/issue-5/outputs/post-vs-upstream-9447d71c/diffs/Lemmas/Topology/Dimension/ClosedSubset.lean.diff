@@ -1,0 +1,37 @@
+--- upstream/Lemmas/Topology/Dimension/ClosedSubset.lean
++++ challenge/Lemmas/Topology/Dimension/ClosedSubset.lean
+@@ -2,8 +2,10 @@
+ Copyright 2026 The Formal Conjectures Authors.
+ Released under Apache 2.0 license as described in the file LICENSE.
++
+ -/
+-module
+ 
+-public import Mathlib.Topology.KrullDimension
++import Mathlib.Topology.KrullDimension
++
++namespace OAI.Topology.Dimension.ClosedSubset
+ 
+ /-!
+@@ -16,7 +18,7 @@
+ -/
+ 
+-@[expose] public section
++section
+ 
+-open Topology TopologicalSpace Order
++open _root_.Topology _root_.TopologicalSpace _root_.Order
+ 
+ variable {X : Type*} [TopologicalSpace X] [IrreducibleSpace X]
+@@ -44,4 +46,10 @@
+     exact hproper (Set.Subset.antisymm (Set.subset_univ S) hsub)
+   have hle := (LTSeries.length_le_krullDim ((l.map φ hφ).snoc topX hlast)).trans hdim
+-  have hnat : l.length + 1 ≤ n := by exact_mod_cast hle
++  have hnat : l.length + 1 ≤ n := by
++    have hlen : ((l.length + 1 : ℕ) : WithBot ℕ∞) ≤ n := by simpa using hle
++    exact ENat.natCast_le_natCast.mp (WithBot.coe_le_coe.mp hlen)
+   omega
++
++end
++
++end OAI.Topology.Dimension.ClosedSubset

@@ -1,0 +1,78 @@
+--- upstream/Mathlib/Algebra/Homology/DerivedCategory/KInjectiveHom.lean
++++ challenge/Mathlib/Algebra/Homology/DerivedCategory/KInjectiveHom.lean
+@@ -2,12 +2,17 @@
+ Copyright 2026 The Formal Conjectures Authors.
+ Released under Apache 2.0 license as described in the file LICENSE.
++
+ -/
+-module
+ 
+-public import Mathlib.Algebra.Homology.DerivedCategory.KInjective
+-public import Mathlib.Algebra.Homology.HomotopyCategory.HomComplexShift
+-public import HodgeConjecture.Mathlib.Algebra.Homology.HomComplexPrecomp
++import Mathlib.Algebra.Homology.DerivedCategory.KInjective
++import Mathlib.Algebra.Homology.HomotopyCategory.HomComplexShift
++import HodgeConjecture.Mathlib.Algebra.Homology.HomComplexPrecomp
+ 
+ import HodgeConjecture.Mathlib.Algebra.Homology.Notation
++
++namespace OAI.Algebra.Homology.DerivedCategoryInjectiveHom
++
++open _root_.CategoryTheory
++open _root_.CochainComplex
+ 
+ /-!
+@@ -18,11 +23,12 @@
+ -/
+ 
+-@[expose] public noncomputable section
++noncomputable section
+ 
+-open CategoryTheory Limits
++open _root_.CategoryTheory Limits
+ 
+ universe u v
+ 
+ namespace CategoryTheory
++open _root_.CategoryTheory
+ 
+ /-- In a preadditive category, let `eA : A ≅ A'` and `eB : B ≅ B'` be isomorphisms. This additive
+@@ -44,4 +50,5 @@
+ 
+ namespace CochainComplex
++open _root_.CochainComplex
+ 
+ /-- Let `K` and `L` be integer-indexed cochain complexes in an abelian category, with `L`
+@@ -69,5 +76,5 @@
+         DerivedCategory.Qh.obj
+           ((HomotopyCategory.quotient C ℤᵘᵖ).obj (L⟦n⟧))) :=
+-    isoHomCongrAddEquiv qSource qTarget
++    _root_.OAI.Algebra.Homology.DerivedCategoryInjectiveHom.CategoryTheory.isoHomCongrAddEquiv qSource qTarget
+   let qhMap :
+       (((HomotopyCategory.quotient C ℤᵘᵖ).obj K ⟶
+@@ -106,5 +113,5 @@
+     ShiftedHom.map (CochainComplex.HomComplex.Cocycle.equivHomShift.symm z)
+       DerivedCategory.Q := by
+-  dsimp [kInjectiveDerivedHomAddEquivCohomologyClass, isoHomCongrAddEquiv, ShiftedHom.map]
++  dsimp [kInjectiveDerivedHomAddEquivCohomologyClass, _root_.OAI.Algebra.Homology.DerivedCategoryInjectiveHom.CategoryTheory.isoHomCongrAddEquiv, ShiftedHom.map]
+   rw [CochainComplex.HomComplex.CohomologyClass.toHom_mk]
+   have h := (DerivedCategory.quotientCompQhIso C).hom.naturality
+@@ -119,5 +126,5 @@
+     (x : ShiftedHom (DerivedCategory.Q.obj A) (DerivedCategory.Q.obj L) n) :
+     kInjectiveDerivedHomAddEquivCohomologyClass A' L n (DerivedCategory.Q.map g ≫ x) =
+-      CochainComplex.HomComplex.precompClass g L n
++      _root_.OAI.Algebra.Homology.HomComplexPrecomp.CochainComplex.HomComplex.precompClass g L n
+         (kInjectiveDerivedHomAddEquivCohomologyClass A L n x) := by
+   apply (kInjectiveDerivedHomAddEquivCohomologyClass A' L n).symm.injective
+@@ -125,5 +132,5 @@
+   obtain ⟨x, rfl⟩ := (kInjectiveDerivedHomAddEquivCohomologyClass A L n).symm.surjective x
+   obtain ⟨z, rfl⟩ := x.mk_surjective
+-  rw [AddEquiv.apply_symm_apply, CochainComplex.HomComplex.precompClass_mk,
++  rw [AddEquiv.apply_symm_apply, _root_.OAI.Algebra.Homology.HomComplexPrecomp.CochainComplex.HomComplex.precompClass_mk,
+     kInjectiveDerivedHomAddEquivCohomologyClass_symm_mk,
+     kInjectiveDerivedHomAddEquivCohomologyClass_symm_mk,
+@@ -134,2 +141,4 @@
+ 
+ end
++
++end OAI.Algebra.Homology.DerivedCategoryInjectiveHom

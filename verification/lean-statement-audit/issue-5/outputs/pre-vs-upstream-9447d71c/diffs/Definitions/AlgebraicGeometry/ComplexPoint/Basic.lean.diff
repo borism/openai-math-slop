@@ -1,0 +1,48 @@
+--- upstream/Definitions/AlgebraicGeometry/ComplexPoint/Basic.lean
++++ challenge/Definitions/AlgebraicGeometry/ComplexPoint/Basic.lean
+@@ -142,6 +142,6 @@
+     (z : Point R X) (hz : z ∈ overOpen V) :
+     evaluate U s z = evaluate V (X.left.presheaf.map (homOfLE hVU).op s) z := by
+-  rw [evaluate, dif_pos (show z.underlying ∈ U from hVU hz), evaluate,
+-    dif_pos (show z.underlying ∈ V from hz)]
++  rw [evaluate, dite_eq_left (show z.underlying ∈ U from hVU hz), evaluate,
++    dite_eq_left (show z.underlying ∈ V from hz)]
+   congr 1
+   exact (X.left.presheaf.germ_res_apply (homOfLE hVU) z.underlying hz s).symm
+@@ -154,5 +154,5 @@
+     (z : Point R X) (hz : z ∈ overOpen U) :
+     z ∈ overOpen (X.left.basicOpen s) ↔ IsUnit (evaluate U s z) := by
+-  rw [evaluate, dif_pos (show z.underlying ∈ U from hz)]
++  rw [evaluate, dite_eq_left (show z.underlying ∈ U from hz)]
+   rw [isUnit_map_iff z.stalkHom.hom]
+   exact X.left.mem_basicOpen s z.underlying hz
+@@ -168,5 +168,5 @@
+ lemma evaluationHom_apply (U : X.left.Opens) (z : OverOpen (X := X) U)
+     (s : Γ(X.left, U)) : evaluationHom U z s = evaluate U s z.1 := by
+-  rw [evaluate, dif_pos z.2]
++  rw [evaluate, dite_eq_left z.2]
+   rfl
+ 
+@@ -193,5 +193,5 @@
+     have hmap := congrArg ψ hta
+     rw [evaluate_res (X.left.basicOpen_le f) f z hz, evaluate_res (X.left.basicOpen_le f) a z hz]
+-    simp only [evaluate, dif_pos hz']
++    simp only [evaluate, dite_eq_left hz']
+     change ψ t * ψ (algebraMap _ _ f) ^ k = ψ (algebraMap _ _ a)
+     simpa using hmap
+@@ -220,11 +220,11 @@
+   by_cases hx : z.underlying ∈ f.left ⁻¹ᵁ U
+   · have hy : f.left z.underlying ∈ U := hx
+-    rw [evaluate, dif_pos (show (map f z).underlying ∈ U from hy), evaluate,
+-      dif_pos (show z.underlying ∈ f.left ⁻¹ᵁ U from hx), stalkHom_map]
++    rw [evaluate, dite_eq_left (show (map f z).underlying ∈ U from hy), evaluate,
++      dite_eq_left (show z.underlying ∈ f.left ⁻¹ᵁ U from hx), stalkHom_map]
+     exact congrArg (CommRingCat.Hom.hom z.stalkHom)
+       (f.left.germ_stalkMap_apply U z.underlying hy s)
+   · have hy : f.left z.underlying ∉ U := hx
+-    rw [evaluate, dif_neg (show ¬ (map f z).underlying ∈ U from hy), evaluate,
+-      dif_neg (show ¬ z.underlying ∈ f.left ⁻¹ᵁ U from hx)]
++    rw [evaluate, dite_eq_right (show ¬ (map f z).underlying ∈ U from hy), evaluate,
++      dite_eq_right (show ¬ z.underlying ∈ f.left ⁻¹ᵁ U from hx)]
+ 
+ section Topology

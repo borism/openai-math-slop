@@ -1,0 +1,9 @@
+--- upstream/Lemmas/AlgebraicTopology/LocalHomology/ChartFundamentalClassInvariance.lean
++++ challenge/Lemmas/AlgebraicTopology/LocalHomology/ChartFundamentalClassInvariance.lean
+@@ -81,5 +81,5 @@
+       (Fin d → ℂ) → (Fin d → ℂ))
+       ((r : ℂ) • ContinuousLinearMap.id ℂ (Fin d → ℂ)) 0 := by
+-  rw [OpenPartialHomeomorph.univBall, dif_pos hr]
++  rw [OpenPartialHomeomorph.univBall, dite_eq_left hr]
+   apply ((hasFDerivAt_univUnitBall_formula_normed d).const_smul (r : ℂ)).add_const c
+     |>.congr_of_eventuallyEq

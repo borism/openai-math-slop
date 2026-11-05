@@ -1,0 +1,9 @@
+--- upstream/Lemmas/AlgebraicTopology/LocalHomology/NormalProjectionCoclass.lean
++++ challenge/Lemmas/AlgebraicTopology/LocalHomology/NormalProjectionCoclass.lean
+@@ -47,5 +47,5 @@
+     (OpenPartialHomeomorph.univBall (a, (0 : Fin c → ℂ)) r (0, v)).2 =
+       OpenPartialHomeomorph.univBall (0 : Fin c → ℂ) r v := by
+-  rw [OpenPartialHomeomorph.univBall, dif_pos hr, OpenPartialHomeomorph.univBall, dif_pos hr]
++  rw [OpenPartialHomeomorph.univBall, dite_eq_left hr, OpenPartialHomeomorph.univBall, dite_eq_left hr]
+   change (r • ((Real.sqrt (1 + ‖((0 : E), v)‖ ^ 2))⁻¹ • ((0 : E), v)) + (a, 0)).2 =
+     r • ((Real.sqrt (1 + ‖v‖ ^ 2))⁻¹ • v) + 0

@@ -1,0 +1,37 @@
+--- upstream/Mathlib/Topology/Category/TopPair.lean
++++ challenge/Mathlib/Topology/Category/TopPair.lean
+@@ -13,8 +13,12 @@
+ See the License for the specific language governing permissions and
+ limitations under the License.
++
+ -/
+-module
+ 
+-public import Mathlib.Topology.Category.TopPair
++import Mathlib.Topology.Category.TopPair
++
++namespace OAI.Topology.Category.TopPairOf
++
++open _root_.TopPair
+ 
+ /-!
+@@ -28,9 +32,10 @@
+ universe u
+ 
+-open CategoryTheory
++open _root_.CategoryTheory
+ 
+-@[expose] public noncomputable section
++noncomputable section
+ 
+ namespace TopPair
++open _root_.TopPair
+ 
+ variable {X Y : TopCat.{u}} {A : Set X} {B : Set Y}
+@@ -71,2 +76,6 @@
+ 
+ end TopPair
++
++end
++
++end OAI.Topology.Category.TopPairOf
