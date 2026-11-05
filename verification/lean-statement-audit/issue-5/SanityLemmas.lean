@@ -1,6 +1,9 @@
 /-
   ============================================================================
-  UNCOMPILED DRAFT. No Lean toolchain was available to the auditor.
+  ELABORATED, NOT PROVED. Every statement below type-checks against the real
+  challenge definitions (Lean 4.34.1, Mathlib d13f23b, openai/math 4eaee8754):
+  `lake env lean` reports 0 errors, and each theorem has a `sorry` warning.
+  See ../issue-5/outputs/sanity-lemmas-elaboration.txt.
   ============================================================================
   These are proposed *statements*, all ending in `sorry`. They are meant to be
   added next to the Comparator challenge (as extra targets, or in a separate
@@ -13,8 +16,6 @@
     .../HodgeConjecture/Definitions/AlgebraicGeometry/Hodge/Filtration.lean
     .../HodgeConjecture/Definitions/AlgebraicGeometry/Cycle/FundamentalClass.lean
     lean/ComparatorChallenges/CoarseAssembly.lean
-  Expect to fix elaboration details (coercions ℕ→ℤ, universe levels, instance
-  arguments, `letI := separatedMetric o`). The mathematical content is the point.
 
   Status of each statement: TRUE in standard mathematics unless marked
   otherwise. For each one, the comment says which collapse it excludes.
@@ -127,16 +128,17 @@ theorem analyticFamilyIndex_condition {Q : ℕ → Type} [∀ i, MetricSpace (Q 
     {r : ℝ} (o : ∀ i, Q i) (hr : 0 ≤ r)
     (χ : ∀ i, C(Point (Q i) r, ℂ) →⋆ₐ[ℂ] ℂ) (η : ∀ i, C(Point (Q i) r, ℂ) →⋆ₙₐ[ℂ] A) :
     letI := separatedMetric o
+    letI : Ring (Unitization ℂ (algebra (X := Sigma Q) (H := lp (fun _ : ℕ => ℂ) 2))) :=
+      inferInstance
     relations A ≤ (analyticFamilyIndexFree o hr χ η).ker := by sorry
 
 /-- B2. The same for `separatedIndexFamily` (CoarseAssembly.lean:6226-6230). Its `else` branch
 is the zero family. The solution-side counterpart is `separatedIndexFamily_atScale`
 (lean/OAI/Topology/CoarseAssembly/SeparatedCoarseAssembly.lean:22). -/
-theorem separatedIndexFamily_compatible {Q : ℕ → Type} [∀ i, MetricSpace (Q i)]
-    [∀ i, Fintype (Q i)] [∀ i, DecidableEq (Q i)] (o : ∀ i, Q i) :
+theorem separatedIndexFamily_atScale_eq {Q : ℕ → Type} [∀ i, MetricSpace (Q i)]
+    [∀ i, Fintype (Q i)] [∀ i, DecidableEq (Q i)] (o : ∀ i, Q i) (n : ℕ) :
     letI := separatedMetric o
-    ∀ r s h a, separatedRipsIndex o s (Nat.cast_nonneg s) ((coarsening (Sigma Q)).map r s h a) =
-      separatedRipsIndex o r (Nat.cast_nonneg r) a := by sorry
+    (separatedIndexFamily o).atScale n = separatedRipsIndex o n (Nat.cast_nonneg n) := by sorry
 
 /-- B3. The per-scale index is the standard Higson–Roe boundary map. The challenge uses the
 rational unitary `-(F - i)²(F + i)⁻²` (`rationalBoundaryUnitary`, CoarseAssembly.lean:2233)
@@ -147,10 +149,11 @@ by `multiplierBoundaryClass` (CoarseAssembly.lean:3978). -/
 theorem multiplierBoundaryClass_eq_exp {X H : Type} [Fintype X] [DecidableEq X]
     [PseudoMetricSpace X] [NormedAddCommGroup H] [InnerProductSpace ℂ H] [CompleteSpace H]
     (F : multiplierAlgebra (X := X) (H := H)) (hF : IsSelfAdjoint F)
-    (hdefect : F.val ^ 2 - 1 ∈ algebra (X := X) (H := H)) :
+    (hdefect : F.val ^ 2 - 1 ∈ algebra (X := X) (H := H))
+    (hS : IsClosed ((algebra (X := X) (H := H)) : Set (Operator X H))) :
     multiplierBoundaryClass F hF hdefect =
-      OperatorKTheory.relativeClass (algebra (X := X) (H := H))
-        ⟨-NormedSpace.exp ℂ ((Real.pi * Complex.I) • F.val), sorry⟩ sorry := by sorry
+      OperatorKTheory.relativeClass (hS := hS) (algebra (X := X) (H := H))
+        ⟨-NormedSpace.exp ((Real.pi * Complex.I) • F.val), sorry⟩ sorry := by sorry
 
 /-- B4. Non-collapse of the final map. `bounded_geometry_graph_counterexample_unconditional`
 asserts `constructedCoarseAssembly α = 0` and non-injectivity. Both are trivial if
