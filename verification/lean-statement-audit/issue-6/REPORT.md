@@ -152,4 +152,4 @@ Lean 4.34.1, Mathlib `d13f23b`, openai/math `4eaee8754`. The import closure of `
 - **High:** tasks 1, 3 and 5.
 - **Task 2:** high that the statement matches and the static scan is clean.
 - **Task 4:** high that the mathematics is right; no proof in the sketch is checked.
-- The subagent review was static analysis and elaboration only. The later Lean check above built and kernel-checked the ω ≤ 9/4 closure; nothing else in lean/OAI was built.
+- The subagent review was static analysis and elaboration only. The later Lean check above built and kernel-checked the ω ≤ 9/4 closure; no other issue-6 target was built.
