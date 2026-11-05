@@ -1,0 +1,57 @@
+--- upstream/Mathlib/Algebra/PolynomialCatenary.lean
++++ challenge/Mathlib/Algebra/PolynomialCatenary.lean
+@@ -66,5 +66,5 @@
+   · refine WithBot.coe_le_coe.mpr (iSup_le fun l ↦ ?_)
+     let mono : StrictMono (PrimeSpectrum.comap (algebraMap R S)) := fun _ _ h ↦
+-      Ideal.IsIntegral.comap_lt_comap h
++      Ideal.IsIntegral.under_lt_under h
+     rw [← LTSeries.map_length l _ mono]
+     exact le_iSup (fun p ↦ (p.length : ℕ∞)) (l.map _ mono)
+@@ -86,5 +86,5 @@
+   have hf : f.IsIntegral := hg.quotient_isIntegral hgP
+   have hbot : (⊥ : Ideal (Polynomial R ⧸ P)).IsMaximal := by
+-    apply Ideal.isMaximal_of_isIntegral_of_isMaximal_comap' f hf ⊥
++    apply Ideal.isMaximal_of_isIntegral_of_isMaximal_comap f hf ⊥
+     convert hP using 1
+     ext x
+@@ -178,5 +178,5 @@
+   rw [← natDegree_finSuccEquiv, monomial_eq, Finsupp.prod_pow v fun a ↦ X a]
+   simp only [Fin.prod_univ_succ, Fin.sum_univ_succ, map_mul, map_prod, map_pow,
+-    AlgEquiv.ofAlgHom_apply, MvPolynomial.aeval_C, MvPolynomial.aeval_X, if_pos, Fin.succ_ne_zero,
++    AlgEquiv.ofAlgHom_apply, MvPolynomial.aeval_C, MvPolynomial.aeval_X, ite_eq_left, Fin.succ_ne_zero,
+     ite_false, one_smul, map_add, finSuccEquiv_X_zero, finSuccEquiv_X_succ, algebraMap_eq]
+   have h (i : Fin n) :
+@@ -192,6 +192,6 @@
+ /-- Distinct supported monomials acquire distinct degrees in the distinguished variable. -/
+ lemma degreeOf_t_ne_of_ne (hv : v ∈ f.support) (hw : w ∈ f.support) (ne : v ≠ w) :
+-    (T f <| monomial v <| coeff v f).degreeOf 0 ≠
+-    (T f <| monomial w <| coeff w f).degreeOf 0 := by
++    (T f <| monomial v <| f.coeff v).degreeOf 0 ≠
++    (T f <| monomial w <| f.coeff w).degreeOf 0 := by
+   rw [degreeOf_zero_t _ _ <| mem_support_iff.mp hv,
+     degreeOf_zero_t _ _ <| mem_support_iff.mp hw]
+@@ -201,6 +201,6 @@
+ 
+ lemma leadingCoeff_finSuccEquiv_t :
+-    (finSuccEquiv k n ((T f) ((monomial v) (coeff v f)))).leadingCoeff =
+-    algebraMap k _ (coeff v f) := by
++    (finSuccEquiv k n ((T f) ((monomial v) (f.coeff v)))).leadingCoeff =
++    algebraMap k _ (f.coeff v) := by
+   rw [monomial_eq, Finsupp.prod_fintype]
+   · simp only [map_mul, map_prod, leadingCoeff_mul, leadingCoeff_prod]
+@@ -212,5 +212,5 @@
+       by_cases h : j = 0
+       · simp [h, finSuccEquiv_apply]
+-      · simp only [aeval_eq_bind₁, bind₁_X_right, if_neg h, one_smul, map_add, map_pow]
++      · simp only [aeval_eq_bind₁, bind₁_X_right, ite_eq_right h, one_smul, map_add, map_pow]
+         obtain ⟨i, rfl⟩ := Fin.exists_succ_eq.mpr h
+         simp [finSuccEquiv_X_succ, finSuccEquiv_X_zero, add_comm]
+@@ -222,6 +222,6 @@
+     IsUnit (finSuccEquiv k n (T f f)).leadingCoeff := by
+   obtain ⟨v, vin, vs⟩ := Finset.exists_max_image f.support
+-    (fun v ↦ (T f ((monomial v) (coeff v f))).degreeOf 0) (support_nonempty.mpr fne)
+-  set h := fun w ↦ (MvPolynomial.monomial w) (coeff w f)
++    (fun v ↦ (T f ((monomial v) (f.coeff v))).degreeOf 0) (support_nonempty.mpr fne)
++  set h := fun w ↦ (MvPolynomial.monomial w) (f.coeff w)
+   simp only [← natDegree_finSuccEquiv] at vs
+   replace vs : ∀ x ∈ f.support \ {v}, (finSuccEquiv k n ((T f) (h x))).degree <

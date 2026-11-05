@@ -1,0 +1,89 @@
+--- upstream/Definitions/AlgebraicGeometry/ProjectiveSpace.lean
++++ challenge/Definitions/AlgebraicGeometry/ProjectiveSpace.lean
+@@ -13,13 +13,17 @@
+ See the License for the specific language governing permissions and
+ limitations under the License.
++
+ -/
+-module
+ 
+-public import Mathlib.AlgebraicGeometry.Morphisms.Proper
+-public import Mathlib.AlgebraicGeometry.ProjectiveSpectrum.Scheme
+-public import Mathlib.RingTheory.MvPolynomial.Homogeneous
++import Mathlib.AlgebraicGeometry.Morphisms.Proper
++import Mathlib.AlgebraicGeometry.ProjectiveSpectrum.Scheme
++import Mathlib.RingTheory.MvPolynomial.Homogeneous
+ 
+ import HodgeConjecture.Mathlib.CategoryTheory.ConcreteCategory.Notation
+ import Mathlib.AlgebraicGeometry.ProjectiveSpectrum.Proper
++
++namespace OAI.AlgebraicGeometry.Foundations.ProjectiveSpaceIs
++
++open _root_.AlgebraicGeometry
+ 
+ /-!
+@@ -34,10 +38,10 @@
+ -/
+ 
+-@[expose] public section
++section
+ 
+ -- The contents of this file will be in mathlib as of #26061
+ 
+ universe u v
+-open CategoryTheory Limits MvPolynomial AlgebraicGeometry
++open _root_.CategoryTheory Limits _root_.MvPolynomial _root_.OAI.AlgebraicGeometry.Foundations.ProjectiveSpaceIs
+ 
+ variable (n : Type v) (S : Scheme.{max u v})
+@@ -55,5 +59,5 @@
+ 
+ /-- `ℙ(n; S)` is projective space over `S` with homogeneous coordinates indexed by `n`. -/
+-scoped [AlgebraicGeometry] notation "ℙ("n"; "S")" => ProjectiveSpace n S
++scoped [AlgebraicGeometry] notation "ℙ("n"; "S")" => _root_.OAI.AlgebraicGeometry.Foundations.ProjectiveSpaceIs.ProjectiveSpace n S
+ 
+ namespace ProjectiveSpace
+@@ -64,5 +68,5 @@
+ noncomputable def degreeZeroEquiv (R : Type*) [CommRing R] :
+     homogeneousSubmodule n R 0 ≃+* R where
+-  toFun f := coeff 0 f.1
++  toFun f := f.1.coeff 0
+   invFun r := ⟨C r, isHomogeneous_C n r⟩
+   left_inv f := Subtype.ext (totalDegree_eq_zero_iff_eq_C.mp
+@@ -74,5 +78,5 @@
+     have hy := totalDegree_eq_zero_iff_eq_C.mp
+       ((totalDegree_zero_iff_isHomogeneous n).mpr y.2)
+-    change coeff 0 (x.1 * y.1) = coeff 0 x.1 * coeff 0 y.1
++    change (x.1 * y.1).coeff 0 = x.1.coeff 0 * y.1.coeff 0
+     rw [hx, hy, ← map_mul, coeff_zero_C, coeff_zero_C, coeff_zero_C]
+   map_add' _ _ := rfl
+@@ -135,7 +139,7 @@
+ end ProjectiveSpace
+ 
+-namespace AlgebraicGeometry
++section
+ 
+-open ProjectiveSpace
++open _root_.OAI.AlgebraicGeometry.Foundations.ProjectiveSpaceIs.ProjectiveSpace
+ 
+ universe w
+@@ -147,5 +151,5 @@
+ class IsProjective (f : X ⟶ T) : Prop where
+   /-- A finite-dimensional projective presentation exists. -/
+-  nonempty_presentation : Nonempty (Presentation f)
++  nonempty_presentation : Nonempty (_root_.OAI.AlgebraicGeometry.Foundations.ProjectiveSpaceIs.ProjectiveSpace.Presentation f)
+ 
+ /-- A projective morphism in the explicit-presentation sense is proper. -/
+@@ -154,7 +158,11 @@
+   let : IsClosedImmersion P.immersion := P.isClosedImmersion
+   have hcomp : IsProper
+-      (P.immersion ≫ toBase (Fin (P.ambientDimension + 1)) T) := by
++      (P.immersion ≫ _root_.OAI.AlgebraicGeometry.Foundations.ProjectiveSpaceIs.ProjectiveSpace.toBase (Fin (P.ambientDimension + 1)) T) := by
+     infer_instance
+   rwa [P.immersion_toBase] at hcomp
+ 
+-end AlgebraicGeometry
++end
++
++end
++
++end OAI.AlgebraicGeometry.Foundations.ProjectiveSpaceIs

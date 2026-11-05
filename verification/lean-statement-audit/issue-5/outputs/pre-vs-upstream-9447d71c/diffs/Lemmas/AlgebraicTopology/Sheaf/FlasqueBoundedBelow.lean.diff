@@ -1,0 +1,9 @@
+--- upstream/Lemmas/AlgebraicTopology/Sheaf/FlasqueBoundedBelow.lean
++++ challenge/Lemmas/AlgebraicTopology/Sheaf/FlasqueBoundedBelow.lean
+@@ -172,5 +172,5 @@
+       infer_instance
+   have hFA : (A.map F).Exact := by
+-    have hleft := ((Functor.preservesFiniteLimits_tfae F).out 3 1).mp
++    have hleft := ((Functor.preservesFiniteLimits_tfae F).out 4 2).mp
+       (inferInstance : PreservesFiniteLimits F)
+     exact (hleft A hA).1

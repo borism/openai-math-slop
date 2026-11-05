@@ -1,0 +1,39 @@
+--- upstream/Mathlib/Topology/Algebra/IsOpenUnits.lean
++++ challenge/Mathlib/Topology/Algebra/IsOpenUnits.lean
+@@ -13,8 +13,10 @@
+ See the License for the specific language governing permissions and
+ limitations under the License.
++
+ -/
+-module
+ 
+-public import Mathlib.Topology.Algebra.IsOpenUnits
++import Mathlib.Topology.Algebra.IsOpenUnits
++
++namespace OAI.Topology.Algebra.IsOpenUnits
+ 
+ /-!
+@@ -29,7 +31,7 @@
+ -/
+ 
+-@[expose] public section
++section
+ 
+-open Topology
++open _root_.Topology
+ 
+ lemma Set.range_units_val {M : Type*} [Monoid M] :
+@@ -41,5 +43,5 @@
+ /-- In a monoid with open units, being a unit is an open condition. -/
+ lemma isOpen_setOf_isUnit : IsOpen {x : M | IsUnit x} :=
+-  Set.range_units_val (M := M) ▸ IsOpenUnits.isOpenEmbedding_unitsVal.isOpen_range
++  _root_.OAI.Topology.Algebra.IsOpenUnits.Set.range_units_val (M := M) ▸ IsOpenUnits.isOpenEmbedding_unitsVal.isOpen_range
+ 
+ variable {M} in
+@@ -56,2 +58,6 @@
+   refine (Units.continuous_coe_inv.comp continuous_isUnit_unit).congr fun x ↦ ?_
+   simp [← Ring.inverse_unit x.2.unit]
++
++end
++
++end OAI.Topology.Algebra.IsOpenUnits

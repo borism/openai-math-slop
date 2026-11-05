@@ -1,0 +1,9 @@
+--- upstream/Lemmas/AlgebraicGeometry/ComplexPoint/AffineSpace.lean
++++ challenge/Lemmas/AlgebraicGeometry/ComplexPoint/AffineSpace.lean
+@@ -46,5 +46,5 @@
+     (s : Γ(X.left, ⊤)) (z : ComplexPoint X) :
+     evaluate ⊤ s z = (Scheme.ΓSpecIso ↧ℂ).hom (z.left.appTop s) := by
+-  rw [evaluate, dif_pos (by exact trivial)]
++  rw [evaluate, dite_eq_left (by exact trivial)]
+   have h := Scheme.germ_stalkClosedPointTo (R := ↧ℂ) (X := X.left) z.left ⊤ trivial
+   exact DFunLike.congr_fun (congrArg CommRingCat.Hom.hom h) s

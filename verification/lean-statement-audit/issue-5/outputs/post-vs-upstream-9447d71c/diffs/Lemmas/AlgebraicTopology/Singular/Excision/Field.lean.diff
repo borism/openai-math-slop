@@ -1,0 +1,89 @@
+--- upstream/Lemmas/AlgebraicTopology/Singular/Excision/Field.lean
++++ challenge/Lemmas/AlgebraicTopology/Singular/Excision/Field.lean
+@@ -13,11 +13,13 @@
+ See the License for the specific language governing permissions and
+ limitations under the License.
++
+ -/
+-module
+-
+-public import HodgeConjecture.Lemmas.AlgebraicTopology.Singular.Excision.CoverSmall
+-public import Mathlib.Algebra.Category.ModuleCat.Colimits
++
++import HodgeConjecture.Lemmas.AlgebraicTopology.Singular.Excision.CoverSmall
++import Mathlib.Algebra.Category.ModuleCat.Colimits
+ 
+ import HodgeConjecture.Lemmas.AlgebraicTopology.Singular.Excision.OpenCover
++
++namespace OAI.AlgebraicTopology.Singular.ExcisionField
+ 
+ /-!
+@@ -29,10 +31,11 @@
+ -/
+ 
+-@[expose] public noncomputable section
+-
+-open CategoryTheory CategoryTheory.Limits
++noncomputable section
++
++open _root_.CategoryTheory _root_.CategoryTheory.Limits
+ open scoped Simplicial
+ 
+-namespace AlgebraicTopology.Singular
++section
++section
+ 
+ /-- Rational chains on a simplicial set. -/
+@@ -350,5 +353,5 @@
+ abbrev CoverSmallRationalSingularChainComplex :
+     ChainComplex (ModuleCat ℚ) ℕ :=
+-  (coverSmallSingularSubcomplex X U : SSet).chainComplex (ModuleCat.of ℚ ℚ)
++  (_root_.OAI.AlgebraicTopology.Singular.ExcisionCoverSmall.coverSmallSingularSubcomplex X U : SSet).chainComplex (ModuleCat.of ℚ ℚ)
+ 
+ /-- Inclusion of cover-small rational singular chains into all rational singular chains. -/
+@@ -356,5 +359,5 @@
+     CoverSmallRationalSingularChainComplex X U ⟶
+       (TopCat.toSSet.obj X).chainComplex (ModuleCat.of ℚ ℚ) :=
+-  SSet.chainComplexMap (coverSmallSingularSubcomplex X U).ι (ModuleCat.of ℚ ℚ)
++  SSet.chainComplexMap (_root_.OAI.AlgebraicTopology.Singular.ExcisionCoverSmall.coverSmallSingularSubcomplex X U).ι (ModuleCat.of ℚ ℚ)
+ 
+ instance coverSmallRationalSingularChainInclusion_mono :
+@@ -363,7 +366,4 @@
+     SSet.chainComplexFunctor]
+   apply +allowSynthFailures Functor.map_mono
+-  apply +allowSynthFailures Functor.map_mono
+-  dsimp [SSet, SimplicialObject.whiskering, SimplicialObject]
+-  infer_instance
+ 
+ /-- The integral subdivision-and-prism homotopy transported to rational coefficients: the
+@@ -373,14 +373,14 @@
+     HomologicalComplex.homotopyEquivalences (ModuleCat ℚ) (ComplexShape.down ℕ)
+       (coverSmallRationalSingularChainInclusion X U) := by
+-  let eZ := coverSmallChainHomotopyEquiv_of_openCover X U hUopen hUcover
++  let eZ := _root_.OAI.AlgebraicTopology.Singular.ExcisionOpenCover.coverSmallChainHomotopyEquiv_of_openCover X U hUopen hUcover
+   refine ⟨rationalizeSimplicialChainHomotopyEquiv
+-    (coverSmallSingularSubcomplex X U : SSet) (TopCat.toSSet.obj X) eZ, ?_⟩
++    (_root_.OAI.AlgebraicTopology.Singular.ExcisionCoverSmall.coverSmallSingularSubcomplex X U : SSet) (TopCat.toSSet.obj X) eZ, ?_⟩
+   change rationalizeSimplicialChainMap
+-      (coverSmallSingularSubcomplex X U : SSet) (TopCat.toSSet.obj X) eZ.hom =
++      (_root_.OAI.AlgebraicTopology.Singular.ExcisionCoverSmall.coverSmallSingularSubcomplex X U : SSet) (TopCat.toSSet.obj X) eZ.hom =
+     coverSmallRationalSingularChainInclusion X U
+-  rw [show eZ.hom = coverSmallIntegralSingularChainInclusion X U from
+-    coverSmallChainHomotopyEquiv_of_openCover_hom X U hUopen hUcover]
++  rw [show eZ.hom = _root_.OAI.AlgebraicTopology.Singular.ExcisionCoverSmall.coverSmallIntegralSingularChainInclusion X U from
++    _root_.OAI.AlgebraicTopology.Singular.ExcisionOpenCover.coverSmallChainHomotopyEquiv_of_openCover_hom X U hUopen hUcover]
+   exact rationalizeSimplicialChainMap_chainComplexMap
+-    (coverSmallSingularSubcomplex X U).ι
++    (_root_.OAI.AlgebraicTopology.Singular.ExcisionCoverSmall.coverSmallSingularSubcomplex X U).ι
+ 
+ /-- A selected rational small-chain homotopy equivalence for an open cover. -/
+@@ -401,3 +401,8 @@
+ end RationalSmallChains
+ 
+-end AlgebraicTopology.Singular
++end
++end
++
++end
++
++end OAI.AlgebraicTopology.Singular.ExcisionField

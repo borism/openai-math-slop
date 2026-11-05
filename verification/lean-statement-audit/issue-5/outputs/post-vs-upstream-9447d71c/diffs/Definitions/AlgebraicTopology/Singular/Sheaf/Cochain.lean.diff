@@ -1,0 +1,94 @@
+--- upstream/Definitions/AlgebraicTopology/Singular/Sheaf/Cochain.lean
++++ challenge/Definitions/AlgebraicTopology/Singular/Sheaf/Cochain.lean
+@@ -13,16 +13,16 @@
+ See the License for the specific language governing permissions and
+ limitations under the License.
++
+ -/
+-module
+-
+-public import HodgeConjecture.Definitions.AlgebraicTopology.Sheaf.Constant
+-public import Mathlib.Algebra.Category.ModuleCat.Colimits
+-public import Mathlib.Algebra.Homology.QuasiIso
+-public import Mathlib.Algebra.Homology.SingleHomology
+-public import Mathlib.AlgebraicTopology.SimplicialSet.PiZero
+-public import Mathlib.AlgebraicTopology.SingularHomology.Basic
+-public import Mathlib.Topology.Connected.LocallyPathConnected
+-public import Mathlib.Topology.Homotopy.Contractible
+-public import Mathlib.Topology.Sheaves.Abelian
++
++import HodgeConjecture.Definitions.AlgebraicTopology.Sheaf.Constant
++import Mathlib.Algebra.Category.ModuleCat.Colimits
++import Mathlib.Algebra.Homology.QuasiIso
++import Mathlib.Algebra.Homology.SingleHomology
++import Mathlib.AlgebraicTopology.SimplicialSet.PiZero
++import Mathlib.AlgebraicTopology.SingularHomology.Basic
++import Mathlib.Topology.Connected.LocallyPathConnected
++import Mathlib.Topology.Homotopy.Contractible
++import Mathlib.Topology.Sheaves.Abelian
+ 
+ import HodgeConjecture.Lemmas.AlgebraicTopology.Singular.Contractible
+@@ -30,4 +30,8 @@
+ import Mathlib.Topology.Homotopy.TopCat.ZerothHomotopy
+ import Mathlib.Topology.Sheaves.Sheafify
++
++namespace OAI.AlgebraicTopology.Singular.SheafCochain
++
++open _root_.AlgebraicTopology
+ 
+ /-!
+@@ -45,11 +49,12 @@
+ -/
+ 
+-@[expose] public noncomputable section
+-
+-open CategoryTheory Limits TopologicalSpace
++noncomputable section
++
++open _root_.CategoryTheory Limits _root_.TopologicalSpace
+ 
+ universe u
+ 
+-namespace AlgebraicTopology.Singular
++section
++section
+ 
+ variable (R : Type u) [CommRing R] (X : TopCat.{u})
+@@ -220,5 +225,5 @@
+     (σ : S.obj (.op ⟨0⟩)) :
+     S.ιChainComplex σ ≫ simplicialZeroAugmentation R S = 𝟙 _ :=
+-  Limits.Sigma.ι_desc (fun _ ↦ 𝟙 (ModuleCat.of R R)) σ
++  Limits.Sigma.ι_comp_desc (fun _ ↦ 𝟙 (ModuleCat.of R R)) σ
+ 
+ /-- The zero-chain augmentation is natural in the simplicial set. -/
+@@ -233,5 +238,5 @@
+ 
+ /-- The simplicial boundary of a one-chain has augmentation zero. -/
+-private lemma simplicialBoundary_comp_zeroAugmentation (S : SSet.{u}) :
++lemma simplicialBoundary_comp_zeroAugmentation (S : SSet.{u}) :
+     (S.chainComplex (ModuleCat.of R R)).d 1 0 ≫
+       simplicialZeroAugmentation R S = 0 := by
+@@ -257,5 +262,5 @@
+ 
+ /-- The boundary of an open singular one-chain has augmentation zero. -/
+-private lemma openBoundary_comp_zeroAugmentation (U : (Opens X)ᵒᵖ) :
++lemma openBoundary_comp_zeroAugmentation (U : (Opens X)ᵒᵖ) :
+     ((openSingularChainComplexFunctor R X).obj U.unop).d 1 0 ≫
+       openZeroAugmentation R X U = 0 :=
+@@ -282,5 +287,5 @@
+     apply LinearMap.ext
+     intro c
+-    dsimp [TopCat.Presheaf.const, constantSingularZeroCochain,
++    dsimp [_root_.OAI.AlgebraicTopology.Sheaf.Constant.TopCat.Presheaf.const, constantSingularZeroCochain,
+       singularCochainPresheaf]
+     exact congrArg (r * ·) <| congrArg (fun f ↦ f.hom c) <|
+@@ -342,3 +347,8 @@
+         exact constantsToSingularCochainZeroSheaf_comp_coboundary R X⟩
+ 
+-end AlgebraicTopology.Singular
++end
++end
++
++end
++
++end OAI.AlgebraicTopology.Singular.SheafCochain

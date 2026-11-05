@@ -1,0 +1,162 @@
+closure of ['OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Main']: 129 local modules; 97 external imports
+external import roots: ['FixedPointTheorems', 'Lean', 'Mathlib']
+lines scanned: 20823
+
+pattern counts (code only; comments/strings stripped):
+  axiom decl                                           0
+  sorry                                                0
+  admit                                                0
+  native_decide                                        0
+  Lean.ofReduceBool / ofReduceNat (compiler-trusting axiom) 0
+  decide +kernel (kernel reduction, no extra axiom)    0
+  trustCompiler                                        0
+  implemented_by                                       0
+  extern                                               0
+  unsafe                                               0
+  opaque decl                                          0
+  partial def                                          0
+  run_tac                                              0
+  elab/macro/syntax definition                         0
+  set_option (any)                                     0
+  set_option debug.skipKernelTC                        0
+  set_option allowUnsafeReducibility                   0
+  set_option maxHeartbeats 0                           0
+  set_option autoImplicit true                         0
+  Decidable instance override (instance : Decidable)   0
+  csimp attribute                                      0
+  addDecl / Environment manipulation                   0
+
+hits for hard trust patterns:
+
+first 40 hits for other patterns:
+
+closure modules:
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Main
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Growth.Floor
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Determinant.Bounds
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Convolution.RankLowerBound
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Arithmetic.RankExponent
+   OAI.LinearAlgebra.MatrixMultiplication.Tensor.ComplexTensorFlattening
+   OAI.LinearAlgebra.MatrixMultiplication.Tensor.ComplexMatrixTensor
+   OAI.LinearAlgebra.MatrixMultiplication.Tensor.ComplexTensorBatching
+   OAI.LinearAlgebra.MatrixMultiplication.Tensor.ComplexTensor
+   OAI.LinearAlgebra.MatrixMultiplication.ComplexArithmetic.Complexity
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Convolution.Rank
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Convolution.Basic
+   OAI.LinearAlgebra.MatrixMultiplication.Tensor.ComplexTensorSymmetrization
+   OAI.LinearAlgebra.MatrixMultiplication.Tensor.ComplexDotPairing
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Arithmetic.RankBound
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Polynomial.Inequalities
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Growth.Profile
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Arithmetic.ExponentComparison
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Growth.Recurrence
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Growth.Product
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Growth.ProfileSlopes
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Growth.ConcaveSlopes
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Polynomial.ProductBounds
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Entropy.Optimization
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Sector.Character
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Separation.BranchTagging
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Tensor.SupportExtension
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Tensor.CharacterBounds
+   OAI.LinearAlgebra.MatrixMultiplication.Tensor.ComplexSeparatedTensorDecomposition
+   OAI.LinearAlgebra.MatrixMultiplication.Separation.ComplexFiniteSeparation
+   OAI.LinearAlgebra.MatrixMultiplication.Separation.ComplexModularSeparation
+   OAI.LinearAlgebra.MatrixMultiplication.Separation.ComplexSeparationCounting
+   OAI.LinearAlgebra.MatrixMultiplication.Separation.ComplexSeparation
+   OAI.LinearAlgebra.MatrixMultiplication.Tensor.ComplexGroupTensor
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Character.Basic
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Separation.Basic
+   OAI.LinearAlgebra.MatrixMultiplication.Polynomial.ComplexPolynomialApproximation
+   OAI.LinearAlgebra.MatrixMultiplication.Tensor.ComplexTensorRestrictionComposition
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Separation.FiniteProjection
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Separation.SquareWeights
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Separation.NoWrap
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Separation.Fourier
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Sector.Branches
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Sector.Degeneration
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Polynomial.Interpolation
+   OAI.LinearAlgebra.MatrixMultiplication.Polynomial.ComplexPolynomialDegenerationComposition
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Sector.Weights
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Tensor.TagInequality
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Tensor.SharedPadding
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Character.FiniteSeparation
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Character.Dot
+   OAI.LinearAlgebra.MatrixMultiplication.Tensor.ComplexPairingMatrixTensor
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Growth.MultiplicativePower
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Character.Degeneration
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Growth.PolynomialOverhead
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Entropy.Tag
+   OAI.LinearAlgebra.MatrixMultiplication.Entropy.ConditionalContinuity
+   OAI.LinearAlgebra.MatrixMultiplication.Entropy.ConditionalLabels
+   OAI.LinearAlgebra.MatrixMultiplication.Entropy.ComplexHierarchyEntropy
+   OAI.LinearAlgebra.MatrixMultiplication.Entropy.ComplexFiniteEntropy
+   OAI.LinearAlgebra.MatrixMultiplication.Separation.AuxiliarySeparation
+   OAI.LinearAlgebra.MatrixMultiplication.Separation.ComplexStageHierarchyResources
+   OAI.LinearAlgebra.MatrixMultiplication.Entropy.ComplexHierarchySeparationRates
+   OAI.LinearAlgebra.MatrixMultiplication.Separation.ComplexLabelHierarchySeparation
+   OAI.LinearAlgebra.MatrixMultiplication.Tensor.ComplexSharedAuxiliaryBank
+   OAI.LinearAlgebra.MatrixMultiplication.Tensor.ComplexLocalMaps
+   OAI.LinearAlgebra.MatrixMultiplication.Separation.ComplexFiniteControl
+   OAI.LinearAlgebra.MatrixMultiplication.Separation.ComplexAuxiliarySeparation
+   OAI.LinearAlgebra.MatrixMultiplication.Entropy.ComplexSeparationAsymptotics
+   OAI.LinearAlgebra.MatrixMultiplication.Separation.ComplexHierarchyTypeCounting
+   OAI.LinearAlgebra.MatrixMultiplication.Entropy.ComplexConditionalTypeCounting
+   OAI.LinearAlgebra.MatrixMultiplication.Separation.ComplexTypeCounting
+   OAI.LinearAlgebra.MatrixMultiplication.Entropy.ComplexTypeEntropy
+   OAI.LinearAlgebra.MatrixMultiplication.Separation.ComplexRationalTypes
+   OAI.LinearAlgebra.MatrixMultiplication.Entropy.ComplexEntropyContinuity
+   OAI.LinearAlgebra.MatrixMultiplication.Tensor.ComplexFactorialLogBounds
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Polynomial.Laws
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Determinant.Character
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Determinant.Filtration
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Determinant.Basis
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Determinant.Kernel
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Character.Permutation
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Character.Symmetrization
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Growth.PermutationProduct
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Convolution.Symmetry
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Growth.NormalizedProfile
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Tensor.SixfoldProductBounds
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Arithmetic.CharacterRounding
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Character.Existence
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Tensor.Characters
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Tensor.DirectSumClass
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Tensor.Semiring
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Tensor.DirectSum
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Tensor.BinaryCharacter
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Spectrum.Obstruction
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Tensor.Scalar
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Growth.SpectralLimit
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Spectrum.MultiplicativeStates
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Spectrum.NormalizedStates
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Convex.FixedPoint
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Spectrum.StateObstruction
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Spectrum.Coordinates
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Spectrum.Catalyst
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Convex.Farkas
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Convex.FiniteConeClosed
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Convex.ConeSupport
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Convex.RationalCone
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Convex.RationalDenominators
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Convex.RationalSpan
+   OAI.LinearAlgebra.MatrixMultiplication.AuxiliarySeparation.Arithmetic.Exponent
+   OAI.LinearAlgebra.MatrixMultiplication.Arithmetic.Exponent
+   OAI.LinearAlgebra.MatrixMultiplication.Arithmetic.Padding
+   OAI.LinearAlgebra.MatrixMultiplication.Arithmetic.ProgramComposition
+   OAI.LinearAlgebra.MatrixMultiplication.Arithmetic.Programs
+   OAI.LinearAlgebra.MatrixMultiplication.Arithmetic.Complexity
+   OAI.LinearAlgebra.MatrixMultiplication.Model
+   OAI.LinearAlgebra.MatrixMultiplication.Arithmetic.LowerBound
+   OAI.LinearAlgebra.MatrixMultiplication.Arithmetic.NaiveAlgorithm
+   OAI.LinearAlgebra.MatrixMultiplication.Polynomial.ExpressionFamily
+   OAI.LinearAlgebra.MatrixMultiplication.Arithmetic.Compatibility
+   OAI.LinearAlgebra.MatrixMultiplication.ComplexArithmetic.Exponent
+   OAI.LinearAlgebra.MatrixMultiplication.ComplexArithmetic.LowerBound
+   OAI.LinearAlgebra.MatrixMultiplication.ComplexArithmetic.NaiveAlgorithm
+   OAI.LinearAlgebra.MatrixMultiplication.Polynomial.ComplexExpressionFamily
+   OAI.LinearAlgebra.MatrixMultiplication.ComplexArithmetic.Programs
+   OAI.LinearAlgebra.MatrixMultiplication.ComplexArithmetic.Growth
+   OAI.LinearAlgebra.MatrixMultiplication.ComplexArithmetic.RecursiveBlockPrograms
+   OAI.LinearAlgebra.MatrixMultiplication.ComplexArithmetic.ProgramComposition
+   OAI.LinearAlgebra.MatrixMultiplication.ComplexArithmetic.MatrixPadding

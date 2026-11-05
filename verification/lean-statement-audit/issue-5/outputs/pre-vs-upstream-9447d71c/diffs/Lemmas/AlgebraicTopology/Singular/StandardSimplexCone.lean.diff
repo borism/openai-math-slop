@@ -1,0 +1,16 @@
+--- upstream/Lemmas/AlgebraicTopology/Singular/StandardSimplexCone.lean
++++ challenge/Lemmas/AlgebraicTopology/Singular/StandardSimplexCone.lean
+@@ -81,5 +81,5 @@
+       (Δ[m] : SSet.{0}).ιChainComplex
+         (standardSimplexZeroConeSimplex m n x) :=
+-  Sigma.ι_desc _ _
++  Sigma.ι_comp_desc _ _
+ 
+ /-- In every positive degree, the zero-vertex cone contracts the integral chains of a standard
+@@ -283,5 +283,5 @@
+       p ≫ (SSet.chainComplexMap (SSet.yonedaEquiv.symm x)
+         (AddCommGrpCat.of ℤ)).f (n + 1) := by
+-  apply Sigma.ι_desc
++  apply Sigma.ι_comp_desc
+ 
+ /-- The face-prism sum is the boundary of the universal top simplex followed by the transported

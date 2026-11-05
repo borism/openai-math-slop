@@ -1,0 +1,9 @@
+--- upstream/Lemmas/AlgebraicTopology/Singular/Subdivision/BarycentricHomotopy.lean
++++ challenge/Lemmas/AlgebraicTopology/Singular/Subdivision/BarycentricHomotopy.lean
+@@ -141,5 +141,5 @@
+     X.ιChainComplex x ≫ barycentricLastVertexPrismComponent P X n =
+       barycentricLastVertexPrismSimplexChain P X n x := by
+-  apply Sigma.ι_desc
++  apply Sigma.ι_comp_desc
+ 
+ /-- Transporting the universal face-prism sum is the source differential followed by the

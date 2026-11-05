@@ -1,0 +1,258 @@
+file	status	residual_token_edits	extra	lines
+Mathlib/CategoryTheory/ConcreteCategory/Notation.lean	differs	458	1	-122/+1 lines
+Lemmas/AlgebraicTopology/Singular/Subdivision/Affine.lean	differs	128	70	-63/+70 lines
+Lemmas/AlgebraicTopology/Singular/Subdivision/AffinePrism.lean	differs	86	62	-63/+62 lines
+Lemmas/AlgebraicTopology/Singular/Subdivision/AffineRelativeMesh.lean	differs	65	27	-23/+27 lines
+Definitions/AlgebraicTopology/LocalHomology/FundamentalClass.lean	differs	53	20	-16/+20 lines
+Definitions/AlgebraicTopology/Support/Cohomology.lean	differs	42	4	-5/+4 lines
+Lemmas/AlgebraicTopology/LocalHomology/PuncturedEuclidean.lean	differs	37	34	-30/+34 lines
+Lemmas/AlgebraicTopology/LocalHomology/SphereAffineBoundary.lean	differs	35	10	-13/+10 lines
+Lemmas/AlgebraicTopology/Singular/Subdivision/AffineMesh.lean	differs	29	7	-11/+7 lines
+Lemmas/Topology/Dimension/ClosedSubset.lean	differs	29	3	-1/+3 lines
+Lemmas/AlgebraicTopology/Singular/RelativePairExcision.lean	differs	23	10	-13/+10 lines
+Lemmas/AlgebraicTopology/Singular/Subdivision/AffineSupport.lean	differs	23	7	-7/+7 lines
+Lemmas/AlgebraicGeometry/Hodge/HolomorphicPoincare.lean	differs	22	0	-8/+0 lines
+Lemmas/AlgebraicGeometry/Cycle/Component/SmoothClosedLift.lean	differs	20	2	-0/+2 lines
+Definitions/AlgebraicGeometry/ProjectiveSpace.lean	differs	14	2	-2/+2 lines
+Mathlib/RingTheory/SmoothKrullDimension.lean	differs	14	6	-5/+6 lines
+Lemmas/AlgebraicTopology/Singular/Excision/CoverSmall.lean	differs	13	0	-3/+0 lines
+Lemmas/AlgebraicTopology/Singular/Excision/Field.lean	differs	13	0	-3/+0 lines
+Mathlib/CategoryTheory/Sites/SheafCohomology/Pair.lean	differs	11	1	-3/+1 lines
+Definitions/AlgebraicGeometry/Cycle/Component/SmoothClosedLift.lean	differs	10	1	-0/+1 lines
+Mathlib/Algebra/PolynomialCatenary.lean	differs	10	10	-10/+10 lines
+Definitions/AlgebraicGeometry/ComplexPoint/Basic.lean	differs	9	9	-9/+9 lines
+Lemmas/AlgebraicTopology/Singular/Sheaf/CochainDescent.lean	differs	8	7	-5/+7 lines
+Lemmas/Algebra/Homology/DerivedCategory/RightDerivedFunctorPlusShift.lean	differs	6	8	-8/+8 lines
+Lemmas/AlgebraicTopology/LocalHomology/Euclidean.lean	differs	6	9	-7/+9 lines
+Lemmas/LinearAlgebra/HodgeStructure.lean	differs	5	1	-2/+1 lines
+Lemmas/Algebra/Homology/DerivedCategory/RightDerivedFunctorPlusNaturality.lean	differs	4	5	-5/+5 lines
+Lemmas/AlgebraicGeometry/Stratification/Basic.lean	differs	4	4	-2/+4 lines
+Lemmas/AlgebraicTopology/Sheaf/FlasqueCokernel.lean	differs	4	3	-3/+3 lines
+Lemmas/AlgebraicTopology/Sheaf/OpenRestriction.lean	differs	4	1	-3/+1 lines
+Definitions/AlgebraicGeometry/Cycle/SmoothPair/CoclassSection.lean	differs	3	3	-3/+3 lines
+Lemmas/AlgebraicGeometry/Cycle/Component/ClosedPointDimension.lean	differs	3	2	-2/+2 lines
+Lemmas/AlgebraicTopology/LocalHomology/NormalProjectionCoclass.lean	differs	2	1	-1/+1 lines
+Lemmas/AlgebraicTopology/Sheaf/FlasqueBoundedBelow.lean	differs	2	1	-1/+1 lines
+Lemmas/AlgebraicTopology/Singular/StandardSimplexCone.lean	differs	2	2	-2/+2 lines
+Lemmas/AlgebraicTopology/Support/DerivedSections.lean	differs	2	2	-2/+2 lines
+Lemmas/RingTheory/TranscendenceDegreeKrullDimension.lean	differs	2	1	-1/+1 lines
+Mathlib/Algebra/Homology/KernelAcyclic.lean	differs	2	2	-2/+2 lines
+Definitions/AlgebraicTopology/Singular/Sheaf/Cochain.lean	differs	1	1	-1/+1 lines
+Lemmas/AlgebraicGeometry/ComplexPoint/AffineSpace.lean	differs	1	1	-1/+1 lines
+Lemmas/AlgebraicGeometry/ComplexPoint/ProjectiveHausdorff.lean	differs	1	1	-1/+1 lines
+Lemmas/AlgebraicGeometry/Stratification/ClosedFiltration.lean	differs	1	1	-1/+1 lines
+Lemmas/AlgebraicTopology/LocalHomology/ChartFundamentalClassInvariance.lean	differs	1	1	-1/+1 lines
+Lemmas/AlgebraicTopology/LocalHomology/FlattenedSupport.lean	differs	1	1	-1/+1 lines
+Lemmas/AlgebraicTopology/Singular/Cohomology.lean	differs	1	1	-1/+1 lines
+Lemmas/AlgebraicTopology/Singular/Excision/Lebesgue.lean	differs	1	3	-1/+3 lines
+Lemmas/AlgebraicTopology/Singular/Subdivision/AffineSmall.lean	differs	1	1	-1/+1 lines
+Lemmas/AlgebraicTopology/Singular/Subdivision/AffineSmallPrism.lean	differs	1	1	-1/+1 lines
+Lemmas/AlgebraicTopology/Singular/Subdivision/BarycentricAllDegrees.lean	differs	1	1	-1/+1 lines
+Lemmas/AlgebraicTopology/Singular/Subdivision/BarycentricChains.lean	differs	1	1	-1/+1 lines
+Lemmas/AlgebraicTopology/Singular/Subdivision/BarycentricHomotopy.lean	differs	1	1	-1/+1 lines
+Lemmas/AlgebraicTopology/Singular/SubsetChains.lean	differs	1	3	-1/+3 lines
+Lemmas/Analysis/Calculus/DifferentialForm/HolomorphicPoincare.lean	differs	1	1	-1/+1 lines
+Mathlib/Algebra/Homology/Notation.lean	differs	1	1	-1/+1 lines
+Mathlib/AlgebraicTopology/SimplicialSet/ChainComplexSplit.lean	differs	1	1	-1/+1 lines
+Definitions/Algebra/DeRham/Basic.lean	identical	0	0	
+Definitions/Algebra/Homology/DerivedCategory/MappingCoconeShortExact.lean	identical	0	0	
+Definitions/Algebra/Homology/DerivedCategory/MappingCoconeShortExactNaturality.lean	identical	0	0	
+Definitions/Algebra/Homology/LinearDual.lean	identical	0	0	
+Definitions/AlgebraicGeometry/ClosedImmersion/AnalyticLeftInverse.lean	identical	0	0	
+Definitions/AlgebraicGeometry/ClosedImmersion/HolomorphicCharts.lean	identical	0	0	
+Definitions/AlgebraicGeometry/ClosedImmersion/NormalCoordinates.lean	identical	0	0	
+Definitions/AlgebraicGeometry/ClosedImmersion/SourceOpen.lean	identical	0	0	
+Definitions/AlgebraicGeometry/Cohomology/AmbientInjectiveResolution.lean	identical	0	0	
+Definitions/AlgebraicGeometry/Cohomology/GlobalSections.lean	identical	0	0	
+Definitions/AlgebraicGeometry/Cohomology/SupportedSingularModel.lean	identical	0	0	
+Definitions/AlgebraicGeometry/Cohomology/WithSupport.lean	identical	0	0	
+Definitions/AlgebraicGeometry/ComplexPoint/AnalyticSheaf.lean	identical	0	0	
+Definitions/AlgebraicGeometry/Cycle/Component/SingularClosedFiltration.lean	identical	0	0	
+Definitions/AlgebraicGeometry/Cycle/Component/SmoothSupportCoclassSection.lean	identical	0	0	
+Definitions/AlgebraicGeometry/Cycle/Component/SmoothSupportPurity.lean	identical	0	0	
+Definitions/AlgebraicGeometry/Cycle/Component/SupportExtension.lean	identical	0	0	
+Definitions/AlgebraicGeometry/Cycle/FundamentalClass.lean	identical	0	0	
+Definitions/AlgebraicGeometry/Cycle/Local/Purity.lean	identical	0	0	
+Definitions/AlgebraicGeometry/Cycle/SmoothPair/CoclassOverlap.lean	identical	0	0	
+Definitions/AlgebraicGeometry/Cycle/Support.lean	identical	0	0	
+Definitions/AlgebraicGeometry/Cycle/Transport/CohomologySheaf.lean	identical	0	0	
+Definitions/AlgebraicGeometry/Hodge/AnalyticDifferentialForms.lean	identical	0	0	
+Definitions/AlgebraicGeometry/Hodge/Filtration.lean	identical	0	0	
+Definitions/AlgebraicGeometry/Hodge/HolomorphicDeRham.lean	identical	0	0	
+Definitions/AlgebraicGeometry/Stratification/Analytification.lean	identical	0	0	
+Definitions/AlgebraicGeometry/Stratification/Basic.lean	identical	0	0	
+Definitions/AlgebraicTopology/LocalHomology/ComplexClass.lean	identical	0	0	
+Definitions/AlgebraicTopology/LocalHomology/NormalProjectionCoclass.lean	identical	0	0	
+Definitions/AlgebraicTopology/Sheaf/CohomologySection.lean	identical	0	0	
+Definitions/AlgebraicTopology/Sheaf/CohomologyStalkVanishing.lean	identical	0	0	
+Definitions/AlgebraicTopology/Sheaf/Constant.lean	identical	0	0	
+Definitions/AlgebraicTopology/Sheaf/FlasqueBoundedBelow.lean	identical	0	0	
+Definitions/AlgebraicTopology/Sheaf/FlasqueLowestCohomology.lean	identical	0	0	
+Definitions/AlgebraicTopology/Sheaf/MapOfLocalStalks.lean	identical	0	0	
+Definitions/AlgebraicTopology/Sheaf/OpenInjectiveResolution.lean	identical	0	0	
+Definitions/AlgebraicTopology/Sheaf/OpenRestrictedLowestCohomology.lean	identical	0	0	
+Definitions/AlgebraicTopology/Singular/Cohomology.lean	identical	0	0	
+Definitions/AlgebraicTopology/Singular/RelativeCochainCone.lean	identical	0	0	
+Definitions/AlgebraicTopology/Singular/RelativeCochainConeNaturality.lean	identical	0	0	
+Definitions/AlgebraicTopology/Singular/Sheaf/CochainOpenCone.lean	identical	0	0	
+Definitions/AlgebraicTopology/Singular/Sheaf/CochainOpenSections.lean	identical	0	0	
+Definitions/AlgebraicTopology/Support/CohomologyFlasqueModel.lean	identical	0	0	
+Definitions/AlgebraicTopology/Support/CohomologyInjectiveModel.lean	identical	0	0	
+Definitions/AlgebraicTopology/Support/DerivedSections.lean	identical	0	0	
+Definitions/AlgebraicTopology/Support/DerivedSectionsLocalization.lean	identical	0	0	
+Definitions/AlgebraicTopology/Support/NeighborhoodPairImage.lean	identical	0	0	
+Definitions/AlgebraicTopology/Support/RelativeCohomologyOpenTransport.lean	identical	0	0	
+Definitions/AlgebraicTopology/Support/RelativeCohomologySheaf.lean	identical	0	0	
+Definitions/AlgebraicTopology/Support/SectionRestrictionCone.lean	identical	0	0	
+Definitions/AlgebraicTopology/Support/SingularCohomologySheafComparison.lean	identical	0	0	
+Definitions/AlgebraicTopology/Support/SingularFlasqueModel.lean	identical	0	0	
+Definitions/AlgebraicTopology/Support/SingularSectionCohomology.lean	identical	0	0	
+Definitions/Topology/Dimension/Basic.lean	identical	0	0	
+Lemmas/Algebra/DeRham/Basic.lean	identical	0	0	
+Lemmas/Algebra/FieldToComplex.lean	identical	0	0	
+Lemmas/Algebra/Homology/DerivedCategory/MappingCoconeShortExact.lean	identical	0	0	
+Lemmas/Algebra/Homology/DerivedCategory/MappingCoconeShortExactNaturality.lean	identical	0	0	
+Lemmas/Algebra/Homology/DerivedCategory/MappingConeMapNaturality.lean	identical	0	0	
+Lemmas/Algebra/Homology/DerivedCategory/RightDerivedFunctorPlusShiftNaturality.lean	identical	0	0	
+Lemmas/Algebra/Homology/DerivedCategory/ShortExactQuasiIso.lean	identical	0	0	
+Lemmas/Algebra/Homology/LinearDual.lean	identical	0	0	
+Lemmas/Algebra/Homology/LinearDualNaturality.lean	identical	0	0	
+Lemmas/Algebra/Homology/MapExtendNaturality.lean	identical	0	0	
+Lemmas/Algebra/Homology/MappingConeQuasiIso.lean	identical	0	0	
+Lemmas/AlgebraicGeometry/ClosedImmersion/AnalyticLeftInverse.lean	identical	0	0	
+Lemmas/AlgebraicGeometry/ClosedImmersion/HolomorphicCharts.lean	identical	0	0	
+Lemmas/AlgebraicGeometry/ClosedImmersion/NormalCoordinates.lean	identical	0	0	
+Lemmas/AlgebraicGeometry/ClosedImmersion/ResidueField.lean	identical	0	0	
+Lemmas/AlgebraicGeometry/ClosedImmersion/SourceOpen.lean	identical	0	0	
+Lemmas/AlgebraicGeometry/Cohomology/SingularComparison.lean	identical	0	0	
+Lemmas/AlgebraicGeometry/Cohomology/SingularSheafComparison.lean	identical	0	0	
+Lemmas/AlgebraicGeometry/Cohomology/SupportSingularGlobal.lean	identical	0	0	
+Lemmas/AlgebraicGeometry/Cohomology/SupportedSingularModel.lean	identical	0	0	
+Lemmas/AlgebraicGeometry/ComplexPoint/AffineScheme.lean	identical	0	0	
+Lemmas/AlgebraicGeometry/ComplexPoint/AnalyticMap.lean	identical	0	0	
+Lemmas/AlgebraicGeometry/ComplexPoint/AnalyticSheaf.lean	identical	0	0	
+Lemmas/AlgebraicGeometry/ComplexPoint/Basic.lean	identical	0	0	
+Lemmas/AlgebraicGeometry/ComplexPoint/ClosedImmersion.lean	identical	0	0	
+Lemmas/AlgebraicGeometry/ComplexPoint/Etale.lean	identical	0	0	
+Lemmas/AlgebraicGeometry/ComplexPoint/LocalHomologyVanishing.lean	identical	0	0	
+Lemmas/AlgebraicGeometry/ComplexPoint/Localization.lean	identical	0	0	
+Lemmas/AlgebraicGeometry/ComplexPoint/Manifold.lean	identical	0	0	
+Lemmas/AlgebraicGeometry/ComplexPoint/Open.lean	identical	0	0	
+Lemmas/AlgebraicGeometry/ComplexPoint/Projective.lean	identical	0	0	
+Lemmas/AlgebraicGeometry/ComplexPoint/ProjectiveCompact.lean	identical	0	0	
+Lemmas/AlgebraicGeometry/ComplexPoint/ProjectiveParacompact.lean	identical	0	0	
+Lemmas/AlgebraicGeometry/ComplexPoint/SmoothCoordinates.lean	identical	0	0	
+Lemmas/AlgebraicGeometry/ComplexPoint/StandardEtale.lean	identical	0	0	
+Lemmas/AlgebraicGeometry/Cycle/Component/Dimension.lean	identical	0	0	
+Lemmas/AlgebraicGeometry/Cycle/Component/LocalGenerator.lean	identical	0	0	
+Lemmas/AlgebraicGeometry/Cycle/Component/NormalCoordinates.lean	identical	0	0	
+Lemmas/AlgebraicGeometry/Cycle/Component/NormalGeometry.lean	identical	0	0	
+Lemmas/AlgebraicGeometry/Cycle/Component/SingularClosedFiltration.lean	identical	0	0	
+Lemmas/AlgebraicGeometry/Cycle/Component/SmoothSupportPurity.lean	identical	0	0	
+Lemmas/AlgebraicGeometry/Cycle/Component/SupportExtension.lean	identical	0	0	
+Lemmas/AlgebraicGeometry/Cycle/Local/LocalHomology.lean	identical	0	0	
+Lemmas/AlgebraicGeometry/Cycle/Local/Purity.lean	identical	0	0	
+Lemmas/AlgebraicGeometry/Cycle/SmoothPair/CoclassOverlap.lean	identical	0	0	
+Lemmas/AlgebraicGeometry/Cycle/SmoothPair/CoclassSection.lean	identical	0	0	
+Lemmas/AlgebraicGeometry/Cycle/SmoothPair/OpenTransport.lean	identical	0	0	
+Lemmas/AlgebraicGeometry/Cycle/Support.lean	differs	0	2	-0/+2 lines
+Lemmas/AlgebraicGeometry/Cycle/Transport/CohomologySheaf.lean	identical	0	0	
+Lemmas/AlgebraicGeometry/Hodge/AnalyticDifferentialForms.lean	identical	0	0	
+Lemmas/AlgebraicGeometry/Hodge/Filtration.lean	identical	0	0	
+Lemmas/AlgebraicGeometry/Hodge/HolomorphicDeRham.lean	identical	0	0	
+Lemmas/AlgebraicGeometry/Smooth/AffineRelativeDimension.lean	identical	0	0	
+Lemmas/AlgebraicGeometry/Smooth/CatenaryDimension.lean	identical	0	0	
+Lemmas/AlgebraicGeometry/Smooth/DimensionFormula.lean	identical	0	0	
+Lemmas/AlgebraicGeometry/Smooth/Equidimensional.lean	differs	0	1	-1/+1 lines
+Lemmas/AlgebraicGeometry/Smooth/Locus.lean	identical	0	0	
+Lemmas/AlgebraicGeometry/Smooth/PointwiseDimension.lean	differs	0	1	-1/+1 lines
+Lemmas/AlgebraicGeometry/Smooth/SingularLocusDimension.lean	identical	0	0	
+Lemmas/AlgebraicGeometry/Stratification/Analytification.lean	identical	0	0	
+Lemmas/AlgebraicGeometry/Stratification/LocalSupportVanishing.lean	identical	0	0	
+Lemmas/AlgebraicTopology/LocalHomology/CenteredComplexOrientation.lean	identical	0	0	
+Lemmas/AlgebraicTopology/LocalHomology/ChartFundamentalClass.lean	identical	0	0	
+Lemmas/AlgebraicTopology/LocalHomology/ChartFundamentalClassGenerator.lean	identical	0	0	
+Lemmas/AlgebraicTopology/LocalHomology/ComplexClassDifferentiableInvariance.lean	identical	0	0	
+Lemmas/AlgebraicTopology/LocalHomology/ComplexClassLinearInvariance.lean	identical	0	0	
+Lemmas/AlgebraicTopology/LocalHomology/EuclideanVanishing.lean	identical	0	0	
+Lemmas/AlgebraicTopology/LocalHomology/FundamentalClass.lean	identical	0	0	
+Lemmas/AlgebraicTopology/LocalHomology/FundamentalClassGenerator.lean	differs	0	2	-1/+2 lines
+Lemmas/AlgebraicTopology/LocalHomology/HolomorphicNormalTransition.lean	identical	0	0	
+Lemmas/AlgebraicTopology/LocalHomology/NormalProjectionOverlap.lean	identical	0	0	
+Lemmas/AlgebraicTopology/LocalHomology/NormalSlicePurity.lean	identical	0	0	
+Lemmas/AlgebraicTopology/LocalHomology/SphereSimplicialHomology.lean	identical	0	0	
+Lemmas/AlgebraicTopology/Sheaf/CohomologyStalkVanishing.lean	identical	0	0	
+Lemmas/AlgebraicTopology/Sheaf/FlasqueAcyclic.lean	identical	0	0	
+Lemmas/AlgebraicTopology/Sheaf/FlasqueExtendNat.lean	identical	0	0	
+Lemmas/AlgebraicTopology/Sheaf/FlasqueLowerVanishing.lean	identical	0	0	
+Lemmas/AlgebraicTopology/Sheaf/FlasqueLowestCohomology.lean	identical	0	0	
+Lemmas/AlgebraicTopology/Sheaf/FlasqueQuasiIso.lean	identical	0	0	
+Lemmas/AlgebraicTopology/Sheaf/HomologySection.lean	identical	0	0	
+Lemmas/AlgebraicTopology/Sheaf/InjectiveFlasque.lean	identical	0	0	
+Lemmas/AlgebraicTopology/Sheaf/OpenInjectiveResolution.lean	identical	0	0	
+Lemmas/AlgebraicTopology/Sheaf/OpenRestrictedVanishing.lean	identical	0	0	
+Lemmas/AlgebraicTopology/Sheaf/OpenSheafification.lean	identical	0	0	
+Lemmas/AlgebraicTopology/Singular/Contractible.lean	identical	0	0	
+Lemmas/AlgebraicTopology/Singular/Excision/CoverSmallProjective.lean	identical	0	0	
+Lemmas/AlgebraicTopology/Singular/Excision/CoverSmallQuasiIso.lean	identical	0	0	
+Lemmas/AlgebraicTopology/Singular/Excision/OpenCover.lean	identical	0	0	
+Lemmas/AlgebraicTopology/Singular/GlobalRestriction.lean	identical	0	0	
+Lemmas/AlgebraicTopology/Singular/HomologyZeroNaturality.lean	identical	0	0	
+Lemmas/AlgebraicTopology/Singular/RelativeCochainCone.lean	identical	0	0	
+Lemmas/AlgebraicTopology/Singular/RelativeCochainConeNaturality.lean	identical	0	0	
+Lemmas/AlgebraicTopology/Singular/RelativeHomotopyInvariance.lean	identical	0	0	
+Lemmas/AlgebraicTopology/Singular/Sheaf/Chain.lean	identical	0	0	
+Lemmas/AlgebraicTopology/Singular/Sheaf/ChainStalk.lean	identical	0	0	
+Lemmas/AlgebraicTopology/Singular/Sheaf/Cochain.lean	identical	0	0	
+Lemmas/AlgebraicTopology/Singular/Sheaf/CochainFlasque.lean	identical	0	0	
+Lemmas/AlgebraicTopology/Singular/Sheaf/CochainOpenConeNaturality.lean	identical	0	0	
+Lemmas/AlgebraicTopology/Singular/Sheaf/CochainOpenRestriction.lean	identical	0	0	
+Lemmas/AlgebraicTopology/Singular/Sheaf/CochainOpenSections.lean	identical	0	0	
+Lemmas/AlgebraicTopology/Singular/Sheaf/CochainResolution.lean	identical	0	0	
+Lemmas/AlgebraicTopology/Singular/Sheaf/CochainRestriction.lean	identical	0	0	
+Lemmas/AlgebraicTopology/Singular/Sheaf/SubdivisionCochain.lean	identical	0	0	
+Lemmas/AlgebraicTopology/Singular/Subdivision/AffineIteration.lean	identical	0	0	
+Lemmas/AlgebraicTopology/Singular/Subdivision/BarycentricOuterFaces.lean	identical	0	0	
+Lemmas/AlgebraicTopology/Singular/Subdivision/Basic.lean	identical	0	0	
+Lemmas/AlgebraicTopology/Support/CohomologyFlasqueModel.lean	identical	0	0	
+Lemmas/AlgebraicTopology/Support/CohomologyInjectiveModel.lean	identical	0	0	
+Lemmas/AlgebraicTopology/Support/DerivedSectionsLocalization.lean	identical	0	0	
+Lemmas/AlgebraicTopology/Support/DerivedSectionsNaturality.lean	identical	0	0	
+Lemmas/AlgebraicTopology/Support/DerivedSectionsShift.lean	identical	0	0	
+Lemmas/AlgebraicTopology/Support/FiniteFiltrationVanishing.lean	identical	0	0	
+Lemmas/AlgebraicTopology/Support/FlasqueComparison.lean	identical	0	0	
+Lemmas/AlgebraicTopology/Support/FlasqueSections.lean	identical	0	0	
+Lemmas/AlgebraicTopology/Support/NestedLocalization.lean	identical	0	0	
+Lemmas/AlgebraicTopology/Support/NestedOnOpen.lean	identical	0	0	
+Lemmas/AlgebraicTopology/Support/RelativeCohomologySheaf.lean	identical	0	0	
+Lemmas/AlgebraicTopology/Support/SectionRestrictionCone.lean	identical	0	0	
+Lemmas/AlgebraicTopology/Support/SectionRestrictionConeNaturality.lean	identical	0	0	
+Lemmas/AlgebraicTopology/Support/SheafCohomology.lean	identical	0	0	
+Lemmas/AlgebraicTopology/Support/SingularFlasqueModel.lean	identical	0	0	
+Lemmas/AlgebraicTopology/Support/SingularSectionNaturality.lean	identical	0	0	
+Lemmas/Analysis/Calculus/DifferentialForm/ExactWedge.lean	identical	0	0	
+Lemmas/LinearAlgebra/ComplexOrientation.lean	identical	0	0	
+Lemmas/Topology/Dimension/Basic.lean	identical	0	0	
+Mathlib/Algebra/Homology/DerivedCategory/KInjectiveHom.lean	identical	0	0	
+Mathlib/Algebra/Homology/HomComplexPrecomp.lean	identical	0	0	
+Mathlib/Algebra/Homology/HomComplexSingle.lean	identical	0	0	
+Mathlib/Algebra/Homology/LiftToInjective.lean	identical	0	0	
+Mathlib/Algebra/Homology/MapExtend.lean	identical	0	0	
+Mathlib/Algebra/Homology/StupidTruncation.lean	identical	0	0	
+Mathlib/Algebra/Ring/Basic.lean	identical	0	0	
+Mathlib/AlgebraicGeometry/GenericPoint.lean	identical	0	0	
+Mathlib/AlgebraicGeometry/Over/Basic.lean	identical	0	0	
+Mathlib/Analysis/Calculus/DifferentialForm/Poincare.lean	identical	0	0	
+Mathlib/Analysis/Calculus/SplitDerivativeNormalChart.lean	identical	0	0	
+Mathlib/Analysis/NormedSpace/WedgeCovectors.lean	identical	0	0	
+Mathlib/CategoryTheory/Abelian/KernelCompositionShortExact.lean	identical	0	0	
+Mathlib/Geometry/Convex/StdSimplexMetric.lean	ONLY_IN_CHALLENGE	0	843	
+Mathlib/LinearAlgebra/Dual/Defs.lean	identical	0	0	
+Mathlib/LinearAlgebra/Quotient/Basic.lean	identical	0	0	
+Mathlib/Topology/Algebra/IsOpenUnits.lean	identical	0	0	
+Mathlib/Topology/Category/TopPair.lean	identical	0	0	
+Mathlib/Topology/ChartedSpaceParacompact.lean	identical	0	0	
+Mathlib/Topology/KrullDimension.lean	identical	0	0	
+Mathlib/Topology/Sheaves/StalkExact.lean	identical	0	0	
+Statement.lean	identical	0	0	
+Variants.lean	identical	0	0	

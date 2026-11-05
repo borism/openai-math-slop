@@ -1,0 +1,45 @@
+--- upstream/Definitions/Algebra/Homology/DerivedCategory/MappingCoconeShortExact.lean
++++ challenge/Definitions/Algebra/Homology/DerivedCategory/MappingCoconeShortExact.lean
+@@ -2,8 +2,12 @@
+ Copyright 2026 The Formal Conjectures Authors.
+ Released under Apache 2.0 license as described in the file LICENSE.
++
+ -/
+-module
+ 
+-public import Mathlib.Algebra.Homology.DerivedCategory.ShortExact
++import Mathlib.Algebra.Homology.DerivedCategory.ShortExact
++
++namespace OAI.Algebra.Homology.MappingCoconeShortExact
++
++open _root_.CochainComplex
+ 
+ /-!
+@@ -16,14 +20,17 @@
+ -/
+ 
+-@[expose] public noncomputable section
++noncomputable section
+ 
+-open CategoryTheory CategoryTheory.Limits CategoryTheory.Pretriangulated
+-open HomologicalComplex
++open _root_.CategoryTheory _root_.CategoryTheory.Limits _root_.CategoryTheory.Pretriangulated
++open _root_.HomologicalComplex
+ 
+ namespace CochainComplex
++open _root_.CochainComplex
+ 
+ variable {C : Type*} [Category* C] [Abelian C]
+ 
+ namespace mappingCocone
++open _root_.CochainComplex
++open _root_.CochainComplex.mappingCocone
+ 
+ variable (S : ShortComplex (CochainComplex C ℤ))
+@@ -41,2 +48,6 @@
+ 
+ end CochainComplex
++
++end
++
++end OAI.Algebra.Homology.MappingCoconeShortExact

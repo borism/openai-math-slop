@@ -1,0 +1,51 @@
+--- upstream/Definitions/AlgebraicGeometry/ClosedImmersion/AnalyticLeftInverse.lean
++++ challenge/Definitions/AlgebraicGeometry/ClosedImmersion/AnalyticLeftInverse.lean
+@@ -2,9 +2,13 @@
+ Copyright 2026 The Formal Conjectures Authors.
+ Released under Apache 2.0 license as described in the file LICENSE.
++
+ -/
+-module
+ 
+-public import HodgeConjecture.Lemmas.AlgebraicGeometry.ComplexPoint.AnalyticMap
+-public import Mathlib.AlgebraicGeometry.Morphisms.ClosedImmersion
++import HodgeConjecture.Lemmas.AlgebraicGeometry.ComplexPoint.AnalyticMap
++import Mathlib.AlgebraicGeometry.Morphisms.ClosedImmersion
++
++namespace OAI.AlgebraicGeometry.ClosedImmersion.AnalyticLeftInverse
++
++open _root_.AlgebraicGeometry
+ 
+ /-!
+@@ -16,9 +20,10 @@
+ -/
+ 
+-@[expose] public noncomputable section
++noncomputable section
+ 
+-open CategoryTheory Topology TopologicalSpace Filter
++open _root_.CategoryTheory _root_.Topology _root_.TopologicalSpace Filter
+ 
+-namespace AlgebraicGeometry.ComplexPoint
++section
++namespace ComplexPoint
+ 
+ variable (X Y : Over (Spec ↧ℂ))
+@@ -29,8 +34,13 @@
+ and let `z ∈ Y(ℂ)`. If `eY` and `eX` are the chosen analytic charts at `z` and `i(z)`, this is
+ the coordinate expression `eX ∘ i ∘ eY⁻¹ : ℂ^m → ℂ^d`, valid where both charts are defined. -/
+-def inclusionInComplexCharts (z : ComplexPoint Y) :
++def _root_.OAI.AlgebraicGeometry.ComplexPoint.Basic.ComplexSchemePoint.inclusionInComplexCharts (z : _root_.OAI.AlgebraicGeometry.ComplexPoint.Basic.ComplexSchemePoint Y) :
+     (Fin m → ℂ) → (Fin d → ℂ) :=
+-  fun v => localChart X d (Point.map i z)
+-    (Point.map i ((localChart Y m z).symm v))
++  fun v => _root_.OAI.AlgebraicGeometry.ComplexPoint.Basic.ComplexSchemePoint.localChart X d (_root_.OAI.AlgebraicGeometry.ComplexPoint.Basic.Point.map i z)
++    (_root_.OAI.AlgebraicGeometry.ComplexPoint.Basic.Point.map i ((_root_.OAI.AlgebraicGeometry.ComplexPoint.Basic.ComplexSchemePoint.localChart Y m z).symm v))
+ 
+-end AlgebraicGeometry.ComplexPoint
++end ComplexPoint
++end
++
++end
++
++end OAI.AlgebraicGeometry.ClosedImmersion.AnalyticLeftInverse

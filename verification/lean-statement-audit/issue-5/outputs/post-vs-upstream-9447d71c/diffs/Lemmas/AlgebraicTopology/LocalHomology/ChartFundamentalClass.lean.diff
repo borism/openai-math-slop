@@ -1,0 +1,41 @@
+--- upstream/Lemmas/AlgebraicTopology/LocalHomology/ChartFundamentalClass.lean
++++ challenge/Lemmas/AlgebraicTopology/LocalHomology/ChartFundamentalClass.lean
+@@ -13,9 +13,11 @@
+ See the License for the specific language governing permissions and
+ limitations under the License.
++
+ -/
+-module
+ 
+-public import HodgeConjecture.Definitions.AlgebraicTopology.LocalHomology.ComplexClass
+-public import Mathlib.Analysis.Normed.Module.Ball.Homeomorph
++import HodgeConjecture.Definitions.AlgebraicTopology.LocalHomology.ComplexClass
++import Mathlib.Analysis.Normed.Module.Ball.Homeomorph
++
++namespace OAI.AlgebraicTopology.LocalHomology.ChartFundamentalClass
+ 
+ /-!
+@@ -33,9 +35,10 @@
+ -/
+ 
+-@[expose] public noncomputable section
++noncomputable section
+ 
+-open CategoryTheory Topology
++open _root_.CategoryTheory _root_.Topology
+ 
+-namespace AlgebraicTopology.Singular
++section
++namespace Singular
+ 
+ variable {M : Type} [TopologicalSpace M] (d : ℕ)
+@@ -82,3 +85,8 @@
+   exact e.left_inv hx
+ 
+-end AlgebraicTopology.Singular
++end Singular
++end
++
++end
++
++end OAI.AlgebraicTopology.LocalHomology.ChartFundamentalClass

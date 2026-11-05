@@ -1,0 +1,20 @@
+--- upstream/Definitions/AlgebraicGeometry/Cycle/SmoothPair/CoclassSection.lean
++++ challenge/Definitions/AlgebraicGeometry/Cycle/SmoothPair/CoclassSection.lean
+@@ -132,8 +132,8 @@
+       smoothClosedSupportChartCoclassGerm X Y i m d z x hx := by
+   by_cases hxS : x ∈ Set.range (Point.map i)
+-  · rw [smoothClosedSupportCoclassStalk, dif_pos hxS]
++  · rw [smoothClosedSupportCoclassStalk, dite_eq_left hxS]
+     exact smoothClosedSupportChartCoclassGerm_eq X Y i m d
+       hxS.choose z x hxS _ hx
+-  · rw [smoothClosedSupportCoclassStalk, dif_neg hxS]
++  · rw [smoothClosedSupportCoclassStalk, dite_eq_right hxS]
+     exact (smoothClosedSupportChartCoclassGerm_eq_zero X Y i m d z x hx hxS).symm
+ 
+@@ -141,5 +141,5 @@
+     (x : ComplexPoint X) (hxS : x ∉ Set.range (Point.map i)) :
+     smoothClosedSupportCoclassStalk X Y i m d x = 0 := by
+-  rw [smoothClosedSupportCoclassStalk, dif_neg hxS]
++  rw [smoothClosedSupportCoclassStalk, dite_eq_right hxS]
+ 
+ /-- The charts and the open support complement prove local representability

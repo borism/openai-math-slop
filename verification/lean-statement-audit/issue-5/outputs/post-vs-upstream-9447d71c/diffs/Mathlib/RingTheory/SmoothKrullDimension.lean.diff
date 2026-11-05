@@ -1,0 +1,136 @@
+--- upstream/Mathlib/RingTheory/SmoothKrullDimension.lean
++++ challenge/Mathlib/RingTheory/SmoothKrullDimension.lean
+@@ -13,15 +13,21 @@
+ See the License for the specific language governing permissions and
+ limitations under the License.
++
+ -/
+-module
+-
+-public import Mathlib.Data.Complex.Basic
+-public import Mathlib.RingTheory.Ideal.Height
+-public import Mathlib.RingTheory.QuasiFinite.Basic
+-public import Mathlib.RingTheory.RingHom.StandardSmooth
++
++import Mathlib.Basic.Complex.Basic
++import Mathlib.RingTheory.Ideal.Height
++import Mathlib.RingTheory.QuasiFinite.Basic
++import Mathlib.RingTheory.RingHom.StandardSmooth
+ 
+ import Mathlib.RingTheory.KrullDimension.Field
+ import Mathlib.RingTheory.KrullDimension.Polynomial
+ import Mathlib.RingTheory.Unramified.LocalStructure
++
++namespace OAI.Algebra.RingTheory.SmoothKrullDimension
++
++open _root_.Algebra
++open _root_.MvPolynomial
++open _root_.RingHom
+ 
+ /-!
+@@ -38,9 +44,9 @@
+ -/
+ 
+-@[expose] public noncomputable section
+-
+-open CategoryTheory Topology
+-
+-namespace Algebra
++noncomputable section
++
++open _root_.CategoryTheory _root_.Topology
++
++section
+ 
+ variable {R S : Type*} [CommRing R] [CommRing S] [Algebra R S]
+@@ -63,5 +69,5 @@
+     ringKrullDim S ≤ ringKrullDim R := by
+   rw [ringKrullDim, ringKrullDim]
+-  exact Order.krullDim_le_of_strictMono _ QuasiFinite.strictMono_primeSpectrumComap
++  exact Order.krullDim_le_of_strictMono _ _root_.OAI.Algebra.RingTheory.SmoothKrullDimension.QuasiFinite.strictMono_primeSpectrumComap
+ 
+ /-- A flat quasi-finite algebra preserves the height of every prime under contraction. -/
+@@ -75,5 +81,5 @@
+         (PrimeSpectrum.comap (algebraMap R S) (⟨P, inferInstance⟩ : PrimeSpectrum S)) := by
+       apply Order.height_eq_of_strictMono (PrimeSpectrum.comap (algebraMap R S))
+-        QuasiFinite.strictMono_primeSpectrumComap
++        _root_.OAI.Algebra.RingTheory.SmoothKrullDimension.QuasiFinite.strictMono_primeSpectrumComap
+       intro Q p hp
+       have hp' : p.asIdeal < Q.asIdeal.under R := by
+@@ -95,7 +101,8 @@
+           (⟨P, inferInstance⟩ : PrimeSpectrum S))).symm
+ 
+-end Algebra
++end
+ 
+ namespace RingHom
++open _root_.RingHom
+ 
+ variable {R S : Type*} [CommRing R] [CommRing S]
+@@ -111,5 +118,5 @@
+     RingHom.finite_iff_finiteType_of_isJacobsonRing.mpr hft
+   have hmax : ((⊥ : Ideal K).comap (q.comp f)).IsMaximal :=
+-    Ideal.isMaximal_comap_of_isIntegral_of_isMaximal' (q.comp f) hfin.to_isIntegral ⊥
++    Ideal.isMaximal_comap_of_isIntegral_of_isMaximal (q.comp f) hfin.to_isIntegral ⊥
+   change (((⊥ : Ideal K).comap q).comap f).IsMaximal at hmax
+   have hq : (⊥ : Ideal K).comap q = P := by
+@@ -129,7 +136,7 @@
+   calc
+     ringKrullDim S ≤ ringKrullDim (MvPolynomial (Fin d) R) :=
+-      Algebra.QuasiFinite.ringKrullDim_le
++      _root_.OAI.Algebra.RingTheory.SmoothKrullDimension.QuasiFinite.ringKrullDim_le
+     _ = ringKrullDim R + d := by
+-      rw [MvPolynomial.ringKrullDim_of_isNoetherianRing, Nat.card_fin]
++      simp
+ 
+ /-- A standard-smooth complex algebra of relative dimension `d` has Krull dimension at most
+@@ -139,9 +146,10 @@
+     ringKrullDim S ≤ d := by
+   simpa only [ringKrullDim_eq_zero_of_field, WithBot.coe_zero, zero_add] using
+-    hf.ringKrullDim_le_add
++    (_root_.OAI.Algebra.RingTheory.SmoothKrullDimension.RingHom.IsStandardSmoothOfRelativeDimension.ringKrullDim_le_add hf)
+ 
+ end RingHom
+ 
+ namespace MvPolynomial
++open _root_.MvPolynomial
+ 
+ /-- Every maximal ideal of a polynomial ring in `d` variables over a field has height `d`. -/
+@@ -153,6 +161,7 @@
+           ringKrullDim (MvPolynomial (Fin 0) K) :=
+         Ideal.height_le_ringKrullDim_of_ne_top Ideal.IsPrime.ne_top'
+-      rw [MvPolynomial.ringKrullDim_of_isNoetherianRing,
+-        ringKrullDim_eq_zero_of_field, Nat.card_fin, Nat.cast_zero, add_zero] at hle
++      simp only [MvPolynomial.ringKrullDim_of_isNoetherianRing,
++        ringKrullDim_eq_zero_of_field, ENat.card_eq_coe_fintype_card, Fintype.card_fin,
++        Nat.cast_zero, WithBot.coe_zero, zero_add] at hle
+       exact le_antisymm (WithBot.coe_le_coe.mp hle) bot_le
+   | succ n ih =>
+@@ -175,4 +184,5 @@
+ 
+ namespace RingHom
++open _root_.RingHom
+ 
+ /-- A nonzero standard-smooth complex algebra of relative dimension `d` has Krull dimension
+@@ -192,10 +202,10 @@
+     RingHom.finiteType_algebraMap.mpr inferInstance
+   have hunder : (P.under (MvPolynomial (Fin d) ℂ)).IsMaximal :=
+-    hfiniteType.isMaximal_comap_of_isJacobsonRing P
++    (_root_.OAI.Algebra.RingTheory.SmoothKrullDimension.RingHom.FiniteType.isMaximal_comap_of_isJacobsonRing hfiniteType) P
+   have hheight : P.height = d := by
+-    rw [Algebra.QuasiFinite.height_eq_height_under (R := MvPolynomial (Fin d) ℂ)]
+-    exact MvPolynomial.height_eq_fin_of_isMaximal ℂ d
++    rw [_root_.OAI.Algebra.RingTheory.SmoothKrullDimension.QuasiFinite.height_eq_height_under (R := MvPolynomial (Fin d) ℂ)]
++    exact _root_.OAI.Algebra.RingTheory.SmoothKrullDimension.MvPolynomial.height_eq_fin_of_isMaximal ℂ d
+       (P.under (MvPolynomial (Fin d) ℂ))
+-  apply le_antisymm hf.ringKrullDim_le_complex
++  apply le_antisymm (_root_.OAI.Algebra.RingTheory.SmoothKrullDimension.RingHom.IsStandardSmoothOfRelativeDimension.ringKrullDim_le_complex hf)
+   change (↑(d : ℕ∞) : WithBot ℕ∞) ≤ ringKrullDim S
+   have hlower : (↑P.height : WithBot ℕ∞) ≤ ringKrullDim S :=
+@@ -204,2 +214,6 @@
+ 
+ end RingHom
++
++end
++
++end OAI.Algebra.RingTheory.SmoothKrullDimension

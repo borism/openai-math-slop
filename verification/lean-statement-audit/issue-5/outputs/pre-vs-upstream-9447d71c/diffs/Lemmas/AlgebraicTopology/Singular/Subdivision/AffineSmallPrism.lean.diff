@@ -1,0 +1,9 @@
+--- upstream/Lemmas/AlgebraicTopology/Singular/Subdivision/AffineSmallPrism.lean
++++ challenge/Lemmas/AlgebraicTopology/Singular/Subdivision/AffineSmallPrism.lean
+@@ -74,5 +74,5 @@
+         coverSmallAffinePrismComponent X U n =
+       coverSmallAffinePrismSimplexChain X U n x := by
+-  apply Sigma.ι_desc
++  apply Sigma.ι_comp_desc
+ 
+ /-- The small prism on a generator agrees with the full prism after inclusion. -/

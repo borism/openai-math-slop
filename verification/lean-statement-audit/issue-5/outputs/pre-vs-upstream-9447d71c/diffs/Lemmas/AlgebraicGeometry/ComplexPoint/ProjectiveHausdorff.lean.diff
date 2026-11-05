@@ -1,0 +1,9 @@
+--- upstream/Lemmas/AlgebraicGeometry/ComplexPoint/ProjectiveHausdorff.lean
++++ challenge/Lemmas/AlgebraicGeometry/ComplexPoint/ProjectiveHausdorff.lean
+@@ -220,5 +220,5 @@
+   change IsLocalRing.closedPoint ℂ ∈
+     chartIntegralProj v hv ⁻¹ᵁ Proj.basicOpen (UniversalGrading n) r
+-  rw [chartIntegralProj_preimage_basicOpen v hv r hd hr, if_neg hne]
++  rw [chartIntegralProj_preimage_basicOpen v hv r hd hr, ite_eq_right hne]
+   trivial
+ 

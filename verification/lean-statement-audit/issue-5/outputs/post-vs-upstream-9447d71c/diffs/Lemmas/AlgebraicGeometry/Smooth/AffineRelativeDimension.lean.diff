@@ -1,0 +1,41 @@
+--- upstream/Lemmas/AlgebraicGeometry/Smooth/AffineRelativeDimension.lean
++++ challenge/Lemmas/AlgebraicGeometry/Smooth/AffineRelativeDimension.lean
+@@ -2,10 +2,14 @@
+ Copyright 2026 The Formal Conjectures Authors.
+ Released under Apache 2.0 license as described in the file LICENSE.
++
+ -/
+-module
+ 
+-public import HodgeConjecture.Lemmas.AlgebraicGeometry.Smooth.Equidimensional
++import HodgeConjecture.Lemmas.AlgebraicGeometry.Smooth.Equidimensional
+ 
+ import HodgeConjecture.Mathlib.CategoryTheory.ConcreteCategory.Notation
++
++namespace OAI.AlgebraicGeometry.Smooth.AffineRelativeDimension
++
++open _root_.AlgebraicGeometry
+ 
+ /-!
+@@ -18,9 +22,9 @@
+ -/
+ 
+-@[expose] public noncomputable section
++noncomputable section
+ 
+-open CategoryTheory
++open _root_.CategoryTheory
+ 
+-namespace AlgebraicGeometry
++section
+ 
+ open _root_.RingHom
+@@ -59,3 +63,7 @@
+   simpa only [Nat.add_zero, g, Scheme.Hom.resLE_comp_ι] using h
+ 
+-end AlgebraicGeometry
++end
++
++end
++
++end OAI.AlgebraicGeometry.Smooth.AffineRelativeDimension

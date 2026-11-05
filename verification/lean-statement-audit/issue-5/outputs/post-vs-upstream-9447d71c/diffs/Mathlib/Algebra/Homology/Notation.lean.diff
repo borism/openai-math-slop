@@ -1,0 +1,29 @@
+--- upstream/Mathlib/Algebra/Homology/Notation.lean
++++ challenge/Mathlib/Algebra/Homology/Notation.lean
+@@ -2,8 +2,10 @@
+ Copyright 2026 The Formal Conjectures Authors.
+ Released under Apache 2.0 license as described in the file LICENSE.
++
+ -/
+-module
+ 
+-public import Mathlib.Algebra.Homology.ComplexShape
++import Mathlib.Algebra.Homology.ComplexShape
++
++namespace OAI.Algebra.Homology.Notation
+ 
+ /-!
+@@ -14,7 +16,11 @@
+ -/
+ 
+-@[expose] public section
++section
+ 
+ /-- `ℤᵘᵖ` is `ComplexShape.up ℤ`, the cohomological complex shape on integer degrees: its
+ potentially nonzero differentials have type `K.X n ⟶ K.X (n + 1)`. -/
+-notation "ℤᵘᵖ" => ComplexShape.up ℤ
++notation "ℤᵘᵖ" => ComplexShape.up Int
++
++end
++
++end OAI.Algebra.Homology.Notation

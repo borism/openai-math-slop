@@ -1,0 +1,323 @@
+
+##### Definitions/Algebra/Homology/LinearDual.lean  (44 hunks, 101 token edits)
+[0] insert  ...( ModuleCat . { u } R ) ) : range (
+    OLD: 
+    NEW: ( linearDual S ) .
+[1] insert  ...u } R ) ) : range ( moduleCatToCycles ) ≤ ker
+    OLD: 
+    NEW: (
+[2] insert  ...} R ) ) : range ( moduleCatToCycles ) ≤ ker dualCycleToHomologyFunctional
+    OLD: 
+    NEW: S )
+[3] insert  ...: ShortComplex ( ModuleCat . { u } R ) ) :
+    OLD: 
+    NEW: ( linearDual S ) .
+[4] insert  ...→ ₗ [ R ] Dual R H : = ( range
+    OLD: 
+    NEW: ( linearDual S ) .
+[5] insert  ...] Dual R H : = ( range moduleCatToCycles ) . liftQ
+    OLD: 
+    NEW: (
+[6] insert  ...Dual R H : = ( range moduleCatToCycles ) . liftQ dualCycleToHomologyFunctional
+    OLD: 
+    NEW: S ) (
+[7] insert  ...oCycles ) . liftQ dualCycleToHomologyFunctional dualCycleToHomologyFunctional_vanishes_on_boundaries
+    OLD: 
+    NEW: S )
+[8] insert  ...φ : ker dualMap ) ( z : ker hom ) :
+    OLD: 
+    NEW: (
+[9] insert  ...: ker dualMap ) ( z : ker hom ) : dualHomologyComparisonExplicit
+    OLD: 
+    NEW: S )
+[10] insert  ...ShortComplex ( ModuleCat . { u } R ) ) : Surjective
+    OLD: 
+    NEW: (
+[11] insert  ...( ModuleCat . { u } R ) ) : Surjective dualHomologyComparisonExplicit
+    OLD: 
+    NEW: S )
+[12] insert  ...ShortComplex ( ModuleCat . { u } R ) ) : Injective
+    OLD: 
+    NEW: (
+[13] insert  ...( ModuleCat . { u } R ) ) : Injective dualHomologyComparisonExplicit
+    OLD: 
+    NEW: S )
+[14] insert  ...| _ ψ = > rw [ eq ] have hzero :
+    OLD: 
+    NEW: (
+[15] insert  ..._ ψ = > rw [ eq ] have hzero : dualCycleToHomologyFunctional
+    OLD: 
+    NEW: S )
+[16] insert  ...: dualCycleToHomologyFunctional ( φ - ψ ) = 0 : = (
+    OLD: 
+    NEW: ( dualCycleToHomologyFunctional S ) .
+[17] insert  ...: ShortComplex ( ModuleCat . { u } R ) ) :
+    OLD: 
+    NEW: ( linearDual S ) .
+[18] insert  ...: homology ≃ ₗ [ R ] Dual R homology : =
+    OLD: 
+    NEW: ( linearDual S ) .
+[19] insert  ...R ] Dual R homology : = trans < | ( ofBijective
+    OLD: 
+    NEW: (
+[20] insert  ...] Dual R homology : = trans < | ( ofBijective dualHomologyComparisonExplicit
+    OLD: 
+    NEW: S )
+[21] insert  ...Dual R homology : = trans < | ( ofBijective dualHomologyComparisonExplicit ⟨
+    OLD: 
+    NEW: (
+[22] insert  ... = trans < | ( ofBijective dualHomologyComparisonExplicit ⟨ dualHomologyComparisonExplicit_injective
+    OLD: 
+    NEW: S )
+[23] insert  ... trans < | ( ofBijective dualHomologyComparisonExplicit ⟨ dualHomologyComparisonExplicit_injective ,
+    OLD: 
+    NEW: (
+[24] insert  ...risonExplicit ⟨ dualHomologyComparisonExplicit_injective , dualHomologyComparisonExplicit_surjective
+    OLD: 
+    NEW: S )
+[25] insert  ...} R ) ℕ ) ( n : ℕ ) : (
+    OLD: 
+    NEW: (
+[26] insert  ...R ) ℕ ) ( n : ℕ ) : ( linearDualCochainComplex
+    OLD: 
+    NEW: K )
+[27] insert  ...u } R ) ℕ ) ( n : ℕ ) :
+    OLD: 
+    NEW: ( linearDualCochainComplex K ) .
+[28] insert  ...ℕ ) ( n : ℕ ) : sc n ≅ (
+    OLD: 
+    NEW: linearDual (
+[29] replace  ...n : ℕ ) : sc n ≅ ( sc n )
+    OLD: . linearDual
+    NEW: )
+[30] insert  ...= ( down ℕ ) . prev n : = by simp
+    OLD: 
+    NEW: ( linearDualCochainComplex K ) .
+[31] insert  ...f ] def linearDualMap ( f : K ⟶ L ) :
+    OLD: 
+    NEW: (
+[32] insert  ...] def linearDualMap ( f : K ⟶ L ) : linearDualCochainComplex
+    OLD: 
+    NEW: L )
+[33] insert  ...def linearDualMap ( f : K ⟶ L ) : linearDualCochainComplex ⟶
+    OLD: 
+    NEW: (
+[34] insert  ...linearDualMap ( f : K ⟶ L ) : linearDualCochainComplex ⟶ linearDualCochainComplex
+    OLD: 
+    NEW: K )
+[35] insert  ...R ) ℕ ) : linearDualMap ( 𝟙 K ) = 𝟙
+    OLD: 
+    NEW: (
+[36] insert  ...) ℕ ) : linearDualMap ( 𝟙 K ) = 𝟙 linearDualCochainComplex
+    OLD: 
+    NEW: K )
+[37] insert  ...implicit_reducible ] def linearDualIso ( e : K ≅ L ) :
+    OLD: 
+    NEW: (
+[38] insert  ...] def linearDualIso ( e : K ≅ L ) : linearDualCochainComplex
+    OLD: 
+    NEW: L )
+[39] insert  ...def linearDualIso ( e : K ≅ L ) : linearDualCochainComplex ≅
+    OLD: 
+    NEW: (
+[40] insert  ...linearDualIso ( e : K ≅ L ) : linearDualCochainComplex ≅ linearDualCochainComplex
+    OLD: 
+    NEW: K )
+[41] insert  ...u } R ) ℕ ) ( n : ℕ ) :
+    OLD: 
+    NEW: ( linearDualCochainComplex K ) .
+[42] insert  ...= ( homologyMapIso ( linearDualCochainComplexScIso K n ) ) . trans (
+    OLD: 
+    NEW: linearDualHomologyEquiv (
+[43] replace  ...( linearDualCochainComplexScIso K n ) ) . trans ( sc n )
+    OLD: . linearDualHomologyEquiv
+    NEW: )
+
+##### Definitions/AlgebraicGeometry/ClosedImmersion/HolomorphicCharts.lean  (7 hunks, 13 token edits)
+[0] insert  ...y | AnalyticAt ℂ symm y } ) theorem biAnalyticLocus_isOpen : IsOpen
+    OLD: 
+    NEW: (
+[1] insert  ...| AnalyticAt ℂ symm y } ) theorem biAnalyticLocus_isOpen : IsOpen biAnalyticLocus
+    OLD: 
+    NEW: e )
+[2] insert  ...symm ) ) def biAnalyticRestrict : OpenPartialHomeomorph E F : = restrOpen
+    OLD: 
+    NEW: (
+[3] insert  ...) ) def biAnalyticRestrict : OpenPartialHomeomorph E F : = restrOpen biAnalyticLocus
+    OLD: 
+    NEW: e ) (
+[4] insert  ... biAnalyticRestrict : OpenPartialHomeomorph E F : = restrOpen biAnalyticLocus biAnalyticLocus_isOpen
+    OLD: 
+    NEW: e )
+[5] insert  ...localChart X d ( map i z ) ) . trans (
+    OLD: 
+    NEW: biAnalyticRestrict (
+[6] replace  ...) . trans ( closedImmersionNormalCoordinateChange X Y i m d z )
+    OLD: . biAnalyticRestrict
+    NEW: )
+
+##### Definitions/AlgebraicGeometry/ClosedImmersion/NormalCoordinates.lean  (8 hunks, 16 token edits)
+[0] insert  .... ker ) ( Fin d → ℂ ) : = (
+    OLD: 
+    NEW: normalChart (
+[1] replace  ...: = ( analyticAt_inclusionInComplexCharts X Y i m d z ) .
+    OLD: normalChart
+    NEW: hasStrictFDerivAt )
+[2] insert  ...X Y i m d z ) . source : = (
+    OLD: 
+    NEW: normalChart_mem_source (
+[3] replace  ...: = ( analyticAt_inclusionInComplexCharts X Y i m d z ) .
+    OLD: normalChart_mem_source
+    NEW: hasStrictFDerivAt )
+[4] insert  ...: = by simpa only [ closedImmersionNormalChart , inclusionInComplexCharts_at_center ] using (
+    OLD: 
+    NEW: normalChart_mem_target (
+[5] replace  ...] using ( analyticAt_inclusionInComplexCharts X Y i m d z ) .
+    OLD: normalChart_mem_target
+    NEW: hasStrictFDerivAt )
+[6] insert  ...d - m : = by have hdim : = ( (
+    OLD: 
+    NEW: splitKernelEquiv (
+[7] replace  ...m d z ) ( localChart Y m z z ) )
+    OLD: . splitKernelEquiv
+    NEW: )
+
+##### Definitions/AlgebraicGeometry/ComplexPoint/Basic.lean  (1 hunks, 1 token edits)
+[0] delete  ...
+    OLD: section
+    NEW: 
+
+##### Definitions/AlgebraicGeometry/Hodge/Filtration.lean  (18 hunks, 511 token edits)
+[0] delete  ...] variable ( X : Over ( Spec ↧ ℂ ) )
+    OLD: set_option auxLemma false
+    NEW: 
+[1] replace  ...ℂ ) ) set_option auxLemma false attribute [ local implicit_reducible ] Sheaf
+    OLD: _aux_1 _aux_3 _aux_5
+    NEW: instCategorySheaf def siteSheafHom { Y : TopCat } { F G : Sheaf AddCommGrpCat Y } ( f : F ⟶ G ) : ( show Sheaf ( grothendieckTopology Y ) AddCommGrpCat from F ) ⟶ ( show Sheaf ( grothendieckTopology Y ) AddCommGrpCat from G ) : = f lemma siteSheafHom_comp { Y : TopCat } { F G H : Sheaf AddCommGrpCat Y } ( f : F ⟶ G ) ( g : G ⟶ H ) : siteSheafHom ( f ≫ g ) = siteSheafHom f ≫ siteSheafHom g : = by r
+[2] insert  ...) ) = _ rw [ mulLeft_mul , h , map_comp ]
+    OLD: 
+    NEW: rfl
+[3] insert  ..., map_comp ] lemma ofHom_algebraMap_comp_complexScalarSMul ( q : K ) : ofHom
+    OLD: 
+    NEW: ↑
+[4] delete  ...( q : K ) : ofHom ( algebraMap K ℂ )
+    OLD: . toAddMonoidHom
+    NEW: 
+[5] replace  ...ℂ q ) ) = ofHom ( mulLeft q ) ≫ ofHom
+    OLD: ( @ toAddMonoidHom K ℂ ( K → + * ℂ ) toAddZero toAddZero instFunLike _
+    NEW: ↑
+[6] delete  ...+ * ℂ ) toAddZero toAddZero instFunLike _ ( algebraMap K ℂ
+    OLD: )
+    NEW: 
+[7] insert  ...= fieldScalarSheaf K X q ≫ fieldToComplexConstantSheaf K X : = by
+    OLD: 
+    NEW: change siteSheafHom ( fieldToComplexConstantSheaf K X ≫ complexScalarSheaf X ( algebraMap K ℂ q ) ) = siteSheafHom ( fieldScalarSheaf K X q ≫ fieldToComplexConstantSheaf K X ) rw [ siteSheafHom_comp , siteSheafHom_comp ]
+[8] insert  ...fieldScalarSheaf K X q ≫ fieldToComplexConstantSheaf K X : = by simp
+    OLD: 
+    NEW: only
+[9] insert  ...K X q ≫ fieldToComplexConstantSheaf K X : = by simp [
+    OLD: 
+    NEW: siteSheafHom ,
+[10] insert  ...mplexConstantSheaf , fieldScalarSheaf , complexScalarSheaf , constantSheaf , const , constantFunctor
+    OLD: 
+    NEW: ] let sheafify : = presheafToSheaf ( grothendieckTopology ( ComplexPoint X ) ) AddCommGrpCat let constantPresheaf : AddCommGrpCat ⥤ ( Opens ( ComplexPoint X ) ) ᵒᵖ ⥤ AddCommGrpCat : = const ( Opens ( ComplexPoint X ) ) ᵒᵖ change map ( map ( ofHom ↑ ( algebraMap K ℂ ) ) ) ≫ map ( complexScalarPresheaf X ( algebraMap K ℂ q ) ) = map ( map ( ofHom ( mulLeft q ) ) ) ≫ map ( map ( ofHom ↑ ( algebraMap 
+[11] insert  ...complexScalarSheaf , constantSheaf , const , constantFunctor , ← map_comp , ←
+    OLD: 
+    NEW: map_comp ,
+[12] delete  ..., constantSheaf , const , constantFunctor , ← map_comp , ← ofHom_algebraMap_comp_complexScalarSMul
+    OLD: , const_map_algebraMap_comp_complexScalarPresheaf
+    NEW: 
+[13] insert  ...map ( fieldScalarSheaf K X q ) n α : = rfl
+    OLD: 
+    NEW: omit [ Algebra K ℂ ] in lemma fieldScalarSheafCohomologyMap_comp_apply ( a b : K ) ( n : ℕ ) ( α : H ^ n ( X ; K ) ) : map ( fieldScalarSheaf K X b ≫ fieldScalarSheaf K X a ) n α = map ( fieldScalarSheaf K X a ) n ( map ( fieldScalarSheaf K X b ) n α ) : = by change map ( siteSheafHom ( fieldScalarSheaf K X b ≫ fieldScalarSheaf K X a ) ) n α = map ( siteSheafHom ( fieldScalarSheaf K X a ) ) n ( ma
+[14] delete  ...= > by rw [ field_smul_eq , field_smul_eq , field_smul_eq , fieldScalarSheaf_mul
+    OLD: , map_comp_apply
+    NEW: 
+[15] insert  ...rw [ field_smul_eq , field_smul_eq , field_smul_eq , fieldScalarSheaf_mul , map_comp_apply ]
+    OLD: 
+    NEW: exact fieldScalarSheafCohomologyMap_comp_apply K X a b n α
+[16] delete  ...) ( fun α = > by rw [ field_smul_eq , fieldScalarSheaf_one
+    OLD: , map_id_apply
+    NEW: 
+[17] insert  ...α = > by rw [ field_smul_eq , fieldScalarSheaf_one , map_id_apply ]
+    OLD: 
+    NEW: exact fieldScalarSheafCohomologyMap_id_apply K X n α
+
+##### Definitions/AlgebraicGeometry/ProjectiveSpace.lean  (1 hunks, 1 token edits)
+[0] delete  ...
+    OLD: section
+    NEW: 
+
+##### Definitions/AlgebraicTopology/Singular/Cohomology.lean  (4 hunks, 8 token edits)
+[0] insert  ...( ModuleCat . { u } R ) ℕ : = (
+    OLD: 
+    NEW: linearDualCochainComplex (
+[1] replace  ...ℕ : = ( ( relativeChainFunctor R ) . obj X )
+    OLD: . linearDualCochainComplex
+    NEW: )
+[2] insert  ...] Dual R ( RelativeHomology R X n ) : = (
+    OLD: 
+    NEW: linearDualHomologyEquiv (
+[3] replace  ...) : = ( ( relativeChainFunctor R ) . obj X )
+    OLD: . linearDualHomologyEquiv
+    NEW: )
+
+##### Definitions/AlgebraicTopology/Singular/RelativeCochainCone.lean  (4 hunks, 8 token edits)
+[0] insert  ...( X : TopPair . { u } ) : ( (
+    OLD: 
+    NEW: linearDualCochainComplex (
+[1] insert  ...TopPair . { u } ) : ( ( SingularChainComplex R fst
+    OLD: 
+    NEW: )
+[2] insert  ...( SingularChainComplex R fst ) . extend embeddingUpNat ) ⟶ ( (
+    OLD: 
+    NEW: linearDualCochainComplex (
+[3] insert  ...embeddingUpNat ) ⟶ ( ( ( chainPairFunctor R ) . obj X
+    OLD: 
+    NEW: ) . left
+
+##### Definitions/AlgebraicTopology/Singular/RelativeCochainConeNaturality.lean  (2 hunks, 5 token edits)
+[0] replace  ...ₗ [ R ] RelativeCohomology R X n : = ( (
+    OLD: ( relativeChainFunctor
+    NEW: RelativeCochainComplex
+[1] delete  ...] RelativeCohomology R X n : = ( ( ( relativeChainFunctor R
+    OLD: ) . obj
+    NEW: 
+
+##### Definitions/AlgebraicTopology/Singular/Sheaf/CochainOpenCone.lean  (6 hunks, 11 token edits)
+[0] insert  ...) . mapHomologicalComplex ( . up ℕ ) ) . obj (
+    OLD: 
+    NEW: linearDualCochainComplex (
+[1] replace  ...) ) . obj ( SingularChainComplex R ( of V ) )
+    OLD: . linearDualCochainComplex
+    NEW: )
+[2] insert  ...R ) AddCommGrpCat ) . mapHomologicalComplex ℤᵘᵖ ) . obj ( (
+    OLD: 
+    NEW: linearDualCochainComplex (
+[3] insert  ...mapHomologicalComplex ℤᵘᵖ ) . obj ( ( SingularChainComplex R ( of V
+    OLD: 
+    NEW: )
+[4] insert  ...≫ ( mapExtendCanonicalIso ( forget₂ ( ModuleCat R ) AddCommGrpCat ) (
+    OLD: 
+    NEW: linearDualCochainComplex (
+[5] replace  ...R ) AddCommGrpCat ) ( SingularChainComplex R ( of V ) )
+    OLD: . linearDualCochainComplex
+    NEW: )
+
+##### Definitions/AlgebraicTopology/Support/CohomologyInjectiveModel.lean  (1 hunks, 1 token edits)
+[0] insert  ...} ( Sheaf ( grothendieckTopology X ) AddCommGrpCat ) ] local instance
+    OLD: 
+    NEW: instHasDerivedCategorySheafOpensCarrierGrothendieckTopologyAddCommGrpCat_oAI
+
+##### Definitions/AlgebraicTopology/Support/RelativeCohomologyOpenTransport.lean  (2 hunks, 3 token edits)
+[0] insert  ...: IsCocontinuous ( grothendieckTopology Y ) ( grothendieckTopology X ) : =
+    OLD: 
+    NEW: (
+[1] insert  ...IsCocontinuous ( grothendieckTopology Y ) ( grothendieckTopology X ) : = functor_isCocontinuous
+    OLD: 
+    NEW: hf )
+
+##### Definitions/Topology/Dimension/Basic.lean  (1 hunks, 2 token edits)
+[0] delete  ...noncomputable section @ [
+    OLD: expose ,
+    NEW: 

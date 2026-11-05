@@ -1,0 +1,15 @@
+--- upstream/Lemmas/AlgebraicTopology/LocalHomology/FundamentalClassGenerator.lean
++++ challenge/Lemmas/AlgebraicTopology/LocalHomology/FundamentalClassGenerator.lean
+@@ -18,4 +18,5 @@
+ public import HodgeConjecture.Definitions.AlgebraicTopology.LocalHomology.ComplexClass
+ public import Mathlib.AlgebraicTopology.SingularHomology.HomologyZero
++public import Mathlib.Geometry.Convex.ConvexSpace.Barycenter
+ 
+ /-!
+@@ -107,5 +108,5 @@
+   intro σ
+   let f := ((puncturedPair ℝ 0).snd.toSSetObjEquiv _ ) σ
+-  let y := f stdSimplex.barycenter
++  let y := f Convexity.StdSimplex.barycenter
+   apply y.2
+   funext j

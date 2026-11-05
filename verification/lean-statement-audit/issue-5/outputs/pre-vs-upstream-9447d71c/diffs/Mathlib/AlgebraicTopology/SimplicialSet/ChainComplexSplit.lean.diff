@@ -1,0 +1,9 @@
+--- upstream/Mathlib/AlgebraicTopology/SimplicialSet/ChainComplexSplit.lean
++++ challenge/Mathlib/AlgebraicTopology/SimplicialSet/ChainComplexSplit.lean
+@@ -58,5 +58,5 @@
+   refine (Cofan.IsColimit.fac (Y.isColimitChainComplexXCofan R n) _
+     (f.app (op ⦋n⦌) x)).trans ?_
+-  rw [dif_pos h, hf h.choose_spec]
++  rw [dite_eq_left h, hf h.choose_spec]
+ 
+ /-- A map of simplicial sets that is injective on `n`-simplices induces a split monomorphism on

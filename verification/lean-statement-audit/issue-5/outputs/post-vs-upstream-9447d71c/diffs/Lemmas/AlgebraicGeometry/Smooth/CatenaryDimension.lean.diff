@@ -1,0 +1,57 @@
+--- upstream/Lemmas/AlgebraicGeometry/Smooth/CatenaryDimension.lean
++++ challenge/Lemmas/AlgebraicGeometry/Smooth/CatenaryDimension.lean
+@@ -13,9 +13,9 @@
+ See the License for the specific language governing permissions and
+ limitations under the License.
++
+ -/
+-module
+ 
+-public import HodgeConjecture.Lemmas.AlgebraicGeometry.Cycle.Support
+-public import HodgeConjecture.Lemmas.RingTheory.TranscendenceDegreeKrullDimension
++import HodgeConjecture.Lemmas.AlgebraicGeometry.Cycle.Support
++import HodgeConjecture.Lemmas.RingTheory.TranscendenceDegreeKrullDimension
+ 
+ import HodgeConjecture.Lemmas.AlgebraicGeometry.Cycle.Component.Dimension
+@@ -29,4 +29,8 @@
+ import Mathlib.RingTheory.NoetherNormalization
+ import Mathlib.RingTheory.Unramified.LocalStructure
++
++namespace OAI.AlgebraicGeometry.Smooth.CatenaryDimension
++
++open _root_.RingHom
+ 
+ /-!
+@@ -45,9 +49,10 @@
+ -/
+ 
+-@[expose] public noncomputable section
++noncomputable section
+ 
+-open CategoryTheory Ideal MvPolynomial Topology
++open _root_.CategoryTheory _root_.Ideal _root_.MvPolynomial _root_.Topology
+ 
+ namespace RingHom
++open _root_.RingHom
+ 
+ /-- For every prime of a standard-smooth complex algebra of relative dimension `d`, its height
+@@ -69,12 +74,16 @@
+       (A := S) inferInstance inferInstance
+   have hheight : P.height = (P.under (MvPolynomial (Fin d) ℂ)).height :=
+-    Algebra.QuasiFinite.height_eq_height_under P
++    _root_.OAI.Algebra.RingTheory.SmoothKrullDimension.QuasiFinite.height_eq_height_under P
+   have hquot : ringKrullDim (S ⧸ P) =
+       ringKrullDim (MvPolynomial (Fin d) ℂ ⧸ P.under (MvPolynomial (Fin d) ℂ)) :=
+-    Algebra.QuasiFinite.ringKrullDim_quotient_eq
++    _root_.OAI.Algebra.RingTheory.TranscendenceDegreeKrullDimension.QuasiFinite.ringKrullDim_quotient_eq
+       (k := ℂ) (R := MvPolynomial (Fin d) ℂ) P
+   rw [hheight, hquot]
+-  exact PolynomialCatenary.MvPolynomial.height_add_ringKrullDim_quotient_eq_fin
++  exact _root_.OAI.Algebra.Foundations.PolynomialCatenaryT.PolynomialCatenary.MvPolynomial.height_add_ringKrullDim_quotient_eq_fin
+     (P.under (MvPolynomial (Fin d) ℂ))
+ 
+ end RingHom
++
++end
++
++end OAI.AlgebraicGeometry.Smooth.CatenaryDimension

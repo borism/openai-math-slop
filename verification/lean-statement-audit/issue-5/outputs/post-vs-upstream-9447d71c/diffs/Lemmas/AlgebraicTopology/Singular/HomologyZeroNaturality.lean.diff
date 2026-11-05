@@ -1,0 +1,69 @@
+--- upstream/Lemmas/AlgebraicTopology/Singular/HomologyZeroNaturality.lean
++++ challenge/Lemmas/AlgebraicTopology/Singular/HomologyZeroNaturality.lean
+@@ -2,8 +2,13 @@
+ Copyright 2026 The Formal Conjectures Authors.
+ Released under Apache 2.0 license as described in the file LICENSE.
++
+ -/
+-module
+ 
+-public import Mathlib.AlgebraicTopology.SingularHomology.HomologyZero
++import Mathlib.AlgebraicTopology.SingularHomology.HomologyZero
++
++namespace OAI.AlgebraicTopology.Singular.HomologyZeroNaturality
++
++open _root_.SSet
++open _root_.TopCat
+ 
+ /-!
+@@ -19,9 +24,9 @@
+ -/
+ 
+-@[expose] public noncomputable section
++noncomputable section
+ 
+ universe w v u
+ 
+-open CategoryTheory Limits AlgebraicTopology HomologicalComplex
++open _root_.CategoryTheory Limits _root_.AlgebraicTopology _root_.HomologicalComplex
+ open scoped Simplicial
+ 
+@@ -30,4 +35,5 @@
+ 
+ namespace SSet
++open _root_.SSet
+ 
+ /-- In a nonnegative chain complex the degree-zero chains are the degree-zero cycles. -/
+@@ -83,4 +89,5 @@
+ 
+ namespace TopCat
++open _root_.TopCat
+ 
+ /-- Naturality of the singular degree-zero augmentation. -/
+@@ -89,10 +96,10 @@
+     ((singularHomologyFunctor C 0).obj R).map f ≫ Y.singularHomology₀ε R =
+       X.singularHomology₀ε R :=
+-  SSet.homology₀ε_naturality (toSSet.map f) R
++  _root_.OAI.AlgebraicTopology.Singular.HomologyZeroNaturality.SSet.homology₀ε_naturality (toSSet.map f) R
+ 
+ /-- A nonempty space has a surjective degree-zero augmentation. -/
+ theorem singularHomology₀ε_epi (X : TopCat.{w}) [Nonempty X] (R : C) :
+     Epi (X.singularHomology₀ε R) :=
+-  SSet.homology₀ε_epi_of_vertex (toSSet.obj X) R
++  _root_.OAI.AlgebraicTopology.Singular.HomologyZeroNaturality.SSet.homology₀ε_epi_of_vertex (toSSet.obj X) R
+     ((X.toSSetObjEquiv _).symm (ContinuousMap.const _ (Classical.arbitrary X)))
+ 
+@@ -102,5 +109,5 @@
+     [PathConnectedSpace Y] (f : X ⟶ Y) (R : C) :
+     Epi (((singularHomologyFunctor C 0).obj R).map f) := by
+-  let : Epi (X.singularHomology₀ε R) := X.singularHomology₀ε_epi R
++  let : Epi (X.singularHomology₀ε R) := (singularHomology₀ε_epi X) R
+   have : Epi (((singularHomologyFunctor C 0).obj R).map f ≫
+       Y.singularHomology₀ε R) := by
+@@ -120,2 +127,6 @@
+ 
+ end TopCat
++
++end
++
++end OAI.AlgebraicTopology.Singular.HomologyZeroNaturality

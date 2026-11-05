@@ -1,0 +1,16 @@
+--- upstream/Lemmas/AlgebraicTopology/Singular/Excision/Lebesgue.lean
++++ challenge/Lemmas/AlgebraicTopology/Singular/Excision/Lebesgue.lean
+@@ -15,4 +15,6 @@
+ -/
+ module
++
++public import HodgeConjecture.Mathlib.Geometry.Convex.StdSimplexMetric
+ 
+ public import Mathlib.AlgebraicTopology.SingularSet
+@@ -44,5 +46,5 @@
+     (x : (TopCat.toSSet.obj X).obj
+       (Opposite.op (SimplexCategory.mk n))) :
+-    ∃ δ > 0, ∀ w : stdSimplex ℝ (Fin (n + 1)),
++    ∃ δ > 0, ∀ w : Convexity.StdSimplex ℝ (Fin (n + 1)),
+       ∃ i, Metric.ball w δ ⊆ (X.toSSetObjEquiv _ x) ⁻¹' U i := by
+   let f := X.toSSetObjEquiv (Opposite.op (SimplexCategory.mk n)) x

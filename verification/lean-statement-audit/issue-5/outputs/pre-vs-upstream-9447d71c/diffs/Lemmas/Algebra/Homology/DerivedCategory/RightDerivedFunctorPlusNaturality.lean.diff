@@ -1,0 +1,31 @@
+--- upstream/Lemmas/Algebra/Homology/DerivedCategory/RightDerivedFunctorPlusNaturality.lean
++++ challenge/Lemmas/Algebra/Homology/DerivedCategory/RightDerivedFunctorPlusNaturality.lean
+@@ -56,5 +56,5 @@
+     F.rightDerivedFunctorPlus ⟶ G.rightDerivedFunctorPlus :=
+   Functor.rightDerivedNatTrans F.rightDerivedFunctorPlus G.rightDerivedFunctorPlus
+-    F.rightDerivedFunctorPlusUnit G.rightDerivedFunctorPlusUnit
++    F.rightDerivedFunctorPlusUnith G.rightDerivedFunctorPlusUnith
+       (HomotopyCategory.Plus.quasiIso C)
+         (Functor.whiskerRight α.mapHomotopyCategoryPlus DerivedCategory.Plus.Qh)
+@@ -63,8 +63,8 @@
+ @[reassoc (attr := simp)]
+ theorem rightDerivedFunctorPlus_unit (α : F ⟶ G) :
+-    F.rightDerivedFunctorPlusUnit ≫
++    F.rightDerivedFunctorPlusUnith ≫
+         Functor.whiskerLeft DerivedCategory.Plus.Qh α.rightDerivedFunctorPlus =
+       Functor.whiskerRight α.mapHomotopyCategoryPlus DerivedCategory.Plus.Qh ≫
+-        G.rightDerivedFunctorPlusUnit :=
++        G.rightDerivedFunctorPlusUnith :=
+   Functor.rightDerivedNatTrans_fac _ _ _ _ _ _
+ 
+@@ -74,8 +74,8 @@
+ theorem rightDerivedFunctorPlus_unit_app (α : F ⟶ G)
+     (K : HomotopyCategory.Plus C) :
+-    F.rightDerivedFunctorPlusUnit.app K ≫
++    F.rightDerivedFunctorPlusUnith.app K ≫
+         α.rightDerivedFunctorPlus.app (DerivedCategory.Plus.Qh.obj K) =
+       DerivedCategory.Plus.Qh.map (α.mapHomotopyCategoryPlus.app K) ≫
+-        G.rightDerivedFunctorPlusUnit.app K :=
++        G.rightDerivedFunctorPlusUnith.app K :=
+   Functor.rightDerivedNatTrans_app _ _ _ _ _ _ _
+ 

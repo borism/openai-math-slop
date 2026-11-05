@@ -1,0 +1,129 @@
+--- upstream/Lemmas/AlgebraicTopology/Sheaf/FlasqueBoundedBelow.lean
++++ challenge/Lemmas/AlgebraicTopology/Sheaf/FlasqueBoundedBelow.lean
+@@ -13,10 +13,16 @@
+ See the License for the specific language governing permissions and
+ limitations under the License.
++
+ -/
+-module
+ 
+ import HodgeConjecture.Mathlib.Algebra.Homology.Notation
+ 
+-public import HodgeConjecture.Definitions.AlgebraicTopology.Sheaf.FlasqueBoundedBelow
++import HodgeConjecture.Definitions.AlgebraicTopology.Sheaf.FlasqueBoundedBelow
++
++namespace OAI.AlgebraicTopology.Sheaf.FlasqueBoundedIs
++
++open _root_.TopCat
++open _root_.TopCat.Sheaf
++open _root_.TopCat.Sheaf.IsFlasque
+ 
+ /-!
+@@ -29,9 +35,14 @@
+ /-! ### Constructions used only in proofs -/
+ 
+-@[expose] public noncomputable section
+-
+-open CategoryTheory Limits Opposite TopologicalSpace
+-
+-namespace TopCat.Sheaf.IsFlasque
++noncomputable section
++
++open _root_.CategoryTheory Limits Opposite _root_.TopologicalSpace
++
++section
++namespace TopCat
++open _root_.TopCat
++namespace IsFlasque
++open _root_.TopCat
++open _root_.TopCat.Sheaf.IsFlasque
+ 
+ universe u
+@@ -40,4 +51,6 @@
+ 
+ namespace BoundedBelowComplex
++open _root_.TopCat
++open _root_.TopCat.Sheaf.IsFlasque
+ 
+ variable (K : CochainComplex (TopCat.Sheaf AddCommGrpCat.{u} X) ℤ)
+@@ -53,13 +66,20 @@
+ end BoundedBelowComplex
+ 
+-end TopCat.Sheaf.IsFlasque
+-
+-end
+-
+-@[expose] public noncomputable section
+-
+-open CategoryTheory Limits Opposite TopologicalSpace
+-
+-namespace TopCat.Sheaf.IsFlasque
++end IsFlasque
++end TopCat
++end
++
++end
++
++noncomputable section
++
++open _root_.CategoryTheory Limits Opposite _root_.TopologicalSpace
++
++section
++namespace TopCat
++open _root_.TopCat
++namespace IsFlasque
++open _root_.TopCat
++open _root_.TopCat.Sheaf.IsFlasque
+ 
+ universe u
+@@ -77,4 +97,6 @@
+ 
+ namespace BoundedBelowComplex
++open _root_.TopCat
++open _root_.TopCat.Sheaf.IsFlasque
+ 
+ variable (K : CochainComplex (TopCat.Sheaf AddCommGrpCat.{u} X) ℤ)
+@@ -128,5 +150,5 @@
+       have hzero : IsZero (K.cycles N) := by
+         simpa only [S, cyclesShortComplex, sub_add_cancel] using htarget
+-      simpa using of_isZero (K.cycles N) hzero
++      simpa using _root_.OAI.AlgebraicTopology.Sheaf.FlasqueBoundedIs.TopCat.IsFlasque.of_isZero (K.cycles N) hzero
+   | succ m ih =>
+       let i : ℤ := N + (m : ℤ)
+@@ -147,5 +169,5 @@
+     (K.cycles i).IsFlasque := by
+   by_cases hi : i < N
+-  · exact of_isZero _ (IsZero.of_mono (K.iCycles i) (K.isZero_of_isStrictlyGE N i hi))
++  · exact _root_.OAI.AlgebraicTopology.Sheaf.FlasqueBoundedIs.TopCat.IsFlasque.of_isZero _ (IsZero.of_mono (K.iCycles i) (K.isZero_of_isStrictlyGE N i hi))
+   · let m : ℕ := (i - N).toNat
+     have hm : i = N + (m : ℤ) := by
+@@ -159,8 +181,8 @@
+ theorem globalSectionsComplex_acyclic (N : ℤ) [K.IsStrictlyGE N]
+     (hK : K.Acyclic) (hflasque : ∀ i, (K.X i).IsFlasque) :
+-    (globalSectionsComplex K).Acyclic := by
++    (_root_.OAI.AlgebraicTopology.Sheaf.FlasqueBoundedBelow.TopCat.IsFlasque.BoundedBelowComplex.globalSectionsComplex K).Acyclic := by
+   intro i
+-  let F := globalSectionsFunctor X
+-  let L := globalSectionsComplex K
++  let F := _root_.OAI.AlgebraicTopology.Sheaf.FlasqueBoundedBelow.TopCat.IsFlasque.BoundedBelowComplex.globalSectionsFunctor X
++  let L := _root_.OAI.AlgebraicTopology.Sheaf.FlasqueBoundedBelow.TopCat.IsFlasque.BoundedBelowComplex.globalSectionsComplex K
+   let A : ShortComplex (TopCat.Sheaf AddCommGrpCat.{u} X) :=
+     ShortComplex.mk (K.iCycles i) (K.d i (i + 1)) (K.iCycles_d i (i + 1))
+@@ -172,5 +194,5 @@
+       infer_instance
+   have hFA : (A.map F).Exact := by
+-    have hleft := ((Functor.preservesFiniteLimits_tfae F).out 3 1).mp
++    have hleft := ((Functor.preservesFiniteLimits_tfae F).out 4 2).mp
+       (inferInstance : PreservesFiniteLimits F)
+     exact (hleft A hA).1
+@@ -217,3 +239,9 @@
+ end BoundedBelowComplex
+ 
+-end TopCat.Sheaf.IsFlasque
++end IsFlasque
++end TopCat
++end
++
++end
++
++end OAI.AlgebraicTopology.Sheaf.FlasqueBoundedIs

@@ -1,0 +1,12 @@
+n= 1: K^2=5, c2=7, chi=1, K^2-2c2=-9, H^2=5, 6H^2=30, obstruction violated=False
+n= 3: K^2=135, c2=81, chi=18, K^2-2c2=-27, H^2=135, 6H^2=810, obstruction violated=False
+n= 5: K^2=5625, c2=1875, chi=625, K^2-2c2=1875, H^2=625, 6H^2=3750, obstruction violated=False
+n= 7: K^2=42875, c2=14749, chi=4802, K^2-2c2=13377, H^2=1715, 6H^2=10290, obstruction violated=True
+n=11: K^2=539055, c2=195657, chi=61226, K^2-2c2=147741, H^2=6655, 6H^2=39930, obstruction violated=True
+threshold: K^2-2c2 > 6H^2  <=>  n^2 > 40; smallest prime is 7
+branch incidence: 10 components, 15 nodes, every component meets 3 others: OK
+eq:RR-variance and the slope formula for c1(f_*G)/rk: OK (symbolic)
+Lemma lem:factor final bound 1/4 - (K^2-2c2)/(12h): OK (symbolic)
+Lemma lem:lattice identity and nonnegativity: OK (20000 random cases)
+eq:mixture and weighted variance <= 1/4 on an interval of length 1: OK (5000 random cases)
+ALL CHECKS PASSED

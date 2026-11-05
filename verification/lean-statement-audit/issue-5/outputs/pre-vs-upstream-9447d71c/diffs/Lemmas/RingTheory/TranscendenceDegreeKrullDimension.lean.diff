@@ -1,0 +1,9 @@
+--- upstream/Lemmas/RingTheory/TranscendenceDegreeKrullDimension.lean
++++ challenge/Lemmas/RingTheory/TranscendenceDegreeKrullDimension.lean
+@@ -59,5 +59,5 @@
+   · rw [PolynomialCatenary.ringKrullDim_eq_of_isIntegral_of_injective hg,
+       MvPolynomial.ringKrullDim_of_isNoetherianRing,
+-      ringKrullDim_eq_zero_of_field, Nat.card_fin]
++      ringKrullDim_eq_zero_of_field, ENat.card_eq_coe_fintype_card, Fintype.card_fin]
+     simp
+   · have h := trdeg_add_eq k (MvPolynomial (Fin n) k) (A := A)

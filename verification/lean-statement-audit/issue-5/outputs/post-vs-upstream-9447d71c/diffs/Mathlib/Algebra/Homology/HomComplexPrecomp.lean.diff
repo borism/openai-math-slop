@@ -1,0 +1,58 @@
+--- upstream/Mathlib/Algebra/Homology/HomComplexPrecomp.lean
++++ challenge/Mathlib/Algebra/Homology/HomComplexPrecomp.lean
+@@ -13,11 +13,16 @@
+ See the License for the specific language governing permissions and
+ limitations under the License.
++
+ -/
+-module
+ 
+-public import Mathlib.Algebra.Homology.DerivedCategory.KInjective
+-public import HodgeConjecture.Mathlib.Algebra.Homology.HomComplexSingle
++import Mathlib.Algebra.Homology.DerivedCategory.KInjective
++import HodgeConjecture.Mathlib.Algebra.Homology.HomComplexSingle
+ 
+ import HodgeConjecture.Mathlib.Algebra.Homology.Notation
++
++namespace OAI.Algebra.Homology.HomComplexPrecomp
++
++open _root_.CochainComplex
++open _root_.CochainComplex.HomComplex
+ 
+ /-!
+@@ -28,9 +33,13 @@
+ -/
+ 
+-@[expose] public noncomputable section
++noncomputable section
+ 
+-open CategoryTheory Limits
++open _root_.CategoryTheory Limits
+ 
+-namespace CochainComplex.HomComplex
++namespace CochainComplex
++open _root_.CochainComplex
++namespace HomComplex
++open _root_.CochainComplex
++open _root_.CochainComplex.HomComplex
+ 
+ variable {C : Type*} [Category* C] [Abelian C]
+@@ -103,6 +112,6 @@
+     (K : CochainComplex C ℤ) :
+     precompMap ((CochainComplex.singleFunctor C 0).map g) K ≫
+-        (fromSingleZeroIsoPreadditiveCoyoneda X' K).hom =
+-      (fromSingleZeroIsoPreadditiveCoyoneda X K).hom ≫
++        (_root_.OAI.Algebra.Homology.HomComplexSingle.CochainComplex.HomComplex.fromSingleZeroIsoPreadditiveCoyoneda X' K).hom =
++      (_root_.OAI.Algebra.Homology.HomComplexSingle.CochainComplex.HomComplex.fromSingleZeroIsoPreadditiveCoyoneda X K).hom ≫
+         (NatTrans.mapHomologicalComplex (preadditiveCoyoneda.map g.op) ℤᵘᵖ).app K := by
+   refine HomologicalComplex.hom_ext _ _ (fun n => ?_)
+@@ -117,5 +126,8 @@
+     Cochain.fromSingleEquiv_fromSingleMk]
+ 
+-end CochainComplex.HomComplex
++end HomComplex
++end CochainComplex
+ 
+ end
++
++end OAI.Algebra.Homology.HomComplexPrecomp

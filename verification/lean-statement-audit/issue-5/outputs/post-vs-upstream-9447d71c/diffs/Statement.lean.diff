@@ -1,0 +1,38 @@
+--- upstream/Statement.lean
++++ challenge/Statement.lean
+@@ -13,9 +13,13 @@
+ See the License for the specific language governing permissions and
+ limitations under the License.
++
+ -/
+-module
+ 
+-public import HodgeConjecture.Definitions.AlgebraicGeometry.Cycle.FundamentalClass
+-public import HodgeConjecture.Lemmas.AlgebraicGeometry.Hodge.Filtration
++import HodgeConjecture.Definitions.AlgebraicGeometry.Cycle.FundamentalClass
++import HodgeConjecture.Lemmas.AlgebraicGeometry.Hodge.Filtration
++
++namespace OAI.AlgebraicGeometry.Foundations.Core
++
++open scoped OAI.AlgebraicGeometry.Hodge.Filtration.ComplexPoint
+ 
+ /-!
+@@ -33,5 +37,5 @@
+ -/
+ 
+-open CategoryTheory AlgebraicGeometry ComplexPoint
++open _root_.CategoryTheory _root_.AlgebraicGeometry OAI.AlgebraicGeometry.ComplexPoint
+ 
+ /-- Statement of the **Hodge conjecture**.
+@@ -41,6 +45,8 @@
+ `X` of codimension `p`. The algebraic subspace is `algebraicCycleClassSpan`, the span of the
+ component classes of `Cycle.FundamentalClass` indexed by the points of codimension `p`. -/
+-@[expose] public def HodgeConjecture : Prop :=
++def _root_.OAI.AlgebraicGeometry.Foundations.Core : Prop :=
+   ∀ (X : Over (Spec ↧ℂ)) [IsIntegral X.left] [Smooth X.hom]
+-    [IsProjective X.hom] (p : ℕ),
+-    Hdg^p(X; ℚ) ≤ algebraicCycleClassSpan X p
++    [_root_.OAI.AlgebraicGeometry.Foundations.ProjectiveSpaceIs.IsProjective X.hom] (p : ℕ),
++    Hdg^p(X; ℚ) ≤ _root_.OAI.AlgebraicGeometry.ComplexPoint.Basic.ComplexSchemePoint.algebraicCycleClassSpan X p
++
++end OAI.AlgebraicGeometry.Foundations.Core

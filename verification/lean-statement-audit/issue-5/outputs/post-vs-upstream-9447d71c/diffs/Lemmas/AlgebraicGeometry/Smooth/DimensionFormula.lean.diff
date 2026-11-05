@@ -1,0 +1,89 @@
+--- upstream/Lemmas/AlgebraicGeometry/Smooth/DimensionFormula.lean
++++ challenge/Lemmas/AlgebraicGeometry/Smooth/DimensionFormula.lean
+@@ -13,9 +13,9 @@
+ See the License for the specific language governing permissions and
+ limitations under the License.
++
+ -/
+-module
+ 
+-public import HodgeConjecture.Mathlib.RingTheory.SmoothKrullDimension
+-public import Mathlib.AlgebraicGeometry.Morphisms.Smooth
++import HodgeConjecture.Mathlib.RingTheory.SmoothKrullDimension
++import Mathlib.AlgebraicGeometry.Morphisms.Smooth
+ 
+ import HodgeConjecture.Lemmas.AlgebraicGeometry.Cycle.Component.Dimension
+@@ -25,4 +25,8 @@
+ import Mathlib.RingTheory.KrullDimension.Polynomial
+ import Mathlib.RingTheory.Unramified.LocalStructure
++
++namespace OAI.AlgebraicGeometry.Smooth.DimensionFormula
++
++open _root_.AlgebraicGeometry
+ 
+ /-!
+@@ -40,9 +44,9 @@
+ -/
+ 
+-@[expose] public noncomputable section
++noncomputable section
+ 
+-open CategoryTheory Topology
++open _root_.CategoryTheory _root_.Topology
+ 
+-namespace AlgebraicGeometry
++section
+ 
+ variable {X : Scheme}
+@@ -54,5 +58,5 @@
+   calc
+     Order.krullDim U = topologicalKrullDim U :=
+-      (Scheme.topologicalKrullDim_eq_orderKrullDim U.toScheme).symm
++      (_root_.OAI.AlgebraicGeometry.Cycle.ComponentDimension.Scheme.topologicalKrullDim_eq_orderKrullDim U.toScheme).symm
+     _ = topologicalKrullDim (PrimeSpectrum Γ(X, U)) :=
+       hU.isoSpec.hom.homeomorph.isHomeomorph.topologicalKrullDim_eq
+@@ -109,13 +113,13 @@
+ lemma SmoothOfRelativeDimension.orderKrullDim_le_complex
+     [SmoothOfRelativeDimension d f] : Order.krullDim X ≤ d := by
+-  apply Scheme.orderKrullDim_le_of_exists_open_orderKrullDim_le X d
++  apply _root_.OAI.AlgebraicGeometry.Smooth.DimensionFormula.Scheme.orderKrullDim_le_of_exists_open_orderKrullDim_le X d
+   intro x
+   obtain ⟨U, hU, hxU, hsmooth⟩ :=
+-    SmoothOfRelativeDimension.exists_affine_isStandardSmoothOfRelativeDimension
++    _root_.OAI.AlgebraicGeometry.ComplexPoint.SmoothCoordinates.SmoothOfRelativeDimension.exists_affine_isStandardSmoothOfRelativeDimension
+       (d := d) f x
+   refine ⟨U, hxU, ?_⟩
+   rw [orderKrullDim_affineOpen_eq_ringKrullDim U hU]
+-  exact (algebraMap_isStandardSmoothOfRelativeDimension
+-    (d := d) (Over.mk f) hsmooth).ringKrullDim_le_complex
++  exact (_root_.OAI.Algebra.RingTheory.SmoothKrullDimension.RingHom.IsStandardSmoothOfRelativeDimension.ringKrullDim_le_complex (_root_.OAI.AlgebraicGeometry.ComplexPoint.SmoothCoordinates.algebraMap_isStandardSmoothOfRelativeDimension
++    (d := d) (Over.mk f) hsmooth))
+ 
+ /-- At every point of a smooth complex scheme of relative dimension `d`, the sum of the
+@@ -131,5 +135,5 @@
+       Order.height y + Order.coheight y) x)
+   exact WithBot.coe_le_coe.mp
+-    (hpoint.trans (SmoothOfRelativeDimension.orderKrullDim_le_complex
++    (hpoint.trans (_root_.OAI.AlgebraicGeometry.Smooth.DimensionFormula.SmoothOfRelativeDimension.orderKrullDim_le_complex
+       (f := f) (d := d)))
+ 
+@@ -141,5 +145,5 @@
+   apply ENat.le_sub_of_add_le_right (by simp)
+   rw [← hx]
+-  exact SmoothOfRelativeDimension.height_add_coheight_le_complex
++  exact _root_.OAI.AlgebraicGeometry.Smooth.DimensionFormula.SmoothOfRelativeDimension.height_add_coheight_le_complex
+     (f := f) (d := d) x
+ 
+@@ -149,6 +153,10 @@
+   calc
+     Order.coheight x ≤ Order.height x + Order.coheight x := le_add_left le_rfl
+-    _ ≤ d := SmoothOfRelativeDimension.height_add_coheight_le_complex
++    _ ≤ d := _root_.OAI.AlgebraicGeometry.Smooth.DimensionFormula.SmoothOfRelativeDimension.height_add_coheight_le_complex
+       (f := f) (d := d) x
+ 
+-end AlgebraicGeometry
++end
++
++end
++
++end OAI.AlgebraicGeometry.Smooth.DimensionFormula

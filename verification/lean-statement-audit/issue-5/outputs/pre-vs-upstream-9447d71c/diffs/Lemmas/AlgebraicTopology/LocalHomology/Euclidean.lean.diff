@@ -1,0 +1,42 @@
+--- upstream/Lemmas/AlgebraicTopology/LocalHomology/Euclidean.lean
++++ challenge/Lemmas/AlgebraicTopology/LocalHomology/Euclidean.lean
+@@ -16,4 +16,6 @@
+ module
+ 
++public import HodgeConjecture.Mathlib.Geometry.Convex.StdSimplexMetric
++
+ public import HodgeConjecture.Lemmas.AlgebraicTopology.LocalHomology.FundamentalClass
+ public import Mathlib.Algebra.Homology.HomologySequence
+@@ -38,5 +40,5 @@
+ 
+ open CategoryTheory Limits ContinuousMap
+-open scoped Simplicial
++open scoped Convexity.StdSimplex Simplicial
+ 
+ namespace AlgebraicTopology.Singular
+@@ -242,9 +244,9 @@
+       standardNegativePoint := by
+   change standardFaceMap 0 (0 : Fin 2)
+-    (default : stdSimplex ℝ (Fin 1)) = standardNegativePoint
+-  rw [Subsingleton.elim (default : stdSimplex ℝ (Fin 1)) (stdSimplex.vertex 0)]
++    (default : Convexity.StdSimplex ℝ (Fin 1)) = standardNegativePoint
++  rw [Subsingleton.elim (default : Convexity.StdSimplex ℝ (Fin 1)) (Convexity.StdSimplex.single 0)]
+   ext j
+   fin_cases j
+-  simp [standardFaceMap, standardAffineSimplex, stdSimplex.map, standardNegativePoint]
++  simp [standardFaceMap, standardAffineSimplex, Convexity.StdSimplex.map, standardNegativePoint]
+ 
+ lemma standardFaceSimplex_one_point :
+@@ -252,9 +254,9 @@
+       standardPositivePoint := by
+   change standardFaceMap 0 (1 : Fin 2)
+-    (default : stdSimplex ℝ (Fin 1)) = standardPositivePoint
+-  rw [Subsingleton.elim (default : stdSimplex ℝ (Fin 1)) (stdSimplex.vertex 0)]
++    (default : Convexity.StdSimplex ℝ (Fin 1)) = standardPositivePoint
++  rw [Subsingleton.elim (default : Convexity.StdSimplex ℝ (Fin 1)) (Convexity.StdSimplex.single 0)]
+   ext j
+   fin_cases j
+-  simp [standardFaceMap, standardAffineSimplex, stdSimplex.map, standardPositivePoint]
++  simp [standardFaceMap, standardAffineSimplex, Convexity.StdSimplex.map, standardPositivePoint]
+ 
+ /-- The two vertices of the standard one-simplex represent different components of the

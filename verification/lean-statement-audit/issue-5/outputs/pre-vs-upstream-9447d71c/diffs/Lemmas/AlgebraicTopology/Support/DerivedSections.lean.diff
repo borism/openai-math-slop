@@ -1,0 +1,16 @@
+--- upstream/Lemmas/AlgebraicTopology/Support/DerivedSections.lean
++++ challenge/Lemmas/AlgebraicTopology/Support/DerivedSections.lean
+@@ -147,5 +147,5 @@
+         DerivedCategory.Plus.Qh ⟶
+       DerivedCategory.Plus.Qh ⋙ derivedSheafSectionsWithClosedSupport X Z :=
+-  (sheafSectionsWithClosedSupport X Z).rightDerivedFunctorPlusUnit
++  (sheafSectionsWithClosedSupport X Z).rightDerivedFunctorPlusUnith
+ 
+ /-- The construction satisfies Mathlib's universal property of a right derived functor. -/
+@@ -175,5 +175,5 @@
+         DerivedCategory.Plus.Qh ⟶
+       DerivedCategory.Plus.Qh ⋙ derivedClosedSupportSections X Z :=
+-  (closedSupportSections X Z).rightDerivedFunctorPlusUnit
++  (closedSupportSections X Z).rightDerivedFunctorPlusUnith
+ 
+ /-- Group-valued supported sections satisfy the universal property of their

@@ -1,0 +1,33 @@
+--- upstream/Mathlib/RingTheory/SmoothKrullDimension.lean
++++ challenge/Mathlib/RingTheory/SmoothKrullDimension.lean
+@@ -16,5 +16,5 @@
+ module
+ 
+-public import Mathlib.Data.Complex.Basic
++public import Mathlib.Basic.Complex.Basic
+ public import Mathlib.RingTheory.Ideal.Height
+ public import Mathlib.RingTheory.QuasiFinite.Basic
+@@ -111,5 +111,5 @@
+     RingHom.finite_iff_finiteType_of_isJacobsonRing.mpr hft
+   have hmax : ((⊥ : Ideal K).comap (q.comp f)).IsMaximal :=
+-    Ideal.isMaximal_comap_of_isIntegral_of_isMaximal' (q.comp f) hfin.to_isIntegral ⊥
++    Ideal.isMaximal_comap_of_isIntegral_of_isMaximal (q.comp f) hfin.to_isIntegral ⊥
+   change (((⊥ : Ideal K).comap q).comap f).IsMaximal at hmax
+   have hq : (⊥ : Ideal K).comap q = P := by
+@@ -131,5 +131,5 @@
+       Algebra.QuasiFinite.ringKrullDim_le
+     _ = ringKrullDim R + d := by
+-      rw [MvPolynomial.ringKrullDim_of_isNoetherianRing, Nat.card_fin]
++      simp
+ 
+ /-- A standard-smooth complex algebra of relative dimension `d` has Krull dimension at most
+@@ -153,6 +153,7 @@
+           ringKrullDim (MvPolynomial (Fin 0) K) :=
+         Ideal.height_le_ringKrullDim_of_ne_top Ideal.IsPrime.ne_top'
+-      rw [MvPolynomial.ringKrullDim_of_isNoetherianRing,
+-        ringKrullDim_eq_zero_of_field, Nat.card_fin, Nat.cast_zero, add_zero] at hle
++      simp only [MvPolynomial.ringKrullDim_of_isNoetherianRing,
++        ringKrullDim_eq_zero_of_field, ENat.card_eq_coe_fintype_card, Fintype.card_fin,
++        Nat.cast_zero, WithBot.coe_zero, zero_add] at hle
+       exact le_antisymm (WithBot.coe_le_coe.mp hle) bot_le
+   | succ n ih =>

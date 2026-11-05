@@ -1,0 +1,78 @@
+--- upstream/Definitions/AlgebraicTopology/Sheaf/CohomologySection.lean
++++ challenge/Definitions/AlgebraicTopology/Sheaf/CohomologySection.lean
+@@ -2,10 +2,16 @@
+ Copyright 2026 The Formal Conjectures Authors.
+ Released under Apache 2.0 license as described in the file LICENSE.
++
+ -/
+-module
+ 
+ import HodgeConjecture.Mathlib.Algebra.Homology.Notation
+ 
+-public import HodgeConjecture.Lemmas.AlgebraicTopology.Sheaf.CohomologyStalkVanishing
++import HodgeConjecture.Lemmas.AlgebraicTopology.Sheaf.CohomologyStalkVanishing
++
++namespace OAI.AlgebraicTopology.Sheaf.CohomologySection
++
++open _root_.TopCat
++open _root_.TopCat.Sheaf
++
+ /-!
+ # Canonical cohomology-sheaf sections from local section-complex classes
+@@ -20,11 +26,13 @@
+ -/
+ 
+-@[expose] public noncomputable section
++noncomputable section
+ 
+-open CategoryTheory Limits TopologicalSpace Opposite HomologicalComplex
++open _root_.CategoryTheory Limits _root_.TopologicalSpace Opposite _root_.HomologicalComplex
+ 
+ universe u
+ 
+-namespace TopCat.Sheaf
++section
++namespace TopCat
++open _root_.TopCat
+ 
+ variable (X : TopCat.{u}) (K : CochainComplex (Sheaf AddCommGrpCat.{u} X) ℤ)
+@@ -35,5 +43,5 @@
+ def sectionCohomologyPresheafSheafificationIso (n : ℤ) :
+     (presheafToSheaf (Opens.grothendieckTopology X) AddCommGrpCat.{u}).obj
+-      (sectionCohomologyPresheaf X K n) ≅ K.homology n :=
++      (_root_.OAI.AlgebraicTopology.Sheaf.CohomologyStalkVanishing.TopCat.sectionCohomologyPresheaf X K n) ≅ K.homology n :=
+   let P : CochainComplex ((Opens X)ᵒᵖ ⥤ AddCommGrpCat.{u}) ℤ :=
+     ((forget AddCommGrpCat.{u} X).mapHomologicalComplex ℤᵘᵖ).obj K
+@@ -51,5 +59,5 @@
+ sheaf `ker(d^n)/im(d^{n-1})`. -/
+ def sectionCohomologyPresheafToSheaf (n : ℤ) :
+-    sectionCohomologyPresheaf X K n ⟶ (K.homology n).obj :=
++    _root_.OAI.AlgebraicTopology.Sheaf.CohomologyStalkVanishing.TopCat.sectionCohomologyPresheaf X K n ⟶ (K.homology n).obj :=
+   toSheafify (Opens.grothendieckTopology X) _ ≫
+     (sectionCohomologyPresheafSheafificationIso X K n).hom.hom
+@@ -60,7 +68,7 @@
+ cycles by boundaries. -/
+ def sectionCohomologyToSheafSection (n : ℤ) (U : Opens X) :
+-    (((supportEvaluation X U).mapHomologicalComplex ℤᵘᵖ).obj K).homology n ⟶
++    (((_root_.OAI.AlgebraicTopology.Support.DerivedSectionsLocalization.TopCat.Sheaf.supportEvaluation X U).mapHomologicalComplex ℤᵘᵖ).obj K).homology n ⟶
+       (K.homology n).presheaf.obj (op U) :=
+-  (sectionCohomologyPresheafOnOpenIso X K n U).hom ≫
++  (_root_.OAI.AlgebraicTopology.Sheaf.CohomologyStalkVanishing.TopCat.sectionCohomologyPresheafOnOpenIso X K n U).hom ≫
+     (sectionCohomologyPresheafToSheaf X K n).app (op U)
+ 
+@@ -71,8 +79,13 @@
+       (sectionCohomologyPresheafToSheaf X K n)) := by
+   let := Presheaf.stalkFunctor_map_unit_toSheafify_isIso x AddCommGrpCat.{u}
+-    (sectionCohomologyPresheaf X K n)
++    (_root_.OAI.AlgebraicTopology.Sheaf.CohomologyStalkVanishing.TopCat.sectionCohomologyPresheaf X K n)
+   dsimp only [sectionCohomologyPresheafToSheaf]
+   rw [Functor.map_comp]
+   infer_instance
+ 
+-end TopCat.Sheaf
++end TopCat
++end
++
++end
++
++end OAI.AlgebraicTopology.Sheaf.CohomologySection

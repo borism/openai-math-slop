@@ -1,0 +1,10 @@
+--- upstream/Lemmas/Topology/Dimension/ClosedSubset.lean
++++ challenge/Lemmas/Topology/Dimension/ClosedSubset.lean
+@@ -44,4 +44,6 @@
+     exact hproper (Set.Subset.antisymm (Set.subset_univ S) hsub)
+   have hle := (LTSeries.length_le_krullDim ((l.map φ hφ).snoc topX hlast)).trans hdim
+-  have hnat : l.length + 1 ≤ n := by exact_mod_cast hle
++  have hnat : l.length + 1 ≤ n := by
++    have hlen : ((l.length + 1 : ℕ) : WithBot ℕ∞) ≤ n := by simpa using hle
++    exact ENat.natCast_le_natCast.mp (WithBot.coe_le_coe.mp hlen)
+   omega

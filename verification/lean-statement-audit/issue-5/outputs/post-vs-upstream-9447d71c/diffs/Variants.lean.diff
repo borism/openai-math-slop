@@ -1,0 +1,68 @@
+--- upstream/Variants.lean
++++ challenge/Variants.lean
+@@ -13,9 +13,13 @@
+ See the License for the specific language governing permissions and
+ limitations under the License.
++
+ -/
+-module
+ 
+-public import HodgeConjecture.Statement
+-public import Mathlib.CategoryTheory.Monoidal.Grp
++import HodgeConjecture.Statement
++import Mathlib.CategoryTheory.Monoidal.Grp
++
++namespace OAI.AlgebraicGeometry.Foundations.Variants
++
++open scoped OAI.AlgebraicGeometry.Hodge.Filtration.ComplexPoint
+ 
+ /-!
+@@ -36,7 +40,7 @@
+ -/
+ 
+-@[expose] public section
++section
+ 
+-open CategoryTheory AlgebraicGeometry ComplexPoint TopologicalSpace
++open _root_.CategoryTheory _root_.AlgebraicGeometry OAI.AlgebraicGeometry.ComplexPoint _root_.TopologicalSpace
+ 
+ /-- Statement of the **Lefschetz (1,1) theorem**: the Hodge conjecture in codimension one.
+@@ -44,6 +48,6 @@
+ This is a theorem. -/
+ def LefschetzOneOne : Prop :=
+-  ∀ (X : Over (Spec ↧ℂ)) [IsIntegral X.left] [Smooth X.hom] [IsProjective X.hom],
+-    Hdg^1(X; ℚ) ≤ algebraicCycleClassSpan X 1
++  ∀ (X : Over (Spec ↧ℂ)) [IsIntegral X.left] [Smooth X.hom] [_root_.OAI.AlgebraicGeometry.Foundations.ProjectiveSpaceIs.IsProjective X.hom],
++    Hdg^1(X; ℚ) ≤ _root_.OAI.AlgebraicGeometry.ComplexPoint.Basic.ComplexSchemePoint.algebraicCycleClassSpan X 1
+ 
+ /-- Statement of the **Hodge conjecture in dimension at most `n`**.
+@@ -52,6 +56,6 @@
+ Lefschetz theorem. -/
+ def HodgeConjectureInDimensionLE (n : ℕ) : Prop :=
+-  ∀ (X : Over (Spec ↧ℂ)) [IsIntegral X.left] [Smooth X.hom] [IsProjective X.hom],
+-    dim X.left ≤ n → ∀ p : ℕ, Hdg^p(X; ℚ) ≤ algebraicCycleClassSpan X p
++  ∀ (X : Over (Spec ↧ℂ)) [IsIntegral X.left] [Smooth X.hom] [_root_.OAI.AlgebraicGeometry.Foundations.ProjectiveSpaceIs.IsProjective X.hom],
++    _root_.OAI.Topology.Dimension.Basic.TopologicalSpace.dim X.left ≤ n → ∀ p : ℕ, Hdg^p(X; ℚ) ≤ _root_.OAI.AlgebraicGeometry.ComplexPoint.Basic.ComplexSchemePoint.algebraicCycleClassSpan X p
+ 
+ /-- Statement of the **Hodge conjecture for abelian varieties**. An abelian variety over `ℂ` is
+@@ -60,7 +64,7 @@
+ This is open. -/
+ def HodgeConjectureForAbelianVarieties : Prop :=
+-  ∀ (X : Over (Spec ↧ℂ)) [IsIntegral X.left] [Smooth X.hom] [IsProjective X.hom] [GrpObj X]
++  ∀ (X : Over (Spec ↧ℂ)) [IsIntegral X.left] [Smooth X.hom] [_root_.OAI.AlgebraicGeometry.Foundations.ProjectiveSpaceIs.IsProjective X.hom] [GrpObj X]
+     (p : ℕ),
+-    Hdg^p(X; ℚ) ≤ algebraicCycleClassSpan X p
++    Hdg^p(X; ℚ) ≤ _root_.OAI.AlgebraicGeometry.ComplexPoint.Basic.ComplexSchemePoint.algebraicCycleClassSpan X p
+ 
+ /-- Statement of the **Hodge conjecture for abelian varieties of dimension at most `n`**.
+@@ -70,6 +74,8 @@
+ showed that the Weil classes on an abelian fourfold of Weil type are algebraic. -/
+ def HodgeConjectureForAbelianVarietiesInDimensionLE (n : ℕ) : Prop :=
+-  ∀ (X : Over (Spec ↧ℂ)) [IsIntegral X.left] [Smooth X.hom] [IsProjective X.hom] [GrpObj X],
+-    dim X.left ≤ n → ∀ p : ℕ, Hdg^p(X; ℚ) ≤ algebraicCycleClassSpan X p
++  ∀ (X : Over (Spec ↧ℂ)) [IsIntegral X.left] [Smooth X.hom] [_root_.OAI.AlgebraicGeometry.Foundations.ProjectiveSpaceIs.IsProjective X.hom] [GrpObj X],
++    _root_.OAI.Topology.Dimension.Basic.TopologicalSpace.dim X.left ≤ n → ∀ p : ℕ, Hdg^p(X; ℚ) ≤ _root_.OAI.AlgebraicGeometry.ComplexPoint.Basic.ComplexSchemePoint.algebraicCycleClassSpan X p
+ 
+ end
++
++end OAI.AlgebraicGeometry.Foundations.Variants

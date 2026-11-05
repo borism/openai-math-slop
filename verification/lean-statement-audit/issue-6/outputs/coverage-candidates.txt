@@ -1,0 +1,64 @@
+candidate                                            adc7f1241  fd4aeeb2e  42907c9e9  4eaee8754
+preprint dirs                                              722        749        751        751
+preprint dirs flagged withdrawn                              0          3          3          3
+CONTENTS headline manuscripts                              722        719        721        721
+CONTENTS headline families                                 372        372        373        373
+yaml sources (entries)                                     162        173        176        176
+yaml sources (distinct dirs)                               162        173        176        176
+yaml related_formalizations entries                         30         30         31         31
+yaml main_results entries                                  185        200        208        208
+yaml main_results distinct configs                         178        189        192        192
+yaml main_results distinct declarations                    185        200        208        208
+yaml sources + related                                     192        203        207        207
+comparator configs                                         405        416        419        419
+comparator configs not *Support                            403        409        412        412
+comparator theorem_names (total)                           507        537        546        546
+comparator theorem_names (distinct)                        506        536        545        545
+lean/docs files                                            235        242        245        245
+distinct papers linked from lean/docs                      330        341        345        345
+sum over docs of linked papers                             330        341        345        345
+docs-linked papers not withdrawn                           330        341        345        345
+docs: first-listed paper per scope note                    235        242        245        245
+docs Comparator-link table rows                            415        426        434        434
+docs table rows not mentioning support/lemma               411        417        425        425
+CONTENTS families                                          372        372        373        373
+CONTENTS families with (Lean) link                         235        242        245        245
+CONTENTS manuscripts (distinct links)                      722        719        721        721
+manuscripts in (Lean) families                             467        475        483        483
+manuscripts in (Lean) families AND linked from docs        330        339        343        343
+yaml sources U docs-linked                                 331        342        346        346
+overview \resultentry count                                372        372        373        373
+overview mentions of Lean (word)                             0          0          0          0
+lean files                                              122140     122875     163096     163096
+
+single candidates equal to 300 at fd4aeeb2e: none
+pairwise sums equal to 300: none
+pairwise differences equal to 300: none
+
+deltas adc7f1241 -> fd4aeeb2e:
+  preprint dirs: 722 -> 749 (+27)
+  preprint dirs flagged withdrawn: 0 -> 3 (+3)
+  CONTENTS headline manuscripts: 722 -> 719 (-3)
+  yaml sources (entries): 162 -> 173 (+11)
+  yaml sources (distinct dirs): 162 -> 173 (+11)
+  yaml main_results entries: 185 -> 200 (+15)
+  yaml main_results distinct configs: 178 -> 189 (+11)
+  yaml main_results distinct declarations: 185 -> 200 (+15)
+  yaml sources + related: 192 -> 203 (+11)
+  comparator configs: 405 -> 416 (+11)
+  comparator configs not *Support: 403 -> 409 (+6)
+  comparator theorem_names (total): 507 -> 537 (+30)
+  comparator theorem_names (distinct): 506 -> 536 (+30)
+  lean/docs files: 235 -> 242 (+7)
+  distinct papers linked from lean/docs: 330 -> 341 (+11)
+  sum over docs of linked papers: 330 -> 341 (+11)
+  docs-linked papers not withdrawn: 330 -> 341 (+11)
+  docs: first-listed paper per scope note: 235 -> 242 (+7)
+  docs Comparator-link table rows: 415 -> 426 (+11)
+  docs table rows not mentioning support/lemma: 411 -> 417 (+6)
+  CONTENTS families with (Lean) link: 235 -> 242 (+7)
+  CONTENTS manuscripts (distinct links): 722 -> 719 (-3)
+  manuscripts in (Lean) families: 467 -> 475 (+8)
+  manuscripts in (Lean) families AND linked from docs: 330 -> 339 (+9)
+  yaml sources U docs-linked: 331 -> 342 (+11)
+  lean files: 122140 -> 122875 (+735)

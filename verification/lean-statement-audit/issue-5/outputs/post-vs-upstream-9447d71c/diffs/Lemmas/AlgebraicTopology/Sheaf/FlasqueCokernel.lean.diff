@@ -1,0 +1,73 @@
+--- upstream/Lemmas/AlgebraicTopology/Sheaf/FlasqueCokernel.lean
++++ challenge/Lemmas/AlgebraicTopology/Sheaf/FlasqueCokernel.lean
+@@ -2,9 +2,15 @@
+ Copyright 2026 The Formal Conjectures Authors.
+ Released under Apache 2.0 license as described in the file LICENSE.
++
+ -/
+-module
+ 
+-public import HodgeConjecture.Lemmas.AlgebraicTopology.Sheaf.FlasqueBoundedBelow
+-public import Mathlib.CategoryTheory.Abelian.Exact
++import HodgeConjecture.Lemmas.AlgebraicTopology.Sheaf.FlasqueBoundedBelow
++import Mathlib.CategoryTheory.Abelian.Exact
++
++namespace OAI.AlgebraicTopology.Sheaf.FlasqueCokernel
++
++open _root_.TopCat
++open _root_.TopCat.Sheaf
++open _root_.TopCat.Sheaf.IsFlasque
+ 
+ /-!
+@@ -18,11 +24,16 @@
+ -/
+ 
+-@[expose] public noncomputable section
++noncomputable section
+ 
+-open CategoryTheory Limits Opposite TopologicalSpace
++open _root_.CategoryTheory Limits Opposite _root_.TopologicalSpace
+ 
+ universe u
+ 
+-namespace TopCat.Sheaf.IsFlasque
++section
++namespace TopCat
++open _root_.TopCat
++namespace IsFlasque
++open _root_.TopCat
++open _root_.TopCat.Sheaf.IsFlasque
+ 
+ variable {X : TopCat.{u}}
+@@ -34,5 +45,5 @@
+     (S.map (TopCat.Sheaf.forget AddCommGrpCat.{u} X)).ShortExact := by
+   let F := TopCat.Sheaf.forget AddCommGrpCat.{u} X
+-  have hleft := ((Functor.preservesFiniteLimits_tfae F).out 3 1).mp
++  have hleft := ((Functor.preservesFiniteLimits_tfae F).out 4 2).mp
+     (inferInstance : PreservesFiniteLimits F)
+   have he : (S.map F).Exact ∧ Mono (S.map F).f := hleft S ⟨hS.exact, hS.mono_f⟩
+@@ -65,5 +76,5 @@
+       comm₂₃ := by simp [kernelImageShortComplex, T] }
+   have he : (kernelImageShortComplex f).Exact :=
+-    (ShortComplex.exact_iff_of_epi_of_isIso_of_mono φ).mpr (ShortComplex.exact_kernel f)
++    (ShortComplex.exact_iff_of_epi_of_isIso_of_mono φ).mpr (ShortComplex.kernelSequence_exact f)
+   exact { exact := he
+           mono_f := by dsimp [kernelImageShortComplex]; infer_instance
+@@ -79,5 +90,5 @@
+ lemma imageCokernelShortComplex_shortExact : (imageCokernelShortComplex f).ShortExact := by
+   have he := (ShortComplex.mk f (cokernel.π f) (cokernel.condition f)).exact_iff_exact_image_ι
+-  exact { exact := he.mp (ShortComplex.exact_cokernel f)
++  exact { exact := he.mp (ShortComplex.cokernelSequence_exact f)
+           mono_f := by dsimp [imageCokernelShortComplex]; infer_instance
+           epi_g := by dsimp [imageCokernelShortComplex]; infer_instance }
+@@ -116,3 +127,9 @@
+     ((isColimitMapCoconeCoforkEquiv' F (cokernel.condition f)).symm he.gIsCokernel)
+ 
+-end TopCat.Sheaf.IsFlasque
++end IsFlasque
++end TopCat
++end
++
++end
++
++end OAI.AlgebraicTopology.Sheaf.FlasqueCokernel

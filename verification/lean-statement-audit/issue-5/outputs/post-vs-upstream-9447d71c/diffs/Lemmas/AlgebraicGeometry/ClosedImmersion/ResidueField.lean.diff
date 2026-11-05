@@ -1,0 +1,44 @@
+--- upstream/Lemmas/AlgebraicGeometry/ClosedImmersion/ResidueField.lean
++++ challenge/Lemmas/AlgebraicGeometry/ClosedImmersion/ResidueField.lean
+@@ -13,10 +13,15 @@
+ See the License for the specific language governing permissions and
+ limitations under the License.
++
+ -/
+-module
+ 
+-public import Mathlib.AlgebraicGeometry.Morphisms.ClosedImmersion
++import Mathlib.AlgebraicGeometry.Morphisms.ClosedImmersion
+ 
+ import HodgeConjecture.Mathlib.CategoryTheory.ConcreteCategory.Notation
++
++namespace OAI.AlgebraicGeometry.ClosedImmersion.ResidueField
++
++open _root_.AlgebraicGeometry
++open _root_.AlgebraicGeometry.IsClosedImmersion
+ 
+ /-!
+@@ -31,9 +36,10 @@
+ -/
+ 
+-@[expose] public section
++section
+ 
+-open CategoryTheory Opposite TopologicalSpace Topology
++open _root_.CategoryTheory Opposite _root_.TopologicalSpace _root_.Topology
+ 
+-namespace AlgebraicGeometry.IsClosedImmersion
++section
++namespace IsClosedImmersion
+ 
+ variable {A B : Scheme} {i : A ⟶ B}
+@@ -95,3 +101,8 @@
+ 
+ 
+-end AlgebraicGeometry.IsClosedImmersion
++end IsClosedImmersion
++end
++
++end
++
++end OAI.AlgebraicGeometry.ClosedImmersion.ResidueField

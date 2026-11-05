@@ -1,0 +1,178 @@
+--- upstream/Lemmas/AlgebraicTopology/Singular/Sheaf/CochainOpenRestriction.lean
++++ challenge/Lemmas/AlgebraicTopology/Singular/Sheaf/CochainOpenRestriction.lean
+@@ -2,18 +2,24 @@
+ Copyright 2026 The Formal Conjectures Authors.
+ Released under Apache 2.0 license as described in the file LICENSE.
++
+ -/
+-module
+ 
+-public import HodgeConjecture.Lemmas.AlgebraicTopology.Sheaf.OpenSheafification
+-public import HodgeConjecture.Lemmas.AlgebraicTopology.Singular.Sheaf.SubdivisionCochain
++import HodgeConjecture.Lemmas.AlgebraicTopology.Sheaf.OpenSheafification
++import HodgeConjecture.Lemmas.AlgebraicTopology.Singular.Sheaf.SubdivisionCochain
++
++namespace OAI.AlgebraicTopology.Singular.SheafCochainOpenRestriction
++
++open _root_.AlgebraicTopology
++
+ /-! # Singular cochains and restriction to open subspaces -/
+ 
+-@[expose] public noncomputable section
++noncomputable section
+ 
+-open CategoryTheory CategoryTheory.Limits TopologicalSpace Opposite
++open _root_.CategoryTheory _root_.CategoryTheory.Limits _root_.TopologicalSpace Opposite
+ 
+ universe u
+ 
+-namespace AlgebraicTopology.Singular
++section
++section
+ 
+ variable (R : Type u) [CommRing R] (X : TopCat.{u}) (U : Opens X)
+@@ -38,6 +44,6 @@
+ singular chain complexes with coefficients in `R`. -/
+ def openSubspaceImageChainIso (V : Opens U) :
+-    (openSingularChainComplexFunctor R (TopCat.of U)).obj V ≅
+-      (openSingularChainComplexFunctor R X).obj (U.isOpenEmbedding.functor.obj V) :=
++    (_root_.OAI.AlgebraicTopology.Singular.SheafCochain.openSingularChainComplexFunctor R (TopCat.of U)).obj V ≅
++      (_root_.OAI.AlgebraicTopology.Singular.SheafCochain.openSingularChainComplexFunctor R X).obj (U.isOpenEmbedding.functor.obj V) :=
+   ((singularChainComplexFunctor (ModuleCat.{u} R)).obj (ModuleCat.of R R)).mapIso
+     (openSubspaceImageIso X U V)
+@@ -45,9 +51,9 @@
+ @[reassoc]
+ lemma openSubspaceImageChainIso_naturality {V W : Opens U} (f : V ⟶ W) :
+-    (openSingularChainComplexFunctor R (TopCat.of U)).map f ≫
++    (_root_.OAI.AlgebraicTopology.Singular.SheafCochain.openSingularChainComplexFunctor R (TopCat.of U)).map f ≫
+       (openSubspaceImageChainIso R X U W).hom =
+     (openSubspaceImageChainIso R X U V).hom ≫
+-      (openSingularChainComplexFunctor R X).map (U.isOpenEmbedding.functor.map f) := by
+-  dsimp only [openSubspaceImageChainIso, openSingularChainComplexFunctor,
++      (_root_.OAI.AlgebraicTopology.Singular.SheafCochain.openSingularChainComplexFunctor R X).map (U.isOpenEmbedding.functor.map f) := by
++  dsimp only [openSubspaceImageChainIso, _root_.OAI.AlgebraicTopology.Singular.SheafCochain.openSingularChainComplexFunctor,
+     Functor.comp_map, Functor.mapIso_hom]
+   rw [← Functor.map_comp, ← Functor.map_comp, openSubspaceImageIso_naturality]
+@@ -58,14 +64,14 @@
+ induced by identifying each open subset of `U` with its image in `X`. -/
+ def singularCochainPresheafOpenRestrictionIso (n : ℕ) :
+-    U.isOpenEmbedding.functor.op ⋙ singularCochainPresheaf R X n ≅
+-      singularCochainPresheaf R (TopCat.of U) n :=
++    U.isOpenEmbedding.functor.op ⋙ _root_.OAI.AlgebraicTopology.Singular.SheafCochain.singularCochainPresheaf R X n ≅
++      _root_.OAI.AlgebraicTopology.Singular.SheafCochain.singularCochainPresheaf R (TopCat.of U) n :=
+   NatIso.ofComponents
+     (fun V => (forget₂ (ModuleCat.{u} R) AddCommGrpCat).mapIso
+       ((HomologicalComplex.eval (ModuleCat.{u} R) (.up ℕ) n).mapIso
+-        (HomologicalComplex.linearDualIso (openSubspaceImageChainIso R X U V.unop))))
++        (_root_.OAI.Algebra.Homology.LinearDual.HomologicalComplex.linearDualIso (openSubspaceImageChainIso R X U V.unop))))
+     (by
+       intro V W f
+       ext φ
+-      change OpenCochains R X (.op (U.isOpenEmbedding.functor.obj V.unop)) n at φ
++      change _root_.OAI.AlgebraicTopology.Singular.SheafCochain.OpenCochains R X (.op (U.isOpenEmbedding.functor.obj V.unop)) n at φ
+       apply LinearMap.ext
+       intro c
+@@ -75,12 +81,12 @@
+ 
+ lemma singularCochainPresheafOpenRestrictionIso_coboundary (n : ℕ) :
+-    Functor.whiskerLeft U.isOpenEmbedding.functor.op (singularCochainCoboundary R X n) ≫
++    Functor.whiskerLeft U.isOpenEmbedding.functor.op (_root_.OAI.AlgebraicTopology.Singular.SheafCochain.singularCochainCoboundary R X n) ≫
+       (singularCochainPresheafOpenRestrictionIso R X U (n + 1)).hom =
+     (singularCochainPresheafOpenRestrictionIso R X U n).hom ≫
+-      singularCochainCoboundary R (TopCat.of U) n := by
++      _root_.OAI.AlgebraicTopology.Singular.SheafCochain.singularCochainCoboundary R (TopCat.of U) n := by
+   apply NatTrans.ext
+   funext V
+   ext φ
+-  change OpenCochains R X (.op (U.isOpenEmbedding.functor.obj V.unop)) n at φ
++  change _root_.OAI.AlgebraicTopology.Singular.SheafCochain.OpenCochains R X (.op (U.isOpenEmbedding.functor.obj V.unop)) n at φ
+   apply LinearMap.ext
+   intro c
+@@ -98,12 +104,12 @@
+     (Functor.mapHomologicalComplex
+       ((Functor.whiskeringLeft _ _ AddCommGrpCat).obj U.isOpenEmbedding.functor.op)
+-      (.up ℕ)).obj (singularCochainPresheafComplex R X) ≅
+-    singularCochainPresheafComplex R (TopCat.of U) :=
++      (.up ℕ)).obj (_root_.OAI.AlgebraicTopology.Singular.SheafCochain.singularCochainPresheafComplex R X) ≅
++    _root_.OAI.AlgebraicTopology.Singular.SheafCochain.singularCochainPresheafComplex R (TopCat.of U) :=
+   HomologicalComplex.Hom.isoOfComponents (singularCochainPresheafOpenRestrictionIso R X U)
+     (by
+       intro i j hij
+       obtain rfl := hij
+-      rw [Functor.mapHomologicalComplex_obj_d, singularCochainPresheafComplex_d,
+-        singularCochainPresheafComplex_d]
++      rw [Functor.mapHomologicalComplex_obj_d, _root_.OAI.AlgebraicTopology.Singular.SheafCochain.singularCochainPresheafComplex_d,
++        _root_.OAI.AlgebraicTopology.Singular.SheafCochain.singularCochainPresheafComplex_d]
+       exact (singularCochainPresheafOpenRestrictionIso_coboundary R X U i).symm)
+ 
+@@ -111,7 +117,7 @@
+ singular cochain sheaf of the open subspace, with its unit normalization. -/
+ def singularCochainSheafOpenRestrictionIso (n : ℕ) :
+-    (U.isOpenEmbedding.sheafPullback AddCommGrpCat).obj (singularCochainSheaf R X n) ≅
+-      singularCochainSheaf R (TopCat.of U) n :=
+-  (TopCat.Sheaf.openRestrictionSheafificationIso X U (singularCochainPresheaf R X n)).symm ≪≫
++    (U.isOpenEmbedding.sheafPullback AddCommGrpCat).obj (_root_.OAI.AlgebraicTopology.Singular.SheafCochain.singularCochainSheaf R X n) ≅
++      _root_.OAI.AlgebraicTopology.Singular.SheafCochain.singularCochainSheaf R (TopCat.of U) n :=
++  (_root_.OAI.AlgebraicTopology.Sheaf.OpenSheafification.TopCat.openRestrictionSheafificationIso X U (_root_.OAI.AlgebraicTopology.Singular.SheafCochain.singularCochainPresheaf R X n)).symm ≪≫
+     (presheafToSheaf (Opens.grothendieckTopology (TopCat.of U)) AddCommGrpCat).mapIso
+       (singularCochainPresheafOpenRestrictionIso R X U n)
+@@ -121,14 +127,14 @@
+ lemma singularCochainSheafOpenRestrictionIso_coboundary (n : ℕ) :
+     (U.isOpenEmbedding.sheafPullback AddCommGrpCat).map
+-        (singularCochainSheafCoboundary R X n) ≫
++        (_root_.OAI.AlgebraicTopology.Singular.SheafCochain.singularCochainSheafCoboundary R X n) ≫
+       (singularCochainSheafOpenRestrictionIso R X U (n + 1)).hom =
+     (singularCochainSheafOpenRestrictionIso R X U n).hom ≫
+-      singularCochainSheafCoboundary R (TopCat.of U) n := by
+-  apply (cancel_epi (TopCat.Sheaf.openRestrictionSheafificationIso X U
+-    (singularCochainPresheaf R X n)).hom).1
+-  dsimp only [singularCochainSheafOpenRestrictionIso, singularCochainSheafCoboundary]
++      _root_.OAI.AlgebraicTopology.Singular.SheafCochain.singularCochainSheafCoboundary R (TopCat.of U) n := by
++  apply (cancel_epi (_root_.OAI.AlgebraicTopology.Sheaf.OpenSheafification.TopCat.openRestrictionSheafificationIso X U
++    (_root_.OAI.AlgebraicTopology.Singular.SheafCochain.singularCochainPresheaf R X n)).hom).1
++  dsimp only [singularCochainSheafOpenRestrictionIso, _root_.OAI.AlgebraicTopology.Singular.SheafCochain.singularCochainSheafCoboundary]
+   simp only [Iso.trans_hom, Iso.symm_hom, Functor.mapIso_hom, Category.assoc,
+     Iso.hom_inv_id_assoc]
+-  rw [← TopCat.Sheaf.openRestrictionSheafificationIso_naturality_assoc,
++  rw [← _root_.OAI.AlgebraicTopology.Sheaf.OpenSheafification.TopCat.openRestrictionSheafificationIso_naturality_assoc,
+     Iso.hom_inv_id_assoc, ← Functor.map_comp, ← Functor.map_comp,
+     singularCochainPresheafOpenRestrictionIso_coboundary]
+@@ -142,11 +148,11 @@
+ def singularCochainSheafComplexOpenRestrictionIso :
+     ((U.isOpenEmbedding.sheafPullback AddCommGrpCat).mapHomologicalComplex (.up ℕ)).obj
+-      (singularCochainSheafComplex R X) ≅
+-    singularCochainSheafComplex R (TopCat.of U) :=
++      (_root_.OAI.AlgebraicTopology.Singular.SheafCochain.singularCochainSheafComplex R X) ≅
++    _root_.OAI.AlgebraicTopology.Singular.SheafCochain.singularCochainSheafComplex R (TopCat.of U) :=
+   HomologicalComplex.Hom.isoOfComponents (singularCochainSheafOpenRestrictionIso R X U)
+     (by
+       intro i j hij
+       obtain rfl := hij
+-      simpa only [Functor.mapHomologicalComplex_obj_d, singularCochainSheafComplex_d] using
++      simpa only [Functor.mapHomologicalComplex_obj_d, _root_.OAI.AlgebraicTopology.Singular.SheafCochain.singularCochainSheafComplex_d] using
+         (singularCochainSheafOpenRestrictionIso_coboundary R X U i).symm)
+ 
+@@ -157,10 +163,10 @@
+ lemma toSheafify_singularCochainSheafOpenRestrictionIso (n : ℕ) :
+     Functor.whiskerLeft U.isOpenEmbedding.functor.op
+-        (toSheafify (Opens.grothendieckTopology X) (singularCochainPresheaf R X n)) ≫
++        (toSheafify (Opens.grothendieckTopology X) (_root_.OAI.AlgebraicTopology.Singular.SheafCochain.singularCochainPresheaf R X n)) ≫
+       (singularCochainSheafOpenRestrictionIso R X U n).hom.hom =
+     (singularCochainPresheafOpenRestrictionIso R X U n).hom ≫
+       toSheafify (Opens.grothendieckTopology (TopCat.of U))
+-        (singularCochainPresheaf R (TopCat.of U) n) := by
+-  rw [← TopCat.Sheaf.toSheafify_openRestrictionSheafificationIso]
++        (_root_.OAI.AlgebraicTopology.Singular.SheafCochain.singularCochainPresheaf R (TopCat.of U) n) := by
++  rw [← _root_.OAI.AlgebraicTopology.Sheaf.OpenSheafification.TopCat.toSheafify_openRestrictionSheafificationIso]
+   dsimp only [singularCochainSheafOpenRestrictionIso]
+   rw [Iso.trans_hom, ObjectProperty.FullSubcategory.comp_hom, Category.assoc]
+@@ -170,3 +176,8 @@
+     (singularCochainPresheafOpenRestrictionIso R X U n).hom).symm
+ 
+-end AlgebraicTopology.Singular
++end
++end
++
++end
++
++end OAI.AlgebraicTopology.Singular.SheafCochainOpenRestriction

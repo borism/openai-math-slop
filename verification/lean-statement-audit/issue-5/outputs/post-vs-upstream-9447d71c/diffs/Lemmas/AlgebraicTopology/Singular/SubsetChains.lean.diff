@@ -1,0 +1,110 @@
+--- upstream/Lemmas/AlgebraicTopology/Singular/SubsetChains.lean
++++ challenge/Lemmas/AlgebraicTopology/Singular/SubsetChains.lean
+@@ -13,8 +13,12 @@
+ See the License for the specific language governing permissions and
+ limitations under the License.
++
+ -/
+-module
+ 
+-public import HodgeConjecture.Lemmas.AlgebraicTopology.Singular.Excision.CoverSmall
++import HodgeConjecture.Mathlib.Geometry.Convex.StdSimplexMetric
++
++import HodgeConjecture.Lemmas.AlgebraicTopology.Singular.Excision.CoverSmall
++
++namespace OAI.AlgebraicTopology.Singular.SubsetChains
+ 
+ /-!
+@@ -31,10 +35,11 @@
+ -/
+ 
+-@[expose] public noncomputable section
++noncomputable section
+ 
+-open CategoryTheory CategoryTheory.Limits
++open _root_.CategoryTheory _root_.CategoryTheory.Limits
+ open scoped Simplicial
+ 
+-namespace AlgebraicTopology.Singular
++section
++section
+ 
+ /-- A singular simplex factors through a subspace exactly when its topological image is
+@@ -44,5 +49,5 @@
+     (x : (TopCat.toSSet.obj X).obj n) :
+     x ∈ (SSet.Subcomplex.range
+-        (TopCat.toSSet.map (topologicalSubsetInclusion X s))).obj n ↔
++        (TopCat.toSSet.map (_root_.OAI.AlgebraicTopology.Singular.ExcisionCoverSmall.topologicalSubsetInclusion X s))).obj n ↔
+       Set.range (X.toSSetObjEquiv n x) ⊆ s := by
+   constructor
+@@ -50,5 +55,5 @@
+     exact (TopCat.of s).toSSetObjEquiv n y t |>.2
+   · intro h
+-    let f : C(stdSimplex ℝ (Fin (n.unop.len + 1)), TopCat.of s) :=
++    let f : C(Convexity.StdSimplex ℝ (Fin (n.unop.len + 1)), TopCat.of s) :=
+       ⟨fun t ↦ ⟨X.toSSetObjEquiv n x t, h ⟨t, rfl⟩⟩,
+         Continuous.subtype_mk (X.toSSetObjEquiv n x).continuous _⟩
+@@ -92,5 +97,5 @@
+       Set.range (Y.toSSetObjEquiv n (f.app n x)) ⊆ s) :
+     singularSimplicialMapLiftToSubset X Y s f hf ≫
+-        TopCat.toSSet.map (topologicalSubsetInclusion Y s) = f := rfl
++        TopCat.toSSet.map (_root_.OAI.AlgebraicTopology.Singular.ExcisionCoverSmall.topologicalSubsetInclusion Y s) = f := rfl
+ 
+ /-- Maps into a topological subspace are equal when their composites with the subspace
+@@ -99,6 +104,6 @@
+     (X : SSet.{0}) (Y : TopCat.{0}) (s : Set Y)
+     (f g : X ⟶ TopCat.toSSet.obj (TopCat.of s))
+-    (h : f ≫ TopCat.toSSet.map (topologicalSubsetInclusion Y s) =
+-      g ≫ TopCat.toSSet.map (topologicalSubsetInclusion Y s)) : f = g := by
++    (h : f ≫ TopCat.toSSet.map (_root_.OAI.AlgebraicTopology.Singular.ExcisionCoverSmall.topologicalSubsetInclusion Y s) =
++      g ≫ TopCat.toSSet.map (_root_.OAI.AlgebraicTopology.Singular.ExcisionCoverSmall.topologicalSubsetInclusion Y s)) : f = g := by
+   ext n x
+   apply ((TopCat.of s).toSSetObjEquiv n).injective
+@@ -125,5 +130,5 @@
+     (x : (TopCat.toSSet.obj X).obj n)
+     (hx : Set.range (X.toSSetObjEquiv n x) ⊆ s) :
+-    (TopCat.toSSet.map (topologicalSubsetInclusion X s)).app n
++    (TopCat.toSSet.map (_root_.OAI.AlgebraicTopology.Singular.ExcisionCoverSmall.topologicalSubsetInclusion X s)).app n
+       (singularSimplexLiftToSubset X s x hx) = x := rfl
+ 
+@@ -148,5 +153,5 @@
+     (X : TopCat.{0}) (s : Set X) (n : ℕ) :
+     (SSet.chainComplexMap
+-        (TopCat.toSSet.map (topologicalSubsetInclusion X s))
++        (TopCat.toSSet.map (_root_.OAI.AlgebraicTopology.Singular.ExcisionCoverSmall.topologicalSubsetInclusion X s))
+         (AddCommGrpCat.of ℤ)).f n ≫
+       singularSubsetIntegralChainRetractionComponent X s n = 𝟙 _ := by
+@@ -156,8 +161,8 @@
+   change ((TopCat.toSSet.obj X).chainComplexXCofan
+       (AddCommGrpCat.of ℤ) n).inj
+-        ((TopCat.toSSet.map (topologicalSubsetInclusion X s)).app _ x) ≫
++        ((TopCat.toSSet.map (_root_.OAI.AlgebraicTopology.Singular.ExcisionCoverSmall.topologicalSubsetInclusion X s)).app _ x) ≫
+       singularSubsetIntegralChainRetractionComponent X s n = _
+   have hx : Set.range (X.toSSetObjEquiv _
+-      ((TopCat.toSSet.map (topologicalSubsetInclusion X s)).app _ x)) ⊆ s := by
++      ((TopCat.toSSet.map (_root_.OAI.AlgebraicTopology.Singular.ExcisionCoverSmall.topologicalSubsetInclusion X s)).app _ x)) ⊆ s := by
+     rintro _ ⟨t, rfl⟩
+     exact ((TopCat.of s).toSSetObjEquiv _ x t).2
+@@ -170,10 +175,10 @@
+     (X : TopCat.{0}) (s : Set X) (n : ℕ) :
+     Mono ((SSet.chainComplexMap
+-      (TopCat.toSSet.map (topologicalSubsetInclusion X s))
++      (TopCat.toSSet.map (_root_.OAI.AlgebraicTopology.Singular.ExcisionCoverSmall.topologicalSubsetInclusion X s))
+       (AddCommGrpCat.of ℤ)).f n) := by
+   constructor
+   intro Z f g h
+   let inc := (SSet.chainComplexMap
+-    (TopCat.toSSet.map (topologicalSubsetInclusion X s))
++    (TopCat.toSSet.map (_root_.OAI.AlgebraicTopology.Singular.ExcisionCoverSmall.topologicalSubsetInclusion X s))
+     (AddCommGrpCat.of ℤ)).f n
+   let ret := singularSubsetIntegralChainRetractionComponent X s n
+@@ -185,3 +190,8 @@
+     _ = g := by rw [Category.assoc, hret, Category.comp_id]
+ 
+-end AlgebraicTopology.Singular
++end
++end
++
++end
++
++end OAI.AlgebraicTopology.Singular.SubsetChains

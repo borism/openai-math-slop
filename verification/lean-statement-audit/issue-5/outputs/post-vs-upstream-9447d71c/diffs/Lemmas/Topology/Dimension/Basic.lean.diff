@@ -1,0 +1,42 @@
+--- upstream/Lemmas/Topology/Dimension/Basic.lean
++++ challenge/Lemmas/Topology/Dimension/Basic.lean
+@@ -13,10 +13,14 @@
+ See the License for the specific language governing permissions and
+ limitations under the License.
++
+ -/
+-module
+ 
+-public import HodgeConjecture.Definitions.Topology.Dimension.Basic
++import HodgeConjecture.Definitions.Topology.Dimension.Basic
+ 
+ import HodgeConjecture.Mathlib.Topology.KrullDimension
++
++namespace OAI.Topology.Dimension.BasicEq
++
++open _root_.TopologicalSpace
+ 
+ /-!
+@@ -27,7 +31,8 @@
+ -/
+ 
+-public noncomputable section
++noncomputable section
+ 
+ namespace TopologicalSpace
++open _root_.TopologicalSpace
+ 
+ attribute [local instance] specializationOrder in
+@@ -35,6 +40,10 @@
+ specialisation. -/
+ lemma dim_eq_krullDim (X : Type*) [TopologicalSpace X] [IrreducibleSpace X] [T0Space X]
+-    [QuasiSober X] : dim X = ((Order.krullDim X).unbotD 0).toNat := by
+-  rw [dim, topologicalKrullDim_eq_krullDim]
++    [QuasiSober X] : _root_.OAI.Topology.Dimension.Basic.TopologicalSpace.dim X = ((Order.krullDim X).unbotD 0).toNat := by
++  rw [_root_.OAI.Topology.Dimension.Basic.TopologicalSpace.dim, _root_.OAI.Topology.Foundations.KrullDimension.topologicalKrullDim_eq_krullDim]
+ 
+ end TopologicalSpace
++
++end
++
++end OAI.Topology.Dimension.BasicEq

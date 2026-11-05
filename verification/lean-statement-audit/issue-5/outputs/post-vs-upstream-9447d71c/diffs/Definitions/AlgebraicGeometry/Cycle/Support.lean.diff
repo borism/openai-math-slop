@@ -1,0 +1,66 @@
+--- upstream/Definitions/AlgebraicGeometry/Cycle/Support.lean
++++ challenge/Definitions/AlgebraicGeometry/Cycle/Support.lean
+@@ -13,10 +13,10 @@
+ See the License for the specific language governing permissions and
+ limitations under the License.
++
+ -/
+-module
+ 
+-public import HodgeConjecture.Lemmas.AlgebraicGeometry.ComplexPoint.Basic
+-public import Mathlib.AlgebraicGeometry.AlgebraicCycle.Basic
+-public import Mathlib.AlgebraicGeometry.Morphisms.Smooth
++import HodgeConjecture.Lemmas.AlgebraicGeometry.ComplexPoint.Basic
++import Mathlib.AlgebraicGeometry.AlgebraicCycle.Basic
++import Mathlib.AlgebraicGeometry.Morphisms.Smooth
+ 
+ import HodgeConjecture.Lemmas.AlgebraicGeometry.Smooth.Locus
+@@ -24,4 +24,8 @@
+ import Mathlib.AlgebraicGeometry.AlgClosed.Basic
+ import Mathlib.Analysis.Complex.Polynomial.Basic
++
++namespace OAI.AlgebraicGeometry.Cycle.Support
++
++open _root_.AlgebraicGeometry
+ 
+ /-!
+@@ -34,9 +38,9 @@
+ -/
+ 
+-@[expose] public noncomputable section
++noncomputable section
+ 
+-open CategoryTheory Topology TopologicalSpace
++open _root_.CategoryTheory _root_.Topology _root_.TopologicalSpace
+ 
+-namespace AlgebraicGeometry
++section
+ 
+ variable (X : Over (Spec ↧ℂ))
+@@ -81,7 +85,7 @@
+ /-- A cycle component of a projective variety is projective over `ℂ`. -/
+ instance cycleComponent_projective
+-    [IsIntegral X.left] [Smooth X.hom] [IsProjective X.hom] (x : X.left) :
+-    IsProjective (cycleComponentι X.left x ≫ X.hom) := by
+-  rcases ‹IsProjective X.hom›.nonempty_presentation with ⟨P⟩
++    [IsIntegral X.left] [Smooth X.hom] [_root_.OAI.AlgebraicGeometry.Foundations.ProjectiveSpaceIs.IsProjective X.hom] (x : X.left) :
++    _root_.OAI.AlgebraicGeometry.Foundations.ProjectiveSpaceIs.IsProjective (cycleComponentι X.left x ≫ X.hom) := by
++  rcases ‹_root_.OAI.AlgebraicGeometry.Foundations.ProjectiveSpaceIs.IsProjective X.hom›.nonempty_presentation with ⟨P⟩
+   exact ⟨⟨
+     { ambientDimension := P.ambientDimension
+@@ -97,7 +101,11 @@
+ whose underlying scheme point belongs to `closure {x}`. -/
+ def cycleComponentSupport
+-    [IsIntegral X.left] [Smooth X.hom] [IsProjective X.hom] (x : X.left) :
+-    Set (ComplexPoint X) :=
+-  Point.underlying ⁻¹' closure {x}
++    [IsIntegral X.left] [Smooth X.hom] [_root_.OAI.AlgebraicGeometry.Foundations.ProjectiveSpaceIs.IsProjective X.hom] (x : X.left) :
++    Set (_root_.OAI.AlgebraicGeometry.ComplexPoint.Basic.ComplexSchemePoint X) :=
++  _root_.OAI.AlgebraicGeometry.ComplexPoint.Basic.Point.underlying ⁻¹' closure {x}
+ 
+-end AlgebraicGeometry
++end
++
++end
++
++end OAI.AlgebraicGeometry.Cycle.Support

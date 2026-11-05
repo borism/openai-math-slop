@@ -1,0 +1,75 @@
+--- upstream/Lemmas/AlgebraicTopology/Singular/RelativePairExcision.lean
++++ challenge/Lemmas/AlgebraicTopology/Singular/RelativePairExcision.lean
+@@ -363,5 +363,5 @@
+   · rw [← Category.assoc,
+       iota_pointExcisionSmallToNeighborhoodRelativeComponent U x (n + 1) σ,
+-      dif_pos hσ, zero_comp, ← Category.assoc, SSet.ιChainComplex_d, Preadditive.sum_comp]
++      dite_eq_left hσ, zero_comp, ← Category.assoc, SSet.ιChainComplex_d, Preadditive.sum_comp]
+     symm
+     apply Finset.sum_eq_zero
+@@ -369,9 +369,9 @@
+     rw [Preadditive.zsmul_comp,
+       iota_pointExcisionSmallToNeighborhoodRelativeComponent U x n,
+-      dif_pos (PointExcisionSmallSimplex.avoidsPoint_face U x σ hσ i)]
++      dite_eq_left (PointExcisionSmallSimplex.avoidsPoint_face U x σ hσ i)]
+     simp
+   · rw [← Category.assoc,
+       iota_pointExcisionSmallToNeighborhoodRelativeComponent U x (n + 1) σ,
+-      dif_neg hσ, Category.assoc, neighborhoodRelativeProjectionComponent_comm U x n,
++      dite_eq_right hσ, Category.assoc, neighborhoodRelativeProjectionComponent_comm U x n,
+       ← Category.assoc, SSet.ιChainComplex_d, Preadditive.sum_comp,
+       ← Category.assoc, SSet.ιChainComplex_d, Preadditive.sum_comp]
+@@ -383,10 +383,10 @@
+         ((coverSmallSingularSubcomplex (TopCat.of X)
+           (pointExcisionCover U x) : SSet).δ i σ)
+-    · rw [iota_pointExcisionSmallToNeighborhoodRelativeComponent U x n, dif_pos hi]
++    · rw [iota_pointExcisionSmallToNeighborhoodRelativeComponent U x n, dite_eq_left hi]
+       obtain ⟨a, ha⟩ := hi
+       apply neighborhoodSimplex_projection_zero_of_ambient_eq U x _ a
+       have hp := PointExcisionSmallSimplex.neighborhoodPreimage_map U x σ hσ
+       exact (congrArg (fun z ↦ (TopCat.toSSet.obj (TopCat.of X)).δ i z) hp).trans ha.symm
+-    · rw [iota_pointExcisionSmallToNeighborhoodRelativeComponent U x n, dif_neg hi]
++    · rw [iota_pointExcisionSmallToNeighborhoodRelativeComponent U x n, dite_eq_right hi]
+       congr 1
+       apply congrArg (fun z ↦ (TopCat.toSSet.obj (TopCat.of U)).ιChainComplex z)
+@@ -435,5 +435,5 @@
+   rw [← Category.assoc, SSet.ι_chainComplexMap_f,
+     iota_pointExcisionSmallToNeighborhoodRelativeComponent,
+-    dif_pos (pointComplementCoverMember_avoidsPoint U x a)]
++    dite_eq_left (pointComplementCoverMember_avoidsPoint U x a)]
+   rfl
+ 
+@@ -616,5 +616,5 @@
+   rw [← Category.assoc, iota_pointExcisionSmallToNeighborhoodRelativeComponent]
+   by_cases hσ : PointExcisionSmallSimplex.AvoidsPoint U x σ
+-  · rw [dif_pos hσ, zero_comp]
++  · rw [dite_eq_left hσ, zero_comp]
+     symm
+     obtain ⟨a, ha⟩ := hσ
+@@ -629,5 +629,5 @@
+         (pointExcisionSmallRelativeProjection U x).f n) = 0
+     rw [hc, comp_zero]
+-  · rw [dif_neg hσ, Category.assoc]
++  · rw [dite_eq_right hσ, Category.assoc]
+     have hc := congrArg (fun f ↦ f.f n)
+       (neighborhoodRelativeProjection_comp_toPointExcisionSmall U x)
+@@ -672,9 +672,9 @@
+   have hsu := ConcreteCategory.congr_hom hs u
+   by_cases hσ : PointExcisionSmallSimplex.AvoidsPoint U x σ
+-  · rw [dif_pos hσ]
++  · rw [dite_eq_left hσ]
+     symm
+     obtain ⟨a, ha⟩ := hσ
+     exact neighborhoodSimplex_projection_zero_of_ambient_eq U x u a (hsu.symm.trans ha.symm)
+-  · rw [dif_neg hσ]
++  · rw [dite_eq_right hσ]
+     congr 1
+     apply congrArg (fun z ↦ (TopCat.toSSet.obj (TopCat.of U)).ιChainComplex z)
+@@ -771,7 +771,4 @@
+     SSet.chainComplexFunctor]
+   apply +allowSynthFailures Functor.map_mono
+-  apply +allowSynthFailures Functor.map_mono
+-  dsimp [SSet, SimplicialObject.whiskering, SimplicialObject]
+-  infer_instance
+ 
+ instance ambientPointComplementSubspaceChainMap_mono (x : X) :

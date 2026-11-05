@@ -1,0 +1,9 @@
+--- upstream/Lemmas/AlgebraicTopology/Singular/Subdivision/BarycentricChains.lean
++++ challenge/Lemmas/AlgebraicTopology/Singular/Subdivision/BarycentricChains.lean
+@@ -118,5 +118,5 @@
+     X.ιChainComplex x ≫ barycentricSubdivisionChainMapZero X =
+       (SSet.sd.obj X).ιChainComplex (barycentricSubdivisionVertex X x) := by
+-  apply Sigma.ι_desc
++  apply Sigma.ι_comp_desc
+ 
+ /-- In degree zero, barycentric subdivision followed by last vertex is exactly the identity. -/

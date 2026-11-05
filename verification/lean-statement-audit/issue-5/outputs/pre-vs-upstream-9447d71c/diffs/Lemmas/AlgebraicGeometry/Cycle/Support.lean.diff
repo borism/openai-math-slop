@@ -1,0 +1,9 @@
+--- upstream/Lemmas/AlgebraicGeometry/Cycle/Support.lean
++++ challenge/Lemmas/AlgebraicGeometry/Cycle/Support.lean
+@@ -15,4 +15,6 @@
+ -/
+ module
++
++public import Mathlib.AlgebraicGeometry.IdealSheaf.Functorial
+ 
+ public import HodgeConjecture.Definitions.AlgebraicGeometry.Cycle.Support

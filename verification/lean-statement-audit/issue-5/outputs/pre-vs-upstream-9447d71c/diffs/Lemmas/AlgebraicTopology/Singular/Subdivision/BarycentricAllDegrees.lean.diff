@@ -1,0 +1,9 @@
+--- upstream/Lemmas/AlgebraicTopology/Singular/Subdivision/BarycentricAllDegrees.lean
++++ challenge/Lemmas/AlgebraicTopology/Singular/Subdivision/BarycentricAllDegrees.lean
+@@ -216,5 +216,5 @@
+     X.ιChainComplex x ≫ barycentricSubdivisionComponent X n =
+       barycentricSubdivisionSimplexChain X n x := by
+-  apply Sigma.ι_desc
++  apply Sigma.ι_comp_desc
+ 
+ /-- The signed maximal-flag chain associated to a simplex is natural in the ambient simplicial

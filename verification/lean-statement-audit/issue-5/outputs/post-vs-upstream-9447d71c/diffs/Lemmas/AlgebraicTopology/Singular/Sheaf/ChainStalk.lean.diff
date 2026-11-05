@@ -1,0 +1,50 @@
+--- upstream/Lemmas/AlgebraicTopology/Singular/Sheaf/ChainStalk.lean
++++ challenge/Lemmas/AlgebraicTopology/Singular/Sheaf/ChainStalk.lean
+@@ -10,9 +10,11 @@
+ See the License for the specific language governing permissions and
+ limitations under the License.
++
+ -/
+-module
+ 
+-public import HodgeConjecture.Lemmas.AlgebraicTopology.Singular.Sheaf.Chain
+-public import HodgeConjecture.Lemmas.AlgebraicTopology.Singular.RelativeHomotopyInvariance
++import HodgeConjecture.Lemmas.AlgebraicTopology.Singular.Sheaf.Chain
++import HodgeConjecture.Lemmas.AlgebraicTopology.Singular.RelativeHomotopyInvariance
++
++namespace OAI.AlgebraicTopology.Singular.SheafChainStalk
+ 
+ /-!
+@@ -24,17 +26,18 @@
+ -/
+ 
+-@[expose] public noncomputable section
++noncomputable section
+ 
+-open CategoryTheory Limits TopologicalSpace
++open _root_.CategoryTheory Limits _root_.TopologicalSpace
+ open scoped Simplicial
+ 
+ universe u
+ 
+-namespace AlgebraicTopology.Singular
++section
++section
+ 
+ variable (R : Type u) [CommRing R] (X : TopCat.{u})
+ 
+ /-- Evaluating a chain complex in degree `n` and forgetting its scalar structure. -/
+-def chainDegreeAdditiveFunctor (n : ℕ) : ChainCategory R ⥤ AddCommGrpCat.{u} :=
++def chainDegreeAdditiveFunctor (n : ℕ) : _root_.OAI.AlgebraicTopology.Singular.Cohomology.ChainCategory R ⥤ AddCommGrpCat.{u} :=
+   HomologicalComplex.eval (ModuleCat.{u} R) (ComplexShape.down ℕ) n ⋙
+     forget₂ (ModuleCat.{u} R) AddCommGrpCat.{u}
+@@ -46,3 +49,8 @@
+     infer_instance
+ 
+-end AlgebraicTopology.Singular
++end
++end
++
++end
++
++end OAI.AlgebraicTopology.Singular.SheafChainStalk

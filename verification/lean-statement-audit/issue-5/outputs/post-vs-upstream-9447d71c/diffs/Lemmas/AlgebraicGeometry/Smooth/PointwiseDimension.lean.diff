@@ -1,0 +1,107 @@
+--- upstream/Lemmas/AlgebraicGeometry/Smooth/PointwiseDimension.lean
++++ challenge/Lemmas/AlgebraicGeometry/Smooth/PointwiseDimension.lean
+@@ -13,9 +13,9 @@
+ See the License for the specific language governing permissions and
+ limitations under the License.
++
+ -/
+-module
+ 
+-public import Mathlib.AlgebraicGeometry.Morphisms.Smooth
+-public import Mathlib.Data.Complex.Basic
++import Mathlib.AlgebraicGeometry.Morphisms.Smooth
++import Mathlib.Basic.Complex.Basic
+ 
+ import HodgeConjecture.Lemmas.AlgebraicGeometry.Cycle.Component.Dimension
+@@ -25,4 +25,9 @@
+ import HodgeConjecture.Mathlib.CategoryTheory.ConcreteCategory.Notation
+ import Mathlib.RingTheory.Unramified.LocalStructure
++
++namespace OAI.AlgebraicGeometry.Smooth.PointwiseDimension
++
++open _root_.AlgebraicGeometry
++open _root_.RingHom
+ 
+ /-!
+@@ -40,9 +45,10 @@
+ -/
+ 
+-@[expose] public noncomputable section
++noncomputable section
+ 
+-open CategoryTheory Topology TopologicalSpace
++open _root_.CategoryTheory _root_.Topology _root_.TopologicalSpace
+ 
+ namespace RingHom
++open _root_.RingHom
+ 
+ /-- Every maximal ideal of a standard-smooth complex algebra of relative dimension `d` has
+@@ -59,12 +65,12 @@
+     RingHom.finiteType_algebraMap.mpr inferInstance
+   have hunder : (P.under (MvPolynomial (Fin d) ℂ)).IsMaximal :=
+-    hfiniteType.isMaximal_comap_of_isJacobsonRing P
+-  rw [Algebra.QuasiFinite.height_eq_height_under (R := MvPolynomial (Fin d) ℂ)]
+-  exact MvPolynomial.height_eq_fin_of_isMaximal ℂ d
++    (_root_.OAI.Algebra.RingTheory.SmoothKrullDimension.RingHom.FiniteType.isMaximal_comap_of_isJacobsonRing hfiniteType) P
++  rw [_root_.OAI.Algebra.RingTheory.SmoothKrullDimension.QuasiFinite.height_eq_height_under (R := MvPolynomial (Fin d) ℂ)]
++  exact _root_.OAI.Algebra.RingTheory.SmoothKrullDimension.MvPolynomial.height_eq_fin_of_isMaximal ℂ d
+     (P.under (MvPolynomial (Fin d) ℂ))
+ 
+ end RingHom
+ 
+-namespace AlgebraicGeometry
++section
+ 
+ /-- Under an affine presentation, the height of the corresponding prime ideal is the coheight of
+@@ -86,16 +92,16 @@
+     [SmoothOfRelativeDimension d f] : Order.krullDim X = d := by
+   apply le_antisymm
+-    (SmoothOfRelativeDimension.orderKrullDim_le_complex (f := f) (d := d))
++    (_root_.OAI.AlgebraicGeometry.Smooth.DimensionFormula.SmoothOfRelativeDimension.orderKrullDim_le_complex (f := f) (d := d))
+   obtain ⟨x⟩ := (inferInstance : Nonempty X)
+   obtain ⟨U, hU, hxU, hsmooth⟩ :=
+-    SmoothOfRelativeDimension.exists_affine_isStandardSmoothOfRelativeDimension
++    _root_.OAI.AlgebraicGeometry.ComplexPoint.SmoothCoordinates.SmoothOfRelativeDimension.exists_affine_isStandardSmoothOfRelativeDimension
+       (d := d) f x
+   let : Nonempty U := ⟨⟨x, hxU⟩⟩
+   have hUdim : Order.krullDim U = d := by
+-    rw [orderKrullDim_affineOpen_eq_ringKrullDim U hU]
+-    exact (algebraMap_isStandardSmoothOfRelativeDimension
+-      (d := d) (Over.mk f) hsmooth).ringKrullDim_eq_complex
+-  rw [← hUdim, ← Scheme.topologicalKrullDim_eq_orderKrullDim U.toScheme,
+-    ← Scheme.topologicalKrullDim_eq_orderKrullDim X]
++    rw [_root_.OAI.AlgebraicGeometry.Smooth.DimensionFormula.orderKrullDim_affineOpen_eq_ringKrullDim U hU]
++    exact (_root_.OAI.Algebra.RingTheory.SmoothKrullDimension.RingHom.IsStandardSmoothOfRelativeDimension.ringKrullDim_eq_complex (_root_.OAI.AlgebraicGeometry.ComplexPoint.SmoothCoordinates.algebraMap_isStandardSmoothOfRelativeDimension
++      (d := d) (Over.mk f) hsmooth))
++  rw [← hUdim, ← _root_.OAI.AlgebraicGeometry.Cycle.ComponentDimension.Scheme.topologicalKrullDim_eq_orderKrullDim U.toScheme,
++    ← _root_.OAI.AlgebraicGeometry.Cycle.ComponentDimension.Scheme.topologicalKrullDim_eq_orderKrullDim X]
+   exact U.ι.isOpenEmbedding.isInducing.topologicalKrullDim_le
+ 
+@@ -113,5 +119,5 @@
+   have hheight : Order.height x = 0 := Order.IsMin.height_eq_zero hmin
+   obtain ⟨U, hU, hxU, hsmooth⟩ :=
+-    SmoothOfRelativeDimension.exists_affine_isStandardSmoothOfRelativeDimension
++    _root_.OAI.AlgebraicGeometry.ComplexPoint.SmoothCoordinates.SmoothOfRelativeDimension.exists_affine_isStandardSmoothOfRelativeDimension
+       (d := d) f x
+   let y : U.toScheme := ⟨x, hxU⟩
+@@ -119,12 +125,16 @@
+   let : P.IsMaximal := hU.primeIdealOf_isMaximal_of_isClosed y hx
+   have hP : P.height = d :=
+-    (algebraMap_isStandardSmoothOfRelativeDimension
+-      (d := d) (Over.mk f) hsmooth).height_eq_of_isMaximal P
++    (_root_.OAI.AlgebraicGeometry.Smooth.PointwiseDimension.RingHom.IsStandardSmoothOfRelativeDimension.height_eq_of_isMaximal (_root_.OAI.AlgebraicGeometry.ComplexPoint.SmoothCoordinates.algebraMap_isStandardSmoothOfRelativeDimension
++      (d := d) (Over.mk f) hsmooth)) P
+   have hcoheight : Order.coheight x = d := by
+     calc
+       Order.coheight x = Order.coheight y := coheight_eq_of_isOpenImmersion (x := y) U.ι
+-      _ = P.height := (hU.primeIdealOf_height_eq_coheight y).symm
++      _ = P.height := ((_root_.OAI.AlgebraicGeometry.Smooth.PointwiseDimension.IsAffineOpen.primeIdealOf_height_eq_coheight hU) y).symm
+       _ = d := hP
+   rw [hheight, hcoheight, zero_add]
+ 
+-end AlgebraicGeometry
++end
++
++end
++
++end OAI.AlgebraicGeometry.Smooth.PointwiseDimension

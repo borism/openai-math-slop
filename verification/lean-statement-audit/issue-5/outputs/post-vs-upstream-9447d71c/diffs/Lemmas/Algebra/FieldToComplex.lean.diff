@@ -1,0 +1,40 @@
+--- upstream/Lemmas/Algebra/FieldToComplex.lean
++++ challenge/Lemmas/Algebra/FieldToComplex.lean
+@@ -13,10 +13,12 @@
+ See the License for the specific language governing permissions and
+ limitations under the License.
++
+ -/
+-module
+ 
+-public import HodgeConjecture.Mathlib.Algebra.Ring.Basic
+-public import Mathlib.Analysis.Complex.Basic
+-public import Mathlib.LinearAlgebra.Basis.VectorSpace
++import HodgeConjecture.Mathlib.Algebra.Ring.Basic
++import Mathlib.Analysis.Complex.Basic
++import Mathlib.LinearAlgebra.Basis.VectorSpace
++
++namespace OAI.Algebra.Foundations.FieldToComplex
+ 
+ /-!
+@@ -28,5 +30,5 @@
+ -/
+ 
+-@[expose] public noncomputable section
++noncomputable section
+ 
+ variable (K : Type) [Field K] [Algebra K ℂ]
+@@ -40,5 +42,5 @@
+ end
+ 
+-@[expose] public noncomputable section
++noncomputable section
+ 
+ variable (K : Type) [Field K] [Algebra K ℂ]
+@@ -53,2 +55,6 @@
+     complexToFieldLinear K (algebraMap K ℂ q) = q :=
+   LinearMap.congr_fun (complexToFieldLinear_comp_algebraMap K) q
++
++end
++
++end OAI.Algebra.Foundations.FieldToComplex

@@ -1,0 +1,63 @@
+--- upstream/Lemmas/AlgebraicTopology/Singular/Contractible.lean
++++ challenge/Lemmas/AlgebraicTopology/Singular/Contractible.lean
+@@ -13,14 +13,18 @@
+ See the License for the specific language governing permissions and
+ limitations under the License.
++
+ -/
+-module
+ 
+-public import HodgeConjecture.Lemmas.Algebra.Homology.LinearDual
+-public import Mathlib.Algebra.Category.ModuleCat.Colimits
+-public import Mathlib.AlgebraicTopology.SingularHomology.HomotopyInvariance
+-public import Mathlib.Topology.Homotopy.Contractible
++import HodgeConjecture.Lemmas.Algebra.Homology.LinearDual
++import Mathlib.Algebra.Category.ModuleCat.Colimits
++import Mathlib.AlgebraicTopology.SingularHomology.HomotopyInvariance
++import Mathlib.Topology.Homotopy.Contractible
+ 
+ import Mathlib.Algebra.Category.ModuleCat.Abelian
+ import Mathlib.Algebra.Homology.QuasiIso
++
++namespace OAI.AlgebraicTopology.Singular.Contractible
++
++open _root_.AlgebraicTopology
+ 
+ /-!
+@@ -39,12 +43,12 @@
+ -/
+ 
+-@[expose] public noncomputable section
++noncomputable section
+ 
+-open CategoryTheory
++open _root_.CategoryTheory
+ open scoped ContinuousMap
+ 
+ universe u
+ 
+-namespace AlgebraicTopology
++section
+ 
+ variable (R : Type u) [CommRing R]
+@@ -105,8 +109,8 @@
+     (X : Type u) [TopologicalSpace X] [ContractibleSpace X] (n : ℕ) :
+     HomologicalComplex.ExactAt
+-      ((((singularChainComplexFunctor (ModuleCat.{u} R)).obj (ModuleCat.of R R)).obj
+-        (TopCat.of X)).linearDualCochainComplex) (n + 1) := by
++      ((_root_.OAI.Algebra.Homology.LinearDual.HomologicalComplex.linearDualCochainComplex (((singularChainComplexFunctor (ModuleCat.{u} R)).obj (ModuleCat.of R R)).obj
++        (TopCat.of X)))) (n + 1) := by
+   -- `C_*(X)` is chain homotopy equivalent to the coefficients placed in degree zero.
+-  let e := HomologicalComplex.linearDualHomotopyEquiv
++  let e := _root_.OAI.Algebra.Homology.LinearDualHomotopy.HomologicalComplex.linearDualHomotopyEquiv
+     ((contractibleSingularChainHomotopyEquiv R X).trans <|
+       (HomotopyEquiv.ofIso (singularChainComplexFunctorIsoOfTotallyDisconnectedSpace
+@@ -137,3 +141,7 @@
+   exact h.moduleCat_range_eq_ker
+ 
+-end AlgebraicTopology
++end
++
++end
++
++end OAI.AlgebraicTopology.Singular.Contractible
