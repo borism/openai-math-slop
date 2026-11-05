@@ -9,7 +9,10 @@ Usage (inside a clone that has 204e5f8f8): python3 -I hodge_alignment_diff.py
 """
 import difflib, re, subprocess
 
+import sys
 C = '204e5f8f8'
+# --renames also treats the type rename ComplexPoint -> ComplexSchemePoint as a rename
+RENAMES = '--renames' in sys.argv
 files = subprocess.run(['git', 'show', '--name-only', '--format=', C],
                        capture_output=True, text=True).stdout.split()
 files = [f for f in files if f.endswith('.lean') and 'HodgeConjectureCMAbelianVarieties' in f]
@@ -22,6 +25,8 @@ def toks(t):
     t = re.sub(r'\b(public|private|protected)\s+', '', t)
     t = re.sub(r'@\[expose\]\s*', '', t)
     t = re.sub(r"\b(?:[A-Za-z_][\w']*\.)+([A-Za-z_][\w']*)", r'\1', t)
+    if RENAMES:
+        t = re.sub(r'\bComplexSchemePoint\b', 'ComplexPoint', t)
     return re.findall(r"[\w']+|[^\s\w]", t)
 
 
@@ -41,3 +46,4 @@ print('files with residual token changes:', sum(1 for r in rows if r[0] > 0))
 print('largest residual changes (edits, file, old tokens, new tokens, inserted, deleted):')
 for r in rows[:25]:
     print(' ', r)
+print('total residual token edits:', sum(r[0] for r in rows))

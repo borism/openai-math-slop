@@ -16,7 +16,7 @@ family	verdict	note	papers_listed_in_yaml	papers
 026	consistent (pass 1)		0/1	Positive-lower-density-of-large-prime-gaps-September-25-2026
 027	A support-only, catalogued	Lean: seam-equation compatibility lemma; paper: potential Zariski density of integral points (not formalized)	1/1	Integral-points-on-character-varieties-of-curves-September-25-2026
 028	consistent (pass 1)		1/1	Bounded-Step-Walks-on-Gaussian-Primes-September-26-2026
-032	D trust surface	52k-line bespoke definitional tree; 131 files changed non-trivially by the Oct 29 alignment commit	1/1	The-rational-Hodge-conjecture-for-CM-abelian-varieties-October-6-2026
+032	D trust surface	52k-line bespoke definitional tree; edited by the Oct 29 alignment commit (13 of 61 Definitions files differ beyond renames)	1/1	The-rational-Hodge-conjecture-for-CM-abelian-varieties-October-6-2026
 033	C headline not formalized	only fiber kappa=-inf branch of reverse inequality	0/1	The-reverse-logarithmic-Kodaira-inequality-and-additivity-September-26-2026
 039	consistent (pass 1)		2/2	Nagatas-Conjecture-for-Plane-Curves-September-23-2026; Maximal-Seshadri-Constants-on-Arbitrary-Polarized-Surfaces-September-23-2026
 047	consistent (pass 1)		1/1	An-explicit-failure-of-complex-affine-space-cancellation-September-23-2026

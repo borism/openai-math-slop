@@ -49,7 +49,7 @@ Per-family table: `output/per-family-verdicts.tsv`. Reading notes:
 | **A** support-only, catalogued | 027, 066, 195, 237 (chords paper), 301 | `formalization.yaml` lists the paper as having a formalized main result, but the Lean proves only a supporting lemma |
 | **B** weaker or partial, catalogued | 277, 212, 312, 290; 378 (minor) | listed in `formalization.yaml`, but the Lean statement is weaker than or misses the headline |
 | **C** headline not formalized, "(Lean)" link shown | 009, 033, 126, 152, 159, 191, 194, 206, 222, 229, 230, 260, 261, 266, 269, 272, 280, 281, 323, 367, 371 | not in `formalization.yaml` (consistent), but CONTENTS.md attaches a "(Lean)" link to a blurb stating the unformalized headline |
-| **D** trust surface | 032 (CM Hodge), 307 (coarse Novikov) | the statement rests on very large bespoke definition trees; CM Hodge's were changed after release |
+| **D** trust surface | 032 (CM Hodge), 307 (coarse Novikov) | the statement rests on very large bespoke definition trees; CM Hodge's were edited after release and are not pinned to a reference |
 | **E** hygiene | 095, 107 | abstract/scope-note mismatches |
 
 ### A. Support-only formalizations listed as formalized main results
@@ -149,16 +149,19 @@ review ("no gap found") is the only check of these headline claims:
   Headers say it was adapted from Formal Conjectures and sphere-six-complex,
   and that "This file has been modified". On Oct 29, commit `204e5f8f8`
   ("Align CM Hodge comparator declarations with the Lean solution") changed
-  259 files of this tree. After normalizing names, imports and visibility,
-  131 files still have token-level changes
-  (`output/hodge-alignment-diff.txt`). The largest are
-  `Hodge/Filtration.lean` (+512/−59 tokens, new `siteSheafHom` definitions),
-  `Hodge/AnalyticDifferentialForms.lean` and `Hodge/HolomorphicDeRham.lean`.
-  They look like a port between Lean module systems, but the statement's
-  meaning (`Hdg^p(X;ℚ)`, `algebraicCycleClassSpan`) depends on this tree. It
-  was edited to match the solution and is not pinned to an upstream
-  reference. Formal Conjectures main (2befc3a, Nov 4) contains no Hodge file
-  to diff against.
+  259 files of this tree. After normalizing qualified names, imports,
+  visibility and the type rename `ComplexPoint` → `ComplexSchemePoint`, 91
+  files still differ (1,637 token edits). In `Definitions/`, 13 of the 61
+  changed files still differ (681 token edits). The samples inspected are
+  explicit-argument and coercion rewrites plus one new bridging definition
+  (`siteSheafHom`, `TopCat.Sheaf` → `CategoryTheory.Sheaf`) in
+  `Hodge/Filtration.lean`. This is consistent with a meaning-preserving port
+  between Lean versions, but it has not been shown mechanically
+  (`output/hodge-alignment-diff*.txt`). The underlying problem is that the
+  statement's meaning (`Hdg^p(X;ℚ)`, `algebraicCycleClassSpan`) rests on a
+  large tree that was edited after release and is not pinned to any
+  reference. Formal Conjectures main (2befc3a, Nov 4) contains no Hodge
+  file to diff against.
 - **307 coarse Novikov counterexample.** The statement is about
   `constructedCoarseAssembly` and `KX1`, defined inside a 331 KB challenge
   with 189 declarations. Whether these match standard coarse K-homology and

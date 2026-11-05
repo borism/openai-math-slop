@@ -27,3 +27,4 @@ largest residual changes (edits, file, old tokens, new tokens, inserted, deleted
   (36, 'HodgeConjecture/Definitions/AlgebraicGeometry/Cohomology/WithSupport.lean', 638, 638, 18, 18)
   (34, 'HodgeConjecture/Lemmas/Algebra/Homology/MappingConeQuasiIso.lean', 191, 175, 9, 25)
   (32, 'HodgeConjecture/Definitions/AlgebraicGeometry/ClosedImmersion/NormalCoordinates.lean', 1667, 1677, 21, 11)
+total residual token edits: 3025

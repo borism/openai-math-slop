@@ -1,0 +1,30 @@
+files changed by 204e5f8f8 in the CM Hodge challenge tree: 259
+files with zero token change after normalisation: 168
+files with residual token changes: 91
+largest residual changes (edits, file, old tokens, new tokens, inserted, deleted):
+  (515, 'HodgeConjecture/Definitions/AlgebraicGeometry/Hodge/Filtration.lean', 5379, 5832, 484, 31)
+  (109, 'HodgeConjecture/Lemmas/Algebra/Homology/LinearDualNaturality.lean', 1072, 1177, 107, 2)
+  (103, 'HodgeConjecture/Definitions/Algebra/Homology/LinearDual.lean', 1200, 1295, 99, 4)
+  (93, 'HodgeConjecture/Lemmas/AlgebraicTopology/Singular/Sheaf/SubdivisionCochain.lean', 10502, 10547, 69, 24)
+  (60, 'HodgeConjecture/Lemmas/AlgebraicTopology/LocalHomology/ComplexClassLinearInvariance.lean', 1535, 1553, 39, 21)
+  (54, 'HodgeConjecture/Mathlib/Analysis/Calculus/SplitDerivativeNormalChart.lean', 1116, 1170, 54, 0)
+  (50, 'HodgeConjecture/Lemmas/Algebra/Homology/DerivedCategory/RightDerivedFunctorPlusShift.lean', 1000, 1050, 50, 0)
+  (45, 'HodgeConjecture/Lemmas/Algebra/Homology/DerivedCategory/RightDerivedFunctorPlusShiftNaturality.lean', 875, 892, 31, 14)
+  (44, 'HodgeConjecture/Lemmas/AlgebraicTopology/LocalHomology/PuncturedEuclidean.lean', 19731, 19719, 16, 28)
+  (36, 'HodgeConjecture/Lemmas/AlgebraicTopology/Singular/Subdivision/AffinePrism.lean', 6069, 6065, 16, 20)
+  (34, 'HodgeConjecture/Lemmas/Algebra/Homology/MappingConeQuasiIso.lean', 191, 175, 9, 25)
+  (27, 'HodgeConjecture/Lemmas/Algebra/Homology/DerivedCategory/RightDerivedFunctorPlusNaturality.lean', 479, 494, 21, 6)
+  (24, 'HodgeConjecture/Mathlib/Algebra/Homology/LiftToInjective.lean', 904, 902, 11, 13)
+  (22, 'HodgeConjecture/Lemmas/AlgebraicTopology/Singular/StandardSimplexCone.lean', 3655, 3647, 7, 15)
+  (20, 'HodgeConjecture/Lemmas/AlgebraicTopology/Sheaf/FlasqueQuasiIso.lean', 1263, 1251, 4, 16)
+  (20, 'HodgeConjecture/Definitions/AlgebraicGeometry/ClosedImmersion/NormalCoordinates.lean', 1667, 1677, 15, 5)
+  (19, 'HodgeConjecture/Lemmas/AlgebraicTopology/Singular/Subdivision/AffineSupport.lean', 3409, 3414, 12, 7)
+  (18, 'HodgeConjecture/Lemmas/AlgebraicTopology/Support/DerivedSectionsNaturality.lean', 1104, 1110, 12, 6)
+  (17, 'HodgeConjecture/Lemmas/AlgebraicTopology/Singular/Subdivision/AffineSmallPrism.lean', 1415, 1406, 4, 13)
+  (16, 'HodgeConjecture/Lemmas/AlgebraicGeometry/Smooth/PointwiseDimension.lean', 623, 631, 12, 4)
+  (14, 'HodgeConjecture/Lemmas/AlgebraicGeometry/Cycle/Component/ClosedPointDimension.lean', 1577, 1587, 12, 2)
+  (14, 'HodgeConjecture/Definitions/AlgebraicGeometry/ClosedImmersion/HolomorphicCharts.lean', 353, 363, 12, 2)
+  (13, 'HodgeConjecture/Lemmas/AlgebraicTopology/Singular/Subdivision/Basic.lean', 710, 697, 0, 13)
+  (13, 'HodgeConjecture/Lemmas/AlgebraicTopology/Singular/Subdivision/Affine.lean', 5401, 5392, 2, 11)
+  (13, 'HodgeConjecture/Lemmas/AlgebraicTopology/Singular/Excision/CoverSmallProjective.lean', 204, 199, 4, 9)
+total residual token edits: 1637
