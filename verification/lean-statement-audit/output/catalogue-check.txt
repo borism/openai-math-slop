@@ -1,0 +1,77 @@
+yaml sources (papers "with a formalized main result"): 176
+yaml status.main_results configs: 208 distinct 192
+papers linked from lean/docs scope notes: 345
+yaml sources not linked from any scope note: ['Matrix-Multiplication-Nine-Fourths-October-2-2026']
+
+Comparator README "supporting-result comparisons" section present: False
+supporting-result configs: ['CartierChartCompactnessSupport', 'CharacterVarietiesAllSeamsSupport', 'HoneycombBridgeMassSupport', 'SKFullSupport', 'SurfaceConeCandidateSupport', 'TraceIdealTransportSupport', 'WeakMTWGlobalSupport']
+  CartierChartCompactnessSupport: in yaml main_results=True; docs/066.md papers -> ['LISTED Uniform-Cartier-sections-for-Fano-type-contractions-September-25-2026']
+  CharacterVarietiesAllSeamsSupport: in yaml main_results=True; docs/027.md papers -> ['LISTED Integral-points-on-character-varieties-of-curves-September-25-2026']
+  HoneycombBridgeMassSupport: in yaml main_results=True; docs/237.md papers -> ['not listed Polynomial-vacuum-representations-and-bridge-mass-for-honeycomb-walks-', 'not listed Renewal-and-changes-of-law-for-critical-honeycomb-walks-September-26-2', 'not listed Critical-strip-crossing-mass-on-the-honeycomb-lattice-September-26-202', 'LISTED Critical-honeycomb-chords-with-prescribed-boundary-endpoints-September']
+  SKFullSupport: in yaml main_results=False; docs/281.md papers -> ['not listed QAOA-attains-the-SK-ground-state-energy-in-the-thermodynamic-first-lim', 'not listed Full-support-of-the-zero-temperature-Sherrington-Kirkpatrick-order-par']
+  SurfaceConeCandidateSupport: in yaml main_results=True; docs/195.md papers -> ['LISTED A-Complete-Local-Domain-Without-a-Small-Cohen-Macaulay-Module-Septembe']
+  TraceIdealTransportSupport: in yaml main_results=True; docs/301.md papers -> ['LISTED The-trace-cone-classifies-Razak-Jacelon-stabilizations-September-25-20']
+  WeakMTWGlobalSupport: in yaml main_results=True; docs/360.md papers -> ['LISTED Global-Support-and-Convex-Injectivity-Domains-under-Weak-MTW-September', 'LISTED Uniform-Bi-Holder-Transport-from-Weak-MTW-September-25-2026']
+
+yaml-listed papers whose scope note contains a limitation sentence:
+  docs/003.md listed=2: The paper's later applications are not included.
+  docs/008.md listed=1: The regularized-transport proposition and graph-complex consequences are not included.
+  docs/027.md listed=1: The linked formalization proves a supporting compatibility result for its marked-surface construction. || Existence of integral points and Zariski density are not established. || The paper's main theorem—potential integral density for $\mathrm{SL}_r$ curve character varieties over one finite extension, including prescribed quasi-unipotent boundary data and every irreducible co
+  docs/032.md listed=1: The paper's consequences for the Tate conjecture over finite fields and the Hodge standard conjecture in arbitrary characteristic are outside this selected statement.
+  docs/047.md listed=1: The separate stable-coordinate and general line-bundle lifting consequences are not included.
+  docs/050.md listed=1: The separate very-ampleness result for all admissible even exponents is not included.
+  docs/052.md listed=1: Automatic integrability and the paper's additional corollaries are not included. || The paper's compatible product decomposition is a separate consequence, outside this selected statement.
+  docs/066.md listed=1: Bounded klt complements and the paper's real-boundary and companion conclusions are also outside this comparison.
+  docs/081.md listed=1: The variation and principal-value corollary is not included.
+  docs/085.md listed=1: The general endpoint statement covers the Sobolev setting of the paper; a BV extension is outside these statements.
+  docs/087.md listed=2: The nonsymmetric Mahler conjecture and the functional inequalities are not included. || The paper's functional inequality is outside this selected statement.
+  docs/088.md listed=2: Other inequalities in the projection-body family are not included. || The paper's exponential-factor result for every sufficiently large dimension is not included.
+  docs/096.md listed=1: The separate Gaussian-maxima and kernel-clustering consequences are not included.
+  docs/107.md listed=2: The square bound implies the paper's weaker $2.258$ headline bound.
+  docs/112.md listed=1: The result does not assert a fixed exponent $n^{1/2+\varepsilon}$ or a lower bound for unrestricted depth.
+  docs/113.md listed=1: The paper's sharp global face-dimension bound is not part of that selected statement.
+  docs/130.md listed=2: The synthesis appendix's extraction, search, and printer uniformization is outside these selected statements.
+  docs/137.md listed=1: General multitape simulation, hierarchy consequences, and bounded-space-halting results are outside these selected statements.
+  docs/140.md listed=5: The linked supporting results include inverse Gram-matrix moments, exact-projection densities, regularization bounds, and sphere- and cube-prior block estimates.
+  docs/148.md listed=1: Absolute continuity is outside these statements.
+  docs/157.md listed=1: The paper's fractional-chromatic strengthening and the Colin de Verdière consequence are outside this selected statement.
+  docs/160.md listed=1: The sharper intermediate estimates used in the paper are not part of the described formalization.
+  docs/167.md listed=1: The separate unit-distance power-saving theorem is not included.
+  docs/179.md listed=1: The paper's classification of odd Barker lengths is outside this selected additional statement.
+  docs/195.md listed=1: The resulting existence statement gives only the ring properties above; it does not assert the absence of small Cohen–Macaulay modules. || That conclusion, the numerical obstruction used to prove it, and the counterexample essentially of finite type are outside this comparison.
+  docs/197.md listed=3: The further conclusion that the group is nonsofic is outside these statements. || The paper's additional spectral-measure integral conclusion is not included.
+  docs/199.md listed=2: The later field-extension, endomorphism-algebra, and related homological consequences are not included.
+  docs/205.md listed=1: The stronger claim that every constituent appears in the orbit span of one prescribed tensor is not included.
+  docs/210.md listed=1: The sixth-power specialization is covered for $b\ge30$; the companion's full range $b\ge6$ is not included.
+  docs/212.md listed=1: This includes the exponential model, for which the linked statement also gives a unique supporting line at every boundary point. || Strict convexity is outside these selected differentiability statements.
+  docs/215.md listed=1: The infinite-volume limit and the separate $O(4)$ spectral-gap claim are not included.
+  docs/227.md listed=1: The formalized supporting result proves ratio cutoff for discrete single-site heat-bath dynamics in the zero-field Gaussian Sherrington–Kirkpatrick model for $0\le\beta<1/2$. || The paper's full range $\beta<1$, explicit cutoff location, and continuous-time conclusion are outside this selected statement.
+  docs/236.md listed=1: Finitary coding and coding-radius bounds are not included.
+  docs/237.md listed=1: These are supporting summability statements. || That length law, its lower bound for the normalizing mass, the arch and strip mean laws, and the remaining moment and renewal conclusions are outside this supporting comparison.
+  docs/238.md listed=3: The linked supporting results include frame and conditional-list estimates, regular trace and spectral bounds, signed moments, and full-density $L^2$ control. || The formalized supporting result turns bounds on partial-permutation cosets into Fourier bounds. || The paper's asymptotic conclusion about the product of two random permutations is outside this selected finite estimate. || The supporting row–column estimate bounds the total squared overlap over all multiplicity copies on an occupied board, with explicit dependence on the row and column representation dimensions, the glo || The paper's full physical-mixing conclusion is outside these selected representation estimates. || The bounded regular-moment and other moment/rank conclusions are not included. || The linked supporting angle bound controls the overlap of row, column, and global signed-type projections on an occupied rectangle, with explicit entropy, dimension, and missing-cell factors. || Physical-shuffle law identification is not included. || The Thorp mixing consequence is outside this selected statement.
+  docs/240.md listed=1: The later canonical-point obstruction and the separate eventual-categoricity theorem are not included.
+  docs/241.md listed=1: The additional representation corollaries are not included.
+  docs/243.md listed=1: The separate witnessed-symmetric-choice result is not included.
+  docs/250.md listed=1: The paper's converse about recursively presented subgroups is not included.
+  docs/253.md listed=1: The later general claims about central kernels and enlargements across families are not included.
+  docs/254.md listed=2: Later corollaries in the manuscript are not included.
+  docs/257.md listed=1: The stronger claims that the witness is two-dimensional and that those models admit no locally $\mathrm{CAT}(0)$ metric are not included.
+  docs/263.md listed=1: The energy uses the full antisymmetric Sobolev form domain; fixed-$m$ convergence and ground-state attainment are outside this statement.
+  docs/274.md listed=2: The formalization also includes the product-projection localization estimate supporting this bound.
+  docs/276.md listed=1: Additivity with an arbitrary different partner channel and decoding by separate measurements are not included.
+  docs/290.md listed=1: The absolute bicentralizer conjecture is not included.
+  docs/301.md listed=1: The linked formalization proves the supporting ideal-transport result from Section 2: a trace-cone equivalence induces an order isomorphism of closed two-sided ideals, carrying the ideals determined b || This comparison does not establish that conclusion.
+  docs/312.md listed=1: The later semi-model structure and full comparison with the homotopy theory of spaces are not included.
+  docs/325.md listed=2: The linked supporting statements include numerical-range geometry and finite-compression identities.
+  docs/347.md listed=1: The separate nondegenerate Morse-number construction is not included.
+  docs/350.md listed=2: The known lower bound is not part of this selected statement.
+  docs/358.md listed=1: The separate no-focal-points and CAT(0) consequences are not included.
+  docs/360.md listed=2: The latter finite-family result does not cover the paper's arbitrary-potential local-injectivity assertion.
+  docs/361.md listed=1: Separate tangent-cone and cone-spectrum conclusions are not included.
+  docs/370.md listed=1: The critical equality case is not included.
+
+CONTENTS.md: families=373 with (Lean) link=245; manuscripts=720; manuscripts in (Lean) families=482
+
+Comparator configs: 418; enable_nanoda=true: ['TraceIdealTransportSupport', 'ArtinParabolicIntersections']
+configs permitting non-standard axioms: []
+challenge files importing the OAI solution library: ['ComparatorChallenges/CharacterVarietiesAllSeamsSupport.lean', 'ComparatorChallenges/CartierChartCompactnessSupport.lean']

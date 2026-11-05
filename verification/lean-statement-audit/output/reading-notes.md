@@ -1,0 +1,76 @@
+# Lean-vs-paper audit notes (upstream openai/math 4eaee8754)
+## Systemic
+- A: 5 "supporting-result" configs (CartierChartCompactnessSupport, CharacterVarietiesAllSeamsSupport, HoneycombBridgeMassSupport, SurfaceConeCandidateSupport, TraceIdealTransportSupport) are listed under formalization.yaml status.main_results and their papers under `sources` ("papers with a formalized main result"), though Comparator README + docs (027, 195, 301) say main theorem not formalized.
+- LocalSmoothing config not linked from any docs note (docs/079 links?). HodgeConjectureCMAbelianVarieties is a dir-challenge.
+- nanoda enabled only for ArtinParabolicIntersections, TraceIdealTransportSupport.
+## Per family (pass 1)
+- 003 ok (zeta at s=1 totalized; Hecke junk at s=0 per jmreilly). 005 ok. 007 ok. 008 ok-ish (defs). 009: injectivity only (docs say so) -> paper claims bijection; WEAKER (uniqueness only). 012 ok. 013 ok. 015 ok. 017 ok. 020 Lean claims all d>=4 (paper proves 4..8 + cites Browning) - stronger, fine. 021 ok. 023 ok. 024 ok. 025 ok. 026 ok.
+- 027: support only (docs admit) -> catalogue overclaim (A).
+- 028 ok. 032 CM Hodge: dir challenge, check config/name alignment (fixed Oct 29). 033: only fiber=-inf branch of reverse inequality (docs admit) PARTIAL. 039 ok. 047 ok. 049 ok. 050 ok. 052 ok. 058 ok.
+- 066: Cartier support only -> overclaim (A). 071 ok. 072 ok. 073 ok. 075 ok. 076 ok. 079: LocalSmoothing config not linked in docs/079 -> check.
+- 081 ok. 082 ok (no abstract). 083 ok. 084 ok. 085 ok. 087 ok (sunnyspot replayed Mahler+Polar). 088 ok. 089 ok. 090 ok. 091 ok. 092 ok. 094 ok.
+- 095 FINDING: paper abstract says "degree 16 in 23 variables", thm:main + Lean say degree 20. Paper-internal inconsistency (A-Nonspectrahedral-Hyperbolicity-Cone-September-24-2026).
+- 096 ok.
+- 097 ok. 098 ok. 099 ok. 100 ok (bundle). 
+- 102 DEEP-CHECK: complexity reductions; check how "polynomial time" encoded (UniqueGames MachineOutputContract, VertexCover Approximation/ThreeSATDecision structures).
+- 103 ok (L=RL=BPL; check machine model later maybe). 104 ok. 105 ok. 106 ok.
+- 107: Lean proves omega(C) <= 9/4 (STRONGER than paper's 2.258); checked sInf def: set bounded below by 2 (each of n^2 outputs needs a costed gate) and nonempty -> not junk. ok.
+- 108 ok. 110 ok. 111 ok. 112 ok.
+- 113 ok. 114 ok. 115 ok. 116 ok (bit-time bounds not in FormulaHitting target; docs admit). 117 ok. 118 ok.
+- 119 ok. 121 ok. 122 ok. 124 ok. 125 ok.
+- 126 WEAKER: Lean superpolynomial (n^C) vs paper 2^{cn} exponential (docs admit). Check yaml listing.
+- 127 ok. 128 ok. 129 ok. 
+- 130 ok: Lean subsequential == paper thm:main (liminf=0). Public claim (explainx) that it is "weaker" is NOT borne out for the first paper; UniformFourier covers all-length paper.
+- 131 ok (sampler outside). 132 ok. 133 ok.
+- 134 ok (Lean <=3, papers 13/4/3). 135 ok. 137 ok. 139 ok.
+- 140 ok: NoiselessRegression uses ((2:ℕ)/(3:ℕ) : ℝ≥0∞) — binop% coerces leaves so = 2/3, not 0 (odd style; worth a #eval/#check confirmation if Lean available). FixedQuadraticMemory has general A.
+- 143 ok. 144 ok. 145 ok. 146 ok. 148 ok. 149 ok. 150 ok (docs heading says "weak mixing" but scope/paper/Lean = ergodicity; family title mismatch "Weak mixing of triangular billiards" vs ergodic only -> check CONTENTS). 151 ok.
+- 152 WEAKER: Lean = finite KS entropy; paper thm = zero entropy (docs admit). Paper title says "finite-entropy" but abstract/thm say zero. Check yaml.
+- 155 ok. 156 ok. 157 ok (Hadwiger: ordinary chromatic; fractional claim outside, docs admit). 158 ok. 159 ok (consequence only; quantitative r_k bound = paper's thm:main NOT formalized; docs admit) -> PARTIAL main theorem. 160 ok. 161 ok. 162 ok.
+- 165 ok. 167 ok. 168 ok. 169 ok (witness def is a structure bundling the expansion proof; existential, fine). 170 ok. 172 ok.
+- 173 ok. 174 ok. 175 ok. 176 ok. 177 ok (d>=3 only, as paper). 179 ok (Barker odd lengths outside; docs admit). 180 ok. 181 ok. 182 ok. 183 ok. 184 ok. 185 ok.
+- 186 ok. 187 ok. 188 ok. 189 ok. 190 ok. 
+- 191 WEAKER: Lean unbounded sequence of n; paper every sufficiently large n (docs admit).
+- 192 ok.
+- 194 MAIN NOT FORMALIZED: Lech's conjecture paper; Lean only supporting char-p Dutta-domain comparison (docs admit). Check yaml listing!
+- 195 support only (A). 196 ok (checked defs: torsion-free, f.p., finite 2-dim CW K(G,1) via contractible cover).
+- 197 ok/partial: KaplanskyDirectFiniteness MainClaim lacks f.p./odd torsion (grwtsk) but KaplanskyFinitelyPresented has them; nonsofic/surjunctivity claims follow from Elek–Szabó (not formalized). 198 ok. 199 ok. 205 ok.
+- 206 PARTIAL: undecidability (title + thm (ii)) outside; only graph criterion (docs admit).
+- 207 ok. 210 ok (b>=30 for sixth powers vs companion b>=6; docs admit). 211 ok. 212 PARTIAL: strict convexity outside (docs admit).
+- 213 ok. 214 ok. 215 ok (finite-volume uniform; infinite-volume limit outside). 218 PARTIAL (stopping-band theorem outside). 220 ok. 221 ok.
+- 222 MAIN NOT FORMALIZED for Ising perceptron paper: Lean = finiteness of variational value only (docs: "supporting well-definedness result"); spherical perceptron paper fully formalized. Check yaml.
+- 227 ok. 228 ok.
+- 229 PARTIAL (notable): Lean = supercritical reconstruction above Kesten–Stigum (the classical direction, Kesten–Stigum 1966-type); paper's novel claim = non-reconstruction at/below threshold ("exact threshold") NOT formalized (docs admit). Check yaml.
+- 230 PARTIAL: Lean only positivity (lower) of H^h on segments; paper claims 0<H^h<inf + finite expectation. Upper/finiteness not formalized; docs scope only mentions positivity. Check yaml. (grwtsk #16 on SLE conditional claims)
+- 231 ok.
+- 234 ok. 235 ok (checked HasLimitingThreshold def: uniform m=floor(cn) clause sequences; faithful).
+- 236 ok.
+- 237 MAIN NOT FORMALIZED for "Polynomial vacuum representations and bridge mass" (h^{4/3} law): Lean = finiteness of bridge sums (support; HoneycombBridgeMassSupport + HoneycombBridgeFiniteness). CriticalStripMass covers the strip paper. (A)
+- 238 ok (huge bundle).
+- 240 ok. 241 ok. 242 ok (undecidability consequence not separately formalized). 243 ok. 
+- 244 ok-ish: consistency theorem formalized syntactically (main_consistency). TransitiveGround version needs an internal inaccessible in the ground model while paper says "over every countable transitive model of ZFC" (docs mention inaccessible). Minor.
+- 245 ok. 246 ok. 247 ok (nil-algebra outside). 248 ok. 249 ok. 250 ok. 
+- 251 ok. 252 ok (nonlinearity follows via Mal'cev). 253 ok. 254 ok. 255 ok. 256 ok (implies Kervaire). 
+- 257 PARTIAL: 2-dimensionality and no-locally-CAT(0)-model not formalized (docs admit); main (ii) is.
+- 260 MAIN NOT FORMALIZED: Bondi–Penrose inequality (title) not formalized; only end replacement + Schwarzschild examples. Paper NOT in yaml sources (consistent).
+- 261 MAIN NOT FORMALIZED (notable): 2D Anderson pure-point spectrum; Lean = a.s. spectrum = [-4-h,4+h] (classical, Kunz–Souillard-type). Check yaml.
+- 262 ok.
+- 263 ok. 266 MUB: Lean <=5 vs paper 3 (docs admit; NOT in yaml sources — consistent). 267 ok. 269 PARTIAL for stability paper (unperturbed gap only; docs admit) — check yaml. 271 ok (S/4 with ℓ=2S → ℓ/8 ok).
+- 272 MAIN NOT FORMALIZED: zero distillable key (title) outside; only PPT-composition consequences (docs admit). Check yaml.
+- 273 ok. 274 ok. 275 ok (checked QMA def: explicit verifier circuits, poly-time many-one reductions).
+- 276 ok (partner-channel additivity outside). 277 ok-ish: Lean rate delta^13 vs paper abstract/thm delta^5 (WEAKER exponent!) — docs say delta^13. Paper thm:main says kappa0 delta^5/(1+log d). => FINDING: Lean exponent 13 weaker than paper's 5. Check yaml.
+- 279 ok. 280 PARTIAL: only part (1) of 5-part thm (docs admit; not in yaml sources). 281 MAIN NOT FORMALIZED for QAOA (conditional SK identities only; not in yaml sources).
+- 287 ok. 288 ok. 289 ok.
+- 290 MAIN NOT FORMALIZED: paper thm:main = bicentralizer triviality for III_1; Lean = bounded recovery lemma only. Check yaml.
+- 291 ok. 292 ok. 293 ok.
+  - 277 confirmed: paper intro l.165-168 "the weaker rate κ0δ^13/(1+log d) already follows from Theorem main"; the paper's contribution is the δ^5 "universal fifth-power application". Lean = δ^13. yaml lists paper as formalized main result.
+- 294 ok. 295 ok. 296 ok. 297 ok. 298 ok. 299 ok.
+- 301 support only (A).
+- 303 ok.
+- 307 DEEP-CHECK: coarse Novikov counterexample uses `constructedCoarseAssembly` and `KX1` defined inside a 331KB challenge (189 defs); faithfulness of these bespoke definitions to standard coarse K-homology / Roe-algebra assembly is the crux and is not machine-checked.
+- 312 MAIN NOT FORMALIZED: Grothendieck homotopy hypothesis; Lean = elementary-expansion lemma only (docs admit). Check yaml.
+- 317 ok. 322 ok. 323 PARTIAL (CH direction only; not in yaml sources — consistent). 324 ok. 325 ok. 326 ok. 327 ok. 328 ok. 329 ok. 330 ok. 331 ok.
+- 331 bundle ok. 333 ok. 334 ok. 337: docs/337.md links NO paper (catalogue hygiene) — check which paper. 342 ok. 343 ok. 347 ok. 348 ok.
+- 350 ok (surface + counterexamples). 353 ok (immersed extension outside). 354 ok. 356 ok. 358 ok. 359 ok. 360 ok (finite-family local injectivity only for one sub-claim). 361 ok. 362 ok. 363 ok. 365 ok (docs heading "Joint metric and connection recovery" vs scalar-conductivity nonuniqueness — family title mismatch). 
+- 367 PARTIAL (notable): Lean = existence of nonflat minimizer in R^7 only; paper thm:main = flatness for d<=6 (hard direction) + existence => d*=7. Hard direction NOT formalized (docs admit). Check yaml.
+- 369 ok. 370 ok. 371 WEAKER (arbitrarily large odd powers vs every sufficiently large; docs admit).
